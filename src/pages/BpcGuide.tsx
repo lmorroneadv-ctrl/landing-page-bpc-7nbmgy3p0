@@ -1,116 +1,104 @@
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { BpcHero } from '@/components/bpc-guide/BpcHero'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, CheckCircle2 } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { CheckCircle2, AlertTriangle, ArrowRight } from 'lucide-react'
 
 export default function BpcGuide() {
   return (
-    <div className="min-h-screen bg-background pt-32 pb-24">
-      <div className="container max-w-4xl px-4 md:px-6">
-        <Link
-          to="/"
-          className="inline-flex items-center text-primary hover:text-primary/80 mb-8 transition-colors"
-        >
-          <ArrowLeft className="mr-2 h-4 w-4" />
-          Voltar para a página inicial
-        </Link>
+    <div className="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-yellow-600/30">
+      <Header />
+      <main>
+        <BpcHero />
 
-        <article className="prose prose-invert prose-lg max-w-none">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            Guia Completo: Benefício de Prestação Continuada (BPC/LOAS)
-          </h1>
+        <section className="py-20 bg-zinc-900">
+          <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+            <h2 className="text-3xl font-bold mb-10 text-white border-b border-gray-800 pb-4">
+              O que é o BPC/LOAS?
+            </h2>
+            <div className="prose prose-invert prose-lg max-w-none">
+              <p className="text-gray-300 leading-relaxed">
+                O Benefício de Prestação Continuada (BPC), regulamentado pela Lei Orgânica da
+                Assistência Social (LOAS), é a garantia de um salário mínimo mensal à pessoa com
+                deficiência e ao idoso com 65 anos ou mais que comprovem não possuir meios de prover
+                a própria manutenção nem de tê-la provida por sua família.
+              </p>
+              <div className="bg-yellow-900/20 border-l-4 border-yellow-600 p-6 my-8 rounded-r-lg">
+                <p className="text-yellow-500 font-semibold m-0 flex items-start gap-3">
+                  <AlertTriangle className="shrink-0 mt-1" size={24} />
+                  Atenção: Diferente da aposentadoria, o BPC não exige que você tenha contribuído
+                  para o INSS ao longo da vida. É um benefício assistencial.
+                </p>
+              </div>
+            </div>
 
-          <div className="flex items-center gap-4 text-muted-foreground mb-12 pb-8 border-b border-border">
-            <span>Tempo de leitura: 5 min</span>
-            <span>•</span>
-            <span>Atualizado em 2024</span>
+            <h2 className="text-3xl font-bold mb-10 text-white mt-16 border-b border-gray-800 pb-4">
+              Requisitos Básicos
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <div className="bg-black p-8 border border-gray-800">
+                <h3 className="text-xl font-bold text-yellow-500 mb-4">Para Idosos</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <CheckCircle2 className="text-yellow-600 shrink-0 mt-1" size={20} />
+                    <span>Ter 65 anos de idade ou mais</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <CheckCircle2 className="text-yellow-600 shrink-0 mt-1" size={20} />
+                    <span>
+                      Renda familiar per capita de até 1/4 do salário mínimo (pode ser flexibilizado
+                      na justiça)
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <CheckCircle2 className="text-yellow-600 shrink-0 mt-1" size={20} />
+                    <span>Estar inscrito no CadÚnico atualizado</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-black p-8 border border-gray-800">
+                <h3 className="text-xl font-bold text-yellow-500 mb-4">Para PCD</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <CheckCircle2 className="text-yellow-600 shrink-0 mt-1" size={20} />
+                    <span>Qualquer idade</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <CheckCircle2 className="text-yellow-600 shrink-0 mt-1" size={20} />
+                    <span>
+                      Impedimento de longo prazo (mínimo de 2 anos) de natureza física, mental,
+                      intelectual ou sensorial
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <CheckCircle2 className="text-yellow-600 shrink-0 mt-1" size={20} />
+                    <span>Renda familiar per capita de até 1/4 do salário mínimo</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center mt-12 bg-black border border-gray-800 p-10">
+              <h3 className="text-2xl font-bold text-white mb-4">Seu pedido foi negado?</h3>
+              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+                Milhares de benefícios são negados injustamente pelo INSS todos os dias por detalhes
+                documentais ou avaliações periciais equivocadas. Nós podemos reverter isso na
+                justiça.
+              </p>
+              <Button
+                size="lg"
+                className="bg-yellow-600 hover:bg-yellow-700 text-white rounded-none px-8 py-6 uppercase tracking-wider font-semibold"
+                onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+              >
+                Avaliar Meu Caso Gratuitamente
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </div>
           </div>
-
-          <div className="bg-muted p-8 rounded-xl border border-border mb-12">
-            <h3 className="text-xl font-bold text-foreground mb-4 font-serif">
-              O que você vai aprender:
-            </h3>
-            <ul className="space-y-2 m-0 list-none p-0">
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <CheckCircle2 className="h-5 w-5 text-primary" /> O que é o BPC
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <CheckCircle2 className="h-5 w-5 text-primary" /> Quem tem direito
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <CheckCircle2 className="h-5 w-5 text-primary" /> Documentos necessários
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <CheckCircle2 className="h-5 w-5 text-primary" /> Como solicitar
-              </li>
-            </ul>
-          </div>
-
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4 font-serif">
-            O que é o BPC?
-          </h2>
-          <p className="text-muted-foreground">
-            O Benefício de Prestação Continuada (BPC), regulamentado pela Lei Orgânica da
-            Assistência Social (LOAS), é a garantia de um salário mínimo mensal à pessoa com
-            deficiência e ao idoso com 65 anos ou mais que comprovem não possuir meios de prover a
-            própria manutenção, nem de tê-la provida por sua família.
-          </p>
-
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4 font-serif">
-            Requisitos Principais
-          </h2>
-          <p className="text-muted-foreground">
-            Para ter direito ao benefício, é necessário cumprir dois requisitos básicos
-            simultaneamente:
-          </p>
-          <ol className="text-muted-foreground">
-            <li>
-              <strong>Requisito Pessoal:</strong> Ser idoso (65 anos ou mais) ou pessoa com
-              deficiência (de qualquer idade).
-            </li>
-            <li>
-              <strong>Requisito Econômico:</strong> A renda por pessoa do grupo familiar deve ser
-              inferior a 1/4 do salário mínimo vigente. (Observação: A Justiça vem flexibilizando
-              este critério em casos de extrema necessidade).
-            </li>
-          </ol>
-
-          <div className="bg-primary/10 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-            <p className="text-foreground font-medium m-0">
-              <strong>Atenção:</strong> O BPC não é aposentadoria. Para recebê-lo, não é preciso ter
-              contribuído para o INSS. Diferente da aposentadoria, o BPC não paga 13º salário e não
-              deixa pensão por morte.
-            </p>
-          </div>
-
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4 font-serif">
-            Documentação Necessária
-          </h2>
-          <ul className="text-muted-foreground">
-            <li>Identidade (RG) e CPF do requerente e de todos os membros da família</li>
-            <li>Comprovante de residência atualizado</li>
-            <li>Cadastro Único (CadÚnico) atualizado no CRAS</li>
-            <li>Laudos médicos recentes (no caso de pessoa com deficiência)</li>
-            <li>Comprovantes de gastos com saúde, medicamentos, fraldas, etc.</li>
-          </ul>
-
-          <div className="mt-16 pt-8 border-t border-border flex flex-col items-center text-center bg-muted/50 p-8 rounded-xl">
-            <h3 className="text-2xl font-bold text-foreground mb-4 font-serif">
-              Precisa de ajuda com seu BPC?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Nosso escritório é especialista em Direito Previdenciário. Se o seu pedido foi negado
-              pelo INSS ou se você precisa de ajuda para dar entrada, nós podemos ajudar.
-            </p>
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
-              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-            >
-              Falar com Advogado Especialista
-            </Button>
-          </div>
-        </article>
-      </div>
+        </section>
+      </main>
+      <Footer />
     </div>
   )
 }

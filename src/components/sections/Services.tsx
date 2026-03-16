@@ -1,86 +1,65 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Landmark, FileText, HandHeart, Users, Briefcase, Clock } from 'lucide-react'
-
-const services = [
-  {
-    title: 'Benefício Assistencial (BPC/LOAS)',
-    description:
-      'Assessoria completa para idosos acima de 65 anos e pessoas com deficiência de baixa renda conquistarem o benefício assistencial de um salário mínimo.',
-    icon: HandHeart,
-  },
-  {
-    title: 'Aposentadoria por Idade',
-    description:
-      'Análise detalhada do seu tempo de contribuição e idade para garantir o melhor benefício possível no momento certo.',
-    icon: Landmark,
-  },
-  {
-    title: 'Aposentadoria por Invalidez',
-    description:
-      'Atuação forte e especializada em casos de incapacidade total e permanente para o trabalho, garantindo o amparo financeiro.',
-    icon: Briefcase,
-  },
-  {
-    title: 'Pensão por Morte',
-    description:
-      'Suporte humanizado e jurídico aos dependentes para a obtenção do benefício previdenciário de forma rápida e segura.',
-    icon: Users,
-  },
-  {
-    title: 'Revisão de Benefícios',
-    description:
-      'Identificação de erros no cálculo do INSS e ingresso com ações judiciais para aumentar o valor da sua aposentadoria.',
-    icon: FileText,
-  },
-  {
-    title: 'Planejamento Previdenciário',
-    description:
-      'Estudo aprofundado do seu histórico para definir as melhores estratégias de contribuição e o momento ideal para a aposentadoria.',
-    icon: Clock,
-  },
-]
+import { FileText, Shield, Clock, HeartHandshake } from 'lucide-react'
+import { Card, CardContent } from '@/components/ui/card'
 
 export function Services() {
+  const services = [
+    {
+      icon: <FileText size={32} className="text-yellow-600" />,
+      title: 'Requerimento Administrativo',
+      description:
+        'Montamos todo o seu processo no INSS da forma correta, anexando laudos e documentos indispensáveis para aprovação.',
+    },
+    {
+      icon: <Shield size={32} className="text-yellow-600" />,
+      title: 'Ação Judicial',
+      description:
+        'Seu BPC foi negado pelo INSS? Nós entramos com processo na Justiça Federal para garantir o seu direito.',
+    },
+    {
+      icon: <Clock size={32} className="text-yellow-600" />,
+      title: 'Análise de Requisitos',
+      description:
+        'Avaliamos gratuitamente se você preenche os requisitos de renda e deficiência/idade para receber o benefício.',
+    },
+    {
+      icon: <HeartHandshake size={32} className="text-yellow-600" />,
+      title: 'Acompanhamento Integral',
+      description:
+        'Do início ao fim, você será informado sobre cada movimentação do seu processo, com total transparência.',
+    },
+  ]
+
   return (
-    <section id="servicos" className="py-24 bg-muted border-y border-border">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center text-center space-y-4 mb-16">
-          <h2 className="text-sm font-bold tracking-widest text-primary uppercase">
-            Áreas de Atuação
+    <section id="servicos" className="py-24 bg-zinc-900">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-sm font-bold text-yellow-600 uppercase tracking-widest mb-2">
+            Nossas Soluções
           </h2>
-          <h3 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground font-serif">
-            Especialidade Previdenciária
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Como podemos ajudar você?
           </h3>
-          <p className="text-lg text-muted-foreground max-w-[800px] font-light">
-            Foco exclusivo na defesa dos direitos do segurado. Garantimos que o INSS cumpra com suas
-            obrigações legais, oferecendo suporte em todas as instâncias.
+          <p className="text-gray-400 text-lg">
+            Atuação especializada para desburocratizar o acesso ao seu benefício e reverter
+            injustiças cometidas pelo INSS.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => {
-            const Icon = service.icon
-            return (
-              <Card
-                key={index}
-                className="bg-background border-border hover:border-primary/50 transition-all duration-300 group shadow-none"
-              >
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl text-foreground font-semibold">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            )
-          })}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <Card
+              key={index}
+              className="bg-black border-gray-800 hover:border-yellow-600/50 transition-colors duration-300 rounded-none"
+            >
+              <CardContent className="pt-8 px-6 pb-8">
+                <div className="mb-6 bg-zinc-900 w-16 h-16 flex items-center justify-center rounded-full border border-gray-800">
+                  {service.icon}
+                </div>
+                <h4 className="text-xl font-bold text-white mb-4">{service.title}</h4>
+                <p className="text-gray-400 leading-relaxed">{service.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

@@ -1,91 +1,84 @@
 import { Button } from '@/components/ui/button'
-import { ArrowRight, ShieldCheck, Scale, FileText } from 'lucide-react'
-import logoImg from '@/assets/editedimage_1773665784218-3810f.png'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import profileUrl from '@/assets/perfil-10-735c9.png'
+import logoUrl from '@/assets/editedimage_1773665784218-56dfb.png'
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-24 pb-12">
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-yellow-900/20 via-black to-black"></div>
+    <section className="relative min-h-screen flex items-center bg-black pt-24 pb-16 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-yellow-900/20 via-black to-black opacity-80" />
 
-      <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center text-center">
-        <div className="animate-fade-in-up flex justify-center w-full mb-8">
-          <img
-            src={logoImg}
-            alt="Lucas Morrone Advocacia"
-            className="h-32 md:h-48 lg:h-56 w-auto object-contain drop-shadow-[0_0_15px_rgba(202,138,4,0.3)]"
-          />
-        </div>
+      <div className="container relative z-10 mx-auto px-4 md:px-6">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col items-start animate-fade-in-up">
+            <img
+              src={logoUrl}
+              alt="Lucas Morrone Logo"
+              className="h-24 md:h-32 mb-8 object-contain"
+            />
 
-        <span
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-950/50 border border-yellow-600/30 text-yellow-500 text-sm font-medium mb-6 animate-fade-in-up"
-          style={{ animationDelay: '100ms' }}
-        >
-          <ShieldCheck className="w-4 h-4" />
-          Especialistas em Direito Previdenciário
-        </span>
-
-        <h1
-          className="text-4xl md:text-5xl lg:text-7xl font-bold text-white max-w-4xl tracking-tight mb-6 animate-fade-in-up"
-          style={{ animationDelay: '200ms' }}
-        >
-          Garanta seu{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
-            Benefício BPC/LOAS
-          </span>{' '}
-          com Segurança
-        </h1>
-
-        <p
-          className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 animate-fade-in-up"
-          style={{ animationDelay: '300ms' }}
-        >
-          Atendimento humanizado e especializado para idosos e pessoas com deficiência. Lutamos pelo
-          seu direito a um salário mínimo mensal.
-        </p>
-
-        <div
-          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up"
-          style={{ animationDelay: '400ms' }}
-        >
-          <Button
-            size="lg"
-            className="bg-yellow-600 hover:bg-yellow-700 text-white h-14 px-8 text-lg font-semibold rounded-md"
-          >
-            Avaliar meu caso gratuitamente
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
-        </div>
-
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 w-full max-w-4xl border-t border-yellow-900/30 pt-10 animate-fade-in-up"
-          style={{ animationDelay: '500ms' }}
-        >
-          {[
-            {
-              icon: Scale,
-              title: 'Análise Especializada',
-              desc: 'Avaliamos seu caso detalhadamente',
-            },
-            {
-              icon: FileText,
-              title: 'Processo Ágil',
-              desc: 'Burocracia resolvida por especialistas',
-            },
-            {
-              icon: ShieldCheck,
-              title: 'Segurança Jurídica',
-              desc: 'Atuação transparente e ética',
-            },
-          ].map((item, i) => (
-            <div key={i} className="flex flex-col items-center text-center group">
-              <div className="w-12 h-12 rounded-full bg-yellow-950/50 border border-yellow-600/30 flex items-center justify-center text-yellow-500 mb-4 group-hover:bg-yellow-900/50 transition-colors">
-                <item.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-white font-medium mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-400">{item.desc}</p>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-950/50 border border-yellow-700/50 text-yellow-500 text-sm font-medium mb-6">
+              <span className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse" />
+              Especialistas em BPC/LOAS
             </div>
-          ))}
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              Garanta o seu <span className="text-yellow-500">Benefício Assistencial</span> com
+              Segurança
+            </h1>
+
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl leading-relaxed">
+              Você ou um familiar possui alguma deficiência ou tem mais de 65 anos e não contribuiu
+              para o INSS? Descubra se você tem direito a receber um salário mínimo por mês.
+            </p>
+
+            <ul className="space-y-4 mb-8">
+              {[
+                'Análise gratuita do seu caso',
+                'Atendimento humanizado e transparente',
+                'Você só paga se ganhar o processo',
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-gray-200">
+                  <CheckCircle2 className="text-yellow-600 shrink-0" size={20} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="bg-yellow-600 hover:bg-yellow-700 text-white rounded-none px-8 py-6 text-base uppercase tracking-wider font-semibold"
+                onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+              >
+                Falar com Advogado Agora
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </div>
+          </div>
+
+          <div className="relative animate-fade-in flex justify-center md:justify-end">
+            <div className="relative w-full max-w-md">
+              <div className="absolute inset-0 bg-gradient-to-tr from-yellow-600 to-transparent opacity-20 blur-3xl rounded-full" />
+              <div className="relative border-b-4 border-yellow-600 overflow-hidden bg-zinc-900 rounded-t-full pt-12 px-8">
+                <img
+                  src={profileUrl}
+                  alt="Dr. Lucas Morrone"
+                  className="w-full h-auto object-cover object-bottom drop-shadow-2xl"
+                />
+              </div>
+
+              <div className="absolute bottom-4 -left-6 md:-left-12 bg-black border border-gray-800 p-4 shadow-xl flex items-center gap-4">
+                <div className="bg-yellow-600/10 p-3 rounded-full">
+                  <CheckCircle2 className="text-yellow-600" size={24} />
+                </div>
+                <div>
+                  <p className="text-white font-bold text-lg">1000+</p>
+                  <p className="text-gray-400 text-sm">Benefícios Concedidos</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 import { Hero } from '@/components/sections/Hero'
 import { Services } from '@/components/sections/Services'
 import { Biography } from '@/components/sections/Biography'
@@ -7,13 +9,17 @@ import { Location } from '@/components/sections/Location'
 
 export default function Index() {
   return (
-    <div className="w-full bg-background">
-      <Hero />
-      <Services />
-      <Biography />
-      <SocialProof />
-      <FAQ />
-      <Location />
+    <div className="min-h-screen bg-black text-zinc-50 font-sans selection:bg-yellow-600/30">
+      <Header />
+      <main>
+        <Hero />
+        <Services />
+        <Biography />
+        <SocialProof />
+        <FAQ />
+        <Location />
+      </main>
+      <Footer />
     </div>
   )
 }

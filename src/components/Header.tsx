@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X, Phone } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import logoImg from '@/assets/editedimage_1773665784218-3810f.png'
+import logoUrl from '@/assets/editedimage_1773665784218-56dfb.png'
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,107 +18,121 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navLinks = [
-    { name: 'Início', href: '/' },
-    { name: 'Guia BPC', href: '/guia-bpc' },
-    { name: 'Serviços', href: '#servicos' },
-    { name: 'Sobre', href: '#sobre' },
-    { name: 'Contato', href: '#contato' },
-  ]
+  const scrollToSection = (sectionId: string) => {
+    setIsMobileMenuOpen(false)
+    if (location.pathname !== '/') {
+      window.location.href = `/#${sectionId}`
+      return
+    }
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
-        isScrolled
-          ? 'bg-black/95 backdrop-blur-md border-yellow-600/20 py-3'
-          : 'bg-black/80 backdrop-blur-sm border-transparent py-5',
+        'fixed top-0 w-full z-50 transition-all duration-300',
+        isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-md py-2' : 'bg-black py-4',
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 z-50">
-          <img
-            src={logoImg}
-            alt="Lucas Morrone Advocacia Previdenciária"
-            className="h-12 md:h-16 w-auto object-contain drop-shadow-[0_0_8px_rgba(202,138,4,0.2)]"
-          />
-        </Link>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2">
+            <img
+              src={logoUrl}
+              alt="Lucas Morrone Advocacia"
+              className={cn(
+                'transition-all duration-300 object-contain',
+                isScrolled ? 'h-14' : 'h-20',
+              )}
+            />
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-6">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                {link.href.startsWith('/') ? (
-                  <Link
-                    to={link.href}
-                    className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                ) : (
-                  <a
-                    href={link.href}
-                    className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                )}
-              </li>
-            ))}
-          </ul>
-          <Button className="bg-yellow-600 hover:bg-yellow-700 text-white border-none gap-2">
-            <Phone className="w-4 h-4" />
-            Fale Conosco
-          </Button>
-        </nav>
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            <button
+              onClick={() => scrollToSection('servicos')}
+              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-medium"
+            >
+              Serviços
+            </button>
+            <button
+              onClick={() => scrollToSection('sobre')}
+              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-medium"
+            >
+              Sobre
+            </button>
+            <button
+              onClick={() => scrollToSection('localizacao')}
+              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-medium"
+            >
+              Localização
+            </button>
+            <button
+              onClick={() => scrollToSection('faq')}
+              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-medium"
+            >
+              Dúvidas
+            </button>
+            <Link
+              to="/guia-bpc"
+              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-medium"
+            >
+              Guia BPC
+            </Link>
+            <Button
+              className="bg-yellow-600 hover:bg-yellow-700 text-white rounded-none px-6 uppercase text-sm tracking-wider"
+              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+            >
+              Fale Conosco
+            </Button>
+          </nav>
 
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden z-50 text-gray-300 hover:text-yellow-500"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-
-        {/* Mobile Nav */}
-        <div
-          className={cn(
-            'fixed inset-0 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-300 md:hidden',
-            isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
-          )}
-        >
-          <ul className="flex flex-col items-center gap-8">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                {link.href.startsWith('/') ? (
-                  <Link
-                    to={link.href}
-                    className="text-2xl font-medium text-gray-300 hover:text-yellow-500 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                ) : (
-                  <a
-                    href={link.href}
-                    className="text-2xl font-medium text-gray-300 hover:text-yellow-500 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                )}
-              </li>
-            ))}
-            <li>
-              <Button size="lg" className="bg-yellow-600 hover:bg-yellow-700 text-white mt-4 gap-2">
-                <Phone className="w-5 h-5" />
-                Agendar Consulta
-              </Button>
-            </li>
-          </ul>
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Nav */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-black border-t border-gray-800 shadow-xl py-4 flex flex-col items-center gap-4">
+          <button onClick={() => scrollToSection('servicos')} className="text-white text-lg py-2">
+            Serviços
+          </button>
+          <button onClick={() => scrollToSection('sobre')} className="text-white text-lg py-2">
+            Sobre
+          </button>
+          <button
+            onClick={() => scrollToSection('localizacao')}
+            className="text-white text-lg py-2"
+          >
+            Localização
+          </button>
+          <button onClick={() => scrollToSection('faq')} className="text-white text-lg py-2">
+            Dúvidas
+          </button>
+          <Link
+            to="/guia-bpc"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-white text-lg py-2"
+          >
+            Guia BPC
+          </Link>
+          <Button
+            className="bg-yellow-600 hover:bg-yellow-700 text-white w-[90%] mt-2 rounded-none uppercase tracking-wider"
+            onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+          >
+            Fale com um Advogado
+          </Button>
+        </div>
+      )}
     </header>
   )
 }
