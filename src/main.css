@@ -8,21 +8,21 @@
   :root {
     /* Gold & Black Theme */
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --foreground: 0 0% 7%; /* #111111 equivalent */
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 0 0% 7%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 0 0% 7%;
 
     /* Gold #D4AF37 */
     --primary: 46 65% 52%;
-    --primary-foreground: 0 0% 10%;
+    --primary-foreground: 0 0% 7%;
 
-    /* Deep Black #1A1A1A */
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 46 65% 90%;
+    /* Deep Black #111111 */
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 40%;
@@ -42,19 +42,19 @@
   }
 
   .dark {
-    --background: 0 0% 10%;
+    --background: 0 0% 7%; /* #111111 */
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 12%;
+    --card: 0 0% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 10%;
+    --popover: 0 0% 7%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 46 65% 52%;
-    --primary-foreground: 0 0% 10%;
+    --primary-foreground: 0 0% 7%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 15%;

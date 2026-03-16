@@ -9,34 +9,24 @@ import { cn } from '@/lib/utils'
 
 const faqData = [
   {
-    question: 'Quais são os custos iniciais para contratar o escritório?',
+    question: 'Quais são os direitos de quem contribui para o INSS?',
     answer:
-      'Trabalhamos no formato "Ad Exitum" (honorários no êxito). Isso significa que não cobramos valores iniciais para estruturar ou ingressar com o seu pedido. A remuneração do escritório ocorre apenas ao final, caso o benefício seja concedido.',
+      'Quem contribui para o INSS possui a qualidade de segurado e tem direito a benefícios como auxílio-doença (benefício por incapacidade temporária), aposentadoria por invalidez, salário-maternidade, pensão por morte, entre outros previstos em lei, desde que cumpridos os requisitos específicos de carência e condição de cada benefício.',
   },
   {
-    question: 'Quanto tempo demora para a liberação do BPC?',
+    question: 'Como funciona a aposentadoria por idade?',
     answer:
-      'O prazo varia consideravelmente. Administrativamente no INSS, a análise pode levar alguns meses. Caso seja necessário recorrer à via judicial, o tempo médio é maior. Importante ressaltar que, em concessões judiciais, o beneficiário tem direito ao recebimento dos valores retroativos (atrasados) desde a data do requerimento inicial.',
+      'A aposentadoria por idade é devida ao segurado que atingir a idade mínima estipulada pela legislação (atualmente 65 anos para homens e 62 para mulheres) e comprovar o tempo mínimo de contribuição exigido (carência).',
   },
   {
-    question: 'Meu pedido já foi negado pelo INSS. Ainda posso tentar?',
+    question: 'O que fazer quando o INSS nega o benefício?',
     answer:
-      'Sim. O indeferimento administrativo é comum e não encerra as possibilidades. Mediante análise detalhada do motivo da recusa, nosso escritório pode ingressar com recursos internos ou ação judicial competente, onde o caso será avaliado por um perito isento designado pelo juízo.',
+      'Diante de uma negativa do INSS, é possível apresentar um recurso administrativo no próprio órgão ou buscar a via judicial. A análise técnica por um advogado especializado é recomendada para identificar o motivo do indeferimento e a melhor estratégia a ser adotada.',
   },
   {
-    question: 'Como funciona o atendimento se eu morar em outra cidade?',
+    question: 'Quem tem direito ao BPC/LOAS?',
     answer:
-      'Nosso atendimento é realizado de forma 100% digital, garantindo conforto e segurança. Reuniões, envio de documentos e acompanhamentos são feitos através do WhatsApp, e-mail e chamadas de vídeo, sem a necessidade de deslocamento físico ao escritório.',
-  },
-  {
-    question: 'Como é feito o pagamento dos honorários no final?',
-    answer:
-      'Quando o benefício é concedido e os valores retroativos são liberados pela Justiça ou pelo INSS, os honorários contratuais pactuados (um percentual sobre este proveito econômico) são descontados e repassados ao escritório, de forma transparente e documentada.',
-  },
-  {
-    question: 'Vocês atendem em todo o Brasil?',
-    answer:
-      'Sim. Devido à digitalização dos processos do INSS (Meu INSS) e do sistema do Poder Judiciário (processo eletrônico), estamos habilitados e estruturados para representar clientes em todo o território nacional.',
+      'O BPC/LOAS é assistencial (não exige contribuição). É destinado a idosos com 65+ ou pessoas com deficiência que comprovem baixa renda e CadÚnico atualizado.',
   },
 ]
 
@@ -49,7 +39,7 @@ export function FAQ() {
         <div className={cn('text-center mb-12 invisible', isVisible && 'animate-fade-in-up')}>
           <h2 className="text-3xl font-serif font-bold mb-4">Dúvidas Frequentes</h2>
           <p className="text-muted-foreground">
-            Esclarecimentos objetivos sobre nossa atuação e o processo de solicitação do benefício.
+            Esclarecimentos objetivos sobre benefícios assistenciais e previdenciários.
           </p>
         </div>
 

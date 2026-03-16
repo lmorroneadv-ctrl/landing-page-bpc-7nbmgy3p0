@@ -16,13 +16,6 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { useToast } from '@/hooks/use-toast'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
@@ -32,7 +25,6 @@ const formSchema = z.object({
   name: z.string().min(3, { message: 'Nome deve ter pelo menos 3 caracteres.' }),
   email: z.string().email({ message: 'E-mail inválido.' }),
   phone: z.string().min(10, { message: 'Telefone inválido.' }),
-  type: z.string({ required_error: 'Por favor, selecione o tipo.' }),
   previousAttempt: z.enum(['sim', 'nao'], { required_error: 'Responda esta pergunta.' }),
   message: z.string().optional(),
 })
@@ -54,12 +46,11 @@ export function AnalysisForm() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
-    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false)
       toast({
-        title: 'Informações Recebidas',
-        description: 'Nossa equipe jurídica entrará em contato em breve.',
+        title: 'Solicitação Recebida',
+        description: 'Nossa equipe avaliará as informações e entrará em contato.',
       })
       form.reset()
     }, 2000)
@@ -67,7 +58,7 @@ export function AnalysisForm() {
 
   return (
     <section id="contato" className="py-24 bg-background relative">
-      <div className="absolute top-0 left-0 w-full h-1/2 bg-secondary" />
+      <div className="absolute top-0 left-0 w-full h-1/2 bg-[#111111]" />
 
       <div className="container relative z-10" ref={ref}>
         <div className="max-w-4xl mx-auto">
@@ -81,8 +72,8 @@ export function AnalysisForm() {
               Solicite uma Análise do Seu Caso
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Preencha o formulário abaixo para que nossa equipe avalie as possibilidades jurídicas
-              relacionadas ao seu benefício.
+              Preencha o formulário abaixo para uma avaliação técnica preliminar das suas
+              possibilidades jurídicas.
             </p>
           </div>
 
@@ -99,9 +90,13 @@ export function AnalysisForm() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Nome Completo</FormLabel>
+                          <FormLabel>Nome completo</FormLabel>
                           <FormControl>
-                            <Input placeholder="João da Silva" className="bg-muted/50" {...field} />
+                            <Input
+                              placeholder="Digite seu nome completo"
+                              className="bg-muted/50"
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -112,65 +107,14 @@ export function AnalysisForm() {
                       name="phone"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>WhatsApp</FormLabel>
+                          <FormLabel>Telefone</FormLabel>
                           <FormControl>
                             <Input
-                              placeholder="(11) 99999-9999"
+                              placeholder="(XX) XXXXX-XXXX"
                               className="bg-muted/50"
                               {...field}
                             />
                           </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>E-mail</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="email"
-                              placeholder="joao@exemplo.com"
-                              className="bg-muted/50"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="type"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Tipo de Condição / Deficiência</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                              <SelectTrigger className="bg-muted/50">
-                                <SelectValue placeholder="Selecione o motivo..." />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              <SelectItem value="idoso">Pessoa Idosa (65+ anos)</SelectItem>
-                              <SelectItem value="deficiencia">
-                                Pessoa com Deficiência Física/Motora
-                              </SelectItem>
-                              <SelectItem value="autismo">
-                                Transtorno do Espectro Autista (TEA)
-                              </SelectItem>
-                              <SelectItem value="mental">Deficiência Intelectual/Mental</SelectItem>
-                              <SelectItem value="outros">
-                                Outros / Desejo detalhar abaixo
-                              </SelectItem>
-                            </SelectContent>
-                          </Select>
                           <FormMessage />
                         </FormItem>
                       )}
@@ -179,31 +123,46 @@ export function AnalysisForm() {
 
                   <FormField
                     control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>E-mail</FormLabel>
+                        <FormControl>
+                          <Input
+                            type="email"
+                            placeholder="seu@email.com"
+                            className="bg-muted/50"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
                     name="previousAttempt"
                     render={({ field }) => (
                       <FormItem className="space-y-3">
-                        <FormLabel>Você já solicitou este benefício no INSS antes?</FormLabel>
+                        <FormLabel>Já solicitou BPC antes?</FormLabel>
                         <FormControl>
                           <RadioGroup
                             onValueChange={field.onChange}
                             defaultValue={field.value}
-                            className="flex flex-col space-y-1"
+                            className="flex space-x-6"
                           >
-                            <FormItem className="flex items-center space-x-3 space-y-0">
+                            <FormItem className="flex items-center space-x-2 space-y-0">
                               <FormControl>
                                 <RadioGroupItem value="sim" />
                               </FormControl>
-                              <FormLabel className="font-normal">
-                                Sim, já solicitei e foi negado.
-                              </FormLabel>
+                              <FormLabel className="font-normal">Sim</FormLabel>
                             </FormItem>
-                            <FormItem className="flex items-center space-x-3 space-y-0">
+                            <FormItem className="flex items-center space-x-2 space-y-0">
                               <FormControl>
                                 <RadioGroupItem value="nao" />
                               </FormControl>
-                              <FormLabel className="font-normal">
-                                Não, será a minha primeira tentativa.
-                              </FormLabel>
+                              <FormLabel className="font-normal">Não</FormLabel>
                             </FormItem>
                           </RadioGroup>
                         </FormControl>
@@ -217,10 +176,10 @@ export function AnalysisForm() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Descrição do Caso (Opcional)</FormLabel>
+                        <FormLabel>Conte seu caso (opcional)</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Descreva brevemente a situação ou o motivo da negativa..."
+                            placeholder="Descreva brevemente a situação..."
                             className="resize-none bg-muted/50 h-24"
                             {...field}
                           />
@@ -233,14 +192,14 @@ export function AnalysisForm() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full text-base h-14 shadow-gold bg-accent hover:bg-accent/90 text-white"
+                    className="w-full text-base h-14 shadow-gold bg-primary hover:bg-primary/90 text-primary-foreground"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
                       'Enviando...'
                     ) : (
                       <>
-                        Enviar Informações para Análise
+                        Enviar para Análise
                         <Send className="ml-2 h-5 w-5" />
                       </>
                     )}

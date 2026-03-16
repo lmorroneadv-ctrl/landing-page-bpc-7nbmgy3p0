@@ -2,6 +2,13 @@ import { useState } from 'react'
 import { Download } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 import { useToast } from '@/hooks/use-toast'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import { cn } from '@/lib/utils'
@@ -18,7 +25,7 @@ export function LeadMagnet() {
       setIsLoading(false)
       toast({
         title: 'Guia enviado com sucesso!',
-        description: 'Verifique seu e-mail ou WhatsApp para acessar o material.',
+        description: 'Verifique seu e-mail para acessar o material.',
       })
     }, 1500)
   }
@@ -32,45 +39,48 @@ export function LeadMagnet() {
               Material Educativo
             </div>
             <h2 className="text-3xl font-serif font-bold mb-4 text-balance">
-              Guia Gratuito: 7 Erros Que Causam a Negativa do BPC
+              Guia Gratuito: Erros Comuns Que Causam Negativa do BPC
             </h2>
             <p className="text-muted-foreground text-lg mb-6 text-balance">
-              Muitos benefícios são negados por detalhes que poderiam ser evitados. Baixe nosso guia
-              informativo e entenda como preparar sua documentação com maior segurança.
+              Muitos benefícios são negados por falhas na documentação ou cadastro. Baixe nosso guia
+              informativo e entenda como preparar seu requerimento com segurança.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
-              <Input
-                required
-                type="text"
-                placeholder="Seu Nome Completo"
-                className="bg-background"
-              />
-              <Input
-                required
-                type="email"
-                placeholder="Seu Melhor E-mail"
-                className="bg-background"
-              />
-              <Input
-                required
-                type="tel"
-                placeholder="Seu WhatsApp (com DDD)"
-                className="bg-background"
-              />
-              <Button type="submit" className="w-full shadow-md" disabled={isLoading}>
+              <Input required type="text" placeholder="Nome" className="bg-background" />
+              <Input required type="email" placeholder="E-mail" className="bg-background" />
+              <Input required type="tel" placeholder="Telefone" className="bg-background" />
+
+              <Select required>
+                <SelectTrigger className="bg-background">
+                  <SelectValue placeholder="Tipo de Deficiência" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="idoso">Idoso (65+ anos) - Critério Idade</SelectItem>
+                  <SelectItem value="fisica">Deficiência Física/Motora</SelectItem>
+                  <SelectItem value="tea">Transtorno do Espectro Autista (TEA)</SelectItem>
+                  <SelectItem value="intelectual">Deficiência Intelectual/Mental</SelectItem>
+                  <SelectItem value="outros">Outros</SelectItem>
+                </SelectContent>
+              </Select>
+
+              <Button
+                type="submit"
+                className="w-full shadow-md bg-[#111111] hover:bg-[#111111]/90"
+                disabled={isLoading}
+              >
                 {isLoading ? (
                   'Processando...'
                 ) : (
                   <>
                     <Download className="mr-2 h-4 w-4" />
-                    Baixar Guia Agora
+                    Baixar Guia Gratuito
                   </>
                 )}
               </Button>
             </form>
             <p className="text-xs text-muted-foreground mt-3">
-              Compromisso com a sua privacidade. Seus dados não serão compartilhados.
+              Compromisso com a sua privacidade. Seus dados estão seguros.
             </p>
           </div>
 
