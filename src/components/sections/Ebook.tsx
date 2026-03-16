@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Check, BookOpen, Download } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Check, BookOpen } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -23,11 +24,8 @@ export default function Ebook() {
           {/* E-book Visual */}
           <div className="w-full lg:w-5/12 flex justify-center lg:justify-end">
             <div className="relative w-64 h-80 sm:w-72 sm:h-96 bg-gradient-to-br from-[#2a2a2a] via-[#1a1a1a] to-[#0a0a0a] border border-gold/40 rounded-r-xl rounded-l-sm shadow-[20px_20px_40px_-10px_rgba(0,0,0,0.8),_0_0_20px_rgba(212,175,55,0.15)] flex flex-col items-center justify-center p-6 text-center transform -rotate-2 hover:rotate-0 transition-all duration-500 group">
-              {/* Spine shadow */}
               <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10 rounded-l-sm"></div>
-              {/* Book crease */}
               <div className="absolute left-6 top-0 bottom-0 w-[1px] bg-white/10 z-10"></div>
-              {/* Subtle shine */}
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10 rounded-r-xl rounded-l-sm"></div>
 
               <div className="relative z-20 flex flex-col items-center h-full w-full">
@@ -53,12 +51,12 @@ export default function Ebook() {
           {/* Content and Form */}
           <div className="w-full lg:w-7/12 max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Baixe nosso Guia Gratuito: <br className="hidden md:block" />
+              Acesse nosso Guia Gratuito: <br className="hidden md:block" />
               <span className="text-gold">Tudo sobre BPC/LOAS</span>
             </h2>
             <p className="text-lg text-foreground/80 mb-8">
               Entenda seus direitos e aprenda como solicitar o benefício de forma correta com o
-              nosso e-book exclusivo.
+              nosso conteúdo exclusivo e detalhado.
             </p>
 
             <div className="mb-8 space-y-3">
@@ -111,7 +109,7 @@ export default function Ebook() {
                   type="submit"
                   className="w-full bg-gold hover:bg-gold/90 text-[#111111] font-bold h-14 mt-4 transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] text-sm sm:text-base"
                 >
-                  QUERO RECEBER O E-BOOK AGORA
+                  QUERO ACESSAR O GUIA AGORA
                 </Button>
               </form>
             ) : (
@@ -121,22 +119,16 @@ export default function Ebook() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Tudo Certo!</h3>
                 <p className="text-foreground/80 mb-8 text-lg">
-                  Seu e-book está pronto para download. Clique no botão abaixo para acessar o
-                  material agora mesmo.
+                  Seu guia está pronto para acesso. Clique no botão abaixo para ler todo o material
+                  agora mesmo em nosso site.
                 </p>
                 <Button
                   asChild
                   className="w-full sm:w-auto bg-gold hover:bg-gold/90 text-[#111111] font-bold h-14 px-8 text-base"
                 >
-                  <a
-                    href="#download"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      alert('Iniciando o download do E-book...')
-                    }}
-                  >
-                    <Download className="mr-2 h-5 w-5" /> Baixar E-book em PDF
-                  </a>
+                  <Link to="/guia-bpc">
+                    <BookOpen className="mr-2 h-5 w-5" /> Acessar Guia Completo Agora
+                  </Link>
                 </Button>
               </div>
             )}

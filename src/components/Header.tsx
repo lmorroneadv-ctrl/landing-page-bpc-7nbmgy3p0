@@ -16,13 +16,12 @@ export default function Header() {
   }, [])
 
   const navLinks = [
-    { name: 'Início', href: '#inicio' },
-    { name: 'Serviços', href: '#servicos' },
-    { name: 'Quem Sou', href: '#quem-sou' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Publicações', href: '#blog' },
-    { name: 'Trabalhe Conosco', href: '#contato' },
-    { name: 'Contato', href: '#contato' },
+    { name: 'Início', href: '/#inicio' },
+    { name: 'Serviços', href: '/#servicos' },
+    { name: 'Quem Sou', href: '/#quem-sou' },
+    { name: 'Blog', href: '/#blog' },
+    { name: 'Guia BPC', href: '/guia-bpc' },
+    { name: 'Contato', href: '/#contato' },
   ]
 
   return (
@@ -30,16 +29,12 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-[#111111]/95 backdrop-blur-md shadow-md py-2 border-b border-border/50'
-          : 'bg-transparent py-4'
+          : 'bg-[#111111] md:bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center">
-          <img
-            src={logoUrl}
-            alt="Lucas Morrone Advocacia"
-            className="h-12 w-auto object-contain mix-blend-screen bg-transparent"
-          />
+        <a href="/#inicio" className="flex items-center">
+          <img src={logoUrl} alt="Lucas Morrone Advocacia" className="h-12 w-auto object-contain" />
         </a>
 
         {/* Desktop Nav */}
@@ -48,12 +43,12 @@ export default function Header() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+              className="text-sm font-medium text-foreground/80 hover:text-gold transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button asChild className="bg-gold text-[#111111] hover:bg-gold/90 font-bold">
             <a
               href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
               target="_blank"
@@ -80,16 +75,13 @@ export default function Header() {
             <a
               key={link.name}
               href={link.href}
-              className="text-base font-medium text-foreground/80 hover:text-primary"
+              className="text-base font-medium text-foreground/80 hover:text-gold"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
             </a>
           ))}
-          <Button
-            asChild
-            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
-          >
+          <Button asChild className="w-full bg-gold text-[#111111] hover:bg-gold/90 font-bold mt-2">
             <a
               href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
               target="_blank"
