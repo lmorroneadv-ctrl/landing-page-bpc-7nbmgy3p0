@@ -19423,113 +19423,142 @@ var Users = createLucideIcon("users", [
 	}]
 ]);
 //#endregion
-//#region src/assets/editedimage_1773665784218-e3bbb.png
-var editedimage_1773665784218_e3bbb_default = "/assets/editedimage_1773665784218-dc625-B9DD6hl0.png";
+//#region src/assets/editedimage_1773665784218-3810f.png
+var editedimage_1773665784218_3810f_default = "/assets/editedimage_1773665784218-3810f-B9DD6hl0.png";
 //#endregion
 //#region src/components/sections/Hero.tsx
 function Hero() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		"data-uid": "src/components/sections/Hero.tsx:7:5",
 		"data-prohibitions": "[editContent]",
-		id: "inicio",
-		className: "relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0a0a0a]",
-		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/Hero.tsx:12:7",
-				"data-prohibitions": "[editContent]",
-				className: "absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/Hero.tsx:13:7",
-				"data-prohibitions": "[editContent]",
-				className: "absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/Hero.tsx:14:7",
-				"data-prohibitions": "[editContent]",
-				className: "absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#d4af37]/10 blur-[120px] rounded-full pointer-events-none"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Hero.tsx:16:7",
-				"data-prohibitions": "[]",
-				className: "container relative mx-auto px-4 sm:px-6 lg:px-8 text-center z-10",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/Hero.tsx:17:9",
-						"data-prohibitions": "[]",
-						className: "flex justify-center mb-10",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							"data-uid": "src/components/sections/Hero.tsx:18:11",
-							"data-prohibitions": "[editContent]",
-							src: editedimage_1773665784218_e3bbb_default,
-							alt: "Lucas Morrone Advocacia Logo",
-							className: "w-48 md:w-64 lg:w-72 h-auto drop-shadow-[0_0_15px_rgba(212,175,55,0.2)] animate-fade-in-up"
-						})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Hero.tsx:25:9",
-						"data-prohibitions": "[]",
-						className: "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/20 text-[#d4af37] mb-8 animate-fade-in-up",
-						style: { animationDelay: "100ms" },
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
-							"data-uid": "src/components/sections/Hero.tsx:29:11",
-							"data-prohibitions": "[editContent]",
-							className: "w-4 h-4"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/Hero.tsx:30:11",
+		className: "relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-24 pb-12",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/sections/Hero.tsx:9:7",
+			"data-prohibitions": "[]",
+			className: "absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-yellow-900/20 via-black to-black"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			"data-uid": "src/components/sections/Hero.tsx:11:7",
+			"data-prohibitions": "[editContent]",
+			className: "container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center text-center",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Hero.tsx:12:9",
+					"data-prohibitions": "[]",
+					className: "animate-fade-in-up flex justify-center w-full mb-8",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						"data-uid": "src/components/sections/Hero.tsx:13:11",
+						"data-prohibitions": "[editContent]",
+						src: editedimage_1773665784218_3810f_default,
+						alt: "Lucas Morrone Advocacia",
+						className: "h-32 md:h-48 lg:h-56 w-auto object-contain drop-shadow-[0_0_15px_rgba(202,138,4,0.3)]"
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+					"data-uid": "src/components/sections/Hero.tsx:20:9",
+					"data-prohibitions": "[]",
+					className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-950/50 border border-yellow-600/30 text-yellow-500 text-sm font-medium mb-6 animate-fade-in-up",
+					style: { animationDelay: "100ms" },
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
+						"data-uid": "src/components/sections/Hero.tsx:24:11",
+						"data-prohibitions": "[editContent]",
+						className: "w-4 h-4"
+					}), "Especialistas em Direito Previdenciário"]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+					"data-uid": "src/components/sections/Hero.tsx:28:9",
+					"data-prohibitions": "[]",
+					className: "text-4xl md:text-5xl lg:text-7xl font-bold text-white max-w-4xl tracking-tight mb-6 animate-fade-in-up",
+					style: { animationDelay: "200ms" },
+					children: [
+						"Garanta seu",
+						" ",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"data-uid": "src/components/sections/Hero.tsx:33:11",
 							"data-prohibitions": "[]",
-							className: "text-sm font-semibold tracking-wide uppercase",
-							children: "Especialistas em BPC/LOAS"
-						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-						"data-uid": "src/components/sections/Hero.tsx:35:9",
+							className: "text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600",
+							children: "Benefício BPC/LOAS"
+						}),
+						" ",
+						"com Segurança"
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					"data-uid": "src/components/sections/Hero.tsx:39:9",
+					"data-prohibitions": "[]",
+					className: "text-lg md:text-xl text-gray-400 max-w-2xl mb-10 animate-fade-in-up",
+					style: { animationDelay: "300ms" },
+					children: "Atendimento humanizado e especializado para idosos e pessoas com deficiência. Lutamos pelo seu direito a um salário mínimo mensal."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Hero.tsx:47:9",
+					"data-prohibitions": "[]",
+					className: "flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up",
+					style: { animationDelay: "400ms" },
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+						"data-uid": "src/components/sections/Hero.tsx:51:11",
 						"data-prohibitions": "[]",
-						className: "text-4xl md:text-5xl lg:text-6xl/tight font-bold tracking-tight text-white mb-6 max-w-4xl mx-auto animate-fade-in-up",
-						style: { animationDelay: "200ms" },
+						size: "lg",
+						className: "bg-yellow-600 hover:bg-yellow-700 text-white h-14 px-8 text-lg font-semibold rounded-md",
+						children: ["Avaliar meu caso gratuitamente", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+							"data-uid": "src/components/sections/Hero.tsx:56:13",
+							"data-prohibitions": "[editContent]",
+							className: "ml-2 w-5 h-5"
+						})]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Hero.tsx:60:9",
+					"data-prohibitions": "[editContent]",
+					className: "grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 w-full max-w-4xl border-t border-yellow-900/30 pt-10 animate-fade-in-up",
+					style: { animationDelay: "500ms" },
+					children: [
+						{
+							icon: Scale,
+							title: "Análise Especializada",
+							desc: "Avaliamos seu caso detalhadamente"
+						},
+						{
+							icon: FileText,
+							title: "Processo Ágil",
+							desc: "Burocracia resolvida por especialistas"
+						},
+						{
+							icon: ShieldCheck,
+							title: "Segurança Jurídica",
+							desc: "Atuação transparente e ética"
+						}
+					].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/Hero.tsx:81:13",
+						"data-prohibitions": "[editContent]",
+						className: "flex flex-col items-center text-center group",
 						children: [
-							"Garantimos o seu benefício ",
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-								"data-uid": "src/components/sections/Hero.tsx:39:38",
-								"data-prohibitions": "[editContent]",
-								className: "hidden md:block"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								"data-uid": "src/components/sections/Hero.tsx:40:11",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Hero.tsx:82:15",
 								"data-prohibitions": "[]",
-								className: "text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] to-[#f3e5ab]",
-								children: "com segurança e agilidade"
+								className: "w-12 h-12 rounded-full bg-yellow-950/50 border border-yellow-600/30 flex items-center justify-center text-yellow-500 mb-4 group-hover:bg-yellow-900/50 transition-colors",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(item.icon, {
+									"data-uid": "src/components/sections/Hero.tsx:83:17",
+									"data-prohibitions": "[editContent]",
+									className: "w-6 h-6"
+								})
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								"data-uid": "src/components/sections/Hero.tsx:85:15",
+								"data-prohibitions": "[editContent]",
+								className: "text-white font-medium mb-2",
+								children: item.title
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/components/sections/Hero.tsx:86:15",
+								"data-prohibitions": "[editContent]",
+								className: "text-sm text-gray-400",
+								children: item.desc
 							})
 						]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/Hero.tsx:45:9",
-						"data-prohibitions": "[]",
-						className: "mt-4 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 animate-fade-in-up",
-						style: { animationDelay: "300ms" },
-						children: "Não deixe que a burocracia do INSS impeça você de receber o que é seu por direito. Nossa equipe é especialista em aprovar Benefícios de Prestação Continuada de forma rápida."
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/Hero.tsx:53:9",
-						"data-prohibitions": "[]",
-						className: "flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up",
-						style: { animationDelay: "400ms" },
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-							"data-uid": "src/components/sections/Hero.tsx:57:11",
-							"data-prohibitions": "[]",
-							size: "lg",
-							className: "w-full sm:w-auto text-lg h-14 px-8 bg-[#d4af37] hover:bg-[#b5952f] text-black font-bold rounded-md shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all",
-							onClick: () => window.open("https://wa.me/5511999999999", "_blank"),
-							children: ["Quero meu Benefício", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-								"data-uid": "src/components/sections/Hero.tsx:63:13",
-								"data-prohibitions": "[editContent]",
-								className: "ml-2 w-5 h-5"
-							})]
-						})
-					})
-				]
-			})
-		]
+					}, i))
+				})
+			]
+		})]
 	});
 }
 //#endregion
@@ -19696,7 +19725,7 @@ function Services() {
 }
 //#endregion
 //#region src/assets/editedimage_1773665784218-dc625.png
-var editedimage_1773665784218_dc625_default = "/assets/editedimage_1773665784218-dc625-B9DD6hl0.png";
+var editedimage_1773665784218_dc625_default = "/assets/editedimage_1773665784218-3810f-B9DD6hl0.png";
 //#endregion
 //#region src/components/sections/Biography.tsx
 function Biography() {
@@ -23321,4 +23350,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-JdSavh7_.js.map
+//# sourceMappingURL=index-BNu_82BK.js.map

@@ -1,66 +1,69 @@
 import { Button } from '@/components/ui/button'
-import { ArrowRight, BookOpen, FileCheck } from 'lucide-react'
+import { Download, CheckCircle2 } from 'lucide-react'
+import logoImg from '@/assets/editedimage_1773665784218-3810f.png'
 
-export default function BpcHero() {
+export function BpcHero() {
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden bg-[#111111] border-b border-border/50">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#111111] via-[#111111]/95 to-[#1a1a1a] z-10" />
-        <img
-          src="https://img.usecurling.com/p/1920/1080?q=legal%20documents%20desk&color=black"
-          alt="Guia BPC LOAS"
-          className="w-full h-full object-cover opacity-20 mix-blend-luminosity"
-        />
-      </div>
-      <div className="container mx-auto px-4 md:px-6 relative z-20 max-w-5xl">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-bold mb-8 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
-            <FileCheck className="w-4 h-4" /> Atualizado para 2026
-          </div>
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-black">
+      {/* Background elements */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-600/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-yellow-900/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
-          <div className="w-20 h-20 bg-[#1A1A1A] rounded-2xl flex items-center justify-center mb-8 border border-gold/40 shadow-[0_0_40px_rgba(212,175,55,0.2)] transform rotate-3">
-            <BookOpen className="w-10 h-10 text-gold -rotate-3" />
-          </div>
+      <div className="container relative z-10 mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-950/50 border border-yellow-600/30 text-yellow-500 text-sm font-medium mb-6">
+              <CheckCircle2 className="w-4 h-4" />
+              Guia Completo e Atualizado 2024
+            </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
-            Guia Completo: <br className="hidden md:block" />
-            <span className="text-gold">BPC / LOAS</span>
-          </h1>
-
-          <p className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl font-medium leading-relaxed">
-            Visão Geral e regras definitivas sobre o Benefício de Prestação Continuada.
-          </p>
-
-          <div className="bg-gradient-to-br from-[#1A1A1A] to-[#111111] border border-gold/40 rounded-2xl p-8 sm:p-10 mb-12 shadow-[0_0_50px_rgba(212,175,55,0.15)] max-w-2xl w-full backdrop-blur-md transform hover:scale-[1.02] transition-transform duration-500 break-inside-avoid relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-bl-full -z-10"></div>
-            <p className="text-gold font-bold text-sm uppercase tracking-widest mb-3 flex items-center justify-center gap-2">
-              Valor Oficial
-            </p>
-            <p className="text-3xl sm:text-4xl font-black text-white leading-tight">
-              No ano de 2026, o valor do BPC corresponde a{' '}
-              <span className="text-gold block mt-2 border-b-2 border-gold/30 pb-2 inline-block">
-                R$ 1.621,00
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Tudo o que você precisa saber sobre o{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
+                BPC/LOAS
               </span>
+            </h1>
+
+            <p className="text-lg text-gray-400 mb-8 max-w-xl">
+              Descubra quem tem direito, quais os requisitos e como dar entrada no Benefício de
+              Prestação Continuada de forma correta e sem dores de cabeça.
             </p>
-            <p className="text-foreground/70 mt-4 text-sm font-medium">
-              Equivalente a 1 (um) salário mínimo vigente. Benefício assistencial não contributivo.
-            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="bg-yellow-600 hover:bg-yellow-700 text-white h-14 px-8 text-lg font-semibold rounded-md"
+              >
+                Baixar Guia PDF
+                <Download className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+
+            <ul className="mt-10 space-y-3 text-left w-full max-w-md">
+              {[
+                'Requisitos completos para idosos e PCDs',
+                'Lista de documentos necessários',
+                'Como comprovar a baixa renda',
+                'O que fazer em caso de negativa do INSS',
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-gray-300">
+                  <CheckCircle2 className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-5 w-full justify-center items-center">
-            <Button
-              size="lg"
-              className="bg-gold text-[#111111] hover:bg-gold/90 text-lg h-16 px-8 font-bold shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all duration-300 w-full sm:w-auto rounded-xl"
-              asChild
-            >
-              <a
-                href="https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20ajuda%20para%20solicitar%20o%20BPC/LOAS."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Falar com Especialista <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md aspect-square bg-gradient-to-tr from-yellow-950 to-black border border-yellow-800/30 rounded-2xl flex items-center justify-center p-8 shadow-[0_0_40px_rgba(202,138,4,0.1)]">
+              {/* Decorative elements */}
+              <div className="absolute inset-4 border border-yellow-600/20 rounded-xl border-dashed"></div>
+              <img
+                src={logoImg}
+                alt="Lucas Morrone Advocacia"
+                className="w-4/5 h-auto object-contain drop-shadow-[0_0_20px_rgba(202,138,4,0.4)] relative z-10"
+              />
+            </div>
           </div>
         </div>
       </div>

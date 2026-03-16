@@ -1,71 +1,93 @@
 import { Button } from '@/components/ui/button'
-import { ArrowRight, ShieldCheck } from 'lucide-react'
-import logoImg from '@/assets/editedimage_1773665784218-e3bbb.png'
+import { ArrowRight, ShieldCheck, Scale, FileText } from 'lucide-react'
+import logoImg from '@/assets/editedimage_1773665784218-3810f.png'
 
 export function Hero() {
   return (
-    <section
-      id="inicio"
-      className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0a0a0a]"
-    >
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#d4af37]/10 blur-[120px] rounded-full pointer-events-none" />
+    <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-24 pb-12">
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-yellow-900/20 via-black to-black"></div>
 
-      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-        <div className="flex justify-center mb-10">
+      <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center text-center">
+        <div className="animate-fade-in-up flex justify-center w-full mb-8">
           <img
             src={logoImg}
-            alt="Lucas Morrone Advocacia Logo"
-            className="w-48 md:w-64 lg:w-72 h-auto drop-shadow-[0_0_15px_rgba(212,175,55,0.2)] animate-fade-in-up"
+            alt="Lucas Morrone Advocacia"
+            className="h-32 md:h-48 lg:h-56 w-auto object-contain drop-shadow-[0_0_15px_rgba(202,138,4,0.3)]"
           />
         </div>
 
-        <div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/20 text-[#d4af37] mb-8 animate-fade-in-up"
+        <span
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-950/50 border border-yellow-600/30 text-yellow-500 text-sm font-medium mb-6 animate-fade-in-up"
           style={{ animationDelay: '100ms' }}
         >
           <ShieldCheck className="w-4 h-4" />
-          <span className="text-sm font-semibold tracking-wide uppercase">
-            Especialistas em BPC/LOAS
-          </span>
-        </div>
+          Especialistas em Direito Previdenciário
+        </span>
 
         <h1
-          className="text-4xl md:text-5xl lg:text-6xl/tight font-bold tracking-tight text-white mb-6 max-w-4xl mx-auto animate-fade-in-up"
+          className="text-4xl md:text-5xl lg:text-7xl font-bold text-white max-w-4xl tracking-tight mb-6 animate-fade-in-up"
           style={{ animationDelay: '200ms' }}
         >
-          Garantimos o seu benefício <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] to-[#f3e5ab]">
-            com segurança e agilidade
-          </span>
+          Garanta seu{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
+            Benefício BPC/LOAS
+          </span>{' '}
+          com Segurança
         </h1>
 
         <p
-          className="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 animate-fade-in-up"
+          className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 animate-fade-in-up"
           style={{ animationDelay: '300ms' }}
         >
-          Não deixe que a burocracia do INSS impeça você de receber o que é seu por direito. Nossa
-          equipe é especialista em aprovar Benefícios de Prestação Continuada de forma rápida.
+          Atendimento humanizado e especializado para idosos e pessoas com deficiência. Lutamos pelo
+          seu direito a um salário mínimo mensal.
         </p>
 
         <div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up"
+          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up"
           style={{ animationDelay: '400ms' }}
         >
           <Button
             size="lg"
-            className="w-full sm:w-auto text-lg h-14 px-8 bg-[#d4af37] hover:bg-[#b5952f] text-black font-bold rounded-md shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all"
-            onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+            className="bg-yellow-600 hover:bg-yellow-700 text-white h-14 px-8 text-lg font-semibold rounded-md"
           >
-            Quero meu Benefício
+            Avaliar meu caso gratuitamente
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
+        </div>
+
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 w-full max-w-4xl border-t border-yellow-900/30 pt-10 animate-fade-in-up"
+          style={{ animationDelay: '500ms' }}
+        >
+          {[
+            {
+              icon: Scale,
+              title: 'Análise Especializada',
+              desc: 'Avaliamos seu caso detalhadamente',
+            },
+            {
+              icon: FileText,
+              title: 'Processo Ágil',
+              desc: 'Burocracia resolvida por especialistas',
+            },
+            {
+              icon: ShieldCheck,
+              title: 'Segurança Jurídica',
+              desc: 'Atuação transparente e ética',
+            },
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col items-center text-center group">
+              <div className="w-12 h-12 rounded-full bg-yellow-950/50 border border-yellow-600/30 flex items-center justify-center text-yellow-500 mb-4 group-hover:bg-yellow-900/50 transition-colors">
+                <item.icon className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-medium mb-2">{item.title}</h3>
+              <p className="text-sm text-gray-400">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   )
 }
-
-export default Hero
