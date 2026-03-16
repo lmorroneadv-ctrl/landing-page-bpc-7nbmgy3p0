@@ -25,6 +25,10 @@ const faqs = [
     a: 'Você pode entrar com recurso administrativo no próprio INSS ou ingressar com uma ação judicial. A via judicial, com o auxílio de um advogado especialista, costuma ser mais rápida e efetiva para reverter negativas injustas.',
   },
   {
+    q: 'O benefício precisa ser renovado?',
+    a: 'Sim, o BPC passa por revisão a cada 2 anos. É obrigatório manter o CadÚnico atualizado e, no caso da pessoa com deficiência, pode ser necessária uma nova perícia médica para comprovar a continuidade do impedimento.',
+  },
+  {
     q: 'O BPC permite consignado?',
     a: 'Sim, limite de 35%. A legislação vigente permite que beneficiários do BPC/LOAS realizem empréstimos consignados, limitando o desconto direto no benefício para proteger a renda mínima de sobrevivência.',
   },
@@ -47,10 +51,7 @@ export default function BpcFAQ() {
                 Esclareça rapidamente suas dúvidas sobre as regras aplicáveis em 2026.
               </p>
 
-              <div
-                className="bg-[#1A1A1A] p-6 md:p-8 rounded-3xl border border-gold/20 shadow-[0_0_30px_rgba(212,175,55,0.05)]"
-                data-html2canvas-ignore
-              >
+              <div className="bg-[#1A1A1A] p-6 md:p-8 rounded-3xl border border-gold/20 shadow-[0_0_30px_rgba(212,175,55,0.05)]">
                 <div className="h-32 w-full mb-6 rounded-xl overflow-hidden relative">
                   <img
                     src="https://img.usecurling.com/p/600/300?q=consultation%20lawyer&color=black"

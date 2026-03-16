@@ -17512,20 +17512,6 @@ var Clock = createLucideIcon("clock", [["circle", {
 	d: "M12 6v6l4 2",
 	key: "mmk7yg"
 }]]);
-var Download = createLucideIcon("download", [
-	["path", {
-		d: "M12 15V3",
-		key: "m9g1x1"
-	}],
-	["path", {
-		d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",
-		key: "ih7n3h"
-	}],
-	["path", {
-		d: "m7 10 5 5 5-5",
-		key: "brsn70"
-	}]
-]);
 var FileCheck = createLucideIcon("file-check", [
 	["path", {
 		d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z",
@@ -17585,10 +17571,6 @@ var Info = createLucideIcon("info", [
 		key: "e9boi3"
 	}]
 ]);
-var LoaderCircle = createLucideIcon("loader-circle", [["path", {
-	d: "M21 12a9 9 0 1 1-6.219-8.56",
-	key: "13zald"
-}]]);
 var MapPin = createLucideIcon("map-pin", [["path", {
 	d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
 	key: "1r0f0z"
@@ -22259,244 +22241,69 @@ function Index() {
 	});
 }
 //#endregion
-//#region src/hooks/use-toast.ts
-var TOAST_LIMIT = 1;
-var TOAST_REMOVE_DELAY = 1e6;
-var count = 0;
-function genId() {
-	count = (count + 1) % Number.MAX_SAFE_INTEGER;
-	return count.toString();
-}
-var toastTimeouts = /* @__PURE__ */ new Map();
-var addToRemoveQueue = (toastId) => {
-	if (toastTimeouts.has(toastId)) return;
-	const timeout = setTimeout(() => {
-		toastTimeouts.delete(toastId);
-		dispatch({
-			type: "REMOVE_TOAST",
-			toastId
-		});
-	}, TOAST_REMOVE_DELAY);
-	toastTimeouts.set(toastId, timeout);
-};
-var reducer = (state, action) => {
-	switch (action.type) {
-		case "ADD_TOAST": return {
-			...state,
-			toasts: [action.toast, ...state.toasts].slice(0, TOAST_LIMIT)
-		};
-		case "UPDATE_TOAST": return {
-			...state,
-			toasts: state.toasts.map((t) => t.id === action.toast.id ? {
-				...t,
-				...action.toast
-			} : t)
-		};
-		case "DISMISS_TOAST": {
-			const { toastId } = action;
-			if (toastId) addToRemoveQueue(toastId);
-			else state.toasts.forEach((toast) => {
-				addToRemoveQueue(toast.id);
-			});
-			return {
-				...state,
-				toasts: state.toasts.map((t) => t.id === toastId || toastId === void 0 ? {
-					...t,
-					open: false
-				} : t)
-			};
-		}
-		case "REMOVE_TOAST":
-			if (action.toastId === void 0) return {
-				...state,
-				toasts: []
-			};
-			return {
-				...state,
-				toasts: state.toasts.filter((t) => t.id !== action.toastId)
-			};
-	}
-};
-var listeners = [];
-var memoryState = { toasts: [] };
-function dispatch(action) {
-	memoryState = reducer(memoryState, action);
-	listeners.forEach((listener) => {
-		listener(memoryState);
-	});
-}
-function toast({ ...props }) {
-	const id = genId();
-	const update = (props) => dispatch({
-		type: "UPDATE_TOAST",
-		toast: {
-			...props,
-			id
-		}
-	});
-	const dismiss = () => dispatch({
-		type: "DISMISS_TOAST",
-		toastId: id
-	});
-	dispatch({
-		type: "ADD_TOAST",
-		toast: {
-			...props,
-			id,
-			open: true,
-			onOpenChange: (open) => {
-				if (!open) dismiss();
-			}
-		}
-	});
-	return {
-		id,
-		dismiss,
-		update
-	};
-}
-function useToast() {
-	const [state, setState] = import_react.useState(memoryState);
-	import_react.useEffect(() => {
-		listeners.push(setState);
-		return () => {
-			const index = listeners.indexOf(setState);
-			if (index > -1) listeners.splice(index, 1);
-		};
-	}, [state]);
-	return {
-		...state,
-		toast,
-		dismiss: (toastId) => dispatch({
-			type: "DISMISS_TOAST",
-			toastId
-		})
-	};
-}
-//#endregion
 //#region src/components/bpc-guide/BpcHero.tsx
 function BpcHero() {
-	const { toast } = useToast();
-	const [isDownloading, setIsDownloading] = (0, import_react.useState)(false);
-	const handleDownloadPDF = () => {
-		setIsDownloading(true);
-		const script = document.createElement("script");
-		script.src = "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
-		script.onload = () => {
-			const element = document.getElementById("bpc-guide-content");
-			if (!element) {
-				setIsDownloading(false);
-				return;
-			}
-			window.html2pdf().set({
-				margin: [
-					10,
-					10,
-					10,
-					10
-				],
-				filename: "Guia Completo BPC LOAS 2026 - Dr. Lucas Morrone.pdf",
-				image: {
-					type: "jpeg",
-					quality: .98
-				},
-				html2canvas: {
-					scale: 2,
-					useCORS: true,
-					backgroundColor: "#111111"
-				},
-				jsPDF: {
-					unit: "mm",
-					format: "a4",
-					orientation: "portrait"
-				}
-			}).from(element).save().then(() => {
-				setIsDownloading(false);
-				toast({
-					title: "Download concluído",
-					description: "O guia completo foi baixado com sucesso no formato PDF."
-				});
-			}).catch(() => {
-				setIsDownloading(false);
-				toast({
-					title: "Erro no download",
-					description: "Ocorreu um erro ao gerar o PDF.",
-					variant: "destructive"
-				});
-			});
-		};
-		script.onerror = () => {
-			setIsDownloading(false);
-			toast({
-				title: "Erro de conexão",
-				description: "Não foi possível carregar o gerador de PDF.",
-				variant: "destructive"
-			});
-		};
-		document.body.appendChild(script);
-	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		"data-uid": "src/components/bpc-guide/BpcHero.tsx:67:5",
-		"data-prohibitions": "[editContent]",
+		"data-uid": "src/components/bpc-guide/BpcHero.tsx:6:5",
+		"data-prohibitions": "[]",
 		className: "relative py-20 md:py-32 overflow-hidden bg-[#111111] border-b border-border/50",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/bpc-guide/BpcHero.tsx:68:7",
+			"data-uid": "src/components/bpc-guide/BpcHero.tsx:7:7",
 			"data-prohibitions": "[]",
 			className: "absolute inset-0 z-0",
-			"data-html2canvas-ignore": true,
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/bpc-guide/BpcHero.tsx:69:9",
+				"data-uid": "src/components/bpc-guide/BpcHero.tsx:8:9",
 				"data-prohibitions": "[editContent]",
 				className: "absolute inset-0 bg-gradient-to-br from-[#111111] via-[#111111]/95 to-[#1a1a1a] z-10"
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-				"data-uid": "src/components/bpc-guide/BpcHero.tsx:70:9",
+				"data-uid": "src/components/bpc-guide/BpcHero.tsx:9:9",
 				"data-prohibitions": "[editContent]",
 				src: "https://img.usecurling.com/p/1920/1080?q=legal%20documents%20desk&color=black",
 				alt: "Guia BPC LOAS",
 				className: "w-full h-full object-cover opacity-20 mix-blend-luminosity"
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/bpc-guide/BpcHero.tsx:76:7",
-			"data-prohibitions": "[editContent]",
+			"data-uid": "src/components/bpc-guide/BpcHero.tsx:15:7",
+			"data-prohibitions": "[]",
 			className: "container mx-auto px-4 md:px-6 relative z-20 max-w-5xl",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcHero.tsx:77:9",
-				"data-prohibitions": "[editContent]",
+				"data-uid": "src/components/bpc-guide/BpcHero.tsx:16:9",
+				"data-prohibitions": "[]",
 				className: "max-w-4xl mx-auto text-center flex flex-col items-center",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:78:11",
+						"data-uid": "src/components/bpc-guide/BpcHero.tsx:17:11",
 						"data-prohibitions": "[]",
 						className: "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-bold mb-8 shadow-[0_0_15px_rgba(212,175,55,0.15)]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileCheck, {
-							"data-uid": "src/components/bpc-guide/BpcHero.tsx:79:13",
+							"data-uid": "src/components/bpc-guide/BpcHero.tsx:18:13",
 							"data-prohibitions": "[editContent]",
 							className: "w-4 h-4"
 						}), " Atualizado para 2026"]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:82:11",
+						"data-uid": "src/components/bpc-guide/BpcHero.tsx:21:11",
 						"data-prohibitions": "[]",
 						className: "w-20 h-20 bg-[#1A1A1A] rounded-2xl flex items-center justify-center mb-8 border border-gold/40 shadow-[0_0_40px_rgba(212,175,55,0.2)] transform rotate-3",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
-							"data-uid": "src/components/bpc-guide/BpcHero.tsx:83:13",
+							"data-uid": "src/components/bpc-guide/BpcHero.tsx:22:13",
 							"data-prohibitions": "[editContent]",
 							className: "w-10 h-10 text-gold -rotate-3"
 						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:86:11",
+						"data-uid": "src/components/bpc-guide/BpcHero.tsx:25:11",
 						"data-prohibitions": "[]",
 						className: "text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 leading-tight",
 						children: [
 							"Guia Completo: ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:87:28",
+								"data-uid": "src/components/bpc-guide/BpcHero.tsx:26:28",
 								"data-prohibitions": "[editContent]",
 								className: "hidden md:block"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:88:13",
+								"data-uid": "src/components/bpc-guide/BpcHero.tsx:27:13",
 								"data-prohibitions": "[]",
 								className: "text-gold",
 								children: "BPC / LOAS"
@@ -22504,36 +22311,36 @@ function BpcHero() {
 						]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:91:11",
+						"data-uid": "src/components/bpc-guide/BpcHero.tsx:30:11",
 						"data-prohibitions": "[]",
 						className: "text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl font-medium leading-relaxed",
 						children: "Visão Geral e regras definitivas sobre o Benefício de Prestação Continuada."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:95:11",
+						"data-uid": "src/components/bpc-guide/BpcHero.tsx:34:11",
 						"data-prohibitions": "[]",
 						className: "bg-gradient-to-br from-[#1A1A1A] to-[#111111] border border-gold/40 rounded-2xl p-8 sm:p-10 mb-12 shadow-[0_0_50px_rgba(212,175,55,0.15)] max-w-2xl w-full backdrop-blur-md transform hover:scale-[1.02] transition-transform duration-500 break-inside-avoid relative overflow-hidden",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:96:13",
+								"data-uid": "src/components/bpc-guide/BpcHero.tsx:35:13",
 								"data-prohibitions": "[]",
 								className: "absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-bl-full -z-10"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:97:13",
+								"data-uid": "src/components/bpc-guide/BpcHero.tsx:36:13",
 								"data-prohibitions": "[]",
 								className: "text-gold font-bold text-sm uppercase tracking-widest mb-3 flex items-center justify-center gap-2",
 								children: "Valor Oficial"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:100:13",
+								"data-uid": "src/components/bpc-guide/BpcHero.tsx:39:13",
 								"data-prohibitions": "[]",
 								className: "text-3xl sm:text-4xl font-black text-white leading-tight",
 								children: [
 									"No ano de 2026, o valor do BPC corresponde a",
 									" ",
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/bpc-guide/BpcHero.tsx:102:15",
+										"data-uid": "src/components/bpc-guide/BpcHero.tsx:41:15",
 										"data-prohibitions": "[]",
 										className: "text-gold block mt-2 border-b-2 border-gold/30 pb-2 inline-block",
 										children: "R$ 1.621,00"
@@ -22541,54 +22348,36 @@ function BpcHero() {
 								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:106:13",
+								"data-uid": "src/components/bpc-guide/BpcHero.tsx:45:13",
 								"data-prohibitions": "[]",
 								className: "text-foreground/70 mt-4 text-sm font-medium",
 								children: "Equivalente a 1 (um) salário mínimo vigente. Benefício assistencial não contributivo."
 							})
 						]
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:111:11",
-						"data-prohibitions": "[editContent]",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/components/bpc-guide/BpcHero.tsx:50:11",
+						"data-prohibitions": "[]",
 						className: "flex flex-col sm:flex-row gap-5 w-full justify-center items-center",
-						"data-html2canvas-ignore": true,
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/bpc-guide/BpcHero.tsx:115:13",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+							"data-uid": "src/components/bpc-guide/BpcHero.tsx:51:13",
 							"data-prohibitions": "[]",
 							size: "lg",
 							className: "bg-gold text-[#111111] hover:bg-gold/90 text-lg h-16 px-8 font-bold shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all duration-300 w-full sm:w-auto rounded-xl",
 							asChild: true,
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:120:15",
+								"data-uid": "src/components/bpc-guide/BpcHero.tsx:56:15",
 								"data-prohibitions": "[]",
 								href: "https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20ajuda%20para%20solicitar%20o%20BPC/LOAS.",
 								target: "_blank",
 								rel: "noopener noreferrer",
 								children: ["Falar com Especialista ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-									"data-uid": "src/components/bpc-guide/BpcHero.tsx:125:40",
+									"data-uid": "src/components/bpc-guide/BpcHero.tsx:61:40",
 									"data-prohibitions": "[editContent]",
 									className: "ml-2 h-5 w-5"
 								})]
 							})
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-							"data-uid": "src/components/bpc-guide/BpcHero.tsx:129:13",
-							"data-prohibitions": "[editContent]",
-							size: "lg",
-							variant: "outline",
-							onClick: handleDownloadPDF,
-							disabled: isDownloading,
-							className: "border-gold text-gold hover:bg-gold hover:text-[#111111] text-lg h-16 px-8 font-bold transition-all duration-300 bg-[#111111]/80 backdrop-blur-sm w-full sm:w-auto rounded-xl",
-							children: [isDownloading ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:137:17",
-								"data-prohibitions": "[editContent]",
-								className: "mr-2 h-6 w-6 animate-spin"
-							}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:139:17",
-								"data-prohibitions": "[editContent]",
-								className: "mr-2 h-6 w-6"
-							}), "Baixar Guia PDF Completo"]
-						})]
+						})
 					})
 				]
 			})
@@ -23749,16 +23538,41 @@ function BpcTable() {
 											"data-uid": "src/components/bpc-guide/BpcTable.tsx:81:19",
 											"data-prohibitions": "[]",
 											className: "font-bold text-white px-6 py-6 text-base",
-											children: "Revisão"
+											children: "Acúmulo"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
 											"data-uid": "src/components/bpc-guide/BpcTable.tsx:84:19",
 											"data-prohibitions": "[]",
 											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
-											children: "A cada 2 anos (Atualização CadÚnico)"
+											children: "Não permitido"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
 											"data-uid": "src/components/bpc-guide/BpcTable.tsx:87:19",
+											"data-prohibitions": "[]",
+											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
+											children: "Não permitido"
+										})
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
+									"data-uid": "src/components/bpc-guide/BpcTable.tsx:91:17",
+									"data-prohibitions": "[]",
+									className: "border-border hover:bg-white/[0.02] transition-colors bg-[#111111]/40",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+											"data-uid": "src/components/bpc-guide/BpcTable.tsx:92:19",
+											"data-prohibitions": "[]",
+											className: "font-bold text-white px-6 py-6 text-base",
+											children: "Revisão"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+											"data-uid": "src/components/bpc-guide/BpcTable.tsx:95:19",
+											"data-prohibitions": "[]",
+											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
+											children: "A cada 2 anos (Atualização CadÚnico)"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+											"data-uid": "src/components/bpc-guide/BpcTable.tsx:98:19",
 											"data-prohibitions": "[]",
 											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
 											children: "A cada 2 anos (CadÚnico e Nova Perícia)"
@@ -23769,11 +23583,11 @@ function BpcTable() {
 						})]
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/bpc-guide/BpcTable.tsx:94:11",
+					"data-uid": "src/components/bpc-guide/BpcTable.tsx:105:11",
 					"data-prohibitions": "[]",
 					className: "bg-[#111111] p-5 text-center text-sm text-foreground/60 border-t border-border flex items-center justify-center gap-2 font-medium",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, {
-						"data-uid": "src/components/bpc-guide/BpcTable.tsx:95:13",
+						"data-uid": "src/components/bpc-guide/BpcTable.tsx:106:13",
 						"data-prohibitions": "[editContent]",
 						className: "w-4 h-4 text-gold shrink-0"
 					}), "Esta tabela técnica reflete rigorosamente a legislação previdenciária vigente em 2026."]
@@ -23802,96 +23616,99 @@ var faqs = [
 		a: "Você pode entrar com recurso administrativo no próprio INSS ou ingressar com uma ação judicial. A via judicial, com o auxílio de um advogado especialista, costuma ser mais rápida e efetiva para reverter negativas injustas."
 	},
 	{
+		q: "O benefício precisa ser renovado?",
+		a: "Sim, o BPC passa por revisão a cada 2 anos. É obrigatório manter o CadÚnico atualizado e, no caso da pessoa com deficiência, pode ser necessária uma nova perícia médica para comprovar a continuidade do impedimento."
+	},
+	{
 		q: "O BPC permite consignado?",
 		a: "Sim, limite de 35%. A legislação vigente permite que beneficiários do BPC/LOAS realizem empréstimos consignados, limitando o desconto direto no benefício para proteger a renda mínima de sobrevivência."
 	}
 ];
 function BpcFAQ() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:35:5",
+		"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:39:5",
 		"data-prohibitions": "[editContent]",
 		className: "py-24 bg-[#151515] border-t border-border/50",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:36:7",
+			"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:40:7",
 			"data-prohibitions": "[editContent]",
 			className: "container mx-auto px-4 md:px-6 max-w-6xl",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:37:9",
+				"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:41:9",
 				"data-prohibitions": "[editContent]",
 				className: "flex flex-col lg:flex-row gap-12 lg:gap-16",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:38:11",
+					"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:42:11",
 					"data-prohibitions": "[]",
 					className: "w-full lg:w-5/12 break-inside-avoid",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:39:13",
+						"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:43:13",
 						"data-prohibitions": "[]",
 						className: "sticky top-28",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:40:15",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:44:15",
 								"data-prohibitions": "[]",
 								className: "w-16 h-16 bg-[#111111] rounded-2xl flex items-center justify-center mb-6 border border-gold/20 shadow-lg",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, {
-									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:41:17",
+									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:45:17",
 									"data-prohibitions": "[editContent]",
 									className: "h-8 w-8 text-gold"
 								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:43:15",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:47:15",
 								"data-prohibitions": "[]",
 								className: "text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight",
 								children: ["Perguntas ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:44:27",
+									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:48:27",
 									"data-prohibitions": "[]",
 									className: "text-gold",
 									children: "Frequentes"
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:46:15",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:50:15",
 								"data-prohibitions": "[]",
 								className: "text-foreground/70 text-lg mb-10 leading-relaxed",
 								children: "Esclareça rapidamente suas dúvidas sobre as regras aplicáveis em 2026."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:50:15",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:54:15",
 								"data-prohibitions": "[]",
 								className: "bg-[#1A1A1A] p-6 md:p-8 rounded-3xl border border-gold/20 shadow-[0_0_30px_rgba(212,175,55,0.05)]",
-								"data-html2canvas-ignore": true,
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:54:17",
+										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:55:17",
 										"data-prohibitions": "[]",
 										className: "h-32 w-full mb-6 rounded-xl overflow-hidden relative",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:55:19",
+											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:56:19",
 											"data-prohibitions": "[editContent]",
 											src: "https://img.usecurling.com/p/600/300?q=consultation%20lawyer&color=black",
 											alt: "Atendimento Especializado",
 											className: "w-full h-full object-cover opacity-80"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:60:19",
+											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:61:19",
 											"data-prohibitions": "[]",
 											className: "absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent"
 										})]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:63:17",
+										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:64:17",
 										"data-prohibitions": "[]",
 										className: "text-white font-bold mb-3 text-xl",
 										children: "Dúvidas Específicas?"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:64:17",
+										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:65:17",
 										"data-prohibitions": "[]",
 										className: "text-sm text-foreground/70 mb-8 leading-relaxed",
 										children: [
 											"A avaliação técnica do seu caso pode identificar direitos que muitas vezes são negados injustamente pelo INSS. Fale conosco pelo WhatsApp",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:67:19",
+												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:68:19",
 												"data-prohibitions": "[]",
 												children: "55 53 981063023"
 											}),
@@ -23899,18 +23716,18 @@ function BpcFAQ() {
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:69:17",
+										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:70:17",
 										"data-prohibitions": "[]",
 										className: "w-full bg-gold text-[#111111] hover:bg-gold/90 font-bold h-14 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300",
 										asChild: true,
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:73:19",
+											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:74:19",
 											"data-prohibitions": "[]",
 											href: "https://wa.me/5553981063023?text=Olá,%20li%20o%20guia%20do%20BPC%20e%20gostaria%20de%20uma%20análise%20do%20meu%20caso.",
 											target: "_blank",
 											rel: "noopener noreferrer",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PhoneCall, {
-												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:78:21",
+												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:79:21",
 												"data-prohibitions": "[editContent]",
 												className: "mr-2 h-5 w-5"
 											}), " Falar no WhatsApp"]
@@ -23921,28 +23738,28 @@ function BpcFAQ() {
 						]
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:85:11",
+					"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:86:11",
 					"data-prohibitions": "[editContent]",
 					className: "w-full lg:w-7/12 pt-4",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-						"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:86:13",
+						"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:87:13",
 						"data-prohibitions": "[editContent]",
 						type: "single",
 						collapsible: true,
 						defaultValue: "faq-0",
 						className: "w-full space-y-4 md:space-y-6",
 						children: faqs.map((faq, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-							"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:93:17",
+							"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:94:17",
 							"data-prohibitions": "[editContent]",
 							value: `faq-${index}`,
 							className: "bg-[#1A1A1A] border border-border rounded-2xl px-6 md:px-8 data-[state=open]:border-gold/50 transition-colors break-inside-avoid shadow-sm overflow-hidden",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:98:19",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:99:19",
 								"data-prohibitions": "[editContent]",
 								className: "text-left text-lg md:text-xl font-bold text-white hover:text-gold hover:no-underline py-6",
 								children: faq.q
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:101:19",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:102:19",
 								"data-prohibitions": "[editContent]",
 								className: "text-foreground/80 leading-relaxed text-base pb-8 pt-2 block border-t border-border/50 mt-2",
 								children: faq.a
@@ -23953,6 +23770,121 @@ function BpcFAQ() {
 			})
 		})
 	});
+}
+//#endregion
+//#region src/hooks/use-toast.ts
+var TOAST_LIMIT = 1;
+var TOAST_REMOVE_DELAY = 1e6;
+var count = 0;
+function genId() {
+	count = (count + 1) % Number.MAX_SAFE_INTEGER;
+	return count.toString();
+}
+var toastTimeouts = /* @__PURE__ */ new Map();
+var addToRemoveQueue = (toastId) => {
+	if (toastTimeouts.has(toastId)) return;
+	const timeout = setTimeout(() => {
+		toastTimeouts.delete(toastId);
+		dispatch({
+			type: "REMOVE_TOAST",
+			toastId
+		});
+	}, TOAST_REMOVE_DELAY);
+	toastTimeouts.set(toastId, timeout);
+};
+var reducer = (state, action) => {
+	switch (action.type) {
+		case "ADD_TOAST": return {
+			...state,
+			toasts: [action.toast, ...state.toasts].slice(0, TOAST_LIMIT)
+		};
+		case "UPDATE_TOAST": return {
+			...state,
+			toasts: state.toasts.map((t) => t.id === action.toast.id ? {
+				...t,
+				...action.toast
+			} : t)
+		};
+		case "DISMISS_TOAST": {
+			const { toastId } = action;
+			if (toastId) addToRemoveQueue(toastId);
+			else state.toasts.forEach((toast) => {
+				addToRemoveQueue(toast.id);
+			});
+			return {
+				...state,
+				toasts: state.toasts.map((t) => t.id === toastId || toastId === void 0 ? {
+					...t,
+					open: false
+				} : t)
+			};
+		}
+		case "REMOVE_TOAST":
+			if (action.toastId === void 0) return {
+				...state,
+				toasts: []
+			};
+			return {
+				...state,
+				toasts: state.toasts.filter((t) => t.id !== action.toastId)
+			};
+	}
+};
+var listeners = [];
+var memoryState = { toasts: [] };
+function dispatch(action) {
+	memoryState = reducer(memoryState, action);
+	listeners.forEach((listener) => {
+		listener(memoryState);
+	});
+}
+function toast({ ...props }) {
+	const id = genId();
+	const update = (props) => dispatch({
+		type: "UPDATE_TOAST",
+		toast: {
+			...props,
+			id
+		}
+	});
+	const dismiss = () => dispatch({
+		type: "DISMISS_TOAST",
+		toastId: id
+	});
+	dispatch({
+		type: "ADD_TOAST",
+		toast: {
+			...props,
+			id,
+			open: true,
+			onOpenChange: (open) => {
+				if (!open) dismiss();
+			}
+		}
+	});
+	return {
+		id,
+		dismiss,
+		update
+	};
+}
+function useToast() {
+	const [state, setState] = import_react.useState(memoryState);
+	import_react.useEffect(() => {
+		listeners.push(setState);
+		return () => {
+			const index = listeners.indexOf(setState);
+			if (index > -1) listeners.splice(index, 1);
+		};
+	}, [state]);
+	return {
+		...state,
+		toast,
+		dismiss: (toastId) => dispatch({
+			type: "DISMISS_TOAST",
+			toastId
+		})
+	};
 }
 //#endregion
 //#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-use-callback-ref@1.1.1_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-use-callback-ref/dist/index.mjs
@@ -24839,7 +24771,7 @@ function BpcGuide() {
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		"data-uid": "src/pages/BpcGuide.tsx:20:5",
-		"data-prohibitions": "[editContent]",
+		"data-prohibitions": "[]",
 		className: "min-h-screen bg-[#111111] text-foreground flex flex-col",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header$1, {
@@ -24848,7 +24780,7 @@ function BpcGuide() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
 				"data-uid": "src/pages/BpcGuide.tsx:22:7",
-				"data-prohibitions": "[editContent]",
+				"data-prohibitions": "[]",
 				className: "flex-grow pt-20 md:pt-24 bg-[#111111]",
 				id: "bpc-guide-content",
 				children: [
@@ -24875,48 +24807,23 @@ function BpcGuide() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcFAQ, {
 						"data-uid": "src/pages/BpcGuide.tsx:28:9",
 						"data-prohibitions": "[editContent]"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/pages/BpcGuide.tsx:31:9",
-						"data-prohibitions": "[]",
-						className: "py-12 bg-[#111111] text-center border-t border-border/50 break-inside-avoid",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/pages/BpcGuide.tsx:32:11",
-								"data-prohibitions": "[]",
-								className: "text-gold font-bold text-xl mb-2",
-								children: "Dr. Lucas Morrone - Advocacia Previdenciária"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/pages/BpcGuide.tsx:35:11",
-								"data-prohibitions": "[]",
-								className: "text-white font-medium",
-								children: "Contato WhatsApp: 55 53 981063023"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/pages/BpcGuide.tsx:36:11",
-								"data-prohibitions": "[]",
-								className: "text-foreground/50 text-sm mt-6",
-								children: "Este documento foi gerado automaticamente através do site oficial do escritório."
-							})
-						]
 					})
 				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {
-				"data-uid": "src/pages/BpcGuide.tsx:41:7",
+				"data-uid": "src/pages/BpcGuide.tsx:30:7",
 				"data-prohibitions": "[editContent]"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FloatingWhatsApp, {
-				"data-uid": "src/pages/BpcGuide.tsx:42:7",
+				"data-uid": "src/pages/BpcGuide.tsx:31:7",
 				"data-prohibitions": "[editContent]"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CookieBanner, {
-				"data-uid": "src/pages/BpcGuide.tsx:43:7",
+				"data-uid": "src/pages/BpcGuide.tsx:32:7",
 				"data-prohibitions": "[editContent]"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster, {
-				"data-uid": "src/pages/BpcGuide.tsx:44:7",
+				"data-uid": "src/pages/BpcGuide.tsx:33:7",
 				"data-prohibitions": "[editContent]"
 			})
 		]
@@ -25012,4 +24919,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-D1d7av4U.js.map
+//# sourceMappingURL=index-DK6AENpp.js.map

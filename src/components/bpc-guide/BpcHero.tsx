@@ -1,71 +1,10 @@
-import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, BookOpen, Download, Loader2, FileCheck } from 'lucide-react'
-import { useToast } from '@/hooks/use-toast'
+import { ArrowRight, BookOpen, FileCheck } from 'lucide-react'
 
 export default function BpcHero() {
-  const { toast } = useToast()
-  const [isDownloading, setIsDownloading] = useState(false)
-
-  const handleDownloadPDF = () => {
-    setIsDownloading(true)
-
-    const script = document.createElement('script')
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js'
-
-    script.onload = () => {
-      const element = document.getElementById('bpc-guide-content')
-      if (!element) {
-        setIsDownloading(false)
-        return
-      }
-
-      const opt = {
-        margin: [10, 10, 10, 10],
-        filename: 'Guia Completo BPC LOAS 2026 - Dr. Lucas Morrone.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#111111' },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      }
-
-      // @ts-expect-error
-      window
-        .html2pdf()
-        .set(opt)
-        .from(element)
-        .save()
-        .then(() => {
-          setIsDownloading(false)
-          toast({
-            title: 'Download concluído',
-            description: 'O guia completo foi baixado com sucesso no formato PDF.',
-          })
-        })
-        .catch(() => {
-          setIsDownloading(false)
-          toast({
-            title: 'Erro no download',
-            description: 'Ocorreu um erro ao gerar o PDF.',
-            variant: 'destructive',
-          })
-        })
-    }
-
-    script.onerror = () => {
-      setIsDownloading(false)
-      toast({
-        title: 'Erro de conexão',
-        description: 'Não foi possível carregar o gerador de PDF.',
-        variant: 'destructive',
-      })
-    }
-
-    document.body.appendChild(script)
-  }
-
   return (
     <section className="relative py-20 md:py-32 overflow-hidden bg-[#111111] border-b border-border/50">
-      <div className="absolute inset-0 z-0" data-html2canvas-ignore>
+      <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111111] via-[#111111]/95 to-[#1a1a1a] z-10" />
         <img
           src="https://img.usecurling.com/p/1920/1080?q=legal%20documents%20desk&color=black"
@@ -108,10 +47,7 @@ export default function BpcHero() {
             </p>
           </div>
 
-          <div
-            className="flex flex-col sm:flex-row gap-5 w-full justify-center items-center"
-            data-html2canvas-ignore
-          >
+          <div className="flex flex-col sm:flex-row gap-5 w-full justify-center items-center">
             <Button
               size="lg"
               className="bg-gold text-[#111111] hover:bg-gold/90 text-lg h-16 px-8 font-bold shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all duration-300 w-full sm:w-auto rounded-xl"
@@ -124,21 +60,6 @@ export default function BpcHero() {
               >
                 Falar com Especialista <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={handleDownloadPDF}
-              disabled={isDownloading}
-              className="border-gold text-gold hover:bg-gold hover:text-[#111111] text-lg h-16 px-8 font-bold transition-all duration-300 bg-[#111111]/80 backdrop-blur-sm w-full sm:w-auto rounded-xl"
-            >
-              {isDownloading ? (
-                <Loader2 className="mr-2 h-6 w-6 animate-spin" />
-              ) : (
-                <Download className="mr-2 h-6 w-6" />
-              )}
-              Baixar Guia PDF Completo
             </Button>
           </div>
         </div>

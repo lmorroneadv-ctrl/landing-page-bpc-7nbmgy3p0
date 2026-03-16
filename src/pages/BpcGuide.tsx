@@ -26,17 +26,6 @@ export default function BpcGuide() {
         <BpcProcess />
         <BpcTable />
         <BpcFAQ />
-
-        {/* Contact info strictly for the PDF document at the end */}
-        <div className="py-12 bg-[#111111] text-center border-t border-border/50 break-inside-avoid">
-          <p className="text-gold font-bold text-xl mb-2">
-            Dr. Lucas Morrone - Advocacia Previdenciária
-          </p>
-          <p className="text-white font-medium">Contato WhatsApp: 55 53 981063023</p>
-          <p className="text-foreground/50 text-sm mt-6">
-            Este documento foi gerado automaticamente através do site oficial do escritório.
-          </p>
-        </div>
       </main>
       <Footer />
       <FloatingWhatsApp />

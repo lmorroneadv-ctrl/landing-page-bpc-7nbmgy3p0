@@ -79,6 +79,17 @@ export default function BpcTable() {
                 </TableRow>
                 <TableRow className="border-border hover:bg-white/[0.02] transition-colors">
                   <TableCell className="font-bold text-white px-6 py-6 text-base">
+                    Acúmulo
+                  </TableCell>
+                  <TableCell className="text-foreground/80 px-6 py-6 border-l border-border/30">
+                    Não permitido
+                  </TableCell>
+                  <TableCell className="text-foreground/80 px-6 py-6 border-l border-border/30">
+                    Não permitido
+                  </TableCell>
+                </TableRow>
+                <TableRow className="border-border hover:bg-white/[0.02] transition-colors bg-[#111111]/40">
+                  <TableCell className="font-bold text-white px-6 py-6 text-base">
                     Revisão
                   </TableCell>
                   <TableCell className="text-foreground/80 px-6 py-6 border-l border-border/30">
