@@ -1,107 +1,119 @@
-import { FileText, Heart, ArrowRight } from 'lucide-react'
-import { Card, CardContent } from '@/components/ui/card'
-import { useScrollAnimation } from '@/hooks/use-scroll-animation'
-import { cn } from '@/lib/utils'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { CheckCircle2, Scale, Clock, Users, ShieldAlert, Tractor, Activity } from 'lucide-react'
 
-export function Services() {
-  const { ref, isVisible } = useScrollAnimation()
+const services = [
+  {
+    title: 'Aposentadoria por Idade',
+    icon: <Clock className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Cálculo do tempo de contribuição',
+      'Simulação do benefício',
+      'Correção de vínculos',
+      'Pedido administrativo completo',
+    ],
+  },
+  {
+    title: 'Aposentadoria por Tempo',
+    icon: <Scale className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Análise de direito adquirido',
+      'Simulação de todas as regras',
+      'Correção de vínculos',
+      'Planejamento previdenciário completo',
+    ],
+  },
+  {
+    title: 'Pensão por Morte',
+    icon: <Users className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Análise de dependência',
+      'Documentação necessária',
+      'Pedido administrativo completo',
+      'Revisão do valor do benefício',
+    ],
+  },
+  {
+    title: 'BPC / LOAS',
+    icon: <ShieldAlert className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Análise de renda e requisitos legais',
+      'Organização da documentação',
+      'Pedido administrativo completo',
+      'Recurso em caso de negativa',
+    ],
+  },
+  {
+    title: 'Aposentadoria Híbrida',
+    icon: <Tractor className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Cálculo urbano + rural atualizado',
+      'Validação de documentos rurais',
+      'Simulação completa',
+      'Pedido administrativo completo',
+    ],
+  },
+  {
+    title: 'Benefícios por Incapacidade',
+    icon: <Activity className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Benefício por Incapacidade Temporária',
+      'Benefício por Incapacidade Permanente',
+      'Análise médica previdenciária',
+      'Recurso em caso de negativa',
+    ],
+  },
+]
 
+export default function Services() {
   return (
-    <section id="servicos" className="py-24 bg-background">
-      <div className="container" ref={ref}>
-        <div
-          className={cn(
-            'text-center max-w-2xl mx-auto mb-16 invisible',
-            isVisible && 'animate-fade-in-up',
-          )}
-        >
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-balance">
-            Especialização em BPC
+    <section id="servicos" className="py-20 bg-[#151515]">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Áreas de <span className="text-gold">Atuação</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Atuação focada para garantir a correta análise e concessão do Benefício de Prestação
-            Continuada.
+          <p className="text-foreground/70 text-lg">
+            Oferecemos assessoria jurídica especializada para garantir que seus direitos
+            previdenciários sejam respeitados e concedidos de forma correta.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <Card
-            className={cn(
-              'group hover:shadow-gold transition-all duration-300 invisible border-primary/20 bg-[#111111] text-white',
-              isVisible && 'animate-fade-in-up',
-            )}
-            style={{ animationDelay: '100ms' }}
-          >
-            <CardContent className="p-10">
-              <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <FileText className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="text-2xl font-serif font-bold mb-4">BPC / LOAS</h3>
-              <p className="text-white/70 mb-8 text-balance leading-relaxed">
-                Atendimento completo para concessão do benefício assistencial.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  'Análise de renda e requisitos legais',
-                  'Organização da documentação',
-                  'Pedido administrativo completo',
-                  'Recurso em caso de negativa',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm font-medium text-white/90">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#contato"
-                className="inline-flex items-center text-primary font-bold hover:text-primary/80 transition-colors"
-              >
-                Solicitar análise <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
-            </CardContent>
-          </Card>
-
-          <Card
-            className={cn(
-              'group hover:shadow-gold transition-all duration-300 invisible border-primary/20',
-              isVisible && 'animate-fade-in-up',
-            )}
-            style={{ animationDelay: '200ms' }}
-          >
-            <CardContent className="p-10">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Heart className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="text-2xl font-serif font-bold mb-4">BPC/LOAS para autismo</h3>
-              <p className="text-muted-foreground mb-8 text-balance leading-relaxed">
-                Orientação específica para crianças e adolescentes com TEA. Sabemos que as
-                exigências e os laudos periciais possuem particularidades nestes casos, e prestamos
-                todo o suporte para a comprovação do direito.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  'Análise de laudos médicos especializados',
-                  'Acompanhamento do processo pericial',
-                  'Garantia dos direitos da criança/adolescente',
-                ].map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-3 text-sm font-medium text-foreground/80"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <Card
+              key={index}
+              className="bg-[#1A1A1A] border-border hover:border-gold/50 transition-colors duration-300"
+            >
+              <CardHeader>
+                {service.icon}
+                <CardTitle className="text-xl font-bold text-white">{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3 mb-6">
+                  {service.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start text-foreground/80">
+                      <CheckCircle2 className="h-5 w-5 text-gold mr-3 shrink-0 mt-0.5" />
+                      <span className="text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button
+                  variant="outline"
+                  className="w-full border-gold/50 text-gold hover:bg-gold hover:text-[#111111] transition-colors"
+                  asChild
+                >
+                  <a
+                    href={`https://wa.me/5553999998235?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#contato"
-                className="inline-flex items-center text-primary font-bold hover:text-primary/80 transition-colors"
-              >
-                Tirar dúvidas sobre TEA <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
-            </CardContent>
-          </Card>
+                    Solicitar Análise
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

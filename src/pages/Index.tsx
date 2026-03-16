@@ -1,29 +1,33 @@
-import { Hero } from '@/components/sections/Hero'
-import { SocialProof } from '@/components/sections/SocialProof'
-import { Services } from '@/components/sections/Services'
-import { Biography } from '@/components/sections/Biography'
-import { LeadMagnet } from '@/components/sections/LeadMagnet'
-import { ProcessTimeline } from '@/components/sections/ProcessTimeline'
-import { AnalysisForm } from '@/components/sections/AnalysisForm'
-import { FAQ } from '@/components/sections/FAQ'
-import { Location } from '@/components/sections/Location'
-import { FinalCTA } from '@/components/sections/FinalCTA'
+import Header from '@/components/Header'
+import Hero from '@/components/sections/Hero'
+import Services from '@/components/sections/Services'
+import Biography from '@/components/sections/Biography'
+import SocialProof from '@/components/sections/SocialProof'
+import Blog from '@/components/sections/Blog'
+import FAQ from '@/components/sections/FAQ'
+import Location from '@/components/sections/Location'
+import Footer from '@/components/Footer'
+import FloatingWhatsApp from '@/components/FloatingWhatsApp'
+import CookieBanner from '@/components/CookieBanner'
 
-const Index = () => {
+export default function Index() {
   return (
-    <div className="bg-background w-full overflow-hidden">
-      <Hero />
-      <SocialProof />
-      <Services />
-      <Biography />
-      <LeadMagnet />
-      <ProcessTimeline />
-      <AnalysisForm />
-      <FAQ />
-      <Location />
-      <FinalCTA />
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
+      <Header />
+
+      <main className="flex-grow">
+        <Hero />
+        <Services />
+        <Biography />
+        <SocialProof />
+        <Blog />
+        <FAQ />
+        <Location />
+      </main>
+
+      <Footer />
+      <FloatingWhatsApp />
+      <CookieBanner />
     </div>
   )
 }
-
-export default Index

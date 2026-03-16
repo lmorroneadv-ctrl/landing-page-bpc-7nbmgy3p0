@@ -1,150 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Gold & Black Theme */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 7%; /* #111111 equivalent */
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 7%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 7%;
-
-    /* Gold #D4AF37 */
-    --primary: 46 65% 52%;
-    --primary-foreground: 0 0% 7%;
-
-    /* Deep Black #111111 */
-    --secondary: 0 0% 7%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
-
-    /* Accent Blue #0066CC */
-    --accent: 210 100% 40%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 46 65% 52%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 0 0% 7%; /* #111111 */
-    --foreground: 0 0% 98%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
 
     --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
 
     --primary: 46 65% 52%;
     --primary-foreground: 0 0% 7%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 210 100% 40%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 46 65% 52%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 46 65% 52%;
-  }
 
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/30 selection:text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-serif tracking-tight;
-  }
-
   html {
     scroll-behavior: smooth;
   }
 }
 
 @layer utilities {
-  @keyframes fade-in-up {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  .text-gold {
+    @apply text-[#D4AF37];
   }
-
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  .border-gold {
+    @apply border-[#D4AF37];
   }
-
-  @keyframes accordion-down {
-    from {
-      height: 0;
-    }
-    to {
-      height: var(--radix-accordion-content-height);
-    }
-  }
-
-  @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
-    }
-    to {
-      height: 0;
-    }
-  }
-
-  .animate-fade-in-up {
-    animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
-
-  .animate-fade-in {
-    animation: fade-in 0.5s ease-out forwards;
-  }
-
-  .animate-accordion-down {
-    animation: accordion-down 0.2s ease-out forwards;
-  }
-
-  .animate-accordion-up {
-    animation: accordion-up 0.2s ease-out forwards;
-  }
-
-  .text-balance {
-    text-wrap: balance;
+  .bg-gold {
+    @apply bg-[#D4AF37];
   }
 }

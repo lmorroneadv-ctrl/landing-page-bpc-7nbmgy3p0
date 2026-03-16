@@ -1,78 +1,62 @@
 import { Button } from '@/components/ui/button'
-import { CheckCircle2, ChevronRight } from 'lucide-react'
+import { ArrowRight, MapPin } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
 
-export function Hero() {
+export default function Hero() {
   return (
-    <section
-      id="inicio"
-      className="relative min-h-[90vh] flex items-center pt-[120px] lg:pt-24 bg-[#111111]"
-    >
-      {/* Background Image with Overlay */}
+    <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/80 via-[#111111]/90 to-[#111111] z-10" />
         <img
-          src="https://img.usecurling.com/p/1920/1080?q=lawyer%20office%20professional&color=black&dpr=2"
+          src="https://img.usecurling.com/p/1920/1080?q=law%20office&color=black"
           alt="Escritório de Advocacia"
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#111111] via-[#111111]/90 to-transparent"></div>
       </div>
 
-      <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8 max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium animate-fade-in-up">
-            <CheckCircle2 className="h-4 w-4" />
-            <span>Benefício de Prestação Continuada</span>
-          </div>
-
-          <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight text-balance animate-fade-in-up"
-            style={{ animationDelay: '100ms' }}
+      <div className="container mx-auto px-4 md:px-6 relative z-20">
+        <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+          <Badge
+            variant="outline"
+            className="mb-6 border-gold text-gold px-4 py-1.5 rounded-full flex items-center gap-2 text-sm bg-black/50 backdrop-blur-sm"
           >
-            Orientação Especializada para o seu BPC — Mesmo Que Tenha Sido Negado
+            <MapPin size={16} />
+            Atendimento presencial em Pelotas e Rio Grande
+          </Badge>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+            Advocacia Previdenciária <span className="text-gold">Especializada</span>
           </h1>
 
-          <p
-            className="text-lg md:text-xl text-white/80 text-balance animate-fade-in-up"
-            style={{ animationDelay: '200ms' }}
-          >
-            Especialista em Direito Previdenciário com foco em concessão e reversão de negativas.
-            Atendimento presencial em Pelotas e Rio Grande.
+          <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl">
+            Orientação técnica e análise aprofundada para garantir seus direitos junto ao INSS.
+            Atuação ética e transparente em cada etapa do seu processo.
           </p>
 
-          <div
-            className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up"
-            style={{ animationDelay: '300ms' }}
-          >
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Button
               size="lg"
-              className="h-14 px-8 text-base shadow-gold group bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base h-14 px-8"
               asChild
             >
-              <a href="#contato">
-                Solicitar Análise do Meu Caso
-                <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <a href="#servicos">
+                Conheça nossos serviços <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
-          </div>
-
-          <div
-            className="flex items-center gap-4 pt-6 mt-6 border-t border-white/10 animate-fade-in-up"
-            style={{ animationDelay: '400ms' }}
-          >
-            <div className="flex -space-x-3">
-              {[1, 2, 3].map((i) => (
-                <img
-                  key={i}
-                  src={`https://img.usecurling.com/ppl/thumbnail?gender=${i % 2 === 0 ? 'female' : 'male'}&seed=${i}`}
-                  alt="Cliente"
-                  className="w-10 h-10 rounded-full border-2 border-secondary object-cover"
-                />
-              ))}
-            </div>
-            <div className="text-sm text-white/70">
-              <span className="text-white font-bold block">Avaliados positivamente</span>
-              por nossos clientes no Google
-            </div>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-gold text-gold hover:bg-gold/10 text-base h-14 px-8"
+              asChild
+            >
+              <a
+                href="https://wa.me/5553999998235?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar com Advogado
+              </a>
+            </Button>
           </div>
         </div>
       </div>

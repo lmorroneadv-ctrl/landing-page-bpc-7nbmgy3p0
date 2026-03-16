@@ -1,96 +1,56 @@
-import { Star, CheckCircle } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
-import { useScrollAnimation } from '@/hooks/use-scroll-animation'
-import { cn } from '@/lib/utils'
+import { Star, Quote } from 'lucide-react'
 
 const testimonials = [
   {
-    name: 'Maria T.',
-    text: 'Procurei o Dr. Lucas após o BPC da minha mãe ser negado. Fui muito bem orientada sobre cada passo e conseguimos reverter a situação. Excelente profissional.',
-    seed: 4,
-    gender: 'female',
+    name: 'Maria C. Santos',
+    role: 'Aposentadoria Concedida',
+    text: 'A clareza técnica e a dedicação do Dr. Lucas foram fundamentais para a concessão da minha aposentadoria. O processo foi conduzido de forma ética e muito transparente.',
   },
   {
-    name: 'João R.',
-    text: 'Atendimento muito transparente e humano. Tirou todas as minhas dúvidas sobre a documentação necessária para o benefício do meu filho.',
-    seed: 5,
-    gender: 'male',
+    name: 'João R. Oliveira',
+    role: 'BPC/LOAS',
+    text: 'Depois de ter o benefício negado duas vezes pelo INSS, procurei o escritório. A organização da documentação e a orientação precisa fizeram toda a diferença para o meu filho.',
   },
   {
-    name: 'Fernanda L.',
-    text: 'Profissionalismo impecável. O acompanhamento do caso foi feito com muita clareza, sempre me atualizando sobre o andamento no INSS.',
-    seed: 6,
-    gender: 'female',
+    name: 'Antônio M. Silva',
+    role: 'Aposentadoria por Tempo',
+    text: 'Profissionalismo exemplar. Fizeram um planejamento previdenciário completo que me mostrou exatamente qual seria o melhor momento para dar entrada no meu pedido.',
   },
 ]
 
-export function SocialProof() {
-  const { ref, isVisible } = useScrollAnimation()
-
+export default function SocialProof() {
   return (
-    <section id="depoimentos" className="py-20 bg-muted/30 overflow-hidden">
-      <div className="container">
-        <div
-          ref={ref}
-          className={cn(
-            'text-center max-w-2xl mx-auto mb-12 invisible',
-            isVisible && 'animate-fade-in-up',
-          )}
-        >
-          <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm mb-6 border border-border">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px">
-              <path
-                fill="#FFC107"
-                d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
-              />
-              <path
-                fill="#FF3D00"
-                d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
-              />
-              <path
-                fill="#4CAF50"
-                d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
-              />
-              <path
-                fill="#1976D2"
-                d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
-              />
-            </svg>
-            <span className="font-semibold text-sm">Verificado no Google</span>
-            <CheckCircle className="w-4 h-4 text-blue-500" />
-          </div>
-          <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
-            Experiências de Nossos Clientes
+    <section className="py-20 bg-[#151515]">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            O que dizem nossos <span className="text-gold">Clientes</span>
           </h2>
-          <p className="text-muted-foreground">
-            A transparência e o compromisso ético refletidos nas avaliações de quem já confiou em
-            nosso trabalho.
+          <p className="text-foreground/70 text-lg">
+            O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de
+            seus direitos.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, i) => (
-            <Card
-              key={i}
-              className={cn('border-none shadow-soft invisible', isVisible && 'animate-fade-in-up')}
-              style={{ animationDelay: `${(i + 1) * 150}ms` }}
-            >
-              <CardContent className="p-6">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-5 h-5 fill-primary text-primary" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="bg-[#1A1A1A] border-border relative mt-6">
+              <div className="absolute -top-6 left-6 bg-gold rounded-full p-3 shadow-lg">
+                <Quote className="h-6 w-6 text-[#111111]" />
+              </div>
+              <CardContent className="pt-10 pb-8 px-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-gold fill-gold" />
                   ))}
                 </div>
-                <p className="text-foreground/80 mb-6 italic">"{testimonial.text}"</p>
-                <div className="flex items-center justify-between border-t border-border pt-4">
-                  <div className="flex items-center gap-3">
-                    <img
-                      src={`https://img.usecurling.com/ppl/thumbnail?gender=${testimonial.gender}&seed=${testimonial.seed}`}
-                      alt={testimonial.name}
-                      className="w-10 h-10 rounded-full object-cover"
-                    />
-                    <span className="font-semibold text-sm">{testimonial.name}</span>
-                  </div>
+                <p className="text-foreground/80 italic mb-6 leading-relaxed">
+                  "{testimonial.text}"
+                </p>
+                <div>
+                  <h4 className="font-bold text-white text-lg">{testimonial.name}</h4>
+                  <p className="text-gold text-sm">{testimonial.role}</p>
                 </div>
               </CardContent>
             </Card>

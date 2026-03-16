@@ -4,65 +4,63 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import { useScrollAnimation } from '@/hooks/use-scroll-animation'
-import { cn } from '@/lib/utils'
+import { HelpCircle } from 'lucide-react'
 
-const faqData = [
+const faqs = [
   {
-    question: 'Quais são os direitos de quem contribui para o INSS?',
+    question: 'Quais são os direitos básicos dos contribuintes do INSS?',
     answer:
-      'Quem contribui para o INSS possui a qualidade de segurado e tem direito a benefícios como auxílio-doença (benefício por incapacidade temporária), aposentadoria por invalidez, salário-maternidade, pensão por morte, entre outros previstos em lei, desde que cumpridos os requisitos específicos de carência e condição de cada benefício.',
+      'Os segurados do INSS têm direito a diversos benefícios, dependendo dos requisitos preenchidos, tais como: Aposentadorias (por idade, tempo de contribuição, especial, invalidez), Auxílio-Doença, Salário-Maternidade, Pensão por Morte e Auxílio-Reclusão. A manutenção da qualidade de segurado é essencial para a concessão da maioria destes benefícios.',
   },
   {
-    question: 'Como funciona a aposentadoria por idade?',
+    question: 'Como funciona a aposentadoria por idade atualmente?',
     answer:
-      'A aposentadoria por idade é devida ao segurado que atingir a idade mínima estipulada pela legislação (atualmente 65 anos para homens e 62 para mulheres) e comprovar o tempo mínimo de contribuição exigido (carência).',
+      'Atualmente, a regra geral exige 65 anos de idade para homens e 62 anos para mulheres, além de um tempo mínimo de contribuição de 15 anos para mulheres e 20 anos para homens (ou 15 anos para homens que já contribuíam antes da Reforma de 2019). É fundamental analisar as regras de transição aplicáveis a cada caso.',
   },
   {
-    question: 'O que fazer quando o INSS nega o benefício?',
+    question: 'Meu benefício foi negado pelo INSS. O que devo fazer?',
     answer:
-      'Diante de uma negativa do INSS, é possível apresentar um recurso administrativo no próprio órgão ou buscar a via judicial. A análise técnica por um advogado especializado é recomendada para identificar o motivo do indeferimento e a melhor estratégia a ser adotada.',
+      'A negativa administrativa (indeferimento) não é o fim da linha. É possível interpor um Recurso Administrativo no próprio INSS ou ingressar com uma Ação Judicial Federal. A escolha da melhor via depende da análise técnica dos motivos da negativa e da documentação disponível.',
   },
   {
-    question: 'Quem tem direito ao BPC/LOAS?',
+    question: 'Quais são os requisitos exatos para o BPC/LOAS?',
     answer:
-      'O BPC/LOAS é assistencial (não exige contribuição). É destinado a idosos com 65+ ou pessoas com deficiência que comprovem baixa renda e CadÚnico atualizado.',
+      'O BPC exige a comprovação de dois requisitos principais: 1) Ser idoso (65 anos ou mais) ou pessoa com deficiência (de qualquer idade) que apresente impedimentos de longo prazo; 2) Comprovar estado de miserabilidade, objetivamente definido como renda familiar per capita igual ou inferior a 1/4 do salário mínimo.',
+  },
+  {
+    question: 'Qual é o papel do advogado no processo previdenciário?',
+    answer:
+      'O advogado previdenciarista atua na organização documental, no cálculo do tempo de contribuição, na simulação de cenários de aposentadoria e na formulação correta dos pedidos. Sua atuação técnica visa evitar atrasos, prevenir negativas infundadas e garantir que o benefício seja concedido no melhor valor possível, respeitando o Código de Ética da OAB.',
   },
 ]
 
-export function FAQ() {
-  const { ref, isVisible } = useScrollAnimation()
-
+export default function FAQ() {
   return (
-    <section id="faq" className="py-24 bg-muted/30">
-      <div className="container max-w-4xl" ref={ref}>
-        <div className={cn('text-center mb-12 invisible', isVisible && 'animate-fade-in-up')}>
-          <h2 className="text-3xl font-serif font-bold mb-4">Dúvidas Frequentes</h2>
-          <p className="text-muted-foreground">
-            Esclarecimentos objetivos sobre benefícios assistenciais e previdenciários.
+    <section id="faq" className="py-20 bg-[#111111]">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <HelpCircle className="h-10 w-10 text-gold mx-auto mb-4" />
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Dúvidas <span className="text-gold">Frequentes</span>
+          </h2>
+          <p className="text-foreground/70 text-lg">
+            Respostas claras e diretas para as questões mais comuns sobre direito previdenciário.
           </p>
         </div>
 
-        <div
-          className={cn('invisible', isVisible && 'animate-fade-in-up')}
-          style={{ animationDelay: '200ms' }}
-        >
-          <Accordion
-            type="single"
-            collapsible
-            className="w-full bg-card rounded-2xl border p-6 shadow-sm"
-          >
-            {faqData.map((item, index) => (
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
-                value={`item-${index}`}
-                className="border-b-border border-b last:border-0"
+                value={`faq-${index}`}
+                className="bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-gold/50 transition-colors"
               >
-                <AccordionTrigger className="text-left font-medium text-lg hover:text-primary transition-colors py-4">
-                  {item.question}
+                <AccordionTrigger className="text-left text-lg font-medium hover:text-gold hover:no-underline py-4">
+                  {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed text-base pb-4">
-                  {item.answer}
+                <AccordionContent className="text-foreground/80 leading-relaxed text-base pb-6 pt-2">
+                  {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
