@@ -1,4 +1,4 @@
-import { Trophy, Clock, HeartHandshake, Scales } from 'lucide-react'
+import { Trophy, Clock, HeartHandshake, Scale } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import { cn } from '@/lib/utils'
@@ -26,7 +26,7 @@ const diffs = [
     title: 'Transparência Total',
     description:
       'Atualizações constantes via WhatsApp sobre o andamento do seu processo, sem linguagem jurídica complicada.',
-    icon: Scales,
+    icon: Scale,
   },
 ]
 

@@ -65,7 +65,7 @@ export function ProcessTimeline() {
                 )}
 
                 <div
-                  className="w-24 h-24 mx-auto bg-background border-4 border-muted rounded-full flex items-center justify-center mb-6 relative z-10 transition-colors duration-500 delay-[400ms] data-[visible=true]:border-primary"
+                  className="w-24 h-24 mx-auto bg-background border-4 border-muted rounded-full flex items-center justify-center mb-6 relative z-10 transition-colors duration-500 delay-500 data-[visible=true]:border-primary"
                   data-visible={isVisible}
                 >
                   <step.icon className="w-10 h-10 text-primary" />
