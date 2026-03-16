@@ -9,7 +9,7 @@ import {
 
 export default function BpcTable() {
   return (
-    <section className="py-20 bg-[#111111]">
+    <section className="py-20 bg-[#111111] break-inside-avoid">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -26,27 +26,29 @@ export default function BpcTable() {
             <TableHeader className="bg-[#222222]">
               <TableRow className="border-border hover:bg-transparent">
                 <TableHead className="text-gold font-bold text-lg w-1/3 py-5">Item</TableHead>
-                <TableHead className="text-white font-bold text-lg w-1/3 py-5">Idoso</TableHead>
-                <TableHead className="text-white font-bold text-lg w-1/3 py-5">PcD</TableHead>
+                <TableHead className="text-white font-bold text-lg w-1/3 py-5">BPC Idoso</TableHead>
+                <TableHead className="text-white font-bold text-lg w-1/3 py-5">
+                  BPC Pessoa com Deficiência
+                </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               <TableRow className="border-border hover:bg-white/5">
                 <TableCell className="font-semibold text-white">Idade</TableCell>
                 <TableCell className="text-foreground/80">65 anos ou mais</TableCell>
-                <TableCell className="text-foreground/80">qualquer idade</TableCell>
+                <TableCell className="text-foreground/80">Qualquer idade</TableCell>
               </TableRow>
               <TableRow className="border-border hover:bg-white/5">
                 <TableCell className="font-semibold text-white">Perícia</TableCell>
-                <TableCell className="text-foreground/80">não exige</TableCell>
+                <TableCell className="text-foreground/80">Não exige</TableCell>
                 <TableCell className="text-foreground/80">
-                  exige avaliação biopsicossocial
+                  Exige avaliação biopsicossocial
                 </TableCell>
               </TableRow>
               <TableRow className="border-border hover:bg-white/5">
                 <TableCell className="font-semibold text-white">Renda</TableCell>
-                <TableCell className="text-foreground/80">até ¼ do salário mínimo</TableCell>
-                <TableCell className="text-foreground/80">até ¼ do salário mínimo</TableCell>
+                <TableCell className="text-foreground/80">Até ¼ do salário mínimo</TableCell>
+                <TableCell className="text-foreground/80">Até ¼ do salário mínimo</TableCell>
               </TableRow>
               <TableRow className="border-border hover:bg-white/5">
                 <TableCell className="font-semibold text-white">Valor</TableCell>
@@ -60,9 +62,9 @@ export default function BpcTable() {
               </TableRow>
               <TableRow className="border-border hover:bg-white/5">
                 <TableCell className="font-semibold text-white">Revisão</TableCell>
-                <TableCell className="text-foreground/80">a cada 2 anos (CadÚnico)</TableCell>
+                <TableCell className="text-foreground/80">A cada 2 anos (CadÚnico)</TableCell>
                 <TableCell className="text-foreground/80">
-                  a cada 2 anos (CadÚnico + perícia)
+                  A cada 2 anos (CadÚnico + perícia)
                 </TableCell>
               </TableRow>
             </TableBody>

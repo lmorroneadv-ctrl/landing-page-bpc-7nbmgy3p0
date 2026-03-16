@@ -33,7 +33,7 @@ export default function BpcCharacteristics() {
   return (
     <section className="py-20 bg-[#151515]">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 break-inside-avoid">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Características <span className="text-gold">Principais</span>
           </h2>
@@ -46,7 +46,7 @@ export default function BpcCharacteristics() {
           {characteristics.map((item, index) => (
             <Card
               key={index}
-              className="bg-[#1A1A1A] border-border hover:border-gold/30 transition-all duration-300"
+              className="bg-[#1A1A1A] border-border hover:border-gold/30 transition-all duration-300 break-inside-avoid"
             >
               <CardContent className="p-8 text-center flex flex-col items-center">
                 {item.icon}

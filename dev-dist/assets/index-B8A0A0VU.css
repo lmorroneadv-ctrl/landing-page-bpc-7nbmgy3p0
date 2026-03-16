@@ -1261,6 +1261,15 @@ video {
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
 .cursor-default {
   cursor: default;
 }
@@ -1283,6 +1292,10 @@ video {
 }
 .list-none {
   list-style-type: none;
+}
+.break-inside-avoid {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1521,6 +1534,9 @@ video {
 .border-primary {
   border-color: hsl(var(--primary));
 }
+.border-red-900\/30 {
+  border-color: rgb(127 29 29 / 0.3);
+}
 .border-transparent {
   border-color: transparent;
 }
@@ -1537,6 +1553,9 @@ video {
 .bg-\[\#111111\] {
   --tw-bg-opacity: 1;
   background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#111111\]\/50 {
+  background-color: rgb(17 17 17 / 0.5);
 }
 .bg-\[\#111111\]\/95 {
   background-color: rgb(17 17 17 / 0.95);
@@ -1784,6 +1803,10 @@ video {
 .py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .py-2 {
   padding-top: 0.5rem;
@@ -2040,6 +2063,9 @@ video {
 }
 .text-primary-foreground {
   color: hsl(var(--primary-foreground));
+}
+.text-red-500\/50 {
+  color: rgb(239 68 68 / 0.5);
 }
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
@@ -3271,6 +3297,10 @@ video {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {

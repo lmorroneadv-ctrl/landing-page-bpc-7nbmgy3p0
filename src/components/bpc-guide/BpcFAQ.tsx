@@ -39,7 +39,7 @@ export default function BpcFAQ() {
     <section className="py-20 bg-[#151515] border-t border-border/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
-          <div className="w-full lg:w-1/3">
+          <div className="w-full lg:w-1/3 break-inside-avoid">
             <div className="sticky top-28">
               <HelpCircle className="h-12 w-12 text-gold mb-6" />
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -50,7 +50,10 @@ export default function BpcFAQ() {
                 Fale diretamente conosco.
               </p>
 
-              <div className="bg-[#111111] p-6 rounded-xl border border-border">
+              <div
+                className="bg-[#111111] p-6 rounded-xl border border-border"
+                data-html2canvas-ignore
+              >
                 <h4 className="text-white font-bold mb-2">Precisa de Análise do seu Caso?</h4>
                 <p className="text-sm text-foreground/70 mb-4">
                   A avaliação técnica pode identificar direitos que muitas vezes são negados
@@ -73,17 +76,21 @@ export default function BpcFAQ() {
           </div>
 
           <div className="w-full lg:w-2/3">
-            <Accordion type="single" collapsible className="w-full space-y-4">
+            <Accordion
+              type="multiple"
+              defaultValue={faqs.map((_, i) => `faq-${i}`)}
+              className="w-full space-y-4"
+            >
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`faq-${index}`}
-                  className="bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-gold/50 transition-colors"
+                  className="bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-gold/50 transition-colors break-inside-avoid"
                 >
                   <AccordionTrigger className="text-left text-lg font-medium hover:text-gold hover:no-underline py-5">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-foreground/80 leading-relaxed text-base pb-6 pt-2">
+                  <AccordionContent className="text-foreground/80 leading-relaxed text-base pb-6 pt-2 block">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>

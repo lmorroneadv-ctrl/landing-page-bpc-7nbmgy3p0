@@ -29,7 +29,7 @@ export default function BpcProcess() {
     },
     {
       title: 'Decisão',
-      desc: 'Aguarde a carta de concessão ou a decisão de indeferimento.',
+      desc: 'Aguarde a decisão. O INSS tem o prazo legal de 90 dias para concluir a análise do BPC/LOAS.',
       icon: <Scale className="w-6 h-6" />,
     },
   ]
@@ -39,7 +39,7 @@ export default function BpcProcess() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Steps */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 break-inside-avoid">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Passo a Passo da <span className="text-gold">Solicitação</span>
             </h2>
@@ -69,7 +69,7 @@ export default function BpcProcess() {
 
           {/* Documentation */}
           <div className="w-full lg:w-1/2">
-            <div className="bg-[#1A1A1A] border border-border rounded-2xl p-8 md:p-10 shadow-xl sticky top-28">
+            <div className="bg-[#1A1A1A] border border-border rounded-2xl p-8 md:p-10 shadow-xl sticky top-28 break-inside-avoid">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                 <FileText className="text-gold" /> Documentação Necessária
               </h3>
