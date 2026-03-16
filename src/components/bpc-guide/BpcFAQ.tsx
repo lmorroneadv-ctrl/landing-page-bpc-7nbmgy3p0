@@ -9,58 +9,65 @@ import { Button } from '@/components/ui/button'
 
 const faqs = [
   {
-    q: 'Posso trabalhar e receber o BPC?',
-    a: 'Em regra, quem recebe BPC não pode exercer atividade remunerada. Caso comece a trabalhar com carteira assinada, o benefício é suspenso, mas não cancelado. Para pessoas com deficiência, existe a possibilidade do Auxílio-Inclusão.',
+    q: 'Posso trabalhar enquanto recebo BPC?',
+    a: 'Regra geral não, o benefício é suspenso se o titular começar a trabalhar com carteira assinada. A exceção é o contrato de aprendizagem (jovem aprendiz). Para PcD, existe também a possibilidade do Auxílio-Inclusão caso consiga emprego.',
   },
   {
     q: 'O BPC pode ser transformado em aposentadoria?',
-    a: 'Não automaticamente. O BPC não é aposentadoria e não exige contribuição. Se você passar a contribuir para o INSS e atingir os requisitos de uma aposentadoria, poderá solicitar a troca para o benefício previdenciário (que costuma ser mais vantajoso por incluir 13º salário e pensão por morte).',
+    a: 'Apenas se houver contribuições posteriores. O BPC não se transforma automaticamente em aposentadoria, pois não exige contribuição prévia. Se você passar a contribuir como segurado facultativo, poderá solicitar a conversão futura.',
   },
   {
-    q: 'Crianças têm direito ao BPC?',
-    a: 'Sim. Crianças e adolescentes com deficiência (física, mental, intelectual ou sensorial) têm direito ao BPC/LOAS, desde que a renda familiar cumpra o requisito de até ¼ do salário mínimo por pessoa e a deficiência cause impacto no seu desenvolvimento e participação social.',
+    q: 'Crianças podem receber BPC?',
+    a: 'Sim, se PcD. Crianças e adolescentes com deficiência ou doença grave têm direito ao BPC/LOAS, desde que a família cumpra o requisito de renda mínima e o impacto da deficiência seja comprovado.',
   },
   {
     q: 'O que fazer se o pedido for negado?',
-    a: 'A negativa administrativa é muito comum. Você pode entrar com um recurso administrativo no próprio INSS em até 30 dias, ou, o que geralmente é mais eficaz, buscar a via judicial através de um advogado especialista para garantir o seu direito com análise de um juiz.',
+    a: 'Você pode entrar com recurso administrativo no próprio INSS ou ingressar com uma ação judicial. A via judicial, com o auxílio de um advogado especialista, costuma ser mais rápida e efetiva para reverter negativas injustas.',
   },
   {
-    q: 'Preciso renovar o BPC?',
-    a: 'Sim. É obrigatório manter o Cadastro Único (CadÚnico) atualizado no CRAS pelo menos a cada 2 anos. Além disso, o INSS pode convocar o beneficiário para revisões periódicas (o chamado "Pente-fino") para verificar se as condições de renda ou de deficiência ainda se mantêm.',
-  },
-  {
-    q: 'Posso fazer empréstimo consignado com o BPC?',
-    a: 'As regras sobre empréstimo consignado para beneficiários do BPC mudam com frequência. Devido a decisões judiciais recentes e mudanças legislativas, existem limitações rigorosas (ou até proibições temporárias) para a contratação de novos consignados, com o objetivo de proteger a renda mínima de sobrevivência do beneficiário. Consulte a regra exata vigente no momento.',
+    q: 'O BPC permite consignado?',
+    a: 'Sim, limite de 35%. A legislação vigente permite que beneficiários do BPC/LOAS realizem empréstimos consignados, limitando o desconto direto no benefício para proteger a renda mínima de sobrevivência.',
   },
 ]
 
 export default function BpcFAQ() {
   return (
-    <section className="py-20 bg-[#151515] border-t border-border/50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
-          <div className="w-full lg:w-1/3 break-inside-avoid">
+    <section className="py-24 bg-[#151515] border-t border-border/50">
+      <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="w-full lg:w-5/12 break-inside-avoid">
             <div className="sticky top-28">
-              <HelpCircle className="h-12 w-12 text-gold mb-6" />
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                Perguntas <span className="text-gold">Frequentes</span> Esclarecidas
+              <div className="w-16 h-16 bg-[#111111] rounded-2xl flex items-center justify-center mb-6 border border-gold/20 shadow-lg">
+                <HelpCircle className="h-8 w-8 text-gold" />
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
+                Perguntas <span className="text-gold">Frequentes</span>
               </h2>
-              <p className="text-foreground/70 text-lg mb-8">
-                Tire suas dúvidas sobre o Benefício de Prestação Continuada. Ainda tem questões?
-                Fale diretamente conosco.
+              <p className="text-foreground/70 text-lg mb-10 leading-relaxed">
+                Esclareça rapidamente suas dúvidas sobre as regras aplicáveis em 2026.
               </p>
 
               <div
-                className="bg-[#111111] p-6 rounded-xl border border-border"
+                className="bg-[#1A1A1A] p-6 md:p-8 rounded-3xl border border-gold/20 shadow-[0_0_30px_rgba(212,175,55,0.05)]"
                 data-html2canvas-ignore
               >
-                <h4 className="text-white font-bold mb-2">Precisa de Análise do seu Caso?</h4>
-                <p className="text-sm text-foreground/70 mb-4">
-                  A avaliação técnica pode identificar direitos que muitas vezes são negados
-                  injustamente pelo INSS.
+                <div className="h-32 w-full mb-6 rounded-xl overflow-hidden relative">
+                  <img
+                    src="https://img.usecurling.com/p/600/300?q=consultation%20lawyer&color=black"
+                    alt="Atendimento Especializado"
+                    className="w-full h-full object-cover opacity-80"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent"></div>
+                </div>
+
+                <h4 className="text-white font-bold mb-3 text-xl">Dúvidas Específicas?</h4>
+                <p className="text-sm text-foreground/70 mb-8 leading-relaxed">
+                  A avaliação técnica do seu caso pode identificar direitos que muitas vezes são
+                  negados injustamente pelo INSS. Fale conosco pelo WhatsApp{' '}
+                  <strong>55 53 981063023</strong>.
                 </p>
                 <Button
-                  className="w-full bg-gold text-[#111111] hover:bg-gold/90 font-bold"
+                  className="w-full bg-gold text-[#111111] hover:bg-gold/90 font-bold h-14 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                   asChild
                 >
                   <a
@@ -68,29 +75,30 @@ export default function BpcFAQ() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <PhoneCall className="mr-2 h-4 w-4" /> Contato pelo WhatsApp
+                    <PhoneCall className="mr-2 h-5 w-5" /> Falar no WhatsApp
                   </a>
                 </Button>
               </div>
             </div>
           </div>
 
-          <div className="w-full lg:w-2/3">
+          <div className="w-full lg:w-7/12 pt-4">
             <Accordion
-              type="multiple"
-              defaultValue={faqs.map((_, i) => `faq-${i}`)}
-              className="w-full space-y-4"
+              type="single"
+              collapsible
+              defaultValue="faq-0"
+              className="w-full space-y-4 md:space-y-6"
             >
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`faq-${index}`}
-                  className="bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-gold/50 transition-colors break-inside-avoid"
+                  className="bg-[#1A1A1A] border border-border rounded-2xl px-6 md:px-8 data-[state=open]:border-gold/50 transition-colors break-inside-avoid shadow-sm overflow-hidden"
                 >
-                  <AccordionTrigger className="text-left text-lg font-medium hover:text-gold hover:no-underline py-5">
+                  <AccordionTrigger className="text-left text-lg md:text-xl font-bold text-white hover:text-gold hover:no-underline py-6">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-foreground/80 leading-relaxed text-base pb-6 pt-2 block">
+                  <AccordionContent className="text-foreground/80 leading-relaxed text-base pb-8 pt-2 block border-t border-border/50 mt-2">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>

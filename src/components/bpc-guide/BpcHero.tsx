@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, BookOpen, Download, Loader2 } from 'lucide-react'
+import { ArrowRight, BookOpen, Download, Loader2, FileCheck } from 'lucide-react'
 import { useToast } from '@/hooks/use-toast'
 
 export default function BpcHero() {
@@ -22,8 +22,7 @@ export default function BpcHero() {
 
       const opt = {
         margin: [10, 10, 10, 10],
-        filename:
-          'Guia Completo: Benefício de Prestação Continuada (BPC/LOAS) - Dr. Lucas Morrone.pdf',
+        filename: 'Guia Completo BPC LOAS 2026 - Dr. Lucas Morrone.pdf',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true, backgroundColor: '#111111' },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
@@ -69,43 +68,53 @@ export default function BpcHero() {
       <div className="absolute inset-0 z-0" data-html2canvas-ignore>
         <div className="absolute inset-0 bg-gradient-to-br from-[#111111] via-[#111111]/95 to-[#1a1a1a] z-10" />
         <img
-          src="https://img.usecurling.com/p/1920/1080?q=legal%20documents&color=black"
+          src="https://img.usecurling.com/p/1920/1080?q=legal%20documents%20desk&color=black"
           alt="Guia BPC LOAS"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-20 mix-blend-luminosity"
         />
       </div>
-      <div className="container mx-auto px-4 md:px-6 relative z-20">
+      <div className="container mx-auto px-4 md:px-6 relative z-20 max-w-5xl">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mb-6 border border-gold/30 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
-            <BookOpen className="w-8 h-8 text-gold" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-bold mb-8 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+            <FileCheck className="w-4 h-4" /> Atualizado para 2026
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-            Guia Completo: <span className="text-gold">BPC / LOAS</span>
+
+          <div className="w-20 h-20 bg-[#1A1A1A] rounded-2xl flex items-center justify-center mb-8 border border-gold/40 shadow-[0_0_40px_rgba(212,175,55,0.2)] transform rotate-3">
+            <BookOpen className="w-10 h-10 text-gold -rotate-3" />
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
+            Guia Completo: <br className="hidden md:block" />
+            <span className="text-gold">BPC / LOAS</span>
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-2xl font-medium leading-relaxed">
-            Tudo o que você precisa saber sobre o Benefício de Prestação Continuada.
+
+          <p className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl font-medium leading-relaxed">
+            Visão Geral e regras definitivas sobre o Benefício de Prestação Continuada.
           </p>
 
-          <div className="bg-gold/10 border border-gold/40 rounded-xl p-6 sm:p-8 mb-10 shadow-[0_0_40px_rgba(212,175,55,0.15)] max-w-2xl w-full backdrop-blur-sm transform hover:scale-[1.02] transition-transform duration-500 break-inside-avoid">
-            <p className="text-gold font-bold text-sm uppercase tracking-widest mb-2">
-              Valor Atualizado
+          <div className="bg-gradient-to-br from-[#1A1A1A] to-[#111111] border border-gold/40 rounded-2xl p-8 sm:p-10 mb-12 shadow-[0_0_50px_rgba(212,175,55,0.15)] max-w-2xl w-full backdrop-blur-md transform hover:scale-[1.02] transition-transform duration-500 break-inside-avoid relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-bl-full -z-10"></div>
+            <p className="text-gold font-bold text-sm uppercase tracking-widest mb-3 flex items-center justify-center gap-2">
+              Valor Oficial
             </p>
-            <p className="text-3xl sm:text-4xl font-black text-white">
+            <p className="text-3xl sm:text-4xl font-black text-white leading-tight">
               No ano de 2026, o valor do BPC corresponde a{' '}
-              <span className="text-gold">R$ 1.621,00</span>
+              <span className="text-gold block mt-2 border-b-2 border-gold/30 pb-2 inline-block">
+                R$ 1.621,00
+              </span>
             </p>
-            <p className="text-foreground/70 mt-3 text-sm">
-              Equivalente a 1 (um) salário mínimo vigente. Benefício de caráter não contributivo.
+            <p className="text-foreground/70 mt-4 text-sm font-medium">
+              Equivalente a 1 (um) salário mínimo vigente. Benefício assistencial não contributivo.
             </p>
           </div>
 
           <div
-            className="flex flex-col sm:flex-row gap-4 w-full justify-center"
+            className="flex flex-col sm:flex-row gap-5 w-full justify-center items-center"
             data-html2canvas-ignore
           >
             <Button
               size="lg"
-              className="bg-gold text-[#111111] hover:bg-gold/90 text-lg h-14 px-8 font-bold shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all duration-300"
+              className="bg-gold text-[#111111] hover:bg-gold/90 text-lg h-16 px-8 font-bold shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all duration-300 w-full sm:w-auto rounded-xl"
               asChild
             >
               <a
@@ -122,14 +131,14 @@ export default function BpcHero() {
               variant="outline"
               onClick={handleDownloadPDF}
               disabled={isDownloading}
-              className="border-gold text-gold hover:bg-gold hover:text-[#111111] text-lg h-14 px-8 font-bold transition-all duration-300 bg-[#111111]/50 backdrop-blur-sm"
+              className="border-gold text-gold hover:bg-gold hover:text-[#111111] text-lg h-16 px-8 font-bold transition-all duration-300 bg-[#111111]/80 backdrop-blur-sm w-full sm:w-auto rounded-xl"
             >
               {isDownloading ? (
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                <Loader2 className="mr-2 h-6 w-6 animate-spin" />
               ) : (
-                <Download className="mr-2 h-5 w-5" />
+                <Download className="mr-2 h-6 w-6" />
               )}
-              Baixar Guia Completo (PDF)
+              Baixar Guia PDF Completo
             </Button>
           </div>
         </div>
