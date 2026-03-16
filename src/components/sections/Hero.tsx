@@ -1,65 +1,90 @@
 import { Button } from '@/components/ui/button'
-import { ArrowRight, MapPin } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
+import { ArrowRight, ShieldCheck, Scale, Award } from 'lucide-react'
+import logoUrl from '@/assets/editedimage_1773665784218-dc625.png'
 
-export default function Hero() {
+export function Hero() {
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/5511999999999', '_blank')
+  }
+
   return (
-    <section id="inicio" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/95 z-10" />
-        <img
-          src="https://img.usecurling.com/p/1920/1080?q=law%20office&color=blue"
-          alt="Escritório de Advocacia"
-          className="w-full h-full object-cover opacity-40 mix-blend-overlay"
-        />
-      </div>
+    <section
+      id="inicio"
+      className="relative min-h-[95vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-background"
+    >
+      {/* Subtle background grid and gradient for an elegant look */}
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:40px_40px]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-6 relative z-20">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center animate-in fade-in slide-in-from-bottom-6 duration-1000">
-          <Badge
-            variant="outline"
-            className="mb-8 border-gold/50 text-gold px-5 py-2 rounded-full flex items-center gap-2 text-sm bg-background/50 backdrop-blur-sm shadow-gold"
-          >
-            <MapPin size={16} />
-            Atendimento presencial em Pelotas e Rio Grande
-          </Badge>
+      <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center max-w-5xl mx-auto">
+        {/* Main Logo Focus */}
+        <div className="animate-fade-in-up mb-10">
+          <img
+            src={logoUrl}
+            alt="Lucas Morrone - Advocacia Previdenciária"
+            className="h-40 md:h-56 lg:h-64 w-auto object-contain drop-shadow-2xl mix-blend-lighten"
+          />
+        </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight font-serif">
-            Lucas Morrone
-            <span className="block text-3xl md:text-5xl lg:text-5xl mt-2 text-gold font-serif italic">
-              Advocacia Especializada
-            </span>
+        <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
+          <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary shadow-sm backdrop-blur-sm">
+            <ShieldCheck className="mr-2 h-4 w-4" />
+            Escritório Especializado em Direito Previdenciário
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-foreground text-balance">
+            Garanta seu direito à{' '}
+            <span className="text-primary font-serif italic">Aposentadoria</span> e{' '}
+            <span className="text-primary font-serif italic">BPC/LOAS</span>
           </h1>
 
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mb-8 opacity-70"></div>
-
-          <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl font-light leading-relaxed">
-            Orientação técnica e análise aprofundada para garantir seus direitos junto ao INSS. Uma
-            atuação pautada na ética, transparência e excelência jurídica.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+            Atuação jurídica ágil, transparente e de excelência. Lutamos para que você receba o
+            benefício que é seu por direito, com a segurança de um escritório altamente
+            especializado.
           </p>
+        </div>
 
-          <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
-            <Button
-              size="lg"
-              className="bg-gold text-primary-foreground hover:bg-gold/90 text-base h-14 px-8 shadow-gold font-bold"
-              asChild
-            >
-              <a
-                href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Agendar Consulta <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white/20 text-white hover:bg-white/10 hover:text-white text-base h-14 px-8 backdrop-blur-sm transition-all"
-              asChild
-            >
-              <a href="#servicos">Nossas Áreas de Atuação</a>
-            </Button>
+        <div
+          className="flex flex-col sm:flex-row gap-4 w-full justify-center mt-10 animate-fade-in-up"
+          style={{ animationDelay: '300ms' }}
+        >
+          <Button
+            size="lg"
+            onClick={handleWhatsApp}
+            className="text-lg px-8 h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold uppercase tracking-wider"
+          >
+            Análise Gratuita do Caso <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => {
+              document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+            className="text-lg px-8 h-14 border-primary/30 text-foreground hover:bg-primary/10"
+          >
+            Conhecer Especialidades
+          </Button>
+        </div>
+
+        {/* Elegant Trust Indicators */}
+        <div
+          className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12 mt-20 pt-10 border-t border-border/50 animate-fade-in-up"
+          style={{ animationDelay: '450ms' }}
+        >
+          <div className="flex flex-col items-center gap-2">
+            <Scale className="h-8 w-8 text-primary/80" />
+            <p className="text-sm font-medium text-foreground">Alta Taxa de Sucesso</p>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Award className="h-8 w-8 text-primary/80" />
+            <p className="text-sm font-medium text-foreground">Especialistas em INSS</p>
+          </div>
+          <div className="flex flex-col items-center gap-2 col-span-2 md:col-span-1">
+            <ShieldCheck className="h-8 w-8 text-primary/80" />
+            <p className="text-sm font-medium text-foreground">Sigilo e Segurança Total</p>
           </div>
         </div>
       </div>

@@ -4,70 +4,67 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import { HelpCircle } from 'lucide-react'
 
 const faqs = [
   {
-    question: 'Quais são os direitos básicos dos contribuintes do INSS?',
+    question: 'O que é o BPC/LOAS e quem tem direito?',
     answer:
-      'Os segurados do INSS têm direito a diversos benefícios, dependendo dos requisitos preenchidos, tais como: Aposentadorias (por idade, tempo de contribuição, especial, invalidez), Auxílio-Doença, Salário-Maternidade, Pensão por Morte e Auxílio-Reclusão. A manutenção da qualidade de segurado é essencial para a concessão da maioria destes benefícios.',
+      'O BPC (Benefício de Prestação Continuada) é um benefício no valor de um salário mínimo mensal pago pelo INSS. Têm direito idosos com 65 anos ou mais e pessoas de qualquer idade com deficiência (física, mental, intelectual ou sensorial) de longo prazo, que comprovem não possuir meios de se sustentar ou ser sustentado pela família (baixa renda).',
   },
   {
-    question: 'Como funciona a aposentadoria por idade atualmente?',
+    question: 'Preciso ter contribuído para o INSS para receber o BPC?',
     answer:
-      'Atualmente, a regra geral exige 65 anos de idade para homens e 62 anos para mulheres, além de um tempo mínimo de contribuição de 15 anos para mulheres e 20 anos para homens (ou 15 anos para homens que já contribuíam antes da Reforma de 2019). É fundamental analisar as regras de transição aplicáveis a cada caso.',
+      'Não. Diferente da aposentadoria, o BPC é um benefício assistencial e não exige que a pessoa tenha contribuído para o INSS. O principal requisito é a comprovação da idade/deficiência e da condição de vulnerabilidade social (baixa renda).',
   },
   {
-    question: 'Meu benefício foi negado pelo INSS. O que devo fazer?',
+    question: 'O INSS negou meu pedido. O que devo fazer?',
     answer:
-      'A negativa administrativa (indeferimento) não é o fim da linha. É possível interpor um Recurso Administrativo no próprio INSS ou ingressar com uma Ação Judicial Federal. A escolha da melhor via depende da análise técnica dos motivos da negativa e da documentação disponível.',
+      'A negativa do INSS é muito comum, muitas vezes por erros de análise ou exigências descabidas. Se o seu pedido foi negado, o ideal é procurar um advogado especialista imediatamente para ingressar com uma ação judicial. Na justiça, a análise é feita de forma mais detalhada e justa.',
   },
   {
-    question: 'Quais são os requisitos exatos para o BPC/LOAS?',
+    question: 'Vocês atendem clientes de outros estados?',
     answer:
-      'O BPC exige a comprovação de dois requisitos principais: 1) Ser idoso (65 anos ou mais) ou pessoa com deficiência (de qualquer idade) que apresente impedimentos de longo prazo; 2) Comprovar estado de miserabilidade, objetivamente definido como renda familiar per capita igual ou inferior a 1/4 do salário mínimo.',
+      'Sim! Hoje o processo judicial e administrativo previdenciário é 100% digital. Isso nos permite representar clientes em qualquer lugar do Brasil com a mesma eficiência e proximidade, mantendo contato constante através de WhatsApp e reuniões por vídeo.',
   },
   {
-    question: 'Qual é o papel do advogado no processo previdenciário?',
+    question: 'Quanto custa para contratar o escritório?',
     answer:
-      'O advogado previdenciarista atua na organização documental, no cálculo do tempo de contribuição, na simulação de cenários de aposentadoria e na formulação correta dos pedidos. Sua atuação técnica visa evitar atrasos, prevenir negativas infundadas e garantir que o benefício seja concedido no melhor valor possível, respeitando o Código de Ética da OAB.',
+      'Trabalhamos na modalidade de risco. Isso significa que fazemos a análise inicial do seu caso gratuitamente. Se assumirmos a causa, nossos honorários só serão cobrados no final, apenas se ganharmos o processo. Você não precisa tirar dinheiro do bolso para iniciar a ação.',
   },
 ]
 
-export default function FAQ() {
+export function FAQ() {
   return (
-    <section id="faq" className="py-24 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold/20">
-            <HelpCircle className="h-8 w-8 text-gold" strokeWidth={1.5} />
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 font-serif">
-            Dúvidas <span className="text-gold italic">Frequentes</span>
+    <section id="faq" className="py-24 bg-background border-t border-border">
+      <div className="container px-4 md:px-6 max-w-4xl mx-auto">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-sm font-bold tracking-widest text-primary uppercase">
+            Dúvidas Frequentes
           </h2>
-          <p className="text-foreground/70 text-lg font-light">
-            Respostas claras e diretas para as questões mais comuns sobre direito previdenciário.
+          <h3 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground font-serif">
+            Esclarecimentos Jurídicos
+          </h3>
+          <p className="text-lg text-muted-foreground font-light">
+            Respostas diretas para as principais dúvidas sobre seus direitos previdenciários.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`faq-${index}`}
-                className="bg-secondary border border-border/50 rounded-lg px-6 data-[state=open]:border-gold/50 data-[state=open]:shadow-sm transition-all"
-              >
-                <AccordionTrigger className="text-left text-lg font-medium hover:text-gold hover:no-underline py-5 font-serif">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-foreground/70 leading-relaxed text-base pb-6 pt-2 font-light">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+        <Accordion type="single" collapsible className="w-full space-y-4">
+          {faqs.map((faq, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border-border bg-card px-6 rounded-lg"
+            >
+              <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary hover:no-underline py-6">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   )

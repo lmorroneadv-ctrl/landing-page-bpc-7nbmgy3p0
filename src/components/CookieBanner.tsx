@@ -1,43 +1,45 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 
-export default function CookieBanner() {
+export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent')
-    if (!consent) {
+    const hasAcceptedCookies = localStorage.getItem('cookiesAccepted')
+    if (!hasAcceptedCookies) {
       setIsVisible(true)
     }
   }, [])
 
-  const handleAccept = () => {
-    localStorage.setItem('cookie-consent', 'true')
+  const acceptCookies = () => {
+    localStorage.setItem('cookiesAccepted', 'true')
     setIsVisible(false)
   }
 
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-card border-t border-border/50 p-4 z-50 shadow-2xl animate-in slide-in-from-bottom duration-500">
-      <div className="container mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-5">
-        <p className="text-sm text-foreground/70 text-center sm:text-left font-light">
-          Utilizamos cookies para melhorar sua experiência em nosso site. Ao continuar navegando,
-          você concorda com a nossa política de privacidade e uso de cookies.
+    <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border p-4 z-50 shadow-2xl">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-sm text-muted-foreground text-center sm:text-left font-light">
+          Utilizamos cookies essenciais para oferecer a melhor experiência em nosso site. Ao
+          continuar navegando, você concorda com a nossa política de privacidade.
         </p>
-        <div className="flex gap-3 shrink-0">
+        <div className="flex gap-4 shrink-0">
           <Button
             variant="outline"
-            className="border-border text-foreground hover:bg-secondary hover:text-white"
-            onClick={() => setIsVisible(false)}
+            size="sm"
+            onClick={acceptCookies}
+            className="border-border hover:bg-muted"
           >
-            Recusar
+            Recusar Não Essenciais
           </Button>
           <Button
-            className="bg-gold text-primary-foreground hover:bg-gold/90 font-medium"
-            onClick={handleAccept}
+            size="sm"
+            onClick={acceptCookies}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
           >
-            Aceitar Cookies
+            Aceitar Todos
           </Button>
         </div>
       </div>

@@ -1,25 +1,40 @@
 import { MessageCircle } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { useState, useEffect } from 'react'
 
-export default function FloatingWhatsApp() {
+export function FloatingWhatsApp() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <a
-      href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
+      href="https://wa.me/5511999999999"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group"
-      aria-label="Contato via WhatsApp"
+      className={cn(
+        'fixed bottom-6 right-6 z-50 p-4 rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-black/30 transition-all duration-300 hover:scale-110 flex items-center justify-center group',
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0 pointer-events-none',
+      )}
+      aria-label="Falar no WhatsApp"
     >
-      <div className="relative">
-        <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-75"></div>
+      <MessageCircle size={28} />
 
-        <div className="relative bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-xl transition-transform duration-300 transform group-hover:scale-110 flex items-center justify-center">
-          <MessageCircle className="h-7 w-7" />
-        </div>
-
-        <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#111111] shadow-sm">
-          2
-        </div>
-      </div>
+      {/* Tooltip */}
+      <span className="absolute right-full mr-4 bg-background border border-border text-foreground text-sm py-2 px-3 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-medium">
+        Fale conosco agora
+      </span>
     </a>
   )
 }

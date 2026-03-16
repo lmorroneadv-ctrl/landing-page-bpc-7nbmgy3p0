@@ -17267,540 +17267,6 @@ function useViewTransitionState(to, { relative } = {}) {
 	return matchPath(path.pathname, nextPath) != null || matchPath(path.pathname, currentPath) != null;
 }
 //#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/shared/src/utils/mergeClasses.js
-/**
-* @license lucide-react v0.577.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var mergeClasses = (...classes) => classes.filter((className, index, array) => {
-	return Boolean(className) && className.trim() !== "" && array.indexOf(className) === index;
-}).join(" ").trim();
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/shared/src/utils/toKebabCase.js
-/**
-* @license lucide-react v0.577.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/shared/src/utils/toCamelCase.js
-/**
-* @license lucide-react v0.577.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var toCamelCase = (string) => string.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) => p2 ? p2.toUpperCase() : p1.toLowerCase());
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/shared/src/utils/toPascalCase.js
-/**
-* @license lucide-react v0.577.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var toPascalCase = (string) => {
-	const camelCase = toCamelCase(string);
-	return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
-};
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/defaultAttributes.js
-/**
-* @license lucide-react v0.577.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var defaultAttributes = {
-	xmlns: "http://www.w3.org/2000/svg",
-	width: 24,
-	height: 24,
-	viewBox: "0 0 24 24",
-	fill: "none",
-	stroke: "currentColor",
-	strokeWidth: 2,
-	strokeLinecap: "round",
-	strokeLinejoin: "round"
-};
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/shared/src/utils/hasA11yProp.js
-/**
-* @license lucide-react v0.577.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var hasA11yProp = (props) => {
-	for (const prop in props) if (prop.startsWith("aria-") || prop === "role" || prop === "title") return true;
-	return false;
-};
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/Icon.js
-/**
-* @license lucide-react v0.577.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var Icon = (0, import_react.forwardRef)(({ color = "currentColor", size = 24, strokeWidth = 2, absoluteStrokeWidth, className = "", children, iconNode, ...rest }, ref) => (0, import_react.createElement)("svg", {
-	ref,
-	...defaultAttributes,
-	width: size,
-	height: size,
-	stroke: color,
-	strokeWidth: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
-	className: mergeClasses("lucide", className),
-	...!children && !hasA11yProp(rest) && { "aria-hidden": "true" },
-	...rest
-}, [...iconNode.map(([tag, attrs]) => (0, import_react.createElement)(tag, attrs)), ...Array.isArray(children) ? children : [children]]));
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/createLucideIcon.js
-/**
-* @license lucide-react v0.577.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var createLucideIcon = (iconName, iconNode) => {
-	const Component = (0, import_react.forwardRef)(({ className, ...props }, ref) => (0, import_react.createElement)(Icon, {
-		ref,
-		iconNode,
-		className: mergeClasses(`lucide-${toKebabCase(toPascalCase(iconName))}`, `lucide-${iconName}`, className),
-		...props
-	}));
-	Component.displayName = toPascalCase(iconName);
-	return Component;
-};
-var Activity = createLucideIcon("activity", [["path", {
-	d: "M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2",
-	key: "169zse"
-}]]);
-var ArrowRight = createLucideIcon("arrow-right", [["path", {
-	d: "M5 12h14",
-	key: "1ays0h"
-}], ["path", {
-	d: "m12 5 7 7-7 7",
-	key: "xquz4c"
-}]]);
-var Ban = createLucideIcon("ban", [["circle", {
-	cx: "12",
-	cy: "12",
-	r: "10",
-	key: "1mglay"
-}], ["path", {
-	d: "M4.929 4.929 19.07 19.071",
-	key: "196cmz"
-}]]);
-var BookOpen = createLucideIcon("book-open", [["path", {
-	d: "M12 7v14",
-	key: "1akyts"
-}], ["path", {
-	d: "M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z",
-	key: "ruj8y"
-}]]);
-var Calculator = createLucideIcon("calculator", [
-	["rect", {
-		width: "16",
-		height: "20",
-		x: "4",
-		y: "2",
-		rx: "2",
-		key: "1nb95v"
-	}],
-	["line", {
-		x1: "8",
-		x2: "16",
-		y1: "6",
-		y2: "6",
-		key: "x4nwl0"
-	}],
-	["line", {
-		x1: "16",
-		x2: "16",
-		y1: "14",
-		y2: "18",
-		key: "wjye3r"
-	}],
-	["path", {
-		d: "M16 10h.01",
-		key: "1m94wz"
-	}],
-	["path", {
-		d: "M12 10h.01",
-		key: "1nrarc"
-	}],
-	["path", {
-		d: "M8 10h.01",
-		key: "19clt8"
-	}],
-	["path", {
-		d: "M12 14h.01",
-		key: "1etili"
-	}],
-	["path", {
-		d: "M8 14h.01",
-		key: "6423bh"
-	}],
-	["path", {
-		d: "M12 18h.01",
-		key: "mhygvu"
-	}],
-	["path", {
-		d: "M8 18h.01",
-		key: "lrp35t"
-	}]
-]);
-var Check = createLucideIcon("check", [["path", {
-	d: "M20 6 9 17l-5-5",
-	key: "1gmf2c"
-}]]);
-var ChevronDown = createLucideIcon("chevron-down", [["path", {
-	d: "m6 9 6 6 6-6",
-	key: "qrunsl"
-}]]);
-var CircleCheck = createLucideIcon("circle-check", [["circle", {
-	cx: "12",
-	cy: "12",
-	r: "10",
-	key: "1mglay"
-}], ["path", {
-	d: "m9 12 2 2 4-4",
-	key: "dzmm74"
-}]]);
-var CircleQuestionMark = createLucideIcon("circle-question-mark", [
-	["circle", {
-		cx: "12",
-		cy: "12",
-		r: "10",
-		key: "1mglay"
-	}],
-	["path", {
-		d: "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3",
-		key: "1u773s"
-	}],
-	["path", {
-		d: "M12 17h.01",
-		key: "p32p05"
-	}]
-]);
-var CircleX = createLucideIcon("circle-x", [
-	["circle", {
-		cx: "12",
-		cy: "12",
-		r: "10",
-		key: "1mglay"
-	}],
-	["path", {
-		d: "m15 9-6 6",
-		key: "1uzhvr"
-	}],
-	["path", {
-		d: "m9 9 6 6",
-		key: "z0biqf"
-	}]
-]);
-var Clock = createLucideIcon("clock", [["circle", {
-	cx: "12",
-	cy: "12",
-	r: "10",
-	key: "1mglay"
-}], ["path", {
-	d: "M12 6v6l4 2",
-	key: "mmk7yg"
-}]]);
-var FileCheck = createLucideIcon("file-check", [
-	["path", {
-		d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z",
-		key: "1oefj6"
-	}],
-	["path", {
-		d: "M14 2v5a1 1 0 0 0 1 1h5",
-		key: "wfsgrz"
-	}],
-	["path", {
-		d: "m9 15 2 2 4-4",
-		key: "1grp1n"
-	}]
-]);
-var FileText = createLucideIcon("file-text", [
-	["path", {
-		d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z",
-		key: "1oefj6"
-	}],
-	["path", {
-		d: "M14 2v5a1 1 0 0 0 1 1h5",
-		key: "wfsgrz"
-	}],
-	["path", {
-		d: "M10 9H8",
-		key: "b1mrlr"
-	}],
-	["path", {
-		d: "M16 13H8",
-		key: "t4e002"
-	}],
-	["path", {
-		d: "M16 17H8",
-		key: "z1uh3a"
-	}]
-]);
-var HeartPulse = createLucideIcon("heart-pulse", [["path", {
-	d: "M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5",
-	key: "mvr1a0"
-}], ["path", {
-	d: "M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27",
-	key: "auskq0"
-}]]);
-var Info = createLucideIcon("info", [
-	["circle", {
-		cx: "12",
-		cy: "12",
-		r: "10",
-		key: "1mglay"
-	}],
-	["path", {
-		d: "M12 16v-4",
-		key: "1dtifu"
-	}],
-	["path", {
-		d: "M12 8h.01",
-		key: "e9boi3"
-	}]
-]);
-var MapPin = createLucideIcon("map-pin", [["path", {
-	d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
-	key: "1r0f0z"
-}], ["circle", {
-	cx: "12",
-	cy: "10",
-	r: "3",
-	key: "ilqhr7"
-}]]);
-var Menu = createLucideIcon("menu", [
-	["path", {
-		d: "M4 5h16",
-		key: "1tepv9"
-	}],
-	["path", {
-		d: "M4 12h16",
-		key: "1lakjw"
-	}],
-	["path", {
-		d: "M4 19h16",
-		key: "1djgab"
-	}]
-]);
-var MessageCircle = createLucideIcon("message-circle", [["path", {
-	d: "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719",
-	key: "1sd12s"
-}]]);
-var PhoneCall = createLucideIcon("phone-call", [
-	["path", {
-		d: "M13 2a9 9 0 0 1 9 9",
-		key: "1itnx2"
-	}],
-	["path", {
-		d: "M13 6a5 5 0 0 1 5 5",
-		key: "11nki7"
-	}],
-	["path", {
-		d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
-		key: "9njp5v"
-	}]
-]);
-var Phone = createLucideIcon("phone", [["path", {
-	d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
-	key: "9njp5v"
-}]]);
-var Quote = createLucideIcon("quote", [["path", {
-	d: "M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z",
-	key: "rib7q0"
-}], ["path", {
-	d: "M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z",
-	key: "1ymkrd"
-}]]);
-var Scale = createLucideIcon("scale", [
-	["path", {
-		d: "M12 3v18",
-		key: "108xh3"
-	}],
-	["path", {
-		d: "m19 8 3 8a5 5 0 0 1-6 0zV7",
-		key: "zcdpyk"
-	}],
-	["path", {
-		d: "M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1",
-		key: "1yorad"
-	}],
-	["path", {
-		d: "m5 8 3 8a5 5 0 0 1-6 0zV7",
-		key: "eua70x"
-	}],
-	["path", {
-		d: "M7 21h10",
-		key: "1b0cd5"
-	}]
-]);
-var ShieldAlert = createLucideIcon("shield-alert", [
-	["path", {
-		d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
-		key: "oel41y"
-	}],
-	["path", {
-		d: "M12 8v4",
-		key: "1got3b"
-	}],
-	["path", {
-		d: "M12 16h.01",
-		key: "1drbdi"
-	}]
-]);
-var Smartphone = createLucideIcon("smartphone", [["rect", {
-	width: "14",
-	height: "20",
-	x: "5",
-	y: "2",
-	rx: "2",
-	ry: "2",
-	key: "1yt0o3"
-}], ["path", {
-	d: "M12 18h.01",
-	key: "mhygvu"
-}]]);
-var Star = createLucideIcon("star", [["path", {
-	d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
-	key: "r04s7s"
-}]]);
-var Tractor = createLucideIcon("tractor", [
-	["path", {
-		d: "m10 11 11 .9a1 1 0 0 1 .8 1.1l-.665 4.158a1 1 0 0 1-.988.842H20",
-		key: "she1j9"
-	}],
-	["path", {
-		d: "M16 18h-5",
-		key: "bq60fd"
-	}],
-	["path", {
-		d: "M18 5a1 1 0 0 0-1 1v5.573",
-		key: "1kv8ia"
-	}],
-	["path", {
-		d: "M3 4h8.129a1 1 0 0 1 .99.863L13 11.246",
-		key: "1q1ert"
-	}],
-	["path", {
-		d: "M4 11V4",
-		key: "9ft8pt"
-	}],
-	["path", {
-		d: "M7 15h.01",
-		key: "k5ht0j"
-	}],
-	["path", {
-		d: "M8 10.1V4",
-		key: "1jgyzo"
-	}],
-	["circle", {
-		cx: "18",
-		cy: "18",
-		r: "2",
-		key: "1emm8v"
-	}],
-	["circle", {
-		cx: "7",
-		cy: "15",
-		r: "5",
-		key: "ddtuc"
-	}]
-]);
-var TriangleAlert = createLucideIcon("triangle-alert", [
-	["path", {
-		d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3",
-		key: "wmoenq"
-	}],
-	["path", {
-		d: "M12 9v4",
-		key: "juzpu7"
-	}],
-	["path", {
-		d: "M12 17h.01",
-		key: "p32p05"
-	}]
-]);
-var UserCheck = createLucideIcon("user-check", [
-	["path", {
-		d: "m16 11 2 2 4-4",
-		key: "9rsbq5"
-	}],
-	["path", {
-		d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
-		key: "1yyitq"
-	}],
-	["circle", {
-		cx: "9",
-		cy: "7",
-		r: "4",
-		key: "nufk8"
-	}]
-]);
-var UserPlus = createLucideIcon("user-plus", [
-	["path", {
-		d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
-		key: "1yyitq"
-	}],
-	["circle", {
-		cx: "9",
-		cy: "7",
-		r: "4",
-		key: "nufk8"
-	}],
-	["line", {
-		x1: "19",
-		x2: "19",
-		y1: "8",
-		y2: "14",
-		key: "1bvyxn"
-	}],
-	["line", {
-		x1: "22",
-		x2: "16",
-		y1: "11",
-		y2: "11",
-		key: "1shjgl"
-	}]
-]);
-var Users = createLucideIcon("users", [
-	["path", {
-		d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
-		key: "1yyitq"
-	}],
-	["path", {
-		d: "M16 3.128a4 4 0 0 1 0 7.744",
-		key: "16gr8j"
-	}],
-	["path", {
-		d: "M22 21v-2a4 4 0 0 0-3-3.87",
-		key: "kshegd"
-	}],
-	["circle", {
-		cx: "9",
-		cy: "7",
-		r: "4",
-		key: "nufk8"
-	}]
-]);
-var X = createLucideIcon("x", [["path", {
-	d: "M18 6 6 18",
-	key: "1bl5f8"
-}], ["path", {
-	d: "m6 6 12 12",
-	key: "d8bk6v"
-}]]);
-//#endregion
 //#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-compose-refs@1.1.2_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-compose-refs/dist/index.mjs
 var import_client = require_client();
 function setRef(ref, value) {
@@ -18504,12 +17970,12 @@ var lengthUnitRegex = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|
 var colorFunctionRegex = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/;
 var shadowRegex = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/;
 var imageRegex = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/;
-var isLength = (value) => isNumber(value) || stringLengths.has(value) || fractionRegex.test(value);
+var isLength = (value) => isNumber$1(value) || stringLengths.has(value) || fractionRegex.test(value);
 var isArbitraryLength = (value) => getIsArbitraryValue(value, "length", isLengthOnly);
-var isNumber = (value) => Boolean(value) && !Number.isNaN(Number(value));
-var isArbitraryNumber = (value) => getIsArbitraryValue(value, "number", isNumber);
+var isNumber$1 = (value) => Boolean(value) && !Number.isNaN(Number(value));
+var isArbitraryNumber = (value) => getIsArbitraryValue(value, "number", isNumber$1);
 var isInteger = (value) => Boolean(value) && Number.isInteger(Number(value));
-var isPercent = (value) => value.endsWith("%") && isNumber(value.slice(0, -1));
+var isPercent = (value) => value.endsWith("%") && isNumber$1(value.slice(0, -1));
 var isArbitraryValue = (value) => arbitraryValueRegex.test(value);
 var isTshirtSize = (value) => tshirtUnitRegex.test(value);
 var sizeLabels = /* @__PURE__ */ new Set([
@@ -18586,7 +18052,7 @@ var getDefaultConfig = () => {
 	];
 	const getNumberWithAutoAndArbitrary = () => [
 		"auto",
-		isNumber,
+		isNumber$1,
 		isArbitraryValue
 	];
 	const getPositions = () => [
@@ -18649,7 +18115,7 @@ var getDefaultConfig = () => {
 		"right",
 		"column"
 	];
-	const getNumberAndArbitrary = () => [isNumber, isArbitraryValue];
+	const getNumberAndArbitrary = () => [isNumber$1, isArbitraryValue];
 	return {
 		cacheSize: 500,
 		separator: ":",
@@ -19038,7 +18504,7 @@ var getDefaultConfig = () => {
 			] }],
 			"line-clamp": [{ "line-clamp": [
 				"none",
-				isNumber,
+				isNumber$1,
 				isArbitraryNumber
 			] }],
 			leading: [{ leading: [
@@ -19651,294 +19117,498 @@ var Button = import_react.forwardRef(({ className, variant, size, asChild = fals
 });
 Button.displayName = "Button";
 //#endregion
-//#region src/components/Header.tsx
-function Header$1() {
-	const [isScrolled, setIsScrolled] = (0, import_react.useState)(false);
-	const [isMobileMenuOpen, setIsMobileMenuOpen] = (0, import_react.useState)(false);
-	const location = useLocation();
-	(0, import_react.useEffect)(() => {
-		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 10);
-		};
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
-	const navLinks = [
-		{
-			name: "Início",
-			href: "/#inicio"
-		},
-		{
-			name: "Serviços",
-			href: "/#servicos"
-		},
-		{
-			name: "Quem Sou",
-			href: "/#quem-sou"
-		},
-		{
-			name: "Blog",
-			href: "/#blog"
-		},
-		{
-			name: "Guia BPC",
-			href: "/guia-bpc",
-			isRoute: true
-		},
-		{
-			name: "Contato",
-			href: "/#contato"
-		}
-	];
-	const isHome = location.pathname === "/";
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
-		"data-uid": "src/components/Header.tsx:31:5",
-		"data-prohibitions": "[editContent]",
-		className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-md py-3 border-b border-border/50" : "bg-background md:bg-transparent py-5"}`,
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Header.tsx:38:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6 flex items-center justify-between",
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-					"data-uid": "src/components/Header.tsx:39:9",
-					"data-prohibitions": "[]",
-					to: "/",
-					className: "flex items-center gap-3 group",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/Header.tsx:40:11",
-						"data-prohibitions": "[]",
-						className: "flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded bg-gold/10 border border-gold/30 text-gold group-hover:bg-gold/20 transition-colors shadow-gold",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
-							"data-uid": "src/components/Header.tsx:41:13",
-							"data-prohibitions": "[editContent]",
-							size: 24,
-							strokeWidth: 1.5,
-							className: "md:w-7 md:h-7"
-						})
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Header.tsx:43:11",
-						"data-prohibitions": "[]",
-						className: "flex flex-col",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/Header.tsx:44:13",
-							"data-prohibitions": "[]",
-							className: "font-serif text-lg md:text-xl font-bold leading-none tracking-wide text-white",
-							children: "LUCAS MORRONE"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/Header.tsx:47:13",
-							"data-prohibitions": "[]",
-							className: "text-[9px] md:text-[10px] font-sans tracking-[0.25em] text-gold uppercase mt-1.5",
-							children: "Advocacia"
-						})]
-					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-					"data-uid": "src/components/Header.tsx:54:9",
-					"data-prohibitions": "[editContent]",
-					className: "hidden lg:flex items-center gap-7",
-					children: [navLinks.map((link) => link.isRoute ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-						"data-uid": "src/components/Header.tsx:57:15",
-						"data-prohibitions": "[editContent]",
-						to: link.href,
-						className: "text-sm font-medium text-foreground/80 hover:text-gold transition-colors",
-						children: link.name
-					}, link.name) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-						"data-uid": "src/components/Header.tsx:65:15",
-						"data-prohibitions": "[editContent]",
-						href: isHome ? link.href : `/${link.href}`,
-						className: "text-sm font-medium text-foreground/80 hover:text-gold transition-colors",
-						children: link.name
-					}, link.name)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-						"data-uid": "src/components/Header.tsx:74:11",
-						"data-prohibitions": "[]",
-						asChild: true,
-						className: "bg-gold text-primary-foreground hover:bg-gold/90 font-bold shadow-gold",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-							"data-uid": "src/components/Header.tsx:78:13",
-							"data-prohibitions": "[]",
-							href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
-							target: "_blank",
-							rel: "noopener noreferrer",
-							children: "Agendar Consulta"
-						})
-					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:89:9",
-					"data-prohibitions": "[editContent]",
-					className: "lg:hidden text-foreground hover:text-gold transition-colors p-2",
-					onClick: () => setIsMobileMenuOpen(!isMobileMenuOpen),
-					children: isMobileMenuOpen ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, {
-						"data-uid": "src/components/Header.tsx:93:31",
-						"data-prohibitions": "[editContent]",
-						size: 26
-					}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, {
-						"data-uid": "src/components/Header.tsx:93:49",
-						"data-prohibitions": "[editContent]",
-						size: 26
-					})
-				})
-			]
-		}), isMobileMenuOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Header.tsx:99:9",
-			"data-prohibitions": "[editContent]",
-			className: "lg:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-5 flex flex-col gap-5 shadow-lg animate-in slide-in-from-top-2",
-			children: [navLinks.map((link) => link.isRoute ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-				"data-uid": "src/components/Header.tsx:102:15",
-				"data-prohibitions": "[editContent]",
-				to: link.href,
-				className: "text-base font-medium text-foreground/80 hover:text-gold transition-colors",
-				onClick: () => setIsMobileMenuOpen(false),
-				children: link.name
-			}, link.name) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-				"data-uid": "src/components/Header.tsx:111:15",
-				"data-prohibitions": "[editContent]",
-				href: isHome ? link.href : `/${link.href}`,
-				className: "text-base font-medium text-foreground/80 hover:text-gold transition-colors",
-				onClick: () => setIsMobileMenuOpen(false),
-				children: link.name
-			}, link.name)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-				"data-uid": "src/components/Header.tsx:121:11",
-				"data-prohibitions": "[]",
-				asChild: true,
-				className: "w-full bg-gold text-primary-foreground hover:bg-gold/90 font-bold mt-2 shadow-gold",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-					"data-uid": "src/components/Header.tsx:125:13",
-					"data-prohibitions": "[]",
-					href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
-					target: "_blank",
-					rel: "noopener noreferrer",
-					children: "Agendar Consulta"
-				})
-			})]
-		})]
-	});
-}
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/shared/src/utils/mergeClasses.js
+/**
+* @license lucide-react v0.577.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var mergeClasses = (...classes) => classes.filter((className, index, array) => {
+	return Boolean(className) && className.trim() !== "" && array.indexOf(className) === index;
+}).join(" ").trim();
 //#endregion
-//#region src/components/ui/badge.tsx
-var badgeVariants = cva("inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2", {
-	variants: { variant: {
-		default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
-		secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
-		destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
-		outline: "text-foreground"
-	} },
-	defaultVariants: { variant: "default" }
-});
-function Badge({ className, variant, ...props }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		"data-uid": "src/components/ui/badge.tsx:30:10",
-		"data-prohibitions": "[editContent]",
-		className: cn(badgeVariants({ variant }), className),
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/shared/src/utils/toKebabCase.js
+/**
+* @license lucide-react v0.577.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/shared/src/utils/toCamelCase.js
+/**
+* @license lucide-react v0.577.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var toCamelCase = (string) => string.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) => p2 ? p2.toUpperCase() : p1.toLowerCase());
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/shared/src/utils/toPascalCase.js
+/**
+* @license lucide-react v0.577.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var toPascalCase = (string) => {
+	const camelCase = toCamelCase(string);
+	return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/defaultAttributes.js
+/**
+* @license lucide-react v0.577.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var defaultAttributes = {
+	xmlns: "http://www.w3.org/2000/svg",
+	width: 24,
+	height: 24,
+	viewBox: "0 0 24 24",
+	fill: "none",
+	stroke: "currentColor",
+	strokeWidth: 2,
+	strokeLinecap: "round",
+	strokeLinejoin: "round"
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/shared/src/utils/hasA11yProp.js
+/**
+* @license lucide-react v0.577.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var hasA11yProp = (props) => {
+	for (const prop in props) if (prop.startsWith("aria-") || prop === "role" || prop === "title") return true;
+	return false;
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/Icon.js
+/**
+* @license lucide-react v0.577.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var Icon = (0, import_react.forwardRef)(({ color = "currentColor", size = 24, strokeWidth = 2, absoluteStrokeWidth, className = "", children, iconNode, ...rest }, ref) => (0, import_react.createElement)("svg", {
+	ref,
+	...defaultAttributes,
+	width: size,
+	height: size,
+	stroke: color,
+	strokeWidth: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
+	className: mergeClasses("lucide", className),
+	...!children && !hasA11yProp(rest) && { "aria-hidden": "true" },
+	...rest
+}, [...iconNode.map(([tag, attrs]) => (0, import_react.createElement)(tag, attrs)), ...Array.isArray(children) ? children : [children]]));
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/lucide-react@0.577.0_react@19.2.4/node_modules/lucide-react/dist/esm/createLucideIcon.js
+/**
+* @license lucide-react v0.577.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var createLucideIcon = (iconName, iconNode) => {
+	const Component = (0, import_react.forwardRef)(({ className, ...props }, ref) => (0, import_react.createElement)(Icon, {
+		ref,
+		iconNode,
+		className: mergeClasses(`lucide-${toKebabCase(toPascalCase(iconName))}`, `lucide-${iconName}`, className),
 		...props
-	});
-}
+	}));
+	Component.displayName = toPascalCase(iconName);
+	return Component;
+};
+var ArrowLeft = createLucideIcon("arrow-left", [["path", {
+	d: "m12 19-7-7 7-7",
+	key: "1l729n"
+}], ["path", {
+	d: "M19 12H5",
+	key: "x3x0zl"
+}]]);
+var ArrowRight = createLucideIcon("arrow-right", [["path", {
+	d: "M5 12h14",
+	key: "1ays0h"
+}], ["path", {
+	d: "m12 5 7 7-7 7",
+	key: "xquz4c"
+}]]);
+var Award = createLucideIcon("award", [["path", {
+	d: "m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526",
+	key: "1yiouv"
+}], ["circle", {
+	cx: "12",
+	cy: "8",
+	r: "6",
+	key: "1vp47v"
+}]]);
+var BookOpen = createLucideIcon("book-open", [["path", {
+	d: "M12 7v14",
+	key: "1akyts"
+}], ["path", {
+	d: "M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z",
+	key: "ruj8y"
+}]]);
+var Briefcase = createLucideIcon("briefcase", [["path", {
+	d: "M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16",
+	key: "jecpp"
+}], ["rect", {
+	width: "20",
+	height: "14",
+	x: "2",
+	y: "6",
+	rx: "2",
+	key: "i6l2r4"
+}]]);
+var ChevronDown = createLucideIcon("chevron-down", [["path", {
+	d: "m6 9 6 6 6-6",
+	key: "qrunsl"
+}]]);
+var CircleCheck = createLucideIcon("circle-check", [["circle", {
+	cx: "12",
+	cy: "12",
+	r: "10",
+	key: "1mglay"
+}], ["path", {
+	d: "m9 12 2 2 4-4",
+	key: "dzmm74"
+}]]);
+var Clock = createLucideIcon("clock", [["circle", {
+	cx: "12",
+	cy: "12",
+	r: "10",
+	key: "1mglay"
+}], ["path", {
+	d: "M12 6v6l4 2",
+	key: "mmk7yg"
+}]]);
+var FileText = createLucideIcon("file-text", [
+	["path", {
+		d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z",
+		key: "1oefj6"
+	}],
+	["path", {
+		d: "M14 2v5a1 1 0 0 0 1 1h5",
+		key: "wfsgrz"
+	}],
+	["path", {
+		d: "M10 9H8",
+		key: "b1mrlr"
+	}],
+	["path", {
+		d: "M16 13H8",
+		key: "t4e002"
+	}],
+	["path", {
+		d: "M16 17H8",
+		key: "z1uh3a"
+	}]
+]);
+var HandHeart = createLucideIcon("hand-heart", [
+	["path", {
+		d: "M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16",
+		key: "1v1a37"
+	}],
+	["path", {
+		d: "m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95",
+		key: "fhfbnt"
+	}],
+	["path", {
+		d: "m2 15 6 6",
+		key: "10dquu"
+	}],
+	["path", {
+		d: "m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91",
+		key: "1x6kdw"
+	}]
+]);
+var Landmark = createLucideIcon("landmark", [
+	["path", {
+		d: "M10 18v-7",
+		key: "wt116b"
+	}],
+	["path", {
+		d: "M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z",
+		key: "1m329m"
+	}],
+	["path", {
+		d: "M14 18v-7",
+		key: "vav6t3"
+	}],
+	["path", {
+		d: "M18 18v-7",
+		key: "aexdmj"
+	}],
+	["path", {
+		d: "M3 22h18",
+		key: "8prr45"
+	}],
+	["path", {
+		d: "M6 18v-7",
+		key: "1ivflk"
+	}]
+]);
+var Mail = createLucideIcon("mail", [["path", {
+	d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7",
+	key: "132q7q"
+}], ["rect", {
+	x: "2",
+	y: "4",
+	width: "20",
+	height: "16",
+	rx: "2",
+	key: "izxlao"
+}]]);
+var MapPin = createLucideIcon("map-pin", [["path", {
+	d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+	key: "1r0f0z"
+}], ["circle", {
+	cx: "12",
+	cy: "10",
+	r: "3",
+	key: "ilqhr7"
+}]]);
+var Phone = createLucideIcon("phone", [["path", {
+	d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
+	key: "9njp5v"
+}]]);
+var Scale = createLucideIcon("scale", [
+	["path", {
+		d: "M12 3v18",
+		key: "108xh3"
+	}],
+	["path", {
+		d: "m19 8 3 8a5 5 0 0 1-6 0zV7",
+		key: "zcdpyk"
+	}],
+	["path", {
+		d: "M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1",
+		key: "1yorad"
+	}],
+	["path", {
+		d: "m5 8 3 8a5 5 0 0 1-6 0zV7",
+		key: "eua70x"
+	}],
+	["path", {
+		d: "M7 21h10",
+		key: "1b0cd5"
+	}]
+]);
+var ShieldCheck = createLucideIcon("shield-check", [["path", {
+	d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
+	key: "oel41y"
+}], ["path", {
+	d: "m9 12 2 2 4-4",
+	key: "dzmm74"
+}]]);
+var Star = createLucideIcon("star", [["path", {
+	d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
+	key: "r04s7s"
+}]]);
+var Users = createLucideIcon("users", [
+	["path", {
+		d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
+		key: "1yyitq"
+	}],
+	["path", {
+		d: "M16 3.128a4 4 0 0 1 0 7.744",
+		key: "16gr8j"
+	}],
+	["path", {
+		d: "M22 21v-2a4 4 0 0 0-3-3.87",
+		key: "kshegd"
+	}],
+	["circle", {
+		cx: "9",
+		cy: "7",
+		r: "4",
+		key: "nufk8"
+	}]
+]);
+//#endregion
+//#region src/assets/editedimage_1773665784218-dc625.png
+var editedimage_1773665784218_dc625_default = "/assets/editedimage_1773665784218-dc625-B9DD6hl0.png";
 //#endregion
 //#region src/components/sections/Hero.tsx
 function Hero() {
+	const handleWhatsApp = () => {
+		window.open("https://wa.me/5511999999999", "_blank");
+	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		"data-uid": "src/components/sections/Hero.tsx:7:5",
-		"data-prohibitions": "[]",
+		"data-uid": "src/components/sections/Hero.tsx:11:5",
+		"data-prohibitions": "[editContent]",
 		id: "inicio",
-		className: "relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden",
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/Hero.tsx:8:7",
-			"data-prohibitions": "[]",
-			className: "absolute inset-0 z-0",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/Hero.tsx:9:9",
+		className: "relative min-h-[95vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-background",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				"data-uid": "src/components/sections/Hero.tsx:16:7",
 				"data-prohibitions": "[editContent]",
-				className: "absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/95 z-10"
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-				"data-uid": "src/components/sections/Hero.tsx:10:9",
+				className: "absolute inset-0 bg-grid-white/[0.02] bg-[size:40px_40px]"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				"data-uid": "src/components/sections/Hero.tsx:17:7",
 				"data-prohibitions": "[editContent]",
-				src: "https://img.usecurling.com/p/1920/1080?q=law%20office&color=blue",
-				alt: "Escritório de Advocacia",
-				className: "w-full h-full object-cover opacity-40 mix-blend-overlay"
-			})]
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/Hero.tsx:17:7",
-			"data-prohibitions": "[]",
-			className: "container mx-auto px-4 md:px-6 relative z-20",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Hero.tsx:18:9",
-				"data-prohibitions": "[]",
-				className: "max-w-4xl mx-auto text-center flex flex-col items-center animate-in fade-in slide-in-from-bottom-6 duration-1000",
+				className: "absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				"data-uid": "src/components/sections/Hero.tsx:18:7",
+				"data-prohibitions": "[editContent]",
+				className: "absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				"data-uid": "src/components/sections/Hero.tsx:20:7",
+				"data-prohibitions": "[editContent]",
+				className: "container relative z-10 px-4 md:px-6 flex flex-col items-center text-center max-w-5xl mx-auto",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Badge, {
-						"data-uid": "src/components/sections/Hero.tsx:19:11",
-						"data-prohibitions": "[]",
-						variant: "outline",
-						className: "mb-8 border-gold/50 text-gold px-5 py-2 rounded-full flex items-center gap-2 text-sm bg-background/50 backdrop-blur-sm shadow-gold",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
-							"data-uid": "src/components/sections/Hero.tsx:23:13",
-							"data-prohibitions": "[editContent]",
-							size: 16
-						}), "Atendimento presencial em Pelotas e Rio Grande"]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-						"data-uid": "src/components/sections/Hero.tsx:27:11",
-						"data-prohibitions": "[]",
-						className: "text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight font-serif",
-						children: ["Lucas Morrone", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/Hero.tsx:29:13",
-							"data-prohibitions": "[]",
-							className: "block text-3xl md:text-5xl lg:text-5xl mt-2 text-gold font-serif italic",
-							children: "Advocacia Especializada"
-						})]
-					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/Hero.tsx:34:11",
+						"data-uid": "src/components/sections/Hero.tsx:22:9",
 						"data-prohibitions": "[]",
-						className: "w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mb-8 opacity-70"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/Hero.tsx:36:11",
-						"data-prohibitions": "[]",
-						className: "text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl font-light leading-relaxed",
-						children: "Orientação técnica e análise aprofundada para garantir seus direitos junto ao INSS. Uma atuação pautada na ética, transparência e excelência jurídica."
+						className: "animate-fade-in-up mb-10",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							"data-uid": "src/components/sections/Hero.tsx:23:11",
+							"data-prohibitions": "[editContent]",
+							src: editedimage_1773665784218_dc625_default,
+							alt: "Lucas Morrone - Advocacia Previdenciária",
+							className: "h-40 md:h-56 lg:h-64 w-auto object-contain drop-shadow-2xl mix-blend-lighten"
+						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Hero.tsx:41:11",
+						"data-uid": "src/components/sections/Hero.tsx:30:9",
 						"data-prohibitions": "[]",
-						className: "flex flex-col sm:flex-row gap-5 w-full sm:w-auto",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/sections/Hero.tsx:42:13",
+						className: "space-y-6 animate-fade-in-up",
+						style: { animationDelay: "150ms" },
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Hero.tsx:31:11",
+								"data-prohibitions": "[]",
+								className: "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary shadow-sm backdrop-blur-sm",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
+									"data-uid": "src/components/sections/Hero.tsx:32:13",
+									"data-prohibitions": "[editContent]",
+									className: "mr-2 h-4 w-4"
+								}), "Escritório Especializado em Direito Previdenciário"]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+								"data-uid": "src/components/sections/Hero.tsx:36:11",
+								"data-prohibitions": "[]",
+								className: "text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-foreground text-balance",
+								children: [
+									"Garanta seu direito à",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/sections/Hero.tsx:38:13",
+										"data-prohibitions": "[]",
+										className: "text-primary font-serif italic",
+										children: "Aposentadoria"
+									}),
+									" e",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/sections/Hero.tsx:39:13",
+										"data-prohibitions": "[]",
+										className: "text-primary font-serif italic",
+										children: "BPC/LOAS"
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/components/sections/Hero.tsx:42:11",
+								"data-prohibitions": "[]",
+								className: "text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed",
+								children: "Atuação jurídica ágil, transparente e de excelência. Lutamos para que você receba o benefício que é seu por direito, com a segurança de um escritório altamente especializado."
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/Hero.tsx:49:9",
+						"data-prohibitions": "[]",
+						className: "flex flex-col sm:flex-row gap-4 w-full justify-center mt-10 animate-fade-in-up",
+						style: { animationDelay: "300ms" },
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+							"data-uid": "src/components/sections/Hero.tsx:53:11",
 							"data-prohibitions": "[]",
 							size: "lg",
-							className: "bg-gold text-primary-foreground hover:bg-gold/90 text-base h-14 px-8 shadow-gold font-bold",
-							asChild: true,
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								"data-uid": "src/components/sections/Hero.tsx:47:15",
-								"data-prohibitions": "[]",
-								href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
-								target: "_blank",
-								rel: "noopener noreferrer",
-								children: ["Agendar Consulta ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-									"data-uid": "src/components/sections/Hero.tsx:52:34",
-									"data-prohibitions": "[editContent]",
-									className: "ml-2 h-5 w-5"
-								})]
-							})
+							onClick: handleWhatsApp,
+							className: "text-lg px-8 h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold uppercase tracking-wider",
+							children: ["Análise Gratuita do Caso ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+								"data-uid": "src/components/sections/Hero.tsx:58:38",
+								"data-prohibitions": "[editContent]",
+								className: "ml-2 h-5 w-5"
+							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/sections/Hero.tsx:55:13",
+							"data-uid": "src/components/sections/Hero.tsx:60:11",
 							"data-prohibitions": "[]",
 							size: "lg",
 							variant: "outline",
-							className: "border-white/20 text-white hover:bg-white/10 hover:text-white text-base h-14 px-8 backdrop-blur-sm transition-all",
-							asChild: true,
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/sections/Hero.tsx:61:15",
-								"data-prohibitions": "[]",
-								href: "#servicos",
-								children: "Nossas Áreas de Atuação"
-							})
+							onClick: () => {
+								document.getElementById("servicos")?.scrollIntoView({ behavior: "smooth" });
+							},
+							className: "text-lg px-8 h-14 border-primary/30 text-foreground hover:bg-primary/10",
+							children: "Conhecer Especialidades"
 						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/Hero.tsx:73:9",
+						"data-prohibitions": "[]",
+						className: "grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12 mt-20 pt-10 border-t border-border/50 animate-fade-in-up",
+						style: { animationDelay: "450ms" },
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Hero.tsx:77:11",
+								"data-prohibitions": "[]",
+								className: "flex flex-col items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
+									"data-uid": "src/components/sections/Hero.tsx:78:13",
+									"data-prohibitions": "[editContent]",
+									className: "h-8 w-8 text-primary/80"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Hero.tsx:79:13",
+									"data-prohibitions": "[]",
+									className: "text-sm font-medium text-foreground",
+									children: "Alta Taxa de Sucesso"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Hero.tsx:81:11",
+								"data-prohibitions": "[]",
+								className: "flex flex-col items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, {
+									"data-uid": "src/components/sections/Hero.tsx:82:13",
+									"data-prohibitions": "[editContent]",
+									className: "h-8 w-8 text-primary/80"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Hero.tsx:83:13",
+									"data-prohibitions": "[]",
+									className: "text-sm font-medium text-foreground",
+									children: "Especialistas em INSS"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Hero.tsx:85:11",
+								"data-prohibitions": "[]",
+								className: "flex flex-col items-center gap-2 col-span-2 md:col-span-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
+									"data-uid": "src/components/sections/Hero.tsx:86:13",
+									"data-prohibitions": "[editContent]",
+									className: "h-8 w-8 text-primary/80"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Hero.tsx:87:13",
+									"data-prohibitions": "[]",
+									className: "text-sm font-medium text-foreground",
+									children: "Sigilo e Segurança Total"
+								})]
+							})
+						]
 					})
 				]
 			})
-		})]
+		]
 	});
 }
 //#endregion
@@ -19995,658 +19665,298 @@ CardFooter.displayName = "CardFooter";
 //#region src/components/sections/Services.tsx
 var services = [
 	{
-		title: "Aposentadoria por Idade",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, {
-			"data-uid": "src/components/sections/Services.tsx:8:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4",
-			strokeWidth: 1.5
-		}),
-		items: [
-			"Cálculo do tempo de contribuição",
-			"Simulação do benefício",
-			"Correção de vínculos",
-			"Pedido administrativo completo"
-		]
+		title: "Benefício Assistencial (BPC/LOAS)",
+		description: "Assessoria completa para idosos acima de 65 anos e pessoas com deficiência de baixa renda conquistarem o benefício assistencial de um salário mínimo.",
+		icon: HandHeart
 	},
 	{
-		title: "Aposentadoria por Tempo",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
-			"data-uid": "src/components/sections/Services.tsx:18:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4",
-			strokeWidth: 1.5
-		}),
-		items: [
-			"Análise de direito adquirido",
-			"Simulação de todas as regras",
-			"Correção de vínculos",
-			"Planejamento previdenciário completo"
-		]
+		title: "Aposentadoria por Idade",
+		description: "Análise detalhada do seu tempo de contribuição e idade para garantir o melhor benefício possível no momento certo.",
+		icon: Landmark
+	},
+	{
+		title: "Aposentadoria por Invalidez",
+		description: "Atuação forte e especializada em casos de incapacidade total e permanente para o trabalho, garantindo o amparo financeiro.",
+		icon: Briefcase
 	},
 	{
 		title: "Pensão por Morte",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, {
-			"data-uid": "src/components/sections/Services.tsx:28:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4",
-			strokeWidth: 1.5
-		}),
-		items: [
-			"Análise de dependência",
-			"Documentação necessária",
-			"Pedido administrativo completo",
-			"Revisão do valor do benefício"
-		]
+		description: "Suporte humanizado e jurídico aos dependentes para a obtenção do benefício previdenciário de forma rápida e segura.",
+		icon: Users
 	},
 	{
-		title: "BPC / LOAS",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldAlert, {
-			"data-uid": "src/components/sections/Services.tsx:38:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4",
-			strokeWidth: 1.5
-		}),
-		items: [
-			"Análise de renda e requisitos legais",
-			"Organização da documentação",
-			"Pedido administrativo completo",
-			"Recurso em caso de negativa"
-		]
+		title: "Revisão de Benefícios",
+		description: "Identificação de erros no cálculo do INSS e ingresso com ações judiciais para aumentar o valor da sua aposentadoria.",
+		icon: FileText
 	},
 	{
-		title: "Aposentadoria Híbrida",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tractor, {
-			"data-uid": "src/components/sections/Services.tsx:48:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4",
-			strokeWidth: 1.5
-		}),
-		items: [
-			"Cálculo urbano + rural atualizado",
-			"Validação de documentos rurais",
-			"Simulação completa",
-			"Pedido administrativo completo"
-		]
-	},
-	{
-		title: "Benefícios por Incapacidade",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Activity, {
-			"data-uid": "src/components/sections/Services.tsx:58:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4",
-			strokeWidth: 1.5
-		}),
-		items: [
-			"Benefício por Incapacidade Temporária",
-			"Benefício por Incapacidade Permanente",
-			"Análise médica previdenciária",
-			"Recurso em caso de negativa"
-		]
+		title: "Planejamento Previdenciário",
+		description: "Estudo aprofundado do seu histórico para definir as melhores estratégias de contribuição e o momento ideal para a aposentadoria.",
+		icon: Clock
 	}
 ];
 function Services() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/Services.tsx:70:5",
+		"data-uid": "src/components/sections/Services.tsx:45:5",
 		"data-prohibitions": "[editContent]",
 		id: "servicos",
-		className: "py-24 bg-secondary",
+		className: "py-24 bg-muted border-y border-border",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/Services.tsx:71:7",
+			"data-uid": "src/components/sections/Services.tsx:46:7",
 			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
+			className: "container px-4 md:px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Services.tsx:72:9",
+				"data-uid": "src/components/sections/Services.tsx:47:9",
 				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-					"data-uid": "src/components/sections/Services.tsx:73:11",
-					"data-prohibitions": "[]",
-					className: "text-3xl md:text-5xl font-bold mb-6 font-serif",
-					children: ["Áreas de ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/sections/Services.tsx:74:22",
+				className: "flex flex-col items-center text-center space-y-4 mb-16",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						"data-uid": "src/components/sections/Services.tsx:48:11",
 						"data-prohibitions": "[]",
-						className: "text-gold italic",
-						children: "Atuação"
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/sections/Services.tsx:76:11",
-					"data-prohibitions": "[]",
-					className: "text-foreground/70 text-lg",
-					children: "Oferecemos assessoria jurídica especializada para garantir que seus direitos previdenciários sejam respeitados e concedidos de forma correta, com o rigor que a lei exige."
-				})]
+						className: "text-sm font-bold tracking-widest text-primary uppercase",
+						children: "Áreas de Atuação"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						"data-uid": "src/components/sections/Services.tsx:51:11",
+						"data-prohibitions": "[]",
+						className: "text-3xl md:text-5xl font-bold tracking-tight text-foreground font-serif",
+						children: "Especialidade Previdenciária"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						"data-uid": "src/components/sections/Services.tsx:54:11",
+						"data-prohibitions": "[]",
+						className: "text-lg text-muted-foreground max-w-[800px] font-light",
+						children: "Foco exclusivo na defesa dos direitos do segurado. Garantimos que o INSS cumpra com suas obrigações legais, oferecendo suporte em todas as instâncias."
+					})
+				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/Services.tsx:83:9",
+				"data-uid": "src/components/sections/Services.tsx:60:9",
 				"data-prohibitions": "[editContent]",
-				className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
-				children: services.map((service, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-					"data-uid": "src/components/sections/Services.tsx:85:13",
-					"data-prohibitions": "[editContent]",
-					className: "bg-card border-border/50 hover:border-gold/50 hover:shadow-gold transition-all duration-300 group",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardHeader, {
-						"data-uid": "src/components/sections/Services.tsx:89:15",
+				className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+				children: services.map((service, index) => {
+					const Icon = service.icon;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+						"data-uid": "src/components/sections/Services.tsx:64:15",
 						"data-prohibitions": "[editContent]",
-						className: "pb-4",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Services.tsx:90:17",
+						className: "bg-background border-border hover:border-primary/50 transition-all duration-300 group shadow-none",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardHeader, {
+							"data-uid": "src/components/sections/Services.tsx:68:17",
 							"data-prohibitions": "[editContent]",
-							className: "group-hover:scale-110 transition-transform duration-300 origin-left",
-							children: service.icon
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
-							"data-uid": "src/components/sections/Services.tsx:93:17",
-							"data-prohibitions": "[editContent]",
-							className: "text-xl font-bold text-white font-serif",
-							children: service.title
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-						"data-uid": "src/components/sections/Services.tsx:97:15",
-						"data-prohibitions": "[editContent]",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-							"data-uid": "src/components/sections/Services.tsx:98:17",
-							"data-prohibitions": "[editContent]",
-							className: "space-y-3 mb-8",
-							children: service.items.map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/sections/Services.tsx:100:21",
-								"data-prohibitions": "[editContent]",
-								className: "flex items-start text-foreground/80",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-									"data-uid": "src/components/sections/Services.tsx:101:23",
-									"data-prohibitions": "[editContent]",
-									className: "h-5 w-5 text-gold mr-3 shrink-0 mt-0.5 opacity-80"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Services.tsx:102:23",
-									"data-prohibitions": "[editContent]",
-									className: "text-sm",
-									children: item
-								})]
-							}, idx))
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/sections/Services.tsx:106:17",
-							"data-prohibitions": "[]",
-							variant: "outline",
-							className: "w-full border-border text-foreground hover:border-gold hover:text-gold hover:bg-gold/5 transition-colors",
-							asChild: true,
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/sections/Services.tsx:111:19",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Services.tsx:69:19",
 								"data-prohibitions": "[]",
-								href: `https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`,
-								target: "_blank",
-								rel: "noopener noreferrer",
-								children: "Solicitar Análise"
+								className: "w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, {
+									"data-uid": "src/components/sections/Services.tsx:70:21",
+									"data-prohibitions": "[editContent]",
+									className: "h-6 w-6 text-primary"
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
+								"data-uid": "src/components/sections/Services.tsx:72:19",
+								"data-prohibitions": "[editContent]",
+								className: "text-xl text-foreground font-semibold",
+								children: service.title
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardContent, {
+							"data-uid": "src/components/sections/Services.tsx:76:17",
+							"data-prohibitions": "[editContent]",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardDescription, {
+								"data-uid": "src/components/sections/Services.tsx:77:19",
+								"data-prohibitions": "[editContent]",
+								className: "text-base text-muted-foreground leading-relaxed",
+								children: service.description
 							})
 						})]
-					})]
-				}, index))
+					}, index);
+				})
 			})]
 		})
 	});
 }
 //#endregion
-//#region src/components/ui/input.tsx
-var Input = import_react.forwardRef(({ className, type, ...props }, ref) => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-		"data-uid": "src/components/ui/input.tsx:9:7",
-		"data-prohibitions": "[editContent]",
-		type,
-		className: cn("flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm", className),
-		ref,
-		...props
-	});
-});
-Input.displayName = "Input";
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-primitive@2.1.4_@types+react-dom@19.2.3_@types+react@19.2.14__@types+re_0243fb2db8a1fb85ca77b8d9e5c2d650/node_modules/@radix-ui/react-primitive/dist/index.mjs
-var import_react_dom = /* @__PURE__ */ __toESM(require_react_dom(), 1);
-var Primitive$1 = [
-	"a",
-	"button",
-	"div",
-	"form",
-	"h2",
-	"h3",
-	"img",
-	"input",
-	"label",
-	"li",
-	"nav",
-	"ol",
-	"p",
-	"select",
-	"span",
-	"svg",
-	"ul"
-].reduce((primitive, node) => {
-	const Slot = /* @__PURE__ */ createSlot$1(`Primitive.${node}`);
-	const Node = import_react.forwardRef((props, forwardedRef) => {
-		const { asChild, ...primitiveProps } = props;
-		const Comp = asChild ? Slot : node;
-		if (typeof window !== "undefined") window[Symbol.for("radix-ui")] = true;
-		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Comp, {
-			...primitiveProps,
-			ref: forwardedRef
-		});
-	});
-	Node.displayName = `Primitive.${node}`;
-	return {
-		...primitive,
-		[node]: Node
-	};
-}, {});
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-label@2.1.8_@types+react-dom@19.2.3_@types+react@19.2.14__@types+react@_55fa612a976b7bdfbf4dcdd93d861aab/node_modules/@radix-ui/react-label/dist/index.mjs
-var NAME$1 = "Label";
-var Label$1 = import_react.forwardRef((props, forwardedRef) => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.label, {
-		...props,
-		ref: forwardedRef,
-		onMouseDown: (event) => {
-			if (event.target.closest("button, input, select, textarea")) return;
-			props.onMouseDown?.(event);
-			if (!event.defaultPrevented && event.detail > 1) event.preventDefault();
-		}
-	});
-});
-Label$1.displayName = NAME$1;
-var Root$2 = Label$1;
-//#endregion
-//#region src/components/ui/label.tsx
-var labelVariants = cva("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70");
-var Label = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$2, {
-	"data-uid": "src/components/ui/label.tsx:16:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn(labelVariants(), className),
-	...props
-}));
-Label.displayName = Root$2.displayName;
-//#endregion
-//#region src/components/sections/Ebook.tsx
-function Ebook() {
-	const [isSubmitted, setIsSubmitted] = (0, import_react.useState)(false);
-	const [name, setName] = (0, import_react.useState)("");
-	const [contact, setContact] = (0, import_react.useState)("");
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		if (name.trim() && contact.trim()) setIsSubmitted(true);
-	};
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		"data-uid": "src/components/sections/Ebook.tsx:21:5",
-		"data-prohibitions": "[editContent]",
-		id: "ebook",
-		className: "py-24 bg-card border-y border-border/30 overflow-hidden relative",
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/Ebook.tsx:25:7",
-			"data-prohibitions": "[]",
-			className: "absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent opacity-50"
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/Ebook.tsx:27:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6 relative z-10",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Ebook.tsx:28:9",
-				"data-prohibitions": "[editContent]",
-				className: "flex flex-col lg:flex-row items-center gap-12 lg:gap-20",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/Ebook.tsx:29:11",
-					"data-prohibitions": "[]",
-					className: "w-full lg:w-5/12 flex justify-center lg:justify-end",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Ebook.tsx:30:13",
-						"data-prohibitions": "[]",
-						className: "relative w-64 h-80 sm:w-72 sm:h-96 bg-gradient-to-br from-secondary via-background to-secondary border border-border rounded-r-xl rounded-l-sm shadow-[20px_20px_40px_-10px_rgba(0,0,0,0.5),_0_0_20px_rgba(212,175,55,0.1)] flex flex-col items-center justify-center p-8 text-center transform -rotate-2 hover:rotate-0 transition-all duration-500 group",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:31:15",
-								"data-prohibitions": "[]",
-								className: "absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-background/90 via-background/40 to-transparent z-10 rounded-l-sm"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:32:15",
-								"data-prohibitions": "[]",
-								className: "absolute left-6 top-0 bottom-0 w-[1px] bg-white/5 z-10"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:33:15",
-								"data-prohibitions": "[]",
-								className: "absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10 rounded-r-xl rounded-l-sm"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:35:15",
-								"data-prohibitions": "[]",
-								className: "relative z-20 flex flex-col items-center h-full w-full",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
-										"data-uid": "src/components/sections/Ebook.tsx:36:17",
-										"data-prohibitions": "[editContent]",
-										className: "w-12 h-12 sm:w-14 sm:h-14 text-gold mb-6 mt-4 group-hover:scale-110 transition-transform duration-500 stroke-[1.5]"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/sections/Ebook.tsx:37:17",
-										"data-prohibitions": "[]",
-										className: "text-sm sm:text-xs font-bold text-white mb-2 uppercase tracking-widest text-gold/80",
-										children: "Guia Jurídico Gratuito"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-										"data-uid": "src/components/sections/Ebook.tsx:40:17",
-										"data-prohibitions": "[]",
-										className: "text-2xl sm:text-3xl font-serif font-bold text-white mb-4 leading-tight",
-										children: [
-											"Tudo Sobre",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-												"data-uid": "src/components/sections/Ebook.tsx:42:19",
-												"data-prohibitions": "[editContent]"
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												"data-uid": "src/components/sections/Ebook.tsx:43:19",
-												"data-prohibitions": "[]",
-												className: "text-gold italic",
-												children: "BPC/LOAS"
-											})
-										]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/Ebook.tsx:46:17",
-										"data-prohibitions": "[]",
-										className: "mt-auto pt-6 border-t border-gold/20 w-full",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											"data-uid": "src/components/sections/Ebook.tsx:47:19",
-											"data-prohibitions": "[]",
-											className: "text-[10px] text-foreground/50 uppercase tracking-[0.2em] font-sans",
-											children: "Lucas Morrone Advocacia"
-										})
-									})
-								]
-							})
-						]
-					})
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/Ebook.tsx:55:11",
-					"data-prohibitions": "[editContent]",
-					className: "w-full lg:w-7/12 max-w-2xl",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-							"data-uid": "src/components/sections/Ebook.tsx:56:13",
-							"data-prohibitions": "[]",
-							className: "text-3xl md:text-5xl font-bold mb-6 text-white font-serif",
-							children: [
-								"Acesse nosso Guia Gratuito: ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-									"data-uid": "src/components/sections/Ebook.tsx:57:43",
-									"data-prohibitions": "[editContent]",
-									className: "hidden md:block"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Ebook.tsx:58:15",
-									"data-prohibitions": "[]",
-									className: "text-gold italic",
-									children: "Tudo sobre BPC/LOAS"
-								})
-							]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/sections/Ebook.tsx:60:13",
-							"data-prohibitions": "[]",
-							className: "text-lg text-foreground/80 mb-8 font-light",
-							children: "Entenda seus direitos e aprenda como solicitar o benefício de forma correta com o nosso conteúdo exclusivo e detalhado, elaborado por especialistas."
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Ebook.tsx:65:13",
-							"data-prohibitions": "[editContent]",
-							className: "mb-10 space-y-4",
-							children: [
-								"Requisitos legais atualizados",
-								"Documentação probatória necessária",
-								"Erros comuns a evitar no INSS"
-							].map((benefit, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:71:17",
-								"data-prohibitions": "[editContent]",
-								className: "flex items-center",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:72:19",
-									"data-prohibitions": "[]",
-									className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center mr-4",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-										"data-uid": "src/components/sections/Ebook.tsx:73:21",
-										"data-prohibitions": "[editContent]",
-										className: "h-3.5 w-3.5 text-gold"
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Ebook.tsx:75:19",
-									"data-prohibitions": "[editContent]",
-									className: "text-foreground/90 font-medium text-base",
-									children: benefit
-								})]
-							}, idx))
-						}),
-						!isSubmitted ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
-							"data-uid": "src/components/sections/Ebook.tsx:81:15",
-							"data-prohibitions": "[]",
-							onSubmit: handleSubmit,
-							className: "space-y-5 bg-background p-6 sm:p-8 rounded-xl border border-border/50 shadow-lg",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:85:17",
-									"data-prohibitions": "[]",
-									className: "space-y-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
-										"data-uid": "src/components/sections/Ebook.tsx:86:19",
-										"data-prohibitions": "[]",
-										htmlFor: "name",
-										className: "text-foreground/80 font-medium",
-										children: "Nome Completo"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-										"data-uid": "src/components/sections/Ebook.tsx:89:19",
-										"data-prohibitions": "[editContent]",
-										id: "name",
-										value: name,
-										onChange: (e) => setName(e.target.value),
-										placeholder: "Digite seu nome completo",
-										required: true,
-										className: "bg-secondary border-border focus-visible:ring-gold h-12"
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:98:17",
-									"data-prohibitions": "[]",
-									className: "space-y-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
-										"data-uid": "src/components/sections/Ebook.tsx:99:19",
-										"data-prohibitions": "[]",
-										htmlFor: "contact",
-										className: "text-foreground/80 font-medium",
-										children: "WhatsApp ou E-mail"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-										"data-uid": "src/components/sections/Ebook.tsx:102:19",
-										"data-prohibitions": "[editContent]",
-										id: "contact",
-										value: contact,
-										onChange: (e) => setContact(e.target.value),
-										placeholder: "Seu melhor contato",
-										required: true,
-										className: "bg-secondary border-border focus-visible:ring-gold h-12"
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									"data-uid": "src/components/sections/Ebook.tsx:111:17",
-									"data-prohibitions": "[]",
-									type: "submit",
-									className: "w-full bg-gold hover:bg-gold/90 text-primary-foreground font-bold h-14 mt-4 transition-all duration-300 shadow-gold",
-									children: "ACESSAR O GUIA AGORA"
-								})
-							]
-						}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Ebook.tsx:119:15",
-							"data-prohibitions": "[]",
-							className: "bg-background p-8 sm:p-10 rounded-xl border border-gold/30 shadow-gold text-center animate-in fade-in slide-in-from-bottom-4 duration-500",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:120:17",
-									"data-prohibitions": "[]",
-									className: "w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold/20",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-										"data-uid": "src/components/sections/Ebook.tsx:121:19",
-										"data-prohibitions": "[editContent]",
-										className: "w-8 h-8 text-gold"
-									})
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									"data-uid": "src/components/sections/Ebook.tsx:123:17",
-									"data-prohibitions": "[]",
-									className: "text-2xl font-bold text-white mb-3 font-serif",
-									children: "Tudo Certo!"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/Ebook.tsx:124:17",
-									"data-prohibitions": "[]",
-									className: "text-foreground/80 mb-8 text-lg font-light",
-									children: "Seu guia está pronto para acesso. Clique no botão abaixo para ler todo o material agora mesmo em nosso site."
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									"data-uid": "src/components/sections/Ebook.tsx:128:17",
-									"data-prohibitions": "[]",
-									asChild: true,
-									className: "w-full sm:w-auto bg-gold hover:bg-gold/90 text-primary-foreground font-bold h-14 px-8 text-base shadow-gold",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-										"data-uid": "src/components/sections/Ebook.tsx:132:19",
-										"data-prohibitions": "[]",
-										to: "/guia-bpc",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
-											"data-uid": "src/components/sections/Ebook.tsx:133:21",
-											"data-prohibitions": "[editContent]",
-											className: "mr-2 h-5 w-5"
-										}), " Acessar Guia Completo"]
-									})
-								})
-							]
-						})
-					]
-				})]
-			})
-		})]
-	});
-}
-//#endregion
-//#region src/assets/perfil-20-6d6d4.png
-var perfil_20_6d6d4_default = "/assets/perfil-20-6d6d4-CN0gCp5s.png";
-//#endregion
 //#region src/components/sections/Biography.tsx
 function Biography() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/Biography.tsx:6:5",
+		"data-uid": "src/components/sections/Biography.tsx:7:5",
 		"data-prohibitions": "[editContent]",
-		id: "quem-sou",
-		className: "py-24 bg-background",
+		id: "sobre",
+		className: "py-24 bg-background overflow-hidden relative",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/Biography.tsx:7:7",
+			"data-uid": "src/components/sections/Biography.tsx:8:7",
 			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
+			className: "container px-4 md:px-6",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Biography.tsx:8:9",
+				"data-uid": "src/components/sections/Biography.tsx:9:9",
 				"data-prohibitions": "[editContent]",
-				className: "flex flex-col lg:flex-row items-center gap-16 lg:gap-24",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/Biography.tsx:9:11",
-					"data-prohibitions": "[]",
-					className: "w-full lg:w-5/12",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Biography.tsx:10:13",
+				className: "grid lg:grid-cols-2 gap-12 lg:gap-16 items-center",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/Biography.tsx:10:11",
+					"data-prohibitions": "[editContent]",
+					className: "relative order-2 lg:order-1 flex justify-center lg:justify-end",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/Biography.tsx:11:13",
 						"data-prohibitions": "[]",
-						className: "relative mx-auto max-w-md",
+						className: "relative w-full max-w-md aspect-[3/4] rounded-xl overflow-hidden border border-border/50",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/Biography.tsx:11:15",
-								"data-prohibitions": "[]",
-								className: "absolute -inset-4 bg-gold rounded-xl rotate-3 scale-105 opacity-10 blur-lg"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								"data-uid": "src/components/sections/Biography.tsx:12:15",
-								"data-prohibitions": "[]",
-								className: "absolute inset-0 bg-gradient-to-tr from-gold/20 to-transparent rounded-xl rotate-2"
+								"data-prohibitions": "[editContent]",
+								className: "absolute inset-0 bg-primary/10 mix-blend-multiply z-10"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 								"data-uid": "src/components/sections/Biography.tsx:13:15",
 								"data-prohibitions": "[editContent]",
-								src: perfil_20_6d6d4_default,
-								alt: "Lucas Morrone Costa",
-								className: "relative z-10 w-full h-auto rounded-xl border border-border/50 object-cover shadow-2xl"
+								src: "https://img.usecurling.com/ppl/large?gender=male",
+								alt: "Dr. Lucas Morrone",
+								className: "object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Biography.tsx:18:15",
+								"data-prohibitions": "[editContent]",
+								className: "absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background to-transparent h-1/3 z-20"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Biography.tsx:19:15",
+								"data-prohibitions": "[]",
+								className: "absolute bottom-6 left-6 z-30",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Biography.tsx:20:17",
+									"data-prohibitions": "[]",
+									className: "text-primary font-bold tracking-wider uppercase text-sm",
+									children: "OAB/SP 123.456"
+								})
 							})
 						]
-					})
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/components/sections/Biography.tsx:27:13",
+						"data-prohibitions": "[editContent]",
+						className: "absolute -top-6 -left-6 w-32 h-32 bg-primary/5 rounded-full blur-2xl -z-10"
+					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/Biography.tsx:21:11",
-					"data-prohibitions": "[editContent]",
-					className: "w-full lg:w-7/12",
+					"data-uid": "src/components/sections/Biography.tsx:30:11",
+					"data-prohibitions": "[]",
+					className: "space-y-8 order-1 lg:order-2",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:22:13",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/Biography.tsx:31:13",
 							"data-prohibitions": "[]",
-							className: "inline-block px-4 py-1.5 bg-secondary border border-border/50 text-gold text-sm font-medium rounded-full mb-8 tracking-wide",
-							children: "OAB/RS 107485"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							"data-uid": "src/components/sections/Biography.tsx:25:13",
-							"data-prohibitions": "[]",
-							className: "text-3xl md:text-5xl font-bold mb-8 text-white font-serif",
-							children: "Lucas Morrone Costa"
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									"data-uid": "src/components/sections/Biography.tsx:32:15",
+									"data-prohibitions": "[editContent]",
+									src: editedimage_1773665784218_dc625_default,
+									alt: "Lucas Morrone Logo",
+									className: "h-16 w-auto mb-6 opacity-80 mix-blend-lighten"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+									"data-uid": "src/components/sections/Biography.tsx:37:15",
+									"data-prohibitions": "[]",
+									className: "text-3xl md:text-5xl font-bold tracking-tight text-foreground font-serif mb-4",
+									children: ["Compromisso com o seu ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/sections/Biography.tsx:38:39",
+										"data-prohibitions": "[]",
+										className: "text-primary italic",
+										children: "Direito"
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Biography.tsx:40:15",
+									"data-prohibitions": "[]",
+									className: "text-lg text-muted-foreground font-light leading-relaxed",
+									children: "O escritório Lucas Morrone Advocacia Previdenciária nasceu com o propósito inabalável de defender os segurados contra as injustiças cometidas pelo INSS."
+								})
+							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:29:13",
+							"data-uid": "src/components/sections/Biography.tsx:46:13",
 							"data-prohibitions": "[]",
-							className: "space-y-5 text-lg text-foreground/80 mb-10 font-light leading-relaxed",
+							className: "space-y-4 text-muted-foreground",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:30:15",
+								"data-uid": "src/components/sections/Biography.tsx:47:15",
 								"data-prohibitions": "[]",
-								children: "Sou o advogado Lucas Morrone Costa, especialista em Direito Previdenciário. Atendo presencialmente e online, oferecendo análise técnica precisa e orientação personalizada para cada cliente."
+								children: "Nossa atuação é pautada na ética, transparência e extrema combatividade. Sabemos que por trás de cada processo de BPC/LOAS ou aposentadoria existe uma história de vida e a necessidade urgente de dignidade."
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:35:15",
+								"data-uid": "src/components/sections/Biography.tsx:52:15",
 								"data-prohibitions": "[]",
-								children: "Meu objetivo é proporcionar segurança jurídica, garantindo que todos os direitos dos segurados sejam rigorosamente respeitados pelo INSS, com total transparência e excelência em cada etapa do processo."
+								children: "Com atendimento personalizado em todo o território nacional, utilizamos tecnologia e profundo conhecimento jurídico para acelerar resultados e garantir o melhor benefício possível para nossos clientes."
 							})]
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:42:13",
-							"data-prohibitions": "[editContent]",
-							className: "grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10",
-							children: [
-								"Atendimento Especializado",
-								"Análise Técnica Aprofundada",
-								"Atuação Ética e Transparente",
-								"Foco no Direito do Segurado"
-							].map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Biography.tsx:49:17",
-								"data-prohibitions": "[editContent]",
-								className: "flex items-center",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Biography.tsx:50:19",
-									"data-prohibitions": "[]",
-									className: "flex-shrink-0 w-6 h-6 rounded bg-gold/10 border border-gold/20 flex items-center justify-center mr-4",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-										"data-uid": "src/components/sections/Biography.tsx:51:21",
-										"data-prohibitions": "[editContent]",
-										className: "h-3.5 w-3.5 text-gold"
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Biography.tsx:53:19",
-									"data-prohibitions": "[editContent]",
-									className: "text-foreground/90 font-medium",
-									children: item
-								})]
-							}, idx))
-						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:58:13",
+							"data-uid": "src/components/sections/Biography.tsx:59:13",
 							"data-prohibitions": "[]",
-							className: "bg-card border-l-4 border-gold p-6 rounded-r-lg shadow-sm",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-								"data-uid": "src/components/sections/Biography.tsx:59:15",
-								"data-prohibitions": "[]",
-								className: "text-gold font-semibold mb-2 text-xs uppercase tracking-widest",
-								children: "Nota Importante"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:62:15",
-								"data-prohibitions": "[]",
-								className: "text-sm text-foreground/60 italic leading-relaxed",
-								children: "Até 2023 utilizei o nome Lucas Moran Costa. A atualização para Lucas Morrone Costa já está presente em todos os meus registros oficiais. Documentos ou referências anteriores em nome de Lucas Moran Costa correspondem ao mesmo profissional, inscrito na OAB/RS 107485."
+							className: "grid grid-cols-1 sm:grid-cols-2 gap-4 py-6 border-y border-border/50",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Biography.tsx:60:15",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/components/sections/Biography.tsx:61:17",
+										"data-prohibitions": "[]",
+										className: "p-2 rounded bg-primary/10",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
+											"data-uid": "src/components/sections/Biography.tsx:62:19",
+											"data-prohibitions": "[editContent]",
+											className: "h-5 w-5 text-primary"
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/sections/Biography.tsx:64:17",
+										"data-prohibitions": "[]",
+										className: "font-medium text-foreground",
+										children: "Especialização Técnica"
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Biography.tsx:66:15",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/components/sections/Biography.tsx:67:17",
+										"data-prohibitions": "[]",
+										className: "p-2 rounded bg-primary/10",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
+											"data-uid": "src/components/sections/Biography.tsx:68:19",
+											"data-prohibitions": "[editContent]",
+											className: "h-5 w-5 text-primary"
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/sections/Biography.tsx:70:17",
+										"data-prohibitions": "[]",
+										className: "font-medium text-foreground",
+										children: "Atendimento Nacional"
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Biography.tsx:72:15",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/components/sections/Biography.tsx:73:17",
+										"data-prohibitions": "[]",
+										className: "p-2 rounded bg-primary/10",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Landmark, {
+											"data-uid": "src/components/sections/Biography.tsx:74:19",
+											"data-prohibitions": "[editContent]",
+											className: "h-5 w-5 text-primary"
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/sections/Biography.tsx:76:17",
+										"data-prohibitions": "[]",
+										className: "font-medium text-foreground",
+										children: "Estrutura Sólida"
+									})]
+								})
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+							"data-uid": "src/components/sections/Biography.tsx:80:13",
+							"data-prohibitions": "[]",
+							className: "bg-primary hover:bg-primary/90 text-primary-foreground uppercase tracking-widest font-semibold px-8",
+							onClick: () => window.open("https://wa.me/5511999999999", "_blank"),
+							children: ["Consultar Especialista ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+								"data-uid": "src/components/sections/Biography.tsx:84:38",
+								"data-prohibitions": "[editContent]",
+								className: "ml-2 h-4 w-4"
 							})]
 						})
 					]
@@ -20656,115 +19966,1945 @@ function Biography() {
 	});
 }
 //#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/embla-carousel-reactive-utils@8.6.0_embla-carousel@8.6.0/node_modules/embla-carousel-reactive-utils/esm/embla-carousel-reactive-utils.esm.js
+function isObject$1(subject) {
+	return Object.prototype.toString.call(subject) === "[object Object]";
+}
+function isRecord(subject) {
+	return isObject$1(subject) || Array.isArray(subject);
+}
+function canUseDOM$1() {
+	return !!(typeof window !== "undefined" && window.document && window.document.createElement);
+}
+function areOptionsEqual(optionsA, optionsB) {
+	const optionsAKeys = Object.keys(optionsA);
+	const optionsBKeys = Object.keys(optionsB);
+	if (optionsAKeys.length !== optionsBKeys.length) return false;
+	if (JSON.stringify(Object.keys(optionsA.breakpoints || {})) !== JSON.stringify(Object.keys(optionsB.breakpoints || {}))) return false;
+	return optionsAKeys.every((key) => {
+		const valueA = optionsA[key];
+		const valueB = optionsB[key];
+		if (typeof valueA === "function") return `${valueA}` === `${valueB}`;
+		if (!isRecord(valueA) || !isRecord(valueB)) return valueA === valueB;
+		return areOptionsEqual(valueA, valueB);
+	});
+}
+function sortAndMapPluginToOptions(plugins) {
+	return plugins.concat().sort((a, b) => a.name > b.name ? 1 : -1).map((plugin) => plugin.options);
+}
+function arePluginsEqual(pluginsA, pluginsB) {
+	if (pluginsA.length !== pluginsB.length) return false;
+	const optionsA = sortAndMapPluginToOptions(pluginsA);
+	const optionsB = sortAndMapPluginToOptions(pluginsB);
+	return optionsA.every((optionA, index) => {
+		const optionB = optionsB[index];
+		return areOptionsEqual(optionA, optionB);
+	});
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/embla-carousel.esm.js
+function isNumber(subject) {
+	return typeof subject === "number";
+}
+function isString(subject) {
+	return typeof subject === "string";
+}
+function isBoolean(subject) {
+	return typeof subject === "boolean";
+}
+function isObject(subject) {
+	return Object.prototype.toString.call(subject) === "[object Object]";
+}
+function mathAbs(n) {
+	return Math.abs(n);
+}
+function mathSign(n) {
+	return Math.sign(n);
+}
+function deltaAbs(valueB, valueA) {
+	return mathAbs(valueB - valueA);
+}
+function factorAbs(valueB, valueA) {
+	if (valueB === 0 || valueA === 0) return 0;
+	if (mathAbs(valueB) <= mathAbs(valueA)) return 0;
+	return mathAbs(deltaAbs(mathAbs(valueB), mathAbs(valueA)) / valueB);
+}
+function roundToTwoDecimals(num) {
+	return Math.round(num * 100) / 100;
+}
+function arrayKeys(array) {
+	return objectKeys(array).map(Number);
+}
+function arrayLast(array) {
+	return array[arrayLastIndex(array)];
+}
+function arrayLastIndex(array) {
+	return Math.max(0, array.length - 1);
+}
+function arrayIsLastIndex(array, index) {
+	return index === arrayLastIndex(array);
+}
+function arrayFromNumber(n, startAt = 0) {
+	return Array.from(Array(n), (_, i) => startAt + i);
+}
+function objectKeys(object) {
+	return Object.keys(object);
+}
+function objectsMergeDeep(objectA, objectB) {
+	return [objectA, objectB].reduce((mergedObjects, currentObject) => {
+		objectKeys(currentObject).forEach((key) => {
+			const valueA = mergedObjects[key];
+			const valueB = currentObject[key];
+			mergedObjects[key] = isObject(valueA) && isObject(valueB) ? objectsMergeDeep(valueA, valueB) : valueB;
+		});
+		return mergedObjects;
+	}, {});
+}
+function isMouseEvent(evt, ownerWindow) {
+	return typeof ownerWindow.MouseEvent !== "undefined" && evt instanceof ownerWindow.MouseEvent;
+}
+function Alignment(align, viewSize) {
+	const predefined = {
+		start,
+		center,
+		end
+	};
+	function start() {
+		return 0;
+	}
+	function center(n) {
+		return end(n) / 2;
+	}
+	function end(n) {
+		return viewSize - n;
+	}
+	function measure(n, index) {
+		if (isString(align)) return predefined[align](n);
+		return align(viewSize, n, index);
+	}
+	return { measure };
+}
+function EventStore() {
+	let listeners = [];
+	function add(node, type, handler, options = { passive: true }) {
+		let removeListener;
+		if ("addEventListener" in node) {
+			node.addEventListener(type, handler, options);
+			removeListener = () => node.removeEventListener(type, handler, options);
+		} else {
+			const legacyMediaQueryList = node;
+			legacyMediaQueryList.addListener(handler);
+			removeListener = () => legacyMediaQueryList.removeListener(handler);
+		}
+		listeners.push(removeListener);
+		return self;
+	}
+	function clear() {
+		listeners = listeners.filter((remove) => remove());
+	}
+	const self = {
+		add,
+		clear
+	};
+	return self;
+}
+function Animations(ownerDocument, ownerWindow, update, render) {
+	const documentVisibleHandler = EventStore();
+	const fixedTimeStep = 1e3 / 60;
+	let lastTimeStamp = null;
+	let accumulatedTime = 0;
+	let animationId = 0;
+	function init() {
+		documentVisibleHandler.add(ownerDocument, "visibilitychange", () => {
+			if (ownerDocument.hidden) reset();
+		});
+	}
+	function destroy() {
+		stop();
+		documentVisibleHandler.clear();
+	}
+	function animate(timeStamp) {
+		if (!animationId) return;
+		if (!lastTimeStamp) {
+			lastTimeStamp = timeStamp;
+			update();
+			update();
+		}
+		const timeElapsed = timeStamp - lastTimeStamp;
+		lastTimeStamp = timeStamp;
+		accumulatedTime += timeElapsed;
+		while (accumulatedTime >= fixedTimeStep) {
+			update();
+			accumulatedTime -= fixedTimeStep;
+		}
+		render(accumulatedTime / fixedTimeStep);
+		if (animationId) animationId = ownerWindow.requestAnimationFrame(animate);
+	}
+	function start() {
+		if (animationId) return;
+		animationId = ownerWindow.requestAnimationFrame(animate);
+	}
+	function stop() {
+		ownerWindow.cancelAnimationFrame(animationId);
+		lastTimeStamp = null;
+		accumulatedTime = 0;
+		animationId = 0;
+	}
+	function reset() {
+		lastTimeStamp = null;
+		accumulatedTime = 0;
+	}
+	return {
+		init,
+		destroy,
+		start,
+		stop,
+		update,
+		render
+	};
+}
+function Axis(axis, contentDirection) {
+	const isRightToLeft = contentDirection === "rtl";
+	const isVertical = axis === "y";
+	const scroll = isVertical ? "y" : "x";
+	const cross = isVertical ? "x" : "y";
+	const sign = !isVertical && isRightToLeft ? -1 : 1;
+	const startEdge = getStartEdge();
+	const endEdge = getEndEdge();
+	function measureSize(nodeRect) {
+		const { height, width } = nodeRect;
+		return isVertical ? height : width;
+	}
+	function getStartEdge() {
+		if (isVertical) return "top";
+		return isRightToLeft ? "right" : "left";
+	}
+	function getEndEdge() {
+		if (isVertical) return "bottom";
+		return isRightToLeft ? "left" : "right";
+	}
+	function direction(n) {
+		return n * sign;
+	}
+	return {
+		scroll,
+		cross,
+		startEdge,
+		endEdge,
+		measureSize,
+		direction
+	};
+}
+function Limit(min = 0, max = 0) {
+	const length = mathAbs(min - max);
+	function reachedMin(n) {
+		return n < min;
+	}
+	function reachedMax(n) {
+		return n > max;
+	}
+	function reachedAny(n) {
+		return reachedMin(n) || reachedMax(n);
+	}
+	function constrain(n) {
+		if (!reachedAny(n)) return n;
+		return reachedMin(n) ? min : max;
+	}
+	function removeOffset(n) {
+		if (!length) return n;
+		return n - length * Math.ceil((n - max) / length);
+	}
+	return {
+		length,
+		max,
+		min,
+		constrain,
+		reachedAny,
+		reachedMax,
+		reachedMin,
+		removeOffset
+	};
+}
+function Counter(max, start, loop) {
+	const { constrain } = Limit(0, max);
+	const loopEnd = max + 1;
+	let counter = withinLimit(start);
+	function withinLimit(n) {
+		return !loop ? constrain(n) : mathAbs((loopEnd + n) % loopEnd);
+	}
+	function get() {
+		return counter;
+	}
+	function set(n) {
+		counter = withinLimit(n);
+		return self;
+	}
+	function add(n) {
+		return clone().set(get() + n);
+	}
+	function clone() {
+		return Counter(max, get(), loop);
+	}
+	const self = {
+		get,
+		set,
+		add,
+		clone
+	};
+	return self;
+}
+function DragHandler(axis, rootNode, ownerDocument, ownerWindow, target, dragTracker, location, animation, scrollTo, scrollBody, scrollTarget, index, eventHandler, percentOfView, dragFree, dragThreshold, skipSnaps, baseFriction, watchDrag) {
+	const { cross: crossAxis, direction } = axis;
+	const focusNodes = [
+		"INPUT",
+		"SELECT",
+		"TEXTAREA"
+	];
+	const nonPassiveEvent = { passive: false };
+	const initEvents = EventStore();
+	const dragEvents = EventStore();
+	const goToNextThreshold = Limit(50, 225).constrain(percentOfView.measure(20));
+	const snapForceBoost = {
+		mouse: 300,
+		touch: 400
+	};
+	const freeForceBoost = {
+		mouse: 500,
+		touch: 600
+	};
+	const baseSpeed = dragFree ? 43 : 25;
+	let isMoving = false;
+	let startScroll = 0;
+	let startCross = 0;
+	let pointerIsDown = false;
+	let preventScroll = false;
+	let preventClick = false;
+	let isMouse = false;
+	function init(emblaApi) {
+		if (!watchDrag) return;
+		function downIfAllowed(evt) {
+			if (isBoolean(watchDrag) || watchDrag(emblaApi, evt)) down(evt);
+		}
+		const node = rootNode;
+		initEvents.add(node, "dragstart", (evt) => evt.preventDefault(), nonPassiveEvent).add(node, "touchmove", () => void 0, nonPassiveEvent).add(node, "touchend", () => void 0).add(node, "touchstart", downIfAllowed).add(node, "mousedown", downIfAllowed).add(node, "touchcancel", up).add(node, "contextmenu", up).add(node, "click", click, true);
+	}
+	function destroy() {
+		initEvents.clear();
+		dragEvents.clear();
+	}
+	function addDragEvents() {
+		const node = isMouse ? ownerDocument : rootNode;
+		dragEvents.add(node, "touchmove", move, nonPassiveEvent).add(node, "touchend", up).add(node, "mousemove", move, nonPassiveEvent).add(node, "mouseup", up);
+	}
+	function isFocusNode(node) {
+		const nodeName = node.nodeName || "";
+		return focusNodes.includes(nodeName);
+	}
+	function forceBoost() {
+		return (dragFree ? freeForceBoost : snapForceBoost)[isMouse ? "mouse" : "touch"];
+	}
+	function allowedForce(force, targetChanged) {
+		const next = index.add(mathSign(force) * -1);
+		const baseForce = scrollTarget.byDistance(force, !dragFree).distance;
+		if (dragFree || mathAbs(force) < goToNextThreshold) return baseForce;
+		if (skipSnaps && targetChanged) return baseForce * .5;
+		return scrollTarget.byIndex(next.get(), 0).distance;
+	}
+	function down(evt) {
+		const isMouseEvt = isMouseEvent(evt, ownerWindow);
+		isMouse = isMouseEvt;
+		preventClick = dragFree && isMouseEvt && !evt.buttons && isMoving;
+		isMoving = deltaAbs(target.get(), location.get()) >= 2;
+		if (isMouseEvt && evt.button !== 0) return;
+		if (isFocusNode(evt.target)) return;
+		pointerIsDown = true;
+		dragTracker.pointerDown(evt);
+		scrollBody.useFriction(0).useDuration(0);
+		target.set(location);
+		addDragEvents();
+		startScroll = dragTracker.readPoint(evt);
+		startCross = dragTracker.readPoint(evt, crossAxis);
+		eventHandler.emit("pointerDown");
+	}
+	function move(evt) {
+		if (!isMouseEvent(evt, ownerWindow) && evt.touches.length >= 2) return up(evt);
+		const lastScroll = dragTracker.readPoint(evt);
+		const lastCross = dragTracker.readPoint(evt, crossAxis);
+		const diffScroll = deltaAbs(lastScroll, startScroll);
+		const diffCross = deltaAbs(lastCross, startCross);
+		if (!preventScroll && !isMouse) {
+			if (!evt.cancelable) return up(evt);
+			preventScroll = diffScroll > diffCross;
+			if (!preventScroll) return up(evt);
+		}
+		const diff = dragTracker.pointerMove(evt);
+		if (diffScroll > dragThreshold) preventClick = true;
+		scrollBody.useFriction(.3).useDuration(.75);
+		animation.start();
+		target.add(direction(diff));
+		evt.preventDefault();
+	}
+	function up(evt) {
+		const targetChanged = scrollTarget.byDistance(0, false).index !== index.get();
+		const rawForce = dragTracker.pointerUp(evt) * forceBoost();
+		const force = allowedForce(direction(rawForce), targetChanged);
+		const forceFactor = factorAbs(rawForce, force);
+		const speed = baseSpeed - 10 * forceFactor;
+		const friction = baseFriction + forceFactor / 50;
+		preventScroll = false;
+		pointerIsDown = false;
+		dragEvents.clear();
+		scrollBody.useDuration(speed).useFriction(friction);
+		scrollTo.distance(force, !dragFree);
+		isMouse = false;
+		eventHandler.emit("pointerUp");
+	}
+	function click(evt) {
+		if (preventClick) {
+			evt.stopPropagation();
+			evt.preventDefault();
+			preventClick = false;
+		}
+	}
+	function pointerDown() {
+		return pointerIsDown;
+	}
+	return {
+		init,
+		destroy,
+		pointerDown
+	};
+}
+function DragTracker(axis, ownerWindow) {
+	const logInterval = 170;
+	let startEvent;
+	let lastEvent;
+	function readTime(evt) {
+		return evt.timeStamp;
+	}
+	function readPoint(evt, evtAxis) {
+		const coord = `client${(evtAxis || axis.scroll) === "x" ? "X" : "Y"}`;
+		return (isMouseEvent(evt, ownerWindow) ? evt : evt.touches[0])[coord];
+	}
+	function pointerDown(evt) {
+		startEvent = evt;
+		lastEvent = evt;
+		return readPoint(evt);
+	}
+	function pointerMove(evt) {
+		const diff = readPoint(evt) - readPoint(lastEvent);
+		const expired = readTime(evt) - readTime(startEvent) > logInterval;
+		lastEvent = evt;
+		if (expired) startEvent = evt;
+		return diff;
+	}
+	function pointerUp(evt) {
+		if (!startEvent || !lastEvent) return 0;
+		const diffDrag = readPoint(lastEvent) - readPoint(startEvent);
+		const diffTime = readTime(evt) - readTime(startEvent);
+		const expired = readTime(evt) - readTime(lastEvent) > logInterval;
+		const force = diffDrag / diffTime;
+		return diffTime && !expired && mathAbs(force) > .1 ? force : 0;
+	}
+	return {
+		pointerDown,
+		pointerMove,
+		pointerUp,
+		readPoint
+	};
+}
+function NodeRects() {
+	function measure(node) {
+		const { offsetTop, offsetLeft, offsetWidth, offsetHeight } = node;
+		return {
+			top: offsetTop,
+			right: offsetLeft + offsetWidth,
+			bottom: offsetTop + offsetHeight,
+			left: offsetLeft,
+			width: offsetWidth,
+			height: offsetHeight
+		};
+	}
+	return { measure };
+}
+function PercentOfView(viewSize) {
+	function measure(n) {
+		return viewSize * (n / 100);
+	}
+	return { measure };
+}
+function ResizeHandler(container, eventHandler, ownerWindow, slides, axis, watchResize, nodeRects) {
+	const observeNodes = [container].concat(slides);
+	let resizeObserver;
+	let containerSize;
+	let slideSizes = [];
+	let destroyed = false;
+	function readSize(node) {
+		return axis.measureSize(nodeRects.measure(node));
+	}
+	function init(emblaApi) {
+		if (!watchResize) return;
+		containerSize = readSize(container);
+		slideSizes = slides.map(readSize);
+		function defaultCallback(entries) {
+			for (const entry of entries) {
+				if (destroyed) return;
+				const isContainer = entry.target === container;
+				const slideIndex = slides.indexOf(entry.target);
+				const lastSize = isContainer ? containerSize : slideSizes[slideIndex];
+				if (mathAbs(readSize(isContainer ? container : slides[slideIndex]) - lastSize) >= .5) {
+					emblaApi.reInit();
+					eventHandler.emit("resize");
+					break;
+				}
+			}
+		}
+		resizeObserver = new ResizeObserver((entries) => {
+			if (isBoolean(watchResize) || watchResize(emblaApi, entries)) defaultCallback(entries);
+		});
+		ownerWindow.requestAnimationFrame(() => {
+			observeNodes.forEach((node) => resizeObserver.observe(node));
+		});
+	}
+	function destroy() {
+		destroyed = true;
+		if (resizeObserver) resizeObserver.disconnect();
+	}
+	return {
+		init,
+		destroy
+	};
+}
+function ScrollBody(location, offsetLocation, previousLocation, target, baseDuration, baseFriction) {
+	let scrollVelocity = 0;
+	let scrollDirection = 0;
+	let scrollDuration = baseDuration;
+	let scrollFriction = baseFriction;
+	let rawLocation = location.get();
+	let rawLocationPrevious = 0;
+	function seek() {
+		const displacement = target.get() - location.get();
+		const isInstant = !scrollDuration;
+		let scrollDistance = 0;
+		if (isInstant) {
+			scrollVelocity = 0;
+			previousLocation.set(target);
+			location.set(target);
+			scrollDistance = displacement;
+		} else {
+			previousLocation.set(location);
+			scrollVelocity += displacement / scrollDuration;
+			scrollVelocity *= scrollFriction;
+			rawLocation += scrollVelocity;
+			location.add(scrollVelocity);
+			scrollDistance = rawLocation - rawLocationPrevious;
+		}
+		scrollDirection = mathSign(scrollDistance);
+		rawLocationPrevious = rawLocation;
+		return self;
+	}
+	function settled() {
+		return mathAbs(target.get() - offsetLocation.get()) < .001;
+	}
+	function duration() {
+		return scrollDuration;
+	}
+	function direction() {
+		return scrollDirection;
+	}
+	function velocity() {
+		return scrollVelocity;
+	}
+	function useBaseDuration() {
+		return useDuration(baseDuration);
+	}
+	function useBaseFriction() {
+		return useFriction(baseFriction);
+	}
+	function useDuration(n) {
+		scrollDuration = n;
+		return self;
+	}
+	function useFriction(n) {
+		scrollFriction = n;
+		return self;
+	}
+	const self = {
+		direction,
+		duration,
+		velocity,
+		seek,
+		settled,
+		useBaseFriction,
+		useBaseDuration,
+		useFriction,
+		useDuration
+	};
+	return self;
+}
+function ScrollBounds(limit, location, target, scrollBody, percentOfView) {
+	const pullBackThreshold = percentOfView.measure(10);
+	const edgeOffsetTolerance = percentOfView.measure(50);
+	const frictionLimit = Limit(.1, .99);
+	let disabled = false;
+	function shouldConstrain() {
+		if (disabled) return false;
+		if (!limit.reachedAny(target.get())) return false;
+		if (!limit.reachedAny(location.get())) return false;
+		return true;
+	}
+	function constrain(pointerDown) {
+		if (!shouldConstrain()) return;
+		const diffToEdge = mathAbs(limit[limit.reachedMin(location.get()) ? "min" : "max"] - location.get());
+		const diffToTarget = target.get() - location.get();
+		const friction = frictionLimit.constrain(diffToEdge / edgeOffsetTolerance);
+		target.subtract(diffToTarget * friction);
+		if (!pointerDown && mathAbs(diffToTarget) < pullBackThreshold) {
+			target.set(limit.constrain(target.get()));
+			scrollBody.useDuration(25).useBaseFriction();
+		}
+	}
+	function toggleActive(active) {
+		disabled = !active;
+	}
+	return {
+		shouldConstrain,
+		constrain,
+		toggleActive
+	};
+}
+function ScrollContain(viewSize, contentSize, snapsAligned, containScroll, pixelTolerance) {
+	const scrollBounds = Limit(-contentSize + viewSize, 0);
+	const snapsBounded = measureBounded();
+	const scrollContainLimit = findScrollContainLimit();
+	const snapsContained = measureContained();
+	function usePixelTolerance(bound, snap) {
+		return deltaAbs(bound, snap) <= 1;
+	}
+	function findScrollContainLimit() {
+		const startSnap = snapsBounded[0];
+		const endSnap = arrayLast(snapsBounded);
+		return Limit(snapsBounded.lastIndexOf(startSnap), snapsBounded.indexOf(endSnap) + 1);
+	}
+	function measureBounded() {
+		return snapsAligned.map((snapAligned, index) => {
+			const { min, max } = scrollBounds;
+			const snap = scrollBounds.constrain(snapAligned);
+			const isFirst = !index;
+			const isLast = arrayIsLastIndex(snapsAligned, index);
+			if (isFirst) return max;
+			if (isLast) return min;
+			if (usePixelTolerance(min, snap)) return min;
+			if (usePixelTolerance(max, snap)) return max;
+			return snap;
+		}).map((scrollBound) => parseFloat(scrollBound.toFixed(3)));
+	}
+	function measureContained() {
+		if (contentSize <= viewSize + pixelTolerance) return [scrollBounds.max];
+		if (containScroll === "keepSnaps") return snapsBounded;
+		const { min, max } = scrollContainLimit;
+		return snapsBounded.slice(min, max);
+	}
+	return {
+		snapsContained,
+		scrollContainLimit
+	};
+}
+function ScrollLimit(contentSize, scrollSnaps, loop) {
+	const max = scrollSnaps[0];
+	return { limit: Limit(loop ? max - contentSize : arrayLast(scrollSnaps), max) };
+}
+function ScrollLooper(contentSize, limit, location, vectors) {
+	const jointSafety = .1;
+	const { reachedMin, reachedMax } = Limit(limit.min + jointSafety, limit.max + jointSafety);
+	function shouldLoop(direction) {
+		if (direction === 1) return reachedMax(location.get());
+		if (direction === -1) return reachedMin(location.get());
+		return false;
+	}
+	function loop(direction) {
+		if (!shouldLoop(direction)) return;
+		const loopDistance = contentSize * (direction * -1);
+		vectors.forEach((v) => v.add(loopDistance));
+	}
+	return { loop };
+}
+function ScrollProgress(limit) {
+	const { max, length } = limit;
+	function get(n) {
+		const currentLocation = n - max;
+		return length ? currentLocation / -length : 0;
+	}
+	return { get };
+}
+function ScrollSnaps(axis, alignment, containerRect, slideRects, slidesToScroll) {
+	const { startEdge, endEdge } = axis;
+	const { groupSlides } = slidesToScroll;
+	const alignments = measureSizes().map(alignment.measure);
+	const snaps = measureUnaligned();
+	const snapsAligned = measureAligned();
+	function measureSizes() {
+		return groupSlides(slideRects).map((rects) => arrayLast(rects)[endEdge] - rects[0][startEdge]).map(mathAbs);
+	}
+	function measureUnaligned() {
+		return slideRects.map((rect) => containerRect[startEdge] - rect[startEdge]).map((snap) => -mathAbs(snap));
+	}
+	function measureAligned() {
+		return groupSlides(snaps).map((g) => g[0]).map((snap, index) => snap + alignments[index]);
+	}
+	return {
+		snaps,
+		snapsAligned
+	};
+}
+function SlideRegistry(containSnaps, containScroll, scrollSnaps, scrollContainLimit, slidesToScroll, slideIndexes) {
+	const { groupSlides } = slidesToScroll;
+	const { min, max } = scrollContainLimit;
+	const slideRegistry = createSlideRegistry();
+	function createSlideRegistry() {
+		const groupedSlideIndexes = groupSlides(slideIndexes);
+		const doNotContain = !containSnaps || containScroll === "keepSnaps";
+		if (scrollSnaps.length === 1) return [slideIndexes];
+		if (doNotContain) return groupedSlideIndexes;
+		return groupedSlideIndexes.slice(min, max).map((group, index, groups) => {
+			const isFirst = !index;
+			const isLast = arrayIsLastIndex(groups, index);
+			if (isFirst) return arrayFromNumber(arrayLast(groups[0]) + 1);
+			if (isLast) return arrayFromNumber(arrayLastIndex(slideIndexes) - arrayLast(groups)[0] + 1, arrayLast(groups)[0]);
+			return group;
+		});
+	}
+	return { slideRegistry };
+}
+function ScrollTarget(loop, scrollSnaps, contentSize, limit, targetVector) {
+	const { reachedAny, removeOffset, constrain } = limit;
+	function minDistance(distances) {
+		return distances.concat().sort((a, b) => mathAbs(a) - mathAbs(b))[0];
+	}
+	function findTargetSnap(target) {
+		const distance = loop ? removeOffset(target) : constrain(target);
+		const { index } = scrollSnaps.map((snap, index) => ({
+			diff: shortcut(snap - distance, 0),
+			index
+		})).sort((d1, d2) => mathAbs(d1.diff) - mathAbs(d2.diff))[0];
+		return {
+			index,
+			distance
+		};
+	}
+	function shortcut(target, direction) {
+		const targets = [
+			target,
+			target + contentSize,
+			target - contentSize
+		];
+		if (!loop) return target;
+		if (!direction) return minDistance(targets);
+		const matchingTargets = targets.filter((t) => mathSign(t) === direction);
+		if (matchingTargets.length) return minDistance(matchingTargets);
+		return arrayLast(targets) - contentSize;
+	}
+	function byIndex(index, direction) {
+		return {
+			index,
+			distance: shortcut(scrollSnaps[index] - targetVector.get(), direction)
+		};
+	}
+	function byDistance(distance, snap) {
+		const target = targetVector.get() + distance;
+		const { index, distance: targetSnapDistance } = findTargetSnap(target);
+		const reachedBound = !loop && reachedAny(target);
+		if (!snap || reachedBound) return {
+			index,
+			distance
+		};
+		return {
+			index,
+			distance: distance + shortcut(scrollSnaps[index] - targetSnapDistance, 0)
+		};
+	}
+	return {
+		byDistance,
+		byIndex,
+		shortcut
+	};
+}
+function ScrollTo(animation, indexCurrent, indexPrevious, scrollBody, scrollTarget, targetVector, eventHandler) {
+	function scrollTo(target) {
+		const distanceDiff = target.distance;
+		const indexDiff = target.index !== indexCurrent.get();
+		targetVector.add(distanceDiff);
+		if (distanceDiff) if (scrollBody.duration()) animation.start();
+		else {
+			animation.update();
+			animation.render(1);
+			animation.update();
+		}
+		if (indexDiff) {
+			indexPrevious.set(indexCurrent.get());
+			indexCurrent.set(target.index);
+			eventHandler.emit("select");
+		}
+	}
+	function distance(n, snap) {
+		scrollTo(scrollTarget.byDistance(n, snap));
+	}
+	function index(n, direction) {
+		const targetIndex = indexCurrent.clone().set(n);
+		scrollTo(scrollTarget.byIndex(targetIndex.get(), direction));
+	}
+	return {
+		distance,
+		index
+	};
+}
+function SlideFocus(root, slides, slideRegistry, scrollTo, scrollBody, eventStore, eventHandler, watchFocus) {
+	const focusListenerOptions = {
+		passive: true,
+		capture: true
+	};
+	let lastTabPressTime = 0;
+	function init(emblaApi) {
+		if (!watchFocus) return;
+		function defaultCallback(index) {
+			if ((/* @__PURE__ */ new Date()).getTime() - lastTabPressTime > 10) return;
+			eventHandler.emit("slideFocusStart");
+			root.scrollLeft = 0;
+			const group = slideRegistry.findIndex((group) => group.includes(index));
+			if (!isNumber(group)) return;
+			scrollBody.useDuration(0);
+			scrollTo.index(group, 0);
+			eventHandler.emit("slideFocus");
+		}
+		eventStore.add(document, "keydown", registerTabPress, false);
+		slides.forEach((slide, slideIndex) => {
+			eventStore.add(slide, "focus", (evt) => {
+				if (isBoolean(watchFocus) || watchFocus(emblaApi, evt)) defaultCallback(slideIndex);
+			}, focusListenerOptions);
+		});
+	}
+	function registerTabPress(event) {
+		if (event.code === "Tab") lastTabPressTime = (/* @__PURE__ */ new Date()).getTime();
+	}
+	return { init };
+}
+function Vector1D(initialValue) {
+	let value = initialValue;
+	function get() {
+		return value;
+	}
+	function set(n) {
+		value = normalizeInput(n);
+	}
+	function add(n) {
+		value += normalizeInput(n);
+	}
+	function subtract(n) {
+		value -= normalizeInput(n);
+	}
+	function normalizeInput(n) {
+		return isNumber(n) ? n : n.get();
+	}
+	return {
+		get,
+		set,
+		add,
+		subtract
+	};
+}
+function Translate(axis, container) {
+	const translate = axis.scroll === "x" ? x : y;
+	const containerStyle = container.style;
+	let previousTarget = null;
+	let disabled = false;
+	function x(n) {
+		return `translate3d(${n}px,0px,0px)`;
+	}
+	function y(n) {
+		return `translate3d(0px,${n}px,0px)`;
+	}
+	function to(target) {
+		if (disabled) return;
+		const newTarget = roundToTwoDecimals(axis.direction(target));
+		if (newTarget === previousTarget) return;
+		containerStyle.transform = translate(newTarget);
+		previousTarget = newTarget;
+	}
+	function toggleActive(active) {
+		disabled = !active;
+	}
+	function clear() {
+		if (disabled) return;
+		containerStyle.transform = "";
+		if (!container.getAttribute("style")) container.removeAttribute("style");
+	}
+	return {
+		clear,
+		to,
+		toggleActive
+	};
+}
+function SlideLooper(axis, viewSize, contentSize, slideSizes, slideSizesWithGaps, snaps, scrollSnaps, location, slides) {
+	const roundingSafety = .5;
+	const ascItems = arrayKeys(slideSizesWithGaps);
+	const descItems = arrayKeys(slideSizesWithGaps).reverse();
+	const loopPoints = startPoints().concat(endPoints());
+	function removeSlideSizes(indexes, from) {
+		return indexes.reduce((a, i) => {
+			return a - slideSizesWithGaps[i];
+		}, from);
+	}
+	function slidesInGap(indexes, gap) {
+		return indexes.reduce((a, i) => {
+			return removeSlideSizes(a, gap) > 0 ? a.concat([i]) : a;
+		}, []);
+	}
+	function findSlideBounds(offset) {
+		return snaps.map((snap, index) => ({
+			start: snap - slideSizes[index] + roundingSafety + offset,
+			end: snap + viewSize - roundingSafety + offset
+		}));
+	}
+	function findLoopPoints(indexes, offset, isEndEdge) {
+		const slideBounds = findSlideBounds(offset);
+		return indexes.map((index) => {
+			const initial = isEndEdge ? 0 : -contentSize;
+			const altered = isEndEdge ? contentSize : 0;
+			const boundEdge = isEndEdge ? "end" : "start";
+			const loopPoint = slideBounds[index][boundEdge];
+			return {
+				index,
+				loopPoint,
+				slideLocation: Vector1D(-1),
+				translate: Translate(axis, slides[index]),
+				target: () => location.get() > loopPoint ? initial : altered
+			};
+		});
+	}
+	function startPoints() {
+		const gap = scrollSnaps[0];
+		return findLoopPoints(slidesInGap(descItems, gap), contentSize, false);
+	}
+	function endPoints() {
+		return findLoopPoints(slidesInGap(ascItems, viewSize - scrollSnaps[0] - 1), -contentSize, true);
+	}
+	function canLoop() {
+		return loopPoints.every(({ index }) => {
+			return removeSlideSizes(ascItems.filter((i) => i !== index), viewSize) <= .1;
+		});
+	}
+	function loop() {
+		loopPoints.forEach((loopPoint) => {
+			const { target, translate, slideLocation } = loopPoint;
+			const shiftLocation = target();
+			if (shiftLocation === slideLocation.get()) return;
+			translate.to(shiftLocation);
+			slideLocation.set(shiftLocation);
+		});
+	}
+	function clear() {
+		loopPoints.forEach((loopPoint) => loopPoint.translate.clear());
+	}
+	return {
+		canLoop,
+		clear,
+		loop,
+		loopPoints
+	};
+}
+function SlidesHandler(container, eventHandler, watchSlides) {
+	let mutationObserver;
+	let destroyed = false;
+	function init(emblaApi) {
+		if (!watchSlides) return;
+		function defaultCallback(mutations) {
+			for (const mutation of mutations) if (mutation.type === "childList") {
+				emblaApi.reInit();
+				eventHandler.emit("slidesChanged");
+				break;
+			}
+		}
+		mutationObserver = new MutationObserver((mutations) => {
+			if (destroyed) return;
+			if (isBoolean(watchSlides) || watchSlides(emblaApi, mutations)) defaultCallback(mutations);
+		});
+		mutationObserver.observe(container, { childList: true });
+	}
+	function destroy() {
+		if (mutationObserver) mutationObserver.disconnect();
+		destroyed = true;
+	}
+	return {
+		init,
+		destroy
+	};
+}
+function SlidesInView(container, slides, eventHandler, threshold) {
+	const intersectionEntryMap = {};
+	let inViewCache = null;
+	let notInViewCache = null;
+	let intersectionObserver;
+	let destroyed = false;
+	function init() {
+		intersectionObserver = new IntersectionObserver((entries) => {
+			if (destroyed) return;
+			entries.forEach((entry) => {
+				const index = slides.indexOf(entry.target);
+				intersectionEntryMap[index] = entry;
+			});
+			inViewCache = null;
+			notInViewCache = null;
+			eventHandler.emit("slidesInView");
+		}, {
+			root: container.parentElement,
+			threshold
+		});
+		slides.forEach((slide) => intersectionObserver.observe(slide));
+	}
+	function destroy() {
+		if (intersectionObserver) intersectionObserver.disconnect();
+		destroyed = true;
+	}
+	function createInViewList(inView) {
+		return objectKeys(intersectionEntryMap).reduce((list, slideIndex) => {
+			const index = parseInt(slideIndex);
+			const { isIntersecting } = intersectionEntryMap[index];
+			if (inView && isIntersecting || !inView && !isIntersecting) list.push(index);
+			return list;
+		}, []);
+	}
+	function get(inView = true) {
+		if (inView && inViewCache) return inViewCache;
+		if (!inView && notInViewCache) return notInViewCache;
+		const slideIndexes = createInViewList(inView);
+		if (inView) inViewCache = slideIndexes;
+		if (!inView) notInViewCache = slideIndexes;
+		return slideIndexes;
+	}
+	return {
+		init,
+		destroy,
+		get
+	};
+}
+function SlideSizes(axis, containerRect, slideRects, slides, readEdgeGap, ownerWindow) {
+	const { measureSize, startEdge, endEdge } = axis;
+	const withEdgeGap = slideRects[0] && readEdgeGap;
+	const startGap = measureStartGap();
+	const endGap = measureEndGap();
+	const slideSizes = slideRects.map(measureSize);
+	const slideSizesWithGaps = measureWithGaps();
+	function measureStartGap() {
+		if (!withEdgeGap) return 0;
+		const slideRect = slideRects[0];
+		return mathAbs(containerRect[startEdge] - slideRect[startEdge]);
+	}
+	function measureEndGap() {
+		if (!withEdgeGap) return 0;
+		const style = ownerWindow.getComputedStyle(arrayLast(slides));
+		return parseFloat(style.getPropertyValue(`margin-${endEdge}`));
+	}
+	function measureWithGaps() {
+		return slideRects.map((rect, index, rects) => {
+			const isFirst = !index;
+			const isLast = arrayIsLastIndex(rects, index);
+			if (isFirst) return slideSizes[index] + startGap;
+			if (isLast) return slideSizes[index] + endGap;
+			return rects[index + 1][startEdge] - rect[startEdge];
+		}).map(mathAbs);
+	}
+	return {
+		slideSizes,
+		slideSizesWithGaps,
+		startGap,
+		endGap
+	};
+}
+function SlidesToScroll(axis, viewSize, slidesToScroll, loop, containerRect, slideRects, startGap, endGap, pixelTolerance) {
+	const { startEdge, endEdge, direction } = axis;
+	const groupByNumber = isNumber(slidesToScroll);
+	function byNumber(array, groupSize) {
+		return arrayKeys(array).filter((i) => i % groupSize === 0).map((i) => array.slice(i, i + groupSize));
+	}
+	function bySize(array) {
+		if (!array.length) return [];
+		return arrayKeys(array).reduce((groups, rectB, index) => {
+			const rectA = arrayLast(groups) || 0;
+			const isFirst = rectA === 0;
+			const isLast = rectB === arrayLastIndex(array);
+			const edgeA = containerRect[startEdge] - slideRects[rectA][startEdge];
+			const edgeB = containerRect[startEdge] - slideRects[rectB][endEdge];
+			const gapA = !loop && isFirst ? direction(startGap) : 0;
+			const chunkSize = mathAbs(edgeB - (!loop && isLast ? direction(endGap) : 0) - (edgeA + gapA));
+			if (index && chunkSize > viewSize + pixelTolerance) groups.push(rectB);
+			if (isLast) groups.push(array.length);
+			return groups;
+		}, []).map((currentSize, index, groups) => {
+			const previousSize = Math.max(groups[index - 1] || 0);
+			return array.slice(previousSize, currentSize);
+		});
+	}
+	function groupSlides(array) {
+		return groupByNumber ? byNumber(array, slidesToScroll) : bySize(array);
+	}
+	return { groupSlides };
+}
+function Engine(root, container, slides, ownerDocument, ownerWindow, options, eventHandler) {
+	const { align, axis: scrollAxis, direction, startIndex, loop, duration, dragFree, dragThreshold, inViewThreshold, slidesToScroll: groupSlides, skipSnaps, containScroll, watchResize, watchSlides, watchDrag, watchFocus } = options;
+	const pixelTolerance = 2;
+	const nodeRects = NodeRects();
+	const containerRect = nodeRects.measure(container);
+	const slideRects = slides.map(nodeRects.measure);
+	const axis = Axis(scrollAxis, direction);
+	const viewSize = axis.measureSize(containerRect);
+	const percentOfView = PercentOfView(viewSize);
+	const alignment = Alignment(align, viewSize);
+	const containSnaps = !loop && !!containScroll;
+	const { slideSizes, slideSizesWithGaps, startGap, endGap } = SlideSizes(axis, containerRect, slideRects, slides, loop || !!containScroll, ownerWindow);
+	const slidesToScroll = SlidesToScroll(axis, viewSize, groupSlides, loop, containerRect, slideRects, startGap, endGap, pixelTolerance);
+	const { snaps, snapsAligned } = ScrollSnaps(axis, alignment, containerRect, slideRects, slidesToScroll);
+	const contentSize = -arrayLast(snaps) + arrayLast(slideSizesWithGaps);
+	const { snapsContained, scrollContainLimit } = ScrollContain(viewSize, contentSize, snapsAligned, containScroll, pixelTolerance);
+	const scrollSnaps = containSnaps ? snapsContained : snapsAligned;
+	const { limit } = ScrollLimit(contentSize, scrollSnaps, loop);
+	const index = Counter(arrayLastIndex(scrollSnaps), startIndex, loop);
+	const indexPrevious = index.clone();
+	const slideIndexes = arrayKeys(slides);
+	const update = ({ dragHandler, scrollBody, scrollBounds, options: { loop } }) => {
+		if (!loop) scrollBounds.constrain(dragHandler.pointerDown());
+		scrollBody.seek();
+	};
+	const render = ({ scrollBody, translate, location, offsetLocation, previousLocation, scrollLooper, slideLooper, dragHandler, animation, eventHandler, scrollBounds, options: { loop } }, alpha) => {
+		const shouldSettle = scrollBody.settled();
+		const withinBounds = !scrollBounds.shouldConstrain();
+		const hasSettled = loop ? shouldSettle : shouldSettle && withinBounds;
+		const hasSettledAndIdle = hasSettled && !dragHandler.pointerDown();
+		if (hasSettledAndIdle) animation.stop();
+		const interpolatedLocation = location.get() * alpha + previousLocation.get() * (1 - alpha);
+		offsetLocation.set(interpolatedLocation);
+		if (loop) {
+			scrollLooper.loop(scrollBody.direction());
+			slideLooper.loop();
+		}
+		translate.to(offsetLocation.get());
+		if (hasSettledAndIdle) eventHandler.emit("settle");
+		if (!hasSettled) eventHandler.emit("scroll");
+	};
+	const animation = Animations(ownerDocument, ownerWindow, () => update(engine), (alpha) => render(engine, alpha));
+	const friction = .68;
+	const startLocation = scrollSnaps[index.get()];
+	const location = Vector1D(startLocation);
+	const previousLocation = Vector1D(startLocation);
+	const offsetLocation = Vector1D(startLocation);
+	const target = Vector1D(startLocation);
+	const scrollBody = ScrollBody(location, offsetLocation, previousLocation, target, duration, friction);
+	const scrollTarget = ScrollTarget(loop, scrollSnaps, contentSize, limit, target);
+	const scrollTo = ScrollTo(animation, index, indexPrevious, scrollBody, scrollTarget, target, eventHandler);
+	const scrollProgress = ScrollProgress(limit);
+	const eventStore = EventStore();
+	const slidesInView = SlidesInView(container, slides, eventHandler, inViewThreshold);
+	const { slideRegistry } = SlideRegistry(containSnaps, containScroll, scrollSnaps, scrollContainLimit, slidesToScroll, slideIndexes);
+	const slideFocus = SlideFocus(root, slides, slideRegistry, scrollTo, scrollBody, eventStore, eventHandler, watchFocus);
+	const engine = {
+		ownerDocument,
+		ownerWindow,
+		eventHandler,
+		containerRect,
+		slideRects,
+		animation,
+		axis,
+		dragHandler: DragHandler(axis, root, ownerDocument, ownerWindow, target, DragTracker(axis, ownerWindow), location, animation, scrollTo, scrollBody, scrollTarget, index, eventHandler, percentOfView, dragFree, dragThreshold, skipSnaps, friction, watchDrag),
+		eventStore,
+		percentOfView,
+		index,
+		indexPrevious,
+		limit,
+		location,
+		offsetLocation,
+		previousLocation,
+		options,
+		resizeHandler: ResizeHandler(container, eventHandler, ownerWindow, slides, axis, watchResize, nodeRects),
+		scrollBody,
+		scrollBounds: ScrollBounds(limit, offsetLocation, target, scrollBody, percentOfView),
+		scrollLooper: ScrollLooper(contentSize, limit, offsetLocation, [
+			location,
+			offsetLocation,
+			previousLocation,
+			target
+		]),
+		scrollProgress,
+		scrollSnapList: scrollSnaps.map(scrollProgress.get),
+		scrollSnaps,
+		scrollTarget,
+		scrollTo,
+		slideLooper: SlideLooper(axis, viewSize, contentSize, slideSizes, slideSizesWithGaps, snaps, scrollSnaps, offsetLocation, slides),
+		slideFocus,
+		slidesHandler: SlidesHandler(container, eventHandler, watchSlides),
+		slidesInView,
+		slideIndexes,
+		slideRegistry,
+		slidesToScroll,
+		target,
+		translate: Translate(axis, container)
+	};
+	return engine;
+}
+function EventHandler() {
+	let listeners = {};
+	let api;
+	function init(emblaApi) {
+		api = emblaApi;
+	}
+	function getListeners(evt) {
+		return listeners[evt] || [];
+	}
+	function emit(evt) {
+		getListeners(evt).forEach((e) => e(api, evt));
+		return self;
+	}
+	function on(evt, cb) {
+		listeners[evt] = getListeners(evt).concat([cb]);
+		return self;
+	}
+	function off(evt, cb) {
+		listeners[evt] = getListeners(evt).filter((e) => e !== cb);
+		return self;
+	}
+	function clear() {
+		listeners = {};
+	}
+	const self = {
+		init,
+		emit,
+		off,
+		on,
+		clear
+	};
+	return self;
+}
+var defaultOptions$1 = {
+	align: "center",
+	axis: "x",
+	container: null,
+	slides: null,
+	containScroll: "trimSnaps",
+	direction: "ltr",
+	slidesToScroll: 1,
+	inViewThreshold: 0,
+	breakpoints: {},
+	dragFree: false,
+	dragThreshold: 10,
+	loop: false,
+	skipSnaps: false,
+	duration: 25,
+	startIndex: 0,
+	active: true,
+	watchDrag: true,
+	watchResize: true,
+	watchSlides: true,
+	watchFocus: true
+};
+function OptionsHandler(ownerWindow) {
+	function mergeOptions(optionsA, optionsB) {
+		return objectsMergeDeep(optionsA, optionsB || {});
+	}
+	function optionsAtMedia(options) {
+		const optionsAtMedia = options.breakpoints || {};
+		return mergeOptions(options, objectKeys(optionsAtMedia).filter((media) => ownerWindow.matchMedia(media).matches).map((media) => optionsAtMedia[media]).reduce((a, mediaOption) => mergeOptions(a, mediaOption), {}));
+	}
+	function optionsMediaQueries(optionsList) {
+		return optionsList.map((options) => objectKeys(options.breakpoints || {})).reduce((acc, mediaQueries) => acc.concat(mediaQueries), []).map(ownerWindow.matchMedia);
+	}
+	return {
+		mergeOptions,
+		optionsAtMedia,
+		optionsMediaQueries
+	};
+}
+function PluginsHandler(optionsHandler) {
+	let activePlugins = [];
+	function init(emblaApi, plugins) {
+		activePlugins = plugins.filter(({ options }) => optionsHandler.optionsAtMedia(options).active !== false);
+		activePlugins.forEach((plugin) => plugin.init(emblaApi, optionsHandler));
+		return plugins.reduce((map, plugin) => Object.assign(map, { [plugin.name]: plugin }), {});
+	}
+	function destroy() {
+		activePlugins = activePlugins.filter((plugin) => plugin.destroy());
+	}
+	return {
+		init,
+		destroy
+	};
+}
+function EmblaCarousel(root, userOptions, userPlugins) {
+	const ownerDocument = root.ownerDocument;
+	const ownerWindow = ownerDocument.defaultView;
+	const optionsHandler = OptionsHandler(ownerWindow);
+	const pluginsHandler = PluginsHandler(optionsHandler);
+	const mediaHandlers = EventStore();
+	const eventHandler = EventHandler();
+	const { mergeOptions, optionsAtMedia, optionsMediaQueries } = optionsHandler;
+	const { on, off, emit } = eventHandler;
+	const reInit = reActivate;
+	let destroyed = false;
+	let engine;
+	let optionsBase = mergeOptions(defaultOptions$1, EmblaCarousel.globalOptions);
+	let options = mergeOptions(optionsBase);
+	let pluginList = [];
+	let pluginApis;
+	let container;
+	let slides;
+	function storeElements() {
+		const { container: userContainer, slides: userSlides } = options;
+		container = (isString(userContainer) ? root.querySelector(userContainer) : userContainer) || root.children[0];
+		const customSlides = isString(userSlides) ? container.querySelectorAll(userSlides) : userSlides;
+		slides = [].slice.call(customSlides || container.children);
+	}
+	function createEngine(options) {
+		const engine = Engine(root, container, slides, ownerDocument, ownerWindow, options, eventHandler);
+		if (options.loop && !engine.slideLooper.canLoop()) return createEngine(Object.assign({}, options, { loop: false }));
+		return engine;
+	}
+	function activate(withOptions, withPlugins) {
+		if (destroyed) return;
+		optionsBase = mergeOptions(optionsBase, withOptions);
+		options = optionsAtMedia(optionsBase);
+		pluginList = withPlugins || pluginList;
+		storeElements();
+		engine = createEngine(options);
+		optionsMediaQueries([optionsBase, ...pluginList.map(({ options }) => options)]).forEach((query) => mediaHandlers.add(query, "change", reActivate));
+		if (!options.active) return;
+		engine.translate.to(engine.location.get());
+		engine.animation.init();
+		engine.slidesInView.init();
+		engine.slideFocus.init(self);
+		engine.eventHandler.init(self);
+		engine.resizeHandler.init(self);
+		engine.slidesHandler.init(self);
+		if (engine.options.loop) engine.slideLooper.loop();
+		if (container.offsetParent && slides.length) engine.dragHandler.init(self);
+		pluginApis = pluginsHandler.init(self, pluginList);
+	}
+	function reActivate(withOptions, withPlugins) {
+		const startIndex = selectedScrollSnap();
+		deActivate();
+		activate(mergeOptions({ startIndex }, withOptions), withPlugins);
+		eventHandler.emit("reInit");
+	}
+	function deActivate() {
+		engine.dragHandler.destroy();
+		engine.eventStore.clear();
+		engine.translate.clear();
+		engine.slideLooper.clear();
+		engine.resizeHandler.destroy();
+		engine.slidesHandler.destroy();
+		engine.slidesInView.destroy();
+		engine.animation.destroy();
+		pluginsHandler.destroy();
+		mediaHandlers.clear();
+	}
+	function destroy() {
+		if (destroyed) return;
+		destroyed = true;
+		mediaHandlers.clear();
+		deActivate();
+		eventHandler.emit("destroy");
+		eventHandler.clear();
+	}
+	function scrollTo(index, jump, direction) {
+		if (!options.active || destroyed) return;
+		engine.scrollBody.useBaseFriction().useDuration(jump === true ? 0 : options.duration);
+		engine.scrollTo.index(index, direction || 0);
+	}
+	function scrollNext(jump) {
+		scrollTo(engine.index.add(1).get(), jump, -1);
+	}
+	function scrollPrev(jump) {
+		scrollTo(engine.index.add(-1).get(), jump, 1);
+	}
+	function canScrollNext() {
+		return engine.index.add(1).get() !== selectedScrollSnap();
+	}
+	function canScrollPrev() {
+		return engine.index.add(-1).get() !== selectedScrollSnap();
+	}
+	function scrollSnapList() {
+		return engine.scrollSnapList;
+	}
+	function scrollProgress() {
+		return engine.scrollProgress.get(engine.offsetLocation.get());
+	}
+	function selectedScrollSnap() {
+		return engine.index.get();
+	}
+	function previousScrollSnap() {
+		return engine.indexPrevious.get();
+	}
+	function slidesInView() {
+		return engine.slidesInView.get();
+	}
+	function slidesNotInView() {
+		return engine.slidesInView.get(false);
+	}
+	function plugins() {
+		return pluginApis;
+	}
+	function internalEngine() {
+		return engine;
+	}
+	function rootNode() {
+		return root;
+	}
+	function containerNode() {
+		return container;
+	}
+	function slideNodes() {
+		return slides;
+	}
+	const self = {
+		canScrollNext,
+		canScrollPrev,
+		containerNode,
+		internalEngine,
+		destroy,
+		off,
+		on,
+		emit,
+		plugins,
+		previousScrollSnap,
+		reInit,
+		rootNode,
+		scrollNext,
+		scrollPrev,
+		scrollProgress,
+		scrollSnapList,
+		scrollTo,
+		selectedScrollSnap,
+		slideNodes,
+		slidesInView,
+		slidesNotInView
+	};
+	activate(userOptions, userPlugins);
+	setTimeout(() => eventHandler.emit("init"), 0);
+	return self;
+}
+EmblaCarousel.globalOptions = void 0;
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/embla-carousel-react@8.6.0_react@19.2.4/node_modules/embla-carousel-react/esm/embla-carousel-react.esm.js
+function useEmblaCarousel(options = {}, plugins = []) {
+	const storedOptions = (0, import_react.useRef)(options);
+	const storedPlugins = (0, import_react.useRef)(plugins);
+	const [emblaApi, setEmblaApi] = (0, import_react.useState)();
+	const [viewport, setViewport] = (0, import_react.useState)();
+	const reInit = (0, import_react.useCallback)(() => {
+		if (emblaApi) emblaApi.reInit(storedOptions.current, storedPlugins.current);
+	}, [emblaApi]);
+	(0, import_react.useEffect)(() => {
+		if (areOptionsEqual(storedOptions.current, options)) return;
+		storedOptions.current = options;
+		reInit();
+	}, [options, reInit]);
+	(0, import_react.useEffect)(() => {
+		if (arePluginsEqual(storedPlugins.current, plugins)) return;
+		storedPlugins.current = plugins;
+		reInit();
+	}, [plugins, reInit]);
+	(0, import_react.useEffect)(() => {
+		if (canUseDOM$1() && viewport) {
+			EmblaCarousel.globalOptions = useEmblaCarousel.globalOptions;
+			const newEmblaApi = EmblaCarousel(viewport, storedOptions.current, storedPlugins.current);
+			setEmblaApi(newEmblaApi);
+			return () => newEmblaApi.destroy();
+		} else setEmblaApi(void 0);
+	}, [viewport, setEmblaApi]);
+	return [setViewport, emblaApi];
+}
+useEmblaCarousel.globalOptions = void 0;
+//#endregion
+//#region src/components/ui/carousel.tsx
+var CarouselContext = import_react.createContext(null);
+function useCarousel() {
+	const context = import_react.useContext(CarouselContext);
+	if (!context) throw new Error("useCarousel must be used within a <Carousel />");
+	return context;
+}
+var Carousel = import_react.forwardRef(({ orientation = "horizontal", opts, setApi, plugins, className, children, ...props }, ref) => {
+	const [carouselRef, api] = useEmblaCarousel({
+		...opts,
+		axis: orientation === "horizontal" ? "x" : "y"
+	}, plugins);
+	const [canScrollPrev, setCanScrollPrev] = import_react.useState(false);
+	const [canScrollNext, setCanScrollNext] = import_react.useState(false);
+	const onSelect = import_react.useCallback((api) => {
+		if (!api) return;
+		setCanScrollPrev(api.canScrollPrev());
+		setCanScrollNext(api.canScrollNext());
+	}, []);
+	const scrollPrev = import_react.useCallback(() => {
+		api?.scrollPrev();
+	}, [api]);
+	const scrollNext = import_react.useCallback(() => {
+		api?.scrollNext();
+	}, [api]);
+	const handleKeyDown = import_react.useCallback((event) => {
+		if (event.key === "ArrowLeft") {
+			event.preventDefault();
+			scrollPrev();
+		} else if (event.key === "ArrowRight") {
+			event.preventDefault();
+			scrollNext();
+		}
+	}, [scrollPrev, scrollNext]);
+	import_react.useEffect(() => {
+		if (!api || !setApi) return;
+		setApi(api);
+	}, [api, setApi]);
+	import_react.useEffect(() => {
+		if (!api) return;
+		onSelect(api);
+		api.on("reInit", onSelect);
+		api.on("select", onSelect);
+		return () => {
+			api?.off("select", onSelect);
+		};
+	}, [api, onSelect]);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CarouselContext.Provider, {
+		"data-uid": "src/components/ui/carousel.tsx:109:5",
+		"data-prohibitions": "[editContent]",
+		value: {
+			carouselRef,
+			api,
+			opts,
+			orientation: orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+			scrollPrev,
+			scrollNext,
+			canScrollPrev,
+			canScrollNext
+		},
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/ui/carousel.tsx:121:7",
+			"data-prohibitions": "[editContent]",
+			ref,
+			onKeyDownCapture: handleKeyDown,
+			className: cn("relative", className),
+			role: "region",
+			"aria-roledescription": "carousel",
+			...props,
+			children
+		})
+	});
+});
+Carousel.displayName = "Carousel";
+var CarouselContent = import_react.forwardRef(({ className, ...props }, ref) => {
+	const { carouselRef, orientation } = useCarousel();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		"data-uid": "src/components/ui/carousel.tsx:141:7",
+		"data-prohibitions": "[editContent]",
+		ref: carouselRef,
+		className: "overflow-hidden",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/ui/carousel.tsx:142:9",
+			"data-prohibitions": "[editContent]",
+			ref,
+			className: cn("flex", orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col", className),
+			...props
+		})
+	});
+});
+CarouselContent.displayName = "CarouselContent";
+var CarouselItem = import_react.forwardRef(({ className, ...props }, ref) => {
+	const { orientation } = useCarousel();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		"data-uid": "src/components/ui/carousel.tsx:162:7",
+		"data-prohibitions": "[editContent]",
+		ref,
+		role: "group",
+		"aria-roledescription": "slide",
+		className: cn("min-w-0 shrink-0 grow-0 basis-full", orientation === "horizontal" ? "pl-4" : "pt-4", className),
+		...props
+	});
+});
+CarouselItem.displayName = "CarouselItem";
+var CarouselPrevious = import_react.forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+	const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+		"data-uid": "src/components/ui/carousel.tsx:183:7",
+		"data-prohibitions": "[editContent]",
+		ref,
+		variant,
+		size,
+		className: cn("absolute  h-8 w-8 rounded-full", orientation === "horizontal" ? "-left-12 top-1/2 -translate-y-1/2" : "-top-12 left-1/2 -translate-x-1/2 rotate-90", className),
+		disabled: !canScrollPrev,
+		onClick: scrollPrev,
+		...props,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, {
+			"data-uid": "src/components/ui/carousel.tsx:198:9",
+			"data-prohibitions": "[editContent]",
+			className: "h-4 w-4"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			"data-uid": "src/components/ui/carousel.tsx:199:9",
+			"data-prohibitions": "[]",
+			className: "sr-only",
+			children: "Previous slide"
+		})]
+	});
+});
+CarouselPrevious.displayName = "CarouselPrevious";
+var CarouselNext = import_react.forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+	const { orientation, scrollNext, canScrollNext } = useCarousel();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+		"data-uid": "src/components/ui/carousel.tsx:211:7",
+		"data-prohibitions": "[editContent]",
+		ref,
+		variant,
+		size,
+		className: cn("absolute h-8 w-8 rounded-full", orientation === "horizontal" ? "-right-12 top-1/2 -translate-y-1/2" : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90", className),
+		disabled: !canScrollNext,
+		onClick: scrollNext,
+		...props,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+			"data-uid": "src/components/ui/carousel.tsx:226:9",
+			"data-prohibitions": "[editContent]",
+			className: "h-4 w-4"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			"data-uid": "src/components/ui/carousel.tsx:227:9",
+			"data-prohibitions": "[]",
+			className: "sr-only",
+			children: "Next slide"
+		})]
+	});
+});
+CarouselNext.displayName = "CarouselNext";
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/embla-carousel-autoplay@8.6.0_embla-carousel@8.6.0/node_modules/embla-carousel-autoplay/esm/embla-carousel-autoplay.esm.js
+var defaultOptions = {
+	active: true,
+	breakpoints: {},
+	delay: 4e3,
+	jump: false,
+	playOnInit: true,
+	stopOnFocusIn: true,
+	stopOnInteraction: true,
+	stopOnMouseEnter: false,
+	stopOnLastSnap: false,
+	rootNode: null
+};
+function normalizeDelay(emblaApi, delay) {
+	const scrollSnaps = emblaApi.scrollSnapList();
+	if (typeof delay === "number") return scrollSnaps.map(() => delay);
+	return delay(scrollSnaps, emblaApi);
+}
+function getAutoplayRootNode(emblaApi, rootNode) {
+	const emblaRootNode = emblaApi.rootNode();
+	return rootNode && rootNode(emblaRootNode) || emblaRootNode;
+}
+function Autoplay(userOptions = {}) {
+	let options;
+	let emblaApi;
+	let destroyed;
+	let delay;
+	let timerStartTime = null;
+	let timerId = 0;
+	let autoplayActive = false;
+	let mouseIsOver = false;
+	let playOnDocumentVisible = false;
+	let jump = false;
+	function init(emblaApiInstance, optionsHandler) {
+		emblaApi = emblaApiInstance;
+		const { mergeOptions, optionsAtMedia } = optionsHandler;
+		options = optionsAtMedia(mergeOptions(mergeOptions(defaultOptions, Autoplay.globalOptions), userOptions));
+		if (emblaApi.scrollSnapList().length <= 1) return;
+		jump = options.jump;
+		destroyed = false;
+		delay = normalizeDelay(emblaApi, options.delay);
+		const { eventStore, ownerDocument } = emblaApi.internalEngine();
+		const isDraggable = !!emblaApi.internalEngine().options.watchDrag;
+		const root = getAutoplayRootNode(emblaApi, options.rootNode);
+		eventStore.add(ownerDocument, "visibilitychange", visibilityChange);
+		if (isDraggable) emblaApi.on("pointerDown", pointerDown);
+		if (isDraggable && !options.stopOnInteraction) emblaApi.on("pointerUp", pointerUp);
+		if (options.stopOnMouseEnter) eventStore.add(root, "mouseenter", mouseEnter);
+		if (options.stopOnMouseEnter && !options.stopOnInteraction) eventStore.add(root, "mouseleave", mouseLeave);
+		if (options.stopOnFocusIn) emblaApi.on("slideFocusStart", stopAutoplay);
+		if (options.stopOnFocusIn && !options.stopOnInteraction) eventStore.add(emblaApi.containerNode(), "focusout", startAutoplay);
+		if (options.playOnInit) startAutoplay();
+	}
+	function destroy() {
+		emblaApi.off("pointerDown", pointerDown).off("pointerUp", pointerUp).off("slideFocusStart", stopAutoplay);
+		stopAutoplay();
+		destroyed = true;
+		autoplayActive = false;
+	}
+	function setTimer() {
+		const { ownerWindow } = emblaApi.internalEngine();
+		ownerWindow.clearTimeout(timerId);
+		timerId = ownerWindow.setTimeout(next, delay[emblaApi.selectedScrollSnap()]);
+		timerStartTime = (/* @__PURE__ */ new Date()).getTime();
+		emblaApi.emit("autoplay:timerset");
+	}
+	function clearTimer() {
+		const { ownerWindow } = emblaApi.internalEngine();
+		ownerWindow.clearTimeout(timerId);
+		timerId = 0;
+		timerStartTime = null;
+		emblaApi.emit("autoplay:timerstopped");
+	}
+	function startAutoplay() {
+		if (destroyed) return;
+		if (documentIsHidden()) {
+			playOnDocumentVisible = true;
+			return;
+		}
+		if (!autoplayActive) emblaApi.emit("autoplay:play");
+		setTimer();
+		autoplayActive = true;
+	}
+	function stopAutoplay() {
+		if (destroyed) return;
+		if (autoplayActive) emblaApi.emit("autoplay:stop");
+		clearTimer();
+		autoplayActive = false;
+	}
+	function visibilityChange() {
+		if (documentIsHidden()) {
+			playOnDocumentVisible = autoplayActive;
+			return stopAutoplay();
+		}
+		if (playOnDocumentVisible) startAutoplay();
+	}
+	function documentIsHidden() {
+		const { ownerDocument } = emblaApi.internalEngine();
+		return ownerDocument.visibilityState === "hidden";
+	}
+	function pointerDown() {
+		if (!mouseIsOver) stopAutoplay();
+	}
+	function pointerUp() {
+		if (!mouseIsOver) startAutoplay();
+	}
+	function mouseEnter() {
+		mouseIsOver = true;
+		stopAutoplay();
+	}
+	function mouseLeave() {
+		mouseIsOver = false;
+		startAutoplay();
+	}
+	function play(jumpOverride) {
+		if (typeof jumpOverride !== "undefined") jump = jumpOverride;
+		startAutoplay();
+	}
+	function stop() {
+		if (autoplayActive) stopAutoplay();
+	}
+	function reset() {
+		if (autoplayActive) startAutoplay();
+	}
+	function isPlaying() {
+		return autoplayActive;
+	}
+	function next() {
+		const { index } = emblaApi.internalEngine();
+		const nextIndex = index.clone().add(1).get();
+		const lastIndex = emblaApi.scrollSnapList().length - 1;
+		const kill = options.stopOnLastSnap && nextIndex === lastIndex;
+		if (emblaApi.canScrollNext()) emblaApi.scrollNext(jump);
+		else emblaApi.scrollTo(0, jump);
+		emblaApi.emit("autoplay:select");
+		if (kill) return stopAutoplay();
+		startAutoplay();
+	}
+	function timeUntilNext() {
+		if (!timerStartTime) return null;
+		return delay[emblaApi.selectedScrollSnap()] - ((/* @__PURE__ */ new Date()).getTime() - timerStartTime);
+	}
+	return {
+		name: "autoplay",
+		options: userOptions,
+		init,
+		destroy,
+		play,
+		stop,
+		reset,
+		isPlaying,
+		timeUntilNext
+	};
+}
+Autoplay.globalOptions = void 0;
+//#endregion
 //#region src/components/sections/SocialProof.tsx
 var testimonials = [
 	{
-		name: "Maria C. Santos",
-		role: "Aposentadoria Concedida",
-		text: "A clareza técnica e a dedicação do Dr. Lucas foram fundamentais para a concessão da minha aposentadoria. O processo foi conduzido de forma ética e muito transparente."
+		name: "Maria Silva",
+		location: "São Paulo, SP",
+		text: "Após ter meu BPC negado duas vezes pelo INSS, o Dr. Lucas conseguiu reverter a situação na justiça em tempo recorde. Muito atencioso e profissional."
 	},
 	{
-		name: "João R. Oliveira",
-		role: "BPC/LOAS",
-		text: "Depois de ter o benefício negado duas vezes pelo INSS, procurei o escritório. A organização da documentação e a orientação precisa fizeram toda a diferença para o meu filho."
+		name: "José Santos",
+		location: "Campinas, SP",
+		text: "Achei que nunca conseguiria me aposentar por causa de problemas na minha carteira de trabalho. O escritório fez todo o levantamento e deu certo."
 	},
 	{
-		name: "Antônio M. Silva",
-		role: "Aposentadoria por Tempo",
-		text: "Profissionalismo exemplar. Fizeram um planejamento previdenciário completo que me mostrou exatamente qual seria o melhor momento para dar entrada no meu pedido."
+		name: "Ana Oliveira",
+		location: "Rio de Janeiro, RJ",
+		text: "Estava desesperada quando meu auxílio-doença foi cortado. A equipe foi impecável e consegui a aposentadoria por invalidez."
+	},
+	{
+		name: "Carlos Mendes",
+		location: "Belo Horizonte, MG",
+		text: "Atendimento nota 10! Mesmo morando em outro estado, todo o processo foi transparente e sempre me mantiveram informado pelo WhatsApp."
 	}
 ];
 function SocialProof() {
+	const plugin = (0, import_react.useRef)(Autoplay({
+		delay: 4e3,
+		stopOnInteraction: true
+	}));
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/SocialProof.tsx:24:5",
+		"data-uid": "src/components/sections/SocialProof.tsx:40:5",
 		"data-prohibitions": "[editContent]",
-		className: "py-24 bg-secondary",
+		id: "depoimentos",
+		className: "py-24 bg-muted border-t border-border",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/SocialProof.tsx:25:7",
+			"data-uid": "src/components/sections/SocialProof.tsx:41:7",
 			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
+			className: "container px-4 md:px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/SocialProof.tsx:26:9",
-				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-20",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-					"data-uid": "src/components/sections/SocialProof.tsx:27:11",
-					"data-prohibitions": "[]",
-					className: "text-3xl md:text-5xl font-bold mb-6 font-serif",
-					children: ["O que dizem nossos ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/sections/SocialProof.tsx:28:32",
-						"data-prohibitions": "[]",
-						className: "text-gold italic",
-						children: "Clientes"
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/sections/SocialProof.tsx:30:11",
-					"data-prohibitions": "[]",
-					className: "text-foreground/70 text-lg font-light",
-					children: "O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de seus direitos."
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/SocialProof.tsx:36:9",
+				"data-uid": "src/components/sections/SocialProof.tsx:42:9",
 				"data-prohibitions": "[editContent]",
-				className: "grid grid-cols-1 md:grid-cols-3 gap-8",
-				children: testimonials.map((testimonial, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-					"data-uid": "src/components/sections/SocialProof.tsx:38:13",
-					"data-prohibitions": "[editContent]",
-					className: "bg-card border-border/50 relative mt-6 hover:border-gold/30 transition-colors",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/SocialProof.tsx:42:15",
+				className: "flex flex-col items-center text-center space-y-4 mb-16",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						"data-uid": "src/components/sections/SocialProof.tsx:43:11",
 						"data-prohibitions": "[]",
-						className: "absolute -top-6 left-8 bg-gold rounded-full p-3 shadow-gold",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Quote, {
-							"data-uid": "src/components/sections/SocialProof.tsx:43:17",
-							"data-prohibitions": "[editContent]",
-							className: "h-6 w-6 text-primary-foreground",
-							fill: "currentColor"
-						})
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-						"data-uid": "src/components/sections/SocialProof.tsx:45:15",
+						className: "text-sm font-bold tracking-widest text-primary uppercase",
+						children: "Credibilidade"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						"data-uid": "src/components/sections/SocialProof.tsx:46:11",
+						"data-prohibitions": "[]",
+						className: "text-3xl md:text-5xl font-bold tracking-tight text-foreground font-serif",
+						children: "Reconhecimento"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/components/sections/SocialProof.tsx:49:11",
 						"data-prohibitions": "[editContent]",
-						className: "pt-12 pb-8 px-8",
+						className: "flex items-center gap-1 justify-center mt-2",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/SocialProof.tsx:46:17",
+							1,
+							2,
+							3,
+							4,
+							5
+						].map((star) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, {
+							"data-uid": "src/components/sections/SocialProof.tsx:51:15",
+							"data-prohibitions": "[editContent]",
+							className: "h-5 w-5 fill-primary text-primary"
+						}, star))
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						"data-uid": "src/components/sections/SocialProof.tsx:54:11",
+						"data-prohibitions": "[]",
+						className: "text-lg text-muted-foreground max-w-2xl font-light",
+						children: "O sucesso das nossas ações reflete o compromisso com cada cliente. Leia o que dizem aqueles que confiaram em nosso trabalho."
+					})
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				"data-uid": "src/components/sections/SocialProof.tsx:60:9",
+				"data-prohibitions": "[editContent]",
+				className: "max-w-5xl mx-auto px-10",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Carousel, {
+					"data-uid": "src/components/sections/SocialProof.tsx:61:11",
+					"data-prohibitions": "[editContent]",
+					plugins: [plugin.current],
+					className: "w-full",
+					opts: {
+						align: "start",
+						loop: true
+					},
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CarouselContent, {
+							"data-uid": "src/components/sections/SocialProof.tsx:69:13",
+							"data-prohibitions": "[editContent]",
+							className: "-ml-4",
+							children: testimonials.map((testimonial, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CarouselItem, {
+								"data-uid": "src/components/sections/SocialProof.tsx:71:17",
 								"data-prohibitions": "[editContent]",
-								className: "flex mb-6",
-								children: [...Array(5)].map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, {
-									"data-uid": "src/components/sections/SocialProof.tsx:48:21",
+								className: "pl-4 md:basis-1/2 lg:basis-1/3",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/SocialProof.tsx:72:19",
 									"data-prohibitions": "[editContent]",
-									className: "h-4 w-4 text-gold fill-gold mr-1"
-								}, i))
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								"data-uid": "src/components/sections/SocialProof.tsx:51:17",
-								"data-prohibitions": "[editContent]",
-								className: "text-foreground/80 italic mb-8 leading-relaxed font-light",
-								children: [
-									"\"",
-									testimonial.text,
-									"\""
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/SocialProof.tsx:54:17",
-								"data-prohibitions": "[editContent]",
-								className: "pt-6 border-t border-border/50",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-									"data-uid": "src/components/sections/SocialProof.tsx:55:19",
-									"data-prohibitions": "[editContent]",
-									className: "font-bold text-white text-lg font-serif",
-									children: testimonial.name
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/SocialProof.tsx:56:19",
-									"data-prohibitions": "[editContent]",
-									className: "text-gold text-sm mt-1",
-									children: testimonial.role
-								})]
-							})
-						]
-					})]
-				}, index))
+									className: "p-1",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
+										"data-uid": "src/components/sections/SocialProof.tsx:73:21",
+										"data-prohibitions": "[editContent]",
+										className: "bg-background border-border shadow-none h-full",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
+											"data-uid": "src/components/sections/SocialProof.tsx:74:23",
+											"data-prohibitions": "[editContent]",
+											className: "p-6 flex flex-col justify-between h-full space-y-4",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												"data-uid": "src/components/sections/SocialProof.tsx:75:25",
+												"data-prohibitions": "[editContent]",
+												className: "space-y-4",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													"data-uid": "src/components/sections/SocialProof.tsx:76:27",
+													"data-prohibitions": "[editContent]",
+													className: "flex gap-1",
+													children: [
+														1,
+														2,
+														3,
+														4,
+														5
+													].map((star) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, {
+														"data-uid": "src/components/sections/SocialProof.tsx:78:31",
+														"data-prohibitions": "[editContent]",
+														className: "h-4 w-4 fill-primary text-primary"
+													}, star))
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+													"data-uid": "src/components/sections/SocialProof.tsx:81:27",
+													"data-prohibitions": "[editContent]",
+													className: "text-muted-foreground italic leading-relaxed",
+													children: [
+														"\"",
+														testimonial.text,
+														"\""
+													]
+												})]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												"data-uid": "src/components/sections/SocialProof.tsx:85:25",
+												"data-prohibitions": "[editContent]",
+												className: "pt-4 border-t border-border/50",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+													"data-uid": "src/components/sections/SocialProof.tsx:86:27",
+													"data-prohibitions": "[editContent]",
+													className: "font-semibold text-foreground",
+													children: testimonial.name
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+													"data-uid": "src/components/sections/SocialProof.tsx:87:27",
+													"data-prohibitions": "[editContent]",
+													className: "text-sm text-muted-foreground",
+													children: testimonial.location
+												})]
+											})]
+										})
+									})
+								})
+							}, index))
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CarouselPrevious, {
+							"data-uid": "src/components/sections/SocialProof.tsx:95:13",
+							"data-prohibitions": "[editContent]",
+							className: "hidden md:flex -left-12 border-primary/20 text-primary hover:bg-primary/10"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CarouselNext, {
+							"data-uid": "src/components/sections/SocialProof.tsx:96:13",
+							"data-prohibitions": "[editContent]",
+							className: "hidden md:flex -right-12 border-primary/20 text-primary hover:bg-primary/10"
+						})
+					]
+				})
 			})]
 		})
 	});
@@ -21054,8 +22194,7 @@ function useUncontrolledState({ defaultProp, onChange }) {
 function isFunction(value) {
 	return typeof value === "function";
 }
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-primitive@2.1.3_@types+react-dom@19.2.3_@types+react@19.2.14__@types+re_1181ea5061ec9212248424669240e4ec/node_modules/@radix-ui/react-primitive/dist/index.mjs
+require_react_dom();
 var Primitive = [
 	"a",
 	"button",
@@ -21091,9 +22230,6 @@ var Primitive = [
 		[node]: Node
 	};
 }, {});
-function dispatchDiscreteCustomEvent(target, event) {
-	if (target) import_react_dom.flushSync(() => target.dispatchEvent(event));
-}
 //#endregion
 //#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-presence@1.1.5_@types+react-dom@19.2.3_@types+react@19.2.14__@types+rea_c01c26c80b5ab5e3ecefbda6eca51ad1/node_modules/@radix-ui/react-presence/dist/index.mjs
 function useStateMachine(initialState, machine) {
@@ -21196,11 +22332,11 @@ function getElementRef(element) {
 //#endregion
 //#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-id@1.1.1_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-id/dist/index.mjs
 var useReactId = import_react[" useId ".trim().toString()] || (() => void 0);
-var count$1 = 0;
+var count = 0;
 function useId(deterministicId) {
 	const [id, setId] = import_react.useState(useReactId());
 	useLayoutEffect2(() => {
-		if (!deterministicId) setId((reactId) => reactId ?? String(count$1++));
+		if (!deterministicId) setId((reactId) => reactId ?? String(count++));
 	}, [deterministicId]);
 	return deterministicId || (id ? `radix-${id}` : "");
 }
@@ -21317,7 +22453,7 @@ var CollapsibleContentImpl = import_react.forwardRef((props, forwardedRef) => {
 function getState$1(open) {
 	return open ? "open" : "closed";
 }
-var Root$1 = Collapsible;
+var Root = Collapsible;
 var Trigger = CollapsibleTrigger;
 var Content = CollapsibleContent;
 //#endregion
@@ -21338,14 +22474,14 @@ var ACCORDION_KEYS = [
 	"ArrowLeft",
 	"ArrowRight"
 ];
-var [Collection$1, useCollection$1, createCollectionScope$1] = createCollection(ACCORDION_NAME);
-var [createAccordionContext, createAccordionScope] = createContextScope(ACCORDION_NAME, [createCollectionScope$1, createCollapsibleScope]);
+var [Collection, useCollection, createCollectionScope] = createCollection(ACCORDION_NAME);
+var [createAccordionContext, createAccordionScope] = createContextScope(ACCORDION_NAME, [createCollectionScope, createCollapsibleScope]);
 var useCollapsibleScope = createCollapsibleScope();
 var Accordion$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { type, ...accordionProps } = props;
 	const singleProps = accordionProps;
 	const multipleProps = accordionProps;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection$1.Provider, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection.Provider, {
 		scope: props.__scopeAccordion,
 		children: type === "multiple" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionImplMultiple, {
 			...multipleProps,
@@ -21411,7 +22547,7 @@ var [AccordionImplProvider, useAccordionContext] = createAccordionContext(ACCORD
 var AccordionImpl = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeAccordion, disabled, dir, orientation = "vertical", ...accordionProps } = props;
 	const composedRefs = useComposedRefs(import_react.useRef(null), forwardedRef);
-	const getItems = useCollection$1(__scopeAccordion);
+	const getItems = useCollection(__scopeAccordion);
 	const isDirectionLTR = useDirection(dir) === "ltr";
 	const handleKeyDown = composeEventHandlers(props.onKeyDown, (event) => {
 		if (!ACCORDION_KEYS.includes(event.key)) return;
@@ -21461,7 +22597,7 @@ var AccordionImpl = import_react.forwardRef((props, forwardedRef) => {
 		disabled,
 		direction: dir,
 		orientation,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection$1.Slot, {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection.Slot, {
 			scope: __scopeAccordion,
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
 				...accordionProps,
@@ -21487,7 +22623,7 @@ var AccordionItem$1 = import_react.forwardRef((props, forwardedRef) => {
 		open,
 		disabled,
 		triggerId,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$1, {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root, {
 			"data-orientation": accordionContext.orientation,
 			"data-state": getState(open),
 			...collapsibleScope,
@@ -21524,7 +22660,7 @@ var AccordionTrigger$1 = import_react.forwardRef((props, forwardedRef) => {
 	const itemContext = useAccordionItemContext(TRIGGER_NAME, __scopeAccordion);
 	const collapsibleContext = useAccordionCollapsibleContext(TRIGGER_NAME, __scopeAccordion);
 	const collapsibleScope = useCollapsibleScope(__scopeAccordion);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection$1.ItemSlot, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection.ItemSlot, {
 		scope: __scopeAccordion,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Trigger, {
 			"aria-disabled": itemContext.open && !collapsibleContext.collapsible || void 0,
@@ -21561,14 +22697,14 @@ AccordionContent$1.displayName = CONTENT_NAME;
 function getState(open) {
 	return open ? "open" : "closed";
 }
-var Root2$1 = Accordion$1;
+var Root2 = Accordion$1;
 var Item = AccordionItem$1;
 var Header = AccordionHeader;
 var Trigger2 = AccordionTrigger$1;
 var Content2 = AccordionContent$1;
 //#endregion
 //#region src/components/ui/accordion.tsx
-var Accordion = Root2$1;
+var Accordion = Root2;
 var AccordionItem = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Item, {
 	"data-uid": "src/components/ui/accordion.tsx:14:3",
 	"data-prohibitions": "[editContent]",
@@ -21610,201 +22746,86 @@ var AccordionContent = import_react.forwardRef(({ className, children, ...props 
 }));
 AccordionContent.displayName = Content2.displayName;
 //#endregion
-//#region src/components/sections/Blog.tsx
-var articles = [
-	{
-		title: "Como aumentar suas chances no pedido do INSS",
-		content: "O deferimento do seu benefício depende diretamente da qualidade da documentação apresentada e do correto preenchimento dos formulários. É fundamental manter o CNIS atualizado, reunir laudos médicos detalhados em caso de incapacidade, e contar com uma análise prévia para identificar possíveis inconsistências que possam levar à negativa do INSS."
-	},
-	{
-		title: "Aposentadoria por Idade — O que mudou após a Reforma",
-		content: "Com a Reforma da Previdência (EC 103/2019), a idade mínima para mulheres passou a ser de 62 anos, e para homens, manteve-se em 65 anos. O tempo mínimo de contribuição é de 15 anos para mulheres e 20 anos para homens que começaram a contribuir após a reforma. Existem regras de transição que devem ser cuidadosamente analisadas caso a caso."
-	},
-	{
-		title: "BPC/LOAS — Quem tem direito e como solicitar",
-		content: "O Benefício de Prestação Continuada (BPC) garante um salário mínimo mensal à pessoa com deficiência e ao idoso com 65 anos ou mais, que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família (renda per capita inferior a 1/4 do salário mínimo). Não é necessário ter contribuído para o INSS."
-	},
-	{
-		title: "Aposentadoria Especial — Informações úteis",
-		content: "Destinada aos trabalhadores expostos a agentes nocivos à saúde (físicos, químicos ou biológicos). Após a Reforma, passou a exigir idade mínima (55, 58 ou 60 anos, dependendo do grau de risco) além do tempo de exposição. O Perfil Profissiográfico Previdenciário (PPP) é o documento essencial para comprovar a exposição."
-	},
-	{
-		title: "BPC/LOAS para criança / adolescente com autismo",
-		content: "Crianças e adolescentes diagnosticados com Transtorno do Espectro Autista (TEA) podem ter direito ao BPC/LOAS, desde que preenchidos os requisitos socioeconômicos (renda familiar). É imprescindível apresentar laudos médicos atualizados, relatórios escolares e terapêuticos que demonstrem as barreiras enfrentadas e a limitação na participação social."
-	}
-];
-function Blog() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/Blog.tsx:39:5",
-		"data-prohibitions": "[editContent]",
-		id: "blog",
-		className: "py-24 bg-card border-y border-border/30",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/Blog.tsx:40:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Blog.tsx:41:9",
-				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/Blog.tsx:42:11",
-						"data-prohibitions": "[]",
-						className: "w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold/20",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
-							"data-uid": "src/components/sections/Blog.tsx:43:13",
-							"data-prohibitions": "[editContent]",
-							className: "h-8 w-8 text-gold",
-							strokeWidth: 1.5
-						})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						"data-uid": "src/components/sections/Blog.tsx:45:11",
-						"data-prohibitions": "[]",
-						className: "text-3xl md:text-5xl font-bold mb-6 font-serif",
-						children: ["Artigos Úteis & ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/Blog.tsx:46:29",
-							"data-prohibitions": "[]",
-							className: "text-gold italic",
-							children: "Blog"
-						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/Blog.tsx:48:11",
-						"data-prohibitions": "[]",
-						className: "text-foreground/70 text-lg font-light",
-						children: "Informações técnicas e atualizadas para ajudar você a entender melhor seus direitos previdenciários."
-					})
-				]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/Blog.tsx:54:9",
-				"data-prohibitions": "[editContent]",
-				className: "max-w-3xl mx-auto",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-					"data-uid": "src/components/sections/Blog.tsx:55:11",
-					"data-prohibitions": "[editContent]",
-					type: "single",
-					collapsible: true,
-					className: "w-full space-y-4",
-					children: articles.map((article, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-						"data-uid": "src/components/sections/Blog.tsx:57:15",
-						"data-prohibitions": "[editContent]",
-						value: `item-${index}`,
-						className: "bg-secondary border border-border/50 rounded-lg px-6 data-[state=open]:border-gold/50 data-[state=open]:shadow-sm transition-all",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-							"data-uid": "src/components/sections/Blog.tsx:62:17",
-							"data-prohibitions": "[editContent]",
-							className: "text-left text-lg font-medium hover:text-gold hover:no-underline py-5 font-serif",
-							children: article.title
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-							"data-uid": "src/components/sections/Blog.tsx:65:17",
-							"data-prohibitions": "[editContent]",
-							className: "text-foreground/70 leading-relaxed text-base pb-6 pt-2 font-light",
-							children: article.content
-						})]
-					}, index))
-				})
-			})]
-		})
-	});
-}
-//#endregion
 //#region src/components/sections/FAQ.tsx
-var faqs$1 = [
+var faqs = [
 	{
-		question: "Quais são os direitos básicos dos contribuintes do INSS?",
-		answer: "Os segurados do INSS têm direito a diversos benefícios, dependendo dos requisitos preenchidos, tais como: Aposentadorias (por idade, tempo de contribuição, especial, invalidez), Auxílio-Doença, Salário-Maternidade, Pensão por Morte e Auxílio-Reclusão. A manutenção da qualidade de segurado é essencial para a concessão da maioria destes benefícios."
+		question: "O que é o BPC/LOAS e quem tem direito?",
+		answer: "O BPC (Benefício de Prestação Continuada) é um benefício no valor de um salário mínimo mensal pago pelo INSS. Têm direito idosos com 65 anos ou mais e pessoas de qualquer idade com deficiência (física, mental, intelectual ou sensorial) de longo prazo, que comprovem não possuir meios de se sustentar ou ser sustentado pela família (baixa renda)."
 	},
 	{
-		question: "Como funciona a aposentadoria por idade atualmente?",
-		answer: "Atualmente, a regra geral exige 65 anos de idade para homens e 62 anos para mulheres, além de um tempo mínimo de contribuição de 15 anos para mulheres e 20 anos para homens (ou 15 anos para homens que já contribuíam antes da Reforma de 2019). É fundamental analisar as regras de transição aplicáveis a cada caso."
+		question: "Preciso ter contribuído para o INSS para receber o BPC?",
+		answer: "Não. Diferente da aposentadoria, o BPC é um benefício assistencial e não exige que a pessoa tenha contribuído para o INSS. O principal requisito é a comprovação da idade/deficiência e da condição de vulnerabilidade social (baixa renda)."
 	},
 	{
-		question: "Meu benefício foi negado pelo INSS. O que devo fazer?",
-		answer: "A negativa administrativa (indeferimento) não é o fim da linha. É possível interpor um Recurso Administrativo no próprio INSS ou ingressar com uma Ação Judicial Federal. A escolha da melhor via depende da análise técnica dos motivos da negativa e da documentação disponível."
+		question: "O INSS negou meu pedido. O que devo fazer?",
+		answer: "A negativa do INSS é muito comum, muitas vezes por erros de análise ou exigências descabidas. Se o seu pedido foi negado, o ideal é procurar um advogado especialista imediatamente para ingressar com uma ação judicial. Na justiça, a análise é feita de forma mais detalhada e justa."
 	},
 	{
-		question: "Quais são os requisitos exatos para o BPC/LOAS?",
-		answer: "O BPC exige a comprovação de dois requisitos principais: 1) Ser idoso (65 anos ou mais) ou pessoa com deficiência (de qualquer idade) que apresente impedimentos de longo prazo; 2) Comprovar estado de miserabilidade, objetivamente definido como renda familiar per capita igual ou inferior a 1/4 do salário mínimo."
+		question: "Vocês atendem clientes de outros estados?",
+		answer: "Sim! Hoje o processo judicial e administrativo previdenciário é 100% digital. Isso nos permite representar clientes em qualquer lugar do Brasil com a mesma eficiência e proximidade, mantendo contato constante através de WhatsApp e reuniões por vídeo."
 	},
 	{
-		question: "Qual é o papel do advogado no processo previdenciário?",
-		answer: "O advogado previdenciarista atua na organização documental, no cálculo do tempo de contribuição, na simulação de cenários de aposentadoria e na formulação correta dos pedidos. Sua atuação técnica visa evitar atrasos, prevenir negativas infundadas e garantir que o benefício seja concedido no melhor valor possível, respeitando o Código de Ética da OAB."
+		question: "Quanto custa para contratar o escritório?",
+		answer: "Trabalhamos na modalidade de risco. Isso significa que fazemos a análise inicial do seu caso gratuitamente. Se assumirmos a causa, nossos honorários só serão cobrados no final, apenas se ganharmos o processo. Você não precisa tirar dinheiro do bolso para iniciar a ação."
 	}
 ];
 function FAQ() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/FAQ.tsx:39:5",
+		"data-uid": "src/components/sections/FAQ.tsx:38:5",
 		"data-prohibitions": "[editContent]",
 		id: "faq",
-		className: "py-24 bg-background",
+		className: "py-24 bg-background border-t border-border",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/FAQ.tsx:40:7",
+			"data-uid": "src/components/sections/FAQ.tsx:39:7",
 			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
+			className: "container px-4 md:px-6 max-w-4xl mx-auto",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/FAQ.tsx:41:9",
+				"data-uid": "src/components/sections/FAQ.tsx:40:9",
 				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16",
+				className: "text-center space-y-4 mb-16",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/FAQ.tsx:42:11",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						"data-uid": "src/components/sections/FAQ.tsx:41:11",
 						"data-prohibitions": "[]",
-						className: "w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold/20",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, {
-							"data-uid": "src/components/sections/FAQ.tsx:43:13",
-							"data-prohibitions": "[editContent]",
-							className: "h-8 w-8 text-gold",
-							strokeWidth: 1.5
-						})
+						className: "text-sm font-bold tracking-widest text-primary uppercase",
+						children: "Dúvidas Frequentes"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						"data-uid": "src/components/sections/FAQ.tsx:45:11",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						"data-uid": "src/components/sections/FAQ.tsx:44:11",
 						"data-prohibitions": "[]",
-						className: "text-3xl md:text-5xl font-bold mb-6 font-serif",
-						children: ["Dúvidas ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/FAQ.tsx:46:21",
-							"data-prohibitions": "[]",
-							className: "text-gold italic",
-							children: "Frequentes"
-						})]
+						className: "text-3xl md:text-5xl font-bold tracking-tight text-foreground font-serif",
+						children: "Esclarecimentos Jurídicos"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/FAQ.tsx:48:11",
+						"data-uid": "src/components/sections/FAQ.tsx:47:11",
 						"data-prohibitions": "[]",
-						className: "text-foreground/70 text-lg font-light",
-						children: "Respostas claras e diretas para as questões mais comuns sobre direito previdenciário."
+						className: "text-lg text-muted-foreground font-light",
+						children: "Respostas diretas para as principais dúvidas sobre seus direitos previdenciários."
 					})
 				]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/FAQ.tsx:53:9",
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
+				"data-uid": "src/components/sections/FAQ.tsx:52:9",
 				"data-prohibitions": "[editContent]",
-				className: "max-w-3xl mx-auto",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-					"data-uid": "src/components/sections/FAQ.tsx:54:11",
+				type: "single",
+				collapsible: true,
+				className: "w-full space-y-4",
+				children: faqs.map((faq, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+					"data-uid": "src/components/sections/FAQ.tsx:54:13",
 					"data-prohibitions": "[editContent]",
-					type: "single",
-					collapsible: true,
-					className: "w-full space-y-4",
-					children: faqs$1.map((faq, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-						"data-uid": "src/components/sections/FAQ.tsx:56:15",
+					value: `item-${index}`,
+					className: "border-border bg-card px-6 rounded-lg",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+						"data-uid": "src/components/sections/FAQ.tsx:59:15",
 						"data-prohibitions": "[editContent]",
-						value: `faq-${index}`,
-						className: "bg-secondary border border-border/50 rounded-lg px-6 data-[state=open]:border-gold/50 data-[state=open]:shadow-sm transition-all",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-							"data-uid": "src/components/sections/FAQ.tsx:61:17",
-							"data-prohibitions": "[editContent]",
-							className: "text-left text-lg font-medium hover:text-gold hover:no-underline py-5 font-serif",
-							children: faq.question
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-							"data-uid": "src/components/sections/FAQ.tsx:64:17",
-							"data-prohibitions": "[editContent]",
-							className: "text-foreground/70 leading-relaxed text-base pb-6 pt-2 font-light",
-							children: faq.answer
-						})]
-					}, index))
-				})
+						className: "text-left text-lg font-medium text-foreground hover:text-primary hover:no-underline py-6",
+						children: faq.question
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
+						"data-uid": "src/components/sections/FAQ.tsx:62:15",
+						"data-prohibitions": "[editContent]",
+						className: "text-muted-foreground text-base leading-relaxed pb-6",
+						children: faq.answer
+					})]
+				}, index))
 			})]
 		})
 	});
@@ -21813,478 +22834,197 @@ function FAQ() {
 //#region src/components/sections/Location.tsx
 function Location() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/Location.tsx:6:5",
-		"data-prohibitions": "[]",
-		id: "contato",
-		className: "py-24 bg-secondary",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/Location.tsx:7:7",
-			"data-prohibitions": "[]",
-			className: "container mx-auto px-4 md:px-6",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Location.tsx:8:9",
-				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-					"data-uid": "src/components/sections/Location.tsx:9:11",
-					"data-prohibitions": "[]",
-					className: "text-3xl md:text-5xl font-bold mb-6 font-serif",
-					children: ["Localização & ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/sections/Location.tsx:10:27",
-						"data-prohibitions": "[]",
-						className: "text-gold italic",
-						children: "Contato"
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/sections/Location.tsx:12:11",
-					"data-prohibitions": "[]",
-					className: "text-foreground/70 text-lg font-light",
-					children: "Atendimento presencial em nossa sede em Rio Grande e em Pelotas mediante agendamento."
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Location.tsx:17:9",
-				"data-prohibitions": "[]",
-				className: "grid grid-cols-1 lg:grid-cols-2 gap-8 items-start",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
-					"data-uid": "src/components/sections/Location.tsx:18:11",
-					"data-prohibitions": "[]",
-					className: "bg-card border-border/50 overflow-hidden h-full shadow-sm",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardContent, {
-						"data-uid": "src/components/sections/Location.tsx:19:13",
-						"data-prohibitions": "[]",
-						className: "p-0 h-[400px] lg:h-full min-h-[400px]",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
-							"data-uid": "src/components/sections/Location.tsx:20:15",
-							"data-prohibitions": "[]",
-							title: "Mapa do Escritório",
-							src: "https://maps.google.com/maps?q=Av.%20Silva%20Paes,%20293,%20Rio%20Grande%20-%20RS&t=&z=16&ie=UTF8&iwloc=&output=embed",
-							width: "100%",
-							height: "100%",
-							style: { border: 0 },
-							allowFullScreen: true,
-							loading: "lazy",
-							referrerPolicy: "no-referrer-when-downgrade",
-							className: "w-full h-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-						})
-					})
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/Location.tsx:34:11",
-					"data-prohibitions": "[]",
-					className: "flex flex-col gap-6",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
-							"data-uid": "src/components/sections/Location.tsx:35:13",
-							"data-prohibitions": "[]",
-							className: "bg-card border-border/50 hover:border-gold/30 transition-colors shadow-sm",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-								"data-uid": "src/components/sections/Location.tsx:36:15",
-								"data-prohibitions": "[]",
-								className: "p-8 flex items-start gap-5",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Location.tsx:37:17",
-									"data-prohibitions": "[]",
-									className: "bg-gold/10 p-4 rounded-full border border-gold/20 shrink-0",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
-										"data-uid": "src/components/sections/Location.tsx:38:19",
-										"data-prohibitions": "[editContent]",
-										className: "h-6 w-6 text-gold",
-										strokeWidth: 1.5
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Location.tsx:40:17",
-									"data-prohibitions": "[]",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-											"data-uid": "src/components/sections/Location.tsx:41:19",
-											"data-prohibitions": "[]",
-											className: "text-xl font-bold text-white mb-3 font-serif",
-											children: "Endereço Principal"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-											"data-uid": "src/components/sections/Location.tsx:44:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/70 leading-relaxed font-light",
-											children: [
-												"Av. Silva Paes, 293",
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-													"data-uid": "src/components/sections/Location.tsx:46:21",
-													"data-prohibitions": "[editContent]"
-												}),
-												"Centro, Rio Grande - RS",
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-													"data-uid": "src/components/sections/Location.tsx:48:21",
-													"data-prohibitions": "[editContent]"
-												}),
-												"CEP: 96200-340"
-											]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											"data-uid": "src/components/sections/Location.tsx:51:19",
-											"data-prohibitions": "[]",
-											className: "mt-4 text-xs text-gold font-medium uppercase tracking-wider",
-											children: "*Atendimento em Pelotas sob agendamento prévio."
-										})
-									]
-								})]
-							})
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
-							"data-uid": "src/components/sections/Location.tsx:58:13",
-							"data-prohibitions": "[]",
-							className: "bg-card border-border/50 hover:border-gold/30 transition-colors shadow-sm",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-								"data-uid": "src/components/sections/Location.tsx:59:15",
-								"data-prohibitions": "[]",
-								className: "p-8 flex items-start gap-5",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Location.tsx:60:17",
-									"data-prohibitions": "[]",
-									className: "bg-gold/10 p-4 rounded-full border border-gold/20 shrink-0",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
-										"data-uid": "src/components/sections/Location.tsx:61:19",
-										"data-prohibitions": "[editContent]",
-										className: "h-6 w-6 text-gold",
-										strokeWidth: 1.5
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Location.tsx:63:17",
-									"data-prohibitions": "[]",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/sections/Location.tsx:64:19",
-										"data-prohibitions": "[]",
-										className: "text-xl font-bold text-white mb-3 font-serif",
-										children: "Contato"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Location.tsx:65:19",
-										"data-prohibitions": "[]",
-										className: "text-foreground/70 mb-1 font-light",
-										children: [
-											"WhatsApp:",
-											" ",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-												"data-uid": "src/components/sections/Location.tsx:67:21",
-												"data-prohibitions": "[]",
-												href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
-												target: "_blank",
-												rel: "noopener noreferrer",
-												className: "hover:text-gold transition-colors font-medium text-white",
-												children: "(53) 98106-3023"
-											})
-										]
-									})]
-								})]
-							})
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
-							"data-uid": "src/components/sections/Location.tsx:80:13",
-							"data-prohibitions": "[]",
-							className: "bg-card border-border/50 hover:border-gold/30 transition-colors shadow-sm",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-								"data-uid": "src/components/sections/Location.tsx:81:15",
-								"data-prohibitions": "[]",
-								className: "p-8 flex items-start gap-5",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Location.tsx:82:17",
-									"data-prohibitions": "[]",
-									className: "bg-gold/10 p-4 rounded-full border border-gold/20 shrink-0",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, {
-										"data-uid": "src/components/sections/Location.tsx:83:19",
-										"data-prohibitions": "[editContent]",
-										className: "h-6 w-6 text-gold",
-										strokeWidth: 1.5
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Location.tsx:85:17",
-									"data-prohibitions": "[]",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/sections/Location.tsx:86:19",
-										"data-prohibitions": "[]",
-										className: "text-xl font-bold text-white mb-3 font-serif",
-										children: "Horário de Atendimento"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Location.tsx:89:19",
-										"data-prohibitions": "[]",
-										className: "text-foreground/70 font-light",
-										children: [
-											"Segunda a Sexta-feira",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-												"data-uid": "src/components/sections/Location.tsx:91:21",
-												"data-prohibitions": "[editContent]"
-											}),
-											"09:00 às 12:00 e 13:30 às 18:00"
-										]
-									})]
-								})]
-							})
-						})
-					]
-				})]
-			})]
-		})
-	});
-}
-//#endregion
-//#region src/components/Footer.tsx
-function Footer() {
-	const currentYear = (/* @__PURE__ */ new Date()).getFullYear();
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
-		"data-uid": "src/components/Footer.tsx:7:5",
+		"data-uid": "src/components/sections/Location.tsx:5:5",
 		"data-prohibitions": "[editContent]",
-		className: "bg-[#050810] border-t border-border/30 pt-20 pb-10",
+		id: "contato",
+		className: "py-24 bg-muted border-t border-border",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Footer.tsx:8:7",
+			"data-uid": "src/components/sections/Location.tsx:6:7",
 			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
+			className: "container px-4 md:px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/Footer.tsx:9:9",
-				"data-prohibitions": "[editContent]",
-				className: "grid grid-cols-1 md:grid-cols-12 gap-12 mb-16",
+				"data-uid": "src/components/sections/Location.tsx:7:9",
+				"data-prohibitions": "[]",
+				className: "flex flex-col items-center text-center space-y-4 mb-16",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:10:11",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						"data-uid": "src/components/sections/Location.tsx:8:11",
 						"data-prohibitions": "[]",
-						className: "md:col-span-5",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/Footer.tsx:11:13",
-								"data-prohibitions": "[]",
-								className: "flex items-center gap-3 mb-6",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/Footer.tsx:12:15",
-									"data-prohibitions": "[]",
-									className: "flex items-center justify-center w-10 h-10 rounded bg-gold/10 border border-gold/30 text-gold",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
-										"data-uid": "src/components/Footer.tsx:13:17",
-										"data-prohibitions": "[editContent]",
-										size: 20,
-										strokeWidth: 1.5
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/Footer.tsx:15:15",
-									"data-prohibitions": "[]",
-									className: "flex flex-col",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/Footer.tsx:16:17",
-										"data-prohibitions": "[]",
-										className: "font-serif text-xl font-bold leading-none tracking-wide text-white",
-										children: "LUCAS MORRONE"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/Footer.tsx:19:17",
-										"data-prohibitions": "[]",
-										className: "text-[10px] font-sans tracking-[0.25em] text-gold uppercase mt-1",
-										children: "Advocacia"
-									})]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/Footer.tsx:24:13",
-								"data-prohibitions": "[]",
-								className: "text-gold font-medium mb-6 text-sm uppercase tracking-widest",
-								children: "OAB/RS 107485"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/Footer.tsx:27:13",
-								"data-prohibitions": "[]",
-								className: "text-foreground/60 text-sm leading-relaxed max-w-sm font-light",
-								children: "Atuação técnica e ética na defesa dos direitos previdenciários. Foco em soluções administrativas e judiciais para garantir segurança aos nossos clientes."
-							})
-						]
+						className: "text-sm font-bold tracking-widest text-primary uppercase",
+						children: "Contato"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:33:11",
-						"data-prohibitions": "[editContent]",
-						className: "md:col-span-3",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-							"data-uid": "src/components/Footer.tsx:34:13",
-							"data-prohibitions": "[]",
-							className: "text-lg font-serif font-bold text-white mb-6",
-							children: "Navegação"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-							"data-uid": "src/components/Footer.tsx:35:13",
-							"data-prohibitions": "[editContent]",
-							className: "space-y-4",
-							children: [
-								"Início",
-								"Serviços",
-								"Quem Sou",
-								"Blog",
-								"Contato"
-							].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-								"data-uid": "src/components/Footer.tsx:37:17",
-								"data-prohibitions": "[editContent]",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									"data-uid": "src/components/Footer.tsx:38:19",
-									"data-prohibitions": "[editContent]",
-									href: `#${item.toLowerCase().replace(" ", "-")}`,
-									className: "text-foreground/60 hover:text-gold text-sm transition-colors font-light",
-									children: item
-								})
-							}, item))
-						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:49:11",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						"data-uid": "src/components/sections/Location.tsx:9:11",
 						"data-prohibitions": "[]",
-						className: "md:col-span-4",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-							"data-uid": "src/components/Footer.tsx:50:13",
-							"data-prohibitions": "[]",
-							className: "text-lg font-serif font-bold text-white mb-6",
-							children: "Contato"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-							"data-uid": "src/components/Footer.tsx:51:13",
-							"data-prohibitions": "[]",
-							className: "space-y-5",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:52:15",
-								"data-prohibitions": "[]",
-								className: "flex items-start",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
-									"data-uid": "src/components/Footer.tsx:53:17",
-									"data-prohibitions": "[editContent]",
-									className: "h-5 w-5 text-gold mr-4 shrink-0 mt-0.5",
-									strokeWidth: 1.5
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-									"data-uid": "src/components/Footer.tsx:54:17",
-									"data-prohibitions": "[]",
-									className: "text-foreground/60 text-sm font-light leading-relaxed",
-									children: [
-										"Av. Silva Paes, 293",
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-											"data-uid": "src/components/Footer.tsx:56:19",
-											"data-prohibitions": "[editContent]"
-										}),
-										"Rio Grande, RS"
-									]
-								})]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:60:15",
-								"data-prohibitions": "[]",
-								className: "flex items-center",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
-									"data-uid": "src/components/Footer.tsx:61:17",
-									"data-prohibitions": "[editContent]",
-									className: "h-5 w-5 text-gold mr-4 shrink-0",
-									strokeWidth: 1.5
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									"data-uid": "src/components/Footer.tsx:62:17",
-									"data-prohibitions": "[]",
-									href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
-									target: "_blank",
-									rel: "noopener noreferrer",
-									className: "text-foreground/60 hover:text-gold text-sm transition-colors font-light",
-									children: "(53) 98106-3023"
-								})]
-							})]
-						})]
+						className: "text-3xl md:text-5xl font-bold tracking-tight text-foreground font-serif",
+						children: "Atendimento Nacional"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						"data-uid": "src/components/sections/Location.tsx:12:11",
+						"data-prohibitions": "[]",
+						className: "text-lg text-muted-foreground max-w-2xl font-light",
+						children: "Nossa estrutura 100% digital permite excelência jurídica em todo o Brasil. Estamos prontos para atender você com máxima agilidade."
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/Footer.tsx:75:9",
+				"data-uid": "src/components/sections/Location.tsx:18:9",
 				"data-prohibitions": "[editContent]",
-				className: "pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-6",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					"data-uid": "src/components/Footer.tsx:76:11",
-					"data-prohibitions": "[editContent]",
-					className: "text-foreground/40 text-xs text-center md:text-left font-light tracking-wide",
+				className: "grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/Location.tsx:19:11",
+					"data-prohibitions": "[]",
+					className: "space-y-8",
 					children: [
-						"© ",
-						currentYear,
-						" Lucas Morrone Advocacia. Todos os direitos reservados."
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/Location.tsx:20:13",
+							"data-prohibitions": "[]",
+							className: "flex items-start gap-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Location.tsx:21:15",
+								"data-prohibitions": "[]",
+								className: "p-3 bg-primary/10 rounded-lg shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
+									"data-uid": "src/components/sections/Location.tsx:22:17",
+									"data-prohibitions": "[editContent]",
+									className: "h-6 w-6 text-primary"
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Location.tsx:24:15",
+								"data-prohibitions": "[]",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+										"data-uid": "src/components/sections/Location.tsx:25:17",
+										"data-prohibitions": "[]",
+										className: "font-semibold text-lg text-foreground mb-1",
+										children: "Endereço Sede"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/components/sections/Location.tsx:26:17",
+										"data-prohibitions": "[]",
+										className: "text-muted-foreground",
+										children: "Av. Paulista, 1000 - Bela Vista"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/components/sections/Location.tsx:27:17",
+										"data-prohibitions": "[]",
+										className: "text-muted-foreground",
+										children: "São Paulo - SP, 01310-100"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/components/sections/Location.tsx:28:17",
+										"data-prohibitions": "[]",
+										className: "text-sm text-primary mt-2 italic",
+										children: "*Atendimento presencial sob agendamento"
+									})
+								]
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/Location.tsx:34:13",
+							"data-prohibitions": "[]",
+							className: "flex items-start gap-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Location.tsx:35:15",
+								"data-prohibitions": "[]",
+								className: "p-3 bg-primary/10 rounded-lg shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
+									"data-uid": "src/components/sections/Location.tsx:36:17",
+									"data-prohibitions": "[editContent]",
+									className: "h-6 w-6 text-primary"
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Location.tsx:38:15",
+								"data-prohibitions": "[]",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									"data-uid": "src/components/sections/Location.tsx:39:17",
+									"data-prohibitions": "[]",
+									className: "font-semibold text-lg text-foreground mb-1",
+									children: "Telefone / WhatsApp"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Location.tsx:40:17",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground",
+									children: "(11) 99999-9999"
+								})]
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/Location.tsx:44:13",
+							"data-prohibitions": "[]",
+							className: "flex items-start gap-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Location.tsx:45:15",
+								"data-prohibitions": "[]",
+								className: "p-3 bg-primary/10 rounded-lg shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, {
+									"data-uid": "src/components/sections/Location.tsx:46:17",
+									"data-prohibitions": "[editContent]",
+									className: "h-6 w-6 text-primary"
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Location.tsx:48:15",
+								"data-prohibitions": "[]",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									"data-uid": "src/components/sections/Location.tsx:49:17",
+									"data-prohibitions": "[]",
+									className: "font-semibold text-lg text-foreground mb-1",
+									children: "E-mail"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Location.tsx:50:17",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground",
+									children: "contato@lucasmorrone.adv.br"
+								})]
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/Location.tsx:54:13",
+							"data-prohibitions": "[]",
+							className: "flex items-start gap-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Location.tsx:55:15",
+								"data-prohibitions": "[]",
+								className: "p-3 bg-primary/10 rounded-lg shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, {
+									"data-uid": "src/components/sections/Location.tsx:56:17",
+									"data-prohibitions": "[editContent]",
+									className: "h-6 w-6 text-primary"
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Location.tsx:58:15",
+								"data-prohibitions": "[]",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									"data-uid": "src/components/sections/Location.tsx:59:17",
+									"data-prohibitions": "[]",
+									className: "font-semibold text-lg text-foreground mb-1",
+									children: "Horário de Atendimento"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Location.tsx:62:17",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground",
+									children: "Segunda a Sexta: 09h às 18h"
+								})]
+							})]
+						})
 					]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/Footer.tsx:79:11",
-					"data-prohibitions": "[]",
-					className: "text-foreground/40 text-xs text-center md:text-right max-w-2xl font-light leading-relaxed",
-					children: "As informações contidas neste site possuem caráter estritamente informativo, não configurando promessa de resultados. O exercício da advocacia submete-se ao Código de Ética e Disciplina da OAB."
-				})]
-			})]
-		})
-	});
-}
-//#endregion
-//#region src/components/FloatingWhatsApp.tsx
-function FloatingWhatsApp() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-		"data-uid": "src/components/FloatingWhatsApp.tsx:5:5",
-		"data-prohibitions": "[]",
-		href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
-		target: "_blank",
-		rel: "noopener noreferrer",
-		className: "fixed bottom-6 right-6 z-50 group",
-		"aria-label": "Contato via WhatsApp",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/FloatingWhatsApp.tsx:12:7",
-			"data-prohibitions": "[]",
-			className: "relative",
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/FloatingWhatsApp.tsx:13:9",
-					"data-prohibitions": "[]",
-					className: "absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-75"
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/FloatingWhatsApp.tsx:15:9",
-					"data-prohibitions": "[]",
-					className: "relative bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-xl transition-transform duration-300 transform group-hover:scale-110 flex items-center justify-center",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageCircle, {
-						"data-uid": "src/components/FloatingWhatsApp.tsx:16:11",
-						"data-prohibitions": "[editContent]",
-						className: "h-7 w-7"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Location.tsx:67:11",
+					"data-prohibitions": "[editContent]",
+					className: "h-[400px] w-full rounded-xl overflow-hidden border border-border bg-card",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
+						"data-uid": "src/components/sections/Location.tsx:69:13",
+						"data-prohibitions": "[]",
+						src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1973617195796!2d-46.65487738502213!3d-23.561348884682496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1650000000000!5m2!1spt-BR!2sbr",
+						width: "100%",
+						height: "100%",
+						style: {
+							border: 0,
+							filter: "grayscale(1) invert(0.9) hue-rotate(180deg) opacity(0.8)"
+						},
+						allowFullScreen: true,
+						loading: "lazy",
+						referrerPolicy: "no-referrer-when-downgrade"
 					})
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/FloatingWhatsApp.tsx:19:9",
-					"data-prohibitions": "[]",
-					className: "absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#111111] shadow-sm",
-					children: "2"
-				})
-			]
-		})
-	});
-}
-//#endregion
-//#region src/components/CookieBanner.tsx
-function CookieBanner() {
-	const [isVisible, setIsVisible] = (0, import_react.useState)(false);
-	(0, import_react.useEffect)(() => {
-		if (!localStorage.getItem("cookie-consent")) setIsVisible(true);
-	}, []);
-	const handleAccept = () => {
-		localStorage.setItem("cookie-consent", "true");
-		setIsVisible(false);
-	};
-	if (!isVisible) return null;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		"data-uid": "src/components/CookieBanner.tsx:22:5",
-		"data-prohibitions": "[]",
-		className: "fixed bottom-0 left-0 right-0 bg-card border-t border-border/50 p-4 z-50 shadow-2xl animate-in slide-in-from-bottom duration-500",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/CookieBanner.tsx:23:7",
-			"data-prohibitions": "[]",
-			className: "container mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-5",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				"data-uid": "src/components/CookieBanner.tsx:24:9",
-				"data-prohibitions": "[]",
-				className: "text-sm text-foreground/70 text-center sm:text-left font-light",
-				children: "Utilizamos cookies para melhorar sua experiência em nosso site. Ao continuar navegando, você concorda com a nossa política de privacidade e uso de cookies."
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/CookieBanner.tsx:28:9",
-				"data-prohibitions": "[]",
-				className: "flex gap-3 shrink-0",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-					"data-uid": "src/components/CookieBanner.tsx:29:11",
-					"data-prohibitions": "[]",
-					variant: "outline",
-					className: "border-border text-foreground hover:bg-secondary hover:text-white",
-					onClick: () => setIsVisible(false),
-					children: "Recusar"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-					"data-uid": "src/components/CookieBanner.tsx:36:11",
-					"data-prohibitions": "[]",
-					className: "bg-gold text-primary-foreground hover:bg-gold/90 font-medium",
-					onClick: handleAccept,
-					children: "Aceitar Cookies"
 				})]
 			})]
 		})
@@ -22294,2655 +23034,277 @@ function CookieBanner() {
 //#region src/pages/Index.tsx
 function Index() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		"data-uid": "src/pages/Index.tsx:16:5",
+		"data-uid": "src/pages/Index.tsx:10:5",
 		"data-prohibitions": "[]",
-		className: "min-h-screen bg-background text-foreground flex flex-col",
+		className: "w-full bg-background",
 		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header$1, {
-				"data-uid": "src/pages/Index.tsx:17:7",
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Hero, {
+				"data-uid": "src/pages/Index.tsx:11:7",
 				"data-prohibitions": "[editContent]"
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
-				"data-uid": "src/pages/Index.tsx:19:7",
-				"data-prohibitions": "[]",
-				className: "flex-grow",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Hero, {
-						"data-uid": "src/pages/Index.tsx:20:9",
-						"data-prohibitions": "[editContent]"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Services, {
-						"data-uid": "src/pages/Index.tsx:21:9",
-						"data-prohibitions": "[editContent]"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ebook, {
-						"data-uid": "src/pages/Index.tsx:22:9",
-						"data-prohibitions": "[editContent]"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Biography, {
-						"data-uid": "src/pages/Index.tsx:23:9",
-						"data-prohibitions": "[editContent]"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SocialProof, {
-						"data-uid": "src/pages/Index.tsx:24:9",
-						"data-prohibitions": "[editContent]"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Blog, {
-						"data-uid": "src/pages/Index.tsx:25:9",
-						"data-prohibitions": "[editContent]"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FAQ, {
-						"data-uid": "src/pages/Index.tsx:26:9",
-						"data-prohibitions": "[editContent]"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Location, {
-						"data-uid": "src/pages/Index.tsx:27:9",
-						"data-prohibitions": "[editContent]"
-					})
-				]
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {
-				"data-uid": "src/pages/Index.tsx:30:7",
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Services, {
+				"data-uid": "src/pages/Index.tsx:12:7",
 				"data-prohibitions": "[editContent]"
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FloatingWhatsApp, {
-				"data-uid": "src/pages/Index.tsx:31:7",
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Biography, {
+				"data-uid": "src/pages/Index.tsx:13:7",
 				"data-prohibitions": "[editContent]"
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CookieBanner, {
-				"data-uid": "src/pages/Index.tsx:32:7",
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SocialProof, {
+				"data-uid": "src/pages/Index.tsx:14:7",
+				"data-prohibitions": "[editContent]"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FAQ, {
+				"data-uid": "src/pages/Index.tsx:15:7",
+				"data-prohibitions": "[editContent]"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Location, {
+				"data-uid": "src/pages/Index.tsx:16:7",
 				"data-prohibitions": "[editContent]"
 			})
 		]
-	});
-}
-//#endregion
-//#region src/components/bpc-guide/BpcHero.tsx
-function BpcHero() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		"data-uid": "src/components/bpc-guide/BpcHero.tsx:6:5",
-		"data-prohibitions": "[]",
-		className: "relative py-20 md:py-32 overflow-hidden bg-[#111111] border-b border-border/50",
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/bpc-guide/BpcHero.tsx:7:7",
-			"data-prohibitions": "[]",
-			className: "absolute inset-0 z-0",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/bpc-guide/BpcHero.tsx:8:9",
-				"data-prohibitions": "[editContent]",
-				className: "absolute inset-0 bg-gradient-to-br from-[#111111] via-[#111111]/95 to-[#1a1a1a] z-10"
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-				"data-uid": "src/components/bpc-guide/BpcHero.tsx:9:9",
-				"data-prohibitions": "[editContent]",
-				src: "https://img.usecurling.com/p/1920/1080?q=legal%20documents%20desk&color=black",
-				alt: "Guia BPC LOAS",
-				className: "w-full h-full object-cover opacity-20 mix-blend-luminosity"
-			})]
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/bpc-guide/BpcHero.tsx:15:7",
-			"data-prohibitions": "[]",
-			className: "container mx-auto px-4 md:px-6 relative z-20 max-w-5xl",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcHero.tsx:16:9",
-				"data-prohibitions": "[]",
-				className: "max-w-4xl mx-auto text-center flex flex-col items-center",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:17:11",
-						"data-prohibitions": "[]",
-						className: "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-bold mb-8 shadow-[0_0_15px_rgba(212,175,55,0.15)]",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileCheck, {
-							"data-uid": "src/components/bpc-guide/BpcHero.tsx:18:13",
-							"data-prohibitions": "[editContent]",
-							className: "w-4 h-4"
-						}), " Atualizado para 2026"]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:21:11",
-						"data-prohibitions": "[]",
-						className: "w-20 h-20 bg-[#1A1A1A] rounded-2xl flex items-center justify-center mb-8 border border-gold/40 shadow-[0_0_40px_rgba(212,175,55,0.2)] transform rotate-3",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
-							"data-uid": "src/components/bpc-guide/BpcHero.tsx:22:13",
-							"data-prohibitions": "[editContent]",
-							className: "w-10 h-10 text-gold -rotate-3"
-						})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:25:11",
-						"data-prohibitions": "[]",
-						className: "text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 leading-tight",
-						children: [
-							"Guia Completo: ",
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:26:28",
-								"data-prohibitions": "[editContent]",
-								className: "hidden md:block"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:27:13",
-								"data-prohibitions": "[]",
-								className: "text-gold",
-								children: "BPC / LOAS"
-							})
-						]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:30:11",
-						"data-prohibitions": "[]",
-						className: "text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl font-medium leading-relaxed",
-						children: "Visão Geral e regras definitivas sobre o Benefício de Prestação Continuada."
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:34:11",
-						"data-prohibitions": "[]",
-						className: "bg-gradient-to-br from-[#1A1A1A] to-[#111111] border border-gold/40 rounded-2xl p-8 sm:p-10 mb-12 shadow-[0_0_50px_rgba(212,175,55,0.15)] max-w-2xl w-full backdrop-blur-md transform hover:scale-[1.02] transition-transform duration-500 break-inside-avoid relative overflow-hidden",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:35:13",
-								"data-prohibitions": "[]",
-								className: "absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-bl-full -z-10"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:36:13",
-								"data-prohibitions": "[]",
-								className: "text-gold font-bold text-sm uppercase tracking-widest mb-3 flex items-center justify-center gap-2",
-								children: "Valor Oficial"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:39:13",
-								"data-prohibitions": "[]",
-								className: "text-3xl sm:text-4xl font-black text-white leading-tight",
-								children: [
-									"No ano de 2026, o valor do BPC corresponde a",
-									" ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/bpc-guide/BpcHero.tsx:41:15",
-										"data-prohibitions": "[]",
-										className: "text-gold block mt-2 border-b-2 border-gold/30 pb-2 inline-block",
-										children: "R$ 1.621,00"
-									})
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:45:13",
-								"data-prohibitions": "[]",
-								className: "text-foreground/70 mt-4 text-sm font-medium",
-								children: "Equivalente a 1 (um) salário mínimo vigente. Benefício assistencial não contributivo."
-							})
-						]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/bpc-guide/BpcHero.tsx:50:11",
-						"data-prohibitions": "[]",
-						className: "flex flex-col sm:flex-row gap-5 w-full justify-center items-center",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/bpc-guide/BpcHero.tsx:51:13",
-							"data-prohibitions": "[]",
-							size: "lg",
-							className: "bg-gold text-[#111111] hover:bg-gold/90 text-lg h-16 px-8 font-bold shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all duration-300 w-full sm:w-auto rounded-xl",
-							asChild: true,
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:56:15",
-								"data-prohibitions": "[]",
-								href: "https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20ajuda%20para%20solicitar%20o%20BPC/LOAS.",
-								target: "_blank",
-								rel: "noopener noreferrer",
-								children: ["Falar com Especialista ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-									"data-uid": "src/components/bpc-guide/BpcHero.tsx:61:40",
-									"data-prohibitions": "[editContent]",
-									className: "ml-2 h-5 w-5"
-								})]
-							})
-						})
-					})
-				]
-			})
-		})]
-	});
-}
-//#endregion
-//#region src/components/bpc-guide/BpcCharacteristics.tsx
-var characteristics = [
-	{
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ban, {
-			"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:6:11",
-			"data-prohibitions": "[editContent]",
-			className: "w-10 h-10 text-gold mb-2"
-		}),
-		title: "Não é Aposentadoria",
-		desc: "O BPC é um benefício assistencial. Isso significa que não exige que você tenha contribuído para o INSS ao longo da vida para ter direito."
-	},
-	{
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleX, {
-			"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:11:11",
-			"data-prohibitions": "[editContent]",
-			className: "w-10 h-10 text-gold mb-2"
-		}),
-		title: "Sem 13º Salário",
-		desc: "Diferente das aposentadorias tradicionais, por ser um benefício de natureza assistencial (LOAS), não há o pagamento de gratificação natalina (13º)."
-	},
-	{
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
-			"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:16:11",
-			"data-prohibitions": "[editContent]",
-			className: "w-10 h-10 text-gold mb-2"
-		}),
-		title: "Sem Pensão por Morte",
-		desc: "O benefício é intransferível. Em caso de falecimento do titular, o pagamento é encerrado e não gera direito a pensão por morte aos dependentes."
-	}
-];
-function BpcCharacteristics() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:24:5",
-		"data-prohibitions": "[editContent]",
-		className: "py-24 bg-[#151515]",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:25:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6 max-w-6xl",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:26:9",
-				"data-prohibitions": "[editContent]",
-				className: "flex flex-col lg:flex-row gap-16 items-center",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:27:11",
-					"data-prohibitions": "[]",
-					className: "lg:w-1/2 break-inside-avoid",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-							"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:28:13",
-							"data-prohibitions": "[]",
-							className: "text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight",
-							children: [
-								"Características ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:29:31",
-									"data-prohibitions": "[]",
-									className: "text-gold",
-									children: "Centrais"
-								}),
-								" do Benefício"
-							]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:31:13",
-							"data-prohibitions": "[]",
-							className: "text-foreground/70 text-lg mb-8 leading-relaxed",
-							children: "Muitas pessoas confundem o BPC/LOAS com uma aposentadoria comum. Entender essas três características fundamentais é o primeiro passo para conhecer e garantir os seus direitos reais de forma correta."
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:36:13",
-							"data-prohibitions": "[]",
-							className: "relative rounded-2xl overflow-hidden border border-gold/20 shadow-2xl group",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:37:15",
-								"data-prohibitions": "[editContent]",
-								src: "https://img.usecurling.com/p/800/600?q=legal%20balance%20scale&color=black",
-								alt: "Balança da Justiça",
-								className: "w-full h-[400px] object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:42:15",
-								"data-prohibitions": "[]",
-								className: "absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent opacity-90"
-							})]
-						})
-					]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:46:11",
-					"data-prohibitions": "[editContent]",
-					className: "lg:w-1/2 flex flex-col gap-6 w-full",
-					children: characteristics.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
-						"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:48:15",
-						"data-prohibitions": "[editContent]",
-						className: "bg-[#1A1A1A] border-border hover:border-gold/40 transition-all duration-300 break-inside-avoid shadow-lg transform hover:-translate-y-1",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-							"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:52:17",
-							"data-prohibitions": "[editContent]",
-							className: "p-6 md:p-8 flex items-start gap-6",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:53:19",
-								"data-prohibitions": "[editContent]",
-								className: "shrink-0 p-4 bg-[#111111] rounded-xl border border-gold/20 shadow-[0_0_15px_rgba(212,175,55,0.1)]",
-								children: item.icon
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:56:19",
-								"data-prohibitions": "[editContent]",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:57:21",
-									"data-prohibitions": "[editContent]",
-									className: "text-xl md:text-2xl font-bold text-white mb-3",
-									children: item.title
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:58:21",
-									"data-prohibitions": "[editContent]",
-									className: "text-foreground/80 leading-relaxed text-sm md:text-base",
-									children: item.desc
-								})]
-							})]
-						})
-					}, index))
-				})]
-			})
-		})
-	});
-}
-//#endregion
-//#region src/components/bpc-guide/BpcEligibility.tsx
-function BpcEligibility() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:5:5",
-		"data-prohibitions": "[editContent]",
-		className: "py-24 bg-[#111111] border-y border-border/50",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:6:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6 max-w-6xl",
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:7:9",
-					"data-prohibitions": "[]",
-					className: "text-center max-w-3xl mx-auto mb-16 break-inside-avoid",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:8:11",
-						"data-prohibitions": "[]",
-						className: "text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight",
-						children: ["Quem tem ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:9:22",
-							"data-prohibitions": "[]",
-							className: "text-gold",
-							children: "Direito ao BPC?"
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:11:11",
-						"data-prohibitions": "[]",
-						className: "text-foreground/70 text-lg",
-						children: "O benefício é exclusivamente destinado a dois grupos que comprovem estado de necessidade econômica e social."
-					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:17:9",
-					"data-prohibitions": "[editContent]",
-					className: "grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:19:11",
-						"data-prohibitions": "[]",
-						className: "bg-[#1A1A1A] rounded-3xl border border-border overflow-hidden group hover:border-gold/30 transition-colors break-inside-avoid flex flex-col shadow-2xl",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:20:13",
-							"data-prohibitions": "[]",
-							className: "h-64 overflow-hidden relative",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:21:15",
-									"data-prohibitions": "[editContent]",
-									src: "https://img.usecurling.com/p/800/500?q=elderly%20smiling&color=black",
-									alt: "Idosos",
-									className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:26:15",
-									"data-prohibitions": "[]",
-									className: "absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-[#1A1A1A]/50 to-transparent"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:27:15",
-									"data-prohibitions": "[]",
-									className: "absolute bottom-6 left-8 flex items-center gap-4",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:28:17",
-										"data-prohibitions": "[]",
-										className: "bg-gold p-3 rounded-xl text-[#111111] shadow-lg",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(UserPlus, {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:29:19",
-											"data-prohibitions": "[editContent]",
-											className: "w-8 h-8"
-										})
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:31:17",
-										"data-prohibitions": "[]",
-										className: "text-3xl font-bold text-white shadow-sm",
-										children: "Idosos (65+ anos)"
-									})]
-								})
-							]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:34:13",
-							"data-prohibitions": "[]",
-							className: "p-8 md:p-10 flex-grow",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:35:15",
-								"data-prohibitions": "[]",
-								className: "text-foreground/80 text-lg leading-relaxed mb-8",
-								children: "Destinado a idosos que não possuem meios de prover a própria subsistência nem de tê-la provida por sua família."
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:39:15",
-								"data-prohibitions": "[]",
-								className: "space-y-4",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:40:17",
-										"data-prohibitions": "[]",
-										className: "flex items-start gap-3 text-foreground/80",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:41:19",
-											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:42:19",
-											"data-prohibitions": "[]",
-											children: [
-												"Válido para homens e mulheres a partir de ",
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-													"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:43:63",
-													"data-prohibitions": "[]",
-													children: "65 anos completos"
-												}),
-												"."
-											]
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:46:17",
-										"data-prohibitions": "[]",
-										className: "flex items-start gap-3 text-foreground/80",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:47:19",
-											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:48:19",
-											"data-prohibitions": "[]",
-											children: "Não exige nenhuma contribuição prévia ao INSS."
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:50:17",
-										"data-prohibitions": "[]",
-										className: "flex items-start gap-3 text-foreground/80",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:51:19",
-											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:52:19",
-											"data-prohibitions": "[]",
-											children: [
-												"Processo mais ágil: ",
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-													"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:53:41",
-													"data-prohibitions": "[]",
-													children: "não passa por perícia médica"
-												}),
-												" no INSS."
-											]
-										})]
-									})
-								]
-							})]
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:61:11",
-						"data-prohibitions": "[]",
-						className: "bg-[#1A1A1A] rounded-3xl border border-border overflow-hidden group hover:border-gold/30 transition-colors break-inside-avoid flex flex-col shadow-2xl",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:62:13",
-							"data-prohibitions": "[]",
-							className: "h-64 overflow-hidden relative",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:63:15",
-									"data-prohibitions": "[editContent]",
-									src: "https://img.usecurling.com/p/800/500?q=wheelchair%20accessibility&color=black",
-									alt: "Pessoa com Deficiência",
-									className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:68:15",
-									"data-prohibitions": "[]",
-									className: "absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-[#1A1A1A]/50 to-transparent"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:69:15",
-									"data-prohibitions": "[]",
-									className: "absolute bottom-6 left-8 flex items-center gap-4",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:70:17",
-										"data-prohibitions": "[]",
-										className: "bg-gold p-3 rounded-xl text-[#111111] shadow-lg",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:71:19",
-											"data-prohibitions": "[editContent]",
-											className: "w-8 h-8"
-										})
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:73:17",
-										"data-prohibitions": "[]",
-										className: "text-3xl font-bold text-white shadow-sm",
-										children: "Pessoas com Deficiência"
-									})]
-								})
-							]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:76:13",
-							"data-prohibitions": "[]",
-							className: "p-8 md:p-10 flex-grow",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:77:15",
-								"data-prohibitions": "[]",
-								className: "text-foreground/80 text-lg leading-relaxed mb-8",
-								children: "Para pessoas com impedimentos de longo prazo (físico, mental, intelectual ou sensorial) de pelo menos 2 anos."
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:81:15",
-								"data-prohibitions": "[]",
-								className: "space-y-4",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:82:17",
-										"data-prohibitions": "[]",
-										className: "flex items-start gap-3 text-foreground/80",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:83:19",
-											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:84:19",
-											"data-prohibitions": "[]",
-											children: ["Pode ser criança, adolescente, adulto ou idoso. ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:85:69",
-												"data-prohibitions": "[]",
-												children: "Qualquer idade."
-											})]
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:88:17",
-										"data-prohibitions": "[]",
-										className: "flex items-start gap-3 text-foreground/80",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:89:19",
-											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:90:19",
-											"data-prohibitions": "[]",
-											children: [
-												"Exige ",
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-													"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:91:27",
-													"data-prohibitions": "[]",
-													children: "avaliação biopsicossocial"
-												}),
-												" (perícia médica e social rigorosa)."
-											]
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:95:17",
-										"data-prohibitions": "[]",
-										className: "flex items-start gap-3 text-foreground/80",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:96:19",
-											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:97:19",
-											"data-prohibitions": "[]",
-											children: "Inclui Transtorno do Espectro Autista (TEA), visão monocular e doenças graves."
-										})]
-									})
-								]
-							})]
-						})]
-					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:107:9",
-					"data-prohibitions": "[]",
-					className: "mb-16 bg-[#1A1A1A] rounded-3xl p-8 md:p-12 border border-border break-inside-avoid shadow-2xl",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:108:11",
-						"data-prohibitions": "[]",
-						className: "flex items-center gap-6 mb-10 justify-center",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:109:13",
-								"data-prohibitions": "[]",
-								className: "h-px bg-border flex-grow hidden md:block"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:110:13",
-								"data-prohibitions": "[editContent]",
-								className: "w-10 h-10 text-gold shrink-0"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:111:13",
-								"data-prohibitions": "[]",
-								className: "text-2xl md:text-3xl font-bold text-white text-center shrink-0",
-								children: "Requisitos Legais Cumulativos"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:114:13",
-								"data-prohibitions": "[]",
-								className: "h-px bg-border flex-grow hidden md:block"
-							})
-						]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:116:11",
-						"data-prohibitions": "[]",
-						className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:117:13",
-								"data-prohibitions": "[]",
-								className: "bg-[#111111] p-6 rounded-2xl border border-border/50 text-center hover:border-gold/30 transition-colors",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:118:15",
-										"data-prohibitions": "[]",
-										className: "w-12 h-12 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4 text-gold font-black text-xl",
-										children: "1"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:121:15",
-										"data-prohibitions": "[]",
-										className: "text-white font-bold text-lg mb-2",
-										children: "Nacionalidade"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:122:15",
-										"data-prohibitions": "[]",
-										className: "text-sm text-foreground/70",
-										children: "Brasileiro nato, naturalizado ou português regular."
-									})
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:126:13",
-								"data-prohibitions": "[]",
-								className: "bg-[#111111] p-6 rounded-2xl border border-border/50 text-center hover:border-gold/30 transition-colors",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:127:15",
-										"data-prohibitions": "[]",
-										className: "w-12 h-12 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4 text-gold font-black text-xl",
-										children: "2"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:130:15",
-										"data-prohibitions": "[]",
-										className: "text-white font-bold text-lg mb-2",
-										children: "Condição"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:131:15",
-										"data-prohibitions": "[]",
-										className: "text-sm text-foreground/70",
-										children: "Idade 65+ anos ou impedimento de longo prazo (PcD)."
-									})
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:135:13",
-								"data-prohibitions": "[]",
-								className: "bg-[#111111] p-6 rounded-2xl border border-border/50 text-center hover:border-gold/30 transition-colors",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:136:15",
-										"data-prohibitions": "[]",
-										className: "w-12 h-12 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4 text-gold font-black text-xl",
-										children: "3"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:139:15",
-										"data-prohibitions": "[]",
-										className: "text-white font-bold text-lg mb-2",
-										children: "Renda"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:140:15",
-										"data-prohibitions": "[]",
-										className: "text-sm text-foreground/70",
-										children: "Critério de miserabilidade no CadÚnico atualizado."
-									})
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:144:13",
-								"data-prohibitions": "[]",
-								className: "bg-[#111111] p-6 rounded-2xl border border-border/50 text-center hover:border-gold/30 transition-colors",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:145:15",
-										"data-prohibitions": "[]",
-										className: "w-12 h-12 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4 text-gold font-black text-xl",
-										children: "4"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:148:15",
-										"data-prohibitions": "[]",
-										className: "text-white font-bold text-lg mb-2",
-										children: "Não Acúmulo"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:149:15",
-										"data-prohibitions": "[]",
-										className: "text-sm text-foreground/70",
-										children: "Não receber outro benefício da seguridade social."
-									})
-								]
-							})
-						]
-					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:157:9",
-					"data-prohibitions": "[]",
-					className: "bg-gradient-to-br from-[#1A1A1A] to-[#111111] rounded-3xl border border-gold/30 shadow-[0_0_40px_rgba(212,175,55,0.1)] relative overflow-hidden break-inside-avoid flex flex-col md:flex-row",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:158:11",
-						"data-prohibitions": "[]",
-						className: "md:w-5/12 relative min-h-[300px]",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:159:13",
-								"data-prohibitions": "[editContent]",
-								src: "https://img.usecurling.com/p/600/800?q=calculator%20documents&color=black",
-								alt: "Cálculo de Renda",
-								className: "absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-luminosity"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:164:13",
-								"data-prohibitions": "[]",
-								className: "absolute inset-0 bg-gradient-to-r from-transparent via-[#111111]/50 to-[#111111] md:block hidden"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:165:13",
-								"data-prohibitions": "[]",
-								className: "absolute inset-0 bg-gradient-to-t from-[#111111] to-transparent md:hidden block"
-							})
-						]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:167:11",
-						"data-prohibitions": "[]",
-						className: "md:w-7/12 p-8 md:p-12 relative z-10 flex flex-col justify-center",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:168:13",
-								"data-prohibitions": "[]",
-								className: "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-bold mb-6 w-fit",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Calculator, {
-									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:169:15",
-									"data-prohibitions": "[editContent]",
-									className: "w-5 h-5"
-								}), " Critério de Renda 2026"]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:171:13",
-								"data-prohibitions": "[]",
-								className: "text-3xl md:text-4xl font-bold text-white mb-6 leading-tight",
-								children: [
-									"Renda familiar per capita de até ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:172:48",
-										"data-prohibitions": "[editContent]",
-										className: "hidden lg:block"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:173:15",
-										"data-prohibitions": "[]",
-										className: "text-gold border-b-2 border-gold/50 pb-1 mt-2 inline-block",
-										children: "R$ 379,50"
-									})
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:177:13",
-								"data-prohibitions": "[]",
-								className: "text-lg text-foreground/80 mb-8 leading-relaxed",
-								children: "Isso corresponde a exatos ¼ (um quarto) do salário mínimo estipulado para o cálculo no ano de 2026. Todas as pessoas que moram sob o mesmo teto entram no cálculo da renda do grupo familiar."
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:183:13",
-								"data-prohibitions": "[]",
-								className: "bg-[#151515] p-6 rounded-2xl border-l-4 border-red-600 shadow-xl",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:184:15",
-									"data-prohibitions": "[]",
-									className: "flex items-center gap-3 mb-3",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:185:17",
-										"data-prohibitions": "[editContent]",
-										className: "w-6 h-6 text-red-500"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:186:17",
-										"data-prohibitions": "[]",
-										className: "text-white font-bold text-lg",
-										children: "Exceção Legal: STF RE 567.985/MT (Tema 27)"
-									})]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:190:15",
-									"data-prohibitions": "[]",
-									className: "text-foreground/80 text-sm md:text-base leading-relaxed",
-									children: [
-										"A regra de ¼ do salário mínimo ",
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:191:48",
-											"data-prohibitions": "[]",
-											children: "não é absoluta!"
-										}),
-										" O Supremo Tribunal Federal (STF) permite deduzir da renda familiar os gastos comprovados com a saúde do requerente (medicamentos, fraldas, alimentação especial, consultas) que não são fornecidos gratuitamente pelo SUS. Isso garante o benefício mesmo se a renda nominal ultrapassar o limite padrão de R$ 379,50."
-									]
-								})]
-							})
-						]
-					})]
-				})
-			]
-		})
-	});
-}
-//#endregion
-//#region src/components/bpc-guide/BpcProcess.tsx
-function BpcProcess() {
-	const steps = [
-		{
-			title: "CadÚnico",
-			desc: "Inscreva-se ou atualize o Cadastro Único no CRAS da sua cidade. Este é o passo inicial e obrigatório.",
-			icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(UserCheck, {
-				"data-uid": "src/components/bpc-guide/BpcProcess.tsx:8:13",
-				"data-prohibitions": "[editContent]",
-				className: "w-6 h-6"
-			})
-		},
-		{
-			title: "Meu INSS",
-			desc: "Acesse o portal \"Meu INSS\" pelo site ou aplicativo com seu login oficial Gov.br.",
-			icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Smartphone, {
-				"data-uid": "src/components/bpc-guide/BpcProcess.tsx:13:13",
-				"data-prohibitions": "[editContent]",
-				className: "w-6 h-6"
-			})
-		},
-		{
-			title: "Solicite Online",
-			desc: "Busque por \"Benefício Assistencial\", preencha os dados e anexe a documentação inicial.",
-			icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
-				"data-uid": "src/components/bpc-guide/BpcProcess.tsx:18:13",
-				"data-prohibitions": "[editContent]",
-				className: "w-6 h-6"
-			})
-		},
-		{
-			title: "Perícia (Apenas PcD)",
-			desc: "Agende e compareça à perícia médica e avaliação social na agência do INSS.",
-			icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Activity, {
-				"data-uid": "src/components/bpc-guide/BpcProcess.tsx:23:13",
-				"data-prohibitions": "[editContent]",
-				className: "w-6 h-6"
-			})
-		},
-		{
-			title: "Decisão do INSS",
-			desc: "Aguarde a análise. O INSS possui o prazo legal de até 90 dias para concluir o pedido.",
-			icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
-				"data-uid": "src/components/bpc-guide/BpcProcess.tsx:28:13",
-				"data-prohibitions": "[editContent]",
-				className: "w-6 h-6"
-			})
-		}
-	];
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/bpc-guide/BpcProcess.tsx:33:5",
-		"data-prohibitions": "[editContent]",
-		className: "py-24 bg-[#151515]",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/bpc-guide/BpcProcess.tsx:34:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6 max-w-6xl",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcProcess.tsx:35:9",
-				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16 break-inside-avoid",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-					"data-uid": "src/components/bpc-guide/BpcProcess.tsx:36:11",
-					"data-prohibitions": "[]",
-					className: "text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight",
-					children: ["Passo a Passo da ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/bpc-guide/BpcProcess.tsx:37:30",
-						"data-prohibitions": "[]",
-						className: "text-gold",
-						children: "Solicitação"
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/bpc-guide/BpcProcess.tsx:39:11",
-					"data-prohibitions": "[]",
-					className: "text-foreground/70 text-lg",
-					children: "O processo exige organização e atenção aos detalhes. Veja como funciona a jornada completa até a aprovação do seu benefício assistencial."
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcProcess.tsx:45:9",
-				"data-prohibitions": "[editContent]",
-				className: "flex flex-col lg:flex-row gap-12 lg:gap-20",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcProcess.tsx:47:11",
-					"data-prohibitions": "[editContent]",
-					className: "w-full lg:w-5/12 break-inside-avoid pt-4",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcProcess.tsx:48:13",
-						"data-prohibitions": "[editContent]",
-						className: "space-y-10 relative",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/bpc-guide/BpcProcess.tsx:49:15",
-							"data-prohibitions": "[]",
-							className: "absolute left-[27px] top-6 bottom-6 w-0.5 bg-border z-0 hidden sm:block"
-						}), steps.map((step, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcProcess.tsx:52:17",
-							"data-prohibitions": "[editContent]",
-							className: "relative z-10 flex items-start gap-6 group",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcProcess.tsx:53:19",
-								"data-prohibitions": "[editContent]",
-								className: "w-14 h-14 rounded-full bg-[#111111] border-2 border-border group-hover:border-gold group-hover:bg-gold/5 flex items-center justify-center shrink-0 transition-all duration-300 text-foreground group-hover:text-gold shadow-sm group-hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]",
-								children: step.icon
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcProcess.tsx:56:19",
-								"data-prohibitions": "[editContent]",
-								className: "pt-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:57:21",
-									"data-prohibitions": "[editContent]",
-									className: "text-xl font-bold text-white mb-2 group-hover:text-gold transition-colors duration-300",
-									children: [
-										idx + 1,
-										". ",
-										step.title
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:60:21",
-									"data-prohibitions": "[editContent]",
-									className: "text-foreground/70 text-sm md:text-base leading-relaxed",
-									children: step.desc
-								})]
-							})]
-						}, idx))]
-					})
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcProcess.tsx:70:11",
-					"data-prohibitions": "[editContent]",
-					className: "w-full lg:w-7/12",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcProcess.tsx:71:13",
-						"data-prohibitions": "[editContent]",
-						className: "bg-[#1A1A1A] border border-border rounded-3xl overflow-hidden shadow-2xl sticky top-28 break-inside-avoid",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcProcess.tsx:72:15",
-							"data-prohibitions": "[]",
-							className: "h-48 w-full relative",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:73:17",
-									"data-prohibitions": "[editContent]",
-									src: "https://img.usecurling.com/p/800/400?q=lawyer%20desk%20documents&color=black",
-									alt: "Documentos Legais",
-									className: "w-full h-full object-cover opacity-60"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:78:17",
-									"data-prohibitions": "[]",
-									className: "absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:79:17",
-									"data-prohibitions": "[]",
-									className: "absolute bottom-6 left-8 flex items-center gap-4",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:80:19",
-										"data-prohibitions": "[]",
-										className: "bg-[#111111] p-3 rounded-xl border border-gold/30",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
-											"data-uid": "src/components/bpc-guide/BpcProcess.tsx:81:21",
-											"data-prohibitions": "[editContent]",
-											className: "text-gold w-8 h-8"
-										})
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:83:19",
-										"data-prohibitions": "[]",
-										className: "text-2xl md:text-3xl font-bold text-white shadow-sm",
-										children: "Documentação Necessária"
-									})]
-								})
-							]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcProcess.tsx:89:15",
-							"data-prohibitions": "[editContent]",
-							className: "p-8 md:p-10 space-y-10",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcProcess.tsx:90:17",
-								"data-prohibitions": "[editContent]",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:91:19",
-									"data-prohibitions": "[]",
-									className: "text-lg font-bold text-gold mb-5 border-b border-border/50 pb-3 flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:92:21",
-										"data-prohibitions": "[editContent]",
-										className: "w-5 h-5"
-									}), " Requerente e Família"]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:94:19",
-									"data-prohibitions": "[editContent]",
-									className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
-									children: [
-										"Documento de identidade (RG, CNH)",
-										"CPF de todos da residência",
-										"Comprovante de residência atual",
-										"Comprovante do CadÚnico",
-										"Certidão de nascimento/casamento",
-										"Carteira de Trabalho (mesmo sem registro)"
-									].map((doc, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:103:23",
-										"data-prohibitions": "[editContent]",
-										className: "flex items-start gap-3 text-foreground/80 text-sm font-medium",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-											"data-uid": "src/components/bpc-guide/BpcProcess.tsx:107:25",
-											"data-prohibitions": "[editContent]",
-											className: "w-5 h-5 text-green-500 shrink-0 mt-0.5"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											"data-uid": "src/components/bpc-guide/BpcProcess.tsx:108:25",
-											"data-prohibitions": "[editContent]",
-											children: doc
-										})]
-									}, idx))
-								})]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcProcess.tsx:114:17",
-								"data-prohibitions": "[editContent]",
-								className: "bg-[#111111] p-6 md:p-8 rounded-2xl border border-border/50 shadow-inner",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:115:19",
-									"data-prohibitions": "[]",
-									className: "text-lg font-bold text-gold mb-5 flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:116:21",
-										"data-prohibitions": "[editContent]",
-										className: "w-5 h-5"
-									}), " Documentos Específicos para PcD"]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:118:19",
-									"data-prohibitions": "[editContent]",
-									className: "space-y-4",
-									children: [
-										"Laudos médicos atualizados (com CID legível e histórico)",
-										"Exames médicos comprovando a deficiência ou doença grave",
-										"Receituários de medicamentos de uso contínuo",
-										"Comprovantes de gastos não cobertos pelo SUS (conforme Tema 27 STF)"
-									].map((doc, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:125:23",
-										"data-prohibitions": "[editContent]",
-										className: "flex items-start gap-3 text-foreground/80 text-sm md:text-base font-medium",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-											"data-uid": "src/components/bpc-guide/BpcProcess.tsx:129:25",
-											"data-prohibitions": "[editContent]",
-											className: "w-5 h-5 text-green-500 shrink-0 mt-0.5"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											"data-uid": "src/components/bpc-guide/BpcProcess.tsx:130:25",
-											"data-prohibitions": "[editContent]",
-											children: doc
-										})]
-									}, idx))
-								})]
-							})]
-						})]
-					})
-				})]
-			})]
-		})
-	});
-}
-//#endregion
-//#region src/components/ui/table.tsx
-var Table = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-	"data-uid": "src/components/ui/table.tsx:8:5",
-	"data-prohibitions": "[editContent]",
-	className: "relative w-full overflow-auto",
-	children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("table", {
-		"data-uid": "src/components/ui/table.tsx:9:7",
-		"data-prohibitions": "[editContent]",
-		ref,
-		className: cn("w-full caption-bottom text-sm", className),
-		...props
-	})
-}));
-Table.displayName = "Table";
-var TableHeader = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", {
-	"data-uid": "src/components/ui/table.tsx:19:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("[&_tr]:border-b", className),
-	...props
-}));
-TableHeader.displayName = "TableHeader";
-var TableBody = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tbody", {
-	"data-uid": "src/components/ui/table.tsx:27:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("[&_tr:last-child]:border-0", className),
-	...props
-}));
-TableBody.displayName = "TableBody";
-var TableFooter = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tfoot", {
-	"data-uid": "src/components/ui/table.tsx:35:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("border-t bg-muted/50 font-medium [&>tr]:last:border-b-0", className),
-	...props
-}));
-TableFooter.displayName = "TableFooter";
-var TableRow = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tr", {
-	"data-uid": "src/components/ui/table.tsx:45:5",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted", className),
-	...props
-}));
-TableRow.displayName = "TableRow";
-var TableHead = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-	"data-uid": "src/components/ui/table.tsx:61:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0", className),
-	...props
-}));
-TableHead.displayName = "TableHead";
-var TableCell = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-	"data-uid": "src/components/ui/table.tsx:76:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("p-4 align-middle [&:has([role=checkbox])]:pr-0", className),
-	...props
-}));
-TableCell.displayName = "TableCell";
-var TableCaption = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("caption", {
-	"data-uid": "src/components/ui/table.tsx:88:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("mt-4 text-sm text-muted-foreground", className),
-	...props
-}));
-TableCaption.displayName = "TableCaption";
-//#endregion
-//#region src/components/bpc-guide/BpcTable.tsx
-function BpcTable() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/bpc-guide/BpcTable.tsx:13:5",
-		"data-prohibitions": "[]",
-		className: "py-24 bg-[#111111] break-inside-avoid border-t border-border/50",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/bpc-guide/BpcTable.tsx:14:7",
-			"data-prohibitions": "[]",
-			className: "container mx-auto px-4 md:px-6 max-w-5xl",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcTable.tsx:15:9",
-				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-					"data-uid": "src/components/bpc-guide/BpcTable.tsx:16:11",
-					"data-prohibitions": "[]",
-					className: "text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight",
-					children: ["Comparativo ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/bpc-guide/BpcTable.tsx:17:25",
-						"data-prohibitions": "[]",
-						className: "text-gold",
-						children: "Técnico"
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/bpc-guide/BpcTable.tsx:19:11",
-					"data-prohibitions": "[]",
-					className: "text-foreground/70 text-lg",
-					children: "Resumo estruturado das diferenças cruciais entre as duas modalidades do Benefício de Prestação Continuada."
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcTable.tsx:25:9",
-				"data-prohibitions": "[]",
-				className: "bg-[#1A1A1A] rounded-3xl border border-border overflow-hidden shadow-2xl",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcTable.tsx:26:11",
-					"data-prohibitions": "[]",
-					className: "overflow-x-auto",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Table, {
-						"data-uid": "src/components/bpc-guide/BpcTable.tsx:27:13",
-						"data-prohibitions": "[]",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHeader, {
-							"data-uid": "src/components/bpc-guide/BpcTable.tsx:28:15",
-							"data-prohibitions": "[]",
-							className: "bg-[#151515]",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-								"data-uid": "src/components/bpc-guide/BpcTable.tsx:29:17",
-								"data-prohibitions": "[]",
-								className: "border-border hover:bg-transparent",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-										"data-uid": "src/components/bpc-guide/BpcTable.tsx:30:19",
-										"data-prohibitions": "[]",
-										className: "text-gold font-black text-lg w-[20%] py-6 px-6",
-										children: "Requisito"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-										"data-uid": "src/components/bpc-guide/BpcTable.tsx:33:19",
-										"data-prohibitions": "[]",
-										className: "text-white font-bold text-lg w-[40%] py-6 px-6 border-l border-border/30",
-										children: "BPC Idoso"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-										"data-uid": "src/components/bpc-guide/BpcTable.tsx:36:19",
-										"data-prohibitions": "[]",
-										className: "text-white font-bold text-lg w-[40%] py-6 px-6 border-l border-border/30",
-										children: "BPC Pessoa com Deficiência"
-									})
-								]
-							})
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableBody, {
-							"data-uid": "src/components/bpc-guide/BpcTable.tsx:41:15",
-							"data-prohibitions": "[]",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-									"data-uid": "src/components/bpc-guide/BpcTable.tsx:42:17",
-									"data-prohibitions": "[]",
-									className: "border-border hover:bg-white/[0.02] transition-colors",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:43:19",
-											"data-prohibitions": "[]",
-											className: "font-bold text-white px-6 py-6 text-base",
-											children: "Idade"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:44:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30 font-medium",
-											children: "65 anos ou mais"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:47:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30 font-medium",
-											children: "Qualquer idade"
-										})
-									]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-									"data-uid": "src/components/bpc-guide/BpcTable.tsx:51:17",
-									"data-prohibitions": "[]",
-									className: "border-border hover:bg-white/[0.02] transition-colors bg-[#111111]/40",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:52:19",
-											"data-prohibitions": "[]",
-											className: "font-bold text-white px-6 py-6 text-base",
-											children: "Perícia"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:55:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
-											children: "Não"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:58:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
-											children: "Sim (Avaliação biopsicossocial)"
-										})
-									]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-									"data-uid": "src/components/bpc-guide/BpcTable.tsx:62:17",
-									"data-prohibitions": "[]",
-									className: "border-border hover:bg-white/[0.02] transition-colors",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:63:19",
-											"data-prohibitions": "[]",
-											className: "font-bold text-white px-6 py-6 text-base",
-											children: "Renda"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:64:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
-											children: "Até ¼ do salário mínimo"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:67:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
-											children: "Até ¼ do salário mínimo"
-										})
-									]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-									"data-uid": "src/components/bpc-guide/BpcTable.tsx:71:17",
-									"data-prohibitions": "[]",
-									className: "border-border hover:bg-white/[0.02] transition-colors bg-[#111111]/40",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:72:19",
-											"data-prohibitions": "[]",
-											className: "font-bold text-white px-6 py-6 text-base",
-											children: "Valor"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:73:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30 font-bold text-white",
-											children: "1 salário mínimo"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:76:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30 font-bold text-white",
-											children: "1 salário mínimo"
-										})
-									]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-									"data-uid": "src/components/bpc-guide/BpcTable.tsx:80:17",
-									"data-prohibitions": "[]",
-									className: "border-border hover:bg-white/[0.02] transition-colors",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:81:19",
-											"data-prohibitions": "[]",
-											className: "font-bold text-white px-6 py-6 text-base",
-											children: "Acúmulo"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:84:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
-											children: "Não permitido"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:87:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
-											children: "Não permitido"
-										})
-									]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-									"data-uid": "src/components/bpc-guide/BpcTable.tsx:91:17",
-									"data-prohibitions": "[]",
-									className: "border-border hover:bg-white/[0.02] transition-colors bg-[#111111]/40",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:92:19",
-											"data-prohibitions": "[]",
-											className: "font-bold text-white px-6 py-6 text-base",
-											children: "Revisão"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:95:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
-											children: "A cada 2 anos (Atualização CadÚnico)"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-											"data-uid": "src/components/bpc-guide/BpcTable.tsx:98:19",
-											"data-prohibitions": "[]",
-											className: "text-foreground/80 px-6 py-6 border-l border-border/30",
-											children: "A cada 2 anos (CadÚnico e Nova Perícia)"
-										})
-									]
-								})
-							]
-						})]
-					})
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/bpc-guide/BpcTable.tsx:105:11",
-					"data-prohibitions": "[]",
-					className: "bg-[#111111] p-5 text-center text-sm text-foreground/60 border-t border-border flex items-center justify-center gap-2 font-medium",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, {
-						"data-uid": "src/components/bpc-guide/BpcTable.tsx:106:13",
-						"data-prohibitions": "[editContent]",
-						className: "w-4 h-4 text-gold shrink-0"
-					}), "Esta tabela técnica reflete rigorosamente a legislação previdenciária vigente em 2026."]
-				})]
-			})]
-		})
-	});
-}
-//#endregion
-//#region src/components/bpc-guide/BpcFAQ.tsx
-var faqs = [
-	{
-		q: "Posso trabalhar enquanto recebo BPC?",
-		a: "Regra geral não, o benefício é suspenso se o titular começar a trabalhar com carteira assinada. A exceção é o contrato de aprendizagem (jovem aprendiz). Para PcD, existe também a possibilidade do Auxílio-Inclusão caso consiga emprego."
-	},
-	{
-		q: "O BPC pode ser transformado em aposentadoria?",
-		a: "Apenas se houver contribuições posteriores. O BPC não se transforma automaticamente em aposentadoria, pois não exige contribuição prévia. Se você passar a contribuir como segurado facultativo, poderá solicitar a conversão futura."
-	},
-	{
-		q: "Crianças podem receber BPC?",
-		a: "Sim, se PcD. Crianças e adolescentes com deficiência ou doença grave têm direito ao BPC/LOAS, desde que a família cumpra o requisito de renda mínima e o impacto da deficiência seja comprovado."
-	},
-	{
-		q: "O que fazer se o pedido for negado?",
-		a: "Você pode entrar com recurso administrativo no próprio INSS ou ingressar com uma ação judicial. A via judicial, com o auxílio de um advogado especialista, costuma ser mais rápida e efetiva para reverter negativas injustas."
-	},
-	{
-		q: "O benefício precisa ser renovado?",
-		a: "Sim, o BPC passa por revisão a cada 2 anos. É obrigatório manter o CadÚnico atualizado e, no caso da pessoa com deficiência, pode ser necessária uma nova perícia médica para comprovar a continuidade do impedimento."
-	},
-	{
-		q: "O BPC permite consignado?",
-		a: "Sim, limite de 35%. A legislação vigente permite que beneficiários do BPC/LOAS realizem empréstimos consignados, limitando o desconto direto no benefício para proteger a renda mínima de sobrevivência."
-	}
-];
-function BpcFAQ() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:39:5",
-		"data-prohibitions": "[editContent]",
-		className: "py-24 bg-[#151515] border-t border-border/50",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:40:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6 max-w-6xl",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:41:9",
-				"data-prohibitions": "[editContent]",
-				className: "flex flex-col lg:flex-row gap-12 lg:gap-16",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:42:11",
-					"data-prohibitions": "[]",
-					className: "w-full lg:w-5/12 break-inside-avoid",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:43:13",
-						"data-prohibitions": "[]",
-						className: "sticky top-28",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:44:15",
-								"data-prohibitions": "[]",
-								className: "w-16 h-16 bg-[#111111] rounded-2xl flex items-center justify-center mb-6 border border-gold/20 shadow-lg",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, {
-									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:45:17",
-									"data-prohibitions": "[editContent]",
-									className: "h-8 w-8 text-gold"
-								})
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:47:15",
-								"data-prohibitions": "[]",
-								className: "text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight",
-								children: ["Perguntas ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:48:27",
-									"data-prohibitions": "[]",
-									className: "text-gold",
-									children: "Frequentes"
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:50:15",
-								"data-prohibitions": "[]",
-								className: "text-foreground/70 text-lg mb-10 leading-relaxed",
-								children: "Esclareça rapidamente suas dúvidas sobre as regras aplicáveis em 2026."
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:54:15",
-								"data-prohibitions": "[]",
-								className: "bg-[#1A1A1A] p-6 md:p-8 rounded-3xl border border-gold/20 shadow-[0_0_30px_rgba(212,175,55,0.05)]",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:55:17",
-										"data-prohibitions": "[]",
-										className: "h-32 w-full mb-6 rounded-xl overflow-hidden relative",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:56:19",
-											"data-prohibitions": "[editContent]",
-											src: "https://img.usecurling.com/p/600/300?q=consultation%20lawyer&color=black",
-											alt: "Atendimento Especializado",
-											className: "w-full h-full object-cover opacity-80"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:61:19",
-											"data-prohibitions": "[]",
-											className: "absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent"
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:64:17",
-										"data-prohibitions": "[]",
-										className: "text-white font-bold mb-3 text-xl",
-										children: "Dúvidas Específicas?"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:65:17",
-										"data-prohibitions": "[]",
-										className: "text-sm text-foreground/70 mb-8 leading-relaxed",
-										children: [
-											"A avaliação técnica do seu caso pode identificar direitos que muitas vezes são negados injustamente pelo INSS. Fale conosco pelo WhatsApp",
-											" ",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:68:19",
-												"data-prohibitions": "[]",
-												children: "55 53 981063023"
-											}),
-											"."
-										]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:70:17",
-										"data-prohibitions": "[]",
-										className: "w-full bg-gold text-[#111111] hover:bg-gold/90 font-bold h-14 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300",
-										asChild: true,
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:74:19",
-											"data-prohibitions": "[]",
-											href: "https://wa.me/5553981063023?text=Olá,%20li%20o%20guia%20do%20BPC%20e%20gostaria%20de%20uma%20análise%20do%20meu%20caso.",
-											target: "_blank",
-											rel: "noopener noreferrer",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PhoneCall, {
-												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:79:21",
-												"data-prohibitions": "[editContent]",
-												className: "mr-2 h-5 w-5"
-											}), " Falar no WhatsApp"]
-										})
-									})
-								]
-							})
-						]
-					})
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:86:11",
-					"data-prohibitions": "[editContent]",
-					className: "w-full lg:w-7/12 pt-4",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-						"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:87:13",
-						"data-prohibitions": "[editContent]",
-						type: "single",
-						collapsible: true,
-						defaultValue: "faq-0",
-						className: "w-full space-y-4 md:space-y-6",
-						children: faqs.map((faq, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-							"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:94:17",
-							"data-prohibitions": "[editContent]",
-							value: `faq-${index}`,
-							className: "bg-[#1A1A1A] border border-border rounded-2xl px-6 md:px-8 data-[state=open]:border-gold/50 transition-colors break-inside-avoid shadow-sm overflow-hidden",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:99:19",
-								"data-prohibitions": "[editContent]",
-								className: "text-left text-lg md:text-xl font-bold text-white hover:text-gold hover:no-underline py-6",
-								children: faq.q
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:102:19",
-								"data-prohibitions": "[editContent]",
-								className: "text-foreground/80 leading-relaxed text-base pb-8 pt-2 block border-t border-border/50 mt-2",
-								children: faq.a
-							})]
-						}, index))
-					})
-				})]
-			})
-		})
-	});
-}
-//#endregion
-//#region src/hooks/use-toast.ts
-var TOAST_LIMIT = 1;
-var TOAST_REMOVE_DELAY = 1e6;
-var count = 0;
-function genId() {
-	count = (count + 1) % Number.MAX_SAFE_INTEGER;
-	return count.toString();
-}
-var toastTimeouts = /* @__PURE__ */ new Map();
-var addToRemoveQueue = (toastId) => {
-	if (toastTimeouts.has(toastId)) return;
-	const timeout = setTimeout(() => {
-		toastTimeouts.delete(toastId);
-		dispatch({
-			type: "REMOVE_TOAST",
-			toastId
-		});
-	}, TOAST_REMOVE_DELAY);
-	toastTimeouts.set(toastId, timeout);
-};
-var reducer = (state, action) => {
-	switch (action.type) {
-		case "ADD_TOAST": return {
-			...state,
-			toasts: [action.toast, ...state.toasts].slice(0, TOAST_LIMIT)
-		};
-		case "UPDATE_TOAST": return {
-			...state,
-			toasts: state.toasts.map((t) => t.id === action.toast.id ? {
-				...t,
-				...action.toast
-			} : t)
-		};
-		case "DISMISS_TOAST": {
-			const { toastId } = action;
-			if (toastId) addToRemoveQueue(toastId);
-			else state.toasts.forEach((toast) => {
-				addToRemoveQueue(toast.id);
-			});
-			return {
-				...state,
-				toasts: state.toasts.map((t) => t.id === toastId || toastId === void 0 ? {
-					...t,
-					open: false
-				} : t)
-			};
-		}
-		case "REMOVE_TOAST":
-			if (action.toastId === void 0) return {
-				...state,
-				toasts: []
-			};
-			return {
-				...state,
-				toasts: state.toasts.filter((t) => t.id !== action.toastId)
-			};
-	}
-};
-var listeners = [];
-var memoryState = { toasts: [] };
-function dispatch(action) {
-	memoryState = reducer(memoryState, action);
-	listeners.forEach((listener) => {
-		listener(memoryState);
-	});
-}
-function toast({ ...props }) {
-	const id = genId();
-	const update = (props) => dispatch({
-		type: "UPDATE_TOAST",
-		toast: {
-			...props,
-			id
-		}
-	});
-	const dismiss = () => dispatch({
-		type: "DISMISS_TOAST",
-		toastId: id
-	});
-	dispatch({
-		type: "ADD_TOAST",
-		toast: {
-			...props,
-			id,
-			open: true,
-			onOpenChange: (open) => {
-				if (!open) dismiss();
-			}
-		}
-	});
-	return {
-		id,
-		dismiss,
-		update
-	};
-}
-function useToast() {
-	const [state, setState] = import_react.useState(memoryState);
-	import_react.useEffect(() => {
-		listeners.push(setState);
-		return () => {
-			const index = listeners.indexOf(setState);
-			if (index > -1) listeners.splice(index, 1);
-		};
-	}, [state]);
-	return {
-		...state,
-		toast,
-		dismiss: (toastId) => dispatch({
-			type: "DISMISS_TOAST",
-			toastId
-		})
-	};
-}
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-use-callback-ref@1.1.1_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-use-callback-ref/dist/index.mjs
-function useCallbackRef(callback) {
-	const callbackRef = import_react.useRef(callback);
-	import_react.useEffect(() => {
-		callbackRef.current = callback;
-	});
-	return import_react.useMemo(() => (...args) => callbackRef.current?.(...args), []);
-}
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-use-escape-keydown@1.1.1_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-use-escape-keydown/dist/index.mjs
-function useEscapeKeydown(onEscapeKeyDownProp, ownerDocument = globalThis?.document) {
-	const onEscapeKeyDown = useCallbackRef(onEscapeKeyDownProp);
-	import_react.useEffect(() => {
-		const handleKeyDown = (event) => {
-			if (event.key === "Escape") onEscapeKeyDown(event);
-		};
-		ownerDocument.addEventListener("keydown", handleKeyDown, { capture: true });
-		return () => ownerDocument.removeEventListener("keydown", handleKeyDown, { capture: true });
-	}, [onEscapeKeyDown, ownerDocument]);
-}
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-dismissable-layer@1.1.11_@types+react-dom@19.2.3_@types+react@19.2.14___3d3960154a4c07d09bb90cb341135fc5/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs
-var DISMISSABLE_LAYER_NAME = "DismissableLayer";
-var CONTEXT_UPDATE = "dismissableLayer.update";
-var POINTER_DOWN_OUTSIDE = "dismissableLayer.pointerDownOutside";
-var FOCUS_OUTSIDE = "dismissableLayer.focusOutside";
-var originalBodyPointerEvents;
-var DismissableLayerContext = import_react.createContext({
-	layers: /* @__PURE__ */ new Set(),
-	layersWithOutsidePointerEventsDisabled: /* @__PURE__ */ new Set(),
-	branches: /* @__PURE__ */ new Set()
-});
-var DismissableLayer = import_react.forwardRef((props, forwardedRef) => {
-	const { disableOutsidePointerEvents = false, onEscapeKeyDown, onPointerDownOutside, onFocusOutside, onInteractOutside, onDismiss, ...layerProps } = props;
-	const context = import_react.useContext(DismissableLayerContext);
-	const [node, setNode] = import_react.useState(null);
-	const ownerDocument = node?.ownerDocument ?? globalThis?.document;
-	const [, force] = import_react.useState({});
-	const composedRefs = useComposedRefs(forwardedRef, (node2) => setNode(node2));
-	const layers = Array.from(context.layers);
-	const [highestLayerWithOutsidePointerEventsDisabled] = [...context.layersWithOutsidePointerEventsDisabled].slice(-1);
-	const highestLayerWithOutsidePointerEventsDisabledIndex = layers.indexOf(highestLayerWithOutsidePointerEventsDisabled);
-	const index = node ? layers.indexOf(node) : -1;
-	const isBodyPointerEventsDisabled = context.layersWithOutsidePointerEventsDisabled.size > 0;
-	const isPointerEventsEnabled = index >= highestLayerWithOutsidePointerEventsDisabledIndex;
-	const pointerDownOutside = usePointerDownOutside((event) => {
-		const target = event.target;
-		const isPointerDownOnBranch = [...context.branches].some((branch) => branch.contains(target));
-		if (!isPointerEventsEnabled || isPointerDownOnBranch) return;
-		onPointerDownOutside?.(event);
-		onInteractOutside?.(event);
-		if (!event.defaultPrevented) onDismiss?.();
-	}, ownerDocument);
-	const focusOutside = useFocusOutside((event) => {
-		const target = event.target;
-		if ([...context.branches].some((branch) => branch.contains(target))) return;
-		onFocusOutside?.(event);
-		onInteractOutside?.(event);
-		if (!event.defaultPrevented) onDismiss?.();
-	}, ownerDocument);
-	useEscapeKeydown((event) => {
-		if (!(index === context.layers.size - 1)) return;
-		onEscapeKeyDown?.(event);
-		if (!event.defaultPrevented && onDismiss) {
-			event.preventDefault();
-			onDismiss();
-		}
-	}, ownerDocument);
-	import_react.useEffect(() => {
-		if (!node) return;
-		if (disableOutsidePointerEvents) {
-			if (context.layersWithOutsidePointerEventsDisabled.size === 0) {
-				originalBodyPointerEvents = ownerDocument.body.style.pointerEvents;
-				ownerDocument.body.style.pointerEvents = "none";
-			}
-			context.layersWithOutsidePointerEventsDisabled.add(node);
-		}
-		context.layers.add(node);
-		dispatchUpdate();
-		return () => {
-			if (disableOutsidePointerEvents && context.layersWithOutsidePointerEventsDisabled.size === 1) ownerDocument.body.style.pointerEvents = originalBodyPointerEvents;
-		};
-	}, [
-		node,
-		ownerDocument,
-		disableOutsidePointerEvents,
-		context
-	]);
-	import_react.useEffect(() => {
-		return () => {
-			if (!node) return;
-			context.layers.delete(node);
-			context.layersWithOutsidePointerEventsDisabled.delete(node);
-			dispatchUpdate();
-		};
-	}, [node, context]);
-	import_react.useEffect(() => {
-		const handleUpdate = () => force({});
-		document.addEventListener(CONTEXT_UPDATE, handleUpdate);
-		return () => document.removeEventListener(CONTEXT_UPDATE, handleUpdate);
-	}, []);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
-		...layerProps,
-		ref: composedRefs,
-		style: {
-			pointerEvents: isBodyPointerEventsDisabled ? isPointerEventsEnabled ? "auto" : "none" : void 0,
-			...props.style
-		},
-		onFocusCapture: composeEventHandlers(props.onFocusCapture, focusOutside.onFocusCapture),
-		onBlurCapture: composeEventHandlers(props.onBlurCapture, focusOutside.onBlurCapture),
-		onPointerDownCapture: composeEventHandlers(props.onPointerDownCapture, pointerDownOutside.onPointerDownCapture)
-	});
-});
-DismissableLayer.displayName = DISMISSABLE_LAYER_NAME;
-var BRANCH_NAME = "DismissableLayerBranch";
-var DismissableLayerBranch = import_react.forwardRef((props, forwardedRef) => {
-	const context = import_react.useContext(DismissableLayerContext);
-	const ref = import_react.useRef(null);
-	const composedRefs = useComposedRefs(forwardedRef, ref);
-	import_react.useEffect(() => {
-		const node = ref.current;
-		if (node) {
-			context.branches.add(node);
-			return () => {
-				context.branches.delete(node);
-			};
-		}
-	}, [context.branches]);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
-		...props,
-		ref: composedRefs
-	});
-});
-DismissableLayerBranch.displayName = BRANCH_NAME;
-function usePointerDownOutside(onPointerDownOutside, ownerDocument = globalThis?.document) {
-	const handlePointerDownOutside = useCallbackRef(onPointerDownOutside);
-	const isPointerInsideReactTreeRef = import_react.useRef(false);
-	const handleClickRef = import_react.useRef(() => {});
-	import_react.useEffect(() => {
-		const handlePointerDown = (event) => {
-			if (event.target && !isPointerInsideReactTreeRef.current) {
-				let handleAndDispatchPointerDownOutsideEvent2 = function() {
-					handleAndDispatchCustomEvent$1(POINTER_DOWN_OUTSIDE, handlePointerDownOutside, eventDetail, { discrete: true });
-				};
-				const eventDetail = { originalEvent: event };
-				if (event.pointerType === "touch") {
-					ownerDocument.removeEventListener("click", handleClickRef.current);
-					handleClickRef.current = handleAndDispatchPointerDownOutsideEvent2;
-					ownerDocument.addEventListener("click", handleClickRef.current, { once: true });
-				} else handleAndDispatchPointerDownOutsideEvent2();
-			} else ownerDocument.removeEventListener("click", handleClickRef.current);
-			isPointerInsideReactTreeRef.current = false;
-		};
-		const timerId = window.setTimeout(() => {
-			ownerDocument.addEventListener("pointerdown", handlePointerDown);
-		}, 0);
-		return () => {
-			window.clearTimeout(timerId);
-			ownerDocument.removeEventListener("pointerdown", handlePointerDown);
-			ownerDocument.removeEventListener("click", handleClickRef.current);
-		};
-	}, [ownerDocument, handlePointerDownOutside]);
-	return { onPointerDownCapture: () => isPointerInsideReactTreeRef.current = true };
-}
-function useFocusOutside(onFocusOutside, ownerDocument = globalThis?.document) {
-	const handleFocusOutside = useCallbackRef(onFocusOutside);
-	const isFocusInsideReactTreeRef = import_react.useRef(false);
-	import_react.useEffect(() => {
-		const handleFocus = (event) => {
-			if (event.target && !isFocusInsideReactTreeRef.current) handleAndDispatchCustomEvent$1(FOCUS_OUTSIDE, handleFocusOutside, { originalEvent: event }, { discrete: false });
-		};
-		ownerDocument.addEventListener("focusin", handleFocus);
-		return () => ownerDocument.removeEventListener("focusin", handleFocus);
-	}, [ownerDocument, handleFocusOutside]);
-	return {
-		onFocusCapture: () => isFocusInsideReactTreeRef.current = true,
-		onBlurCapture: () => isFocusInsideReactTreeRef.current = false
-	};
-}
-function dispatchUpdate() {
-	const event = new CustomEvent(CONTEXT_UPDATE);
-	document.dispatchEvent(event);
-}
-function handleAndDispatchCustomEvent$1(name, handler, detail, { discrete }) {
-	const target = detail.originalEvent.target;
-	const event = new CustomEvent(name, {
-		bubbles: false,
-		cancelable: true,
-		detail
-	});
-	if (handler) target.addEventListener(name, handler, { once: true });
-	if (discrete) dispatchDiscreteCustomEvent(target, event);
-	else target.dispatchEvent(event);
-}
-var Root = DismissableLayer;
-var Branch = DismissableLayerBranch;
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-portal@1.1.9_@types+react-dom@19.2.3_@types+react@19.2.14__@types+react_7668895bec2444446faa4e0f4eb5244b/node_modules/@radix-ui/react-portal/dist/index.mjs
-var PORTAL_NAME = "Portal";
-var Portal = import_react.forwardRef((props, forwardedRef) => {
-	const { container: containerProp, ...portalProps } = props;
-	const [mounted, setMounted] = import_react.useState(false);
-	useLayoutEffect2(() => setMounted(true), []);
-	const container = containerProp || mounted && globalThis?.document?.body;
-	return container ? import_react_dom.createPortal(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
-		...portalProps,
-		ref: forwardedRef
-	}), container) : null;
-});
-Portal.displayName = PORTAL_NAME;
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-visually-hidden@1.2.3_@types+react-dom@19.2.3_@types+react@19.2.14__@ty_fa89646d7248b32d1762bf88948f6339/node_modules/@radix-ui/react-visually-hidden/dist/index.mjs
-var VISUALLY_HIDDEN_STYLES = Object.freeze({
-	position: "absolute",
-	border: 0,
-	width: 1,
-	height: 1,
-	padding: 0,
-	margin: -1,
-	overflow: "hidden",
-	clip: "rect(0, 0, 0, 0)",
-	whiteSpace: "nowrap",
-	wordWrap: "normal"
-});
-var NAME = "VisuallyHidden";
-var VisuallyHidden = import_react.forwardRef((props, forwardedRef) => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.span, {
-		...props,
-		ref: forwardedRef,
-		style: {
-			...VISUALLY_HIDDEN_STYLES,
-			...props.style
-		}
-	});
-});
-VisuallyHidden.displayName = NAME;
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-toast@1.2.15_@types+react-dom@19.2.3_@types+react@19.2.14__@types+react_4581e89c6ba13e4159ce65546c8b2a16/node_modules/@radix-ui/react-toast/dist/index.mjs
-var PROVIDER_NAME = "ToastProvider";
-var [Collection, useCollection, createCollectionScope] = createCollection("Toast");
-var [createToastContext, createToastScope] = createContextScope("Toast", [createCollectionScope]);
-var [ToastProviderProvider, useToastProviderContext] = createToastContext(PROVIDER_NAME);
-var ToastProvider$1 = (props) => {
-	const { __scopeToast, label = "Notification", duration = 5e3, swipeDirection = "right", swipeThreshold = 50, children } = props;
-	const [viewport, setViewport] = import_react.useState(null);
-	const [toastCount, setToastCount] = import_react.useState(0);
-	const isFocusedToastEscapeKeyDownRef = import_react.useRef(false);
-	const isClosePausedRef = import_react.useRef(false);
-	if (!label.trim()) console.error(`Invalid prop \`label\` supplied to \`${PROVIDER_NAME}\`. Expected non-empty \`string\`.`);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection.Provider, {
-		scope: __scopeToast,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastProviderProvider, {
-			scope: __scopeToast,
-			label,
-			duration,
-			swipeDirection,
-			swipeThreshold,
-			toastCount,
-			viewport,
-			onViewportChange: setViewport,
-			onToastAdd: import_react.useCallback(() => setToastCount((prevCount) => prevCount + 1), []),
-			onToastRemove: import_react.useCallback(() => setToastCount((prevCount) => prevCount - 1), []),
-			isFocusedToastEscapeKeyDownRef,
-			isClosePausedRef,
-			children
-		})
-	});
-};
-ToastProvider$1.displayName = PROVIDER_NAME;
-var VIEWPORT_NAME = "ToastViewport";
-var VIEWPORT_DEFAULT_HOTKEY = ["F8"];
-var VIEWPORT_PAUSE = "toast.viewportPause";
-var VIEWPORT_RESUME = "toast.viewportResume";
-var ToastViewport$1 = import_react.forwardRef((props, forwardedRef) => {
-	const { __scopeToast, hotkey = VIEWPORT_DEFAULT_HOTKEY, label = "Notifications ({hotkey})", ...viewportProps } = props;
-	const context = useToastProviderContext(VIEWPORT_NAME, __scopeToast);
-	const getItems = useCollection(__scopeToast);
-	const wrapperRef = import_react.useRef(null);
-	const headFocusProxyRef = import_react.useRef(null);
-	const tailFocusProxyRef = import_react.useRef(null);
-	const ref = import_react.useRef(null);
-	const composedRefs = useComposedRefs(forwardedRef, ref, context.onViewportChange);
-	const hotkeyLabel = hotkey.join("+").replace(/Key/g, "").replace(/Digit/g, "");
-	const hasToasts = context.toastCount > 0;
-	import_react.useEffect(() => {
-		const handleKeyDown = (event) => {
-			if (hotkey.length !== 0 && hotkey.every((key) => event[key] || event.code === key)) ref.current?.focus();
-		};
-		document.addEventListener("keydown", handleKeyDown);
-		return () => document.removeEventListener("keydown", handleKeyDown);
-	}, [hotkey]);
-	import_react.useEffect(() => {
-		const wrapper = wrapperRef.current;
-		const viewport = ref.current;
-		if (hasToasts && wrapper && viewport) {
-			const handlePause = () => {
-				if (!context.isClosePausedRef.current) {
-					const pauseEvent = new CustomEvent(VIEWPORT_PAUSE);
-					viewport.dispatchEvent(pauseEvent);
-					context.isClosePausedRef.current = true;
-				}
-			};
-			const handleResume = () => {
-				if (context.isClosePausedRef.current) {
-					const resumeEvent = new CustomEvent(VIEWPORT_RESUME);
-					viewport.dispatchEvent(resumeEvent);
-					context.isClosePausedRef.current = false;
-				}
-			};
-			const handleFocusOutResume = (event) => {
-				if (!wrapper.contains(event.relatedTarget)) handleResume();
-			};
-			const handlePointerLeaveResume = () => {
-				if (!wrapper.contains(document.activeElement)) handleResume();
-			};
-			wrapper.addEventListener("focusin", handlePause);
-			wrapper.addEventListener("focusout", handleFocusOutResume);
-			wrapper.addEventListener("pointermove", handlePause);
-			wrapper.addEventListener("pointerleave", handlePointerLeaveResume);
-			window.addEventListener("blur", handlePause);
-			window.addEventListener("focus", handleResume);
-			return () => {
-				wrapper.removeEventListener("focusin", handlePause);
-				wrapper.removeEventListener("focusout", handleFocusOutResume);
-				wrapper.removeEventListener("pointermove", handlePause);
-				wrapper.removeEventListener("pointerleave", handlePointerLeaveResume);
-				window.removeEventListener("blur", handlePause);
-				window.removeEventListener("focus", handleResume);
-			};
-		}
-	}, [hasToasts, context.isClosePausedRef]);
-	const getSortedTabbableCandidates = import_react.useCallback(({ tabbingDirection }) => {
-		const tabbableCandidates = getItems().map((toastItem) => {
-			const toastNode = toastItem.ref.current;
-			const toastTabbableCandidates = [toastNode, ...getTabbableCandidates(toastNode)];
-			return tabbingDirection === "forwards" ? toastTabbableCandidates : toastTabbableCandidates.reverse();
-		});
-		return (tabbingDirection === "forwards" ? tabbableCandidates.reverse() : tabbableCandidates).flat();
-	}, [getItems]);
-	import_react.useEffect(() => {
-		const viewport = ref.current;
-		if (viewport) {
-			const handleKeyDown = (event) => {
-				const isMetaKey = event.altKey || event.ctrlKey || event.metaKey;
-				if (event.key === "Tab" && !isMetaKey) {
-					const focusedElement = document.activeElement;
-					const isTabbingBackwards = event.shiftKey;
-					if (event.target === viewport && isTabbingBackwards) {
-						headFocusProxyRef.current?.focus();
-						return;
-					}
-					const sortedCandidates = getSortedTabbableCandidates({ tabbingDirection: isTabbingBackwards ? "backwards" : "forwards" });
-					const index = sortedCandidates.findIndex((candidate) => candidate === focusedElement);
-					if (focusFirst(sortedCandidates.slice(index + 1))) event.preventDefault();
-					else isTabbingBackwards ? headFocusProxyRef.current?.focus() : tailFocusProxyRef.current?.focus();
-				}
-			};
-			viewport.addEventListener("keydown", handleKeyDown);
-			return () => viewport.removeEventListener("keydown", handleKeyDown);
-		}
-	}, [getItems, getSortedTabbableCandidates]);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Branch, {
-		ref: wrapperRef,
-		role: "region",
-		"aria-label": label.replace("{hotkey}", hotkeyLabel),
-		tabIndex: -1,
-		style: { pointerEvents: hasToasts ? void 0 : "none" },
-		children: [
-			hasToasts && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FocusProxy, {
-				ref: headFocusProxyRef,
-				onFocusFromOutsideViewport: () => {
-					focusFirst(getSortedTabbableCandidates({ tabbingDirection: "forwards" }));
-				}
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection.Slot, {
-				scope: __scopeToast,
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.ol, {
-					tabIndex: -1,
-					...viewportProps,
-					ref: composedRefs
-				})
-			}),
-			hasToasts && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FocusProxy, {
-				ref: tailFocusProxyRef,
-				onFocusFromOutsideViewport: () => {
-					focusFirst(getSortedTabbableCandidates({ tabbingDirection: "backwards" }));
-				}
-			})
-		]
-	});
-});
-ToastViewport$1.displayName = VIEWPORT_NAME;
-var FOCUS_PROXY_NAME = "ToastFocusProxy";
-var FocusProxy = import_react.forwardRef((props, forwardedRef) => {
-	const { __scopeToast, onFocusFromOutsideViewport, ...proxyProps } = props;
-	const context = useToastProviderContext(FOCUS_PROXY_NAME, __scopeToast);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(VisuallyHidden, {
-		tabIndex: 0,
-		...proxyProps,
-		ref: forwardedRef,
-		style: { position: "fixed" },
-		onFocus: (event) => {
-			const prevFocusedElement = event.relatedTarget;
-			if (!context.viewport?.contains(prevFocusedElement)) onFocusFromOutsideViewport();
-		}
-	});
-});
-FocusProxy.displayName = FOCUS_PROXY_NAME;
-var TOAST_NAME = "Toast";
-var TOAST_SWIPE_START = "toast.swipeStart";
-var TOAST_SWIPE_MOVE = "toast.swipeMove";
-var TOAST_SWIPE_CANCEL = "toast.swipeCancel";
-var TOAST_SWIPE_END = "toast.swipeEnd";
-var Toast$1 = import_react.forwardRef((props, forwardedRef) => {
-	const { forceMount, open: openProp, defaultOpen, onOpenChange, ...toastProps } = props;
-	const [open, setOpen] = useControllableState({
-		prop: openProp,
-		defaultProp: defaultOpen ?? true,
-		onChange: onOpenChange,
-		caller: TOAST_NAME
-	});
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Presence, {
-		present: forceMount || open,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastImpl, {
-			open,
-			...toastProps,
-			ref: forwardedRef,
-			onClose: () => setOpen(false),
-			onPause: useCallbackRef(props.onPause),
-			onResume: useCallbackRef(props.onResume),
-			onSwipeStart: composeEventHandlers(props.onSwipeStart, (event) => {
-				event.currentTarget.setAttribute("data-swipe", "start");
-			}),
-			onSwipeMove: composeEventHandlers(props.onSwipeMove, (event) => {
-				const { x, y } = event.detail.delta;
-				event.currentTarget.setAttribute("data-swipe", "move");
-				event.currentTarget.style.setProperty("--radix-toast-swipe-move-x", `${x}px`);
-				event.currentTarget.style.setProperty("--radix-toast-swipe-move-y", `${y}px`);
-			}),
-			onSwipeCancel: composeEventHandlers(props.onSwipeCancel, (event) => {
-				event.currentTarget.setAttribute("data-swipe", "cancel");
-				event.currentTarget.style.removeProperty("--radix-toast-swipe-move-x");
-				event.currentTarget.style.removeProperty("--radix-toast-swipe-move-y");
-				event.currentTarget.style.removeProperty("--radix-toast-swipe-end-x");
-				event.currentTarget.style.removeProperty("--radix-toast-swipe-end-y");
-			}),
-			onSwipeEnd: composeEventHandlers(props.onSwipeEnd, (event) => {
-				const { x, y } = event.detail.delta;
-				event.currentTarget.setAttribute("data-swipe", "end");
-				event.currentTarget.style.removeProperty("--radix-toast-swipe-move-x");
-				event.currentTarget.style.removeProperty("--radix-toast-swipe-move-y");
-				event.currentTarget.style.setProperty("--radix-toast-swipe-end-x", `${x}px`);
-				event.currentTarget.style.setProperty("--radix-toast-swipe-end-y", `${y}px`);
-				setOpen(false);
-			})
-		})
-	});
-});
-Toast$1.displayName = TOAST_NAME;
-var [ToastInteractiveProvider, useToastInteractiveContext] = createToastContext(TOAST_NAME, { onClose() {} });
-var ToastImpl = import_react.forwardRef((props, forwardedRef) => {
-	const { __scopeToast, type = "foreground", duration: durationProp, open, onClose, onEscapeKeyDown, onPause, onResume, onSwipeStart, onSwipeMove, onSwipeCancel, onSwipeEnd, ...toastProps } = props;
-	const context = useToastProviderContext(TOAST_NAME, __scopeToast);
-	const [node, setNode] = import_react.useState(null);
-	const composedRefs = useComposedRefs(forwardedRef, (node2) => setNode(node2));
-	const pointerStartRef = import_react.useRef(null);
-	const swipeDeltaRef = import_react.useRef(null);
-	const duration = durationProp || context.duration;
-	const closeTimerStartTimeRef = import_react.useRef(0);
-	const closeTimerRemainingTimeRef = import_react.useRef(duration);
-	const closeTimerRef = import_react.useRef(0);
-	const { onToastAdd, onToastRemove } = context;
-	const handleClose = useCallbackRef(() => {
-		if (node?.contains(document.activeElement)) context.viewport?.focus();
-		onClose();
-	});
-	const startTimer = import_react.useCallback((duration2) => {
-		if (!duration2 || duration2 === Infinity) return;
-		window.clearTimeout(closeTimerRef.current);
-		closeTimerStartTimeRef.current = (/* @__PURE__ */ new Date()).getTime();
-		closeTimerRef.current = window.setTimeout(handleClose, duration2);
-	}, [handleClose]);
-	import_react.useEffect(() => {
-		const viewport = context.viewport;
-		if (viewport) {
-			const handleResume = () => {
-				startTimer(closeTimerRemainingTimeRef.current);
-				onResume?.();
-			};
-			const handlePause = () => {
-				const elapsedTime = (/* @__PURE__ */ new Date()).getTime() - closeTimerStartTimeRef.current;
-				closeTimerRemainingTimeRef.current = closeTimerRemainingTimeRef.current - elapsedTime;
-				window.clearTimeout(closeTimerRef.current);
-				onPause?.();
-			};
-			viewport.addEventListener(VIEWPORT_PAUSE, handlePause);
-			viewport.addEventListener(VIEWPORT_RESUME, handleResume);
-			return () => {
-				viewport.removeEventListener(VIEWPORT_PAUSE, handlePause);
-				viewport.removeEventListener(VIEWPORT_RESUME, handleResume);
-			};
-		}
-	}, [
-		context.viewport,
-		duration,
-		onPause,
-		onResume,
-		startTimer
-	]);
-	import_react.useEffect(() => {
-		if (open && !context.isClosePausedRef.current) startTimer(duration);
-	}, [
-		open,
-		duration,
-		context.isClosePausedRef,
-		startTimer
-	]);
-	import_react.useEffect(() => {
-		onToastAdd();
-		return () => onToastRemove();
-	}, [onToastAdd, onToastRemove]);
-	const announceTextContent = import_react.useMemo(() => {
-		return node ? getAnnounceTextContent(node) : null;
-	}, [node]);
-	if (!context.viewport) return null;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [announceTextContent && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastAnnounce, {
-		__scopeToast,
-		role: "status",
-		"aria-live": type === "foreground" ? "assertive" : "polite",
-		children: announceTextContent
-	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastInteractiveProvider, {
-		scope: __scopeToast,
-		onClose: handleClose,
-		children: import_react_dom.createPortal(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection.ItemSlot, {
-			scope: __scopeToast,
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root, {
-				asChild: true,
-				onEscapeKeyDown: composeEventHandlers(onEscapeKeyDown, () => {
-					if (!context.isFocusedToastEscapeKeyDownRef.current) handleClose();
-					context.isFocusedToastEscapeKeyDownRef.current = false;
-				}),
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.li, {
-					tabIndex: 0,
-					"data-state": open ? "open" : "closed",
-					"data-swipe-direction": context.swipeDirection,
-					...toastProps,
-					ref: composedRefs,
-					style: {
-						userSelect: "none",
-						touchAction: "none",
-						...props.style
-					},
-					onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
-						if (event.key !== "Escape") return;
-						onEscapeKeyDown?.(event.nativeEvent);
-						if (!event.nativeEvent.defaultPrevented) {
-							context.isFocusedToastEscapeKeyDownRef.current = true;
-							handleClose();
-						}
-					}),
-					onPointerDown: composeEventHandlers(props.onPointerDown, (event) => {
-						if (event.button !== 0) return;
-						pointerStartRef.current = {
-							x: event.clientX,
-							y: event.clientY
-						};
-					}),
-					onPointerMove: composeEventHandlers(props.onPointerMove, (event) => {
-						if (!pointerStartRef.current) return;
-						const x = event.clientX - pointerStartRef.current.x;
-						const y = event.clientY - pointerStartRef.current.y;
-						const hasSwipeMoveStarted = Boolean(swipeDeltaRef.current);
-						const isHorizontalSwipe = ["left", "right"].includes(context.swipeDirection);
-						const clamp = ["left", "up"].includes(context.swipeDirection) ? Math.min : Math.max;
-						const clampedX = isHorizontalSwipe ? clamp(0, x) : 0;
-						const clampedY = !isHorizontalSwipe ? clamp(0, y) : 0;
-						const moveStartBuffer = event.pointerType === "touch" ? 10 : 2;
-						const delta = {
-							x: clampedX,
-							y: clampedY
-						};
-						const eventDetail = {
-							originalEvent: event,
-							delta
-						};
-						if (hasSwipeMoveStarted) {
-							swipeDeltaRef.current = delta;
-							handleAndDispatchCustomEvent(TOAST_SWIPE_MOVE, onSwipeMove, eventDetail, { discrete: false });
-						} else if (isDeltaInDirection(delta, context.swipeDirection, moveStartBuffer)) {
-							swipeDeltaRef.current = delta;
-							handleAndDispatchCustomEvent(TOAST_SWIPE_START, onSwipeStart, eventDetail, { discrete: false });
-							event.target.setPointerCapture(event.pointerId);
-						} else if (Math.abs(x) > moveStartBuffer || Math.abs(y) > moveStartBuffer) pointerStartRef.current = null;
-					}),
-					onPointerUp: composeEventHandlers(props.onPointerUp, (event) => {
-						const delta = swipeDeltaRef.current;
-						const target = event.target;
-						if (target.hasPointerCapture(event.pointerId)) target.releasePointerCapture(event.pointerId);
-						swipeDeltaRef.current = null;
-						pointerStartRef.current = null;
-						if (delta) {
-							const toast = event.currentTarget;
-							const eventDetail = {
-								originalEvent: event,
-								delta
-							};
-							if (isDeltaInDirection(delta, context.swipeDirection, context.swipeThreshold)) handleAndDispatchCustomEvent(TOAST_SWIPE_END, onSwipeEnd, eventDetail, { discrete: true });
-							else handleAndDispatchCustomEvent(TOAST_SWIPE_CANCEL, onSwipeCancel, eventDetail, { discrete: true });
-							toast.addEventListener("click", (event2) => event2.preventDefault(), { once: true });
-						}
-					})
-				})
-			})
-		}), context.viewport)
-	})] });
-});
-var ToastAnnounce = (props) => {
-	const { __scopeToast, children, ...announceProps } = props;
-	const context = useToastProviderContext(TOAST_NAME, __scopeToast);
-	const [renderAnnounceText, setRenderAnnounceText] = import_react.useState(false);
-	const [isAnnounced, setIsAnnounced] = import_react.useState(false);
-	useNextFrame(() => setRenderAnnounceText(true));
-	import_react.useEffect(() => {
-		const timer = window.setTimeout(() => setIsAnnounced(true), 1e3);
-		return () => window.clearTimeout(timer);
-	}, []);
-	return isAnnounced ? null : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Portal, {
-		asChild: true,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(VisuallyHidden, {
-			...announceProps,
-			children: renderAnnounceText && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
-				context.label,
-				" ",
-				children
-			] })
-		})
-	});
-};
-var TITLE_NAME = "ToastTitle";
-var ToastTitle$1 = import_react.forwardRef((props, forwardedRef) => {
-	const { __scopeToast, ...titleProps } = props;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
-		...titleProps,
-		ref: forwardedRef
-	});
-});
-ToastTitle$1.displayName = TITLE_NAME;
-var DESCRIPTION_NAME = "ToastDescription";
-var ToastDescription$1 = import_react.forwardRef((props, forwardedRef) => {
-	const { __scopeToast, ...descriptionProps } = props;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
-		...descriptionProps,
-		ref: forwardedRef
-	});
-});
-ToastDescription$1.displayName = DESCRIPTION_NAME;
-var ACTION_NAME = "ToastAction";
-var ToastAction$1 = import_react.forwardRef((props, forwardedRef) => {
-	const { altText, ...actionProps } = props;
-	if (!altText.trim()) {
-		console.error(`Invalid prop \`altText\` supplied to \`${ACTION_NAME}\`. Expected non-empty \`string\`.`);
-		return null;
-	}
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastAnnounceExclude, {
-		altText,
-		asChild: true,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastClose$1, {
-			...actionProps,
-			ref: forwardedRef
-		})
-	});
-});
-ToastAction$1.displayName = ACTION_NAME;
-var CLOSE_NAME = "ToastClose";
-var ToastClose$1 = import_react.forwardRef((props, forwardedRef) => {
-	const { __scopeToast, ...closeProps } = props;
-	const interactiveContext = useToastInteractiveContext(CLOSE_NAME, __scopeToast);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastAnnounceExclude, {
-		asChild: true,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.button, {
-			type: "button",
-			...closeProps,
-			ref: forwardedRef,
-			onClick: composeEventHandlers(props.onClick, interactiveContext.onClose)
-		})
-	});
-});
-ToastClose$1.displayName = CLOSE_NAME;
-var ToastAnnounceExclude = import_react.forwardRef((props, forwardedRef) => {
-	const { __scopeToast, altText, ...announceExcludeProps } = props;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
-		"data-radix-toast-announce-exclude": "",
-		"data-radix-toast-announce-alt": altText || void 0,
-		...announceExcludeProps,
-		ref: forwardedRef
-	});
-});
-function getAnnounceTextContent(container) {
-	const textContent = [];
-	Array.from(container.childNodes).forEach((node) => {
-		if (node.nodeType === node.TEXT_NODE && node.textContent) textContent.push(node.textContent);
-		if (isHTMLElement(node)) {
-			const isHidden = node.ariaHidden || node.hidden || node.style.display === "none";
-			const isExcluded = node.dataset.radixToastAnnounceExclude === "";
-			if (!isHidden) if (isExcluded) {
-				const altText = node.dataset.radixToastAnnounceAlt;
-				if (altText) textContent.push(altText);
-			} else textContent.push(...getAnnounceTextContent(node));
-		}
-	});
-	return textContent;
-}
-function handleAndDispatchCustomEvent(name, handler, detail, { discrete }) {
-	const currentTarget = detail.originalEvent.currentTarget;
-	const event = new CustomEvent(name, {
-		bubbles: true,
-		cancelable: true,
-		detail
-	});
-	if (handler) currentTarget.addEventListener(name, handler, { once: true });
-	if (discrete) dispatchDiscreteCustomEvent(currentTarget, event);
-	else currentTarget.dispatchEvent(event);
-}
-var isDeltaInDirection = (delta, direction, threshold = 0) => {
-	const deltaX = Math.abs(delta.x);
-	const deltaY = Math.abs(delta.y);
-	const isDeltaX = deltaX > deltaY;
-	if (direction === "left" || direction === "right") return isDeltaX && deltaX > threshold;
-	else return !isDeltaX && deltaY > threshold;
-};
-function useNextFrame(callback = () => {}) {
-	const fn = useCallbackRef(callback);
-	useLayoutEffect2(() => {
-		let raf1 = 0;
-		let raf2 = 0;
-		raf1 = window.requestAnimationFrame(() => raf2 = window.requestAnimationFrame(fn));
-		return () => {
-			window.cancelAnimationFrame(raf1);
-			window.cancelAnimationFrame(raf2);
-		};
-	}, [fn]);
-}
-function isHTMLElement(node) {
-	return node.nodeType === node.ELEMENT_NODE;
-}
-function getTabbableCandidates(container) {
-	const nodes = [];
-	const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, { acceptNode: (node) => {
-		const isHiddenInput = node.tagName === "INPUT" && node.type === "hidden";
-		if (node.disabled || node.hidden || isHiddenInput) return NodeFilter.FILTER_SKIP;
-		return node.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
-	} });
-	while (walker.nextNode()) nodes.push(walker.currentNode);
-	return nodes;
-}
-function focusFirst(candidates) {
-	const previouslyFocusedElement = document.activeElement;
-	return candidates.some((candidate) => {
-		if (candidate === previouslyFocusedElement) return true;
-		candidate.focus();
-		return document.activeElement !== previouslyFocusedElement;
-	});
-}
-var Provider = ToastProvider$1;
-var Viewport = ToastViewport$1;
-var Root2 = Toast$1;
-var Title = ToastTitle$1;
-var Description = ToastDescription$1;
-var Action = ToastAction$1;
-var Close = ToastClose$1;
-//#endregion
-//#region src/components/ui/toast.tsx
-var ToastProvider = Provider;
-var ToastViewport = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Viewport, {
-	"data-uid": "src/components/ui/toast.tsx:15:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]", className),
-	...props
-}));
-ToastViewport.displayName = Viewport.displayName;
-var toastVariants = cva("group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full", {
-	variants: { variant: {
-		default: "border bg-background text-foreground",
-		destructive: "destructive group border-destructive bg-destructive text-destructive-foreground"
-	} },
-	defaultVariants: { variant: "default" }
-});
-var Toast = import_react.forwardRef(({ className, variant, ...props }, ref) => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root2, {
-		"data-uid": "src/components/ui/toast.tsx:47:5",
-		"data-prohibitions": "[editContent]",
-		ref,
-		className: cn(toastVariants({ variant }), className),
-		...props
-	});
-});
-Toast.displayName = Root2.displayName;
-var ToastAction = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Action, {
-	"data-uid": "src/components/ui/toast.tsx:60:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive", className),
-	...props
-}));
-ToastAction.displayName = Action.displayName;
-var ToastClose = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Close, {
-	"data-uid": "src/components/ui/toast.tsx:75:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600", className),
-	"toast-close": "",
-	...props,
-	children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, {
-		"data-uid": "src/components/ui/toast.tsx:84:5",
-		"data-prohibitions": "[editContent]",
-		className: "h-4 w-4"
-	})
-}));
-ToastClose.displayName = Close.displayName;
-var ToastTitle = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Title, {
-	"data-uid": "src/components/ui/toast.tsx:93:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("text-sm font-semibold", className),
-	...props
-}));
-ToastTitle.displayName = Title.displayName;
-var ToastDescription = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Description, {
-	"data-uid": "src/components/ui/toast.tsx:101:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn("text-sm opacity-90", className),
-	...props
-}));
-ToastDescription.displayName = Description.displayName;
-//#endregion
-//#region src/components/ui/toaster.tsx
-function Toaster() {
-	const { toasts } = useToast();
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(ToastProvider, {
-		"data-uid": "src/components/ui/toaster.tsx:16:5",
-		"data-prohibitions": "[editContent]",
-		children: [toasts.map(function({ id, title, description, action, ...props }) {
-			return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Toast, {
-				"data-uid": "src/components/ui/toaster.tsx:19:11",
-				"data-prohibitions": "[editContent]",
-				...props,
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/ui/toaster.tsx:20:13",
-						"data-prohibitions": "[editContent]",
-						className: "grid gap-1",
-						children: [title && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastTitle, {
-							"data-uid": "src/components/ui/toaster.tsx:21:25",
-							"data-prohibitions": "[editContent]",
-							children: title
-						}), description && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastDescription, {
-							"data-uid": "src/components/ui/toaster.tsx:22:31",
-							"data-prohibitions": "[editContent]",
-							children: description
-						})]
-					}),
-					action,
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastClose, {
-						"data-uid": "src/components/ui/toaster.tsx:25:13",
-						"data-prohibitions": "[editContent]"
-					})
-				]
-			}, id);
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastViewport, {
-			"data-uid": "src/components/ui/toaster.tsx:29:7",
-			"data-prohibitions": "[editContent]"
-		})]
 	});
 }
 //#endregion
 //#region src/pages/BpcGuide.tsx
 function BpcGuide() {
-	(0, import_react.useEffect)(() => {
-		window.scrollTo(0, 0);
-	}, []);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		"data-uid": "src/pages/BpcGuide.tsx:20:5",
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		"data-uid": "src/pages/BpcGuide.tsx:7:5",
 		"data-prohibitions": "[]",
-		className: "min-h-screen bg-background text-foreground flex flex-col",
-		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header$1, {
-				"data-uid": "src/pages/BpcGuide.tsx:21:7",
-				"data-prohibitions": "[editContent]"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
-				"data-uid": "src/pages/BpcGuide.tsx:22:7",
+		className: "min-h-screen bg-background pt-32 pb-24",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			"data-uid": "src/pages/BpcGuide.tsx:8:7",
+			"data-prohibitions": "[]",
+			className: "container max-w-4xl px-4 md:px-6",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+				"data-uid": "src/pages/BpcGuide.tsx:9:9",
 				"data-prohibitions": "[]",
-				className: "flex-grow pt-20 md:pt-24 bg-background",
-				id: "bpc-guide-content",
+				to: "/",
+				className: "inline-flex items-center text-primary hover:text-primary/80 mb-8 transition-colors",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, {
+					"data-uid": "src/pages/BpcGuide.tsx:13:11",
+					"data-prohibitions": "[editContent]",
+					className: "mr-2 h-4 w-4"
+				}), "Voltar para a página inicial"]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
+				"data-uid": "src/pages/BpcGuide.tsx:17:9",
+				"data-prohibitions": "[]",
+				className: "prose prose-invert prose-lg max-w-none",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcHero, {
-						"data-uid": "src/pages/BpcGuide.tsx:23:9",
-						"data-prohibitions": "[editContent]"
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+						"data-uid": "src/pages/BpcGuide.tsx:18:11",
+						"data-prohibitions": "[]",
+						className: "text-4xl md:text-5xl font-serif font-bold text-foreground mb-6",
+						children: "Guia Completo: Benefício de Prestação Continuada (BPC/LOAS)"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcCharacteristics, {
-						"data-uid": "src/pages/BpcGuide.tsx:24:9",
-						"data-prohibitions": "[editContent]"
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/BpcGuide.tsx:22:11",
+						"data-prohibitions": "[]",
+						className: "flex items-center gap-4 text-muted-foreground mb-12 pb-8 border-b border-border",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								"data-uid": "src/pages/BpcGuide.tsx:23:13",
+								"data-prohibitions": "[]",
+								children: "Tempo de leitura: 5 min"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								"data-uid": "src/pages/BpcGuide.tsx:24:13",
+								"data-prohibitions": "[]",
+								children: "•"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								"data-uid": "src/pages/BpcGuide.tsx:25:13",
+								"data-prohibitions": "[]",
+								children: "Atualizado em 2024"
+							})
+						]
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcEligibility, {
-						"data-uid": "src/pages/BpcGuide.tsx:25:9",
-						"data-prohibitions": "[editContent]"
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/BpcGuide.tsx:28:11",
+						"data-prohibitions": "[]",
+						className: "bg-muted p-8 rounded-xl border border-border mb-12",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							"data-uid": "src/pages/BpcGuide.tsx:29:13",
+							"data-prohibitions": "[]",
+							className: "text-xl font-bold text-foreground mb-4 font-serif",
+							children: "O que você vai aprender:"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+							"data-uid": "src/pages/BpcGuide.tsx:32:13",
+							"data-prohibitions": "[]",
+							className: "space-y-2 m-0 list-none p-0",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+									"data-uid": "src/pages/BpcGuide.tsx:33:15",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3 text-muted-foreground",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+										"data-uid": "src/pages/BpcGuide.tsx:34:17",
+										"data-prohibitions": "[editContent]",
+										className: "h-5 w-5 text-primary"
+									}), " O que é o BPC"]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+									"data-uid": "src/pages/BpcGuide.tsx:36:15",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3 text-muted-foreground",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+										"data-uid": "src/pages/BpcGuide.tsx:37:17",
+										"data-prohibitions": "[editContent]",
+										className: "h-5 w-5 text-primary"
+									}), " Quem tem direito"]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+									"data-uid": "src/pages/BpcGuide.tsx:39:15",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3 text-muted-foreground",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+										"data-uid": "src/pages/BpcGuide.tsx:40:17",
+										"data-prohibitions": "[editContent]",
+										className: "h-5 w-5 text-primary"
+									}), " Documentos necessários"]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+									"data-uid": "src/pages/BpcGuide.tsx:42:15",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3 text-muted-foreground",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+										"data-uid": "src/pages/BpcGuide.tsx:43:17",
+										"data-prohibitions": "[editContent]",
+										className: "h-5 w-5 text-primary"
+									}), " Como solicitar"]
+								})
+							]
+						})]
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcProcess, {
-						"data-uid": "src/pages/BpcGuide.tsx:26:9",
-						"data-prohibitions": "[editContent]"
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						"data-uid": "src/pages/BpcGuide.tsx:48:11",
+						"data-prohibitions": "[]",
+						className: "text-2xl font-bold text-foreground mt-8 mb-4 font-serif",
+						children: "O que é o BPC?"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcTable, {
-						"data-uid": "src/pages/BpcGuide.tsx:27:9",
-						"data-prohibitions": "[editContent]"
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						"data-uid": "src/pages/BpcGuide.tsx:51:11",
+						"data-prohibitions": "[]",
+						className: "text-muted-foreground",
+						children: "O Benefício de Prestação Continuada (BPC), regulamentado pela Lei Orgânica da Assistência Social (LOAS), é a garantia de um salário mínimo mensal à pessoa com deficiência e ao idoso com 65 anos ou mais que comprovem não possuir meios de prover a própria manutenção, nem de tê-la provida por sua família."
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcFAQ, {
-						"data-uid": "src/pages/BpcGuide.tsx:28:9",
-						"data-prohibitions": "[editContent]"
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						"data-uid": "src/pages/BpcGuide.tsx:58:11",
+						"data-prohibitions": "[]",
+						className: "text-2xl font-bold text-foreground mt-8 mb-4 font-serif",
+						children: "Requisitos Principais"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						"data-uid": "src/pages/BpcGuide.tsx:61:11",
+						"data-prohibitions": "[]",
+						className: "text-muted-foreground",
+						children: "Para ter direito ao benefício, é necessário cumprir dois requisitos básicos simultaneamente:"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ol", {
+						"data-uid": "src/pages/BpcGuide.tsx:65:11",
+						"data-prohibitions": "[]",
+						className: "text-muted-foreground",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+							"data-uid": "src/pages/BpcGuide.tsx:66:13",
+							"data-prohibitions": "[]",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+								"data-uid": "src/pages/BpcGuide.tsx:67:15",
+								"data-prohibitions": "[]",
+								children: "Requisito Pessoal:"
+							}), " Ser idoso (65 anos ou mais) ou pessoa com deficiência (de qualquer idade)."]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+							"data-uid": "src/pages/BpcGuide.tsx:70:13",
+							"data-prohibitions": "[]",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+								"data-uid": "src/pages/BpcGuide.tsx:71:15",
+								"data-prohibitions": "[]",
+								children: "Requisito Econômico:"
+							}), " A renda por pessoa do grupo familiar deve ser inferior a 1/4 do salário mínimo vigente. (Observação: A Justiça vem flexibilizando este critério em casos de extrema necessidade)."]
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/pages/BpcGuide.tsx:77:11",
+						"data-prohibitions": "[]",
+						className: "bg-primary/10 border-l-4 border-primary p-6 my-8 rounded-r-lg",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+							"data-uid": "src/pages/BpcGuide.tsx:78:13",
+							"data-prohibitions": "[]",
+							className: "text-foreground font-medium m-0",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+								"data-uid": "src/pages/BpcGuide.tsx:79:15",
+								"data-prohibitions": "[]",
+								children: "Atenção:"
+							}), " O BPC não é aposentadoria. Para recebê-lo, não é preciso ter contribuído para o INSS. Diferente da aposentadoria, o BPC não paga 13º salário e não deixa pensão por morte."]
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						"data-uid": "src/pages/BpcGuide.tsx:85:11",
+						"data-prohibitions": "[]",
+						className: "text-2xl font-bold text-foreground mt-8 mb-4 font-serif",
+						children: "Documentação Necessária"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+						"data-uid": "src/pages/BpcGuide.tsx:88:11",
+						"data-prohibitions": "[]",
+						className: "text-muted-foreground",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+								"data-uid": "src/pages/BpcGuide.tsx:89:13",
+								"data-prohibitions": "[]",
+								children: "Identidade (RG) e CPF do requerente e de todos os membros da família"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+								"data-uid": "src/pages/BpcGuide.tsx:90:13",
+								"data-prohibitions": "[]",
+								children: "Comprovante de residência atualizado"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+								"data-uid": "src/pages/BpcGuide.tsx:91:13",
+								"data-prohibitions": "[]",
+								children: "Cadastro Único (CadÚnico) atualizado no CRAS"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+								"data-uid": "src/pages/BpcGuide.tsx:92:13",
+								"data-prohibitions": "[]",
+								children: "Laudos médicos recentes (no caso de pessoa com deficiência)"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+								"data-uid": "src/pages/BpcGuide.tsx:93:13",
+								"data-prohibitions": "[]",
+								children: "Comprovantes de gastos com saúde, medicamentos, fraldas, etc."
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/BpcGuide.tsx:96:11",
+						"data-prohibitions": "[]",
+						className: "mt-16 pt-8 border-t border-border flex flex-col items-center text-center bg-muted/50 p-8 rounded-xl",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								"data-uid": "src/pages/BpcGuide.tsx:97:13",
+								"data-prohibitions": "[]",
+								className: "text-2xl font-bold text-foreground mb-4 font-serif",
+								children: "Precisa de ajuda com seu BPC?"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/pages/BpcGuide.tsx:100:13",
+								"data-prohibitions": "[]",
+								className: "text-muted-foreground mb-6",
+								children: "Nosso escritório é especialista em Direito Previdenciário. Se o seu pedido foi negado pelo INSS ou se você precisa de ajuda para dar entrada, nós podemos ajudar."
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+								"data-uid": "src/pages/BpcGuide.tsx:104:13",
+								"data-prohibitions": "[]",
+								size: "lg",
+								className: "bg-primary text-primary-foreground hover:bg-primary/90",
+								onClick: () => window.open("https://wa.me/5511999999999", "_blank"),
+								children: "Falar com Advogado Especialista"
+							})
+						]
 					})
 				]
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {
-				"data-uid": "src/pages/BpcGuide.tsx:30:7",
-				"data-prohibitions": "[editContent]"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FloatingWhatsApp, {
-				"data-uid": "src/pages/BpcGuide.tsx:31:7",
-				"data-prohibitions": "[editContent]"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CookieBanner, {
-				"data-uid": "src/pages/BpcGuide.tsx:32:7",
-				"data-prohibitions": "[editContent]"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster, {
-				"data-uid": "src/pages/BpcGuide.tsx:33:7",
-				"data-prohibitions": "[editContent]"
-			})
-		]
+			})]
+		})
 	});
 }
 //#endregion
@@ -25035,4 +23397,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-DKW2Q6wF.js.map
+//# sourceMappingURL=index-DmRQQTjh.js.map

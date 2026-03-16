@@ -1,63 +1,100 @@
+import { Star } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
-import { Star, Quote } from 'lucide-react'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+import Autoplay from 'embla-carousel-autoplay'
+import { useRef } from 'react'
 
 const testimonials = [
   {
-    name: 'Maria C. Santos',
-    role: 'Aposentadoria Concedida',
-    text: 'A clareza técnica e a dedicação do Dr. Lucas foram fundamentais para a concessão da minha aposentadoria. O processo foi conduzido de forma ética e muito transparente.',
+    name: 'Maria Silva',
+    location: 'São Paulo, SP',
+    text: 'Após ter meu BPC negado duas vezes pelo INSS, o Dr. Lucas conseguiu reverter a situação na justiça em tempo recorde. Muito atencioso e profissional.',
   },
   {
-    name: 'João R. Oliveira',
-    role: 'BPC/LOAS',
-    text: 'Depois de ter o benefício negado duas vezes pelo INSS, procurei o escritório. A organização da documentação e a orientação precisa fizeram toda a diferença para o meu filho.',
+    name: 'José Santos',
+    location: 'Campinas, SP',
+    text: 'Achei que nunca conseguiria me aposentar por causa de problemas na minha carteira de trabalho. O escritório fez todo o levantamento e deu certo.',
   },
   {
-    name: 'Antônio M. Silva',
-    role: 'Aposentadoria por Tempo',
-    text: 'Profissionalismo exemplar. Fizeram um planejamento previdenciário completo que me mostrou exatamente qual seria o melhor momento para dar entrada no meu pedido.',
+    name: 'Ana Oliveira',
+    location: 'Rio de Janeiro, RJ',
+    text: 'Estava desesperada quando meu auxílio-doença foi cortado. A equipe foi impecável e consegui a aposentadoria por invalidez.',
+  },
+  {
+    name: 'Carlos Mendes',
+    location: 'Belo Horizonte, MG',
+    text: 'Atendimento nota 10! Mesmo morando em outro estado, todo o processo foi transparente e sempre me mantiveram informado pelo WhatsApp.',
   },
 ]
 
-export default function SocialProof() {
+export function SocialProof() {
+  const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }))
+
   return (
-    <section className="py-24 bg-secondary">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 font-serif">
-            O que dizem nossos <span className="text-gold italic">Clientes</span>
+    <section id="depoimentos" className="py-24 bg-muted border-t border-border">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center text-center space-y-4 mb-16">
+          <h2 className="text-sm font-bold tracking-widest text-primary uppercase">
+            Credibilidade
           </h2>
-          <p className="text-foreground/70 text-lg font-light">
-            O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de
-            seus direitos.
+          <h3 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground font-serif">
+            Reconhecimento
+          </h3>
+          <div className="flex items-center gap-1 justify-center mt-2">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <Star key={star} className="h-5 w-5 fill-primary text-primary" />
+            ))}
+          </div>
+          <p className="text-lg text-muted-foreground max-w-2xl font-light">
+            O sucesso das nossas ações reflete o compromisso com cada cliente. Leia o que dizem
+            aqueles que confiaram em nosso trabalho.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              className="bg-card border-border/50 relative mt-6 hover:border-gold/30 transition-colors"
-            >
-              <div className="absolute -top-6 left-8 bg-gold rounded-full p-3 shadow-gold">
-                <Quote className="h-6 w-6 text-primary-foreground" fill="currentColor" />
-              </div>
-              <CardContent className="pt-12 pb-8 px-8">
-                <div className="flex mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-gold fill-gold mr-1" />
-                  ))}
-                </div>
-                <p className="text-foreground/80 italic mb-8 leading-relaxed font-light">
-                  "{testimonial.text}"
-                </p>
-                <div className="pt-6 border-t border-border/50">
-                  <h4 className="font-bold text-white text-lg font-serif">{testimonial.name}</h4>
-                  <p className="text-gold text-sm mt-1">{testimonial.role}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-5xl mx-auto px-10">
+          <Carousel
+            plugins={[plugin.current]}
+            className="w-full"
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+          >
+            <CarouselContent className="-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="bg-background border-border shadow-none h-full">
+                      <CardContent className="p-6 flex flex-col justify-between h-full space-y-4">
+                        <div className="space-y-4">
+                          <div className="flex gap-1">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <Star key={star} className="h-4 w-4 fill-primary text-primary" />
+                            ))}
+                          </div>
+                          <p className="text-muted-foreground italic leading-relaxed">
+                            "{testimonial.text}"
+                          </p>
+                        </div>
+                        <div className="pt-4 border-t border-border/50">
+                          <p className="font-semibold text-foreground">{testimonial.name}</p>
+                          <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 border-primary/20 text-primary hover:bg-primary/10" />
+            <CarouselNext className="hidden md:flex -right-12 border-primary/20 text-primary hover:bg-primary/10" />
+          </Carousel>
         </div>
       </div>
     </section>

@@ -1,12 +1,22 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Scale } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Link, useLocation } from 'react-router-dom'
+import { cn } from '@/lib/utils'
+import logoUrl from '@/assets/editedimage_1773665784218-dc625.png'
 
-export default function Header() {
+const navLinks = [
+  { name: 'Início', href: '#inicio' },
+  { name: 'Serviços', href: '#servicos' },
+  { name: 'Sobre', href: '#sobre' },
+  { name: 'Depoimentos', href: '#depoimentos' },
+  { name: 'Dúvidas', href: '#faq' },
+  { name: 'Contato', href: '#contato' },
+]
+
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,122 +26,104 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navLinks = [
-    { name: 'Início', href: '/#inicio' },
-    { name: 'Serviços', href: '/#servicos' },
-    { name: 'Quem Sou', href: '/#quem-sou' },
-    { name: 'Blog', href: '/#blog' },
-    { name: 'Guia BPC', href: '/guia-bpc', isRoute: true },
-    { name: 'Contato', href: '/#contato' },
-  ]
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const isHomePage = window.location.pathname === '/'
 
-  const isHome = location.pathname === '/'
+    if (!isHomePage && href.startsWith('#')) {
+      window.location.href = '/' + href
+      return
+    }
+
+    const element = document.querySelector(href)
+    if (element) {
+      const headerOffset = 80
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      })
+      setIsMobileMenuOpen(false)
+    }
+  }
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-md py-3 border-b border-border/50'
-          : 'bg-background md:bg-transparent py-5'
-      }`}
+          ? 'bg-background/95 backdrop-blur-md border-border py-3 shadow-md'
+          : 'bg-background border-transparent py-5',
+      )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded bg-gold/10 border border-gold/30 text-gold group-hover:bg-gold/20 transition-colors shadow-gold">
-            <Scale size={24} strokeWidth={1.5} className="md:w-7 md:h-7" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-lg md:text-xl font-bold leading-none tracking-wide text-white">
-              LUCAS MORRONE
-            </span>
-            <span className="text-[9px] md:text-[10px] font-sans tracking-[0.25em] text-gold uppercase mt-1.5">
-              Advocacia
-            </span>
-          </div>
+        <Link to="/" className="flex items-center gap-2 z-50">
+          <img
+            src={logoUrl}
+            alt="Lucas Morrone Advocacia Previdenciária"
+            className="h-12 md:h-16 w-auto object-contain mix-blend-lighten"
+          />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-7">
-          {navLinks.map((link) =>
-            link.isRoute ? (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-sm font-medium text-foreground/80 hover:text-gold transition-colors"
-              >
-                {link.name}
-              </Link>
-            ) : (
+        <nav className="hidden lg:flex items-center gap-8">
+          <div className="flex items-center gap-6">
+            {navLinks.map((link) => (
               <a
                 key={link.name}
-                href={isHome ? link.href : `/${link.href}`}
-                className="text-sm font-medium text-foreground/80 hover:text-gold transition-colors"
+                href={link.href}
+                onClick={(e) => scrollToSection(e, link.href)}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {link.name}
               </a>
-            ),
-          )}
+            ))}
+          </div>
           <Button
-            asChild
-            className="bg-gold text-primary-foreground hover:bg-gold/90 font-bold shadow-gold"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6"
+            onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
           >
-            <a
-              href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Agendar Consulta
-            </a>
+            Fale com um Advogado
           </Button>
         </nav>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden text-foreground hover:text-gold transition-colors p-2"
+          className="lg:hidden z-50 p-2 text-foreground"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Menu"
         >
-          {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-      </div>
 
-      {/* Mobile Nav */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-5 flex flex-col gap-5 shadow-lg animate-in slide-in-from-top-2">
-          {navLinks.map((link) =>
-            link.isRoute ? (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-base font-medium text-foreground/80 hover:text-gold transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ) : (
+        {/* Mobile Nav */}
+        <div
+          className={cn(
+            'fixed inset-0 bg-background flex flex-col pt-24 px-6 lg:hidden transition-transform duration-300 ease-in-out',
+            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full',
+          )}
+        >
+          <nav className="flex flex-col gap-6">
+            {navLinks.map((link) => (
               <a
                 key={link.name}
-                href={isHome ? link.href : `/${link.href}`}
-                className="text-base font-medium text-foreground/80 hover:text-gold transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                href={link.href}
+                onClick={(e) => scrollToSection(e, link.href)}
+                className="text-lg font-medium text-foreground hover:text-primary transition-colors border-b border-border pb-4"
               >
                 {link.name}
               </a>
-            ),
-          )}
-          <Button
-            asChild
-            className="w-full bg-gold text-primary-foreground hover:bg-gold/90 font-bold mt-2 shadow-gold"
-          >
-            <a
-              href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
-              target="_blank"
-              rel="noopener noreferrer"
+            ))}
+            <Button
+              className="mt-4 w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg h-12"
+              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
             >
-              Agendar Consulta
-            </a>
-          </Button>
+              Fale com um Advogado
+            </Button>
+          </nav>
         </div>
-      )}
+      </div>
     </header>
   )
 }

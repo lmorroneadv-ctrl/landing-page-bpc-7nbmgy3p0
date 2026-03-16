@@ -1,99 +1,83 @@
-import { MapPin, Phone, Clock } from 'lucide-react'
-import { Card, CardContent } from '@/components/ui/card'
+import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
-export default function Location() {
+export function Location() {
   return (
-    <section id="contato" className="py-24 bg-secondary">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 font-serif">
-            Localização & <span className="text-gold italic">Contato</span>
-          </h2>
-          <p className="text-foreground/70 text-lg font-light">
-            Atendimento presencial em nossa sede em Rio Grande e em Pelotas mediante agendamento.
+    <section id="contato" className="py-24 bg-muted border-t border-border">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center text-center space-y-4 mb-16">
+          <h2 className="text-sm font-bold tracking-widest text-primary uppercase">Contato</h2>
+          <h3 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground font-serif">
+            Atendimento Nacional
+          </h3>
+          <p className="text-lg text-muted-foreground max-w-2xl font-light">
+            Nossa estrutura 100% digital permite excelência jurídica em todo o Brasil. Estamos
+            prontos para atender você com máxima agilidade.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <Card className="bg-card border-border/50 overflow-hidden h-full shadow-sm">
-            <CardContent className="p-0 h-[400px] lg:h-full min-h-[400px]">
-              <iframe
-                title="Mapa do Escritório"
-                src="https://maps.google.com/maps?q=Av.%20Silva%20Paes,%20293,%20Rio%20Grande%20-%20RS&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-              ></iframe>
-            </CardContent>
-          </Card>
+        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="space-y-8">
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-lg shrink-0">
+                <MapPin className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-lg text-foreground mb-1">Endereço Sede</h4>
+                <p className="text-muted-foreground">Av. Paulista, 1000 - Bela Vista</p>
+                <p className="text-muted-foreground">São Paulo - SP, 01310-100</p>
+                <p className="text-sm text-primary mt-2 italic">
+                  *Atendimento presencial sob agendamento
+                </p>
+              </div>
+            </div>
 
-          <div className="flex flex-col gap-6">
-            <Card className="bg-card border-border/50 hover:border-gold/30 transition-colors shadow-sm">
-              <CardContent className="p-8 flex items-start gap-5">
-                <div className="bg-gold/10 p-4 rounded-full border border-gold/20 shrink-0">
-                  <MapPin className="h-6 w-6 text-gold" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-3 font-serif">
-                    Endereço Principal
-                  </h3>
-                  <p className="text-foreground/70 leading-relaxed font-light">
-                    Av. Silva Paes, 293
-                    <br />
-                    Centro, Rio Grande - RS
-                    <br />
-                    CEP: 96200-340
-                  </p>
-                  <p className="mt-4 text-xs text-gold font-medium uppercase tracking-wider">
-                    *Atendimento em Pelotas sob agendamento prévio.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-lg shrink-0">
+                <Phone className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-lg text-foreground mb-1">Telefone / WhatsApp</h4>
+                <p className="text-muted-foreground">(11) 99999-9999</p>
+              </div>
+            </div>
 
-            <Card className="bg-card border-border/50 hover:border-gold/30 transition-colors shadow-sm">
-              <CardContent className="p-8 flex items-start gap-5">
-                <div className="bg-gold/10 p-4 rounded-full border border-gold/20 shrink-0">
-                  <Phone className="h-6 w-6 text-gold" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-3 font-serif">Contato</h3>
-                  <p className="text-foreground/70 mb-1 font-light">
-                    WhatsApp:{' '}
-                    <a
-                      href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-gold transition-colors font-medium text-white"
-                    >
-                      (53) 98106-3023
-                    </a>
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-lg shrink-0">
+                <Mail className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-lg text-foreground mb-1">E-mail</h4>
+                <p className="text-muted-foreground">contato@lucasmorrone.adv.br</p>
+              </div>
+            </div>
 
-            <Card className="bg-card border-border/50 hover:border-gold/30 transition-colors shadow-sm">
-              <CardContent className="p-8 flex items-start gap-5">
-                <div className="bg-gold/10 p-4 rounded-full border border-gold/20 shrink-0">
-                  <Clock className="h-6 w-6 text-gold" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-3 font-serif">
-                    Horário de Atendimento
-                  </h3>
-                  <p className="text-foreground/70 font-light">
-                    Segunda a Sexta-feira
-                    <br />
-                    09:00 às 12:00 e 13:30 às 18:00
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-lg shrink-0">
+                <Clock className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-lg text-foreground mb-1">
+                  Horário de Atendimento
+                </h4>
+                <p className="text-muted-foreground">Segunda a Sexta: 09h às 18h</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="h-[400px] w-full rounded-xl overflow-hidden border border-border bg-card">
+            {/* Simple map placeholder - in a real app, use Google Maps iframe */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1973617195796!2d-46.65487738502213!3d-23.561348884682496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1650000000000!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="100%"
+              style={{
+                border: 0,
+                filter: 'grayscale(1) invert(0.9) hue-rotate(180deg) opacity(0.8)',
+              }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
