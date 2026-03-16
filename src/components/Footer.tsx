@@ -44,10 +44,12 @@ export default function Footer() {
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-gold mr-3 shrink-0" />
                 <a
-                  href="https://wa.me/5553999998235"
+                  href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-foreground/70 hover:text-gold text-sm transition-colors"
                 >
-                  (53) 99999-8235
+                  (53) 98106-3023
                 </a>
               </li>
             </ul>

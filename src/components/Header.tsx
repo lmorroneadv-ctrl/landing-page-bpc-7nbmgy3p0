@@ -35,7 +35,11 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a href="#inicio" className="flex items-center">
-          <img src={logoUrl} alt="Lucas Morrone Advocacia" className="h-12 w-auto object-contain" />
+          <img
+            src={logoUrl}
+            alt="Lucas Morrone Advocacia"
+            className="h-12 w-auto object-contain mix-blend-screen bg-transparent"
+          />
         </a>
 
         {/* Desktop Nav */}
@@ -51,7 +55,7 @@ export default function Header() {
           ))}
           <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
             <a
-              href="https://wa.me/5553999998235?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
+              href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -87,7 +91,7 @@ export default function Header() {
             className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
           >
             <a
-              href="https://wa.me/5553999998235?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
+              href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
               target="_blank"
               rel="noopener noreferrer"
             >

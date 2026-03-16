@@ -19496,28 +19496,28 @@ function Header$1() {
 						"data-prohibitions": "[editContent]",
 						src: logo_lucas_c1426_default,
 						alt: "Lucas Morrone Advocacia",
-						className: "h-12 w-auto object-contain"
+						className: "h-12 w-auto object-contain mix-blend-screen bg-transparent"
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-					"data-uid": "src/components/Header.tsx:42:9",
+					"data-uid": "src/components/Header.tsx:46:9",
 					"data-prohibitions": "[editContent]",
 					className: "hidden lg:flex items-center gap-6",
 					children: [navLinks.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-						"data-uid": "src/components/Header.tsx:44:13",
+						"data-uid": "src/components/Header.tsx:48:13",
 						"data-prohibitions": "[editContent]",
 						href: link.href,
 						className: "text-sm font-medium text-foreground/80 hover:text-primary transition-colors",
 						children: link.name
 					}, link.name)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-						"data-uid": "src/components/Header.tsx:52:11",
+						"data-uid": "src/components/Header.tsx:56:11",
 						"data-prohibitions": "[]",
 						asChild: true,
 						className: "bg-primary text-primary-foreground hover:bg-primary/90",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-							"data-uid": "src/components/Header.tsx:53:13",
+							"data-uid": "src/components/Header.tsx:57:13",
 							"data-prohibitions": "[]",
-							href: "https://wa.me/5553999998235?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
+							href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
 							target: "_blank",
 							rel: "noopener noreferrer",
 							children: "WhatsApp"
@@ -19525,41 +19525,41 @@ function Header$1() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:64:9",
+					"data-uid": "src/components/Header.tsx:68:9",
 					"data-prohibitions": "[editContent]",
 					className: "lg:hidden text-foreground",
 					onClick: () => setIsMobileMenuOpen(!isMobileMenuOpen),
 					children: isMobileMenuOpen ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, {
-						"data-uid": "src/components/Header.tsx:68:31",
+						"data-uid": "src/components/Header.tsx:72:31",
 						"data-prohibitions": "[editContent]",
 						size: 24
 					}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, {
-						"data-uid": "src/components/Header.tsx:68:49",
+						"data-uid": "src/components/Header.tsx:72:49",
 						"data-prohibitions": "[editContent]",
 						size: 24
 					})
 				})
 			]
 		}), isMobileMenuOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Header.tsx:74:9",
+			"data-uid": "src/components/Header.tsx:78:9",
 			"data-prohibitions": "[editContent]",
 			className: "lg:hidden absolute top-full left-0 right-0 bg-[#111111] border-b border-border p-4 flex flex-col gap-4 shadow-lg",
 			children: [navLinks.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-				"data-uid": "src/components/Header.tsx:76:13",
+				"data-uid": "src/components/Header.tsx:80:13",
 				"data-prohibitions": "[editContent]",
 				href: link.href,
 				className: "text-base font-medium text-foreground/80 hover:text-primary",
 				onClick: () => setIsMobileMenuOpen(false),
 				children: link.name
 			}, link.name)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-				"data-uid": "src/components/Header.tsx:85:11",
+				"data-uid": "src/components/Header.tsx:89:11",
 				"data-prohibitions": "[]",
 				asChild: true,
 				className: "w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-					"data-uid": "src/components/Header.tsx:89:13",
+					"data-uid": "src/components/Header.tsx:93:13",
 					"data-prohibitions": "[]",
-					href: "https://wa.me/5553999998235?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
+					href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
 					target: "_blank",
 					rel: "noopener noreferrer",
 					children: "WhatsApp"
@@ -19677,7 +19677,7 @@ function Hero() {
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 								"data-uid": "src/components/sections/Hero.tsx:52:15",
 								"data-prohibitions": "[]",
-								href: "https://wa.me/5553999998235?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
+								href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
 								target: "_blank",
 								rel: "noopener noreferrer",
 								children: "Falar com Advogado"
@@ -19905,7 +19905,7 @@ function Services() {
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 								"data-uid": "src/components/sections/Services.tsx:106:19",
 								"data-prohibitions": "[]",
-								href: `https://wa.me/5553999998235?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`,
+								href: `https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`,
 								target: "_blank",
 								rel: "noopener noreferrer",
 								children: "Solicitar Análise"
@@ -21223,7 +21223,7 @@ function Location() {
 							"data-uid": "src/components/sections/Location.tsx:20:15",
 							"data-prohibitions": "[]",
 							title: "Mapa do Escritório",
-							src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3381.802187688229!2d-52.09886752427847!3d-32.04618787396783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95119c8ca601e3b5%3A0x6e27bcfb9264c8c7!2sAv.%20Silva%20Paes%2C%20293%20-%20Centro%2C%20Rio%20Grande%20-%20RS%2C%2096200-340!5e0!3m2!1spt-BR!2sbr!4v1709215000000!5m2!1spt-BR!2sbr",
+							src: "https://maps.google.com/maps?q=Av.%20Silva%20Paes,%20293,%20Rio%20Grande%20-%20RS&t=&z=16&ie=UTF8&iwloc=&output=embed",
 							width: "100%",
 							height: "100%",
 							style: { border: 0 },
@@ -21328,9 +21328,11 @@ function Location() {
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 												"data-uid": "src/components/sections/Location.tsx:65:21",
 												"data-prohibitions": "[]",
-												href: "https://wa.me/5553999998235",
+												href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
+												target: "_blank",
+												rel: "noopener noreferrer",
 												className: "hover:text-gold transition-colors",
-												children: "(53) 99999-8235"
+												children: "(53) 98106-3023"
 											})
 										]
 									})]
@@ -21338,38 +21340,38 @@ function Location() {
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
-							"data-uid": "src/components/sections/Location.tsx:76:13",
+							"data-uid": "src/components/sections/Location.tsx:78:13",
 							"data-prohibitions": "[]",
 							className: "bg-[#1A1A1A] border-border",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-								"data-uid": "src/components/sections/Location.tsx:77:15",
+								"data-uid": "src/components/sections/Location.tsx:79:15",
 								"data-prohibitions": "[]",
 								className: "p-8 flex items-start gap-4",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Location.tsx:78:17",
+									"data-uid": "src/components/sections/Location.tsx:80:17",
 									"data-prohibitions": "[]",
 									className: "bg-gold/10 p-3 rounded-full shrink-0",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, {
-										"data-uid": "src/components/sections/Location.tsx:79:19",
+										"data-uid": "src/components/sections/Location.tsx:81:19",
 										"data-prohibitions": "[editContent]",
 										className: "h-6 w-6 text-gold"
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Location.tsx:81:17",
+									"data-uid": "src/components/sections/Location.tsx:83:17",
 									"data-prohibitions": "[]",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/sections/Location.tsx:82:19",
+										"data-uid": "src/components/sections/Location.tsx:84:19",
 										"data-prohibitions": "[]",
 										className: "text-xl font-bold text-white mb-2",
 										children: "Horário de Atendimento"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Location.tsx:83:19",
+										"data-uid": "src/components/sections/Location.tsx:85:19",
 										"data-prohibitions": "[]",
 										className: "text-foreground/80",
 										children: [
 											"Segunda a Sexta-feira",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-												"data-uid": "src/components/sections/Location.tsx:85:21",
+												"data-uid": "src/components/sections/Location.tsx:87:21",
 												"data-prohibitions": "[editContent]"
 											}),
 											"09:00 às 12:00 e 13:30 às 18:00"
@@ -21493,20 +21495,22 @@ function Footer() {
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									"data-uid": "src/components/Footer.tsx:46:17",
 									"data-prohibitions": "[]",
-									href: "https://wa.me/5553999998235",
+									href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
+									target: "_blank",
+									rel: "noopener noreferrer",
 									className: "text-foreground/70 hover:text-gold text-sm transition-colors",
-									children: "(53) 99999-8235"
+									children: "(53) 98106-3023"
 								})]
 							})]
 						})]
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/Footer.tsx:57:9",
+				"data-uid": "src/components/Footer.tsx:59:9",
 				"data-prohibitions": "[editContent]",
 				className: "pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					"data-uid": "src/components/Footer.tsx:58:11",
+					"data-uid": "src/components/Footer.tsx:60:11",
 					"data-prohibitions": "[editContent]",
 					className: "text-foreground/50 text-xs text-center md:text-left",
 					children: [
@@ -21515,7 +21519,7 @@ function Footer() {
 						" Lucas Morrone Advocacia. Todos os direitos reservados."
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/Footer.tsx:61:11",
+					"data-uid": "src/components/Footer.tsx:63:11",
 					"data-prohibitions": "[]",
 					className: "text-foreground/40 text-xs text-center md:text-right max-w-2xl",
 					children: "As informações contidas neste site possuem caráter estritamente informativo, não configurando promessa de resultados. O exercício da advocacia submete-se ao Código de Ética e Disciplina da OAB."
@@ -21530,7 +21534,7 @@ function FloatingWhatsApp() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 		"data-uid": "src/components/FloatingWhatsApp.tsx:5:5",
 		"data-prohibitions": "[]",
-		href: "https://wa.me/5553999998235?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
+		href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
 		target: "_blank",
 		rel: "noopener noreferrer",
 		className: "fixed bottom-6 right-6 z-50 group",
@@ -21752,4 +21756,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-aDq5Zal0.js.map
+//# sourceMappingURL=index-cywu4QfR.js.map

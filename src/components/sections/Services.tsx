@@ -104,7 +104,7 @@ export default function Services() {
                   asChild
                 >
                   <a
-                    href={`https://wa.me/5553999998235?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`}
+                    href={`https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

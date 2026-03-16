@@ -19,7 +19,7 @@ export default function Location() {
             <CardContent className="p-0 h-[400px] lg:h-full min-h-[400px]">
               <iframe
                 title="Mapa do Escritório"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3381.802187688229!2d-52.09886752427847!3d-32.04618787396783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95119c8ca601e3b5%3A0x6e27bcfb9264c8c7!2sAv.%20Silva%20Paes%2C%20293%20-%20Centro%2C%20Rio%20Grande%20-%20RS%2C%2096200-340!5e0!3m2!1spt-BR!2sbr!4v1709215000000!5m2!1spt-BR!2sbr"
+                src="https://maps.google.com/maps?q=Av.%20Silva%20Paes,%20293,%20Rio%20Grande%20-%20RS&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -63,10 +63,12 @@ export default function Location() {
                   <p className="text-foreground/80 mb-1">
                     WhatsApp:{' '}
                     <a
-                      href="https://wa.me/5553999998235"
+                      href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="hover:text-gold transition-colors"
                     >
-                      (53) 99999-8235
+                      (53) 98106-3023
                     </a>
                   </p>
                 </div>
