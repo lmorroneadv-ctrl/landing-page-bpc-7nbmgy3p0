@@ -36,14 +36,16 @@ const articles = [
 
 export default function Blog() {
   return (
-    <section id="blog" className="py-20 bg-[#151515]">
+    <section id="blog" className="py-24 bg-card border-y border-border/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <BookOpen className="h-10 w-10 text-gold mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Artigos Úteis & <span className="text-gold">Blog</span>
+          <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold/20">
+            <BookOpen className="h-8 w-8 text-gold" strokeWidth={1.5} />
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 font-serif">
+            Artigos Úteis & <span className="text-gold italic">Blog</span>
           </h2>
-          <p className="text-foreground/70 text-lg">
+          <p className="text-foreground/70 text-lg font-light">
             Informações técnicas e atualizadas para ajudar você a entender melhor seus direitos
             previdenciários.
           </p>
@@ -55,12 +57,12 @@ export default function Blog() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-gold/50 transition-colors"
+                className="bg-secondary border border-border/50 rounded-lg px-6 data-[state=open]:border-gold/50 data-[state=open]:shadow-sm transition-all"
               >
-                <AccordionTrigger className="text-left text-lg font-medium hover:text-gold hover:no-underline py-4">
+                <AccordionTrigger className="text-left text-lg font-medium hover:text-gold hover:no-underline py-5 font-serif">
                   {article.title}
                 </AccordionTrigger>
-                <AccordionContent className="text-foreground/80 leading-relaxed text-base pb-6 pt-2">
+                <AccordionContent className="text-foreground/70 leading-relaxed text-base pb-6 pt-2 font-light">
                   {article.content}
                 </AccordionContent>
               </AccordionItem>

@@ -4,49 +4,44 @@ import { Badge } from '@/components/ui/badge'
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <section id="inicio" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/80 via-[#111111]/90 to-[#111111] z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/95 z-10" />
         <img
-          src="https://img.usecurling.com/p/1920/1080?q=law%20office&color=black"
+          src="https://img.usecurling.com/p/1920/1080?q=law%20office&color=blue"
           alt="Escritório de Advocacia"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-40 mix-blend-overlay"
         />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-20">
-        <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center animate-in fade-in slide-in-from-bottom-6 duration-1000">
           <Badge
             variant="outline"
-            className="mb-6 border-gold text-gold px-4 py-1.5 rounded-full flex items-center gap-2 text-sm bg-black/50 backdrop-blur-sm"
+            className="mb-8 border-gold/50 text-gold px-5 py-2 rounded-full flex items-center gap-2 text-sm bg-background/50 backdrop-blur-sm shadow-gold"
           >
             <MapPin size={16} />
             Atendimento presencial em Pelotas e Rio Grande
           </Badge>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
-            Advocacia Previdenciária <span className="text-gold">Especializada</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight font-serif">
+            Lucas Morrone
+            <span className="block text-3xl md:text-5xl lg:text-5xl mt-2 text-gold font-serif italic">
+              Advocacia Especializada
+            </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl">
-            Orientação técnica e análise aprofundada para garantir seus direitos junto ao INSS.
-            Atuação ética e transparente em cada etapa do seu processo.
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mb-8 opacity-70"></div>
+
+          <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl font-light leading-relaxed">
+            Orientação técnica e análise aprofundada para garantir seus direitos junto ao INSS. Uma
+            atuação pautada na ética, transparência e excelência jurídica.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base h-14 px-8"
-              asChild
-            >
-              <a href="#servicos">
-                Conheça nossos serviços <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-gold text-gold hover:bg-gold/10 text-base h-14 px-8"
+              className="bg-gold text-primary-foreground hover:bg-gold/90 text-base h-14 px-8 shadow-gold font-bold"
               asChild
             >
               <a
@@ -54,8 +49,16 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Falar com Advogado
+                Agendar Consulta <ArrowRight className="ml-2 h-5 w-5" />
               </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white/20 text-white hover:bg-white/10 hover:text-white text-base h-14 px-8 backdrop-blur-sm transition-all"
+              asChild
+            >
+              <a href="#servicos">Nossas Áreas de Atuação</a>
             </Button>
           </div>
         </div>

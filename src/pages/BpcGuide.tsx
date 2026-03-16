@@ -17,9 +17,9 @@ export default function BpcGuide() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#111111] text-foreground flex flex-col">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Header />
-      <main className="flex-grow pt-20 md:pt-24 bg-[#111111]" id="bpc-guide-content">
+      <main className="flex-grow pt-20 md:pt-24 bg-background" id="bpc-guide-content">
         <BpcHero />
         <BpcCharacteristics />
         <BpcEligibility />

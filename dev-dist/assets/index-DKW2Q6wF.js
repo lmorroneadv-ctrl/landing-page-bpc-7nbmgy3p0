@@ -19651,13 +19651,11 @@ var Button = import_react.forwardRef(({ className, variant, size, asChild = fals
 });
 Button.displayName = "Button";
 //#endregion
-//#region src/assets/logo-lucas-c1426.png
-var logo_lucas_c1426_default = "/assets/logo-lucas-c1426-zysnTgYz.png";
-//#endregion
 //#region src/components/Header.tsx
 function Header$1() {
 	const [isScrolled, setIsScrolled] = (0, import_react.useState)(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = (0, import_react.useState)(false);
+	const location = useLocation();
 	(0, import_react.useEffect)(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 10);
@@ -19684,99 +19682,134 @@ function Header$1() {
 		},
 		{
 			name: "Guia BPC",
-			href: "/guia-bpc"
+			href: "/guia-bpc",
+			isRoute: true
 		},
 		{
 			name: "Contato",
 			href: "/#contato"
 		}
 	];
+	const isHome = location.pathname === "/";
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
-		"data-uid": "src/components/Header.tsx:28:5",
+		"data-uid": "src/components/Header.tsx:31:5",
 		"data-prohibitions": "[editContent]",
-		className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#111111]/95 backdrop-blur-md shadow-md py-2 border-b border-border/50" : "bg-[#111111] md:bg-transparent py-4"}`,
+		className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-md py-3 border-b border-border/50" : "bg-background md:bg-transparent py-5"}`,
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Header.tsx:35:7",
+			"data-uid": "src/components/Header.tsx:38:7",
 			"data-prohibitions": "[editContent]",
 			className: "container mx-auto px-4 md:px-6 flex items-center justify-between",
 			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-					"data-uid": "src/components/Header.tsx:36:9",
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+					"data-uid": "src/components/Header.tsx:39:9",
 					"data-prohibitions": "[]",
-					href: "/#inicio",
-					className: "flex items-center",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-						"data-uid": "src/components/Header.tsx:37:11",
-						"data-prohibitions": "[editContent]",
-						src: logo_lucas_c1426_default,
-						alt: "Lucas Morrone Advocacia",
-						className: "h-12 w-auto object-contain"
-					})
+					to: "/",
+					className: "flex items-center gap-3 group",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/components/Header.tsx:40:11",
+						"data-prohibitions": "[]",
+						className: "flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded bg-gold/10 border border-gold/30 text-gold group-hover:bg-gold/20 transition-colors shadow-gold",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
+							"data-uid": "src/components/Header.tsx:41:13",
+							"data-prohibitions": "[editContent]",
+							size: 24,
+							strokeWidth: 1.5,
+							className: "md:w-7 md:h-7"
+						})
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/Header.tsx:43:11",
+						"data-prohibitions": "[]",
+						className: "flex flex-col",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"data-uid": "src/components/Header.tsx:44:13",
+							"data-prohibitions": "[]",
+							className: "font-serif text-lg md:text-xl font-bold leading-none tracking-wide text-white",
+							children: "LUCAS MORRONE"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"data-uid": "src/components/Header.tsx:47:13",
+							"data-prohibitions": "[]",
+							className: "text-[9px] md:text-[10px] font-sans tracking-[0.25em] text-gold uppercase mt-1.5",
+							children: "Advocacia"
+						})]
+					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-					"data-uid": "src/components/Header.tsx:41:9",
+					"data-uid": "src/components/Header.tsx:54:9",
 					"data-prohibitions": "[editContent]",
-					className: "hidden lg:flex items-center gap-6",
-					children: [navLinks.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-						"data-uid": "src/components/Header.tsx:43:13",
+					className: "hidden lg:flex items-center gap-7",
+					children: [navLinks.map((link) => link.isRoute ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+						"data-uid": "src/components/Header.tsx:57:15",
 						"data-prohibitions": "[editContent]",
-						href: link.href,
+						to: link.href,
+						className: "text-sm font-medium text-foreground/80 hover:text-gold transition-colors",
+						children: link.name
+					}, link.name) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						"data-uid": "src/components/Header.tsx:65:15",
+						"data-prohibitions": "[editContent]",
+						href: isHome ? link.href : `/${link.href}`,
 						className: "text-sm font-medium text-foreground/80 hover:text-gold transition-colors",
 						children: link.name
 					}, link.name)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-						"data-uid": "src/components/Header.tsx:51:11",
+						"data-uid": "src/components/Header.tsx:74:11",
 						"data-prohibitions": "[]",
 						asChild: true,
-						className: "bg-gold text-[#111111] hover:bg-gold/90 font-bold",
+						className: "bg-gold text-primary-foreground hover:bg-gold/90 font-bold shadow-gold",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-							"data-uid": "src/components/Header.tsx:52:13",
+							"data-uid": "src/components/Header.tsx:78:13",
 							"data-prohibitions": "[]",
 							href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
 							target: "_blank",
 							rel: "noopener noreferrer",
-							children: "WhatsApp"
+							children: "Agendar Consulta"
 						})
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:63:9",
+					"data-uid": "src/components/Header.tsx:89:9",
 					"data-prohibitions": "[editContent]",
-					className: "lg:hidden text-foreground",
+					className: "lg:hidden text-foreground hover:text-gold transition-colors p-2",
 					onClick: () => setIsMobileMenuOpen(!isMobileMenuOpen),
 					children: isMobileMenuOpen ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, {
-						"data-uid": "src/components/Header.tsx:67:31",
+						"data-uid": "src/components/Header.tsx:93:31",
 						"data-prohibitions": "[editContent]",
-						size: 24
+						size: 26
 					}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, {
-						"data-uid": "src/components/Header.tsx:67:49",
+						"data-uid": "src/components/Header.tsx:93:49",
 						"data-prohibitions": "[editContent]",
-						size: 24
+						size: 26
 					})
 				})
 			]
 		}), isMobileMenuOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Header.tsx:73:9",
+			"data-uid": "src/components/Header.tsx:99:9",
 			"data-prohibitions": "[editContent]",
-			className: "lg:hidden absolute top-full left-0 right-0 bg-[#111111] border-b border-border p-4 flex flex-col gap-4 shadow-lg",
-			children: [navLinks.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-				"data-uid": "src/components/Header.tsx:75:13",
+			className: "lg:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-5 flex flex-col gap-5 shadow-lg animate-in slide-in-from-top-2",
+			children: [navLinks.map((link) => link.isRoute ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+				"data-uid": "src/components/Header.tsx:102:15",
 				"data-prohibitions": "[editContent]",
-				href: link.href,
-				className: "text-base font-medium text-foreground/80 hover:text-gold",
+				to: link.href,
+				className: "text-base font-medium text-foreground/80 hover:text-gold transition-colors",
+				onClick: () => setIsMobileMenuOpen(false),
+				children: link.name
+			}, link.name) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+				"data-uid": "src/components/Header.tsx:111:15",
+				"data-prohibitions": "[editContent]",
+				href: isHome ? link.href : `/${link.href}`,
+				className: "text-base font-medium text-foreground/80 hover:text-gold transition-colors",
 				onClick: () => setIsMobileMenuOpen(false),
 				children: link.name
 			}, link.name)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-				"data-uid": "src/components/Header.tsx:84:11",
+				"data-uid": "src/components/Header.tsx:121:11",
 				"data-prohibitions": "[]",
 				asChild: true,
-				className: "w-full bg-gold text-[#111111] hover:bg-gold/90 font-bold mt-2",
+				className: "w-full bg-gold text-primary-foreground hover:bg-gold/90 font-bold mt-2 shadow-gold",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-					"data-uid": "src/components/Header.tsx:85:13",
+					"data-uid": "src/components/Header.tsx:125:13",
 					"data-prohibitions": "[]",
 					href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
 					target: "_blank",
 					rel: "noopener noreferrer",
-					children: "WhatsApp"
+					children: "Agendar Consulta"
 				})
 			})]
 		})]
@@ -19808,7 +19841,7 @@ function Hero() {
 		"data-uid": "src/components/sections/Hero.tsx:7:5",
 		"data-prohibitions": "[]",
 		id: "inicio",
-		className: "relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden",
+		className: "relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/sections/Hero.tsx:8:7",
 			"data-prohibitions": "[]",
@@ -19816,13 +19849,13 @@ function Hero() {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				"data-uid": "src/components/sections/Hero.tsx:9:9",
 				"data-prohibitions": "[editContent]",
-				className: "absolute inset-0 bg-gradient-to-b from-[#111111]/80 via-[#111111]/90 to-[#111111] z-10"
+				className: "absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/95 z-10"
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 				"data-uid": "src/components/sections/Hero.tsx:10:9",
 				"data-prohibitions": "[editContent]",
-				src: "https://img.usecurling.com/p/1920/1080?q=law%20office&color=black",
+				src: "https://img.usecurling.com/p/1920/1080?q=law%20office&color=blue",
 				alt: "Escritório de Advocacia",
-				className: "w-full h-full object-cover opacity-30"
+				className: "w-full h-full object-cover opacity-40 mix-blend-overlay"
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			"data-uid": "src/components/sections/Hero.tsx:17:7",
@@ -19831,13 +19864,13 @@ function Hero() {
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				"data-uid": "src/components/sections/Hero.tsx:18:9",
 				"data-prohibitions": "[]",
-				className: "max-w-3xl mx-auto text-center flex flex-col items-center",
+				className: "max-w-4xl mx-auto text-center flex flex-col items-center animate-in fade-in slide-in-from-bottom-6 duration-1000",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Badge, {
 						"data-uid": "src/components/sections/Hero.tsx:19:11",
 						"data-prohibitions": "[]",
 						variant: "outline",
-						className: "mb-6 border-gold text-gold px-4 py-1.5 rounded-full flex items-center gap-2 text-sm bg-black/50 backdrop-blur-sm",
+						className: "mb-8 border-gold/50 text-gold px-5 py-2 rounded-full flex items-center gap-2 text-sm bg-background/50 backdrop-blur-sm shadow-gold",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
 							"data-uid": "src/components/sections/Hero.tsx:23:13",
 							"data-prohibitions": "[editContent]",
@@ -19847,54 +19880,59 @@ function Hero() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
 						"data-uid": "src/components/sections/Hero.tsx:27:11",
 						"data-prohibitions": "[]",
-						className: "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight",
-						children: ["Advocacia Previdenciária ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/Hero.tsx:28:38",
+						className: "text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight font-serif",
+						children: ["Lucas Morrone", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"data-uid": "src/components/sections/Hero.tsx:29:13",
 							"data-prohibitions": "[]",
-							className: "text-gold",
-							children: "Especializada"
+							className: "block text-3xl md:text-5xl lg:text-5xl mt-2 text-gold font-serif italic",
+							children: "Advocacia Especializada"
 						})]
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/Hero.tsx:31:11",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/components/sections/Hero.tsx:34:11",
 						"data-prohibitions": "[]",
-						className: "text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl",
-						children: "Orientação técnica e análise aprofundada para garantir seus direitos junto ao INSS. Atuação ética e transparente em cada etapa do seu processo."
+						className: "w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mb-8 opacity-70"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						"data-uid": "src/components/sections/Hero.tsx:36:11",
 						"data-prohibitions": "[]",
-						className: "flex flex-col sm:flex-row gap-4 w-full sm:w-auto",
+						className: "text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl font-light leading-relaxed",
+						children: "Orientação técnica e análise aprofundada para garantir seus direitos junto ao INSS. Uma atuação pautada na ética, transparência e excelência jurídica."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/Hero.tsx:41:11",
+						"data-prohibitions": "[]",
+						className: "flex flex-col sm:flex-row gap-5 w-full sm:w-auto",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/sections/Hero.tsx:37:13",
+							"data-uid": "src/components/sections/Hero.tsx:42:13",
 							"data-prohibitions": "[]",
 							size: "lg",
-							className: "bg-primary text-primary-foreground hover:bg-primary/90 text-base h-14 px-8",
+							className: "bg-gold text-primary-foreground hover:bg-gold/90 text-base h-14 px-8 shadow-gold font-bold",
 							asChild: true,
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								"data-uid": "src/components/sections/Hero.tsx:42:15",
+								"data-uid": "src/components/sections/Hero.tsx:47:15",
 								"data-prohibitions": "[]",
-								href: "#servicos",
-								children: ["Conheça nossos serviços ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-									"data-uid": "src/components/sections/Hero.tsx:43:41",
+								href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
+								target: "_blank",
+								rel: "noopener noreferrer",
+								children: ["Agendar Consulta ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+									"data-uid": "src/components/sections/Hero.tsx:52:34",
 									"data-prohibitions": "[editContent]",
 									className: "ml-2 h-5 w-5"
 								})]
 							})
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/sections/Hero.tsx:46:13",
+							"data-uid": "src/components/sections/Hero.tsx:55:13",
 							"data-prohibitions": "[]",
 							size: "lg",
 							variant: "outline",
-							className: "border-gold text-gold hover:bg-gold/10 text-base h-14 px-8",
+							className: "border-white/20 text-white hover:bg-white/10 hover:text-white text-base h-14 px-8 backdrop-blur-sm transition-all",
 							asChild: true,
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/sections/Hero.tsx:52:15",
+								"data-uid": "src/components/sections/Hero.tsx:61:15",
 								"data-prohibitions": "[]",
-								href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
-								target: "_blank",
-								rel: "noopener noreferrer",
-								children: "Falar com Advogado"
+								href: "#servicos",
+								children: "Nossas Áreas de Atuação"
 							})
 						})]
 					})
@@ -19961,7 +19999,8 @@ var services = [
 		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, {
 			"data-uid": "src/components/sections/Services.tsx:8:11",
 			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
+			className: "h-8 w-8 text-gold mb-4",
+			strokeWidth: 1.5
 		}),
 		items: [
 			"Cálculo do tempo de contribuição",
@@ -19975,7 +20014,8 @@ var services = [
 		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
 			"data-uid": "src/components/sections/Services.tsx:18:11",
 			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
+			className: "h-8 w-8 text-gold mb-4",
+			strokeWidth: 1.5
 		}),
 		items: [
 			"Análise de direito adquirido",
@@ -19989,7 +20029,8 @@ var services = [
 		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, {
 			"data-uid": "src/components/sections/Services.tsx:28:11",
 			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
+			className: "h-8 w-8 text-gold mb-4",
+			strokeWidth: 1.5
 		}),
 		items: [
 			"Análise de dependência",
@@ -20003,7 +20044,8 @@ var services = [
 		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldAlert, {
 			"data-uid": "src/components/sections/Services.tsx:38:11",
 			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
+			className: "h-8 w-8 text-gold mb-4",
+			strokeWidth: 1.5
 		}),
 		items: [
 			"Análise de renda e requisitos legais",
@@ -20017,7 +20059,8 @@ var services = [
 		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tractor, {
 			"data-uid": "src/components/sections/Services.tsx:48:11",
 			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
+			className: "h-8 w-8 text-gold mb-4",
+			strokeWidth: 1.5
 		}),
 		items: [
 			"Cálculo urbano + rural atualizado",
@@ -20031,7 +20074,8 @@ var services = [
 		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Activity, {
 			"data-uid": "src/components/sections/Services.tsx:58:11",
 			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
+			className: "h-8 w-8 text-gold mb-4",
+			strokeWidth: 1.5
 		}),
 		items: [
 			"Benefício por Incapacidade Temporária",
@@ -20046,7 +20090,7 @@ function Services() {
 		"data-uid": "src/components/sections/Services.tsx:70:5",
 		"data-prohibitions": "[editContent]",
 		id: "servicos",
-		className: "py-20 bg-[#151515]",
+		className: "py-24 bg-secondary",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/sections/Services.tsx:71:7",
 			"data-prohibitions": "[editContent]",
@@ -20058,66 +20102,72 @@ function Services() {
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 					"data-uid": "src/components/sections/Services.tsx:73:11",
 					"data-prohibitions": "[]",
-					className: "text-3xl md:text-4xl font-bold mb-4",
+					className: "text-3xl md:text-5xl font-bold mb-6 font-serif",
 					children: ["Áreas de ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						"data-uid": "src/components/sections/Services.tsx:74:22",
 						"data-prohibitions": "[]",
-						className: "text-gold",
+						className: "text-gold italic",
 						children: "Atuação"
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					"data-uid": "src/components/sections/Services.tsx:76:11",
 					"data-prohibitions": "[]",
 					className: "text-foreground/70 text-lg",
-					children: "Oferecemos assessoria jurídica especializada para garantir que seus direitos previdenciários sejam respeitados e concedidos de forma correta."
+					children: "Oferecemos assessoria jurídica especializada para garantir que seus direitos previdenciários sejam respeitados e concedidos de forma correta, com o rigor que a lei exige."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/Services.tsx:82:9",
+				"data-uid": "src/components/sections/Services.tsx:83:9",
 				"data-prohibitions": "[editContent]",
-				className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+				className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
 				children: services.map((service, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-					"data-uid": "src/components/sections/Services.tsx:84:13",
+					"data-uid": "src/components/sections/Services.tsx:85:13",
 					"data-prohibitions": "[editContent]",
-					className: "bg-[#1A1A1A] border-border hover:border-gold/50 transition-colors duration-300",
+					className: "bg-card border-border/50 hover:border-gold/50 hover:shadow-gold transition-all duration-300 group",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardHeader, {
-						"data-uid": "src/components/sections/Services.tsx:88:15",
+						"data-uid": "src/components/sections/Services.tsx:89:15",
 						"data-prohibitions": "[editContent]",
-						children: [service.icon, /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
+						className: "pb-4",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							"data-uid": "src/components/sections/Services.tsx:90:17",
 							"data-prohibitions": "[editContent]",
-							className: "text-xl font-bold text-white",
+							className: "group-hover:scale-110 transition-transform duration-300 origin-left",
+							children: service.icon
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
+							"data-uid": "src/components/sections/Services.tsx:93:17",
+							"data-prohibitions": "[editContent]",
+							className: "text-xl font-bold text-white font-serif",
 							children: service.title
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-						"data-uid": "src/components/sections/Services.tsx:92:15",
+						"data-uid": "src/components/sections/Services.tsx:97:15",
 						"data-prohibitions": "[editContent]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-							"data-uid": "src/components/sections/Services.tsx:93:17",
+							"data-uid": "src/components/sections/Services.tsx:98:17",
 							"data-prohibitions": "[editContent]",
-							className: "space-y-3 mb-6",
+							className: "space-y-3 mb-8",
 							children: service.items.map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/sections/Services.tsx:95:21",
+								"data-uid": "src/components/sections/Services.tsx:100:21",
 								"data-prohibitions": "[editContent]",
 								className: "flex items-start text-foreground/80",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-									"data-uid": "src/components/sections/Services.tsx:96:23",
+									"data-uid": "src/components/sections/Services.tsx:101:23",
 									"data-prohibitions": "[editContent]",
-									className: "h-5 w-5 text-gold mr-3 shrink-0 mt-0.5"
+									className: "h-5 w-5 text-gold mr-3 shrink-0 mt-0.5 opacity-80"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Services.tsx:97:23",
+									"data-uid": "src/components/sections/Services.tsx:102:23",
 									"data-prohibitions": "[editContent]",
 									className: "text-sm",
 									children: item
 								})]
 							}, idx))
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/sections/Services.tsx:101:17",
+							"data-uid": "src/components/sections/Services.tsx:106:17",
 							"data-prohibitions": "[]",
 							variant: "outline",
-							className: "w-full border-gold/50 text-gold hover:bg-gold hover:text-[#111111] transition-colors",
+							className: "w-full border-border text-foreground hover:border-gold hover:text-gold hover:bg-gold/5 transition-colors",
 							asChild: true,
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/sections/Services.tsx:106:19",
+								"data-uid": "src/components/sections/Services.tsx:111:19",
 								"data-prohibitions": "[]",
 								href: `https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`,
 								target: "_blank",
@@ -20219,85 +20269,89 @@ function Ebook() {
 		e.preventDefault();
 		if (name.trim() && contact.trim()) setIsSubmitted(true);
 	};
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		"data-uid": "src/components/sections/Ebook.tsx:21:5",
 		"data-prohibitions": "[editContent]",
 		id: "ebook",
-		className: "py-20 bg-[#1A1A1A] border-y border-border/50 overflow-hidden",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/Ebook.tsx:22:7",
+		className: "py-24 bg-card border-y border-border/30 overflow-hidden relative",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/sections/Ebook.tsx:25:7",
+			"data-prohibitions": "[]",
+			className: "absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent opacity-50"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/sections/Ebook.tsx:27:7",
 			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
+			className: "container mx-auto px-4 md:px-6 relative z-10",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Ebook.tsx:23:9",
+				"data-uid": "src/components/sections/Ebook.tsx:28:9",
 				"data-prohibitions": "[editContent]",
 				className: "flex flex-col lg:flex-row items-center gap-12 lg:gap-20",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/Ebook.tsx:25:11",
+					"data-uid": "src/components/sections/Ebook.tsx:29:11",
 					"data-prohibitions": "[]",
 					className: "w-full lg:w-5/12 flex justify-center lg:justify-end",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Ebook.tsx:26:13",
+						"data-uid": "src/components/sections/Ebook.tsx:30:13",
 						"data-prohibitions": "[]",
-						className: "relative w-64 h-80 sm:w-72 sm:h-96 bg-gradient-to-br from-[#2a2a2a] via-[#1a1a1a] to-[#0a0a0a] border border-gold/40 rounded-r-xl rounded-l-sm shadow-[20px_20px_40px_-10px_rgba(0,0,0,0.8),_0_0_20px_rgba(212,175,55,0.15)] flex flex-col items-center justify-center p-6 text-center transform -rotate-2 hover:rotate-0 transition-all duration-500 group",
+						className: "relative w-64 h-80 sm:w-72 sm:h-96 bg-gradient-to-br from-secondary via-background to-secondary border border-border rounded-r-xl rounded-l-sm shadow-[20px_20px_40px_-10px_rgba(0,0,0,0.5),_0_0_20px_rgba(212,175,55,0.1)] flex flex-col items-center justify-center p-8 text-center transform -rotate-2 hover:rotate-0 transition-all duration-500 group",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:27:15",
+								"data-uid": "src/components/sections/Ebook.tsx:31:15",
 								"data-prohibitions": "[]",
-								className: "absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10 rounded-l-sm"
+								className: "absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-background/90 via-background/40 to-transparent z-10 rounded-l-sm"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:28:15",
+								"data-uid": "src/components/sections/Ebook.tsx:32:15",
 								"data-prohibitions": "[]",
-								className: "absolute left-6 top-0 bottom-0 w-[1px] bg-white/10 z-10"
+								className: "absolute left-6 top-0 bottom-0 w-[1px] bg-white/5 z-10"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:29:15",
+								"data-uid": "src/components/sections/Ebook.tsx:33:15",
 								"data-prohibitions": "[]",
 								className: "absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10 rounded-r-xl rounded-l-sm"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:31:15",
+								"data-uid": "src/components/sections/Ebook.tsx:35:15",
 								"data-prohibitions": "[]",
 								className: "relative z-20 flex flex-col items-center h-full w-full",
 								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
-										"data-uid": "src/components/sections/Ebook.tsx:32:17",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
+										"data-uid": "src/components/sections/Ebook.tsx:36:17",
 										"data-prohibitions": "[editContent]",
-										className: "w-12 h-12 sm:w-16 sm:h-16 text-gold mb-6 mt-4 group-hover:scale-110 transition-transform duration-500"
+										className: "w-12 h-12 sm:w-14 sm:h-14 text-gold mb-6 mt-4 group-hover:scale-110 transition-transform duration-500 stroke-[1.5]"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/sections/Ebook.tsx:33:17",
+										"data-uid": "src/components/sections/Ebook.tsx:37:17",
 										"data-prohibitions": "[]",
-										className: "text-sm sm:text-base font-bold text-white mb-2 uppercase tracking-widest text-gold/80",
-										children: "Guia Gratuito"
+										className: "text-sm sm:text-xs font-bold text-white mb-2 uppercase tracking-widest text-gold/80",
+										children: "Guia Jurídico Gratuito"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-										"data-uid": "src/components/sections/Ebook.tsx:36:17",
+										"data-uid": "src/components/sections/Ebook.tsx:40:17",
 										"data-prohibitions": "[]",
-										className: "text-2xl sm:text-3xl font-black text-white mb-4 leading-tight",
+										className: "text-2xl sm:text-3xl font-serif font-bold text-white mb-4 leading-tight",
 										children: [
-											"TUDO SOBRE",
+											"Tudo Sobre",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-												"data-uid": "src/components/sections/Ebook.tsx:38:19",
+												"data-uid": "src/components/sections/Ebook.tsx:42:19",
 												"data-prohibitions": "[editContent]"
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												"data-uid": "src/components/sections/Ebook.tsx:39:19",
+												"data-uid": "src/components/sections/Ebook.tsx:43:19",
 												"data-prohibitions": "[]",
-												className: "text-gold",
+												className: "text-gold italic",
 												children: "BPC/LOAS"
 											})
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/Ebook.tsx:42:17",
+										"data-uid": "src/components/sections/Ebook.tsx:46:17",
 										"data-prohibitions": "[]",
 										className: "mt-auto pt-6 border-t border-gold/20 w-full",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											"data-uid": "src/components/sections/Ebook.tsx:43:19",
+											"data-uid": "src/components/sections/Ebook.tsx:47:19",
 											"data-prohibitions": "[]",
-											className: "text-[10px] sm:text-xs text-foreground/60 uppercase tracking-widest",
+											className: "text-[10px] text-foreground/50 uppercase tracking-[0.2em] font-sans",
 											children: "Lucas Morrone Advocacia"
 										})
 									})
@@ -20306,161 +20360,161 @@ function Ebook() {
 						]
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/Ebook.tsx:52:11",
+					"data-uid": "src/components/sections/Ebook.tsx:55:11",
 					"data-prohibitions": "[editContent]",
 					className: "w-full lg:w-7/12 max-w-2xl",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-							"data-uid": "src/components/sections/Ebook.tsx:53:13",
+							"data-uid": "src/components/sections/Ebook.tsx:56:13",
 							"data-prohibitions": "[]",
-							className: "text-3xl md:text-4xl font-bold mb-4 text-white",
+							className: "text-3xl md:text-5xl font-bold mb-6 text-white font-serif",
 							children: [
 								"Acesse nosso Guia Gratuito: ",
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-									"data-uid": "src/components/sections/Ebook.tsx:54:43",
+									"data-uid": "src/components/sections/Ebook.tsx:57:43",
 									"data-prohibitions": "[editContent]",
 									className: "hidden md:block"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Ebook.tsx:55:15",
+									"data-uid": "src/components/sections/Ebook.tsx:58:15",
 									"data-prohibitions": "[]",
-									className: "text-gold",
+									className: "text-gold italic",
 									children: "Tudo sobre BPC/LOAS"
 								})
 							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/sections/Ebook.tsx:57:13",
+							"data-uid": "src/components/sections/Ebook.tsx:60:13",
 							"data-prohibitions": "[]",
-							className: "text-lg text-foreground/80 mb-8",
-							children: "Entenda seus direitos e aprenda como solicitar o benefício de forma correta com o nosso conteúdo exclusivo e detalhado."
+							className: "text-lg text-foreground/80 mb-8 font-light",
+							children: "Entenda seus direitos e aprenda como solicitar o benefício de forma correta com o nosso conteúdo exclusivo e detalhado, elaborado por especialistas."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Ebook.tsx:62:13",
+							"data-uid": "src/components/sections/Ebook.tsx:65:13",
 							"data-prohibitions": "[editContent]",
-							className: "mb-8 space-y-3",
+							className: "mb-10 space-y-4",
 							children: [
-								"Requisitos atualizados",
-								"Documentação necessária",
-								"Erros comuns no pedido"
+								"Requisitos legais atualizados",
+								"Documentação probatória necessária",
+								"Erros comuns a evitar no INSS"
 							].map((benefit, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:65:19",
+								"data-uid": "src/components/sections/Ebook.tsx:71:17",
 								"data-prohibitions": "[editContent]",
 								className: "flex items-center",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:66:21",
+									"data-uid": "src/components/sections/Ebook.tsx:72:19",
 									"data-prohibitions": "[]",
-									className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3",
+									className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center mr-4",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-										"data-uid": "src/components/sections/Ebook.tsx:67:23",
+										"data-uid": "src/components/sections/Ebook.tsx:73:21",
 										"data-prohibitions": "[editContent]",
 										className: "h-3.5 w-3.5 text-gold"
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Ebook.tsx:69:21",
+									"data-uid": "src/components/sections/Ebook.tsx:75:19",
 									"data-prohibitions": "[editContent]",
-									className: "text-foreground/90 font-medium text-base md:text-lg",
+									className: "text-foreground/90 font-medium text-base",
 									children: benefit
 								})]
 							}, idx))
 						}),
 						!isSubmitted ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
-							"data-uid": "src/components/sections/Ebook.tsx:78:15",
+							"data-uid": "src/components/sections/Ebook.tsx:81:15",
 							"data-prohibitions": "[]",
 							onSubmit: handleSubmit,
-							className: "space-y-5 bg-[#111111] p-6 sm:p-8 rounded-xl border border-border/50 shadow-lg",
+							className: "space-y-5 bg-background p-6 sm:p-8 rounded-xl border border-border/50 shadow-lg",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:82:17",
+									"data-uid": "src/components/sections/Ebook.tsx:85:17",
 									"data-prohibitions": "[]",
 									className: "space-y-2",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
-										"data-uid": "src/components/sections/Ebook.tsx:83:19",
+										"data-uid": "src/components/sections/Ebook.tsx:86:19",
 										"data-prohibitions": "[]",
 										htmlFor: "name",
-										className: "text-foreground/80",
+										className: "text-foreground/80 font-medium",
 										children: "Nome Completo"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-										"data-uid": "src/components/sections/Ebook.tsx:86:19",
+										"data-uid": "src/components/sections/Ebook.tsx:89:19",
 										"data-prohibitions": "[editContent]",
 										id: "name",
 										value: name,
 										onChange: (e) => setName(e.target.value),
 										placeholder: "Digite seu nome completo",
 										required: true,
-										className: "bg-[#1A1A1A] border-border focus-visible:ring-gold h-12"
+										className: "bg-secondary border-border focus-visible:ring-gold h-12"
 									})]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:95:17",
+									"data-uid": "src/components/sections/Ebook.tsx:98:17",
 									"data-prohibitions": "[]",
 									className: "space-y-2",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
-										"data-uid": "src/components/sections/Ebook.tsx:96:19",
+										"data-uid": "src/components/sections/Ebook.tsx:99:19",
 										"data-prohibitions": "[]",
 										htmlFor: "contact",
-										className: "text-foreground/80",
+										className: "text-foreground/80 font-medium",
 										children: "WhatsApp ou E-mail"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-										"data-uid": "src/components/sections/Ebook.tsx:99:19",
+										"data-uid": "src/components/sections/Ebook.tsx:102:19",
 										"data-prohibitions": "[editContent]",
 										id: "contact",
 										value: contact,
 										onChange: (e) => setContact(e.target.value),
 										placeholder: "Seu melhor contato",
 										required: true,
-										className: "bg-[#1A1A1A] border-border focus-visible:ring-gold h-12"
+										className: "bg-secondary border-border focus-visible:ring-gold h-12"
 									})]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									"data-uid": "src/components/sections/Ebook.tsx:108:17",
+									"data-uid": "src/components/sections/Ebook.tsx:111:17",
 									"data-prohibitions": "[]",
 									type: "submit",
-									className: "w-full bg-gold hover:bg-gold/90 text-[#111111] font-bold h-14 mt-4 transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] text-sm sm:text-base",
-									children: "QUERO ACESSAR O GUIA AGORA"
+									className: "w-full bg-gold hover:bg-gold/90 text-primary-foreground font-bold h-14 mt-4 transition-all duration-300 shadow-gold",
+									children: "ACESSAR O GUIA AGORA"
 								})
 							]
 						}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Ebook.tsx:116:15",
+							"data-uid": "src/components/sections/Ebook.tsx:119:15",
 							"data-prohibitions": "[]",
-							className: "bg-[#111111] p-8 sm:p-10 rounded-xl border border-gold/30 shadow-[0_0_30px_rgba(212,175,55,0.1)] text-center animate-in fade-in slide-in-from-bottom-4 duration-500",
+							className: "bg-background p-8 sm:p-10 rounded-xl border border-gold/30 shadow-gold text-center animate-in fade-in slide-in-from-bottom-4 duration-500",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:117:17",
+									"data-uid": "src/components/sections/Ebook.tsx:120:17",
 									"data-prohibitions": "[]",
-									className: "w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6",
+									className: "w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold/20",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-										"data-uid": "src/components/sections/Ebook.tsx:118:19",
+										"data-uid": "src/components/sections/Ebook.tsx:121:19",
 										"data-prohibitions": "[editContent]",
 										className: "w-8 h-8 text-gold"
 									})
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									"data-uid": "src/components/sections/Ebook.tsx:120:17",
+									"data-uid": "src/components/sections/Ebook.tsx:123:17",
 									"data-prohibitions": "[]",
-									className: "text-2xl font-bold text-white mb-3",
+									className: "text-2xl font-bold text-white mb-3 font-serif",
 									children: "Tudo Certo!"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/Ebook.tsx:121:17",
+									"data-uid": "src/components/sections/Ebook.tsx:124:17",
 									"data-prohibitions": "[]",
-									className: "text-foreground/80 mb-8 text-lg",
+									className: "text-foreground/80 mb-8 text-lg font-light",
 									children: "Seu guia está pronto para acesso. Clique no botão abaixo para ler todo o material agora mesmo em nosso site."
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									"data-uid": "src/components/sections/Ebook.tsx:125:17",
+									"data-uid": "src/components/sections/Ebook.tsx:128:17",
 									"data-prohibitions": "[]",
 									asChild: true,
-									className: "w-full sm:w-auto bg-gold hover:bg-gold/90 text-[#111111] font-bold h-14 px-8 text-base",
+									className: "w-full sm:w-auto bg-gold hover:bg-gold/90 text-primary-foreground font-bold h-14 px-8 text-base shadow-gold",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-										"data-uid": "src/components/sections/Ebook.tsx:129:19",
+										"data-uid": "src/components/sections/Ebook.tsx:132:19",
 										"data-prohibitions": "[]",
 										to: "/guia-bpc",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
-											"data-uid": "src/components/sections/Ebook.tsx:130:21",
+											"data-uid": "src/components/sections/Ebook.tsx:133:21",
 											"data-prohibitions": "[editContent]",
 											className: "mr-2 h-5 w-5"
-										}), " Acessar Guia Completo Agora"]
+										}), " Acessar Guia Completo"]
 									})
 								})
 							]
@@ -20468,7 +20522,7 @@ function Ebook() {
 					]
 				})]
 			})
-		})
+		})]
 	});
 }
 //#endregion
@@ -20481,7 +20535,7 @@ function Biography() {
 		"data-uid": "src/components/sections/Biography.tsx:6:5",
 		"data-prohibitions": "[editContent]",
 		id: "quem-sou",
-		className: "py-20 bg-[#111111]",
+		className: "py-24 bg-background",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			"data-uid": "src/components/sections/Biography.tsx:7:7",
 			"data-prohibitions": "[editContent]",
@@ -20489,7 +20543,7 @@ function Biography() {
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				"data-uid": "src/components/sections/Biography.tsx:8:9",
 				"data-prohibitions": "[editContent]",
-				className: "flex flex-col lg:flex-row items-center gap-12 lg:gap-20",
+				className: "flex flex-col lg:flex-row items-center gap-16 lg:gap-24",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					"data-uid": "src/components/sections/Biography.tsx:9:11",
 					"data-prohibitions": "[]",
@@ -20498,73 +20552,81 @@ function Biography() {
 						"data-uid": "src/components/sections/Biography.tsx:10:13",
 						"data-prohibitions": "[]",
 						className: "relative mx-auto max-w-md",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:11:15",
-							"data-prohibitions": "[]",
-							className: "absolute inset-0 bg-gold rounded-xl rotate-3 scale-105 opacity-20"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							"data-uid": "src/components/sections/Biography.tsx:12:15",
-							"data-prohibitions": "[editContent]",
-							src: perfil_20_6d6d4_default,
-							alt: "Lucas Morrone Costa",
-							className: "relative z-10 w-full h-auto rounded-xl border-2 border-gold object-cover shadow-2xl"
-						})]
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Biography.tsx:11:15",
+								"data-prohibitions": "[]",
+								className: "absolute -inset-4 bg-gold rounded-xl rotate-3 scale-105 opacity-10 blur-lg"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Biography.tsx:12:15",
+								"data-prohibitions": "[]",
+								className: "absolute inset-0 bg-gradient-to-tr from-gold/20 to-transparent rounded-xl rotate-2"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+								"data-uid": "src/components/sections/Biography.tsx:13:15",
+								"data-prohibitions": "[editContent]",
+								src: perfil_20_6d6d4_default,
+								alt: "Lucas Morrone Costa",
+								className: "relative z-10 w-full h-auto rounded-xl border border-border/50 object-cover shadow-2xl"
+							})
+						]
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/Biography.tsx:20:11",
+					"data-uid": "src/components/sections/Biography.tsx:21:11",
 					"data-prohibitions": "[editContent]",
 					className: "w-full lg:w-7/12",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:21:13",
+							"data-uid": "src/components/sections/Biography.tsx:22:13",
 							"data-prohibitions": "[]",
-							className: "inline-block px-3 py-1 bg-gold/10 border border-gold/30 text-gold text-sm font-medium rounded-full mb-6",
+							className: "inline-block px-4 py-1.5 bg-secondary border border-border/50 text-gold text-sm font-medium rounded-full mb-8 tracking-wide",
 							children: "OAB/RS 107485"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							"data-uid": "src/components/sections/Biography.tsx:24:13",
+							"data-uid": "src/components/sections/Biography.tsx:25:13",
 							"data-prohibitions": "[]",
-							className: "text-3xl md:text-4xl font-bold mb-6 text-white",
+							className: "text-3xl md:text-5xl font-bold mb-8 text-white font-serif",
 							children: "Lucas Morrone Costa"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:26:13",
+							"data-uid": "src/components/sections/Biography.tsx:29:13",
 							"data-prohibitions": "[]",
-							className: "space-y-4 text-lg text-foreground/80 mb-8",
+							className: "space-y-5 text-lg text-foreground/80 mb-10 font-light leading-relaxed",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:27:15",
+								"data-uid": "src/components/sections/Biography.tsx:30:15",
 								"data-prohibitions": "[]",
 								children: "Sou o advogado Lucas Morrone Costa, especialista em Direito Previdenciário. Atendo presencialmente e online, oferecendo análise técnica precisa e orientação personalizada para cada cliente."
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:32:15",
+								"data-uid": "src/components/sections/Biography.tsx:35:15",
 								"data-prohibitions": "[]",
-								children: "Meu objetivo é proporcionar segurança jurídica, garantindo que todos os direitos dos segurados sejam rigorosamente respeitados pelo INSS, com total transparência em cada etapa do processo."
+								children: "Meu objetivo é proporcionar segurança jurídica, garantindo que todos os direitos dos segurados sejam rigorosamente respeitados pelo INSS, com total transparência e excelência em cada etapa do processo."
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:39:13",
+							"data-uid": "src/components/sections/Biography.tsx:42:13",
 							"data-prohibitions": "[editContent]",
-							className: "grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8",
+							className: "grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10",
 							children: [
 								"Atendimento Especializado",
 								"Análise Técnica Aprofundada",
 								"Atuação Ética e Transparente",
 								"Foco no Direito do Segurado"
 							].map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Biography.tsx:46:17",
+								"data-uid": "src/components/sections/Biography.tsx:49:17",
 								"data-prohibitions": "[editContent]",
 								className: "flex items-center",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Biography.tsx:47:19",
+									"data-uid": "src/components/sections/Biography.tsx:50:19",
 									"data-prohibitions": "[]",
-									className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3",
+									className: "flex-shrink-0 w-6 h-6 rounded bg-gold/10 border border-gold/20 flex items-center justify-center mr-4",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-										"data-uid": "src/components/sections/Biography.tsx:48:21",
+										"data-uid": "src/components/sections/Biography.tsx:51:21",
 										"data-prohibitions": "[editContent]",
 										className: "h-3.5 w-3.5 text-gold"
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Biography.tsx:50:19",
+									"data-uid": "src/components/sections/Biography.tsx:53:19",
 									"data-prohibitions": "[editContent]",
 									className: "text-foreground/90 font-medium",
 									children: item
@@ -20572,18 +20634,18 @@ function Biography() {
 							}, idx))
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:55:13",
+							"data-uid": "src/components/sections/Biography.tsx:58:13",
 							"data-prohibitions": "[]",
-							className: "bg-[#1A1A1A] border-l-4 border-gold p-6 rounded-r-lg shadow-md",
+							className: "bg-card border-l-4 border-gold p-6 rounded-r-lg shadow-sm",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-								"data-uid": "src/components/sections/Biography.tsx:56:15",
-								"data-prohibitions": "[]",
-								className: "text-gold font-semibold mb-2 text-sm uppercase tracking-wider",
-								children: "Nota Importante"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								"data-uid": "src/components/sections/Biography.tsx:59:15",
 								"data-prohibitions": "[]",
-								className: "text-sm text-foreground/70 italic leading-relaxed",
+								className: "text-gold font-semibold mb-2 text-xs uppercase tracking-widest",
+								children: "Nota Importante"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/components/sections/Biography.tsx:62:15",
+								"data-prohibitions": "[]",
+								className: "text-sm text-foreground/60 italic leading-relaxed",
 								children: "Até 2023 utilizei o nome Lucas Moran Costa. A atualização para Lucas Morrone Costa já está presente em todos os meus registros oficiais. Documentos ou referências anteriores em nome de Lucas Moran Costa correspondem ao mesmo profissional, inscrito na OAB/RS 107485."
 							})]
 						})
@@ -20616,7 +20678,7 @@ function SocialProof() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		"data-uid": "src/components/sections/SocialProof.tsx:24:5",
 		"data-prohibitions": "[editContent]",
-		className: "py-20 bg-[#151515]",
+		className: "py-24 bg-secondary",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/sections/SocialProof.tsx:25:7",
 			"data-prohibitions": "[editContent]",
@@ -20624,21 +20686,21 @@ function SocialProof() {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				"data-uid": "src/components/sections/SocialProof.tsx:26:9",
 				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16",
+				className: "text-center max-w-3xl mx-auto mb-20",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 					"data-uid": "src/components/sections/SocialProof.tsx:27:11",
 					"data-prohibitions": "[]",
-					className: "text-3xl md:text-4xl font-bold mb-4",
+					className: "text-3xl md:text-5xl font-bold mb-6 font-serif",
 					children: ["O que dizem nossos ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						"data-uid": "src/components/sections/SocialProof.tsx:28:32",
 						"data-prohibitions": "[]",
-						className: "text-gold",
+						className: "text-gold italic",
 						children: "Clientes"
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					"data-uid": "src/components/sections/SocialProof.tsx:30:11",
 					"data-prohibitions": "[]",
-					className: "text-foreground/70 text-lg",
+					className: "text-foreground/70 text-lg font-light",
 					children: "O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de seus direitos."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -20648,35 +20710,36 @@ function SocialProof() {
 				children: testimonials.map((testimonial, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
 					"data-uid": "src/components/sections/SocialProof.tsx:38:13",
 					"data-prohibitions": "[editContent]",
-					className: "bg-[#1A1A1A] border-border relative mt-6",
+					className: "bg-card border-border/50 relative mt-6 hover:border-gold/30 transition-colors",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/SocialProof.tsx:39:15",
+						"data-uid": "src/components/sections/SocialProof.tsx:42:15",
 						"data-prohibitions": "[]",
-						className: "absolute -top-6 left-6 bg-gold rounded-full p-3 shadow-lg",
+						className: "absolute -top-6 left-8 bg-gold rounded-full p-3 shadow-gold",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Quote, {
-							"data-uid": "src/components/sections/SocialProof.tsx:40:17",
+							"data-uid": "src/components/sections/SocialProof.tsx:43:17",
 							"data-prohibitions": "[editContent]",
-							className: "h-6 w-6 text-[#111111]"
+							className: "h-6 w-6 text-primary-foreground",
+							fill: "currentColor"
 						})
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-						"data-uid": "src/components/sections/SocialProof.tsx:42:15",
+						"data-uid": "src/components/sections/SocialProof.tsx:45:15",
 						"data-prohibitions": "[editContent]",
-						className: "pt-10 pb-8 px-6",
+						className: "pt-12 pb-8 px-8",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/SocialProof.tsx:43:17",
+								"data-uid": "src/components/sections/SocialProof.tsx:46:17",
 								"data-prohibitions": "[editContent]",
-								className: "flex mb-4",
+								className: "flex mb-6",
 								children: [...Array(5)].map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, {
-									"data-uid": "src/components/sections/SocialProof.tsx:45:21",
+									"data-uid": "src/components/sections/SocialProof.tsx:48:21",
 									"data-prohibitions": "[editContent]",
-									className: "h-4 w-4 text-gold fill-gold"
+									className: "h-4 w-4 text-gold fill-gold mr-1"
 								}, i))
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								"data-uid": "src/components/sections/SocialProof.tsx:48:17",
+								"data-uid": "src/components/sections/SocialProof.tsx:51:17",
 								"data-prohibitions": "[editContent]",
-								className: "text-foreground/80 italic mb-6 leading-relaxed",
+								className: "text-foreground/80 italic mb-8 leading-relaxed font-light",
 								children: [
 									"\"",
 									testimonial.text,
@@ -20684,17 +20747,18 @@ function SocialProof() {
 								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/SocialProof.tsx:51:17",
+								"data-uid": "src/components/sections/SocialProof.tsx:54:17",
 								"data-prohibitions": "[editContent]",
+								className: "pt-6 border-t border-border/50",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-									"data-uid": "src/components/sections/SocialProof.tsx:52:19",
+									"data-uid": "src/components/sections/SocialProof.tsx:55:19",
 									"data-prohibitions": "[editContent]",
-									className: "font-bold text-white text-lg",
+									className: "font-bold text-white text-lg font-serif",
 									children: testimonial.name
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/SocialProof.tsx:53:19",
+									"data-uid": "src/components/sections/SocialProof.tsx:56:19",
 									"data-prohibitions": "[editContent]",
-									className: "text-gold text-sm",
+									className: "text-gold text-sm mt-1",
 									children: testimonial.role
 								})]
 							})
@@ -21574,7 +21638,7 @@ function Blog() {
 		"data-uid": "src/components/sections/Blog.tsx:39:5",
 		"data-prohibitions": "[editContent]",
 		id: "blog",
-		className: "py-20 bg-[#151515]",
+		className: "py-24 bg-card border-y border-border/30",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/sections/Blog.tsx:40:7",
 			"data-prohibitions": "[editContent]",
@@ -21584,53 +21648,59 @@ function Blog() {
 				"data-prohibitions": "[]",
 				className: "text-center max-w-3xl mx-auto mb-16",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						"data-uid": "src/components/sections/Blog.tsx:42:11",
-						"data-prohibitions": "[editContent]",
-						className: "h-10 w-10 text-gold mx-auto mb-4"
+						"data-prohibitions": "[]",
+						className: "w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold/20",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
+							"data-uid": "src/components/sections/Blog.tsx:43:13",
+							"data-prohibitions": "[editContent]",
+							className: "h-8 w-8 text-gold",
+							strokeWidth: 1.5
+						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						"data-uid": "src/components/sections/Blog.tsx:43:11",
+						"data-uid": "src/components/sections/Blog.tsx:45:11",
 						"data-prohibitions": "[]",
-						className: "text-3xl md:text-4xl font-bold mb-4",
+						className: "text-3xl md:text-5xl font-bold mb-6 font-serif",
 						children: ["Artigos Úteis & ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/Blog.tsx:44:29",
+							"data-uid": "src/components/sections/Blog.tsx:46:29",
 							"data-prohibitions": "[]",
-							className: "text-gold",
+							className: "text-gold italic",
 							children: "Blog"
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/Blog.tsx:46:11",
+						"data-uid": "src/components/sections/Blog.tsx:48:11",
 						"data-prohibitions": "[]",
-						className: "text-foreground/70 text-lg",
+						className: "text-foreground/70 text-lg font-light",
 						children: "Informações técnicas e atualizadas para ajudar você a entender melhor seus direitos previdenciários."
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/Blog.tsx:52:9",
+				"data-uid": "src/components/sections/Blog.tsx:54:9",
 				"data-prohibitions": "[editContent]",
 				className: "max-w-3xl mx-auto",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-					"data-uid": "src/components/sections/Blog.tsx:53:11",
+					"data-uid": "src/components/sections/Blog.tsx:55:11",
 					"data-prohibitions": "[editContent]",
 					type: "single",
 					collapsible: true,
 					className: "w-full space-y-4",
 					children: articles.map((article, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-						"data-uid": "src/components/sections/Blog.tsx:55:15",
+						"data-uid": "src/components/sections/Blog.tsx:57:15",
 						"data-prohibitions": "[editContent]",
 						value: `item-${index}`,
-						className: "bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-gold/50 transition-colors",
+						className: "bg-secondary border border-border/50 rounded-lg px-6 data-[state=open]:border-gold/50 data-[state=open]:shadow-sm transition-all",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-							"data-uid": "src/components/sections/Blog.tsx:60:17",
+							"data-uid": "src/components/sections/Blog.tsx:62:17",
 							"data-prohibitions": "[editContent]",
-							className: "text-left text-lg font-medium hover:text-gold hover:no-underline py-4",
+							className: "text-left text-lg font-medium hover:text-gold hover:no-underline py-5 font-serif",
 							children: article.title
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-							"data-uid": "src/components/sections/Blog.tsx:63:17",
+							"data-uid": "src/components/sections/Blog.tsx:65:17",
 							"data-prohibitions": "[editContent]",
-							className: "text-foreground/80 leading-relaxed text-base pb-6 pt-2",
+							className: "text-foreground/70 leading-relaxed text-base pb-6 pt-2 font-light",
 							children: article.content
 						})]
 					}, index))
@@ -21668,7 +21738,7 @@ function FAQ() {
 		"data-uid": "src/components/sections/FAQ.tsx:39:5",
 		"data-prohibitions": "[editContent]",
 		id: "faq",
-		className: "py-20 bg-[#111111]",
+		className: "py-24 bg-background",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/sections/FAQ.tsx:40:7",
 			"data-prohibitions": "[editContent]",
@@ -21678,53 +21748,59 @@ function FAQ() {
 				"data-prohibitions": "[]",
 				className: "text-center max-w-3xl mx-auto mb-16",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						"data-uid": "src/components/sections/FAQ.tsx:42:11",
-						"data-prohibitions": "[editContent]",
-						className: "h-10 w-10 text-gold mx-auto mb-4"
+						"data-prohibitions": "[]",
+						className: "w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold/20",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, {
+							"data-uid": "src/components/sections/FAQ.tsx:43:13",
+							"data-prohibitions": "[editContent]",
+							className: "h-8 w-8 text-gold",
+							strokeWidth: 1.5
+						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						"data-uid": "src/components/sections/FAQ.tsx:43:11",
+						"data-uid": "src/components/sections/FAQ.tsx:45:11",
 						"data-prohibitions": "[]",
-						className: "text-3xl md:text-4xl font-bold mb-4",
+						className: "text-3xl md:text-5xl font-bold mb-6 font-serif",
 						children: ["Dúvidas ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/FAQ.tsx:44:21",
+							"data-uid": "src/components/sections/FAQ.tsx:46:21",
 							"data-prohibitions": "[]",
-							className: "text-gold",
+							className: "text-gold italic",
 							children: "Frequentes"
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/FAQ.tsx:46:11",
+						"data-uid": "src/components/sections/FAQ.tsx:48:11",
 						"data-prohibitions": "[]",
-						className: "text-foreground/70 text-lg",
+						className: "text-foreground/70 text-lg font-light",
 						children: "Respostas claras e diretas para as questões mais comuns sobre direito previdenciário."
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/FAQ.tsx:51:9",
+				"data-uid": "src/components/sections/FAQ.tsx:53:9",
 				"data-prohibitions": "[editContent]",
 				className: "max-w-3xl mx-auto",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-					"data-uid": "src/components/sections/FAQ.tsx:52:11",
+					"data-uid": "src/components/sections/FAQ.tsx:54:11",
 					"data-prohibitions": "[editContent]",
 					type: "single",
 					collapsible: true,
 					className: "w-full space-y-4",
 					children: faqs$1.map((faq, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-						"data-uid": "src/components/sections/FAQ.tsx:54:15",
+						"data-uid": "src/components/sections/FAQ.tsx:56:15",
 						"data-prohibitions": "[editContent]",
 						value: `faq-${index}`,
-						className: "bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-gold/50 transition-colors",
+						className: "bg-secondary border border-border/50 rounded-lg px-6 data-[state=open]:border-gold/50 data-[state=open]:shadow-sm transition-all",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-							"data-uid": "src/components/sections/FAQ.tsx:59:17",
+							"data-uid": "src/components/sections/FAQ.tsx:61:17",
 							"data-prohibitions": "[editContent]",
-							className: "text-left text-lg font-medium hover:text-gold hover:no-underline py-4",
+							className: "text-left text-lg font-medium hover:text-gold hover:no-underline py-5 font-serif",
 							children: faq.question
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-							"data-uid": "src/components/sections/FAQ.tsx:62:17",
+							"data-uid": "src/components/sections/FAQ.tsx:64:17",
 							"data-prohibitions": "[editContent]",
-							className: "text-foreground/80 leading-relaxed text-base pb-6 pt-2",
+							className: "text-foreground/70 leading-relaxed text-base pb-6 pt-2 font-light",
 							children: faq.answer
 						})]
 					}, index))
@@ -21740,7 +21816,7 @@ function Location() {
 		"data-uid": "src/components/sections/Location.tsx:6:5",
 		"data-prohibitions": "[]",
 		id: "contato",
-		className: "py-20 bg-[#111111]",
+		className: "py-24 bg-secondary",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/sections/Location.tsx:7:7",
 			"data-prohibitions": "[]",
@@ -21752,17 +21828,17 @@ function Location() {
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 					"data-uid": "src/components/sections/Location.tsx:9:11",
 					"data-prohibitions": "[]",
-					className: "text-3xl md:text-4xl font-bold mb-4",
+					className: "text-3xl md:text-5xl font-bold mb-6 font-serif",
 					children: ["Localização & ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						"data-uid": "src/components/sections/Location.tsx:10:27",
 						"data-prohibitions": "[]",
-						className: "text-gold",
+						className: "text-gold italic",
 						children: "Contato"
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					"data-uid": "src/components/sections/Location.tsx:12:11",
 					"data-prohibitions": "[]",
-					className: "text-foreground/70 text-lg",
+					className: "text-foreground/70 text-lg font-light",
 					children: "Atendimento presencial em nossa sede em Rio Grande e em Pelotas mediante agendamento."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -21772,7 +21848,7 @@ function Location() {
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
 					"data-uid": "src/components/sections/Location.tsx:18:11",
 					"data-prohibitions": "[]",
-					className: "bg-[#1A1A1A] border-border overflow-hidden h-full",
+					className: "bg-card border-border/50 overflow-hidden h-full shadow-sm",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardContent, {
 						"data-uid": "src/components/sections/Location.tsx:19:13",
 						"data-prohibitions": "[]",
@@ -21799,19 +21875,20 @@ function Location() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
 							"data-uid": "src/components/sections/Location.tsx:35:13",
 							"data-prohibitions": "[]",
-							className: "bg-[#1A1A1A] border-border",
+							className: "bg-card border-border/50 hover:border-gold/30 transition-colors shadow-sm",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
 								"data-uid": "src/components/sections/Location.tsx:36:15",
 								"data-prohibitions": "[]",
-								className: "p-8 flex items-start gap-4",
+								className: "p-8 flex items-start gap-5",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									"data-uid": "src/components/sections/Location.tsx:37:17",
 									"data-prohibitions": "[]",
-									className: "bg-gold/10 p-3 rounded-full shrink-0",
+									className: "bg-gold/10 p-4 rounded-full border border-gold/20 shrink-0",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
 										"data-uid": "src/components/sections/Location.tsx:38:19",
 										"data-prohibitions": "[editContent]",
-										className: "h-6 w-6 text-gold"
+										className: "h-6 w-6 text-gold",
+										strokeWidth: 1.5
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									"data-uid": "src/components/sections/Location.tsx:40:17",
@@ -21820,31 +21897,31 @@ function Location() {
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 											"data-uid": "src/components/sections/Location.tsx:41:19",
 											"data-prohibitions": "[]",
-											className: "text-xl font-bold text-white mb-2",
+											className: "text-xl font-bold text-white mb-3 font-serif",
 											children: "Endereço Principal"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-											"data-uid": "src/components/sections/Location.tsx:42:19",
+											"data-uid": "src/components/sections/Location.tsx:44:19",
 											"data-prohibitions": "[]",
-											className: "text-foreground/80 leading-relaxed",
+											className: "text-foreground/70 leading-relaxed font-light",
 											children: [
 												"Av. Silva Paes, 293",
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-													"data-uid": "src/components/sections/Location.tsx:44:21",
+													"data-uid": "src/components/sections/Location.tsx:46:21",
 													"data-prohibitions": "[editContent]"
 												}),
 												"Centro, Rio Grande - RS",
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-													"data-uid": "src/components/sections/Location.tsx:46:21",
+													"data-uid": "src/components/sections/Location.tsx:48:21",
 													"data-prohibitions": "[editContent]"
 												}),
 												"CEP: 96200-340"
 											]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											"data-uid": "src/components/sections/Location.tsx:49:19",
+											"data-uid": "src/components/sections/Location.tsx:51:19",
 											"data-prohibitions": "[]",
-											className: "mt-3 text-sm text-gold font-medium",
+											className: "mt-4 text-xs text-gold font-medium uppercase tracking-wider",
 											children: "*Atendimento em Pelotas sob agendamento prévio."
 										})
 									]
@@ -21852,44 +21929,45 @@ function Location() {
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
-							"data-uid": "src/components/sections/Location.tsx:56:13",
+							"data-uid": "src/components/sections/Location.tsx:58:13",
 							"data-prohibitions": "[]",
-							className: "bg-[#1A1A1A] border-border",
+							className: "bg-card border-border/50 hover:border-gold/30 transition-colors shadow-sm",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-								"data-uid": "src/components/sections/Location.tsx:57:15",
+								"data-uid": "src/components/sections/Location.tsx:59:15",
 								"data-prohibitions": "[]",
-								className: "p-8 flex items-start gap-4",
+								className: "p-8 flex items-start gap-5",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Location.tsx:58:17",
+									"data-uid": "src/components/sections/Location.tsx:60:17",
 									"data-prohibitions": "[]",
-									className: "bg-gold/10 p-3 rounded-full shrink-0",
+									className: "bg-gold/10 p-4 rounded-full border border-gold/20 shrink-0",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
-										"data-uid": "src/components/sections/Location.tsx:59:19",
+										"data-uid": "src/components/sections/Location.tsx:61:19",
 										"data-prohibitions": "[editContent]",
-										className: "h-6 w-6 text-gold"
+										className: "h-6 w-6 text-gold",
+										strokeWidth: 1.5
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Location.tsx:61:17",
+									"data-uid": "src/components/sections/Location.tsx:63:17",
 									"data-prohibitions": "[]",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/sections/Location.tsx:62:19",
+										"data-uid": "src/components/sections/Location.tsx:64:19",
 										"data-prohibitions": "[]",
-										className: "text-xl font-bold text-white mb-2",
+										className: "text-xl font-bold text-white mb-3 font-serif",
 										children: "Contato"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Location.tsx:63:19",
+										"data-uid": "src/components/sections/Location.tsx:65:19",
 										"data-prohibitions": "[]",
-										className: "text-foreground/80 mb-1",
+										className: "text-foreground/70 mb-1 font-light",
 										children: [
 											"WhatsApp:",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-												"data-uid": "src/components/sections/Location.tsx:65:21",
+												"data-uid": "src/components/sections/Location.tsx:67:21",
 												"data-prohibitions": "[]",
 												href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
 												target: "_blank",
 												rel: "noopener noreferrer",
-												className: "hover:text-gold transition-colors",
+												className: "hover:text-gold transition-colors font-medium text-white",
 												children: "(53) 98106-3023"
 											})
 										]
@@ -21898,38 +21976,39 @@ function Location() {
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
-							"data-uid": "src/components/sections/Location.tsx:78:13",
+							"data-uid": "src/components/sections/Location.tsx:80:13",
 							"data-prohibitions": "[]",
-							className: "bg-[#1A1A1A] border-border",
+							className: "bg-card border-border/50 hover:border-gold/30 transition-colors shadow-sm",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-								"data-uid": "src/components/sections/Location.tsx:79:15",
+								"data-uid": "src/components/sections/Location.tsx:81:15",
 								"data-prohibitions": "[]",
-								className: "p-8 flex items-start gap-4",
+								className: "p-8 flex items-start gap-5",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Location.tsx:80:17",
+									"data-uid": "src/components/sections/Location.tsx:82:17",
 									"data-prohibitions": "[]",
-									className: "bg-gold/10 p-3 rounded-full shrink-0",
+									className: "bg-gold/10 p-4 rounded-full border border-gold/20 shrink-0",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, {
-										"data-uid": "src/components/sections/Location.tsx:81:19",
+										"data-uid": "src/components/sections/Location.tsx:83:19",
 										"data-prohibitions": "[editContent]",
-										className: "h-6 w-6 text-gold"
+										className: "h-6 w-6 text-gold",
+										strokeWidth: 1.5
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Location.tsx:83:17",
+									"data-uid": "src/components/sections/Location.tsx:85:17",
 									"data-prohibitions": "[]",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/sections/Location.tsx:84:19",
+										"data-uid": "src/components/sections/Location.tsx:86:19",
 										"data-prohibitions": "[]",
-										className: "text-xl font-bold text-white mb-2",
+										className: "text-xl font-bold text-white mb-3 font-serif",
 										children: "Horário de Atendimento"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Location.tsx:85:19",
+										"data-uid": "src/components/sections/Location.tsx:89:19",
 										"data-prohibitions": "[]",
-										className: "text-foreground/80",
+										className: "text-foreground/70 font-light",
 										children: [
 											"Segunda a Sexta-feira",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-												"data-uid": "src/components/sections/Location.tsx:87:21",
+												"data-uid": "src/components/sections/Location.tsx:91:21",
 												"data-prohibitions": "[editContent]"
 											}),
 											"09:00 às 12:00 e 13:30 às 18:00"
@@ -21951,7 +22030,7 @@ function Footer() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
 		"data-uid": "src/components/Footer.tsx:7:5",
 		"data-prohibitions": "[editContent]",
-		className: "bg-[#0A0A0A] border-t border-border pt-16 pb-8",
+		className: "bg-[#050810] border-t border-border/30 pt-20 pb-10",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/Footer.tsx:8:7",
 			"data-prohibitions": "[editContent]",
@@ -21959,44 +22038,71 @@ function Footer() {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				"data-uid": "src/components/Footer.tsx:9:9",
 				"data-prohibitions": "[editContent]",
-				className: "grid grid-cols-1 md:grid-cols-3 gap-12 mb-12",
+				className: "grid grid-cols-1 md:grid-cols-12 gap-12 mb-16",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						"data-uid": "src/components/Footer.tsx:10:11",
 						"data-prohibitions": "[]",
+						className: "md:col-span-5",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								"data-uid": "src/components/Footer.tsx:11:13",
 								"data-prohibitions": "[]",
-								className: "text-2xl font-bold text-white mb-2",
-								children: "Lucas Morrone"
+								className: "flex items-center gap-3 mb-6",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/Footer.tsx:12:15",
+									"data-prohibitions": "[]",
+									className: "flex items-center justify-center w-10 h-10 rounded bg-gold/10 border border-gold/30 text-gold",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
+										"data-uid": "src/components/Footer.tsx:13:17",
+										"data-prohibitions": "[editContent]",
+										size: 20,
+										strokeWidth: 1.5
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/Footer.tsx:15:15",
+									"data-prohibitions": "[]",
+									className: "flex flex-col",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/Footer.tsx:16:17",
+										"data-prohibitions": "[]",
+										className: "font-serif text-xl font-bold leading-none tracking-wide text-white",
+										children: "LUCAS MORRONE"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/Footer.tsx:19:17",
+										"data-prohibitions": "[]",
+										className: "text-[10px] font-sans tracking-[0.25em] text-gold uppercase mt-1",
+										children: "Advocacia"
+									})]
+								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/Footer.tsx:12:13",
+								"data-uid": "src/components/Footer.tsx:24:13",
 								"data-prohibitions": "[]",
-								className: "text-gold font-medium mb-6",
-								children: "Advogado Previdenciário — OAB/RS 107485"
+								className: "text-gold font-medium mb-6 text-sm uppercase tracking-widest",
+								children: "OAB/RS 107485"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/Footer.tsx:13:13",
+								"data-uid": "src/components/Footer.tsx:27:13",
 								"data-prohibitions": "[]",
-								className: "text-foreground/70 text-sm leading-relaxed max-w-sm",
+								className: "text-foreground/60 text-sm leading-relaxed max-w-sm font-light",
 								children: "Atuação técnica e ética na defesa dos direitos previdenciários. Foco em soluções administrativas e judiciais para garantir segurança aos nossos clientes."
 							})
 						]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:19:11",
+						"data-uid": "src/components/Footer.tsx:33:11",
 						"data-prohibitions": "[editContent]",
+						className: "md:col-span-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-							"data-uid": "src/components/Footer.tsx:20:13",
+							"data-uid": "src/components/Footer.tsx:34:13",
 							"data-prohibitions": "[]",
-							className: "text-lg font-semibold text-white mb-6",
-							children: "Links Rápidos"
+							className: "text-lg font-serif font-bold text-white mb-6",
+							children: "Navegação"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-							"data-uid": "src/components/Footer.tsx:21:13",
+							"data-uid": "src/components/Footer.tsx:35:13",
 							"data-prohibitions": "[editContent]",
-							className: "space-y-3",
+							className: "space-y-4",
 							children: [
 								"Início",
 								"Serviços",
@@ -22004,59 +22110,69 @@ function Footer() {
 								"Blog",
 								"Contato"
 							].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-								"data-uid": "src/components/Footer.tsx:23:17",
+								"data-uid": "src/components/Footer.tsx:37:17",
 								"data-prohibitions": "[editContent]",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									"data-uid": "src/components/Footer.tsx:24:19",
+									"data-uid": "src/components/Footer.tsx:38:19",
 									"data-prohibitions": "[editContent]",
 									href: `#${item.toLowerCase().replace(" ", "-")}`,
-									className: "text-foreground/70 hover:text-gold text-sm transition-colors",
+									className: "text-foreground/60 hover:text-gold text-sm transition-colors font-light",
 									children: item
 								})
 							}, item))
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:35:11",
+						"data-uid": "src/components/Footer.tsx:49:11",
 						"data-prohibitions": "[]",
+						className: "md:col-span-4",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-							"data-uid": "src/components/Footer.tsx:36:13",
+							"data-uid": "src/components/Footer.tsx:50:13",
 							"data-prohibitions": "[]",
-							className: "text-lg font-semibold text-white mb-6",
+							className: "text-lg font-serif font-bold text-white mb-6",
 							children: "Contato"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-							"data-uid": "src/components/Footer.tsx:37:13",
+							"data-uid": "src/components/Footer.tsx:51:13",
 							"data-prohibitions": "[]",
-							className: "space-y-4",
+							className: "space-y-5",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:38:15",
+								"data-uid": "src/components/Footer.tsx:52:15",
 								"data-prohibitions": "[]",
 								className: "flex items-start",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
-									"data-uid": "src/components/Footer.tsx:39:17",
+									"data-uid": "src/components/Footer.tsx:53:17",
 									"data-prohibitions": "[editContent]",
-									className: "h-5 w-5 text-gold mr-3 shrink-0"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/Footer.tsx:40:17",
+									className: "h-5 w-5 text-gold mr-4 shrink-0 mt-0.5",
+									strokeWidth: 1.5
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									"data-uid": "src/components/Footer.tsx:54:17",
 									"data-prohibitions": "[]",
-									className: "text-foreground/70 text-sm",
-									children: "Av. Silva Paes, 293, Rio Grande, RS"
+									className: "text-foreground/60 text-sm font-light leading-relaxed",
+									children: [
+										"Av. Silva Paes, 293",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
+											"data-uid": "src/components/Footer.tsx:56:19",
+											"data-prohibitions": "[editContent]"
+										}),
+										"Rio Grande, RS"
+									]
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:44:15",
+								"data-uid": "src/components/Footer.tsx:60:15",
 								"data-prohibitions": "[]",
 								className: "flex items-center",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
-									"data-uid": "src/components/Footer.tsx:45:17",
+									"data-uid": "src/components/Footer.tsx:61:17",
 									"data-prohibitions": "[editContent]",
-									className: "h-5 w-5 text-gold mr-3 shrink-0"
+									className: "h-5 w-5 text-gold mr-4 shrink-0",
+									strokeWidth: 1.5
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									"data-uid": "src/components/Footer.tsx:46:17",
+									"data-uid": "src/components/Footer.tsx:62:17",
 									"data-prohibitions": "[]",
 									href: "https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).",
 									target: "_blank",
 									rel: "noopener noreferrer",
-									className: "text-foreground/70 hover:text-gold text-sm transition-colors",
+									className: "text-foreground/60 hover:text-gold text-sm transition-colors font-light",
 									children: "(53) 98106-3023"
 								})]
 							})]
@@ -22064,22 +22180,22 @@ function Footer() {
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/Footer.tsx:59:9",
+				"data-uid": "src/components/Footer.tsx:75:9",
 				"data-prohibitions": "[editContent]",
-				className: "pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4",
+				className: "pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-6",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					"data-uid": "src/components/Footer.tsx:60:11",
+					"data-uid": "src/components/Footer.tsx:76:11",
 					"data-prohibitions": "[editContent]",
-					className: "text-foreground/50 text-xs text-center md:text-left",
+					className: "text-foreground/40 text-xs text-center md:text-left font-light tracking-wide",
 					children: [
 						"© ",
 						currentYear,
 						" Lucas Morrone Advocacia. Todos os direitos reservados."
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/Footer.tsx:63:11",
+					"data-uid": "src/components/Footer.tsx:79:11",
 					"data-prohibitions": "[]",
-					className: "text-foreground/40 text-xs text-center md:text-right max-w-2xl",
+					className: "text-foreground/40 text-xs text-center md:text-right max-w-2xl font-light leading-relaxed",
 					children: "As informações contidas neste site possuem caráter estritamente informativo, não configurando promessa de resultados. O exercício da advocacia submete-se ao Código de Ética e Disciplina da OAB."
 				})]
 			})]
@@ -22142,15 +22258,15 @@ function CookieBanner() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 		"data-uid": "src/components/CookieBanner.tsx:22:5",
 		"data-prohibitions": "[]",
-		className: "fixed bottom-0 left-0 right-0 bg-[#1A1A1A] border-t border-border p-4 z-50 shadow-2xl animate-in slide-in-from-bottom duration-500",
+		className: "fixed bottom-0 left-0 right-0 bg-card border-t border-border/50 p-4 z-50 shadow-2xl animate-in slide-in-from-bottom duration-500",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/CookieBanner.tsx:23:7",
 			"data-prohibitions": "[]",
-			className: "container mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-4",
+			className: "container mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-5",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				"data-uid": "src/components/CookieBanner.tsx:24:9",
 				"data-prohibitions": "[]",
-				className: "text-sm text-foreground/80 text-center sm:text-left",
+				className: "text-sm text-foreground/70 text-center sm:text-left font-light",
 				children: "Utilizamos cookies para melhorar sua experiência em nosso site. Ao continuar navegando, você concorda com a nossa política de privacidade e uso de cookies."
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				"data-uid": "src/components/CookieBanner.tsx:28:9",
@@ -22160,13 +22276,13 @@ function CookieBanner() {
 					"data-uid": "src/components/CookieBanner.tsx:29:11",
 					"data-prohibitions": "[]",
 					variant: "outline",
-					className: "border-border text-foreground/80 hover:text-white",
+					className: "border-border text-foreground hover:bg-secondary hover:text-white",
 					onClick: () => setIsVisible(false),
 					children: "Recusar"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 					"data-uid": "src/components/CookieBanner.tsx:36:11",
 					"data-prohibitions": "[]",
-					className: "bg-primary text-primary-foreground hover:bg-primary/90",
+					className: "bg-gold text-primary-foreground hover:bg-gold/90 font-medium",
 					onClick: handleAccept,
 					children: "Aceitar Cookies"
 				})]
@@ -24772,7 +24888,7 @@ function BpcGuide() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		"data-uid": "src/pages/BpcGuide.tsx:20:5",
 		"data-prohibitions": "[]",
-		className: "min-h-screen bg-[#111111] text-foreground flex flex-col",
+		className: "min-h-screen bg-background text-foreground flex flex-col",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header$1, {
 				"data-uid": "src/pages/BpcGuide.tsx:21:7",
@@ -24781,7 +24897,7 @@ function BpcGuide() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
 				"data-uid": "src/pages/BpcGuide.tsx:22:7",
 				"data-prohibitions": "[]",
-				className: "flex-grow pt-20 md:pt-24 bg-[#111111]",
+				className: "flex-grow pt-20 md:pt-24 bg-background",
 				id: "bpc-guide-content",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcHero, {
@@ -24835,33 +24951,33 @@ function NotFound() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		"data-uid": "src/pages/NotFound.tsx:6:5",
 		"data-prohibitions": "[]",
-		className: "min-h-screen bg-[#111111] flex flex-col items-center justify-center p-4",
+		className: "min-h-screen bg-background flex flex-col items-center justify-center p-4",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
 				"data-uid": "src/pages/NotFound.tsx:7:7",
 				"data-prohibitions": "[]",
-				className: "text-6xl font-bold text-gold mb-4",
+				className: "text-6xl font-bold text-gold mb-4 font-serif",
 				children: "404"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 				"data-uid": "src/pages/NotFound.tsx:8:7",
 				"data-prohibitions": "[]",
-				className: "text-2xl font-semibold text-white mb-6 text-center",
+				className: "text-3xl font-bold text-white mb-6 text-center font-serif",
 				children: "Página não encontrada"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				"data-uid": "src/pages/NotFound.tsx:9:7",
+				"data-uid": "src/pages/NotFound.tsx:11:7",
 				"data-prohibitions": "[]",
-				className: "text-foreground/70 mb-8 text-center max-w-md",
+				className: "text-foreground/70 mb-8 text-center max-w-md font-light",
 				children: "Desculpe, a página que você está procurando não existe ou foi movida."
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-				"data-uid": "src/pages/NotFound.tsx:12:7",
+				"data-uid": "src/pages/NotFound.tsx:14:7",
 				"data-prohibitions": "[]",
 				asChild: true,
-				className: "bg-primary text-primary-foreground hover:bg-primary/90",
+				className: "bg-gold text-primary-foreground hover:bg-gold/90 font-bold px-8 shadow-gold",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-					"data-uid": "src/pages/NotFound.tsx:13:9",
+					"data-uid": "src/pages/NotFound.tsx:18:9",
 					"data-prohibitions": "[]",
 					to: "/",
 					children: "Voltar para o Início"
@@ -24919,4 +25035,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-DK6AENpp.js.map
+//# sourceMappingURL=index-DKW2Q6wF.js.map

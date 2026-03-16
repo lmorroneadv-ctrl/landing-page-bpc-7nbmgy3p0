@@ -19,22 +19,22 @@ export default function CookieBanner() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-[#1A1A1A] border-t border-border p-4 z-50 shadow-2xl animate-in slide-in-from-bottom duration-500">
-      <div className="container mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-foreground/80 text-center sm:text-left">
+    <div className="fixed bottom-0 left-0 right-0 bg-card border-t border-border/50 p-4 z-50 shadow-2xl animate-in slide-in-from-bottom duration-500">
+      <div className="container mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-5">
+        <p className="text-sm text-foreground/70 text-center sm:text-left font-light">
           Utilizamos cookies para melhorar sua experiência em nosso site. Ao continuar navegando,
           você concorda com a nossa política de privacidade e uso de cookies.
         </p>
         <div className="flex gap-3 shrink-0">
           <Button
             variant="outline"
-            className="border-border text-foreground/80 hover:text-white"
+            className="border-border text-foreground hover:bg-secondary hover:text-white"
             onClick={() => setIsVisible(false)}
           >
             Recusar
           </Button>
           <Button
-            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            className="bg-gold text-primary-foreground hover:bg-gold/90 font-medium"
             onClick={handleAccept}
           >
             Aceitar Cookies
