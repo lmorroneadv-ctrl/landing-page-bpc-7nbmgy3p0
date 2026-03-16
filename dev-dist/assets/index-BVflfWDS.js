@@ -17435,6 +17435,20 @@ var Clock = createLucideIcon("clock", [["circle", {
 	d: "M12 6v6l4 2",
 	key: "mmk7yg"
 }]]);
+var Download = createLucideIcon("download", [
+	["path", {
+		d: "M12 15V3",
+		key: "m9g1x1"
+	}],
+	["path", {
+		d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",
+		key: "ih7n3h"
+	}],
+	["path", {
+		d: "m7 10 5 5 5-5",
+		key: "brsn70"
+	}]
+]);
 var MapPin = createLucideIcon("map-pin", [["path", {
 	d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
 	key: "1r0f0z"
@@ -19918,6 +19932,348 @@ function Services() {
 	});
 }
 //#endregion
+//#region src/components/ui/input.tsx
+var Input = import_react.forwardRef(({ className, type, ...props }, ref) => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+		"data-uid": "src/components/ui/input.tsx:9:7",
+		"data-prohibitions": "[editContent]",
+		type,
+		className: cn("flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm", className),
+		ref,
+		...props
+	});
+});
+Input.displayName = "Input";
+require_react_dom();
+var Primitive$1 = [
+	"a",
+	"button",
+	"div",
+	"form",
+	"h2",
+	"h3",
+	"img",
+	"input",
+	"label",
+	"li",
+	"nav",
+	"ol",
+	"p",
+	"select",
+	"span",
+	"svg",
+	"ul"
+].reduce((primitive, node) => {
+	const Slot = /* @__PURE__ */ createSlot$1(`Primitive.${node}`);
+	const Node = import_react.forwardRef((props, forwardedRef) => {
+		const { asChild, ...primitiveProps } = props;
+		const Comp = asChild ? Slot : node;
+		if (typeof window !== "undefined") window[Symbol.for("radix-ui")] = true;
+		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Comp, {
+			...primitiveProps,
+			ref: forwardedRef
+		});
+	});
+	Node.displayName = `Primitive.${node}`;
+	return {
+		...primitive,
+		[node]: Node
+	};
+}, {});
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-label@2.1.8_@types+react-dom@19.2.3_@types+react@19.2.14__@types+react@_55fa612a976b7bdfbf4dcdd93d861aab/node_modules/@radix-ui/react-label/dist/index.mjs
+var NAME = "Label";
+var Label$1 = import_react.forwardRef((props, forwardedRef) => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.label, {
+		...props,
+		ref: forwardedRef,
+		onMouseDown: (event) => {
+			if (event.target.closest("button, input, select, textarea")) return;
+			props.onMouseDown?.(event);
+			if (!event.defaultPrevented && event.detail > 1) event.preventDefault();
+		}
+	});
+});
+Label$1.displayName = NAME;
+var Root$1 = Label$1;
+//#endregion
+//#region src/components/ui/label.tsx
+var labelVariants = cva("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70");
+var Label = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$1, {
+	"data-uid": "src/components/ui/label.tsx:16:3",
+	"data-prohibitions": "[editContent]",
+	ref,
+	className: cn(labelVariants(), className),
+	...props
+}));
+Label.displayName = Root$1.displayName;
+//#endregion
+//#region src/components/sections/Ebook.tsx
+function Ebook() {
+	const [isSubmitted, setIsSubmitted] = (0, import_react.useState)(false);
+	const [name, setName] = (0, import_react.useState)("");
+	const [contact, setContact] = (0, import_react.useState)("");
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		if (name.trim() && contact.trim()) setIsSubmitted(true);
+	};
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		"data-uid": "src/components/sections/Ebook.tsx:20:5",
+		"data-prohibitions": "[editContent]",
+		id: "ebook",
+		className: "py-20 bg-[#1A1A1A] border-y border-border/50 overflow-hidden",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/sections/Ebook.tsx:21:7",
+			"data-prohibitions": "[editContent]",
+			className: "container mx-auto px-4 md:px-6",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				"data-uid": "src/components/sections/Ebook.tsx:22:9",
+				"data-prohibitions": "[editContent]",
+				className: "flex flex-col lg:flex-row items-center gap-12 lg:gap-20",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Ebook.tsx:24:11",
+					"data-prohibitions": "[editContent]",
+					className: "w-full lg:w-5/12 flex justify-center lg:justify-end",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/Ebook.tsx:25:13",
+						"data-prohibitions": "[editContent]",
+						className: "relative w-64 h-80 sm:w-72 sm:h-96 bg-gradient-to-br from-[#2a2a2a] via-[#1a1a1a] to-[#0a0a0a] border border-gold/40 rounded-r-xl rounded-l-sm shadow-[20px_20px_40px_-10px_rgba(0,0,0,0.8),_0_0_20px_rgba(212,175,55,0.15)] flex flex-col items-center justify-center p-6 text-center transform -rotate-2 hover:rotate-0 transition-all duration-500 group",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Ebook.tsx:27:15",
+								"data-prohibitions": "[]",
+								className: "absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10 rounded-l-sm"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Ebook.tsx:29:15",
+								"data-prohibitions": "[]",
+								className: "absolute left-6 top-0 bottom-0 w-[1px] bg-white/10 z-10"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Ebook.tsx:31:15",
+								"data-prohibitions": "[]",
+								className: "absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10 rounded-r-xl rounded-l-sm"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Ebook.tsx:33:15",
+								"data-prohibitions": "[]",
+								className: "relative z-20 flex flex-col items-center h-full w-full",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
+										"data-uid": "src/components/sections/Ebook.tsx:34:17",
+										"data-prohibitions": "[editContent]",
+										className: "w-12 h-12 sm:w-16 sm:h-16 text-gold mb-6 mt-4 group-hover:scale-110 transition-transform duration-500"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/components/sections/Ebook.tsx:35:17",
+										"data-prohibitions": "[]",
+										className: "text-sm sm:text-base font-bold text-white mb-2 uppercase tracking-widest text-gold/80",
+										children: "Guia Gratuito"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
+										"data-uid": "src/components/sections/Ebook.tsx:38:17",
+										"data-prohibitions": "[]",
+										className: "text-2xl sm:text-3xl font-black text-white mb-4 leading-tight",
+										children: [
+											"TUDO SOBRE",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
+												"data-uid": "src/components/sections/Ebook.tsx:40:19",
+												"data-prohibitions": "[editContent]"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/components/sections/Ebook.tsx:41:19",
+												"data-prohibitions": "[]",
+												className: "text-gold",
+												children: "BPC/LOAS"
+											})
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/components/sections/Ebook.tsx:44:17",
+										"data-prohibitions": "[]",
+										className: "mt-auto pt-6 border-t border-gold/20 w-full",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											"data-uid": "src/components/sections/Ebook.tsx:45:19",
+											"data-prohibitions": "[]",
+											className: "text-[10px] sm:text-xs text-foreground/60 uppercase tracking-widest",
+											children: "Lucas Morrone Advocacia"
+										})
+									})
+								]
+							})
+						]
+					})
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/Ebook.tsx:54:11",
+					"data-prohibitions": "[editContent]",
+					className: "w-full lg:w-7/12 max-w-2xl",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+							"data-uid": "src/components/sections/Ebook.tsx:55:13",
+							"data-prohibitions": "[]",
+							className: "text-3xl md:text-4xl font-bold mb-4 text-white",
+							children: [
+								"Baixe nosso Guia Gratuito: ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
+									"data-uid": "src/components/sections/Ebook.tsx:56:42",
+									"data-prohibitions": "[editContent]",
+									className: "hidden md:block"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/components/sections/Ebook.tsx:57:15",
+									"data-prohibitions": "[]",
+									className: "text-gold",
+									children: "Tudo sobre BPC/LOAS"
+								})
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							"data-uid": "src/components/sections/Ebook.tsx:59:13",
+							"data-prohibitions": "[]",
+							className: "text-lg text-foreground/80 mb-8",
+							children: "Entenda seus direitos e aprenda como solicitar o benefício de forma correta com o nosso e-book exclusivo."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/Ebook.tsx:64:13",
+							"data-prohibitions": "[editContent]",
+							className: "mb-8 space-y-3",
+							children: [
+								"Requisitos atualizados",
+								"Documentação necessária",
+								"Erros comuns no pedido"
+							].map((benefit, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Ebook.tsx:67:19",
+								"data-prohibitions": "[editContent]",
+								className: "flex items-center",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/Ebook.tsx:68:21",
+									"data-prohibitions": "[]",
+									className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+										"data-uid": "src/components/sections/Ebook.tsx:69:23",
+										"data-prohibitions": "[editContent]",
+										className: "h-3.5 w-3.5 text-gold"
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/components/sections/Ebook.tsx:71:21",
+									"data-prohibitions": "[editContent]",
+									className: "text-foreground/90 font-medium text-base md:text-lg",
+									children: benefit
+								})]
+							}, idx))
+						}),
+						!isSubmitted ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
+							"data-uid": "src/components/sections/Ebook.tsx:80:15",
+							"data-prohibitions": "[]",
+							onSubmit: handleSubmit,
+							className: "space-y-5 bg-[#111111] p-6 sm:p-8 rounded-xl border border-border/50 shadow-lg",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Ebook.tsx:84:17",
+									"data-prohibitions": "[]",
+									className: "space-y-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
+										"data-uid": "src/components/sections/Ebook.tsx:85:19",
+										"data-prohibitions": "[]",
+										htmlFor: "name",
+										className: "text-foreground/80",
+										children: "Nome Completo"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+										"data-uid": "src/components/sections/Ebook.tsx:88:19",
+										"data-prohibitions": "[editContent]",
+										id: "name",
+										value: name,
+										onChange: (e) => setName(e.target.value),
+										placeholder: "Digite seu nome completo",
+										required: true,
+										className: "bg-[#1A1A1A] border-border focus-visible:ring-gold h-12"
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Ebook.tsx:97:17",
+									"data-prohibitions": "[]",
+									className: "space-y-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
+										"data-uid": "src/components/sections/Ebook.tsx:98:19",
+										"data-prohibitions": "[]",
+										htmlFor: "contact",
+										className: "text-foreground/80",
+										children: "WhatsApp ou E-mail"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+										"data-uid": "src/components/sections/Ebook.tsx:101:19",
+										"data-prohibitions": "[editContent]",
+										id: "contact",
+										value: contact,
+										onChange: (e) => setContact(e.target.value),
+										placeholder: "Seu melhor contato",
+										required: true,
+										className: "bg-[#1A1A1A] border-border focus-visible:ring-gold h-12"
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									"data-uid": "src/components/sections/Ebook.tsx:110:17",
+									"data-prohibitions": "[]",
+									type: "submit",
+									className: "w-full bg-gold hover:bg-gold/90 text-[#111111] font-bold h-14 mt-4 transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] text-sm sm:text-base",
+									children: "QUERO RECEBER O E-BOOK AGORA"
+								})
+							]
+						}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/Ebook.tsx:118:15",
+							"data-prohibitions": "[]",
+							className: "bg-[#111111] p-8 sm:p-10 rounded-xl border border-gold/30 shadow-[0_0_30px_rgba(212,175,55,0.1)] text-center animate-in fade-in slide-in-from-bottom-4 duration-500",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/Ebook.tsx:119:17",
+									"data-prohibitions": "[]",
+									className: "w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+										"data-uid": "src/components/sections/Ebook.tsx:120:19",
+										"data-prohibitions": "[editContent]",
+										className: "w-8 h-8 text-gold"
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									"data-uid": "src/components/sections/Ebook.tsx:122:17",
+									"data-prohibitions": "[]",
+									className: "text-2xl font-bold text-white mb-3",
+									children: "Tudo Certo!"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Ebook.tsx:123:17",
+									"data-prohibitions": "[]",
+									className: "text-foreground/80 mb-8 text-lg",
+									children: "Seu e-book está pronto para download. Clique no botão abaixo para acessar o material agora mesmo."
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									"data-uid": "src/components/sections/Ebook.tsx:127:17",
+									"data-prohibitions": "[]",
+									asChild: true,
+									className: "w-full sm:w-auto bg-gold hover:bg-gold/90 text-[#111111] font-bold h-14 px-8 text-base",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+										"data-uid": "src/components/sections/Ebook.tsx:131:19",
+										"data-prohibitions": "[]",
+										href: "#download",
+										onClick: (e) => {
+											e.preventDefault();
+											alert("Iniciando o download do E-book...");
+										},
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, {
+											"data-uid": "src/components/sections/Ebook.tsx:138:21",
+											"data-prohibitions": "[editContent]",
+											className: "mr-2 h-5 w-5"
+										}), " Baixar E-book em PDF"]
+									})
+								})
+							]
+						})
+					]
+				})]
+			})
+		})
+	});
+}
+//#endregion
 //#region src/assets/perfil-20-6d6d4.png
 var perfil_20_6d6d4_default = "/assets/perfil-20-6d6d4-CN0gCp5s.png";
 //#endregion
@@ -20436,7 +20792,8 @@ function useUncontrolledState({ defaultProp, onChange }) {
 function isFunction(value) {
 	return typeof value === "function";
 }
-require_react_dom();
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-primitive@2.1.3_@types+react-dom@19.2.3_@types+react@19.2.14__@types+re_1181ea5061ec9212248424669240e4ec/node_modules/@radix-ui/react-primitive/dist/index.mjs
 var Primitive = [
 	"a",
 	"button",
@@ -21620,59 +21977,63 @@ function CookieBanner() {
 //#region src/pages/Index.tsx
 function Index() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		"data-uid": "src/pages/Index.tsx:15:5",
+		"data-uid": "src/pages/Index.tsx:16:5",
 		"data-prohibitions": "[]",
 		className: "min-h-screen bg-background text-foreground flex flex-col",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header$1, {
-				"data-uid": "src/pages/Index.tsx:16:7",
+				"data-uid": "src/pages/Index.tsx:17:7",
 				"data-prohibitions": "[editContent]"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
-				"data-uid": "src/pages/Index.tsx:18:7",
+				"data-uid": "src/pages/Index.tsx:19:7",
 				"data-prohibitions": "[]",
 				className: "flex-grow",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Hero, {
-						"data-uid": "src/pages/Index.tsx:19:9",
-						"data-prohibitions": "[editContent]"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Services, {
 						"data-uid": "src/pages/Index.tsx:20:9",
 						"data-prohibitions": "[editContent]"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Biography, {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Services, {
 						"data-uid": "src/pages/Index.tsx:21:9",
 						"data-prohibitions": "[editContent]"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SocialProof, {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ebook, {
 						"data-uid": "src/pages/Index.tsx:22:9",
 						"data-prohibitions": "[editContent]"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Blog, {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Biography, {
 						"data-uid": "src/pages/Index.tsx:23:9",
 						"data-prohibitions": "[editContent]"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FAQ, {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SocialProof, {
 						"data-uid": "src/pages/Index.tsx:24:9",
 						"data-prohibitions": "[editContent]"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Location, {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Blog, {
 						"data-uid": "src/pages/Index.tsx:25:9",
+						"data-prohibitions": "[editContent]"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FAQ, {
+						"data-uid": "src/pages/Index.tsx:26:9",
+						"data-prohibitions": "[editContent]"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Location, {
+						"data-uid": "src/pages/Index.tsx:27:9",
 						"data-prohibitions": "[editContent]"
 					})
 				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {
-				"data-uid": "src/pages/Index.tsx:28:7",
+				"data-uid": "src/pages/Index.tsx:30:7",
 				"data-prohibitions": "[editContent]"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FloatingWhatsApp, {
-				"data-uid": "src/pages/Index.tsx:29:7",
+				"data-uid": "src/pages/Index.tsx:31:7",
 				"data-prohibitions": "[editContent]"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CookieBanner, {
-				"data-uid": "src/pages/Index.tsx:30:7",
+				"data-uid": "src/pages/Index.tsx:32:7",
 				"data-prohibitions": "[editContent]"
 			})
 		]
@@ -21756,4 +22117,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-cywu4QfR.js.map
+//# sourceMappingURL=index-BVflfWDS.js.map

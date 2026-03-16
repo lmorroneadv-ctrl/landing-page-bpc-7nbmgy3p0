@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Hero from '@/components/sections/Hero'
 import Services from '@/components/sections/Services'
+import Ebook from '@/components/sections/Ebook'
 import Biography from '@/components/sections/Biography'
 import SocialProof from '@/components/sections/SocialProof'
 import Blog from '@/components/sections/Blog'
@@ -18,6 +19,7 @@ export default function Index() {
       <main className="flex-grow">
         <Hero />
         <Services />
+        <Ebook />
         <Biography />
         <SocialProof />
         <Blog />
