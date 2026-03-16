@@ -1,4 +1,4 @@
-import { Star, BadgeCheck } from 'lucide-react'
+import { Star, MessageCircle } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import { cn } from '@/lib/utils'
@@ -6,19 +6,19 @@ import { cn } from '@/lib/utils'
 const testimonials = [
   {
     name: 'Maria José da Silva',
-    text: 'Tentei pedir o BPC para meu filho autista sozinha e foi negado. O Dr. Lucas pegou o caso e em 3 meses conseguimos a aprovação. Mudou nossa vida!',
+    text: 'Procurei o escritório após ter o BPC do meu filho negado. A equipe foi muito clara desde o início sobre as possibilidades. Felizmente, conseguimos reverter a situação na justiça.',
     seed: 1,
     gender: 'female',
   },
   {
     name: 'Antônio Carlos',
-    text: 'Profissional extremamente competente. O diferencial de só pagar no final me deu a segurança que eu precisava. Agradeço a toda equipe.',
+    text: 'Atendimento muito profissional e transparente. O fato de trabalharem com honorários apenas no êxito me passou a segurança que eu precisava para iniciar o processo.',
     seed: 2,
     gender: 'male',
   },
   {
     name: 'Sandra Regina',
-    text: 'Eu não tinha dinheiro para pagar um advogado antes de ganhar a causa. A equipe foi muito humana e resolveu meu problema com o INSS.',
+    text: 'Toda a comunicação foi feita pelo WhatsApp, o que facilitou muito por eu morar no interior. Fui sempre informada sobre cada andamento do meu pedido no INSS.',
     seed: 3,
     gender: 'female',
   },
@@ -38,11 +38,11 @@ export function SocialProof() {
           )}
         >
           <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
-            Resultados que Transformam Vidas
+            Experiências de Nossos Clientes
           </h2>
           <p className="text-muted-foreground">
-            Não acredite apenas em nossas palavras. Veja o que as famílias que ajudamos têm a dizer
-            sobre nosso trabalho.
+            A transparência e o compromisso ético refletidos nas avaliações de quem já confiou em
+            nosso trabalho.
           </p>
         </div>
 
@@ -69,9 +69,9 @@ export function SocialProof() {
                     />
                     <span className="font-semibold text-sm">{testimonial.name}</span>
                   </div>
-                  <div className="flex items-center gap-1 text-xs text-green-600 font-medium">
-                    <BadgeCheck className="w-4 h-4" />
-                    <span>Verificado</span>
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground bg-muted px-2 py-1 rounded-md">
+                    <MessageCircle className="w-3 h-3" />
+                    <span>Google Reviews</span>
                   </div>
                 </div>
               </CardContent>

@@ -9,29 +9,34 @@ import { cn } from '@/lib/utils'
 
 const faqData = [
   {
-    question: 'Quanto custa para contratar os serviços?',
+    question: 'Quais são os custos iniciais para contratar o escritório?',
     answer:
-      'Trabalhamos no formato "Ad Exitum" (no êxito). Isso significa que não cobramos nenhum valor inicial para analisar seu caso ou entrar com o pedido. Nossos honorários são pagos apenas se, e quando, você ganhar a causa, através de um percentual sobre os valores atrasados que você irá receber.',
+      'Trabalhamos no formato "Ad Exitum" (honorários no êxito). Isso significa que não cobramos valores iniciais para estruturar ou ingressar com o seu pedido. A remuneração do escritório ocorre apenas ao final, caso o benefício seja concedido.',
   },
   {
-    question: 'Quanto tempo demora para sair o BPC?',
+    question: 'Quanto tempo demora para a liberação do BPC?',
     answer:
-      'O tempo varia. Administrativamente no INSS, pode levar de 3 a 6 meses. Se precisarmos entrar na Justiça, o tempo médio é de 10 a 18 meses. Porém, quando o benefício é aprovado judicialmente, você recebe todo o valor retroativo desde o dia em que o pedido foi feito.',
+      'O prazo varia consideravelmente. Administrativamente no INSS, a análise pode levar alguns meses. Caso seja necessário recorrer à via judicial, o tempo médio é maior. Importante ressaltar que, em concessões judiciais, o beneficiário tem direito ao recebimento dos valores retroativos (atrasados) desde a data do requerimento inicial.',
   },
   {
-    question: 'Moro em outra cidade/estado, vocês podem me atender?',
+    question: 'Meu pedido já foi negado pelo INSS. Ainda posso tentar?',
     answer:
-      'Sim! Nosso escritório atua de forma 100% digital em todo o Brasil. As consultas são feitas por WhatsApp ou videochamada, e os processos hoje são inteiramente eletrônicos. Você não precisa se deslocar.',
+      'Sim. O indeferimento administrativo é comum e não encerra as possibilidades. Mediante análise detalhada do motivo da recusa, nosso escritório pode ingressar com recursos internos ou ação judicial competente, onde o caso será avaliado por um perito isento designado pelo juízo.',
   },
   {
-    question: 'Meu filho tem autismo, ele tem direito?',
+    question: 'Como funciona o atendimento se eu morar em outra cidade?',
     answer:
-      'Sim. O Transtorno do Espectro Autista (TEA) é considerado deficiência para todos os efeitos legais. Se o critério de renda familiar for preenchido (até 1/4 do salário mínimo por pessoa, podendo haver flexibilização na justiça), ele tem direito ao benefício.',
+      'Nosso atendimento é realizado de forma 100% digital, garantindo conforto e segurança. Reuniões, envio de documentos e acompanhamentos são feitos através do WhatsApp, e-mail e chamadas de vídeo, sem a necessidade de deslocamento físico ao escritório.',
   },
   {
-    question: 'Já tentei sozinho e foi negado, o que fazer?',
+    question: 'Como é feito o pagamento dos honorários no final?',
     answer:
-      'Não se preocupe, é muito comum. Nesses casos, nós analisamos o motivo da negativa e entramos com um recurso ou ação judicial. Na justiça, o caso será avaliado por um perito isento do juiz, e não por um médico do INSS, o que aumenta muito as chances de aprovação.',
+      'Quando o benefício é concedido e os valores retroativos são liberados pela Justiça ou pelo INSS, os honorários contratuais pactuados (um percentual sobre este proveito econômico) são descontados e repassados ao escritório, de forma transparente e documentada.',
+  },
+  {
+    question: 'Vocês atendem em todo o Brasil?',
+    answer:
+      'Sim. Devido à digitalização dos processos do INSS (Meu INSS) e do sistema do Poder Judiciário (processo eletrônico), estamos habilitados e estruturados para representar clientes em todo o território nacional.',
   },
 ]
 
@@ -44,7 +49,7 @@ export function FAQ() {
         <div className={cn('text-center mb-12 invisible', isVisible && 'animate-fade-in-up')}>
           <h2 className="text-3xl font-serif font-bold mb-4">Dúvidas Frequentes</h2>
           <p className="text-muted-foreground">
-            Respostas claras e diretas para as principais perguntas de nossos clientes.
+            Esclarecimentos objetivos sobre nossa atuação e o processo de solicitação do benefício.
           </p>
         </div>
 

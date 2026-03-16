@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
-import { Send } from 'lucide-react'
+import { Send, Shield } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -58,8 +58,8 @@ export function AnalysisForm() {
     setTimeout(() => {
       setIsSubmitting(false)
       toast({
-        title: 'Solicitação Enviada!',
-        description: 'Nossa equipe entrará em contato em até 24 horas úteis.',
+        title: 'Informações Recebidas',
+        description: 'Nossa equipe jurídica entrará em contato em breve.',
       })
       form.reset()
     }, 2000)
@@ -77,10 +77,12 @@ export function AnalysisForm() {
               isVisible && 'animate-fade-in-up',
             )}
           >
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Dê o Primeiro Passo</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
+              Solicite uma Análise do Seu Caso
+            </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Preencha o formulário abaixo para uma análise gratuita e confidencial do seu caso.
-              Descubra hoje se você tem direito ao BPC.
+              Preencha o formulário abaixo para que nossa equipe avalie as possibilidades jurídicas
+              relacionadas ao seu benefício.
             </p>
           </div>
 
@@ -148,20 +150,25 @@ export function AnalysisForm() {
                       name="type"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Motivo do Pedido</FormLabel>
+                          <FormLabel>Tipo de Condição / Deficiência</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                               <SelectTrigger className="bg-muted/50">
-                                <SelectValue placeholder="Selecione..." />
+                                <SelectValue placeholder="Selecione o motivo..." />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
                               <SelectItem value="idoso">Pessoa Idosa (65+ anos)</SelectItem>
-                              <SelectItem value="deficiencia">Pessoa com Deficiência</SelectItem>
-                              <SelectItem value="autismo">
-                                Transtorno do Espectro Autista
+                              <SelectItem value="deficiencia">
+                                Pessoa com Deficiência Física/Motora
                               </SelectItem>
-                              <SelectItem value="outros">Outros / Não tenho certeza</SelectItem>
+                              <SelectItem value="autismo">
+                                Transtorno do Espectro Autista (TEA)
+                              </SelectItem>
+                              <SelectItem value="mental">Deficiência Intelectual/Mental</SelectItem>
+                              <SelectItem value="outros">
+                                Outros / Desejo detalhar abaixo
+                              </SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
@@ -175,7 +182,7 @@ export function AnalysisForm() {
                     name="previousAttempt"
                     render={({ field }) => (
                       <FormItem className="space-y-3">
-                        <FormLabel>Já teve o benefício negado pelo INSS antes?</FormLabel>
+                        <FormLabel>Você já solicitou este benefício no INSS antes?</FormLabel>
                         <FormControl>
                           <RadioGroup
                             onValueChange={field.onChange}
@@ -187,7 +194,7 @@ export function AnalysisForm() {
                                 <RadioGroupItem value="sim" />
                               </FormControl>
                               <FormLabel className="font-normal">
-                                Sim, já tentei e foi negado.
+                                Sim, já solicitei e foi negado.
                               </FormLabel>
                             </FormItem>
                             <FormItem className="flex items-center space-x-3 space-y-0">
@@ -195,7 +202,7 @@ export function AnalysisForm() {
                                 <RadioGroupItem value="nao" />
                               </FormControl>
                               <FormLabel className="font-normal">
-                                Não, esta será a primeira vez.
+                                Não, será a minha primeira tentativa.
                               </FormLabel>
                             </FormItem>
                           </RadioGroup>
@@ -210,10 +217,10 @@ export function AnalysisForm() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Descreva brevemente sua situação (Opcional)</FormLabel>
+                        <FormLabel>Descrição do Caso (Opcional)</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Como podemos te ajudar?"
+                            placeholder="Descreva brevemente a situação ou o motivo da negativa..."
                             className="resize-none bg-muted/50 h-24"
                             {...field}
                           />
@@ -226,21 +233,23 @@ export function AnalysisForm() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full text-base h-14 shadow-gold"
+                    className="w-full text-base h-14 shadow-gold bg-accent hover:bg-accent/90 text-white"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
                       'Enviando...'
                     ) : (
                       <>
-                        Solicitar Análise Gratuita do Meu Caso
+                        Enviar Informações para Análise
                         <Send className="ml-2 h-5 w-5" />
                       </>
                     )}
                   </Button>
-                  <p className="text-center text-xs text-muted-foreground mt-4">
-                    Suas informações estão protegidas pelo sigilo profissional (OAB) e LGPD.
-                  </p>
+
+                  <div className="flex items-center justify-center gap-2 mt-4 text-sm text-muted-foreground bg-muted/30 py-2 rounded-md">
+                    <Shield className="w-4 h-4 text-green-600" />
+                    <span>Seus dados estão protegidos conforme a LGPD.</span>
+                  </div>
                 </form>
               </Form>
             </CardContent>

@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Scale } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import { cn } from '@/lib/utils'
@@ -14,13 +14,13 @@ export function FinalCTA() {
 
       <div className="container relative z-10 text-center max-w-3xl mx-auto" ref={ref}>
         <div className={cn('invisible', isVisible && 'animate-fade-in-up')}>
-          <ShieldCheck className="w-16 h-16 text-primary-foreground mx-auto mb-6 opacity-90" />
+          <Scale className="w-16 h-16 text-primary-foreground mx-auto mb-6 opacity-90" />
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-foreground mb-6 text-balance">
-            Pronto Para Conquistar o Seu Direito?
+            Dê o Primeiro Passo Para Buscar o Seu Direito
           </h2>
           <p className="text-primary-foreground/90 text-xl mb-10 max-w-2xl mx-auto">
-            Não deixe que a burocracia impeça sua família de receber o benefício que garante sua
-            dignidade. O tempo corre a seu favor quando você age rápido.
+            A orientação jurídica adequada é fundamental para assegurar a correta análise do seu
+            requerimento. Entre em contato conosco para uma avaliação prévia.
           </p>
           <Button
             size="lg"
@@ -29,7 +29,7 @@ export function FinalCTA() {
             asChild
           >
             <a href="#contato">
-              Falar com um Especialista Agora
+              Falar com Nossa Equipe
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>

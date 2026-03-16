@@ -1,4 +1,4 @@
-import { Scale, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react'
+import { Scale, MapPin, Phone, Mail, Instagram, Facebook, Linkedin } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -19,15 +19,30 @@ export function Footer() {
             </div>
           </div>
           <p className="text-sm text-white/60 max-w-xs mt-4">
-            Especialistas em Direito Previdenciário com foco na aprovação de Benefícios de Prestação
-            Continuada (BPC).
+            Atuação ética e transparente em Direito Previdenciário, com ênfase na orientação e busca
+            por Benefícios de Prestação Continuada (BPC/LOAS).
           </p>
           <div className="flex gap-4 pt-2">
-            <a href="#" className="text-white/60 hover:text-primary transition-colors">
+            <a
+              href="#"
+              className="text-white/60 hover:text-primary transition-colors"
+              aria-label="Instagram"
+            >
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="#" className="text-white/60 hover:text-primary transition-colors">
+            <a
+              href="#"
+              className="text-white/60 hover:text-primary transition-colors"
+              aria-label="Facebook"
+            >
               <Facebook className="h-5 w-5" />
+            </a>
+            <a
+              href="#"
+              className="text-white/60 hover:text-primary transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-5 w-5" />
             </a>
           </div>
         </div>
@@ -45,17 +60,17 @@ export function Footer() {
             </li>
             <li>
               <a href="#como-funciona" className="hover:text-primary transition-colors">
-                Como Funciona o Processo
+                Como Funciona
               </a>
             </li>
             <li>
-              <a href="#depoimentos" className="hover:text-primary transition-colors">
-                Histórias de Sucesso
+              <a href="#" className="hover:text-primary transition-colors">
+                Política de Privacidade
               </a>
             </li>
             <li>
-              <a href="#faq" className="hover:text-primary transition-colors">
-                Dúvidas Frequentes
+              <a href="#" className="hover:text-primary transition-colors">
+                Termos de Uso
               </a>
             </li>
           </ul>
@@ -72,7 +87,9 @@ export function Footer() {
               <span>
                 Av. Paulista, 1000, Sala 502
                 <br />
-                São Paulo - SP, 01310-100
+                Bela Vista, São Paulo - SP
+                <br />
+                CEP: 01310-100
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -87,14 +104,17 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="container pt-8 border-t border-white/10 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-xs text-white/40">
-          © {new Date().getFullYear()} Lucas Morrone Advocacia. Todos os direitos reservados. OAB/SP
-          123.456.
-        </p>
+      <div className="container pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+        <div className="flex flex-col gap-1">
+          <p className="text-sm font-semibold text-white/80">Lucas Morrone - OAB/SP [Número]</p>
+          <p className="text-xs text-white/40">
+            © {new Date().getFullYear()} Lucas Morrone Advocacia. Todos os direitos reservados.
+          </p>
+        </div>
         <p className="text-xs text-white/40 max-w-xl text-center md:text-right">
-          A contratação de advogado não garante ganho de causa. Este site tem caráter informativo e
-          respeita o Código de Ética e Disciplina da OAB.
+          A contratação de serviços advocatícios não pressupõe garantia de resultados. Este site
+          possui caráter meramente informativo, em estrita observância ao Código de Ética e
+          Disciplina da OAB.
         </p>
       </div>
     </footer>

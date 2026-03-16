@@ -1980,8 +1980,8 @@ html {
   background-color: hsl(var(--secondary));
 }
 
-.bg-secondary\/80{
-  background-color: hsl(var(--secondary) / 0.8);
+.bg-secondary\/85{
+  background-color: hsl(var(--secondary) / 0.85);
 }
 
 .bg-transparent{
@@ -2013,8 +2013,8 @@ html {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.to-secondary\/70{
-  --tw-gradient-to: hsl(var(--secondary) / 0.7) var(--tw-gradient-to-position);
+.to-secondary\/75{
+  --tw-gradient-to: hsl(var(--secondary) / 0.75) var(--tw-gradient-to-position);
 }
 
 .to-transparent{
@@ -2900,6 +2900,10 @@ html {
 
 .hover\:bg-accent:hover{
   background-color: hsl(var(--accent));
+}
+
+.hover\:bg-accent\/90:hover{
+  background-color: hsl(var(--accent) / 0.9);
 }
 
 .hover\:bg-destructive\/80:hover{

@@ -18,7 +18,7 @@ export function LeadMagnet() {
       setIsLoading(false)
       toast({
         title: 'Guia enviado com sucesso!',
-        description: 'Verifique seu e-mail para baixar o material.',
+        description: 'Verifique seu e-mail ou WhatsApp para acessar o material.',
       })
     }, 1500)
   }
@@ -29,21 +29,21 @@ export function LeadMagnet() {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
           <div className={cn('invisible', isVisible && 'animate-fade-in-up')}>
             <div className="inline-block bg-primary text-primary-foreground text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-full mb-6">
-              Material Gratuito
+              Material Educativo
             </div>
             <h2 className="text-3xl font-serif font-bold mb-4 text-balance">
-              7 Erros Comuns Que Causam a Negativa do BPC
+              Guia Gratuito: 7 Erros Que Causam a Negativa do BPC
             </h2>
             <p className="text-muted-foreground text-lg mb-6 text-balance">
-              Evite perder tempo e dinheiro. Baixe nosso guia gratuito e descubra como preparar seu
-              pedido de forma infalível antes mesmo de ir ao INSS.
+              Muitos benefícios são negados por detalhes que poderiam ser evitados. Baixe nosso guia
+              informativo e entenda como preparar sua documentação com maior segurança.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
               <Input
                 required
                 type="text"
-                placeholder="Seu Primeiro Nome"
+                placeholder="Seu Nome Completo"
                 className="bg-background"
               />
               <Input
@@ -52,9 +52,15 @@ export function LeadMagnet() {
                 placeholder="Seu Melhor E-mail"
                 className="bg-background"
               />
+              <Input
+                required
+                type="tel"
+                placeholder="Seu WhatsApp (com DDD)"
+                className="bg-background"
+              />
               <Button type="submit" className="w-full shadow-md" disabled={isLoading}>
                 {isLoading ? (
-                  'Enviando...'
+                  'Processando...'
                 ) : (
                   <>
                     <Download className="mr-2 h-4 w-4" />
@@ -64,7 +70,7 @@ export function LeadMagnet() {
               </Button>
             </form>
             <p className="text-xs text-muted-foreground mt-3">
-              Prometemos não enviar spam. Seus dados estão seguros.
+              Compromisso com a sua privacidade. Seus dados não serão compartilhados.
             </p>
           </div>
 
@@ -74,8 +80,8 @@ export function LeadMagnet() {
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl transform translate-x-4 translate-y-4" />
             <img
-              src="https://img.usecurling.com/p/600/800?q=ebook%20cover%20guide%20law&color=black&dpr=2"
-              alt="Capa do Guia Gratuito"
+              src="https://img.usecurling.com/p/600/800?q=legal%20document%20contract%20pdf&color=black&dpr=2"
+              alt="Mockup do Guia em PDF"
               className="relative z-10 rounded-2xl shadow-2xl border border-border"
             />
           </div>

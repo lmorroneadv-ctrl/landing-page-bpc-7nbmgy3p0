@@ -17,15 +17,16 @@ export function Objections() {
               <Wallet className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">
-              "Não tenho dinheiro para pagar advogado agora"
+              Dúvidas sobre Honorários
             </h3>
             <p className="text-white/70 text-lg leading-relaxed mb-6">
-              Nós entendemos perfeitamente. Por isso, trabalhamos com o modelo{' '}
-              <strong className="text-primary font-semibold">Ad Exitum</strong>. Isso significa que
-              você não tira um centavo do bolso para iniciar o processo conosco.
+              Uma preocupação comum é sobre os custos iniciais para contratar um advogado
+              especialista. Em nosso escritório, trabalhamos sob o modelo{' '}
+              <strong className="text-primary font-semibold">Ad Exitum</strong>.
             </p>
             <p className="text-white/70 text-lg leading-relaxed border-l-2 border-primary pl-4 italic">
-              Nossos honorários só são pagos se ganharmos a causa para você. O risco é todo nosso.
+              Isso significa que nossos honorários são devidos apenas se houver êxito no seu
+              processo, descontados ao final sobre o proveito econômico obtido.
             </p>
           </div>
 
@@ -37,16 +38,15 @@ export function Objections() {
               <ShieldAlert className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">
-              "O INSS já negou meu pedido uma vez"
+              Lidando com Negativas do INSS
             </h3>
             <p className="text-white/70 text-lg leading-relaxed mb-6">
-              Mais de 60% dos pedidos de BPC são negados na primeira tentativa por erros
-              burocráticos. Uma negativa administrativa não é o fim da linha.
+              Receber uma carta de indeferimento pode ser frustrante, mas não significa
+              necessariamente que você não tem o direito ao benefício.
             </p>
             <p className="text-white/70 text-lg leading-relaxed border-l-2 border-primary pl-4 italic">
-              Nossa especialidade é exatamente identificar o erro do INSS, entrar com uma ação
-              judicial e exigir não só o benefício, mas todo o valor atrasado desde a primeira
-              tentativa.
+              A análise técnica do motivo da recusa é essencial. Muitas vezes, falhas documentais ou
+              análises periciais superficiais podem ser contestadas judicialmente com eficácia.
             </p>
           </div>
         </div>

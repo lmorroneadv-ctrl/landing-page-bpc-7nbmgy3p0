@@ -4,23 +4,23 @@ import { cn } from '@/lib/utils'
 
 const steps = [
   {
-    title: 'Análise Gratuita',
-    description: 'Você nos envia um resumo do seu caso pelo WhatsApp ou formulário.',
+    title: 'Análise Inicial',
+    description: 'Verificação gratuita dos requisitos legais e viabilidade do seu caso.',
     icon: Search,
   },
   {
-    title: 'Estratégia',
-    description: 'Nossa equipe avalia a viabilidade e cria um plano de ação personalizado.',
+    title: 'Estratégia e Documentação',
+    description: 'Organização minuciosa do seu processo e de todos os laudos necessários.',
     icon: Map,
   },
   {
-    title: 'Ação Rápida',
-    description: 'Reunimos os documentos e protocolamos seu pedido ou recurso rapidamente.',
+    title: 'Acompanhamento',
+    description: 'Atuação administrativa perante o INSS ou judicial quando necessário.',
     icon: Zap,
   },
   {
-    title: 'Aprovação',
-    description: 'Acompanhamos de perto até a concessão do benefício e liberação do dinheiro.',
+    title: 'Resultado',
+    description: 'Pagamento de honorários apenas em caso de sucesso (formato ad exitum).',
     icon: CheckCircle,
   },
 ]
@@ -36,8 +36,8 @@ export function ProcessTimeline() {
             Como Funciona o Processo
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Criamos um método simples e transparente, para que você não precise sair de casa ou
-            entender de leis.
+            Uma jornada estruturada para proporcionar clareza e segurança em cada etapa do seu
+            requerimento.
           </p>
         </div>
 

@@ -19028,13 +19028,6 @@ var ArrowRight = createLucideIcon("arrow-right", [["path", {
 	d: "m12 5 7 7-7 7",
 	key: "xquz4c"
 }]]);
-var BadgeCheck = createLucideIcon("badge-check", [["path", {
-	d: "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z",
-	key: "3c2336"
-}], ["path", {
-	d: "m9 12 2 2 4-4",
-	key: "dzmm74"
-}]]);
 var Check = createLucideIcon("check", [["path", {
 	d: "M20 6 9 17l-5-5",
 	key: "1gmf2c"
@@ -19170,6 +19163,25 @@ var Instagram = createLucideIcon("instagram", [
 		key: "r4j83e"
 	}]
 ]);
+var Linkedin = createLucideIcon("linkedin", [
+	["path", {
+		d: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z",
+		key: "c2jq9f"
+	}],
+	["rect", {
+		width: "4",
+		height: "12",
+		x: "2",
+		y: "9",
+		key: "mk3on5"
+	}],
+	["circle", {
+		cx: "4",
+		cy: "4",
+		r: "2",
+		key: "bt5ra8"
+	}]
+]);
 var Mail = createLucideIcon("mail", [["path", {
 	d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7",
 	key: "132q7q"
@@ -19218,6 +19230,10 @@ var Menu = createLucideIcon("menu", [
 		key: "1djgab"
 	}]
 ]);
+var MessageCircle = createLucideIcon("message-circle", [["path", {
+	d: "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719",
+	key: "1sd12s"
+}]]);
 var Phone = createLucideIcon("phone", [["path", {
 	d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
 	key: "9njp5v"
@@ -19274,12 +19290,9 @@ var ShieldAlert = createLucideIcon("shield-alert", [
 		key: "1drbdi"
 	}]
 ]);
-var ShieldCheck = createLucideIcon("shield-check", [["path", {
+var Shield = createLucideIcon("shield", [["path", {
 	d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
 	key: "oel41y"
-}], ["path", {
-	d: "m9 12 2 2 4-4",
-	key: "dzmm74"
 }]]);
 var Star = createLucideIcon("star", [["path", {
 	d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
@@ -24426,7 +24439,7 @@ function Hero() {
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				"data-uid": "src/components/sections/Hero.tsx:14:9",
 				"data-prohibitions": "[]",
-				className: "absolute inset-0 bg-secondary/80 bg-gradient-to-r from-secondary/95 to-secondary/70 backdrop-blur-[2px]"
+				className: "absolute inset-0 bg-secondary/85 bg-gradient-to-r from-secondary/95 to-secondary/75 backdrop-blur-[2px]"
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			"data-uid": "src/components/sections/Hero.tsx:17:7",
@@ -24448,66 +24461,53 @@ function Hero() {
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							"data-uid": "src/components/sections/Hero.tsx:21:13",
 							"data-prohibitions": "[]",
-							children: "Especialistas em BPC (LOAS)"
+							children: "Advocacia Especializada em BPC (LOAS)"
 						})]
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
 						"data-uid": "src/components/sections/Hero.tsx:24:11",
 						"data-prohibitions": "[]",
 						className: "text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight text-balance animate-fade-in-up",
 						style: { animationDelay: "100ms" },
-						children: [
-							"Seu BPC Aprovado —",
-							" ",
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								"data-uid": "src/components/sections/Hero.tsx:29:13",
-								"data-prohibitions": "[]",
-								className: "text-primary italic",
-								children: "Mesmo Que Tenha Sido Negado"
-							})
-						]
+						children: "BPC/LOAS: Orientação Especializada para a Conquista do seu Direito"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-						"data-uid": "src/components/sections/Hero.tsx:32:11",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						"data-uid": "src/components/sections/Hero.tsx:31:11",
 						"data-prohibitions": "[]",
 						className: "text-lg md:text-xl text-white/80 text-balance animate-fade-in-up",
 						style: { animationDelay: "200ms" },
-						children: ["Garantimos seus direitos com um histórico comprovado de aprovações.", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-							"data-uid": "src/components/sections/Hero.tsx:37:13",
-							"data-prohibitions": "[]",
-							children: " E o melhor: você só paga os honorários se nós ganharmos a causa."
-						})]
+						children: "Atuação focada em Direito Previdenciário para pessoas com deficiência e idosos. Transparência e compromisso com o seu benefício."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Hero.tsx:40:11",
+						"data-uid": "src/components/sections/Hero.tsx:39:11",
 						"data-prohibitions": "[]",
 						className: "flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up",
 						style: { animationDelay: "300ms" },
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/sections/Hero.tsx:44:13",
+							"data-uid": "src/components/sections/Hero.tsx:43:13",
 							"data-prohibitions": "[]",
 							size: "lg",
 							className: "h-14 px-8 text-base shadow-gold group",
 							asChild: true,
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								"data-uid": "src/components/sections/Hero.tsx:45:15",
+								"data-uid": "src/components/sections/Hero.tsx:44:15",
 								"data-prohibitions": "[]",
 								href: "#contato",
-								children: ["Solicitar Análise Gratuita", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
-									"data-uid": "src/components/sections/Hero.tsx:47:17",
+								children: ["Solicitar Análise do Meu Caso", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
+									"data-uid": "src/components/sections/Hero.tsx:46:17",
 									"data-prohibitions": "[editContent]",
 									className: "ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
 								})]
 							})
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/sections/Hero.tsx:50:13",
+							"data-uid": "src/components/sections/Hero.tsx:49:13",
 							"data-prohibitions": "[]",
 							size: "lg",
 							variant: "outline",
 							className: "h-14 px-8 text-base bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white",
 							asChild: true,
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/sections/Hero.tsx:56:15",
+								"data-uid": "src/components/sections/Hero.tsx:55:15",
 								"data-prohibitions": "[]",
 								href: "#como-funciona",
 								children: "Entender o Processo"
@@ -24515,12 +24515,12 @@ function Hero() {
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Hero.tsx:60:11",
+						"data-uid": "src/components/sections/Hero.tsx:59:11",
 						"data-prohibitions": "[editContent]",
 						className: "flex items-center gap-4 pt-6 mt-6 border-t border-white/10 animate-fade-in-up",
 						style: { animationDelay: "400ms" },
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Hero.tsx:64:13",
+							"data-uid": "src/components/sections/Hero.tsx:63:13",
 							"data-prohibitions": "[editContent]",
 							className: "flex -space-x-3",
 							children: [
@@ -24529,22 +24529,22 @@ function Hero() {
 								3,
 								4
 							].map((i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								"data-uid": "src/components/sections/Hero.tsx:66:17",
+								"data-uid": "src/components/sections/Hero.tsx:65:17",
 								"data-prohibitions": "[editContent]",
 								src: `https://img.usecurling.com/ppl/thumbnail?gender=${i % 2 === 0 ? "female" : "male"}&seed=${i}`,
 								alt: "Cliente",
 								className: "w-10 h-10 rounded-full border-2 border-secondary object-cover"
 							}, i))
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Hero.tsx:74:13",
+							"data-uid": "src/components/sections/Hero.tsx:73:13",
 							"data-prohibitions": "[]",
 							className: "text-sm text-white/70",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								"data-uid": "src/components/sections/Hero.tsx:75:15",
+								"data-uid": "src/components/sections/Hero.tsx:74:15",
 								"data-prohibitions": "[]",
 								className: "text-white font-bold block",
-								children: "+500 famílias"
-							}), "ajudadas em todo Brasil"]
+								children: "Centenas de casos"
+							}), "analisados em todo Brasil"]
 						})]
 					})
 				]
@@ -24634,19 +24634,19 @@ function useScrollAnimation(threshold = .1) {
 var testimonials = [
 	{
 		name: "Maria José da Silva",
-		text: "Tentei pedir o BPC para meu filho autista sozinha e foi negado. O Dr. Lucas pegou o caso e em 3 meses conseguimos a aprovação. Mudou nossa vida!",
+		text: "Procurei o escritório após ter o BPC do meu filho negado. A equipe foi muito clara desde o início sobre as possibilidades. Felizmente, conseguimos reverter a situação na justiça.",
 		seed: 1,
 		gender: "female"
 	},
 	{
 		name: "Antônio Carlos",
-		text: "Profissional extremamente competente. O diferencial de só pagar no final me deu a segurança que eu precisava. Agradeço a toda equipe.",
+		text: "Atendimento muito profissional e transparente. O fato de trabalharem com honorários apenas no êxito me passou a segurança que eu precisava para iniciar o processo.",
 		seed: 2,
 		gender: "male"
 	},
 	{
 		name: "Sandra Regina",
-		text: "Eu não tinha dinheiro para pagar um advogado antes de ganhar a causa. A equipe foi muito humana e resolveu meu problema com o INSS.",
+		text: "Toda a comunicação foi feita pelo WhatsApp, o que facilitou muito por eu morar no interior. Fui sempre informada sobre cada andamento do meu pedido no INSS.",
 		seed: 3,
 		gender: "female"
 	}
@@ -24671,12 +24671,12 @@ function SocialProof() {
 					"data-uid": "src/components/sections/SocialProof.tsx:40:11",
 					"data-prohibitions": "[]",
 					className: "text-3xl font-serif font-bold text-foreground mb-4",
-					children: "Resultados que Transformam Vidas"
+					children: "Experiências de Nossos Clientes"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					"data-uid": "src/components/sections/SocialProof.tsx:43:11",
 					"data-prohibitions": "[]",
 					className: "text-muted-foreground",
-					children: "Não acredite apenas em nossas palavras. Veja o que as famílias que ajudamos têm a dizer sobre nosso trabalho."
+					children: "A transparência e o compromisso ético refletidos nas avaliações de quem já confiou em nosso trabalho."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				"data-uid": "src/components/sections/SocialProof.tsx:49:9",
@@ -24735,15 +24735,15 @@ function SocialProof() {
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									"data-uid": "src/components/sections/SocialProof.tsx:72:19",
 									"data-prohibitions": "[]",
-									className: "flex items-center gap-1 text-xs text-green-600 font-medium",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BadgeCheck, {
+									className: "flex items-center gap-1.5 text-xs text-muted-foreground bg-muted px-2 py-1 rounded-md",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageCircle, {
 										"data-uid": "src/components/sections/SocialProof.tsx:73:21",
 										"data-prohibitions": "[editContent]",
-										className: "w-4 h-4"
+										className: "w-3 h-3"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										"data-uid": "src/components/sections/SocialProof.tsx:74:21",
 										"data-prohibitions": "[]",
-										children: "Verificado"
+										children: "Google Reviews"
 									})]
 								})]
 							})
@@ -24775,12 +24775,12 @@ function Services() {
 					"data-uid": "src/components/sections/Services.tsx:18:11",
 					"data-prohibitions": "[]",
 					className: "text-3xl md:text-4xl font-serif font-bold mb-4 text-balance",
-					children: "Especialistas no Seu Momento"
+					children: "Nossas Frentes de Atuação"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					"data-uid": "src/components/sections/Services.tsx:21:11",
 					"data-prohibitions": "[]",
 					className: "text-muted-foreground text-lg",
-					children: "Nossa atuação é direcionada para a sua situação atual. Sabemos exatamente qual estratégia seguir."
+					children: "Direcionamos nossa estratégia jurídica de acordo com o momento do seu caso perante o INSS."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				"data-uid": "src/components/sections/Services.tsx:27:9",
@@ -24810,22 +24810,22 @@ function Services() {
 								"data-uid": "src/components/sections/Services.tsx:39:15",
 								"data-prohibitions": "[]",
 								className: "text-2xl font-serif font-bold mb-4",
-								children: "Para Quem Nunca Solicitou"
+								children: "Primeiro Requerimento"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								"data-uid": "src/components/sections/Services.tsx:40:15",
 								"data-prohibitions": "[]",
 								className: "text-muted-foreground mb-8 text-balance leading-relaxed",
-								children: "Fazer o pedido inicial da forma correta é crucial. Um erro na documentação ou no preenchimento pode atrasar seu benefício em meses. Nós cuidamos de tudo, garantindo que o pedido seja feito com a máxima perfeição desde o dia um."
+								children: "A preparação minuciosa do pedido inicial é fundamental. Uma falha na documentação pode ocasionar o indeferimento do benefício. Auxiliamos na estruturação completa para que o pedido seja feito com segurança técnica."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 								"data-uid": "src/components/sections/Services.tsx:45:15",
 								"data-prohibitions": "[editContent]",
 								className: "space-y-3 mb-8",
 								children: [
-									"Organização de laudos médicos",
-									"Preenchimento adequado do CadÚnico",
-									"Protocolo sem falhas no INSS"
+									"Orientação sobre laudos e perícias",
+									"Revisão dos dados do CadÚnico",
+									"Protocolo administrativo acompanhado"
 								].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									"data-uid": "src/components/sections/Services.tsx:51:19",
 									"data-prohibitions": "[editContent]",
@@ -24842,7 +24842,7 @@ function Services() {
 								"data-prohibitions": "[]",
 								href: "#contato",
 								className: "inline-flex items-center text-primary font-bold hover:text-primary/80 transition-colors",
-								children: ["Iniciar meu pedido seguro ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+								children: ["Solicitar análise inicial ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
 									"data-uid": "src/components/sections/Services.tsx:64:43",
 									"data-prohibitions": "[editContent]",
 									className: "ml-2 w-4 h-4"
@@ -24874,22 +24874,22 @@ function Services() {
 								"data-uid": "src/components/sections/Services.tsx:80:15",
 								"data-prohibitions": "[]",
 								className: "text-2xl font-serif font-bold mb-4 text-white",
-								children: "Para Quem Foi Negado"
+								children: "Reversão de Negativas"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								"data-uid": "src/components/sections/Services.tsx:83:15",
 								"data-prohibitions": "[]",
 								className: "text-white/70 mb-8 text-balance leading-relaxed",
-								children: "Recebeu uma carta de indeferimento? Não se desespere. O INSS nega milhares de pedidos válidos diariamente por falhas de sistema ou análises superficiais. Nós entramos com recurso ou ação judicial para reverter essa decisão."
+								children: "Muitos benefícios são indeferidos indevidamente por inconsistências burocráticas do órgão. Atuamos com recursos administrativos ou ações judiciais para buscar o reconhecimento do direito negado."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 								"data-uid": "src/components/sections/Services.tsx:88:15",
 								"data-prohibitions": "[editContent]",
 								className: "space-y-3 mb-8",
 								children: [
-									"Análise do motivo da negativa",
-									"Estratégia judicial agressiva",
-									"Busca por retroativos (atrasados)"
+									"Estudo aprofundado do motivo da recusa",
+									"Estratégia judicial especializada",
+									"Busca pelo pagamento de valores retroativos"
 								].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									"data-uid": "src/components/sections/Services.tsx:94:19",
 									"data-prohibitions": "[editContent]",
@@ -24906,7 +24906,7 @@ function Services() {
 								"data-prohibitions": "[]",
 								href: "#contato",
 								className: "inline-flex items-center text-primary font-bold hover:text-primary/80 transition-colors",
-								children: ["Reverter minha negativa ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+								children: ["Analisar minha negativa ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
 									"data-uid": "src/components/sections/Services.tsx:104:41",
 									"data-prohibitions": "[editContent]",
 									className: "ml-2 w-4 h-4"
@@ -24959,64 +24959,64 @@ function Objections() {
 							"data-uid": "src/components/sections/Objections.tsx:19:13",
 							"data-prohibitions": "[]",
 							className: "text-2xl md:text-3xl font-serif font-bold mb-4",
-							children: "\"Não tenho dinheiro para pagar advogado agora\""
+							children: "Dúvidas sobre Honorários"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 							"data-uid": "src/components/sections/Objections.tsx:22:13",
 							"data-prohibitions": "[]",
 							className: "text-white/70 text-lg leading-relaxed mb-6",
 							children: [
-								"Nós entendemos perfeitamente. Por isso, trabalhamos com o modelo",
+								"Uma preocupação comum é sobre os custos iniciais para contratar um advogado especialista. Em nosso escritório, trabalhamos sob o modelo",
 								" ",
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-									"data-uid": "src/components/sections/Objections.tsx:24:15",
+									"data-uid": "src/components/sections/Objections.tsx:25:15",
 									"data-prohibitions": "[]",
 									className: "text-primary font-semibold",
 									children: "Ad Exitum"
 								}),
-								". Isso significa que você não tira um centavo do bolso para iniciar o processo conosco."
+								"."
 							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							"data-uid": "src/components/sections/Objections.tsx:27:13",
 							"data-prohibitions": "[]",
 							className: "text-white/70 text-lg leading-relaxed border-l-2 border-primary pl-4 italic",
-							children: "Nossos honorários só são pagos se ganharmos a causa para você. O risco é todo nosso."
+							children: "Isso significa que nossos honorários são devidos apenas se houver êxito no seu processo, descontados ao final sobre o proveito econômico obtido."
 						})
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/Objections.tsx:32:11",
+					"data-uid": "src/components/sections/Objections.tsx:33:11",
 					"data-prohibitions": "[editContent]",
 					className: cn$1("invisible", isVisible && "animate-fade-in-up"),
 					style: { animationDelay: "200ms" },
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Objections.tsx:36:13",
+							"data-uid": "src/components/sections/Objections.tsx:37:13",
 							"data-prohibitions": "[]",
 							className: "inline-flex items-center justify-center p-3 bg-primary/20 rounded-2xl mb-6",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldAlert, {
-								"data-uid": "src/components/sections/Objections.tsx:37:15",
+								"data-uid": "src/components/sections/Objections.tsx:38:15",
 								"data-prohibitions": "[editContent]",
 								className: "w-8 h-8 text-primary"
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							"data-uid": "src/components/sections/Objections.tsx:39:13",
+							"data-uid": "src/components/sections/Objections.tsx:40:13",
 							"data-prohibitions": "[]",
 							className: "text-2xl md:text-3xl font-serif font-bold mb-4",
-							children: "\"O INSS já negou meu pedido uma vez\""
+							children: "Lidando com Negativas do INSS"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/sections/Objections.tsx:42:13",
+							"data-uid": "src/components/sections/Objections.tsx:43:13",
 							"data-prohibitions": "[]",
 							className: "text-white/70 text-lg leading-relaxed mb-6",
-							children: "Mais de 60% dos pedidos de BPC são negados na primeira tentativa por erros burocráticos. Uma negativa administrativa não é o fim da linha."
+							children: "Receber uma carta de indeferimento pode ser frustrante, mas não significa necessariamente que você não tem o direito ao benefício."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/sections/Objections.tsx:46:13",
+							"data-uid": "src/components/sections/Objections.tsx:47:13",
 							"data-prohibitions": "[]",
 							className: "text-white/70 text-lg leading-relaxed border-l-2 border-primary pl-4 italic",
-							children: "Nossa especialidade é exatamente identificar o erro do INSS, entrar com uma ação judicial e exigir não só o benefício, mas todo o valor atrasado desde a primeira tentativa."
+							children: "A análise técnica do motivo da recusa é essencial. Muitas vezes, falhas documentais ou análises periciais superficiais podem ser contestadas judicialmente com eficácia."
 						})
 					]
 				})]
@@ -25143,7 +25143,7 @@ function LeadMagnet() {
 			setIsLoading(false);
 			toast({
 				title: "Guia enviado com sucesso!",
-				description: "Verifique seu e-mail para baixar o material."
+				description: "Verifique seu e-mail ou WhatsApp para acessar o material."
 			});
 		}, 1500);
 	};
@@ -25169,19 +25169,19 @@ function LeadMagnet() {
 							"data-uid": "src/components/sections/LeadMagnet.tsx:31:13",
 							"data-prohibitions": "[]",
 							className: "inline-block bg-primary text-primary-foreground text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-full mb-6",
-							children: "Material Gratuito"
+							children: "Material Educativo"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							"data-uid": "src/components/sections/LeadMagnet.tsx:34:13",
 							"data-prohibitions": "[]",
 							className: "text-3xl font-serif font-bold mb-4 text-balance",
-							children: "7 Erros Comuns Que Causam a Negativa do BPC"
+							children: "Guia Gratuito: 7 Erros Que Causam a Negativa do BPC"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							"data-uid": "src/components/sections/LeadMagnet.tsx:37:13",
 							"data-prohibitions": "[]",
 							className: "text-muted-foreground text-lg mb-6 text-balance",
-							children: "Evite perder tempo e dinheiro. Baixe nosso guia gratuito e descubra como preparar seu pedido de forma infalível antes mesmo de ir ao INSS."
+							children: "Muitos benefícios são negados por detalhes que poderiam ser evitados. Baixe nosso guia informativo e entenda como preparar sua documentação com maior segurança."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
 							"data-uid": "src/components/sections/LeadMagnet.tsx:42:13",
@@ -25194,7 +25194,7 @@ function LeadMagnet() {
 									"data-prohibitions": "[editContent]",
 									required: true,
 									type: "text",
-									placeholder: "Seu Primeiro Nome",
+									placeholder: "Seu Nome Completo",
 									className: "bg-background"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
@@ -25205,14 +25205,22 @@ function LeadMagnet() {
 									placeholder: "Seu Melhor E-mail",
 									className: "bg-background"
 								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
 									"data-uid": "src/components/sections/LeadMagnet.tsx:55:15",
+									"data-prohibitions": "[editContent]",
+									required: true,
+									type: "tel",
+									placeholder: "Seu WhatsApp (com DDD)",
+									className: "bg-background"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									"data-uid": "src/components/sections/LeadMagnet.tsx:61:15",
 									"data-prohibitions": "[editContent]",
 									type: "submit",
 									className: "w-full shadow-md",
 									disabled: isLoading,
-									children: isLoading ? "Enviando..." : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, {
-										"data-uid": "src/components/sections/LeadMagnet.tsx:60:21",
+									children: isLoading ? "Processando..." : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, {
+										"data-uid": "src/components/sections/LeadMagnet.tsx:66:21",
 										"data-prohibitions": "[editContent]",
 										className: "mr-2 h-4 w-4"
 									}), "Baixar Guia Agora"] })
@@ -25220,26 +25228,26 @@ function LeadMagnet() {
 							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/sections/LeadMagnet.tsx:66:13",
+							"data-uid": "src/components/sections/LeadMagnet.tsx:72:13",
 							"data-prohibitions": "[]",
 							className: "text-xs text-muted-foreground mt-3",
-							children: "Prometemos não enviar spam. Seus dados estão seguros."
+							children: "Compromisso com a sua privacidade. Seus dados não serão compartilhados."
 						})
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/LeadMagnet.tsx:71:11",
+					"data-uid": "src/components/sections/LeadMagnet.tsx:77:11",
 					"data-prohibitions": "[editContent]",
 					className: cn$1("hidden lg:block relative invisible", isVisible && "animate-fade-in-up"),
 					style: { animationDelay: "200ms" },
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/LeadMagnet.tsx:75:13",
+						"data-uid": "src/components/sections/LeadMagnet.tsx:81:13",
 						"data-prohibitions": "[editContent]",
 						className: "absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl transform translate-x-4 translate-y-4"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-						"data-uid": "src/components/sections/LeadMagnet.tsx:76:13",
+						"data-uid": "src/components/sections/LeadMagnet.tsx:82:13",
 						"data-prohibitions": "[editContent]",
-						src: "https://img.usecurling.com/p/600/800?q=ebook%20cover%20guide%20law&color=black&dpr=2",
-						alt: "Capa do Guia Gratuito",
+						src: "https://img.usecurling.com/p/600/800?q=legal%20document%20contract%20pdf&color=black&dpr=2",
+						alt: "Mockup do Guia em PDF",
 						className: "relative z-10 rounded-2xl shadow-2xl border border-border"
 					})]
 				})]
@@ -25251,23 +25259,23 @@ function LeadMagnet() {
 //#region src/components/sections/ProcessTimeline.tsx
 var steps = [
 	{
-		title: "Análise Gratuita",
-		description: "Você nos envia um resumo do seu caso pelo WhatsApp ou formulário.",
+		title: "Análise Inicial",
+		description: "Verificação gratuita dos requisitos legais e viabilidade do seu caso.",
 		icon: Search
 	},
 	{
-		title: "Estratégia",
-		description: "Nossa equipe avalia a viabilidade e cria um plano de ação personalizado.",
+		title: "Estratégia e Documentação",
+		description: "Organização minuciosa do seu processo e de todos os laudos necessários.",
 		icon: Map$1
 	},
 	{
-		title: "Ação Rápida",
-		description: "Reunimos os documentos e protocolamos seu pedido ou recurso rapidamente.",
+		title: "Acompanhamento",
+		description: "Atuação administrativa perante o INSS ou judicial quando necessário.",
 		icon: Zap
 	},
 	{
-		title: "Aprovação",
-		description: "Acompanhamos de perto até a concessão do benefício e liberação do dinheiro.",
+		title: "Resultado",
+		description: "Pagamento de honorários apenas em caso de sucesso (formato ad exitum).",
 		icon: CircleCheckBig
 	}
 ];
@@ -25296,7 +25304,7 @@ function ProcessTimeline() {
 					"data-uid": "src/components/sections/ProcessTimeline.tsx:38:11",
 					"data-prohibitions": "[]",
 					className: "text-muted-foreground text-lg max-w-2xl mx-auto",
-					children: "Criamos um método simples e transparente, para que você não precise sair de casa ou entender de leis."
+					children: "Uma jornada estruturada para proporcionar clareza e segurança em cada etapa do seu requerimento."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				"data-uid": "src/components/sections/ProcessTimeline.tsx:44:9",
@@ -33476,8 +33484,8 @@ function AnalysisForm() {
 		setTimeout(() => {
 			setIsSubmitting(false);
 			toast({
-				title: "Solicitação Enviada!",
-				description: "Nossa equipe entrará em contato em até 24 horas úteis."
+				title: "Informações Recebidas",
+				description: "Nossa equipe jurídica entrará em contato em breve."
 			});
 			form.reset();
 		}, 2e3);
@@ -33508,55 +33516,55 @@ function AnalysisForm() {
 						"data-uid": "src/components/sections/AnalysisForm.tsx:80:13",
 						"data-prohibitions": "[]",
 						className: "text-3xl md:text-4xl font-serif font-bold mb-4",
-						children: "Dê o Primeiro Passo"
+						children: "Solicite uma Análise do Seu Caso"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/AnalysisForm.tsx:81:13",
+						"data-uid": "src/components/sections/AnalysisForm.tsx:83:13",
 						"data-prohibitions": "[]",
 						className: "text-white/80 text-lg max-w-2xl mx-auto",
-						children: "Preencha o formulário abaixo para uma análise gratuita e confidencial do seu caso. Descubra hoje se você tem direito ao BPC."
+						children: "Preencha o formulário abaixo para que nossa equipe avalie as possibilidades jurídicas relacionadas ao seu benefício."
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
-					"data-uid": "src/components/sections/AnalysisForm.tsx:87:11",
+					"data-uid": "src/components/sections/AnalysisForm.tsx:89:11",
 					"data-prohibitions": "[editContent]",
 					className: cn$1("shadow-2xl border-none invisible", isVisible && "animate-fade-in-up"),
 					style: { animationDelay: "200ms" },
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardContent, {
-						"data-uid": "src/components/sections/AnalysisForm.tsx:91:13",
+						"data-uid": "src/components/sections/AnalysisForm.tsx:93:13",
 						"data-prohibitions": "[editContent]",
 						className: "p-8 md:p-12",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Form, {
-							"data-uid": "src/components/sections/AnalysisForm.tsx:92:15",
+							"data-uid": "src/components/sections/AnalysisForm.tsx:94:15",
 							"data-prohibitions": "[editContent]",
 							...form,
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
-								"data-uid": "src/components/sections/AnalysisForm.tsx:93:17",
+								"data-uid": "src/components/sections/AnalysisForm.tsx:95:17",
 								"data-prohibitions": "[editContent]",
 								onSubmit: form.handleSubmit(onSubmit),
 								className: "space-y-8",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/AnalysisForm.tsx:94:19",
+										"data-uid": "src/components/sections/AnalysisForm.tsx:96:19",
 										"data-prohibitions": "[]",
 										className: "grid md:grid-cols-2 gap-6",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
-											"data-uid": "src/components/sections/AnalysisForm.tsx:95:21",
+											"data-uid": "src/components/sections/AnalysisForm.tsx:97:21",
 											"data-prohibitions": "[editContent]",
 											control: form.control,
 											name: "name",
 											render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, {
-												"data-uid": "src/components/sections/AnalysisForm.tsx:99:25",
+												"data-uid": "src/components/sections/AnalysisForm.tsx:101:25",
 												"data-prohibitions": "[]",
 												children: [
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:100:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:102:27",
 														"data-prohibitions": "[]",
 														children: "Nome Completo"
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:101:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:103:27",
 														"data-prohibitions": "[]",
 														children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-															"data-uid": "src/components/sections/AnalysisForm.tsx:102:29",
+															"data-uid": "src/components/sections/AnalysisForm.tsx:104:29",
 															"data-prohibitions": "[editContent]",
 															placeholder: "João da Silva",
 															className: "bg-muted/50",
@@ -33564,30 +33572,30 @@ function AnalysisForm() {
 														})
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:104:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:106:27",
 														"data-prohibitions": "[editContent]"
 													})
 												]
 											})
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
-											"data-uid": "src/components/sections/AnalysisForm.tsx:108:21",
+											"data-uid": "src/components/sections/AnalysisForm.tsx:110:21",
 											"data-prohibitions": "[editContent]",
 											control: form.control,
 											name: "phone",
 											render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, {
-												"data-uid": "src/components/sections/AnalysisForm.tsx:112:25",
+												"data-uid": "src/components/sections/AnalysisForm.tsx:114:25",
 												"data-prohibitions": "[]",
 												children: [
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:113:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:115:27",
 														"data-prohibitions": "[]",
 														children: "WhatsApp"
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:114:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:116:27",
 														"data-prohibitions": "[]",
 														children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-															"data-uid": "src/components/sections/AnalysisForm.tsx:115:29",
+															"data-uid": "src/components/sections/AnalysisForm.tsx:117:29",
 															"data-prohibitions": "[editContent]",
 															placeholder: "(11) 99999-9999",
 															className: "bg-muted/50",
@@ -33595,7 +33603,7 @@ function AnalysisForm() {
 														})
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:121:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:123:27",
 														"data-prohibitions": "[editContent]"
 													})
 												]
@@ -33603,28 +33611,28 @@ function AnalysisForm() {
 										})]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/AnalysisForm.tsx:127:19",
+										"data-uid": "src/components/sections/AnalysisForm.tsx:129:19",
 										"data-prohibitions": "[]",
 										className: "grid md:grid-cols-2 gap-6",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
-											"data-uid": "src/components/sections/AnalysisForm.tsx:128:21",
+											"data-uid": "src/components/sections/AnalysisForm.tsx:130:21",
 											"data-prohibitions": "[editContent]",
 											control: form.control,
 											name: "email",
 											render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, {
-												"data-uid": "src/components/sections/AnalysisForm.tsx:132:25",
+												"data-uid": "src/components/sections/AnalysisForm.tsx:134:25",
 												"data-prohibitions": "[]",
 												children: [
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:133:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:135:27",
 														"data-prohibitions": "[]",
 														children: "E-mail"
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:134:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:136:27",
 														"data-prohibitions": "[]",
 														children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-															"data-uid": "src/components/sections/AnalysisForm.tsx:135:29",
+															"data-uid": "src/components/sections/AnalysisForm.tsx:137:29",
 															"data-prohibitions": "[editContent]",
 															type: "email",
 															placeholder: "joao@exemplo.com",
@@ -33633,76 +33641,82 @@ function AnalysisForm() {
 														})
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:142:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:144:27",
 														"data-prohibitions": "[editContent]"
 													})
 												]
 											})
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
-											"data-uid": "src/components/sections/AnalysisForm.tsx:146:21",
+											"data-uid": "src/components/sections/AnalysisForm.tsx:148:21",
 											"data-prohibitions": "[editContent]",
 											control: form.control,
 											name: "type",
 											render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, {
-												"data-uid": "src/components/sections/AnalysisForm.tsx:150:25",
+												"data-uid": "src/components/sections/AnalysisForm.tsx:152:25",
 												"data-prohibitions": "[]",
 												children: [
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:151:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:153:27",
 														"data-prohibitions": "[]",
-														children: "Motivo do Pedido"
+														children: "Tipo de Condição / Deficiência"
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Select, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:152:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:154:27",
 														"data-prohibitions": "[]",
 														onValueChange: field.onChange,
 														defaultValue: field.value,
 														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, {
-															"data-uid": "src/components/sections/AnalysisForm.tsx:153:29",
+															"data-uid": "src/components/sections/AnalysisForm.tsx:155:29",
 															"data-prohibitions": "[]",
 															children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectTrigger, {
-																"data-uid": "src/components/sections/AnalysisForm.tsx:154:31",
+																"data-uid": "src/components/sections/AnalysisForm.tsx:156:31",
 																"data-prohibitions": "[]",
 																className: "bg-muted/50",
 																children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectValue, {
-																	"data-uid": "src/components/sections/AnalysisForm.tsx:155:33",
+																	"data-uid": "src/components/sections/AnalysisForm.tsx:157:33",
 																	"data-prohibitions": "[editContent]",
-																	placeholder: "Selecione..."
+																	placeholder: "Selecione o motivo..."
 																})
 															})
 														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SelectContent, {
-															"data-uid": "src/components/sections/AnalysisForm.tsx:158:29",
+															"data-uid": "src/components/sections/AnalysisForm.tsx:160:29",
 															"data-prohibitions": "[]",
 															children: [
 																/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-																	"data-uid": "src/components/sections/AnalysisForm.tsx:159:31",
+																	"data-uid": "src/components/sections/AnalysisForm.tsx:161:31",
 																	"data-prohibitions": "[]",
 																	value: "idoso",
 																	children: "Pessoa Idosa (65+ anos)"
 																}),
 																/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-																	"data-uid": "src/components/sections/AnalysisForm.tsx:160:31",
+																	"data-uid": "src/components/sections/AnalysisForm.tsx:162:31",
 																	"data-prohibitions": "[]",
 																	value: "deficiencia",
-																	children: "Pessoa com Deficiência"
+																	children: "Pessoa com Deficiência Física/Motora"
 																}),
 																/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-																	"data-uid": "src/components/sections/AnalysisForm.tsx:161:31",
+																	"data-uid": "src/components/sections/AnalysisForm.tsx:165:31",
 																	"data-prohibitions": "[]",
 																	value: "autismo",
-																	children: "Transtorno do Espectro Autista"
+																	children: "Transtorno do Espectro Autista (TEA)"
 																}),
 																/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-																	"data-uid": "src/components/sections/AnalysisForm.tsx:164:31",
+																	"data-uid": "src/components/sections/AnalysisForm.tsx:168:31",
+																	"data-prohibitions": "[]",
+																	value: "mental",
+																	children: "Deficiência Intelectual/Mental"
+																}),
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+																	"data-uid": "src/components/sections/AnalysisForm.tsx:169:31",
 																	"data-prohibitions": "[]",
 																	value: "outros",
-																	children: "Outros / Não tenho certeza"
+																	children: "Outros / Desejo detalhar abaixo"
 																})
 															]
 														})]
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:167:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:174:27",
 														"data-prohibitions": "[editContent]"
 													})
 												]
@@ -33710,125 +33724,133 @@ function AnalysisForm() {
 										})]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
-										"data-uid": "src/components/sections/AnalysisForm.tsx:173:19",
+										"data-uid": "src/components/sections/AnalysisForm.tsx:180:19",
 										"data-prohibitions": "[editContent]",
 										control: form.control,
 										name: "previousAttempt",
 										render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, {
-											"data-uid": "src/components/sections/AnalysisForm.tsx:177:23",
+											"data-uid": "src/components/sections/AnalysisForm.tsx:184:23",
 											"data-prohibitions": "[]",
 											className: "space-y-3",
 											children: [
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-													"data-uid": "src/components/sections/AnalysisForm.tsx:178:25",
+													"data-uid": "src/components/sections/AnalysisForm.tsx:185:25",
 													"data-prohibitions": "[]",
-													children: "Já teve o benefício negado pelo INSS antes?"
+													children: "Você já solicitou este benefício no INSS antes?"
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, {
-													"data-uid": "src/components/sections/AnalysisForm.tsx:179:25",
+													"data-uid": "src/components/sections/AnalysisForm.tsx:186:25",
 													"data-prohibitions": "[]",
 													children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(RadioGroup, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:180:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:187:27",
 														"data-prohibitions": "[]",
 														onValueChange: field.onChange,
 														defaultValue: field.value,
 														className: "flex flex-col space-y-1",
 														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, {
-															"data-uid": "src/components/sections/AnalysisForm.tsx:185:29",
+															"data-uid": "src/components/sections/AnalysisForm.tsx:192:29",
 															"data-prohibitions": "[]",
 															className: "flex items-center space-x-3 space-y-0",
 															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, {
-																"data-uid": "src/components/sections/AnalysisForm.tsx:186:31",
+																"data-uid": "src/components/sections/AnalysisForm.tsx:193:31",
 																"data-prohibitions": "[]",
 																children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RadioGroupItem, {
-																	"data-uid": "src/components/sections/AnalysisForm.tsx:187:33",
+																	"data-uid": "src/components/sections/AnalysisForm.tsx:194:33",
 																	"data-prohibitions": "[editContent]",
 																	value: "sim"
 																})
 															}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-																"data-uid": "src/components/sections/AnalysisForm.tsx:189:31",
+																"data-uid": "src/components/sections/AnalysisForm.tsx:196:31",
 																"data-prohibitions": "[]",
 																className: "font-normal",
-																children: "Sim, já tentei e foi negado."
+																children: "Sim, já solicitei e foi negado."
 															})]
 														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, {
-															"data-uid": "src/components/sections/AnalysisForm.tsx:193:29",
+															"data-uid": "src/components/sections/AnalysisForm.tsx:200:29",
 															"data-prohibitions": "[]",
 															className: "flex items-center space-x-3 space-y-0",
 															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, {
-																"data-uid": "src/components/sections/AnalysisForm.tsx:194:31",
+																"data-uid": "src/components/sections/AnalysisForm.tsx:201:31",
 																"data-prohibitions": "[]",
 																children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RadioGroupItem, {
-																	"data-uid": "src/components/sections/AnalysisForm.tsx:195:33",
+																	"data-uid": "src/components/sections/AnalysisForm.tsx:202:33",
 																	"data-prohibitions": "[editContent]",
 																	value: "nao"
 																})
 															}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-																"data-uid": "src/components/sections/AnalysisForm.tsx:197:31",
+																"data-uid": "src/components/sections/AnalysisForm.tsx:204:31",
 																"data-prohibitions": "[]",
 																className: "font-normal",
-																children: "Não, esta será a primeira vez."
+																children: "Não, será a minha primeira tentativa."
 															})]
 														})]
 													})
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {
-													"data-uid": "src/components/sections/AnalysisForm.tsx:203:25",
+													"data-uid": "src/components/sections/AnalysisForm.tsx:210:25",
 													"data-prohibitions": "[editContent]"
 												})
 											]
 										})
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
-										"data-uid": "src/components/sections/AnalysisForm.tsx:208:19",
+										"data-uid": "src/components/sections/AnalysisForm.tsx:215:19",
 										"data-prohibitions": "[editContent]",
 										control: form.control,
 										name: "message",
 										render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, {
-											"data-uid": "src/components/sections/AnalysisForm.tsx:212:23",
+											"data-uid": "src/components/sections/AnalysisForm.tsx:219:23",
 											"data-prohibitions": "[]",
 											children: [
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-													"data-uid": "src/components/sections/AnalysisForm.tsx:213:25",
+													"data-uid": "src/components/sections/AnalysisForm.tsx:220:25",
 													"data-prohibitions": "[]",
-													children: "Descreva brevemente sua situação (Opcional)"
+													children: "Descrição do Caso (Opcional)"
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, {
-													"data-uid": "src/components/sections/AnalysisForm.tsx:214:25",
+													"data-uid": "src/components/sections/AnalysisForm.tsx:221:25",
 													"data-prohibitions": "[]",
 													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Textarea, {
-														"data-uid": "src/components/sections/AnalysisForm.tsx:215:27",
+														"data-uid": "src/components/sections/AnalysisForm.tsx:222:27",
 														"data-prohibitions": "[editContent]",
-														placeholder: "Como podemos te ajudar?",
+														placeholder: "Descreva brevemente a situação ou o motivo da negativa...",
 														className: "resize-none bg-muted/50 h-24",
 														...field
 													})
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {
-													"data-uid": "src/components/sections/AnalysisForm.tsx:221:25",
+													"data-uid": "src/components/sections/AnalysisForm.tsx:228:25",
 													"data-prohibitions": "[editContent]"
 												})
 											]
 										})
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-										"data-uid": "src/components/sections/AnalysisForm.tsx:226:19",
+										"data-uid": "src/components/sections/AnalysisForm.tsx:233:19",
 										"data-prohibitions": "[editContent]",
 										type: "submit",
 										size: "lg",
-										className: "w-full text-base h-14 shadow-gold",
+										className: "w-full text-base h-14 shadow-gold bg-accent hover:bg-accent/90 text-white",
 										disabled: isSubmitting,
-										children: isSubmitting ? "Enviando..." : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Solicitar Análise Gratuita do Meu Caso", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, {
-											"data-uid": "src/components/sections/AnalysisForm.tsx:237:25",
+										children: isSubmitting ? "Enviando..." : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Enviar Informações para Análise", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, {
+											"data-uid": "src/components/sections/AnalysisForm.tsx:244:25",
 											"data-prohibitions": "[editContent]",
 											className: "ml-2 h-5 w-5"
 										})] })
 									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/sections/AnalysisForm.tsx:241:19",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/AnalysisForm.tsx:249:19",
 										"data-prohibitions": "[]",
-										className: "text-center text-xs text-muted-foreground mt-4",
-										children: "Suas informações estão protegidas pelo sigilo profissional (OAB) e LGPD."
+										className: "flex items-center justify-center gap-2 mt-4 text-sm text-muted-foreground bg-muted/30 py-2 rounded-md",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shield, {
+											"data-uid": "src/components/sections/AnalysisForm.tsx:250:21",
+											"data-prohibitions": "[editContent]",
+											className: "w-4 h-4 text-green-600"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											"data-uid": "src/components/sections/AnalysisForm.tsx:251:21",
+											"data-prohibitions": "[]",
+											children: "Seus dados estão protegidos conforme a LGPD."
+										})]
 									})
 								]
 							})
@@ -34241,76 +34263,80 @@ AccordionContent.displayName = Content2.displayName;
 //#region src/components/sections/FAQ.tsx
 var faqData = [
 	{
-		question: "Quanto custa para contratar os serviços?",
-		answer: "Trabalhamos no formato \"Ad Exitum\" (no êxito). Isso significa que não cobramos nenhum valor inicial para analisar seu caso ou entrar com o pedido. Nossos honorários são pagos apenas se, e quando, você ganhar a causa, através de um percentual sobre os valores atrasados que você irá receber."
+		question: "Quais são os custos iniciais para contratar o escritório?",
+		answer: "Trabalhamos no formato \"Ad Exitum\" (honorários no êxito). Isso significa que não cobramos valores iniciais para estruturar ou ingressar com o seu pedido. A remuneração do escritório ocorre apenas ao final, caso o benefício seja concedido."
 	},
 	{
-		question: "Quanto tempo demora para sair o BPC?",
-		answer: "O tempo varia. Administrativamente no INSS, pode levar de 3 a 6 meses. Se precisarmos entrar na Justiça, o tempo médio é de 10 a 18 meses. Porém, quando o benefício é aprovado judicialmente, você recebe todo o valor retroativo desde o dia em que o pedido foi feito."
+		question: "Quanto tempo demora para a liberação do BPC?",
+		answer: "O prazo varia consideravelmente. Administrativamente no INSS, a análise pode levar alguns meses. Caso seja necessário recorrer à via judicial, o tempo médio é maior. Importante ressaltar que, em concessões judiciais, o beneficiário tem direito ao recebimento dos valores retroativos (atrasados) desde a data do requerimento inicial."
 	},
 	{
-		question: "Moro em outra cidade/estado, vocês podem me atender?",
-		answer: "Sim! Nosso escritório atua de forma 100% digital em todo o Brasil. As consultas são feitas por WhatsApp ou videochamada, e os processos hoje são inteiramente eletrônicos. Você não precisa se deslocar."
+		question: "Meu pedido já foi negado pelo INSS. Ainda posso tentar?",
+		answer: "Sim. O indeferimento administrativo é comum e não encerra as possibilidades. Mediante análise detalhada do motivo da recusa, nosso escritório pode ingressar com recursos internos ou ação judicial competente, onde o caso será avaliado por um perito isento designado pelo juízo."
 	},
 	{
-		question: "Meu filho tem autismo, ele tem direito?",
-		answer: "Sim. O Transtorno do Espectro Autista (TEA) é considerado deficiência para todos os efeitos legais. Se o critério de renda familiar for preenchido (até 1/4 do salário mínimo por pessoa, podendo haver flexibilização na justiça), ele tem direito ao benefício."
+		question: "Como funciona o atendimento se eu morar em outra cidade?",
+		answer: "Nosso atendimento é realizado de forma 100% digital, garantindo conforto e segurança. Reuniões, envio de documentos e acompanhamentos são feitos através do WhatsApp, e-mail e chamadas de vídeo, sem a necessidade de deslocamento físico ao escritório."
 	},
 	{
-		question: "Já tentei sozinho e foi negado, o que fazer?",
-		answer: "Não se preocupe, é muito comum. Nesses casos, nós analisamos o motivo da negativa e entramos com um recurso ou ação judicial. Na justiça, o caso será avaliado por um perito isento do juiz, e não por um médico do INSS, o que aumenta muito as chances de aprovação."
+		question: "Como é feito o pagamento dos honorários no final?",
+		answer: "Quando o benefício é concedido e os valores retroativos são liberados pela Justiça ou pelo INSS, os honorários contratuais pactuados (um percentual sobre este proveito econômico) são descontados e repassados ao escritório, de forma transparente e documentada."
+	},
+	{
+		question: "Vocês atendem em todo o Brasil?",
+		answer: "Sim. Devido à digitalização dos processos do INSS (Meu INSS) e do sistema do Poder Judiciário (processo eletrônico), estamos habilitados e estruturados para representar clientes em todo o território nacional."
 	}
 ];
 function FAQ() {
 	const { ref, isVisible } = useScrollAnimation();
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/FAQ.tsx:42:5",
+		"data-uid": "src/components/sections/FAQ.tsx:47:5",
 		"data-prohibitions": "[editContent]",
 		id: "faq",
 		className: "py-24 bg-muted/30",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/FAQ.tsx:43:7",
+			"data-uid": "src/components/sections/FAQ.tsx:48:7",
 			"data-prohibitions": "[editContent]",
 			className: "container max-w-4xl",
 			ref,
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/FAQ.tsx:44:9",
+				"data-uid": "src/components/sections/FAQ.tsx:49:9",
 				"data-prohibitions": "[editContent]",
 				className: cn$1("text-center mb-12 invisible", isVisible && "animate-fade-in-up"),
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					"data-uid": "src/components/sections/FAQ.tsx:45:11",
+					"data-uid": "src/components/sections/FAQ.tsx:50:11",
 					"data-prohibitions": "[]",
 					className: "text-3xl font-serif font-bold mb-4",
 					children: "Dúvidas Frequentes"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/sections/FAQ.tsx:46:11",
+					"data-uid": "src/components/sections/FAQ.tsx:51:11",
 					"data-prohibitions": "[]",
 					className: "text-muted-foreground",
-					children: "Respostas claras e diretas para as principais perguntas de nossos clientes."
+					children: "Esclarecimentos objetivos sobre nossa atuação e o processo de solicitação do benefício."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/FAQ.tsx:51:9",
+				"data-uid": "src/components/sections/FAQ.tsx:56:9",
 				"data-prohibitions": "[editContent]",
 				className: cn$1("invisible", isVisible && "animate-fade-in-up"),
 				style: { animationDelay: "200ms" },
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-					"data-uid": "src/components/sections/FAQ.tsx:55:11",
+					"data-uid": "src/components/sections/FAQ.tsx:60:11",
 					"data-prohibitions": "[editContent]",
 					type: "single",
 					collapsible: true,
 					className: "w-full bg-card rounded-2xl border p-6 shadow-sm",
 					children: faqData.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-						"data-uid": "src/components/sections/FAQ.tsx:61:15",
+						"data-uid": "src/components/sections/FAQ.tsx:66:15",
 						"data-prohibitions": "[editContent]",
 						value: `item-${index}`,
 						className: "border-b-border border-b last:border-0",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-							"data-uid": "src/components/sections/FAQ.tsx:66:17",
+							"data-uid": "src/components/sections/FAQ.tsx:71:17",
 							"data-prohibitions": "[editContent]",
 							className: "text-left font-medium text-lg hover:text-primary transition-colors py-4",
 							children: item.question
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-							"data-uid": "src/components/sections/FAQ.tsx:69:17",
+							"data-uid": "src/components/sections/FAQ.tsx:74:17",
 							"data-prohibitions": "[editContent]",
 							className: "text-muted-foreground leading-relaxed text-base pb-4",
 							children: item.answer
@@ -34350,7 +34376,7 @@ function FinalCTA() {
 					"data-prohibitions": "[editContent]",
 					className: cn$1("invisible", isVisible && "animate-fade-in-up"),
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
 							"data-uid": "src/components/sections/FinalCTA.tsx:17:11",
 							"data-prohibitions": "[editContent]",
 							className: "w-16 h-16 text-primary-foreground mx-auto mb-6 opacity-90"
@@ -34359,13 +34385,13 @@ function FinalCTA() {
 							"data-uid": "src/components/sections/FinalCTA.tsx:18:11",
 							"data-prohibitions": "[]",
 							className: "text-4xl md:text-5xl font-serif font-bold text-primary-foreground mb-6 text-balance",
-							children: "Pronto Para Conquistar o Seu Direito?"
+							children: "Dê o Primeiro Passo Para Buscar o Seu Direito"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							"data-uid": "src/components/sections/FinalCTA.tsx:21:11",
 							"data-prohibitions": "[]",
 							className: "text-primary-foreground/90 text-xl mb-10 max-w-2xl mx-auto",
-							children: "Não deixe que a burocracia impeça sua família de receber o benefício que garante sua dignidade. O tempo corre a seu favor quando você age rápido."
+							children: "A orientação jurídica adequada é fundamental para assegurar a correta análise do seu requerimento. Entre em contato conosco para uma avaliação prévia."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 							"data-uid": "src/components/sections/FinalCTA.tsx:25:11",
@@ -34378,7 +34404,7 @@ function FinalCTA() {
 								"data-uid": "src/components/sections/FinalCTA.tsx:31:13",
 								"data-prohibitions": "[]",
 								href: "#contato",
-								children: ["Falar com um Especialista Agora", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+								children: ["Falar com Nossa Equipe", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
 									"data-uid": "src/components/sections/FinalCTA.tsx:33:15",
 									"data-prohibitions": "[editContent]",
 									className: "ml-2 h-5 w-5"
@@ -35063,58 +35089,75 @@ function Footer() {
 							"data-uid": "src/components/Footer.tsx:21:11",
 							"data-prohibitions": "[]",
 							className: "text-sm text-white/60 max-w-xs mt-4",
-							children: "Especialistas em Direito Previdenciário com foco na aprovação de Benefícios de Prestação Continuada (BPC)."
+							children: "Atuação ética e transparente em Direito Previdenciário, com ênfase na orientação e busca por Benefícios de Prestação Continuada (BPC/LOAS)."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							"data-uid": "src/components/Footer.tsx:25:11",
 							"data-prohibitions": "[]",
 							className: "flex gap-4 pt-2",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/Footer.tsx:26:13",
-								"data-prohibitions": "[]",
-								href: "#",
-								className: "text-white/60 hover:text-primary transition-colors",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Instagram, {
-									"data-uid": "src/components/Footer.tsx:27:15",
-									"data-prohibitions": "[editContent]",
-									className: "h-5 w-5"
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+									"data-uid": "src/components/Footer.tsx:26:13",
+									"data-prohibitions": "[]",
+									href: "#",
+									className: "text-white/60 hover:text-primary transition-colors",
+									"aria-label": "Instagram",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Instagram, {
+										"data-uid": "src/components/Footer.tsx:31:15",
+										"data-prohibitions": "[editContent]",
+										className: "h-5 w-5"
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+									"data-uid": "src/components/Footer.tsx:33:13",
+									"data-prohibitions": "[]",
+									href: "#",
+									className: "text-white/60 hover:text-primary transition-colors",
+									"aria-label": "Facebook",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, {
+										"data-uid": "src/components/Footer.tsx:38:15",
+										"data-prohibitions": "[editContent]",
+										className: "h-5 w-5"
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+									"data-uid": "src/components/Footer.tsx:40:13",
+									"data-prohibitions": "[]",
+									href: "#",
+									className: "text-white/60 hover:text-primary transition-colors",
+									"aria-label": "LinkedIn",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Linkedin, {
+										"data-uid": "src/components/Footer.tsx:45:15",
+										"data-prohibitions": "[editContent]",
+										className: "h-5 w-5"
+									})
 								})
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/Footer.tsx:29:13",
-								"data-prohibitions": "[]",
-								href: "#",
-								className: "text-white/60 hover:text-primary transition-colors",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, {
-									"data-uid": "src/components/Footer.tsx:30:15",
-									"data-prohibitions": "[editContent]",
-									className: "h-5 w-5"
-								})
-							})]
+							]
 						})
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/Footer.tsx:35:9",
+					"data-uid": "src/components/Footer.tsx:50:9",
 					"data-prohibitions": "[]",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-						"data-uid": "src/components/Footer.tsx:36:11",
+						"data-uid": "src/components/Footer.tsx:51:11",
 						"data-prohibitions": "[]",
 						className: "font-serif text-lg font-bold text-white mb-6 relative inline-block",
 						children: ["Links Rápidos", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/Footer.tsx:38:13",
+							"data-uid": "src/components/Footer.tsx:53:13",
 							"data-prohibitions": "[]",
 							className: "absolute -bottom-2 left-0 w-1/2 h-0.5 bg-primary"
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-						"data-uid": "src/components/Footer.tsx:40:11",
+						"data-uid": "src/components/Footer.tsx:55:11",
 						"data-prohibitions": "[]",
 						className: "space-y-3 text-sm text-white/70",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-								"data-uid": "src/components/Footer.tsx:41:13",
+								"data-uid": "src/components/Footer.tsx:56:13",
 								"data-prohibitions": "[]",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									"data-uid": "src/components/Footer.tsx:42:15",
+									"data-uid": "src/components/Footer.tsx:57:15",
 									"data-prohibitions": "[]",
 									href: "#inicio",
 									className: "hover:text-primary transition-colors",
@@ -35122,103 +35165,108 @@ function Footer() {
 								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-								"data-uid": "src/components/Footer.tsx:46:13",
+								"data-uid": "src/components/Footer.tsx:61:13",
 								"data-prohibitions": "[]",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									"data-uid": "src/components/Footer.tsx:47:15",
+									"data-uid": "src/components/Footer.tsx:62:15",
 									"data-prohibitions": "[]",
 									href: "#como-funciona",
 									className: "hover:text-primary transition-colors",
-									children: "Como Funciona o Processo"
+									children: "Como Funciona"
 								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-								"data-uid": "src/components/Footer.tsx:51:13",
+								"data-uid": "src/components/Footer.tsx:66:13",
 								"data-prohibitions": "[]",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									"data-uid": "src/components/Footer.tsx:52:15",
+									"data-uid": "src/components/Footer.tsx:67:15",
 									"data-prohibitions": "[]",
-									href: "#depoimentos",
+									href: "#",
 									className: "hover:text-primary transition-colors",
-									children: "Histórias de Sucesso"
+									children: "Política de Privacidade"
 								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-								"data-uid": "src/components/Footer.tsx:56:13",
+								"data-uid": "src/components/Footer.tsx:71:13",
 								"data-prohibitions": "[]",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									"data-uid": "src/components/Footer.tsx:57:15",
+									"data-uid": "src/components/Footer.tsx:72:15",
 									"data-prohibitions": "[]",
-									href: "#faq",
+									href: "#",
 									className: "hover:text-primary transition-colors",
-									children: "Dúvidas Frequentes"
+									children: "Termos de Uso"
 								})
 							})
 						]
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/Footer.tsx:64:9",
+					"data-uid": "src/components/Footer.tsx:79:9",
 					"data-prohibitions": "[]",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-						"data-uid": "src/components/Footer.tsx:65:11",
+						"data-uid": "src/components/Footer.tsx:80:11",
 						"data-prohibitions": "[]",
 						className: "font-serif text-lg font-bold text-white mb-6 relative inline-block",
 						children: ["Contato", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/Footer.tsx:67:13",
+							"data-uid": "src/components/Footer.tsx:82:13",
 							"data-prohibitions": "[]",
 							className: "absolute -bottom-2 left-0 w-1/2 h-0.5 bg-primary"
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-						"data-uid": "src/components/Footer.tsx:69:11",
+						"data-uid": "src/components/Footer.tsx:84:11",
 						"data-prohibitions": "[]",
 						className: "space-y-4 text-sm text-white/70",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:70:13",
+								"data-uid": "src/components/Footer.tsx:85:13",
 								"data-prohibitions": "[]",
 								className: "flex items-start gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
-									"data-uid": "src/components/Footer.tsx:71:15",
+									"data-uid": "src/components/Footer.tsx:86:15",
 									"data-prohibitions": "[editContent]",
 									className: "h-5 w-5 text-primary shrink-0"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-									"data-uid": "src/components/Footer.tsx:72:15",
+									"data-uid": "src/components/Footer.tsx:87:15",
 									"data-prohibitions": "[]",
 									children: [
 										"Av. Paulista, 1000, Sala 502",
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-											"data-uid": "src/components/Footer.tsx:74:17",
+											"data-uid": "src/components/Footer.tsx:89:17",
 											"data-prohibitions": "[editContent]"
 										}),
-										"São Paulo - SP, 01310-100"
+										"Bela Vista, São Paulo - SP",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
+											"data-uid": "src/components/Footer.tsx:91:17",
+											"data-prohibitions": "[editContent]"
+										}),
+										"CEP: 01310-100"
 									]
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:78:13",
+								"data-uid": "src/components/Footer.tsx:95:13",
 								"data-prohibitions": "[]",
 								className: "flex items-center gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
-									"data-uid": "src/components/Footer.tsx:79:15",
+									"data-uid": "src/components/Footer.tsx:96:15",
 									"data-prohibitions": "[editContent]",
 									className: "h-5 w-5 text-primary shrink-0"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/Footer.tsx:80:15",
+									"data-uid": "src/components/Footer.tsx:97:15",
 									"data-prohibitions": "[]",
 									children: "(11) 99999-9999"
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:82:13",
+								"data-uid": "src/components/Footer.tsx:99:13",
 								"data-prohibitions": "[]",
 								className: "flex items-center gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, {
-									"data-uid": "src/components/Footer.tsx:83:15",
+									"data-uid": "src/components/Footer.tsx:100:15",
 									"data-prohibitions": "[editContent]",
 									className: "h-5 w-5 text-primary shrink-0"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/Footer.tsx:84:15",
+									"data-uid": "src/components/Footer.tsx:101:15",
 									"data-prohibitions": "[]",
 									children: "contato@lucasmorrone.adv.br"
 								})]
@@ -35228,23 +35276,33 @@ function Footer() {
 				})
 			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Footer.tsx:90:7",
+			"data-uid": "src/components/Footer.tsx:107:7",
 			"data-prohibitions": "[editContent]",
-			className: "container pt-8 border-t border-white/10 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-				"data-uid": "src/components/Footer.tsx:91:9",
+			className: "container pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				"data-uid": "src/components/Footer.tsx:108:9",
 				"data-prohibitions": "[editContent]",
-				className: "text-xs text-white/40",
-				children: [
-					"© ",
-					(/* @__PURE__ */ new Date()).getFullYear(),
-					" Lucas Morrone Advocacia. Todos os direitos reservados. OAB/SP 123.456."
-				]
+				className: "flex flex-col gap-1",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					"data-uid": "src/components/Footer.tsx:109:11",
+					"data-prohibitions": "[]",
+					className: "text-sm font-semibold text-white/80",
+					children: "Lucas Morrone - OAB/SP [Número]"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+					"data-uid": "src/components/Footer.tsx:110:11",
+					"data-prohibitions": "[editContent]",
+					className: "text-xs text-white/40",
+					children: [
+						"© ",
+						(/* @__PURE__ */ new Date()).getFullYear(),
+						" Lucas Morrone Advocacia. Todos os direitos reservados."
+					]
+				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				"data-uid": "src/components/Footer.tsx:95:9",
+				"data-uid": "src/components/Footer.tsx:114:9",
 				"data-prohibitions": "[]",
 				className: "text-xs text-white/40 max-w-xl text-center md:text-right",
-				children: "A contratação de advogado não garante ganho de causa. Este site tem caráter informativo e respeita o Código de Ética e Disciplina da OAB."
+				children: "A contratação de serviços advocatícios não pressupõe garantia de resultados. Este site possui caráter meramente informativo, em estrita observância ao Código de Ética e Disciplina da OAB."
 			})]
 		})]
 	});
@@ -35338,4 +35396,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 }));
 //#endregion
 
-//# sourceMappingURL=index-DvqDi4t3.js.map
+//# sourceMappingURL=index-ClxkSkWy.js.map
