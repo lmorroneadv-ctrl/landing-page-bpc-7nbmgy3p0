@@ -1,59 +1,56 @@
-import { Star, Quote } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
+import { Star, Quote } from 'lucide-react'
+
+const testimonials = [
+  {
+    name: 'Maria C. Santos',
+    role: 'Aposentadoria Concedida',
+    text: 'A clareza técnica e a dedicação do Dr. Lucas foram fundamentais para a concessão da minha aposentadoria. O processo foi conduzido de forma ética e muito transparente.',
+  },
+  {
+    name: 'João R. Oliveira',
+    role: 'BPC/LOAS',
+    text: 'Depois de ter o benefício negado duas vezes pelo INSS, procurei o escritório. A organização da documentação e a orientação precisa fizeram toda a diferença para o meu filho.',
+  },
+  {
+    name: 'Antônio M. Silva',
+    role: 'Aposentadoria por Tempo',
+    text: 'Profissionalismo exemplar. Fizeram um planejamento previdenciário completo que me mostrou exatamente qual seria o melhor momento para dar entrada no meu pedido.',
+  },
+]
 
 export function SocialProof() {
-  const testimonials = [
-    {
-      name: 'Maria da Silva',
-      role: 'Mãe de criança atípica',
-      content:
-        'Depois de tentar duas vezes sozinha e ter o pedido negado, o Dr. Lucas conseguiu o benefício do meu filho na justiça. Mudou nossa vida.',
-    },
-    {
-      name: 'José Carlos',
-      role: 'Idoso (68 anos)',
-      content:
-        'Fui muito bem atendido desde a primeira mensagem. A equipe cuidou de toda a papelada e hoje recebo meu benefício certinho todo mês.',
-    },
-    {
-      name: 'Ana Oliveira',
-      role: 'Aposentadoria por Invalidez',
-      content:
-        'Excelente profissional. Me explicou tudo com muita clareza e acompanhou meu caso com muita dedicação. Recomendo de olhos fechados.',
-    },
-  ]
-
   return (
-    <section className="py-24 bg-black">
+    <section className="py-20 bg-[#151515]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-sm font-bold text-yellow-600 uppercase tracking-widest mb-2">
-            Depoimentos
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            O que dizem nossos <span className="text-gold">Clientes</span>
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            O que dizem nossos clientes
-          </h3>
-          <p className="text-gray-400 text-lg">
-            A maior recompensa do nosso trabalho é a transformação na vida de quem confia em nós.
+          <p className="text-foreground/70 text-lg">
+            O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de
+            seus direitos.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, i) => (
-            <Card key={i} className="bg-zinc-900 border-gray-800 rounded-none relative">
-              <Quote className="absolute top-6 right-6 text-gray-800" size={48} />
-              <CardContent className="pt-10 px-8 pb-8 relative z-10">
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} size={16} className="text-yellow-500 fill-yellow-500" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="bg-[#1A1A1A] border-border relative mt-6">
+              <div className="absolute -top-6 left-6 bg-gold rounded-full p-3 shadow-lg">
+                <Quote className="h-6 w-6 text-[#111111]" />
+              </div>
+              <CardContent className="pt-10 pb-8 px-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-gold fill-gold" />
                   ))}
                 </div>
-                <p className="text-gray-300 text-lg italic mb-8 relative z-10">
-                  "{testimonial.content}"
+                <p className="text-foreground/80 italic mb-6 leading-relaxed">
+                  "{testimonial.text}"
                 </p>
                 <div>
-                  <h4 className="font-bold text-white">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <h4 className="font-bold text-white text-lg">{testimonial.name}</h4>
+                  <p className="text-gold text-sm">{testimonial.role}</p>
                 </div>
               </CardContent>
             </Card>

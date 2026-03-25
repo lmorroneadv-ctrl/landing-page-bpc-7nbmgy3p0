@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
-export default function Ebook() {
+export function Ebook() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [name, setName] = useState('')
   const [contact, setContact] = useState('')

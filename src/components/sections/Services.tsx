@@ -1,62 +1,116 @@
-import { FileText, Shield, Clock, HeartHandshake } from 'lucide-react'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { CheckCircle2, Scale, Clock, Users, ShieldAlert, Tractor, Activity } from 'lucide-react'
+
+const services = [
+  {
+    title: 'Aposentadoria por Idade',
+    icon: <Clock className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Cálculo do tempo de contribuição',
+      'Simulação do benefício',
+      'Correção de vínculos',
+      'Pedido administrativo completo',
+    ],
+  },
+  {
+    title: 'Aposentadoria por Tempo',
+    icon: <Scale className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Análise de direito adquirido',
+      'Simulação de todas as regras',
+      'Correção de vínculos',
+      'Planejamento previdenciário completo',
+    ],
+  },
+  {
+    title: 'Pensão por Morte',
+    icon: <Users className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Análise de dependência',
+      'Documentação necessária',
+      'Pedido administrativo completo',
+      'Revisão do valor do benefício',
+    ],
+  },
+  {
+    title: 'BPC / LOAS',
+    icon: <ShieldAlert className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Análise de renda e requisitos legais',
+      'Organização da documentação',
+      'Pedido administrativo completo',
+      'Recurso em caso de negativa',
+    ],
+  },
+  {
+    title: 'Aposentadoria Híbrida',
+    icon: <Tractor className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Cálculo urbano + rural atualizado',
+      'Validação de documentos rurais',
+      'Simulação completa',
+      'Pedido administrativo completo',
+    ],
+  },
+  {
+    title: 'Benefícios por Incapacidade',
+    icon: <Activity className="h-8 w-8 text-gold mb-4" />,
+    items: [
+      'Benefício por Incapacidade Temporária',
+      'Benefício por Incapacidade Permanente',
+      'Análise médica previdenciária',
+      'Recurso em caso de negativa',
+    ],
+  },
+]
 
 export function Services() {
-  const services = [
-    {
-      icon: <FileText size={32} className="text-yellow-600" />,
-      title: 'Requerimento Administrativo',
-      description:
-        'Montamos todo o seu processo no INSS da forma correta, anexando laudos e documentos indispensáveis para aprovação.',
-    },
-    {
-      icon: <Shield size={32} className="text-yellow-600" />,
-      title: 'Ação Judicial',
-      description:
-        'Seu BPC foi negado pelo INSS? Nós entramos com processo na Justiça Federal para garantir o seu direito.',
-    },
-    {
-      icon: <Clock size={32} className="text-yellow-600" />,
-      title: 'Análise de Requisitos',
-      description:
-        'Avaliamos gratuitamente se você preenche os requisitos de renda e deficiência/idade para receber o benefício.',
-    },
-    {
-      icon: <HeartHandshake size={32} className="text-yellow-600" />,
-      title: 'Acompanhamento Integral',
-      description:
-        'Do início ao fim, você será informado sobre cada movimentação do seu processo, com total transparência.',
-    },
-  ]
-
   return (
-    <section id="servicos" className="py-24 bg-zinc-900">
+    <section id="servicos" className="py-20 bg-[#151515]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-sm font-bold text-yellow-600 uppercase tracking-widest mb-2">
-            Nossas Soluções
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Áreas de <span className="text-gold">Atuação</span>
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Como podemos ajudar você?
-          </h3>
-          <p className="text-gray-400 text-lg">
-            Atuação especializada para desburocratizar o acesso ao seu benefício e reverter
-            injustiças cometidas pelo INSS.
+          <p className="text-foreground/70 text-lg">
+            Oferecemos assessoria jurídica especializada para garantir que seus direitos
+            previdenciários sejam respeitados e concedidos de forma correta.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="bg-black border-gray-800 hover:border-yellow-600/50 transition-colors duration-300 rounded-none"
+              className="bg-[#1A1A1A] border-border hover:border-gold/50 transition-colors duration-300"
             >
-              <CardContent className="pt-8 px-6 pb-8">
-                <div className="mb-6 bg-zinc-900 w-16 h-16 flex items-center justify-center rounded-full border border-gray-800">
-                  {service.icon}
-                </div>
-                <h4 className="text-xl font-bold text-white mb-4">{service.title}</h4>
-                <p className="text-gray-400 leading-relaxed">{service.description}</p>
+              <CardHeader>
+                {service.icon}
+                <CardTitle className="text-xl font-bold text-white">{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3 mb-6">
+                  {service.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start text-foreground/80">
+                      <CheckCircle2 className="h-5 w-5 text-gold mr-3 shrink-0 mt-0.5" />
+                      <span className="text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button
+                  variant="outline"
+                  className="w-full border-gold/50 text-gold hover:bg-gold hover:text-[#111111] transition-colors"
+                  asChild
+                >
+                  <a
+                    href={`https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Solicitar Análise
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           ))}

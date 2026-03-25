@@ -8,7 +8,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { FileText, Clock, AlertCircle, ShieldAlert, Stethoscope, FilePlus } from 'lucide-react'
 
-export default function Updates() {
+export function Updates() {
   return (
     <section id="atualizacoes" className="py-20 bg-[#1A1A1A] border-y border-border/50">
       <div className="container mx-auto px-4 md:px-6">

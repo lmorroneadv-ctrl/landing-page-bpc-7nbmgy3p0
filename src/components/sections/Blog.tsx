@@ -15,7 +15,7 @@ const articles = [
   {
     title: 'Aposentadoria por Idade — O que mudou após a Reforma',
     content:
-      'Com a Reforma da Previdência (EC 103/2019), a idade mínima para mulheres passou a ser de 62 anos, e para homens, manteve-se em 65 anos. O tempo mínimo de contribuição é de 15 anos para mulheres e 20 anos para homens que começaram a contribuir após a reforma. Existem regras de transição que devem ser cuidadosamente analisadas caso a caso.',
+      'Com a Reforma da Previdência (EC 103/2019), a idade mínima para mulheres passou a ser de 62 anos, e para homens, manteve-se em 65 anos. O tempo mínimo de contribuição é de 15 anos para mulheres e 20 anos para homens que começaram a contribuir após a reforma. Existem regras de transição que devem ser carefully analisadas caso a caso.',
   },
   {
     title: 'BPC/LOAS — Quem tem direito e como solicitar',
@@ -34,7 +34,7 @@ const articles = [
   },
 ]
 
-export default function Blog() {
+export function Blog() {
   return (
     <section id="blog" className="py-20 bg-[#151515]">
       <div className="container mx-auto px-4 md:px-6">

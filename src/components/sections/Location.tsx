@@ -1,77 +1,95 @@
 import { MapPin, Phone, Clock } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 
 export function Location() {
   return (
-    <section id="localizacao" className="py-24 bg-black">
+    <section id="contato" className="py-20 bg-[#111111]">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-sm font-bold text-yellow-600 uppercase tracking-widest mb-2">
-              Localização
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-8">
-              Atendimento em todo o Brasil
-            </h3>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Localização & <span className="text-gold">Contato</span>
+          </h2>
+          <p className="text-foreground/70 text-lg">
+            Atendimento presencial em nossa sede em Rio Grande e em Pelotas mediante agendamento.
+          </p>
+        </div>
 
-            <p className="text-gray-400 text-lg mb-8">
-              Nosso escritório físico está localizado em São Paulo, mas oferecemos atendimento 100%
-              digital, seguro e transparente para clientes de qualquer lugar do país.
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <Card className="bg-[#1A1A1A] border-border overflow-hidden h-full">
+            <CardContent className="p-0 h-[400px] lg:h-full min-h-[400px]">
+              <iframe
+                title="Mapa do Escritório"
+                src="https://maps.google.com/maps?q=Av.%20Silva%20Paes,%20293,%20Rio%20Grande%20-%20RS&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+              ></iframe>
+            </CardContent>
+          </Card>
 
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start gap-4">
-                <div className="bg-zinc-900 p-3 rounded-full border border-gray-800">
-                  <MapPin className="text-yellow-600" size={24} />
+          <div className="flex flex-col gap-6">
+            <Card className="bg-[#1A1A1A] border-border">
+              <CardContent className="p-8 flex items-start gap-4">
+                <div className="bg-gold/10 p-3 rounded-full shrink-0">
+                  <MapPin className="h-6 w-6 text-gold" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-1">Nosso Escritório</h4>
-                  <p className="text-gray-400">
-                    Av. Paulista, 1000 - Conjunto 100
+                  <h3 className="text-xl font-bold text-white mb-2">Endereço Principal</h3>
+                  <p className="text-foreground/80 leading-relaxed">
+                    Av. Silva Paes, 293
                     <br />
-                    Bela Vista, São Paulo - SP, 01310-100
+                    Centro, Rio Grande - RS
+                    <br />
+                    CEP: 96200-340
+                  </p>
+                  <p className="mt-3 text-sm text-gold font-medium">
+                    *Atendimento em Pelotas sob agendamento prévio.
                   </p>
                 </div>
-              </div>
+              </CardContent>
+            </Card>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-zinc-900 p-3 rounded-full border border-gray-800">
-                  <Phone className="text-yellow-600" size={24} />
+            <Card className="bg-[#1A1A1A] border-border">
+              <CardContent className="p-8 flex items-start gap-4">
+                <div className="bg-gold/10 p-3 rounded-full shrink-0">
+                  <Phone className="h-6 w-6 text-gold" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-1">Telefone / WhatsApp</h4>
-                  <p className="text-gray-400">(11) 99999-9999</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Contato</h3>
+                  <p className="text-foreground/80 mb-1">
+                    WhatsApp:{' '}
+                    <a
+                      href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-gold transition-colors"
+                    >
+                      (53) 98106-3023
+                    </a>
+                  </p>
                 </div>
-              </div>
+              </CardContent>
+            </Card>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-zinc-900 p-3 rounded-full border border-gray-800">
-                  <Clock className="text-yellow-600" size={24} />
+            <Card className="bg-[#1A1A1A] border-border">
+              <CardContent className="p-8 flex items-start gap-4">
+                <div className="bg-gold/10 p-3 rounded-full shrink-0">
+                  <Clock className="h-6 w-6 text-gold" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-1">Horário de Atendimento</h4>
-                  <p className="text-gray-400">Segunda a Sexta: 09h às 18h</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Horário de Atendimento</h3>
+                  <p className="text-foreground/80">
+                    Segunda a Sexta-feira
+                    <br />
+                    09:00 às 12:00 e 13:30 às 18:00
+                  </p>
                 </div>
-              </div>
-            </div>
-
-            <Button
-              size="lg"
-              className="bg-white text-black hover:bg-gray-200 rounded-none uppercase tracking-wider font-semibold w-full sm:w-auto"
-              onClick={() => window.open('https://maps.google.com', '_blank')}
-            >
-              Ver no Google Maps
-            </Button>
-          </div>
-
-          <div className="h-[400px] md:h-[500px] bg-zinc-900 relative rounded-none overflow-hidden border border-gray-800">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.148645517173!2d-46.65484838446979!3d-23.56309946755458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr"
-              className="absolute inset-0 w-full h-full border-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
