@@ -1,212 +1,249 @@
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import {
   Accordion,
+  AccordionContent,
   AccordionItem,
   AccordionTrigger,
-  AccordionContent,
 } from '@/components/ui/accordion'
+import {
+  CheckCircle2,
+  FileText,
+  AlertTriangle,
+  ShieldCheck,
+  Clock,
+  HeartPulse,
+  ChevronRight,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { FileText, Clock, AlertCircle, ShieldAlert, Stethoscope, FilePlus } from 'lucide-react'
 
 export function Updates() {
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+      window.scrollTo({
+        top: el.getBoundingClientRect().top + window.pageYOffset - 100,
+        behavior: 'smooth',
+      })
+    }
+  }
+
   return (
-    <section id="atualizacoes" className="py-20 bg-[#1A1A1A] border-y border-border/50">
+    <section id="atualizacoes" className="py-20 bg-[#151515] border-t border-border/50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <FileText className="h-10 w-10 text-gold mx-auto mb-4" />
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Últimas <span className="text-gold">Atualizações</span>
+            Atualizações <span className="text-gold">Previdenciárias 2026</span>
           </h2>
           <p className="text-foreground/70 text-lg">
-            Mantenha-se informado sobre as recentes mudanças nas normativas do INSS e como elas
-            impactam seus direitos previdenciários.
+            Acompanhe as novas regulamentações e exigências do INSS para garantir a concessão dos
+            seus benefícios de forma rápida e segura.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-start">
-          <Card className="bg-[#111111] border-border hover:border-gold/30 transition-colors">
-            <CardHeader>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-gold/10 rounded-lg">
-                  <Clock className="h-6 w-6 text-gold" />
-                </div>
-                <span className="text-sm font-semibold text-gold tracking-wider uppercase">
-                  Incapacidade Temporária
-                </span>
-              </div>
-              <CardTitle className="text-2xl text-white leading-tight">
-                AtestMed 2026: Solicitação de Auxílio-Doença via Web por até 90 Dias
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-foreground/80 mb-6">
-                O AtestMed consolidou-se como o sistema digital oficial para análise documental,
-                substituindo a perícia presencial na concessão de benefícios por incapacidade
-                temporária, permitindo aprovações de até 90 dias.
-              </p>
-
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="passo-a-passo" className="border-border">
-                  <AccordionTrigger className="text-white hover:text-gold">
-                    Passo a Passo da Solicitação
-                  </AccordionTrigger>
-                  <AccordionContent className="text-foreground/70 space-y-3">
-                    <div className="flex items-start gap-3">
-                      <div className="h-6 w-6 shrink-0 bg-gold/20 text-gold rounded-full flex items-center justify-center font-bold text-xs">
-                        1
-                      </div>
-                      <p>Reunir documentação médica que comprove a incapacidade.</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="h-6 w-6 shrink-0 bg-gold/20 text-gold rounded-full flex items-center justify-center font-bold text-xs">
-                        2
-                      </div>
-                      <p>Solicitar o benefício pelo portal "Meu INSS" ou pela central 135.</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="h-6 w-6 shrink-0 bg-gold/20 text-gold rounded-full flex items-center justify-center font-bold text-xs">
-                        3
-                      </div>
-                      <p>Fazer o upload dos arquivos necessários (laudos, exames, atestados).</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="h-6 w-6 shrink-0 bg-gold/20 text-gold rounded-full flex items-center justify-center font-bold text-xs">
-                        4
-                      </div>
-                      <p>Aguardar a análise remota por um perito médico federal.</p>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="mudancas-2026" className="border-border">
-                  <AccordionTrigger className="text-white hover:text-gold">
-                    Mudanças de 2026 (Portaria 13/2026)
-                  </AccordionTrigger>
-                  <AccordionContent className="text-foreground/70">
-                    O procedimento evoluiu de uma simples triagem para uma avaliação pericial remota
-                    completa. O perito agora possui autonomia para fixar o período de recuperação e,
-                    inclusive, reconhecer acidentes de trabalho diretamente de forma digital pelo
-                    AtestMed.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="regras-importantes" className="border-border">
-                  <AccordionTrigger className="text-white hover:text-gold">
-                    Regras e Prazos Importantes
-                  </AccordionTrigger>
-                  <AccordionContent className="text-foreground/70 space-y-2">
-                    <ul className="list-disc pl-5 space-y-1">
-                      <li>
-                        Pedidos de prorrogação possuem uma janela de 15 dias finais do benefício e
-                        exigem avaliação presencial.
-                      </li>
-                      <li>
-                        Há um limite de 3 negativas consecutivas via sistema; após isso, a avaliação
-                        presencial é obrigatória.
-                      </li>
-                      <li>Prazo estrito de 30 dias para interposição de recurso administrativo.</li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="documentos" className="border-transparent">
-                  <AccordionTrigger className="text-white hover:text-gold">
-                    Documentação Exigida e Dicas
-                  </AccordionTrigger>
-                  <AccordionContent className="text-foreground/70">
-                    <p className="mb-3">
-                      <strong className="text-white">Documentos Obrigatórios:</strong> Documento de
-                      identidade oficial com foto e documentação médica/odontológica contendo
-                      identificação do paciente, data, CID, assinatura e CRM/CRO do profissional.
-                    </p>
-                    <div className="bg-gold/10 p-4 rounded-lg border border-gold/20 flex gap-3">
-                      <Stethoscope className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-                      <p className="text-sm">
-                        <strong className="text-gold">Dica do Especialista:</strong> Descreva seus
-                        sintomas com clareza no campo específico do "Meu INSS". Ter um laudo médico
-                        detalhado é o fator mais importante para aumentar as chances de aprovação.
-                      </p>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-[#111111] border-border hover:border-gold/30 transition-colors">
-            <CardHeader>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-gold/10 rounded-lg">
-                  <ShieldAlert className="h-6 w-6 text-gold" />
-                </div>
-                <span className="text-sm font-semibold text-gold tracking-wider uppercase">
-                  Benefício Acidentário
-                </span>
-              </div>
-              <CardTitle className="text-2xl text-white leading-tight">
-                Auxílio-Acidente: Triagem Documental Torna-se Etapa Obrigatória
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-foreground/80 mb-8">
-                O INSS implementou uma nova e rigorosa exigência para a concessão do
-                Auxílio-Acidente: a obrigatoriedade de uma revisão documental preliminar antes mesmo
-                do agendamento da perícia médica presencial.
-              </p>
-
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="mt-1 bg-[#1A1A1A] p-2 rounded-full h-fit border border-border">
-                    <FilePlus className="h-5 w-5 text-gold" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-medium mb-2">A Nova Regra Chave</h4>
-                    <p className="text-foreground/70 text-sm leading-relaxed">
-                      O exame físico deixou de ser um agendamento automático. Agora, o requerente
-                      deve, obrigatoriamente, fornecer relatórios e exames consistentes que
-                      comprovem a ocorrência do acidente e atestem as sequelas consolidadas que
-                      impactam sua capacidade de trabalho.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="mt-1 bg-[#1A1A1A] p-2 rounded-full h-fit border border-border">
-                    <AlertCircle className="h-5 w-5 text-red-400" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-medium mb-2">
-                      Consequências na Análise do Pedido
-                    </h4>
-                    <p className="text-foreground/70 text-sm leading-relaxed">
-                      Caso os documentos anexados sejam considerados insuficientes ou inconclusivos
-                      durante a triagem inicial, o requerimento poderá ser sumariamente indeferido,
-                      sem que haja sequer a convocação do segurado para a avaliação presencial.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="bg-[#111111] border border-gold/20 rounded-xl p-8 text-center max-w-3xl mx-auto shadow-[0_0_30px_rgba(212,175,55,0.05)]">
-          <h3 className="text-2xl font-bold text-white mb-3">
-            Dúvidas sobre o impacto dessas regras no seu benefício?
-          </h3>
-          <p className="text-foreground/80 mb-8 text-lg">
-            A complexidade técnica das novas normativas exige uma organização documental impecável
-            para evitar negativas indevidas pelo INSS.
-          </p>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
           <Button
-            className="w-full sm:w-auto bg-gold hover:bg-gold/90 text-[#111111] font-bold h-14 px-8 text-base shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all duration-300"
-            asChild
+            variant="outline"
+            className="border-gold/30 text-gold hover:bg-gold hover:text-black bg-[#1A1A1A] h-12 rounded-full"
+            onClick={() => scrollTo('atestmed')}
           >
-            <a
-              href="https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20uma%20análise%20sobre%20as%20novas%20regras%20do%20INSS."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Fale com a equipe da Bocchi Advogados e receba uma análise do seu caso
-            </a>
+            <FileText className="mr-2 h-4 w-4" /> AtestMed (Regras 2026)
           </Button>
+          <Button
+            variant="outline"
+            className="border-gold/30 text-gold hover:bg-gold hover:text-black bg-[#1A1A1A] h-12 rounded-full"
+            onClick={() => scrollTo('auxilio')}
+          >
+            <HeartPulse className="mr-2 h-4 w-4" /> Auxílio-Acidente
+          </Button>
+          <Button
+            variant="outline"
+            className="border-gold/30 text-gold hover:bg-gold hover:text-black bg-[#1A1A1A] h-12 rounded-full"
+            onClick={() => scrollTo('dicas')}
+          >
+            <CheckCircle2 className="mr-2 h-4 w-4" /> Dicas de Aprovação
+          </Button>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 space-y-16">
+            <div id="atestmed" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-gold/10 p-3 rounded-lg">
+                  <FileText className="h-6 w-6 text-gold" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Guia Detalhado: AtestMed 2026</h3>
+              </div>
+              <div className="bg-[#1A1A1A] rounded-xl p-6 border border-border/50 shadow-soft">
+                <p className="text-foreground/80 mb-6">
+                  O sistema de análise documental remota passou por atualizações regidas pela{' '}
+                  <strong>Lei 15.265/2025</strong> e{' '}
+                  <strong>Portaria Conjunta MPS/INSS nº 13/2026</strong>. O novo modelo viabiliza
+                  benefícios por incapacidade por <strong>até 90 dias</strong> sem perícia
+                  presencial inicial.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-[#111111] p-5 rounded-lg border border-border">
+                    <h4 className="text-white font-semibold flex items-center gap-2 mb-4">
+                      <ShieldCheck className="h-5 w-5 text-gold" /> Docs Obrigatórios
+                    </h4>
+                    <ul className="space-y-3 text-sm text-foreground/80">
+                      {[
+                        'Identidade original com foto',
+                        'Laudo médico legível',
+                        'Identificação completa',
+                        'Data e código CID',
+                        'Assinatura e CRM/CRO',
+                      ].map((i, idx) => (
+                        <li key={idx} className="flex gap-2">
+                          <CheckCircle2 className="h-4 w-4 text-gold shrink-0 mt-0.5" /> {i}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="bg-[#111111] p-5 rounded-lg border border-border">
+                    <h4 className="text-white font-semibold flex items-center gap-2 mb-4">
+                      <AlertTriangle className="h-5 w-5 text-gold" /> Alertas e Regras
+                    </h4>
+                    <ul className="space-y-4 text-sm text-foreground/80">
+                      <li className="flex gap-2">
+                        <ChevronRight className="h-4 w-4 text-gold shrink-0 mt-0.5" />{' '}
+                        <strong>Como solicitar:</strong> Meu INSS ou central 135.
+                      </li>
+                      <li className="flex gap-2">
+                        <ChevronRight className="h-4 w-4 text-gold shrink-0 mt-0.5" />{' '}
+                        <strong>Limites:</strong> 3 negativas no sistema bloqueiam a via remota,
+                        tornando a perícia física obrigatória.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <h4 className="text-lg font-bold text-white mb-4 border-b border-border pb-2">
+                  Perguntas Frequentes (FAQ)
+                </h4>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="1" className="border-border/50">
+                    <AccordionTrigger className="text-white hover:text-gold py-4">
+                      Duração máxima do benefício
+                    </AccordionTrigger>
+                    <AccordionContent className="text-foreground/80">
+                      Pelo sistema remoto de análise, o benefício pode ser concedido por até 90 dias
+                      ininterruptos.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="2" className="border-border/50">
+                    <AccordionTrigger className="text-white hover:text-gold py-4">
+                      Prazo de análise pelo INSS
+                    </AccordionTrigger>
+                    <AccordionContent className="text-foreground/80">
+                      O INSS possui até 45 dias para concluir a avaliação do seu requerimento via
+                      AtestMed.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="3" className="border-border/50">
+                    <AccordionTrigger className="text-white hover:text-gold py-4">
+                      Regras para prorrogação
+                    </AccordionTrigger>
+                    <AccordionContent className="text-foreground/80">
+                      A prorrogação sempre exige obrigatoriamente a perícia médica (presencial ou
+                      por telemedicina).
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+            </div>
+
+            <div id="auxilio" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-gold/10 p-3 rounded-lg">
+                  <HeartPulse className="h-6 w-6 text-gold" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Triagem: Auxílio-Acidente</h3>
+              </div>
+              <div className="bg-[#1A1A1A] p-6 rounded-xl border border-border/50 shadow-soft">
+                <p className="text-foreground/80 mb-6">
+                  Para os benefícios acidentários, implementou-se uma{' '}
+                  <strong>triagem documental obrigatória</strong> que antecede e condiciona a
+                  perícia física.
+                </p>
+                <div className="bg-red-950/20 border-l-4 border-red-600 p-5 mb-6">
+                  <p className="text-sm text-foreground/90">
+                    <strong>Risco de Negativa:</strong> A ausência de elementos probatórios
+                    essenciais resulta no <strong>indeferimento imediato</strong> do pedido,
+                    impedindo o agendamento do exame.
+                  </p>
+                </div>
+                <h4 className="font-semibold text-white mb-4">
+                  Requisitos Essenciais na Documentação:
+                </h4>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  {[
+                    { icon: Clock, t: 'Data exata do acidente' },
+                    { icon: FileText, t: 'Descrição detalhada da lesão' },
+                    { icon: HeartPulse, t: 'Comprovação de sequelas que afetem o trabalho' },
+                  ].map((I, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-[#111111] p-5 rounded-lg border border-border flex flex-col items-center text-center"
+                    >
+                      <I.icon className="h-8 w-8 text-gold mb-3" />
+                      <span className="text-sm font-medium text-foreground/90">{I.t}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            <div id="dicas" className="scroll-mt-32">
+              <Card className="bg-[#1A1A1A] border-border/50">
+                <CardHeader>
+                  <CardTitle className="text-xl text-white flex gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-gold" /> Dicas de Aprovação
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-5">
+                  {[
+                    'Revise rigorosamente todos os dados do laudo médico antes do envio.',
+                    'Capture imagens bem iluminadas e legíveis de atestados e documentos de identidade.',
+                    'Jamais envie atestados com rasuras, emendas ou ausência de informações vitais.',
+                  ].map((t, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="bg-gold/10 p-2 rounded-md shrink-0 mt-0.5">
+                        <span className="text-gold font-bold text-sm">0{i + 1}</span>
+                      </div>
+                      <p className="text-sm text-foreground/80">{t}</p>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="bg-gradient-to-br from-[#1a1500] to-[#111111] border-gold/50 shadow-gold">
+              <CardHeader>
+                <CardTitle className="text-xl text-white">Por que um advogado?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/90 text-sm mb-6 leading-relaxed">
+                  Erros documentais custam o seu benefício. A assessoria especializada em parceria
+                  com a excelência da <strong>Bocchi Advogados</strong> garante auditoria prévia
+                  detalhada, neutralizando riscos de negativas automáticas pelo INSS.
+                </p>
+                <Button
+                  className="w-full bg-gold hover:bg-gold/90 text-black font-bold h-14 uppercase text-sm"
+                  asChild
+                >
+                  <a
+                    href="https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20ajuda%20com%20as%20novas%20regras%20do%20INSS."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Falar com a Equipe Legal
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
