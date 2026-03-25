@@ -1,20 +1,20 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import Index from './pages/Index'
-import BpcGuide from './pages/BpcGuide'
-import NotFound from './pages/NotFound'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Layout } from '@/components/Layout'
+import Index from '@/pages/Index'
+import { Toaster } from '@/components/ui/toaster'
+import { Toaster as Sonner } from '@/components/ui/sonner'
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Index />} />
-          <Route path="guia-bpc" element={<BpcGuide />} />
-          <Route path="*" element={<NotFound />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Index />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+      <Toaster />
+      <Sonner />
+    </Router>
   )
 }
 
