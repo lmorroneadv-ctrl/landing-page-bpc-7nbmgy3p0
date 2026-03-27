@@ -70,26 +70,22 @@ export function Updates() {
               </div>
               <div className="bg-card rounded-xl p-6 border border-border shadow-soft">
                 <p className="text-foreground font-medium mb-6">
-                  Para pedir o <strong>AtestMed pelo INSS em 2026</strong>, você deve acessar o
-                  aplicativo ou site <strong>Meu INSS</strong>, ou ligar para a central 135. O
-                  sistema de análise documental remota foi atualizado pela{' '}
-                  <strong>Lei 15.265/2025</strong> e{' '}
-                  <strong>Portaria Conjunta MPS/INSS nº 13/2026</strong>. O novo modelo viabiliza a
-                  concessão de benefícios por incapacidade (Auxílio Doença) por{' '}
-                  <strong>até 90 dias</strong> sem a necessidade de perícia presencial inicial.
+                  O <strong>AtestMed</strong> viabiliza a concessão de benefícios por incapacidade
+                  (Auxílio Doença) por <strong>até 90 dias</strong> sem a necessidade de perícia
+                  presencial inicial.
                 </p>
-                <div className="grid sm:grid-cols-2 gap-6 mb-8">
+                <div className="grid sm:grid-cols-2 gap-6">
                   <div className="bg-background p-5 rounded-lg border border-border">
                     <h4 className="text-foreground font-semibold flex items-center gap-2 mb-4">
-                      <ShieldCheck className="h-5 w-5 text-gold" /> Docs Obrigatórios
+                      <ShieldCheck className="h-5 w-5 text-gold" /> Documentos Obrigatórios
                     </h4>
                     <ul className="space-y-3 text-sm text-muted-foreground font-medium">
                       {[
                         'Identidade original com foto',
                         'Laudo médico legível',
-                        'Identificação completa',
-                        'Data e código CID',
-                        'Assinatura e CRM/CRO',
+                        'Identificação completa do paciente',
+                        'Data de emissão e código CID',
+                        'Assinatura e carimbo (CRM/CRO)',
                       ].map((i, idx) => (
                         <li key={idx} className="flex gap-2">
                           <CheckCircle2 className="h-4 w-4 text-gold shrink-0 mt-0.5" /> {i}
@@ -99,53 +95,24 @@ export function Updates() {
                   </div>
                   <div className="bg-background p-5 rounded-lg border border-border">
                     <h4 className="text-foreground font-semibold flex items-center gap-2 mb-4">
-                      <AlertTriangle className="h-5 w-5 text-gold" /> Alertas e Regras
+                      <AlertTriangle className="h-5 w-5 text-gold" /> Requisitos de Elegibilidade
                     </h4>
                     <ul className="space-y-4 text-sm text-muted-foreground font-medium">
                       <li className="flex gap-2">
-                        <ChevronRight className="h-4 w-4 text-gold shrink-0 mt-0.5" />{' '}
-                        <strong>Como solicitar:</strong> Aplicativo Meu INSS ou central 135.
+                        <ChevronRight className="h-4 w-4 text-gold shrink-0 mt-0.5" /> Necessidade
+                        de afastamento de até 90 dias.
                       </li>
                       <li className="flex gap-2">
-                        <ChevronRight className="h-4 w-4 text-gold shrink-0 mt-0.5" />{' '}
-                        <strong>Limites:</strong> 3 negativas no sistema bloqueiam a via remota,
-                        tornando a perícia física obrigatória.
+                        <ChevronRight className="h-4 w-4 text-gold shrink-0 mt-0.5" /> Não possuir 3
+                        negativas anteriores no sistema remoto.
+                      </li>
+                      <li className="flex gap-2">
+                        <ChevronRight className="h-4 w-4 text-gold shrink-0 mt-0.5" /> Para
+                        benefícios acidentários, exige-se documentação complementar do acidente.
                       </li>
                     </ul>
                   </div>
                 </div>
-                <h4 className="text-lg font-bold text-foreground mb-4 border-b border-border pb-2">
-                  Perguntas Frequentes sobre o AtestMed
-                </h4>
-                <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="1" className="border-border">
-                    <AccordionTrigger className="text-foreground hover:text-gold-dark py-4 font-semibold">
-                      Qual a duração máxima do benefício AtestMed?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground font-medium">
-                      Pelo sistema remoto de análise, o benefício pode ser concedido por até 90 dias
-                      ininterruptos.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="2" className="border-border">
-                    <AccordionTrigger className="text-foreground hover:text-gold-dark py-4 font-semibold">
-                      Qual o prazo de análise pelo INSS?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground font-medium">
-                      O INSS possui até 45 dias para concluir a avaliação do seu requerimento via
-                      AtestMed.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="3" className="border-border">
-                    <AccordionTrigger className="text-foreground hover:text-gold-dark py-4 font-semibold">
-                      Quais são as regras para prorrogação?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground font-medium">
-                      A prorrogação do benefício sempre exige obrigatoriamente a perícia médica
-                      (presencial ou por telemedicina).
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
               </div>
             </div>
 
@@ -237,19 +204,32 @@ export function Updates() {
               </AccordionTrigger>
               <AccordionContent className="pt-2 pb-6">
                 <p className="text-muted-foreground font-medium mb-4 text-sm">
-                  O sistema de análise remota permite benefícios por incapacidade por até 90 dias
-                  sem perícia presencial inicial.
+                  Permite a concessão de benefícios por até 90 dias sem perícia presencial inicial.
                 </p>
-                <ul className="space-y-2 text-sm text-muted-foreground font-medium mb-4">
-                  <li className="flex gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-gold shrink-0 mt-0.5" />
-                    Documentos: RG, Laudo legível (com CID), CRM/CRO.
-                  </li>
-                  <li className="flex gap-2">
-                    <AlertTriangle className="h-4 w-4 text-gold shrink-0 mt-0.5" />
-                    Limite: 3 negativas bloqueiam a via remota.
-                  </li>
-                </ul>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-foreground font-semibold text-sm mb-2 flex items-center gap-2">
+                      <ShieldCheck className="h-4 w-4 text-gold" /> Documentos:
+                    </h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground font-medium">
+                      <li className="flex gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                        Identidade, Laudo médico legível (com CID), CRM/CRO.
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-foreground font-semibold text-sm mb-2 flex items-center gap-2">
+                      <AlertTriangle className="h-4 w-4 text-gold" /> Requisitos:
+                    </h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground font-medium">
+                      <li className="flex gap-2">
+                        <ChevronRight className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                        Afastamento de até 90 dias; Limite de 3 negativas no sistema.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </AccordionContent>
             </AccordionItem>
 

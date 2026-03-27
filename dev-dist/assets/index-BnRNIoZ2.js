@@ -22110,253 +22110,158 @@ function Updates() {
 								"data-uid": "src/components/sections/Updates.tsx:71:15",
 								"data-prohibitions": "[editContent]",
 								className: "bg-card rounded-xl p-6 border border-border shadow-soft",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Updates.tsx:72:17",
-										"data-prohibitions": "[]",
-										className: "text-foreground font-medium mb-6",
-										children: [
-											"Para pedir o ",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:73:32",
-												"data-prohibitions": "[]",
-												children: "AtestMed pelo INSS em 2026"
-											}),
-											", você deve acessar o aplicativo ou site ",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:74:38",
-												"data-prohibitions": "[]",
-												children: "Meu INSS"
-											}),
-											", ou ligar para a central 135. O sistema de análise documental remota foi atualizado pela",
-											" ",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:76:19",
-												"data-prohibitions": "[]",
-												children: "Lei 15.265/2025"
-											}),
-											" e",
-											" ",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:77:19",
-												"data-prohibitions": "[]",
-												children: "Portaria Conjunta MPS/INSS nº 13/2026"
-											}),
-											". O novo modelo viabiliza a concessão de benefícios por incapacidade (Auxílio Doença) por",
-											" ",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:79:19",
-												"data-prohibitions": "[]",
-												children: "até 90 dias"
-											}),
-											" sem a necessidade de perícia presencial inicial."
-										]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:81:17",
-										"data-prohibitions": "[editContent]",
-										className: "grid sm:grid-cols-2 gap-6 mb-8",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:82:19",
-											"data-prohibitions": "[editContent]",
-											className: "bg-background p-5 rounded-lg border border-border",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-												"data-uid": "src/components/sections/Updates.tsx:83:21",
-												"data-prohibitions": "[]",
-												className: "text-foreground font-semibold flex items-center gap-2 mb-4",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
-													"data-uid": "src/components/sections/Updates.tsx:84:23",
-													"data-prohibitions": "[editContent]",
-													className: "h-5 w-5 text-gold"
-												}), " Docs Obrigatórios"]
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-												"data-uid": "src/components/sections/Updates.tsx:86:21",
-												"data-prohibitions": "[editContent]",
-												className: "space-y-3 text-sm text-muted-foreground font-medium",
-												children: [
-													"Identidade original com foto",
-													"Laudo médico legível",
-													"Identificação completa",
-													"Data e código CID",
-													"Assinatura e CRM/CRO"
-												].map((i, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-													"data-uid": "src/components/sections/Updates.tsx:94:25",
-													"data-prohibitions": "[editContent]",
-													className: "flex gap-2",
-													children: [
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-															"data-uid": "src/components/sections/Updates.tsx:95:27",
-															"data-prohibitions": "[editContent]",
-															className: "h-4 w-4 text-gold shrink-0 mt-0.5"
-														}),
-														" ",
-														i
-													]
-												}, idx))
-											})]
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:100:19",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									"data-uid": "src/components/sections/Updates.tsx:72:17",
+									"data-prohibitions": "[]",
+									className: "text-foreground font-medium mb-6",
+									children: [
+										"O ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											"data-uid": "src/components/sections/Updates.tsx:73:21",
 											"data-prohibitions": "[]",
-											className: "bg-background p-5 rounded-lg border border-border",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-												"data-uid": "src/components/sections/Updates.tsx:101:21",
-												"data-prohibitions": "[]",
-												className: "text-foreground font-semibold flex items-center gap-2 mb-4",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
-													"data-uid": "src/components/sections/Updates.tsx:102:23",
-													"data-prohibitions": "[editContent]",
-													className: "h-5 w-5 text-gold"
-												}), " Alertas e Regras"]
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-												"data-uid": "src/components/sections/Updates.tsx:104:21",
-												"data-prohibitions": "[]",
-												className: "space-y-4 text-sm text-muted-foreground font-medium",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											children: "AtestMed"
+										}),
+										" viabiliza a concessão de benefícios por incapacidade (Auxílio Doença) por ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											"data-uid": "src/components/sections/Updates.tsx:74:40",
+											"data-prohibitions": "[]",
+											children: "até 90 dias"
+										}),
+										" sem a necessidade de perícia presencial inicial."
+									]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Updates.tsx:77:17",
+									"data-prohibitions": "[editContent]",
+									className: "grid sm:grid-cols-2 gap-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/Updates.tsx:78:19",
+										"data-prohibitions": "[editContent]",
+										className: "bg-background p-5 rounded-lg border border-border",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
+											"data-uid": "src/components/sections/Updates.tsx:79:21",
+											"data-prohibitions": "[]",
+											className: "text-foreground font-semibold flex items-center gap-2 mb-4",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
+												"data-uid": "src/components/sections/Updates.tsx:80:23",
+												"data-prohibitions": "[editContent]",
+												className: "h-5 w-5 text-gold"
+											}), " Documentos Obrigatórios"]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+											"data-uid": "src/components/sections/Updates.tsx:82:21",
+											"data-prohibitions": "[editContent]",
+											className: "space-y-3 text-sm text-muted-foreground font-medium",
+											children: [
+												"Identidade original com foto",
+												"Laudo médico legível",
+												"Identificação completa do paciente",
+												"Data de emissão e código CID",
+												"Assinatura e carimbo (CRM/CRO)"
+											].map((i, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/components/sections/Updates.tsx:90:25",
+												"data-prohibitions": "[editContent]",
+												className: "flex gap-2",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+														"data-uid": "src/components/sections/Updates.tsx:91:27",
+														"data-prohibitions": "[editContent]",
+														className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+													}),
+													" ",
+													i
+												]
+											}, idx))
+										})]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/Updates.tsx:96:19",
+										"data-prohibitions": "[]",
+										className: "bg-background p-5 rounded-lg border border-border",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
+											"data-uid": "src/components/sections/Updates.tsx:97:21",
+											"data-prohibitions": "[]",
+											className: "text-foreground font-semibold flex items-center gap-2 mb-4",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
+												"data-uid": "src/components/sections/Updates.tsx:98:23",
+												"data-prohibitions": "[editContent]",
+												className: "h-5 w-5 text-gold"
+											}), " Requisitos de Elegibilidade"]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+											"data-uid": "src/components/sections/Updates.tsx:100:21",
+											"data-prohibitions": "[]",
+											className: "space-y-4 text-sm text-muted-foreground font-medium",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+													"data-uid": "src/components/sections/Updates.tsx:101:23",
+													"data-prohibitions": "[]",
+													className: "flex gap-2",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
+														"data-uid": "src/components/sections/Updates.tsx:102:25",
+														"data-prohibitions": "[editContent]",
+														className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+													}), " Necessidade de afastamento de até 90 dias."]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 													"data-uid": "src/components/sections/Updates.tsx:105:23",
 													"data-prohibitions": "[]",
 													className: "flex gap-2",
-													children: [
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
-															"data-uid": "src/components/sections/Updates.tsx:106:25",
-															"data-prohibitions": "[editContent]",
-															className: "h-4 w-4 text-gold shrink-0 mt-0.5"
-														}),
-														" ",
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-															"data-uid": "src/components/sections/Updates.tsx:107:25",
-															"data-prohibitions": "[]",
-															children: "Como solicitar:"
-														}),
-														" Aplicativo Meu INSS ou central 135."
-													]
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
+														"data-uid": "src/components/sections/Updates.tsx:106:25",
+														"data-prohibitions": "[editContent]",
+														className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+													}), " Não possuir 3 negativas anteriores no sistema remoto."]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 													"data-uid": "src/components/sections/Updates.tsx:109:23",
 													"data-prohibitions": "[]",
 													className: "flex gap-2",
-													children: [
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
-															"data-uid": "src/components/sections/Updates.tsx:110:25",
-															"data-prohibitions": "[editContent]",
-															className: "h-4 w-4 text-gold shrink-0 mt-0.5"
-														}),
-														" ",
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-															"data-uid": "src/components/sections/Updates.tsx:111:25",
-															"data-prohibitions": "[]",
-															children: "Limites:"
-														}),
-														" 3 negativas no sistema bloqueiam a via remota, tornando a perícia física obrigatória."
-													]
-												})]
-											})]
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
+														"data-uid": "src/components/sections/Updates.tsx:110:25",
+														"data-prohibitions": "[editContent]",
+														className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+													}), " Para benefícios acidentários, exige-se documentação complementar do acidente."]
+												})
+											]
 										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/sections/Updates.tsx:117:17",
-										"data-prohibitions": "[]",
-										className: "text-lg font-bold text-foreground mb-4 border-b border-border pb-2",
-										children: "Perguntas Frequentes sobre o AtestMed"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Accordion, {
-										"data-uid": "src/components/sections/Updates.tsx:120:17",
-										"data-prohibitions": "[]",
-										type: "single",
-										collapsible: true,
-										className: "w-full",
-										children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-												"data-uid": "src/components/sections/Updates.tsx:121:19",
-												"data-prohibitions": "[]",
-												value: "1",
-												className: "border-border",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-													"data-uid": "src/components/sections/Updates.tsx:122:21",
-													"data-prohibitions": "[]",
-													className: "text-foreground hover:text-gold-dark py-4 font-semibold",
-													children: "Qual a duração máxima do benefício AtestMed?"
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-													"data-uid": "src/components/sections/Updates.tsx:125:21",
-													"data-prohibitions": "[]",
-													className: "text-muted-foreground font-medium",
-													children: "Pelo sistema remoto de análise, o benefício pode ser concedido por até 90 dias ininterruptos."
-												})]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-												"data-uid": "src/components/sections/Updates.tsx:130:19",
-												"data-prohibitions": "[]",
-												value: "2",
-												className: "border-border",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-													"data-uid": "src/components/sections/Updates.tsx:131:21",
-													"data-prohibitions": "[]",
-													className: "text-foreground hover:text-gold-dark py-4 font-semibold",
-													children: "Qual o prazo de análise pelo INSS?"
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-													"data-uid": "src/components/sections/Updates.tsx:134:21",
-													"data-prohibitions": "[]",
-													className: "text-muted-foreground font-medium",
-													children: "O INSS possui até 45 dias para concluir a avaliação do seu requerimento via AtestMed."
-												})]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-												"data-uid": "src/components/sections/Updates.tsx:139:19",
-												"data-prohibitions": "[]",
-												value: "3",
-												className: "border-border",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-													"data-uid": "src/components/sections/Updates.tsx:140:21",
-													"data-prohibitions": "[]",
-													className: "text-foreground hover:text-gold-dark py-4 font-semibold",
-													children: "Quais são as regras para prorrogação?"
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-													"data-uid": "src/components/sections/Updates.tsx:143:21",
-													"data-prohibitions": "[]",
-													className: "text-muted-foreground font-medium",
-													children: "A prorrogação do benefício sempre exige obrigatoriamente a perícia médica (presencial ou por telemedicina)."
-												})]
-											})
-										]
-									})
-								]
+									})]
+								})]
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Updates.tsx:152:13",
+							"data-uid": "src/components/sections/Updates.tsx:119:13",
 							"data-prohibitions": "[editContent]",
 							id: "auxilio",
 							className: "scroll-mt-32",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Updates.tsx:153:15",
+								"data-uid": "src/components/sections/Updates.tsx:120:15",
 								"data-prohibitions": "[]",
 								className: "flex items-center gap-3 mb-6",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Updates.tsx:154:17",
+									"data-uid": "src/components/sections/Updates.tsx:121:17",
 									"data-prohibitions": "[]",
 									className: "bg-gold/10 p-3 rounded-lg",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
-										"data-uid": "src/components/sections/Updates.tsx:155:19",
+										"data-uid": "src/components/sections/Updates.tsx:122:19",
 										"data-prohibitions": "[editContent]",
 										className: "h-6 w-6 text-gold-dark"
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									"data-uid": "src/components/sections/Updates.tsx:157:17",
+									"data-uid": "src/components/sections/Updates.tsx:124:17",
 									"data-prohibitions": "[]",
 									className: "text-2xl font-bold text-foreground",
 									children: "Quais as novas regras do Auxílio-Acidente?"
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Updates.tsx:161:15",
+								"data-uid": "src/components/sections/Updates.tsx:128:15",
 								"data-prohibitions": "[editContent]",
 								className: "bg-card p-6 rounded-xl border border-border shadow-soft",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Updates.tsx:162:17",
+										"data-uid": "src/components/sections/Updates.tsx:129:17",
 										"data-prohibitions": "[]",
 										className: "text-foreground font-medium mb-6",
 										children: [
 											"Para os benefícios acidentários, implementou-se uma",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:164:19",
+												"data-uid": "src/components/sections/Updates.tsx:131:19",
 												"data-prohibitions": "[]",
 												children: "triagem documental obrigatória"
 											}),
@@ -22364,22 +22269,22 @@ function Updates() {
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:167:17",
+										"data-uid": "src/components/sections/Updates.tsx:134:17",
 										"data-prohibitions": "[]",
 										className: "bg-red-50 border-l-4 border-red-600 p-5 mb-6 rounded-lg",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-											"data-uid": "src/components/sections/Updates.tsx:168:19",
+											"data-uid": "src/components/sections/Updates.tsx:135:19",
 											"data-prohibitions": "[]",
 											className: "text-sm text-red-900 font-medium",
 											children: [
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-													"data-uid": "src/components/sections/Updates.tsx:169:21",
+													"data-uid": "src/components/sections/Updates.tsx:136:21",
 													"data-prohibitions": "[]",
 													children: "Risco de Negativa:"
 												}),
 												" A ausência de elementos probatórios essenciais resulta no ",
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-													"data-uid": "src/components/sections/Updates.tsx:170:43",
+													"data-uid": "src/components/sections/Updates.tsx:137:43",
 													"data-prohibitions": "[]",
 													children: "indeferimento imediato"
 												}),
@@ -22388,13 +22293,13 @@ function Updates() {
 										})
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/sections/Updates.tsx:174:17",
+										"data-uid": "src/components/sections/Updates.tsx:141:17",
 										"data-prohibitions": "[]",
 										className: "font-semibold text-foreground mb-4",
 										children: "Requisitos Essenciais na Documentação:"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:177:17",
+										"data-uid": "src/components/sections/Updates.tsx:144:17",
 										"data-prohibitions": "[editContent]",
 										className: "grid sm:grid-cols-3 gap-4",
 										children: [
@@ -22411,15 +22316,15 @@ function Updates() {
 												t: "Comprovação de sequelas que afetem o trabalho"
 											}
 										].map((I, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:183:21",
+											"data-uid": "src/components/sections/Updates.tsx:150:21",
 											"data-prohibitions": "[editContent]",
 											className: "bg-background p-5 rounded-lg border border-border flex flex-col items-center text-center transition-colors hover:border-gold/30",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(I.icon, {
-												"data-uid": "src/components/sections/Updates.tsx:187:23",
+												"data-uid": "src/components/sections/Updates.tsx:154:23",
 												"data-prohibitions": "[editContent]",
 												className: "h-8 w-8 text-gold mb-3"
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												"data-uid": "src/components/sections/Updates.tsx:188:23",
+												"data-uid": "src/components/sections/Updates.tsx:155:23",
 												"data-prohibitions": "[editContent]",
 												className: "text-sm font-semibold text-foreground",
 												children: I.t
@@ -22430,41 +22335,41 @@ function Updates() {
 							})]
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/Updates.tsx:196:11",
+						"data-uid": "src/components/sections/Updates.tsx:163:11",
 						"data-prohibitions": "[]",
 						className: "space-y-8",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Updates.tsx:197:13",
+							"data-uid": "src/components/sections/Updates.tsx:164:13",
 							"data-prohibitions": "[]",
 							className: "sticky top-28",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-								"data-uid": "src/components/sections/Updates.tsx:198:15",
+								"data-uid": "src/components/sections/Updates.tsx:165:15",
 								"data-prohibitions": "[]",
 								className: "bg-gradient-to-br from-background to-muted border-gold/30 shadow-md",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardHeader, {
-									"data-uid": "src/components/sections/Updates.tsx:199:17",
+									"data-uid": "src/components/sections/Updates.tsx:166:17",
 									"data-prohibitions": "[]",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
-										"data-uid": "src/components/sections/Updates.tsx:200:19",
+										"data-uid": "src/components/sections/Updates.tsx:167:19",
 										"data-prohibitions": "[]",
 										className: "text-xl text-foreground",
 										children: "Por que um advogado?"
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-									"data-uid": "src/components/sections/Updates.tsx:202:17",
+									"data-uid": "src/components/sections/Updates.tsx:169:17",
 									"data-prohibitions": "[]",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/sections/Updates.tsx:203:19",
+										"data-uid": "src/components/sections/Updates.tsx:170:19",
 										"data-prohibitions": "[]",
 										className: "text-muted-foreground text-sm mb-6 leading-relaxed font-medium",
 										children: "Erros documentais custam o seu benefício. A assessoria especializada garante auditoria prévia detalhada, neutralizando riscos de negativas automáticas pelo INSS."
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-										"data-uid": "src/components/sections/Updates.tsx:208:19",
+										"data-uid": "src/components/sections/Updates.tsx:175:19",
 										"data-prohibitions": "[]",
 										className: "w-full bg-gold hover:bg-gold/90 text-black font-bold h-14 uppercase text-sm shadow-sm transition-transform hover:scale-[1.02]",
 										asChild: true,
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-											"data-uid": "src/components/sections/Updates.tsx:212:21",
+											"data-uid": "src/components/sections/Updates.tsx:179:21",
 											"data-prohibitions": "[]",
 											href: "https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20ajuda%20com%20as%20novas%20regras%20do%20INSS.",
 											target: "_blank",
@@ -22478,115 +22383,151 @@ function Updates() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/Updates.tsx:226:9",
+					"data-uid": "src/components/sections/Updates.tsx:193:9",
 					"data-prohibitions": "[]",
 					className: "lg:hidden",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Accordion, {
-						"data-uid": "src/components/sections/Updates.tsx:227:11",
+						"data-uid": "src/components/sections/Updates.tsx:194:11",
 						"data-prohibitions": "[]",
 						type: "single",
 						collapsible: true,
 						className: "w-full space-y-4",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-							"data-uid": "src/components/sections/Updates.tsx:228:13",
+							"data-uid": "src/components/sections/Updates.tsx:195:13",
 							"data-prohibitions": "[]",
 							value: "atestmed",
 							className: "bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-								"data-uid": "src/components/sections/Updates.tsx:232:15",
+								"data-uid": "src/components/sections/Updates.tsx:199:15",
 								"data-prohibitions": "[]",
 								className: "text-left font-bold text-lg hover:no-underline py-4",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Updates.tsx:233:17",
+									"data-uid": "src/components/sections/Updates.tsx:200:17",
 									"data-prohibitions": "[]",
 									className: "flex items-center gap-3",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
-										"data-uid": "src/components/sections/Updates.tsx:234:19",
+										"data-uid": "src/components/sections/Updates.tsx:201:19",
 										"data-prohibitions": "[editContent]",
 										className: "h-5 w-5 text-gold-dark shrink-0"
 									}), "Regras AtestMed 2026"]
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
-								"data-uid": "src/components/sections/Updates.tsx:238:15",
+								"data-uid": "src/components/sections/Updates.tsx:205:15",
 								"data-prohibitions": "[]",
 								className: "pt-2 pb-6",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/Updates.tsx:239:17",
+									"data-uid": "src/components/sections/Updates.tsx:206:17",
 									"data-prohibitions": "[]",
 									className: "text-muted-foreground font-medium mb-4 text-sm",
-									children: "O sistema de análise remota permite benefícios por incapacidade por até 90 dias sem perícia presencial inicial."
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-									"data-uid": "src/components/sections/Updates.tsx:243:17",
+									children: "Permite a concessão de benefícios por até 90 dias sem perícia presencial inicial."
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Updates.tsx:209:17",
 									"data-prohibitions": "[]",
-									className: "space-y-2 text-sm text-muted-foreground font-medium mb-4",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/sections/Updates.tsx:244:19",
+									className: "space-y-4",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/Updates.tsx:210:19",
 										"data-prohibitions": "[]",
-										className: "flex gap-2",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-											"data-uid": "src/components/sections/Updates.tsx:245:21",
-											"data-prohibitions": "[editContent]",
-											className: "h-4 w-4 text-gold shrink-0 mt-0.5"
-										}), "Documentos: RG, Laudo legível (com CID), CRM/CRO."]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/sections/Updates.tsx:248:19",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
+											"data-uid": "src/components/sections/Updates.tsx:211:21",
+											"data-prohibitions": "[]",
+											className: "text-foreground font-semibold text-sm mb-2 flex items-center gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
+												"data-uid": "src/components/sections/Updates.tsx:212:23",
+												"data-prohibitions": "[editContent]",
+												className: "h-4 w-4 text-gold"
+											}), " Documentos:"]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+											"data-uid": "src/components/sections/Updates.tsx:214:21",
+											"data-prohibitions": "[]",
+											className: "space-y-2 text-sm text-muted-foreground font-medium",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/components/sections/Updates.tsx:215:23",
+												"data-prohibitions": "[]",
+												className: "flex gap-2",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+													"data-uid": "src/components/sections/Updates.tsx:216:25",
+													"data-prohibitions": "[editContent]",
+													className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+												}), "Identidade, Laudo médico legível (com CID), CRM/CRO."]
+											})
+										})]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/Updates.tsx:221:19",
 										"data-prohibitions": "[]",
-										className: "flex gap-2",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
-											"data-uid": "src/components/sections/Updates.tsx:249:21",
-											"data-prohibitions": "[editContent]",
-											className: "h-4 w-4 text-gold shrink-0 mt-0.5"
-										}), "Limite: 3 negativas bloqueiam a via remota."]
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
+											"data-uid": "src/components/sections/Updates.tsx:222:21",
+											"data-prohibitions": "[]",
+											className: "text-foreground font-semibold text-sm mb-2 flex items-center gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
+												"data-uid": "src/components/sections/Updates.tsx:223:23",
+												"data-prohibitions": "[editContent]",
+												className: "h-4 w-4 text-gold"
+											}), " Requisitos:"]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+											"data-uid": "src/components/sections/Updates.tsx:225:21",
+											"data-prohibitions": "[]",
+											className: "space-y-2 text-sm text-muted-foreground font-medium",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/components/sections/Updates.tsx:226:23",
+												"data-prohibitions": "[]",
+												className: "flex gap-2",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
+													"data-uid": "src/components/sections/Updates.tsx:227:25",
+													"data-prohibitions": "[editContent]",
+													className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+												}), "Afastamento de até 90 dias; Limite de 3 negativas no sistema."]
+											})
+										})]
 									})]
 								})]
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-							"data-uid": "src/components/sections/Updates.tsx:256:13",
+							"data-uid": "src/components/sections/Updates.tsx:236:13",
 							"data-prohibitions": "[]",
 							value: "auxilio",
 							className: "bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-								"data-uid": "src/components/sections/Updates.tsx:260:15",
+								"data-uid": "src/components/sections/Updates.tsx:240:15",
 								"data-prohibitions": "[]",
 								className: "text-left font-bold text-lg hover:no-underline py-4",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Updates.tsx:261:17",
+									"data-uid": "src/components/sections/Updates.tsx:241:17",
 									"data-prohibitions": "[]",
 									className: "flex items-center gap-3",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
-										"data-uid": "src/components/sections/Updates.tsx:262:19",
+										"data-uid": "src/components/sections/Updates.tsx:242:19",
 										"data-prohibitions": "[editContent]",
 										className: "h-5 w-5 text-gold-dark shrink-0"
 									}), "Auxílio-Acidente"]
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
-								"data-uid": "src/components/sections/Updates.tsx:266:15",
+								"data-uid": "src/components/sections/Updates.tsx:246:15",
 								"data-prohibitions": "[]",
 								className: "pt-2 pb-6",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/Updates.tsx:267:17",
+									"data-uid": "src/components/sections/Updates.tsx:247:17",
 									"data-prohibitions": "[]",
 									className: "text-muted-foreground font-medium mb-4 text-sm",
 									children: "Triagem documental obrigatória antecede a perícia física. A ausência de elementos probatórios resulta no indeferimento imediato."
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-									"data-uid": "src/components/sections/Updates.tsx:271:17",
+									"data-uid": "src/components/sections/Updates.tsx:251:17",
 									"data-prohibitions": "[]",
 									className: "space-y-2 text-sm text-muted-foreground font-medium",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/sections/Updates.tsx:272:19",
+										"data-uid": "src/components/sections/Updates.tsx:252:19",
 										"data-prohibitions": "[]",
 										className: "flex gap-2",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-											"data-uid": "src/components/sections/Updates.tsx:273:21",
+											"data-uid": "src/components/sections/Updates.tsx:253:21",
 											"data-prohibitions": "[editContent]",
 											className: "h-4 w-4 text-gold shrink-0 mt-0.5"
 										}), "Data exata do acidente."]
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/sections/Updates.tsx:276:19",
+										"data-uid": "src/components/sections/Updates.tsx:256:19",
 										"data-prohibitions": "[]",
 										className: "flex gap-2",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-											"data-uid": "src/components/sections/Updates.tsx:277:21",
+											"data-uid": "src/components/sections/Updates.tsx:257:21",
 											"data-prohibitions": "[editContent]",
 											className: "h-4 w-4 text-gold shrink-0 mt-0.5"
 										}), "Descrição detalhada da lesão e sequelas."]
@@ -25377,7 +25318,7 @@ function BpcEligibility() {
 											className: "text-red-900",
 											children: "não é absoluta!"
 										}),
-										" O Supremo Tribunal Federal (STF) permite deduzir da renda familiar os gastos comprovados com a saúde do requerente (medicamentos, fraldas, alimentação especial, consultas) que não são fornecidos gratuitamente pelo SUS. Isso garante o benefício mesmo se a renda nominal ultrapassar o limite padrão de R$ 379,50."
+										" O Supremo Tribunal Federal (STF) permite deduzir da renda familiar os gastos comprovados com a saúde do requerente (medicamentos, fraldas, alimentação especial, consultas) que não são fornecidos pelo SUS. Isso garante o benefício mesmo se a renda nominal ultrapassar o limite padrão de R$ 379,50."
 									]
 								})]
 							})
@@ -27760,4 +27701,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-YZU6RF0C.js.map
+//# sourceMappingURL=index-BnRNIoZ2.js.map

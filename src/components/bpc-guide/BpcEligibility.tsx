@@ -179,8 +179,8 @@ export default function BpcEligibility() {
                 <strong className="text-red-900">não é absoluta!</strong> O Supremo Tribunal Federal
                 (STF) permite deduzir da renda familiar os gastos comprovados com a saúde do
                 requerente (medicamentos, fraldas, alimentação especial, consultas) que não são
-                fornecidos gratuitamente pelo SUS. Isso garante o benefício mesmo se a renda nominal
-                ultrapassar o limite padrão de R$ 379,50.
+                fornecidos pelo SUS. Isso garante o benefício mesmo se a renda nominal ultrapassar o
+                limite padrão de R$ 379,50.
               </p>
             </div>
           </div>
