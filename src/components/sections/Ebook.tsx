@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Check, BookOpen } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -9,11 +9,13 @@ export function Ebook() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [name, setName] = useState('')
   const [contact, setContact] = useState('')
+  const navigate = useNavigate()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (name.trim() && contact.trim()) {
       setIsSubmitted(true)
+      navigate('/guia-bpc')
     }
   }
 
@@ -120,7 +122,7 @@ export function Ebook() {
                 <h3 className="text-2xl font-bold text-foreground mb-3">Tudo Certo!</h3>
                 <p className="text-muted-foreground mb-8 text-lg font-medium">
                   Seu guia está pronto para acesso. Clique no botão abaixo para ler todo o material
-                  agora mesmo em nosso site.
+                  agora mesmo.
                 </p>
                 <Button
                   asChild
