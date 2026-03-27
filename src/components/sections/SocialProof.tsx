@@ -1,4 +1,10 @@
 import { Card, CardContent } from '@/components/ui/card'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 import { Star, Quote } from 'lucide-react'
 
 const testimonials = [
@@ -33,7 +39,7 @@ export function SocialProof() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="hidden md:grid grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-card border-border shadow-soft relative mt-6">
               <div className="absolute -top-6 left-6 bg-gold rounded-full p-3 shadow-md">
@@ -55,6 +61,35 @@ export function SocialProof() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="md:hidden">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {testimonials.map((testimonial, index) => (
+              <AccordionItem
+                key={index}
+                value={`testimonial-${index}`}
+                className="bg-card border border-border rounded-lg px-6 data-[state=open]:border-gold shadow-sm transition-colors"
+              >
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-gold-dark hover:no-underline py-4 text-foreground">
+                  <div className="flex flex-col items-start gap-1">
+                    <span>{testimonial.name}</span>
+                    <span className="text-sm font-medium text-gold-dark">{testimonial.role}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pb-6 pt-2">
+                  <div className="flex mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-gold fill-gold" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground font-medium italic leading-relaxed text-base">
+                    "{testimonial.text}"
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

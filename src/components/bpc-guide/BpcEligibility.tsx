@@ -13,7 +13,7 @@ export default function BpcEligibility() {
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="text-center max-w-3xl mx-auto mb-16 break-inside-avoid">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-slate-900 leading-tight tracking-tight">
-            Quem tem <span className="text-amber-600">Direito ao BPC?</span>
+            Quem tem <span className="text-gold">Direito ao BPC?</span>
           </h2>
           <p className="text-slate-600 text-lg font-medium">
             O benefício é exclusivamente destinado a dois grupos que comprovem estado de necessidade
@@ -23,7 +23,7 @@ export default function BpcEligibility() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {/* Idosos */}
-          <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden group hover:border-amber-300 transition-colors break-inside-avoid flex flex-col shadow-xl">
+          <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden group hover:border-gold/50 transition-colors break-inside-avoid flex flex-col shadow-xl">
             <div className="h-64 overflow-hidden relative">
               <img
                 src="https://img.usecurling.com/p/800/500?q=elderly%20smiling&color=white"
@@ -32,7 +32,7 @@ export default function BpcEligibility() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent"></div>
               <div className="absolute bottom-6 left-8 flex items-center gap-4">
-                <div className="bg-amber-100 p-3 rounded-xl text-amber-700 shadow-sm border border-amber-200">
+                <div className="bg-gold/10 p-3 rounded-xl text-gold-dark shadow-sm border border-gold/30">
                   <UserPlus className="w-8 h-8" />
                 </div>
                 <h3 className="text-3xl font-extrabold text-slate-900">Idosos (65+ anos)</h3>
@@ -45,22 +45,22 @@ export default function BpcEligibility() {
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-slate-700 font-medium">
-                  <div className="w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0"></div>
                   <span>
                     Válido para homens e mulheres a partir de{' '}
                     <strong className="text-slate-900">65 anos completos</strong>.
                   </span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-700 font-medium">
-                  <div className="w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0"></div>
                   <span>Não exige nenhuma contribuição prévia ao INSS.</span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-700 font-medium">
-                  <div className="w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0"></div>
                   <span>
-                    Processo mais ágil:{' '}
-                    <strong className="text-slate-900">não passa por perícia médica</strong> no
-                    INSS.
+                    Processo documental:{' '}
+                    <strong className="text-slate-900">não exige perícia médica</strong> no INSS
+                    para o critério idade.
                   </span>
                 </li>
               </ul>
@@ -68,7 +68,7 @@ export default function BpcEligibility() {
           </div>
 
           {/* PcD */}
-          <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden group hover:border-amber-300 transition-colors break-inside-avoid flex flex-col shadow-xl">
+          <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden group hover:border-gold/50 transition-colors break-inside-avoid flex flex-col shadow-xl">
             <div className="h-64 overflow-hidden relative">
               <img
                 src="https://img.usecurling.com/p/800/500?q=wheelchair%20accessibility&color=white"
@@ -77,7 +77,7 @@ export default function BpcEligibility() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent"></div>
               <div className="absolute bottom-6 left-8 flex items-center gap-4">
-                <div className="bg-amber-100 p-3 rounded-xl text-amber-700 shadow-sm border border-amber-200">
+                <div className="bg-gold/10 p-3 rounded-xl text-gold-dark shadow-sm border border-gold/30">
                   <Users className="w-8 h-8" />
                 </div>
                 <h3 className="text-3xl font-extrabold text-slate-900">Pessoas com Deficiência</h3>
@@ -90,21 +90,21 @@ export default function BpcEligibility() {
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-slate-700 font-medium">
-                  <div className="w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0"></div>
                   <span>
                     Pode ser criança, adolescente, adulto ou idoso.{' '}
                     <strong className="text-slate-900">Qualquer idade.</strong>
                   </span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-700 font-medium">
-                  <div className="w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0"></div>
                   <span>
                     Exige <strong className="text-slate-900">avaliação biopsicossocial</strong>{' '}
-                    (perícia médica e social rigorosa).
+                    (perícia médica e avaliação social).
                   </span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-700 font-medium">
-                  <div className="w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0"></div>
                   <span>
                     Inclui Transtorno do Espectro Autista (TEA), visão monocular e doenças graves.
                   </span>
@@ -118,7 +118,7 @@ export default function BpcEligibility() {
         <div className="mb-16 bg-white rounded-3xl p-8 md:p-12 border border-slate-200 break-inside-avoid shadow-lg">
           <div className="flex items-center gap-6 mb-10 justify-center">
             <div className="h-px bg-slate-200 flex-grow hidden md:block"></div>
-            <Scale className="w-10 h-10 text-amber-600 shrink-0" />
+            <Scale className="w-10 h-10 text-gold shrink-0" />
             <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 text-center shrink-0">
               Requisitos Legais Cumulativos
             </h3>
@@ -128,9 +128,9 @@ export default function BpcEligibility() {
             {requirements.map((req) => (
               <div
                 key={req.id}
-                className="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center hover:border-amber-300 transition-colors"
+                className="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center hover:border-gold/50 transition-colors"
               >
-                <div className="w-12 h-12 mx-auto bg-amber-100 rounded-full flex items-center justify-center mb-4 text-amber-700 font-black text-xl">
+                <div className="w-12 h-12 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4 text-gold-dark font-black text-xl">
                   {req.id}
                 </div>
                 <h4 className="text-slate-900 font-bold text-lg mb-2">{req.title}</h4>
@@ -141,7 +141,7 @@ export default function BpcEligibility() {
         </div>
 
         {/* Income Criteria */}
-        <div className="bg-white rounded-3xl border border-amber-200 shadow-xl relative overflow-hidden break-inside-avoid flex flex-col md:flex-row">
+        <div className="bg-white rounded-3xl border border-gold/30 shadow-xl relative overflow-hidden break-inside-avoid flex flex-col md:flex-row">
           <div className="md:w-5/12 relative min-h-[300px]">
             <img
               src="https://img.usecurling.com/p/600/800?q=calculator%20documents&color=white"
@@ -152,12 +152,12 @@ export default function BpcEligibility() {
             <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent md:hidden block"></div>
           </div>
           <div className="md:w-7/12 p-8 md:p-12 relative z-10 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 border border-amber-200 text-amber-800 text-sm font-bold mb-6 w-fit shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold-dark text-sm font-bold mb-6 w-fit shadow-sm">
               <Calculator className="w-5 h-5" /> Critério de Renda 2026
             </div>
             <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
               Renda familiar per capita de até <br className="hidden lg:block" />
-              <span className="text-amber-600 border-b-2 border-amber-300 pb-1 mt-2 inline-block">
+              <span className="text-gold border-b-2 border-gold/50 pb-1 mt-2 inline-block">
                 R$ 379,50
               </span>
             </h3>

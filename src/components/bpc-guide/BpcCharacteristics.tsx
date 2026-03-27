@@ -3,17 +3,17 @@ import { XCircle, Ban, AlertTriangle } from 'lucide-react'
 
 const characteristics = [
   {
-    icon: <Ban className="w-10 h-10 text-amber-600 mb-2" />,
+    icon: <Ban className="w-10 h-10 text-gold mb-2" />,
     title: 'Não é Aposentadoria',
     desc: 'O BPC é um benefício assistencial. Isso significa que não exige que você tenha contribuído para o INSS ao longo da vida para ter direito.',
   },
   {
-    icon: <XCircle className="w-10 h-10 text-amber-600 mb-2" />,
+    icon: <XCircle className="w-10 h-10 text-gold mb-2" />,
     title: 'Sem 13º Salário',
     desc: 'Diferente das aposentadorias tradicionais, por ser um benefício de natureza assistencial (LOAS), não há o pagamento de gratificação natalina (13º).',
   },
   {
-    icon: <AlertTriangle className="w-10 h-10 text-amber-600 mb-2" />,
+    icon: <AlertTriangle className="w-10 h-10 text-gold mb-2" />,
     title: 'Sem Pensão por Morte',
     desc: 'O benefício é intransferível. Em caso de falecimento do titular, o pagamento é encerrado e não gera direito a pensão por morte aos dependentes.',
   },
@@ -26,7 +26,7 @@ export default function BpcCharacteristics() {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="lg:w-1/2 break-inside-avoid">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-slate-900 leading-tight tracking-tight">
-              Características <span className="text-amber-600">Centrais</span> do Benefício
+              Características <span className="text-gold">Centrais</span> do Benefício
             </h2>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed font-medium">
               Muitas pessoas confundem o BPC/LOAS com uma aposentadoria comum. Entender essas três
@@ -47,7 +47,7 @@ export default function BpcCharacteristics() {
             {characteristics.map((item, index) => (
               <Card
                 key={index}
-                className="bg-slate-50 border-slate-200 hover:border-amber-300 transition-all duration-300 break-inside-avoid shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                className="bg-slate-50 border-slate-200 hover:border-gold/50 transition-all duration-300 break-inside-avoid shadow-md hover:shadow-lg transform hover:-translate-y-1"
               >
                 <CardContent className="p-6 md:p-8 flex items-start gap-6">
                   <div className="shrink-0 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">

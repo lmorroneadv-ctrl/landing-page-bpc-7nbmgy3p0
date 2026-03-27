@@ -40,7 +40,7 @@ export function Updates() {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <div className="hidden sm:flex flex-row justify-center gap-4 mb-16">
           <Button
             variant="outline"
             className="border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold"
@@ -64,8 +64,8 @@ export function Updates() {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-16">
+        <div className="hidden lg:grid grid-cols-3 gap-8">
+          <div className="col-span-2 space-y-16">
             <div id="atestmed" className="scroll-mt-32">
               <div className="flex items-center gap-3 mb-6">
                 <div className="bg-gold/10 p-3 rounded-lg">
@@ -250,6 +250,102 @@ export function Updates() {
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        <div className="lg:hidden">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem
+              value="atestmed"
+              className="bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm"
+            >
+              <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-4">
+                <div className="flex items-center gap-3">
+                  <FileText className="h-5 w-5 text-gold-dark shrink-0" />
+                  Regras AtestMed 2026
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pt-2 pb-6">
+                <p className="text-muted-foreground font-medium mb-4 text-sm">
+                  O sistema de análise remota permite benefícios por incapacidade por até 90 dias
+                  sem perícia presencial inicial.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground font-medium mb-4">
+                  <li className="flex gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                    Documentos: RG, Laudo legível (com CID), CRM/CRO.
+                  </li>
+                  <li className="flex gap-2">
+                    <AlertTriangle className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                    Limite: 3 negativas bloqueiam a via remota.
+                  </li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem
+              value="auxilio"
+              className="bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm"
+            >
+              <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-4">
+                <div className="flex items-center gap-3">
+                  <HeartPulse className="h-5 w-5 text-gold-dark shrink-0" />
+                  Auxílio-Acidente
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pt-2 pb-6">
+                <p className="text-muted-foreground font-medium mb-4 text-sm">
+                  Triagem documental obrigatória antecede a perícia física. A ausência de elementos
+                  probatórios resulta no indeferimento imediato.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground font-medium">
+                  <li className="flex gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                    Data exata do acidente.
+                  </li>
+                  <li className="flex gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                    Descrição detalhada da lesão e sequelas.
+                  </li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem
+              value="dicas"
+              className="bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm"
+            >
+              <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-4">
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-gold-dark shrink-0" />
+                  Dicas de Aprovação
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pt-2 pb-6 space-y-4">
+                <ul className="space-y-3">
+                  {[
+                    'Revise rigorosamente todos os dados do laudo médico antes do envio.',
+                    'Capture imagens bem iluminadas e legíveis de atestados.',
+                    'Jamais envie atestados com rasuras ou emendas.',
+                  ].map((t, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="bg-gold/10 p-1.5 rounded-md shrink-0 mt-0.5">
+                        <span className="text-gold-dark font-bold text-xs">0{i + 1}</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground font-medium">{t}</p>
+                    </li>
+                  ))}
+                </ul>
+                <Button
+                  className="w-full bg-gold hover:bg-gold/90 text-black font-bold h-12 uppercase text-xs shadow-sm mt-4"
+                  asChild
+                >
+                  <a href="https://wa.me/5553981063023" target="_blank" rel="noopener noreferrer">
+                    Falar com a Equipe
+                  </a>
+                </Button>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
     </section>

@@ -17696,18 +17696,6 @@ var ShieldCheck = createLucideIcon("shield-check", [["path", {
 	d: "m9 12 2 2 4-4",
 	key: "dzmm74"
 }]]);
-var Smartphone = createLucideIcon("smartphone", [["rect", {
-	width: "14",
-	height: "20",
-	x: "5",
-	y: "2",
-	rx: "2",
-	ry: "2",
-	key: "1yt0o3"
-}], ["path", {
-	d: "M12 18h.01",
-	key: "mhygvu"
-}]]);
 var Star = createLucideIcon("star", [["path", {
 	d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
 	key: "r04s7s"
@@ -17766,22 +17754,6 @@ var TriangleAlert = createLucideIcon("triangle-alert", [
 	["path", {
 		d: "M12 17h.01",
 		key: "p32p05"
-	}]
-]);
-var UserCheck = createLucideIcon("user-check", [
-	["path", {
-		d: "m16 11 2 2 4-4",
-		key: "9rsbq5"
-	}],
-	["path", {
-		d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
-		key: "1yyitq"
-	}],
-	["circle", {
-		cx: "9",
-		cy: "7",
-		r: "4",
-		key: "nufk8"
 	}]
 ]);
 var UserPlus = createLucideIcon("user-plus", [
@@ -20252,762 +20224,6 @@ var CardFooter = import_react.forwardRef(({ className, ...props }, ref) => /* @_
 }));
 CardFooter.displayName = "CardFooter";
 //#endregion
-//#region src/components/sections/Services.tsx
-var services = [
-	{
-		title: "Aposentadoria por Idade",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, {
-			"data-uid": "src/components/sections/Services.tsx:8:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
-		}),
-		items: [
-			"Cálculo do tempo de contribuição",
-			"Simulação do benefício",
-			"Correção de vínculos",
-			"Pedido administrativo completo"
-		]
-	},
-	{
-		title: "Aposentadoria por Tempo",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
-			"data-uid": "src/components/sections/Services.tsx:18:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
-		}),
-		items: [
-			"Análise de direito adquirido",
-			"Simulação de todas as regras",
-			"Correção de vínculos",
-			"Planejamento previdenciário completo"
-		]
-	},
-	{
-		title: "Pensão por Morte",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, {
-			"data-uid": "src/components/sections/Services.tsx:28:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
-		}),
-		items: [
-			"Análise de dependência",
-			"Documentação necessária",
-			"Pedido administrativo completo",
-			"Revisão do valor do benefício"
-		]
-	},
-	{
-		title: "BPC / LOAS",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldAlert, {
-			"data-uid": "src/components/sections/Services.tsx:38:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
-		}),
-		items: [
-			"Análise de renda e requisitos legais",
-			"Organização da documentação",
-			"Pedido administrativo completo",
-			"Recurso em caso de negativa"
-		]
-	},
-	{
-		title: "Aposentadoria Híbrida",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tractor, {
-			"data-uid": "src/components/sections/Services.tsx:48:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
-		}),
-		items: [
-			"Cálculo urbano + rural atualizado",
-			"Validação de documentos rurais",
-			"Simulação completa",
-			"Pedido administrativo completo"
-		]
-	},
-	{
-		title: "Benefícios por Incapacidade",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Activity, {
-			"data-uid": "src/components/sections/Services.tsx:58:11",
-			"data-prohibitions": "[editContent]",
-			className: "h-8 w-8 text-gold mb-4"
-		}),
-		items: [
-			"Benefício por Incapacidade Temporária",
-			"Benefício por Incapacidade Permanente",
-			"Análise médica previdenciária",
-			"Recurso em caso de negativa"
-		]
-	}
-];
-function Services() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/Services.tsx:70:5",
-		"data-prohibitions": "[editContent]",
-		id: "servicos",
-		className: "py-20 bg-muted",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/Services.tsx:71:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Services.tsx:72:9",
-				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-					"data-uid": "src/components/sections/Services.tsx:73:11",
-					"data-prohibitions": "[]",
-					className: "text-3xl md:text-4xl font-bold mb-4 text-foreground",
-					children: ["Áreas de ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/sections/Services.tsx:74:22",
-						"data-prohibitions": "[]",
-						className: "text-gold-dark",
-						children: "Atuação"
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/sections/Services.tsx:76:11",
-					"data-prohibitions": "[]",
-					className: "text-muted-foreground text-lg font-medium",
-					children: "Oferecemos assessoria jurídica especializada para garantir que seus direitos previdenciários sejam respeitados e concedidos de forma correta."
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/Services.tsx:82:9",
-				"data-prohibitions": "[editContent]",
-				className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
-				children: services.map((service, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-					"data-uid": "src/components/sections/Services.tsx:84:13",
-					"data-prohibitions": "[editContent]",
-					className: "bg-card border-border hover:border-gold shadow-soft transition-all duration-300 hover:shadow-md",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardHeader, {
-						"data-uid": "src/components/sections/Services.tsx:88:15",
-						"data-prohibitions": "[editContent]",
-						children: [service.icon, /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
-							"data-uid": "src/components/sections/Services.tsx:90:17",
-							"data-prohibitions": "[editContent]",
-							className: "text-xl font-bold text-foreground",
-							children: service.title
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-						"data-uid": "src/components/sections/Services.tsx:92:15",
-						"data-prohibitions": "[editContent]",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-							"data-uid": "src/components/sections/Services.tsx:93:17",
-							"data-prohibitions": "[editContent]",
-							className: "space-y-3 mb-6",
-							children: service.items.map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/sections/Services.tsx:95:21",
-								"data-prohibitions": "[editContent]",
-								className: "flex items-start text-muted-foreground font-medium",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-									"data-uid": "src/components/sections/Services.tsx:96:23",
-									"data-prohibitions": "[editContent]",
-									className: "h-5 w-5 text-gold mr-3 shrink-0 mt-0.5"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Services.tsx:97:23",
-									"data-prohibitions": "[editContent]",
-									className: "text-sm",
-									children: item
-								})]
-							}, idx))
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							"data-uid": "src/components/sections/Services.tsx:101:17",
-							"data-prohibitions": "[]",
-							variant: "outline",
-							className: "w-full border-gold-dark text-gold-dark hover:bg-gold hover:text-black hover:border-gold transition-colors font-semibold",
-							asChild: true,
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/sections/Services.tsx:106:19",
-								"data-prohibitions": "[]",
-								href: `https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`,
-								target: "_blank",
-								rel: "noopener noreferrer",
-								children: "Solicitar Análise"
-							})
-						})]
-					})]
-				}, index))
-			})]
-		})
-	});
-}
-//#endregion
-//#region src/components/ui/input.tsx
-var Input = import_react.forwardRef(({ className, type, ...props }, ref) => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-		"data-uid": "src/components/ui/input.tsx:9:7",
-		"data-prohibitions": "[editContent]",
-		type,
-		className: cn$1("flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm", className),
-		ref,
-		...props
-	});
-});
-Input.displayName = "Input";
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-primitive@2.1.4_@types+react-dom@19.2.3_@types+react@19.2.14__@types+re_0243fb2db8a1fb85ca77b8d9e5c2d650/node_modules/@radix-ui/react-primitive/dist/index.mjs
-var import_react_dom = /* @__PURE__ */ __toESM(require_react_dom(), 1);
-var Primitive$1 = [
-	"a",
-	"button",
-	"div",
-	"form",
-	"h2",
-	"h3",
-	"img",
-	"input",
-	"label",
-	"li",
-	"nav",
-	"ol",
-	"p",
-	"select",
-	"span",
-	"svg",
-	"ul"
-].reduce((primitive, node) => {
-	const Slot = /* @__PURE__ */ createSlot$1(`Primitive.${node}`);
-	const Node = import_react.forwardRef((props, forwardedRef) => {
-		const { asChild, ...primitiveProps } = props;
-		const Comp = asChild ? Slot : node;
-		if (typeof window !== "undefined") window[Symbol.for("radix-ui")] = true;
-		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Comp, {
-			...primitiveProps,
-			ref: forwardedRef
-		});
-	});
-	Node.displayName = `Primitive.${node}`;
-	return {
-		...primitive,
-		[node]: Node
-	};
-}, {});
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-label@2.1.8_@types+react-dom@19.2.3_@types+react@19.2.14__@types+react@_55fa612a976b7bdfbf4dcdd93d861aab/node_modules/@radix-ui/react-label/dist/index.mjs
-var NAME$1 = "Label";
-var Label$1 = import_react.forwardRef((props, forwardedRef) => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.label, {
-		...props,
-		ref: forwardedRef,
-		onMouseDown: (event) => {
-			if (event.target.closest("button, input, select, textarea")) return;
-			props.onMouseDown?.(event);
-			if (!event.defaultPrevented && event.detail > 1) event.preventDefault();
-		}
-	});
-});
-Label$1.displayName = NAME$1;
-var Root$2 = Label$1;
-//#endregion
-//#region src/components/ui/label.tsx
-var labelVariants = cva("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70");
-var Label = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$2, {
-	"data-uid": "src/components/ui/label.tsx:16:3",
-	"data-prohibitions": "[editContent]",
-	ref,
-	className: cn$1(labelVariants(), className),
-	...props
-}));
-Label.displayName = Root$2.displayName;
-//#endregion
-//#region src/components/sections/Ebook.tsx
-function Ebook() {
-	const [isSubmitted, setIsSubmitted] = (0, import_react.useState)(false);
-	const [name, setName] = (0, import_react.useState)("");
-	const [contact, setContact] = (0, import_react.useState)("");
-	const navigate = useNavigate();
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		if (name.trim() && contact.trim()) {
-			setIsSubmitted(true);
-			navigate("/guia-bpc");
-		}
-	};
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/Ebook.tsx:23:5",
-		"data-prohibitions": "[editContent]",
-		id: "guia-bpc",
-		className: "py-20 bg-background border-y border-border overflow-hidden",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/Ebook.tsx:24:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Ebook.tsx:25:9",
-				"data-prohibitions": "[editContent]",
-				className: "flex flex-col lg:flex-row items-center gap-12 lg:gap-20",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/Ebook.tsx:27:11",
-					"data-prohibitions": "[]",
-					className: "w-full lg:w-5/12 flex justify-center lg:justify-end",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Ebook.tsx:28:13",
-						"data-prohibitions": "[]",
-						className: "relative w-64 h-80 sm:w-72 sm:h-96 bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-gold/40 rounded-r-xl rounded-l-sm shadow-[20px_20px_40px_-10px_rgba(0,0,0,0.2),_0_0_20px_rgba(212,175,55,0.15)] flex flex-col items-center justify-center p-6 text-center transform -rotate-2 hover:rotate-0 transition-all duration-500 group",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:29:15",
-								"data-prohibitions": "[]",
-								className: "absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10 rounded-l-sm"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:30:15",
-								"data-prohibitions": "[]",
-								className: "absolute left-6 top-0 bottom-0 w-[1px] bg-white/10 z-10"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:31:15",
-								"data-prohibitions": "[]",
-								className: "absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10 rounded-r-xl rounded-l-sm"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:33:15",
-								"data-prohibitions": "[]",
-								className: "relative z-20 flex flex-col items-center h-full w-full",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
-										"data-uid": "src/components/sections/Ebook.tsx:34:17",
-										"data-prohibitions": "[editContent]",
-										className: "w-12 h-12 sm:w-16 sm:h-16 text-gold mb-6 mt-4 group-hover:scale-110 transition-transform duration-500"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/sections/Ebook.tsx:35:17",
-										"data-prohibitions": "[]",
-										className: "text-sm sm:text-base font-bold text-white mb-2 uppercase tracking-widest text-gold/80",
-										children: "Guia Gratuito"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-										"data-uid": "src/components/sections/Ebook.tsx:38:17",
-										"data-prohibitions": "[]",
-										className: "text-2xl sm:text-3xl font-black text-white mb-4 leading-tight",
-										children: [
-											"TUDO SOBRE",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-												"data-uid": "src/components/sections/Ebook.tsx:40:19",
-												"data-prohibitions": "[editContent]"
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												"data-uid": "src/components/sections/Ebook.tsx:41:19",
-												"data-prohibitions": "[]",
-												className: "text-gold",
-												children: "BPC/LOAS"
-											})
-										]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/Ebook.tsx:44:17",
-										"data-prohibitions": "[]",
-										className: "mt-auto pt-6 border-t border-gold/20 w-full",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											"data-uid": "src/components/sections/Ebook.tsx:45:19",
-											"data-prohibitions": "[]",
-											className: "text-[10px] sm:text-xs text-slate-300 uppercase tracking-widest font-medium",
-											children: "Lucas Morrone Advocacia"
-										})
-									})
-								]
-							})
-						]
-					})
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/Ebook.tsx:54:11",
-					"data-prohibitions": "[editContent]",
-					className: "w-full lg:w-7/12 max-w-2xl",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-							"data-uid": "src/components/sections/Ebook.tsx:55:13",
-							"data-prohibitions": "[]",
-							className: "text-3xl md:text-4xl font-bold mb-4 text-foreground",
-							children: [
-								"Acesse nosso Guia Gratuito: ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-									"data-uid": "src/components/sections/Ebook.tsx:56:43",
-									"data-prohibitions": "[editContent]",
-									className: "hidden md:block"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Ebook.tsx:57:15",
-									"data-prohibitions": "[]",
-									className: "text-gold-dark",
-									children: "Tudo sobre BPC/LOAS"
-								})
-							]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/sections/Ebook.tsx:59:13",
-							"data-prohibitions": "[]",
-							className: "text-lg text-muted-foreground mb-8 font-medium",
-							children: "Entenda seus direitos e aprenda como solicitar o benefício de forma correta com o nosso conteúdo exclusivo e detalhado."
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Ebook.tsx:64:13",
-							"data-prohibitions": "[editContent]",
-							className: "mb-8 space-y-3",
-							children: [
-								"Requisitos atualizados",
-								"Documentação necessária",
-								"Erros comuns no pedido"
-							].map((benefit, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Ebook.tsx:67:19",
-								"data-prohibitions": "[editContent]",
-								className: "flex items-center",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:68:21",
-									"data-prohibitions": "[]",
-									className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-										"data-uid": "src/components/sections/Ebook.tsx:69:23",
-										"data-prohibitions": "[editContent]",
-										className: "h-3.5 w-3.5 text-gold-dark"
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Ebook.tsx:71:21",
-									"data-prohibitions": "[editContent]",
-									className: "text-foreground font-medium text-base md:text-lg",
-									children: benefit
-								})]
-							}, idx))
-						}),
-						!isSubmitted ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
-							"data-uid": "src/components/sections/Ebook.tsx:80:15",
-							"data-prohibitions": "[]",
-							onSubmit: handleSubmit,
-							className: "space-y-5 bg-card p-6 sm:p-8 rounded-xl border border-border shadow-soft",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:84:17",
-									"data-prohibitions": "[]",
-									className: "space-y-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
-										"data-uid": "src/components/sections/Ebook.tsx:85:19",
-										"data-prohibitions": "[]",
-										htmlFor: "name",
-										className: "text-foreground font-semibold",
-										children: "Nome Completo"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-										"data-uid": "src/components/sections/Ebook.tsx:88:19",
-										"data-prohibitions": "[editContent]",
-										id: "name",
-										value: name,
-										onChange: (e) => setName(e.target.value),
-										placeholder: "Digite seu nome completo",
-										required: true,
-										className: "bg-background border-border focus-visible:ring-gold h-12"
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:97:17",
-									"data-prohibitions": "[]",
-									className: "space-y-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
-										"data-uid": "src/components/sections/Ebook.tsx:98:19",
-										"data-prohibitions": "[]",
-										htmlFor: "contact",
-										className: "text-foreground font-semibold",
-										children: "WhatsApp ou E-mail"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-										"data-uid": "src/components/sections/Ebook.tsx:101:19",
-										"data-prohibitions": "[editContent]",
-										id: "contact",
-										value: contact,
-										onChange: (e) => setContact(e.target.value),
-										placeholder: "Seu melhor contato",
-										required: true,
-										className: "bg-background border-border focus-visible:ring-gold h-12"
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									"data-uid": "src/components/sections/Ebook.tsx:110:17",
-									"data-prohibitions": "[]",
-									type: "submit",
-									className: "w-full bg-gold hover:bg-gold/90 text-black font-bold h-14 mt-4 transition-all duration-300 shadow-md text-sm sm:text-base",
-									children: "QUERO ACESSAR O GUIA AGORA"
-								})
-							]
-						}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Ebook.tsx:118:15",
-							"data-prohibitions": "[]",
-							className: "bg-card p-8 sm:p-10 rounded-xl border border-gold/30 shadow-md text-center animate-in fade-in slide-in-from-bottom-4 duration-500",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Ebook.tsx:119:17",
-									"data-prohibitions": "[]",
-									className: "w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-										"data-uid": "src/components/sections/Ebook.tsx:120:19",
-										"data-prohibitions": "[editContent]",
-										className: "w-8 h-8 text-gold-dark"
-									})
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									"data-uid": "src/components/sections/Ebook.tsx:122:17",
-									"data-prohibitions": "[]",
-									className: "text-2xl font-bold text-foreground mb-3",
-									children: "Tudo Certo!"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/Ebook.tsx:123:17",
-									"data-prohibitions": "[]",
-									className: "text-muted-foreground mb-8 text-lg font-medium",
-									children: "Seu guia está pronto para acesso. Clique no botão abaixo para ler todo o material agora mesmo."
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									"data-uid": "src/components/sections/Ebook.tsx:127:17",
-									"data-prohibitions": "[]",
-									asChild: true,
-									className: "w-full sm:w-auto bg-gold hover:bg-gold/90 text-black font-bold h-14 px-8 text-base shadow-sm",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-										"data-uid": "src/components/sections/Ebook.tsx:131:19",
-										"data-prohibitions": "[]",
-										to: "/guia-bpc",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
-											"data-uid": "src/components/sections/Ebook.tsx:132:21",
-											"data-prohibitions": "[editContent]",
-											className: "mr-2 h-5 w-5"
-										}), " Acessar Guia Completo Agora"]
-									})
-								})
-							]
-						})
-					]
-				})]
-			})
-		})
-	});
-}
-//#endregion
-//#region src/assets/perfil-20-6d6d4.png
-var perfil_20_6d6d4_default = "/assets/perfil-20-6d6d4-CN0gCp5s.png";
-//#endregion
-//#region src/components/sections/Biography.tsx
-function Biography() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/Biography.tsx:6:5",
-		"data-prohibitions": "[editContent]",
-		id: "sobre",
-		className: "py-20 bg-muted",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/Biography.tsx:7:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Biography.tsx:8:9",
-				"data-prohibitions": "[editContent]",
-				className: "flex flex-col lg:flex-row items-center gap-12 lg:gap-20",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/Biography.tsx:9:11",
-					"data-prohibitions": "[]",
-					className: "w-full lg:w-5/12",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Biography.tsx:10:13",
-						"data-prohibitions": "[]",
-						className: "relative mx-auto max-w-md",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:11:15",
-							"data-prohibitions": "[]",
-							className: "absolute inset-0 bg-gold rounded-xl rotate-3 scale-105 opacity-20"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							"data-uid": "src/components/sections/Biography.tsx:12:15",
-							"data-prohibitions": "[editContent]",
-							src: perfil_20_6d6d4_default,
-							alt: "Advogado Previdenciário Lucas Morrone Costa especialista em INSS",
-							className: "relative z-10 w-full h-auto rounded-xl border-2 border-gold object-cover shadow-xl"
-						})]
-					})
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/Biography.tsx:20:11",
-					"data-prohibitions": "[editContent]",
-					className: "w-full lg:w-7/12",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:21:13",
-							"data-prohibitions": "[]",
-							className: "inline-block px-3 py-1 bg-gold/10 border border-gold/30 text-gold-dark text-sm font-semibold rounded-full mb-6",
-							children: "OAB/RS 107485"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							"data-uid": "src/components/sections/Biography.tsx:24:13",
-							"data-prohibitions": "[]",
-							className: "text-3xl md:text-4xl font-bold mb-6 text-foreground",
-							children: "Lucas Morrone Costa"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:28:13",
-							"data-prohibitions": "[]",
-							className: "space-y-4 text-lg text-muted-foreground font-medium mb-8",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:29:15",
-								"data-prohibitions": "[]",
-								children: "Sou o advogado Lucas Morrone Costa, especialista em Direito Previdenciário. Atendo presencialmente e online, oferecendo análise técnica precisa e orientação personalizada para cada cliente."
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:34:15",
-								"data-prohibitions": "[]",
-								children: "Meu objetivo é proporcionar segurança jurídica, garantindo que todos os direitos dos segurados sejam rigorosamente respeitados pelo INSS, com total transparência em cada etapa do processo."
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:41:13",
-							"data-prohibitions": "[editContent]",
-							className: "grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8",
-							children: [
-								"Atendimento Especializado",
-								"Análise Técnica Aprofundada",
-								"Atuação Ética e Transparente",
-								"Foco no Direito do Segurado"
-							].map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Biography.tsx:48:17",
-								"data-prohibitions": "[editContent]",
-								className: "flex items-center",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Biography.tsx:49:19",
-									"data-prohibitions": "[]",
-									className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-										"data-uid": "src/components/sections/Biography.tsx:50:21",
-										"data-prohibitions": "[editContent]",
-										className: "h-3.5 w-3.5 text-gold-dark"
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Biography.tsx:52:19",
-									"data-prohibitions": "[editContent]",
-									className: "text-foreground font-medium",
-									children: item
-								})]
-							}, idx))
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:57:13",
-							"data-prohibitions": "[]",
-							className: "bg-card border-l-4 border-gold p-6 rounded-r-lg shadow-soft",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-								"data-uid": "src/components/sections/Biography.tsx:58:15",
-								"data-prohibitions": "[]",
-								className: "text-gold-dark font-semibold mb-2 text-sm uppercase tracking-wider",
-								children: "Nota Importante"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:61:15",
-								"data-prohibitions": "[]",
-								className: "text-sm text-muted-foreground font-medium italic leading-relaxed",
-								children: "Até 2023 utilizei o nome Lucas Moran Costa. A atualização para Lucas Morrone Costa já está presente em todos os meus registros oficiais. Documentos ou referências anteriores em nome de Lucas Moran Costa correspondem ao mesmo profissional, inscrito na OAB/RS 107485."
-							})]
-						})
-					]
-				})]
-			})
-		})
-	});
-}
-//#endregion
-//#region src/components/sections/SocialProof.tsx
-var testimonials = [
-	{
-		name: "Maria C. Santos",
-		role: "Aposentadoria Concedida",
-		text: "A clareza técnica e a dedicação do Dr. Lucas foram fundamentais para a concessão da minha aposentadoria. O processo foi conduzido de forma ética e muito transparente."
-	},
-	{
-		name: "João R. Oliveira",
-		role: "BPC/LOAS",
-		text: "Depois de ter o benefício negado duas vezes pelo INSS, procurei o escritório. A organização da documentação e a orientação precisa fizeram toda a diferença para o meu filho."
-	},
-	{
-		name: "Antônio M. Silva",
-		role: "Aposentadoria por Tempo",
-		text: "Profissionalismo exemplar. Fizeram um planejamento previdenciário completo que me mostrou exatamente qual seria o melhor momento para dar entrada no meu pedido."
-	}
-];
-function SocialProof() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/SocialProof.tsx:24:5",
-		"data-prohibitions": "[editContent]",
-		className: "py-20 bg-background",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/SocialProof.tsx:25:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/SocialProof.tsx:26:9",
-				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-					"data-uid": "src/components/sections/SocialProof.tsx:27:11",
-					"data-prohibitions": "[]",
-					className: "text-3xl md:text-4xl font-bold mb-4 text-foreground",
-					children: ["O que dizem nossos ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/sections/SocialProof.tsx:28:32",
-						"data-prohibitions": "[]",
-						className: "text-gold-dark",
-						children: "Clientes"
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/sections/SocialProof.tsx:30:11",
-					"data-prohibitions": "[]",
-					className: "text-muted-foreground text-lg font-medium",
-					children: "O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de seus direitos."
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/SocialProof.tsx:36:9",
-				"data-prohibitions": "[editContent]",
-				className: "grid grid-cols-1 md:grid-cols-3 gap-8",
-				children: testimonials.map((testimonial, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-					"data-uid": "src/components/sections/SocialProof.tsx:38:13",
-					"data-prohibitions": "[editContent]",
-					className: "bg-card border-border shadow-soft relative mt-6",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/SocialProof.tsx:39:15",
-						"data-prohibitions": "[]",
-						className: "absolute -top-6 left-6 bg-gold rounded-full p-3 shadow-md",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Quote, {
-							"data-uid": "src/components/sections/SocialProof.tsx:40:17",
-							"data-prohibitions": "[editContent]",
-							className: "h-6 w-6 text-black"
-						})
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-						"data-uid": "src/components/sections/SocialProof.tsx:42:15",
-						"data-prohibitions": "[editContent]",
-						className: "pt-10 pb-8 px-6",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/SocialProof.tsx:43:17",
-								"data-prohibitions": "[editContent]",
-								className: "flex mb-4",
-								children: [...Array(5)].map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, {
-									"data-uid": "src/components/sections/SocialProof.tsx:45:21",
-									"data-prohibitions": "[editContent]",
-									className: "h-4 w-4 text-gold fill-gold"
-								}, i))
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								"data-uid": "src/components/sections/SocialProof.tsx:48:17",
-								"data-prohibitions": "[editContent]",
-								className: "text-foreground font-medium italic mb-6 leading-relaxed",
-								children: [
-									"\"",
-									testimonial.text,
-									"\""
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/SocialProof.tsx:51:17",
-								"data-prohibitions": "[editContent]",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-									"data-uid": "src/components/sections/SocialProof.tsx:52:19",
-									"data-prohibitions": "[editContent]",
-									className: "font-bold text-foreground text-lg",
-									children: testimonial.name
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/SocialProof.tsx:53:19",
-									"data-prohibitions": "[editContent]",
-									className: "text-gold-dark font-medium text-sm",
-									children: testimonial.role
-								})]
-							})
-						]
-					})]
-				}, index))
-			})]
-		})
-	});
-}
-//#endregion
 //#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-context@1.1.2_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-context/dist/index.mjs
 function createContextScope(scopeName, createContextScopeDeps = []) {
 	let defaultContexts = [];
@@ -21294,7 +20510,8 @@ function isFunction(value) {
 }
 //#endregion
 //#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-primitive@2.1.3_@types+react-dom@19.2.3_@types+react@19.2.14__@types+re_1181ea5061ec9212248424669240e4ec/node_modules/@radix-ui/react-primitive/dist/index.mjs
-var Primitive = [
+var import_react_dom = /* @__PURE__ */ __toESM(require_react_dom(), 1);
+var Primitive$1 = [
 	"a",
 	"button",
 	"div",
@@ -21461,7 +20678,7 @@ var Collapsible = import_react.forwardRef((props, forwardedRef) => {
 		contentId: useId(),
 		open,
 		onOpenToggle: import_react.useCallback(() => setOpen((prevOpen) => !prevOpen), [setOpen]),
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
 			"data-state": getState$1(open),
 			"data-disabled": disabled ? "" : void 0,
 			...collapsibleProps,
@@ -21474,7 +20691,7 @@ var TRIGGER_NAME$1 = "CollapsibleTrigger";
 var CollapsibleTrigger = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeCollapsible, ...triggerProps } = props;
 	const context = useCollapsibleContext(TRIGGER_NAME$1, __scopeCollapsible);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.button, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.button, {
 		type: "button",
 		"aria-controls": context.contentId,
 		"aria-expanded": context.open || false,
@@ -21537,7 +20754,7 @@ var CollapsibleContentImpl = import_react.forwardRef((props, forwardedRef) => {
 			setIsPresent(present);
 		}
 	}, [context.open, present]);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
 		"data-state": getState$1(context.open),
 		"data-disabled": context.disabled ? "" : void 0,
 		id: context.contentId,
@@ -21555,7 +20772,7 @@ var CollapsibleContentImpl = import_react.forwardRef((props, forwardedRef) => {
 function getState$1(open) {
 	return open ? "open" : "closed";
 }
-var Root$1 = Collapsible;
+var Root$2 = Collapsible;
 var Trigger = CollapsibleTrigger;
 var Content = CollapsibleContent;
 //#endregion
@@ -21701,7 +20918,7 @@ var AccordionImpl = import_react.forwardRef((props, forwardedRef) => {
 		orientation,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection$1.Slot, {
 			scope: __scopeAccordion,
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
 				...accordionProps,
 				"data-orientation": orientation,
 				ref: composedRefs,
@@ -21725,7 +20942,7 @@ var AccordionItem$1 = import_react.forwardRef((props, forwardedRef) => {
 		open,
 		disabled,
 		triggerId,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$1, {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$2, {
 			"data-orientation": accordionContext.orientation,
 			"data-state": getState(open),
 			...collapsibleScope,
@@ -21746,7 +20963,7 @@ var AccordionHeader = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeAccordion, ...headerProps } = props;
 	const accordionContext = useAccordionContext(ACCORDION_NAME, __scopeAccordion);
 	const itemContext = useAccordionItemContext(HEADER_NAME, __scopeAccordion);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.h3, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.h3, {
 		"data-orientation": accordionContext.orientation,
 		"data-state": getState(itemContext.open),
 		"data-disabled": itemContext.disabled ? "" : void 0,
@@ -21848,6 +21065,900 @@ var AccordionContent = import_react.forwardRef(({ className, children, ...props 
 }));
 AccordionContent.displayName = Content2.displayName;
 //#endregion
+//#region src/components/sections/Services.tsx
+var services = [
+	{
+		title: "Aposentadoria por Idade",
+		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, {
+			"data-uid": "src/components/sections/Services.tsx:14:11",
+			"data-prohibitions": "[editContent]",
+			className: "h-8 w-8 text-gold mb-4"
+		}),
+		items: [
+			"Cálculo do tempo de contribuição",
+			"Simulação do benefício",
+			"Correção de vínculos",
+			"Pedido administrativo completo"
+		]
+	},
+	{
+		title: "Aposentadoria por Tempo",
+		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
+			"data-uid": "src/components/sections/Services.tsx:24:11",
+			"data-prohibitions": "[editContent]",
+			className: "h-8 w-8 text-gold mb-4"
+		}),
+		items: [
+			"Análise de direito adquirido",
+			"Simulação de todas as regras",
+			"Correção de vínculos",
+			"Planejamento previdenciário completo"
+		]
+	},
+	{
+		title: "Pensão por Morte",
+		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, {
+			"data-uid": "src/components/sections/Services.tsx:34:11",
+			"data-prohibitions": "[editContent]",
+			className: "h-8 w-8 text-gold mb-4"
+		}),
+		items: [
+			"Análise de dependência",
+			"Documentação necessária",
+			"Pedido administrativo completo",
+			"Revisão do valor do benefício"
+		]
+	},
+	{
+		title: "BPC / LOAS",
+		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldAlert, {
+			"data-uid": "src/components/sections/Services.tsx:44:11",
+			"data-prohibitions": "[editContent]",
+			className: "h-8 w-8 text-gold mb-4"
+		}),
+		items: [
+			"Análise de renda e requisitos legais",
+			"Organização da documentação",
+			"Pedido administrativo completo",
+			"Recurso em caso de negativa"
+		]
+	},
+	{
+		title: "Aposentadoria Híbrida",
+		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tractor, {
+			"data-uid": "src/components/sections/Services.tsx:54:11",
+			"data-prohibitions": "[editContent]",
+			className: "h-8 w-8 text-gold mb-4"
+		}),
+		items: [
+			"Cálculo urbano + rural atualizado",
+			"Validação de documentos rurais",
+			"Simulação completa",
+			"Pedido administrativo completo"
+		]
+	},
+	{
+		title: "Benefícios por Incapacidade",
+		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Activity, {
+			"data-uid": "src/components/sections/Services.tsx:64:11",
+			"data-prohibitions": "[editContent]",
+			className: "h-8 w-8 text-gold mb-4"
+		}),
+		items: [
+			"Benefício por Incapacidade Temporária",
+			"Benefício por Incapacidade Permanente",
+			"Análise médica previdenciária",
+			"Recurso em caso de negativa"
+		]
+	}
+];
+function Services() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		"data-uid": "src/components/sections/Services.tsx:76:5",
+		"data-prohibitions": "[editContent]",
+		id: "servicos",
+		className: "py-20 bg-muted",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			"data-uid": "src/components/sections/Services.tsx:77:7",
+			"data-prohibitions": "[editContent]",
+			className: "container mx-auto px-4 md:px-6",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/Services.tsx:78:9",
+					"data-prohibitions": "[]",
+					className: "text-center max-w-3xl mx-auto mb-16",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+						"data-uid": "src/components/sections/Services.tsx:79:11",
+						"data-prohibitions": "[]",
+						className: "text-3xl md:text-4xl font-bold mb-4 text-foreground",
+						children: ["Áreas de ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"data-uid": "src/components/sections/Services.tsx:80:22",
+							"data-prohibitions": "[]",
+							className: "text-gold-dark",
+							children: "Atuação"
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						"data-uid": "src/components/sections/Services.tsx:82:11",
+						"data-prohibitions": "[]",
+						className: "text-muted-foreground text-lg font-medium",
+						children: "Oferecemos assessoria jurídica especializada para garantir que seus direitos previdenciários sejam respeitados e concedidos de forma correta."
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Services.tsx:88:9",
+					"data-prohibitions": "[editContent]",
+					className: "hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6",
+					children: services.map((service, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+						"data-uid": "src/components/sections/Services.tsx:90:13",
+						"data-prohibitions": "[editContent]",
+						className: "bg-card border-border hover:border-gold shadow-soft transition-all duration-300 hover:shadow-md",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardHeader, {
+							"data-uid": "src/components/sections/Services.tsx:94:15",
+							"data-prohibitions": "[editContent]",
+							children: [service.icon, /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
+								"data-uid": "src/components/sections/Services.tsx:96:17",
+								"data-prohibitions": "[editContent]",
+								className: "text-xl font-bold text-foreground",
+								children: service.title
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
+							"data-uid": "src/components/sections/Services.tsx:98:15",
+							"data-prohibitions": "[editContent]",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+								"data-uid": "src/components/sections/Services.tsx:99:17",
+								"data-prohibitions": "[editContent]",
+								className: "space-y-3 mb-6",
+								children: service.items.map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+									"data-uid": "src/components/sections/Services.tsx:101:21",
+									"data-prohibitions": "[editContent]",
+									className: "flex items-start text-muted-foreground font-medium",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+										"data-uid": "src/components/sections/Services.tsx:102:23",
+										"data-prohibitions": "[editContent]",
+										className: "h-5 w-5 text-gold mr-3 shrink-0 mt-0.5"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/sections/Services.tsx:103:23",
+										"data-prohibitions": "[editContent]",
+										className: "text-sm",
+										children: item
+									})]
+								}, idx))
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+								"data-uid": "src/components/sections/Services.tsx:107:17",
+								"data-prohibitions": "[]",
+								variant: "outline",
+								className: "w-full border-gold-dark text-gold-dark hover:bg-gold hover:text-black hover:border-gold transition-colors font-semibold",
+								asChild: true,
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+									"data-uid": "src/components/sections/Services.tsx:112:19",
+									"data-prohibitions": "[]",
+									href: `https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`,
+									target: "_blank",
+									rel: "noopener noreferrer",
+									children: "Solicitar Análise"
+								})
+							})]
+						})]
+					}, index))
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Services.tsx:125:9",
+					"data-prohibitions": "[editContent]",
+					className: "md:hidden",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
+						"data-uid": "src/components/sections/Services.tsx:126:11",
+						"data-prohibitions": "[editContent]",
+						type: "single",
+						collapsible: true,
+						className: "w-full space-y-4",
+						children: services.map((service, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+							"data-uid": "src/components/sections/Services.tsx:128:15",
+							"data-prohibitions": "[editContent]",
+							value: `service-${index}`,
+							className: "bg-card border border-border rounded-lg px-6 data-[state=open]:border-gold shadow-sm transition-colors",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+								"data-uid": "src/components/sections/Services.tsx:133:17",
+								"data-prohibitions": "[editContent]",
+								className: "text-left text-lg font-semibold hover:text-gold-dark hover:no-underline py-4 text-foreground",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Services.tsx:134:19",
+									"data-prohibitions": "[editContent]",
+									className: "flex items-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/components/sections/Services.tsx:135:21",
+										"data-prohibitions": "[editContent]",
+										className: "shrink-0",
+										children: service.icon
+									}), service.title]
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+								"data-uid": "src/components/sections/Services.tsx:139:17",
+								"data-prohibitions": "[editContent]",
+								className: "pb-6 pt-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+									"data-uid": "src/components/sections/Services.tsx:140:19",
+									"data-prohibitions": "[editContent]",
+									className: "space-y-3 mb-6",
+									children: service.items.map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										"data-uid": "src/components/sections/Services.tsx:142:23",
+										"data-prohibitions": "[editContent]",
+										className: "flex items-start text-muted-foreground font-medium",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+											"data-uid": "src/components/sections/Services.tsx:143:25",
+											"data-prohibitions": "[editContent]",
+											className: "h-5 w-5 text-gold mr-3 shrink-0 mt-0.5"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											"data-uid": "src/components/sections/Services.tsx:144:25",
+											"data-prohibitions": "[editContent]",
+											className: "text-sm",
+											children: item
+										})]
+									}, idx))
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									"data-uid": "src/components/sections/Services.tsx:148:19",
+									"data-prohibitions": "[]",
+									variant: "outline",
+									className: "w-full border-gold-dark text-gold-dark hover:bg-gold hover:text-black hover:border-gold transition-colors font-semibold",
+									asChild: true,
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+										"data-uid": "src/components/sections/Services.tsx:153:21",
+										"data-prohibitions": "[]",
+										href: `https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`,
+										target: "_blank",
+										rel: "noopener noreferrer",
+										children: "Solicitar Análise"
+									})
+								})]
+							})]
+						}, index))
+					})
+				})
+			]
+		})
+	});
+}
+//#endregion
+//#region src/components/ui/input.tsx
+var Input = import_react.forwardRef(({ className, type, ...props }, ref) => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+		"data-uid": "src/components/ui/input.tsx:9:7",
+		"data-prohibitions": "[editContent]",
+		type,
+		className: cn$1("flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm", className),
+		ref,
+		...props
+	});
+});
+Input.displayName = "Input";
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-primitive@2.1.4_@types+react-dom@19.2.3_@types+react@19.2.14__@types+re_0243fb2db8a1fb85ca77b8d9e5c2d650/node_modules/@radix-ui/react-primitive/dist/index.mjs
+var Primitive = [
+	"a",
+	"button",
+	"div",
+	"form",
+	"h2",
+	"h3",
+	"img",
+	"input",
+	"label",
+	"li",
+	"nav",
+	"ol",
+	"p",
+	"select",
+	"span",
+	"svg",
+	"ul"
+].reduce((primitive, node) => {
+	const Slot = /* @__PURE__ */ createSlot$1(`Primitive.${node}`);
+	const Node = import_react.forwardRef((props, forwardedRef) => {
+		const { asChild, ...primitiveProps } = props;
+		const Comp = asChild ? Slot : node;
+		if (typeof window !== "undefined") window[Symbol.for("radix-ui")] = true;
+		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Comp, {
+			...primitiveProps,
+			ref: forwardedRef
+		});
+	});
+	Node.displayName = `Primitive.${node}`;
+	return {
+		...primitive,
+		[node]: Node
+	};
+}, {});
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-label@2.1.8_@types+react-dom@19.2.3_@types+react@19.2.14__@types+react@_55fa612a976b7bdfbf4dcdd93d861aab/node_modules/@radix-ui/react-label/dist/index.mjs
+var NAME$1 = "Label";
+var Label$1 = import_react.forwardRef((props, forwardedRef) => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.label, {
+		...props,
+		ref: forwardedRef,
+		onMouseDown: (event) => {
+			if (event.target.closest("button, input, select, textarea")) return;
+			props.onMouseDown?.(event);
+			if (!event.defaultPrevented && event.detail > 1) event.preventDefault();
+		}
+	});
+});
+Label$1.displayName = NAME$1;
+var Root$1 = Label$1;
+//#endregion
+//#region src/components/ui/label.tsx
+var labelVariants = cva("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70");
+var Label = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$1, {
+	"data-uid": "src/components/ui/label.tsx:16:3",
+	"data-prohibitions": "[editContent]",
+	ref,
+	className: cn$1(labelVariants(), className),
+	...props
+}));
+Label.displayName = Root$1.displayName;
+//#endregion
+//#region src/components/sections/Ebook.tsx
+function Ebook() {
+	const [isSubmitted, setIsSubmitted] = (0, import_react.useState)(false);
+	const [name, setName] = (0, import_react.useState)("");
+	const [contact, setContact] = (0, import_react.useState)("");
+	const navigate = useNavigate();
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		if (name.trim() && contact.trim()) {
+			setIsSubmitted(true);
+			navigate("/guia-bpc");
+		}
+	};
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		"data-uid": "src/components/sections/Ebook.tsx:23:5",
+		"data-prohibitions": "[editContent]",
+		id: "guia-bpc",
+		className: "py-20 bg-background border-y border-border overflow-hidden",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/sections/Ebook.tsx:24:7",
+			"data-prohibitions": "[editContent]",
+			className: "container mx-auto px-4 md:px-6",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				"data-uid": "src/components/sections/Ebook.tsx:25:9",
+				"data-prohibitions": "[editContent]",
+				className: "flex flex-col lg:flex-row items-center gap-12 lg:gap-20",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Ebook.tsx:27:11",
+					"data-prohibitions": "[]",
+					className: "w-full lg:w-5/12 flex justify-center lg:justify-end",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/Ebook.tsx:28:13",
+						"data-prohibitions": "[]",
+						className: "relative w-64 h-80 sm:w-72 sm:h-96 bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-gold/40 rounded-r-xl rounded-l-sm shadow-[20px_20px_40px_-10px_rgba(0,0,0,0.2),_0_0_20px_rgba(212,175,55,0.15)] flex flex-col items-center justify-center p-6 text-center transform -rotate-2 hover:rotate-0 transition-all duration-500 group",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Ebook.tsx:29:15",
+								"data-prohibitions": "[]",
+								className: "absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10 rounded-l-sm"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Ebook.tsx:30:15",
+								"data-prohibitions": "[]",
+								className: "absolute left-6 top-0 bottom-0 w-[1px] bg-white/10 z-10"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								"data-uid": "src/components/sections/Ebook.tsx:31:15",
+								"data-prohibitions": "[]",
+								className: "absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10 rounded-r-xl rounded-l-sm"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Ebook.tsx:33:15",
+								"data-prohibitions": "[]",
+								className: "relative z-20 flex flex-col items-center h-full w-full",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
+										"data-uid": "src/components/sections/Ebook.tsx:34:17",
+										"data-prohibitions": "[editContent]",
+										className: "w-12 h-12 sm:w-16 sm:h-16 text-gold mb-6 mt-4 group-hover:scale-110 transition-transform duration-500"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/components/sections/Ebook.tsx:35:17",
+										"data-prohibitions": "[]",
+										className: "text-sm sm:text-base font-bold text-white mb-2 uppercase tracking-widest text-gold/80",
+										children: "Guia Informativo"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
+										"data-uid": "src/components/sections/Ebook.tsx:38:17",
+										"data-prohibitions": "[]",
+										className: "text-2xl sm:text-3xl font-black text-white mb-4 leading-tight",
+										children: [
+											"TUDO SOBRE",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
+												"data-uid": "src/components/sections/Ebook.tsx:40:19",
+												"data-prohibitions": "[editContent]"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/components/sections/Ebook.tsx:41:19",
+												"data-prohibitions": "[]",
+												className: "text-gold",
+												children: "BPC/LOAS"
+											})
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/components/sections/Ebook.tsx:44:17",
+										"data-prohibitions": "[]",
+										className: "mt-auto pt-6 border-t border-gold/20 w-full",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											"data-uid": "src/components/sections/Ebook.tsx:45:19",
+											"data-prohibitions": "[]",
+											className: "text-[10px] sm:text-xs text-slate-300 uppercase tracking-widest font-medium",
+											children: "Lucas Morrone Advocacia"
+										})
+									})
+								]
+							})
+						]
+					})
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/Ebook.tsx:54:11",
+					"data-prohibitions": "[editContent]",
+					className: "w-full lg:w-7/12 max-w-2xl",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+							"data-uid": "src/components/sections/Ebook.tsx:55:13",
+							"data-prohibitions": "[]",
+							className: "text-3xl md:text-4xl font-bold mb-4 text-foreground",
+							children: [
+								"Acesse nosso Guia Informativo: ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
+									"data-uid": "src/components/sections/Ebook.tsx:56:46",
+									"data-prohibitions": "[editContent]",
+									className: "hidden md:block"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/components/sections/Ebook.tsx:57:15",
+									"data-prohibitions": "[]",
+									className: "text-gold-dark",
+									children: "Informações sobre BPC/LOAS"
+								})
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							"data-uid": "src/components/sections/Ebook.tsx:59:13",
+							"data-prohibitions": "[]",
+							className: "text-lg text-muted-foreground mb-8 font-medium",
+							children: "Entenda seus direitos com o nosso conteúdo exclusivo e detalhado de forma estritamente informativa."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/Ebook.tsx:64:13",
+							"data-prohibitions": "[editContent]",
+							className: "mb-8 space-y-3",
+							children: [
+								"Requisitos atualizados",
+								"Regras do benefício",
+								"Informações de elegibilidade"
+							].map((benefit, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Ebook.tsx:70:17",
+								"data-prohibitions": "[editContent]",
+								className: "flex items-center",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/Ebook.tsx:71:19",
+									"data-prohibitions": "[]",
+									className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+										"data-uid": "src/components/sections/Ebook.tsx:72:21",
+										"data-prohibitions": "[editContent]",
+										className: "h-3.5 w-3.5 text-gold-dark"
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/components/sections/Ebook.tsx:74:19",
+									"data-prohibitions": "[editContent]",
+									className: "text-foreground font-medium text-base md:text-lg",
+									children: benefit
+								})]
+							}, idx))
+						}),
+						!isSubmitted ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
+							"data-uid": "src/components/sections/Ebook.tsx:82:15",
+							"data-prohibitions": "[]",
+							onSubmit: handleSubmit,
+							className: "space-y-5 bg-card p-6 sm:p-8 rounded-xl border border-border shadow-soft",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Ebook.tsx:86:17",
+									"data-prohibitions": "[]",
+									className: "space-y-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
+										"data-uid": "src/components/sections/Ebook.tsx:87:19",
+										"data-prohibitions": "[]",
+										htmlFor: "name",
+										className: "text-foreground font-semibold",
+										children: "Nome Completo"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+										"data-uid": "src/components/sections/Ebook.tsx:90:19",
+										"data-prohibitions": "[editContent]",
+										id: "name",
+										value: name,
+										onChange: (e) => setName(e.target.value),
+										placeholder: "Digite seu nome completo",
+										required: true,
+										className: "bg-background border-border focus-visible:ring-gold h-12"
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Ebook.tsx:99:17",
+									"data-prohibitions": "[]",
+									className: "space-y-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
+										"data-uid": "src/components/sections/Ebook.tsx:100:19",
+										"data-prohibitions": "[]",
+										htmlFor: "contact",
+										className: "text-foreground font-semibold",
+										children: "WhatsApp ou E-mail"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+										"data-uid": "src/components/sections/Ebook.tsx:103:19",
+										"data-prohibitions": "[editContent]",
+										id: "contact",
+										value: contact,
+										onChange: (e) => setContact(e.target.value),
+										placeholder: "Seu melhor contato",
+										required: true,
+										className: "bg-background border-border focus-visible:ring-gold h-12"
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									"data-uid": "src/components/sections/Ebook.tsx:112:17",
+									"data-prohibitions": "[]",
+									type: "submit",
+									className: "w-full bg-gold hover:bg-gold/90 text-black font-bold h-14 mt-4 transition-all duration-300 shadow-md text-sm sm:text-base",
+									children: "ACESSAR O GUIA AGORA"
+								})
+							]
+						}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/Ebook.tsx:120:15",
+							"data-prohibitions": "[]",
+							className: "bg-card p-8 sm:p-10 rounded-xl border border-gold/30 shadow-md text-center animate-in fade-in slide-in-from-bottom-4 duration-500",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/Ebook.tsx:121:17",
+									"data-prohibitions": "[]",
+									className: "w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+										"data-uid": "src/components/sections/Ebook.tsx:122:19",
+										"data-prohibitions": "[editContent]",
+										className: "w-8 h-8 text-gold-dark"
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									"data-uid": "src/components/sections/Ebook.tsx:124:17",
+									"data-prohibitions": "[]",
+									className: "text-2xl font-bold text-foreground mb-3",
+									children: "Tudo Certo!"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Ebook.tsx:125:17",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground mb-8 text-lg font-medium",
+									children: "Seu guia está pronto para acesso. Clique no botão abaixo para ler todo o material agora mesmo."
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									"data-uid": "src/components/sections/Ebook.tsx:129:17",
+									"data-prohibitions": "[]",
+									asChild: true,
+									className: "w-full sm:w-auto bg-gold hover:bg-gold/90 text-black font-bold h-14 px-8 text-base shadow-sm",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+										"data-uid": "src/components/sections/Ebook.tsx:133:19",
+										"data-prohibitions": "[]",
+										to: "/guia-bpc",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
+											"data-uid": "src/components/sections/Ebook.tsx:134:21",
+											"data-prohibitions": "[editContent]",
+											className: "mr-2 h-5 w-5"
+										}), " Acessar Guia Completo Agora"]
+									})
+								})
+							]
+						})
+					]
+				})]
+			})
+		})
+	});
+}
+//#endregion
+//#region src/assets/perfil-20-6d6d4.png
+var perfil_20_6d6d4_default = "/assets/perfil-20-6d6d4-CN0gCp5s.png";
+//#endregion
+//#region src/components/sections/Biography.tsx
+function Biography() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		"data-uid": "src/components/sections/Biography.tsx:6:5",
+		"data-prohibitions": "[editContent]",
+		id: "sobre",
+		className: "py-20 bg-muted",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/sections/Biography.tsx:7:7",
+			"data-prohibitions": "[editContent]",
+			className: "container mx-auto px-4 md:px-6",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				"data-uid": "src/components/sections/Biography.tsx:8:9",
+				"data-prohibitions": "[editContent]",
+				className: "flex flex-col lg:flex-row items-center gap-12 lg:gap-20",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Biography.tsx:9:11",
+					"data-prohibitions": "[]",
+					className: "w-full lg:w-5/12",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/Biography.tsx:10:13",
+						"data-prohibitions": "[]",
+						className: "relative mx-auto max-w-md",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/Biography.tsx:11:15",
+							"data-prohibitions": "[]",
+							className: "absolute inset-0 bg-gold rounded-xl rotate-3 scale-105 opacity-20"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							"data-uid": "src/components/sections/Biography.tsx:12:15",
+							"data-prohibitions": "[editContent]",
+							src: perfil_20_6d6d4_default,
+							alt: "Advogado Previdenciário Lucas Morrone Costa especialista em INSS",
+							className: "relative z-10 w-full h-auto rounded-xl border-2 border-gold object-cover shadow-xl"
+						})]
+					})
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/Biography.tsx:20:11",
+					"data-prohibitions": "[editContent]",
+					className: "w-full lg:w-7/12",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/Biography.tsx:21:13",
+							"data-prohibitions": "[]",
+							className: "inline-block px-3 py-1 bg-gold/10 border border-gold/30 text-gold-dark text-sm font-semibold rounded-full mb-6",
+							children: "OAB/RS 107485"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							"data-uid": "src/components/sections/Biography.tsx:24:13",
+							"data-prohibitions": "[]",
+							className: "text-3xl md:text-4xl font-bold mb-6 text-foreground",
+							children: "Lucas Morrone Costa"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/Biography.tsx:28:13",
+							"data-prohibitions": "[]",
+							className: "space-y-4 text-lg text-muted-foreground font-medium mb-8",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/components/sections/Biography.tsx:29:15",
+								"data-prohibitions": "[]",
+								children: "Sou o advogado Lucas Morrone Costa, especialista em Direito Previdenciário. Atendo presencialmente e online, oferecendo análise técnica precisa e orientação personalizada para cada cliente."
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/components/sections/Biography.tsx:34:15",
+								"data-prohibitions": "[]",
+								children: "Meu objetivo é proporcionar segurança jurídica, garantindo que todos os direitos dos segurados sejam rigorosamente respeitados pelo INSS, com total transparência em cada etapa do processo."
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/Biography.tsx:41:13",
+							"data-prohibitions": "[editContent]",
+							className: "grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8",
+							children: [
+								"Atendimento Especializado",
+								"Análise Técnica Aprofundada",
+								"Atuação Ética e Transparente",
+								"Foco no Direito do Segurado"
+							].map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Biography.tsx:48:17",
+								"data-prohibitions": "[editContent]",
+								className: "flex items-center",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/Biography.tsx:49:19",
+									"data-prohibitions": "[]",
+									className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+										"data-uid": "src/components/sections/Biography.tsx:50:21",
+										"data-prohibitions": "[editContent]",
+										className: "h-3.5 w-3.5 text-gold-dark"
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/components/sections/Biography.tsx:52:19",
+									"data-prohibitions": "[editContent]",
+									className: "text-foreground font-medium",
+									children: item
+								})]
+							}, idx))
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/Biography.tsx:57:13",
+							"data-prohibitions": "[]",
+							className: "bg-card border-l-4 border-gold p-6 rounded-r-lg shadow-soft",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+								"data-uid": "src/components/sections/Biography.tsx:58:15",
+								"data-prohibitions": "[]",
+								className: "text-gold-dark font-semibold mb-2 text-sm uppercase tracking-wider",
+								children: "Nota Importante"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/components/sections/Biography.tsx:61:15",
+								"data-prohibitions": "[]",
+								className: "text-sm text-muted-foreground font-medium italic leading-relaxed",
+								children: "Até 2023 utilizei o nome Lucas Moran Costa. A atualização para Lucas Morrone Costa já está presente em todos os meus registros oficiais. Documentos ou referências anteriores em nome de Lucas Moran Costa correspondem ao mesmo profissional, inscrito na OAB/RS 107485."
+							})]
+						})
+					]
+				})]
+			})
+		})
+	});
+}
+//#endregion
+//#region src/components/sections/SocialProof.tsx
+var testimonials = [
+	{
+		name: "Maria C. Santos",
+		role: "Aposentadoria Concedida",
+		text: "A clareza técnica e a dedicação do Dr. Lucas foram fundamentais para a concessão da minha aposentadoria. O processo foi conduzido de forma ética e muito transparente."
+	},
+	{
+		name: "João R. Oliveira",
+		role: "BPC/LOAS",
+		text: "Depois de ter o benefício negado duas vezes pelo INSS, procurei o escritório. A organização da documentação e a orientação precisa fizeram toda a diferença para o meu filho."
+	},
+	{
+		name: "Antônio M. Silva",
+		role: "Aposentadoria por Tempo",
+		text: "Profissionalismo exemplar. Fizeram um planejamento previdenciário completo que me mostrou exatamente qual seria o melhor momento para dar entrada no meu pedido."
+	}
+];
+function SocialProof() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		"data-uid": "src/components/sections/SocialProof.tsx:30:5",
+		"data-prohibitions": "[editContent]",
+		className: "py-20 bg-background",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			"data-uid": "src/components/sections/SocialProof.tsx:31:7",
+			"data-prohibitions": "[editContent]",
+			className: "container mx-auto px-4 md:px-6",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/SocialProof.tsx:32:9",
+					"data-prohibitions": "[]",
+					className: "text-center max-w-3xl mx-auto mb-16",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+						"data-uid": "src/components/sections/SocialProof.tsx:33:11",
+						"data-prohibitions": "[]",
+						className: "text-3xl md:text-4xl font-bold mb-4 text-foreground",
+						children: ["O que dizem nossos ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"data-uid": "src/components/sections/SocialProof.tsx:34:32",
+							"data-prohibitions": "[]",
+							className: "text-gold-dark",
+							children: "Clientes"
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						"data-uid": "src/components/sections/SocialProof.tsx:36:11",
+						"data-prohibitions": "[]",
+						className: "text-muted-foreground text-lg font-medium",
+						children: "O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de seus direitos."
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/SocialProof.tsx:42:9",
+					"data-prohibitions": "[editContent]",
+					className: "hidden md:grid grid-cols-3 gap-8",
+					children: testimonials.map((testimonial, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+						"data-uid": "src/components/sections/SocialProof.tsx:44:13",
+						"data-prohibitions": "[editContent]",
+						className: "bg-card border-border shadow-soft relative mt-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/SocialProof.tsx:45:15",
+							"data-prohibitions": "[]",
+							className: "absolute -top-6 left-6 bg-gold rounded-full p-3 shadow-md",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Quote, {
+								"data-uid": "src/components/sections/SocialProof.tsx:46:17",
+								"data-prohibitions": "[editContent]",
+								className: "h-6 w-6 text-black"
+							})
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
+							"data-uid": "src/components/sections/SocialProof.tsx:48:15",
+							"data-prohibitions": "[editContent]",
+							className: "pt-10 pb-8 px-6",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/SocialProof.tsx:49:17",
+									"data-prohibitions": "[editContent]",
+									className: "flex mb-4",
+									children: [...Array(5)].map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, {
+										"data-uid": "src/components/sections/SocialProof.tsx:51:21",
+										"data-prohibitions": "[editContent]",
+										className: "h-4 w-4 text-gold fill-gold"
+									}, i))
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									"data-uid": "src/components/sections/SocialProof.tsx:54:17",
+									"data-prohibitions": "[editContent]",
+									className: "text-foreground font-medium italic mb-6 leading-relaxed",
+									children: [
+										"\"",
+										testimonial.text,
+										"\""
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/SocialProof.tsx:57:17",
+									"data-prohibitions": "[editContent]",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+										"data-uid": "src/components/sections/SocialProof.tsx:58:19",
+										"data-prohibitions": "[editContent]",
+										className: "font-bold text-foreground text-lg",
+										children: testimonial.name
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/components/sections/SocialProof.tsx:59:19",
+										"data-prohibitions": "[editContent]",
+										className: "text-gold-dark font-medium text-sm",
+										children: testimonial.role
+									})]
+								})
+							]
+						})]
+					}, index))
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/SocialProof.tsx:66:9",
+					"data-prohibitions": "[editContent]",
+					className: "md:hidden",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
+						"data-uid": "src/components/sections/SocialProof.tsx:67:11",
+						"data-prohibitions": "[editContent]",
+						type: "single",
+						collapsible: true,
+						className: "w-full space-y-4",
+						children: testimonials.map((testimonial, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+							"data-uid": "src/components/sections/SocialProof.tsx:69:15",
+							"data-prohibitions": "[editContent]",
+							value: `testimonial-${index}`,
+							className: "bg-card border border-border rounded-lg px-6 data-[state=open]:border-gold shadow-sm transition-colors",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+								"data-uid": "src/components/sections/SocialProof.tsx:74:17",
+								"data-prohibitions": "[editContent]",
+								className: "text-left text-lg font-semibold hover:text-gold-dark hover:no-underline py-4 text-foreground",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/SocialProof.tsx:75:19",
+									"data-prohibitions": "[editContent]",
+									className: "flex flex-col items-start gap-1",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/sections/SocialProof.tsx:76:21",
+										"data-prohibitions": "[editContent]",
+										children: testimonial.name
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/components/sections/SocialProof.tsx:77:21",
+										"data-prohibitions": "[editContent]",
+										className: "text-sm font-medium text-gold-dark",
+										children: testimonial.role
+									})]
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+								"data-uid": "src/components/sections/SocialProof.tsx:80:17",
+								"data-prohibitions": "[editContent]",
+								className: "pb-6 pt-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/SocialProof.tsx:81:19",
+									"data-prohibitions": "[editContent]",
+									className: "flex mb-4",
+									children: [...Array(5)].map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, {
+										"data-uid": "src/components/sections/SocialProof.tsx:83:23",
+										"data-prohibitions": "[editContent]",
+										className: "h-4 w-4 text-gold fill-gold"
+									}, i))
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									"data-uid": "src/components/sections/SocialProof.tsx:86:19",
+									"data-prohibitions": "[editContent]",
+									className: "text-muted-foreground font-medium italic leading-relaxed text-base",
+									children: [
+										"\"",
+										testimonial.text,
+										"\""
+									]
+								})]
+							})]
+						}, index))
+					})
+				})
+			]
+		})
+	});
+}
+//#endregion
 //#region src/components/sections/Updates.tsx
 function Updates() {
 	const scrollTo = (id) => {
@@ -21891,7 +22002,7 @@ function Updates() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					"data-uid": "src/components/sections/Updates.tsx:43:9",
 					"data-prohibitions": "[]",
-					className: "flex flex-col sm:flex-row justify-center gap-4 mb-16",
+					className: "hidden sm:flex flex-row justify-center gap-4 mb-16",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 							"data-uid": "src/components/sections/Updates.tsx:44:11",
@@ -21934,11 +22045,11 @@ function Updates() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					"data-uid": "src/components/sections/Updates.tsx:67:9",
 					"data-prohibitions": "[editContent]",
-					className: "grid grid-cols-1 lg:grid-cols-3 gap-8",
+					className: "hidden lg:grid grid-cols-3 gap-8",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						"data-uid": "src/components/sections/Updates.tsx:68:11",
 						"data-prohibitions": "[editContent]",
-						className: "lg:col-span-2 space-y-16",
+						className: "col-span-2 space-y-16",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							"data-uid": "src/components/sections/Updates.tsx:69:13",
 							"data-prohibitions": "[editContent]",
@@ -22381,6 +22492,196 @@ function Updates() {
 							})]
 						})]
 					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Updates.tsx:255:9",
+					"data-prohibitions": "[editContent]",
+					className: "lg:hidden",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Accordion, {
+						"data-uid": "src/components/sections/Updates.tsx:256:11",
+						"data-prohibitions": "[editContent]",
+						type: "single",
+						collapsible: true,
+						className: "w-full space-y-4",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+								"data-uid": "src/components/sections/Updates.tsx:257:13",
+								"data-prohibitions": "[]",
+								value: "atestmed",
+								className: "bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+									"data-uid": "src/components/sections/Updates.tsx:261:15",
+									"data-prohibitions": "[]",
+									className: "text-left font-bold text-lg hover:no-underline py-4",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/Updates.tsx:262:17",
+										"data-prohibitions": "[]",
+										className: "flex items-center gap-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
+											"data-uid": "src/components/sections/Updates.tsx:263:19",
+											"data-prohibitions": "[editContent]",
+											className: "h-5 w-5 text-gold-dark shrink-0"
+										}), "Regras AtestMed 2026"]
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+									"data-uid": "src/components/sections/Updates.tsx:267:15",
+									"data-prohibitions": "[]",
+									className: "pt-2 pb-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/components/sections/Updates.tsx:268:17",
+										"data-prohibitions": "[]",
+										className: "text-muted-foreground font-medium mb-4 text-sm",
+										children: "O sistema de análise remota permite benefícios por incapacidade por até 90 dias sem perícia presencial inicial."
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+										"data-uid": "src/components/sections/Updates.tsx:272:17",
+										"data-prohibitions": "[]",
+										className: "space-y-2 text-sm text-muted-foreground font-medium mb-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/components/sections/Updates.tsx:273:19",
+											"data-prohibitions": "[]",
+											className: "flex gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+												"data-uid": "src/components/sections/Updates.tsx:274:21",
+												"data-prohibitions": "[editContent]",
+												className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+											}), "Documentos: RG, Laudo legível (com CID), CRM/CRO."]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/components/sections/Updates.tsx:277:19",
+											"data-prohibitions": "[]",
+											className: "flex gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
+												"data-uid": "src/components/sections/Updates.tsx:278:21",
+												"data-prohibitions": "[editContent]",
+												className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+											}), "Limite: 3 negativas bloqueiam a via remota."]
+										})]
+									})]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+								"data-uid": "src/components/sections/Updates.tsx:285:13",
+								"data-prohibitions": "[]",
+								value: "auxilio",
+								className: "bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+									"data-uid": "src/components/sections/Updates.tsx:289:15",
+									"data-prohibitions": "[]",
+									className: "text-left font-bold text-lg hover:no-underline py-4",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/Updates.tsx:290:17",
+										"data-prohibitions": "[]",
+										className: "flex items-center gap-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
+											"data-uid": "src/components/sections/Updates.tsx:291:19",
+											"data-prohibitions": "[editContent]",
+											className: "h-5 w-5 text-gold-dark shrink-0"
+										}), "Auxílio-Acidente"]
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+									"data-uid": "src/components/sections/Updates.tsx:295:15",
+									"data-prohibitions": "[]",
+									className: "pt-2 pb-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/components/sections/Updates.tsx:296:17",
+										"data-prohibitions": "[]",
+										className: "text-muted-foreground font-medium mb-4 text-sm",
+										children: "Triagem documental obrigatória antecede a perícia física. A ausência de elementos probatórios resulta no indeferimento imediato."
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+										"data-uid": "src/components/sections/Updates.tsx:300:17",
+										"data-prohibitions": "[]",
+										className: "space-y-2 text-sm text-muted-foreground font-medium",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/components/sections/Updates.tsx:301:19",
+											"data-prohibitions": "[]",
+											className: "flex gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+												"data-uid": "src/components/sections/Updates.tsx:302:21",
+												"data-prohibitions": "[editContent]",
+												className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+											}), "Data exata do acidente."]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/components/sections/Updates.tsx:305:19",
+											"data-prohibitions": "[]",
+											className: "flex gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+												"data-uid": "src/components/sections/Updates.tsx:306:21",
+												"data-prohibitions": "[editContent]",
+												className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+											}), "Descrição detalhada da lesão e sequelas."]
+										})]
+									})]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+								"data-uid": "src/components/sections/Updates.tsx:313:13",
+								"data-prohibitions": "[editContent]",
+								value: "dicas",
+								className: "bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+									"data-uid": "src/components/sections/Updates.tsx:317:15",
+									"data-prohibitions": "[]",
+									className: "text-left font-bold text-lg hover:no-underline py-4",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/Updates.tsx:318:17",
+										"data-prohibitions": "[]",
+										className: "flex items-center gap-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+											"data-uid": "src/components/sections/Updates.tsx:319:19",
+											"data-prohibitions": "[editContent]",
+											className: "h-5 w-5 text-gold-dark shrink-0"
+										}), "Dicas de Aprovação"]
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+									"data-uid": "src/components/sections/Updates.tsx:323:15",
+									"data-prohibitions": "[editContent]",
+									className: "pt-2 pb-6 space-y-4",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+										"data-uid": "src/components/sections/Updates.tsx:324:17",
+										"data-prohibitions": "[editContent]",
+										className: "space-y-3",
+										children: [
+											"Revise rigorosamente todos os dados do laudo médico antes do envio.",
+											"Capture imagens bem iluminadas e legíveis de atestados.",
+											"Jamais envie atestados com rasuras ou emendas."
+										].map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/components/sections/Updates.tsx:330:21",
+											"data-prohibitions": "[editContent]",
+											className: "flex items-start gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												"data-uid": "src/components/sections/Updates.tsx:331:23",
+												"data-prohibitions": "[editContent]",
+												className: "bg-gold/10 p-1.5 rounded-md shrink-0 mt-0.5",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													"data-uid": "src/components/sections/Updates.tsx:332:25",
+													"data-prohibitions": "[editContent]",
+													className: "text-gold-dark font-bold text-xs",
+													children: ["0", i + 1]
+												})
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												"data-uid": "src/components/sections/Updates.tsx:334:23",
+												"data-prohibitions": "[editContent]",
+												className: "text-sm text-muted-foreground font-medium",
+												children: t
+											})]
+										}, i))
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+										"data-uid": "src/components/sections/Updates.tsx:338:17",
+										"data-prohibitions": "[]",
+										className: "w-full bg-gold hover:bg-gold/90 text-black font-bold h-12 uppercase text-xs shadow-sm mt-4",
+										asChild: true,
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+											"data-uid": "src/components/sections/Updates.tsx:342:19",
+											"data-prohibitions": "[]",
+											href: "https://wa.me/5553981063023",
+											target: "_blank",
+											rel: "noopener noreferrer",
+											children: "Falar com a Equipe"
+										})
+									})]
+								})]
+							})
+						]
+					})
 				})
 			]
 		})
@@ -22883,7 +23184,7 @@ function BpcHero() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							"data-uid": "src/components/bpc-guide/BpcHero.tsx:19:11",
 							"data-prohibitions": "[]",
-							className: "inline-flex items-center gap-2 px-5 py-2 rounded-full bg-amber-100 border border-amber-300 text-amber-800 mb-8 shadow-sm",
+							className: "inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold-dark mb-8 shadow-sm",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
 								"data-uid": "src/components/bpc-guide/BpcHero.tsx:20:13",
 								"data-prohibitions": "[editContent]",
@@ -22892,38 +23193,38 @@ function BpcHero() {
 								"data-uid": "src/components/bpc-guide/BpcHero.tsx:21:13",
 								"data-prohibitions": "[]",
 								className: "text-sm font-bold uppercase tracking-wider",
-								children: "Guia Completo e Definitivo"
+								children: "Guia Informativo"
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-							"data-uid": "src/components/bpc-guide/BpcHero.tsx:26:11",
+							"data-uid": "src/components/bpc-guide/BpcHero.tsx:24:11",
 							"data-prohibitions": "[]",
 							className: "text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900 tracking-tight",
-							children: ["Tudo o que você precisa saber sobre o ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:27:51",
+							children: ["Informações sobre o ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								"data-uid": "src/components/bpc-guide/BpcHero.tsx:25:33",
 								"data-prohibitions": "[]",
-								className: "text-amber-600",
+								className: "text-gold",
 								children: "BPC/LOAS"
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/bpc-guide/BpcHero.tsx:30:11",
+							"data-uid": "src/components/bpc-guide/BpcHero.tsx:28:11",
 							"data-prohibitions": "[]",
 							className: "text-xl text-slate-700 mb-10 max-w-2xl leading-relaxed font-medium",
-							children: "Entenda os requisitos, documentos necessários e como solicitar o benefício no INSS de forma correta para evitar negativas."
+							children: "Entenda os requisitos e regras do Benefício de Prestação Continuada. Conteúdo estritamente informativo para conhecimento dos seus direitos."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/bpc-guide/BpcHero.tsx:35:11",
+							"data-uid": "src/components/bpc-guide/BpcHero.tsx:33:11",
 							"data-prohibitions": "[]",
 							className: "flex flex-col sm:flex-row gap-4",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-								"data-uid": "src/components/bpc-guide/BpcHero.tsx:36:13",
+								"data-uid": "src/components/bpc-guide/BpcHero.tsx:34:13",
 								"data-prohibitions": "[]",
 								size: "lg",
-								className: "bg-amber-600 hover:bg-amber-700 text-white rounded-none px-8 py-6 uppercase tracking-wider font-bold shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5",
+								className: "bg-gold hover:bg-gold-dark text-black rounded-none px-8 py-6 uppercase tracking-wider font-bold shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5",
 								onClick: () => window.open("https://wa.me/5553981063023", "_blank"),
 								children: ["Falar com um Especialista", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-									"data-uid": "src/components/bpc-guide/BpcHero.tsx:42:15",
+									"data-uid": "src/components/bpc-guide/BpcHero.tsx:40:15",
 									"data-prohibitions": "[editContent]",
 									className: "ml-2",
 									size: 20
@@ -22943,7 +23244,7 @@ var characteristics = [
 		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ban, {
 			"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:6:11",
 			"data-prohibitions": "[editContent]",
-			className: "w-10 h-10 text-amber-600 mb-2"
+			className: "w-10 h-10 text-gold mb-2"
 		}),
 		title: "Não é Aposentadoria",
 		desc: "O BPC é um benefício assistencial. Isso significa que não exige que você tenha contribuído para o INSS ao longo da vida para ter direito."
@@ -22952,7 +23253,7 @@ var characteristics = [
 		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleX, {
 			"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:11:11",
 			"data-prohibitions": "[editContent]",
-			className: "w-10 h-10 text-amber-600 mb-2"
+			className: "w-10 h-10 text-gold mb-2"
 		}),
 		title: "Sem 13º Salário",
 		desc: "Diferente das aposentadorias tradicionais, por ser um benefício de natureza assistencial (LOAS), não há o pagamento de gratificação natalina (13º)."
@@ -22961,7 +23262,7 @@ var characteristics = [
 		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
 			"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:16:11",
 			"data-prohibitions": "[editContent]",
-			className: "w-10 h-10 text-amber-600 mb-2"
+			className: "w-10 h-10 text-gold mb-2"
 		}),
 		title: "Sem Pensão por Morte",
 		desc: "O benefício é intransferível. Em caso de falecimento do titular, o pagamento é encerrado e não gera direito a pensão por morte aos dependentes."
@@ -22994,7 +23295,7 @@ function BpcCharacteristics() {
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 									"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:29:31",
 									"data-prohibitions": "[]",
-									className: "text-amber-600",
+									className: "text-gold",
 									children: "Centrais"
 								}),
 								" do Benefício"
@@ -23030,7 +23331,7 @@ function BpcCharacteristics() {
 					children: characteristics.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
 						"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:48:15",
 						"data-prohibitions": "[editContent]",
-						className: "bg-slate-50 border-slate-200 hover:border-amber-300 transition-all duration-300 break-inside-avoid shadow-md hover:shadow-lg transform hover:-translate-y-1",
+						className: "bg-slate-50 border-slate-200 hover:border-gold/50 transition-all duration-300 break-inside-avoid shadow-md hover:shadow-lg transform hover:-translate-y-1",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
 							"data-uid": "src/components/bpc-guide/BpcCharacteristics.tsx:52:17",
 							"data-prohibitions": "[editContent]",
@@ -23107,7 +23408,7 @@ function BpcEligibility() {
 						children: ["Quem tem ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:16:22",
 							"data-prohibitions": "[]",
-							className: "text-amber-600",
+							className: "text-gold",
 							children: "Direito ao BPC?"
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -23124,7 +23425,7 @@ function BpcEligibility() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:26:11",
 						"data-prohibitions": "[]",
-						className: "bg-white rounded-3xl border border-slate-200 overflow-hidden group hover:border-amber-300 transition-colors break-inside-avoid flex flex-col shadow-xl",
+						className: "bg-white rounded-3xl border border-slate-200 overflow-hidden group hover:border-gold/50 transition-colors break-inside-avoid flex flex-col shadow-xl",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:27:13",
 							"data-prohibitions": "[]",
@@ -23149,7 +23450,7 @@ function BpcEligibility() {
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:35:17",
 										"data-prohibitions": "[]",
-										className: "bg-amber-100 p-3 rounded-xl text-amber-700 shadow-sm border border-amber-200",
+										className: "bg-gold/10 p-3 rounded-xl text-gold-dark shadow-sm border border-gold/30",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(UserPlus, {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:36:19",
 											"data-prohibitions": "[editContent]",
@@ -23184,7 +23485,7 @@ function BpcEligibility() {
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:48:19",
 											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"
+											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:49:19",
 											"data-prohibitions": "[]",
@@ -23208,7 +23509,7 @@ function BpcEligibility() {
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:55:19",
 											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"
+											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:56:19",
 											"data-prohibitions": "[]",
@@ -23222,20 +23523,20 @@ function BpcEligibility() {
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:59:19",
 											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"
+											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:60:19",
 											"data-prohibitions": "[]",
 											children: [
-												"Processo mais ágil:",
+												"Processo documental:",
 												" ",
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 													"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:62:21",
 													"data-prohibitions": "[]",
 													className: "text-slate-900",
-													children: "não passa por perícia médica"
+													children: "não exige perícia médica"
 												}),
-												" no INSS."
+												" no INSS para o critério idade."
 											]
 										})]
 									})
@@ -23245,7 +23546,7 @@ function BpcEligibility() {
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:71:11",
 						"data-prohibitions": "[]",
-						className: "bg-white rounded-3xl border border-slate-200 overflow-hidden group hover:border-amber-300 transition-colors break-inside-avoid flex flex-col shadow-xl",
+						className: "bg-white rounded-3xl border border-slate-200 overflow-hidden group hover:border-gold/50 transition-colors break-inside-avoid flex flex-col shadow-xl",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:72:13",
 							"data-prohibitions": "[]",
@@ -23270,7 +23571,7 @@ function BpcEligibility() {
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:80:17",
 										"data-prohibitions": "[]",
-										className: "bg-amber-100 p-3 rounded-xl text-amber-700 shadow-sm border border-amber-200",
+										className: "bg-gold/10 p-3 rounded-xl text-gold-dark shadow-sm border border-gold/30",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:81:19",
 											"data-prohibitions": "[editContent]",
@@ -23305,7 +23606,7 @@ function BpcEligibility() {
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:93:19",
 											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"
+											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:94:19",
 											"data-prohibitions": "[]",
@@ -23328,7 +23629,7 @@ function BpcEligibility() {
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:100:19",
 											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"
+											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:101:19",
 											"data-prohibitions": "[]",
@@ -23341,7 +23642,7 @@ function BpcEligibility() {
 													children: "avaliação biopsicossocial"
 												}),
 												" ",
-												"(perícia médica e social rigorosa)."
+												"(perícia médica e avaliação social)."
 											]
 										})]
 									}),
@@ -23352,7 +23653,7 @@ function BpcEligibility() {
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:107:19",
 											"data-prohibitions": "[]",
-											className: "w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"
+											className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 											"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:108:19",
 											"data-prohibitions": "[]",
@@ -23381,7 +23682,7 @@ function BpcEligibility() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
 								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:121:13",
 								"data-prohibitions": "[editContent]",
-								className: "w-10 h-10 text-amber-600 shrink-0"
+								className: "w-10 h-10 text-gold shrink-0"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:122:13",
@@ -23402,12 +23703,12 @@ function BpcEligibility() {
 						children: requirements.map((req) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:129:15",
 							"data-prohibitions": "[editContent]",
-							className: "bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center hover:border-amber-300 transition-colors",
+							className: "bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center hover:border-gold/50 transition-colors",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:133:17",
 									"data-prohibitions": "[editContent]",
-									className: "w-12 h-12 mx-auto bg-amber-100 rounded-full flex items-center justify-center mb-4 text-amber-700 font-black text-xl",
+									className: "w-12 h-12 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4 text-gold-dark font-black text-xl",
 									children: req.id
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
@@ -23429,7 +23730,7 @@ function BpcEligibility() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:144:9",
 					"data-prohibitions": "[]",
-					className: "bg-white rounded-3xl border border-amber-200 shadow-xl relative overflow-hidden break-inside-avoid flex flex-col md:flex-row",
+					className: "bg-white rounded-3xl border border-gold/30 shadow-xl relative overflow-hidden break-inside-avoid flex flex-col md:flex-row",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:145:11",
 						"data-prohibitions": "[]",
@@ -23461,7 +23762,7 @@ function BpcEligibility() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:155:13",
 								"data-prohibitions": "[]",
-								className: "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 border border-amber-200 text-amber-800 text-sm font-bold mb-6 w-fit shadow-sm",
+								className: "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold-dark text-sm font-bold mb-6 w-fit shadow-sm",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Calculator, {
 									"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:156:15",
 									"data-prohibitions": "[editContent]",
@@ -23482,7 +23783,7 @@ function BpcEligibility() {
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										"data-uid": "src/components/bpc-guide/BpcEligibility.tsx:160:15",
 										"data-prohibitions": "[]",
-										className: "text-amber-600 border-b-2 border-amber-300 pb-1 mt-2 inline-block",
+										className: "text-gold border-b-2 border-gold/50 pb-1 mt-2 inline-block",
 										children: "R$ 379,50"
 									})
 								]
@@ -23532,266 +23833,6 @@ function BpcEligibility() {
 					})]
 				})
 			]
-		})
-	});
-}
-//#endregion
-//#region src/components/bpc-guide/BpcProcess.tsx
-var steps = [
-	{
-		title: "CadÚnico",
-		desc: "Inscreva-se ou atualize o Cadastro Único no CRAS da sua cidade. Este é o passo inicial e obrigatório.",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(UserCheck, {
-			"data-uid": "src/components/bpc-guide/BpcProcess.tsx:7:11",
-			"data-prohibitions": "[editContent]",
-			className: "w-6 h-6"
-		})
-	},
-	{
-		title: "Meu INSS",
-		desc: "Acesse o portal \"Meu INSS\" pelo site ou aplicativo com seu login oficial Gov.br.",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Smartphone, {
-			"data-uid": "src/components/bpc-guide/BpcProcess.tsx:12:11",
-			"data-prohibitions": "[editContent]",
-			className: "w-6 h-6"
-		})
-	},
-	{
-		title: "Solicite Online",
-		desc: "Busque por \"Benefício Assistencial\", preencha os dados e anexe a documentação inicial.",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
-			"data-uid": "src/components/bpc-guide/BpcProcess.tsx:17:11",
-			"data-prohibitions": "[editContent]",
-			className: "w-6 h-6"
-		})
-	},
-	{
-		title: "Perícia (Apenas PcD)",
-		desc: "Agende e compareça à perícia médica e avaliação social na agência do INSS.",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Activity, {
-			"data-uid": "src/components/bpc-guide/BpcProcess.tsx:22:11",
-			"data-prohibitions": "[editContent]",
-			className: "w-6 h-6"
-		})
-	},
-	{
-		title: "Decisão do INSS",
-		desc: "Aguarde a análise. O INSS possui o prazo legal de até 90 dias para concluir o pedido.",
-		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
-			"data-uid": "src/components/bpc-guide/BpcProcess.tsx:27:11",
-			"data-prohibitions": "[editContent]",
-			className: "w-6 h-6"
-		})
-	}
-];
-var docFamilia = [
-	"Documento de identidade (RG, CNH)",
-	"CPF de todos da residência",
-	"Comprovante de residência atual",
-	"Comprovante do CadÚnico",
-	"Certidão de nascimento/casamento",
-	"Carteira de Trabalho (mesmo sem registro)"
-];
-var docPcd = [
-	"Laudos médicos atualizados (com CID legível e histórico)",
-	"Exames médicos comprovando a deficiência ou doença grave",
-	"Receituários de medicamentos de uso contínuo",
-	"Comprovantes de gastos não cobertos pelo SUS (conforme Tema 27 STF)"
-];
-function BpcProcess() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/bpc-guide/BpcProcess.tsx:49:5",
-		"data-prohibitions": "[editContent]",
-		className: "py-24 bg-white border-t border-slate-200",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/bpc-guide/BpcProcess.tsx:50:7",
-			"data-prohibitions": "[editContent]",
-			className: "container mx-auto px-4 md:px-6 max-w-6xl",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcProcess.tsx:51:9",
-				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16 break-inside-avoid",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-					"data-uid": "src/components/bpc-guide/BpcProcess.tsx:52:11",
-					"data-prohibitions": "[]",
-					className: "text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-slate-900 leading-tight tracking-tight",
-					children: ["Passo a Passo da ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/bpc-guide/BpcProcess.tsx:53:30",
-						"data-prohibitions": "[]",
-						className: "text-amber-600",
-						children: "Solicitação"
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/bpc-guide/BpcProcess.tsx:55:11",
-					"data-prohibitions": "[]",
-					className: "text-slate-600 text-lg font-medium",
-					children: "O processo exige organização e atenção aos detalhes. Veja como funciona a jornada completa até a aprovação do seu benefício assistencial."
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcProcess.tsx:61:9",
-				"data-prohibitions": "[editContent]",
-				className: "flex flex-col lg:flex-row gap-12 lg:gap-20",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcProcess.tsx:63:11",
-					"data-prohibitions": "[editContent]",
-					className: "w-full lg:w-5/12 break-inside-avoid pt-4",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcProcess.tsx:64:13",
-						"data-prohibitions": "[editContent]",
-						className: "space-y-10 relative",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/bpc-guide/BpcProcess.tsx:65:15",
-							"data-prohibitions": "[]",
-							className: "absolute left-[27px] top-6 bottom-6 w-0.5 bg-slate-200 z-0 hidden sm:block"
-						}), steps.map((step, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcProcess.tsx:68:17",
-							"data-prohibitions": "[editContent]",
-							className: "relative z-10 flex items-start gap-6 group",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcProcess.tsx:69:19",
-								"data-prohibitions": "[editContent]",
-								className: "w-14 h-14 rounded-full bg-white border-2 border-slate-200 group-hover:border-amber-400 group-hover:bg-amber-50 flex items-center justify-center shrink-0 transition-all duration-300 text-slate-500 group-hover:text-amber-600 shadow-sm",
-								children: step.icon
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcProcess.tsx:72:19",
-								"data-prohibitions": "[editContent]",
-								className: "pt-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:73:21",
-									"data-prohibitions": "[editContent]",
-									className: "text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-700 transition-colors duration-300",
-									children: [
-										idx + 1,
-										". ",
-										step.title
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:76:21",
-									"data-prohibitions": "[editContent]",
-									className: "text-slate-600 text-sm md:text-base leading-relaxed font-medium",
-									children: step.desc
-								})]
-							})]
-						}, idx))]
-					})
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcProcess.tsx:86:11",
-					"data-prohibitions": "[editContent]",
-					className: "w-full lg:w-7/12",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcProcess.tsx:87:13",
-						"data-prohibitions": "[editContent]",
-						className: "bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden shadow-xl sticky top-28 break-inside-avoid",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcProcess.tsx:88:15",
-							"data-prohibitions": "[]",
-							className: "h-48 w-full relative",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:89:17",
-									"data-prohibitions": "[editContent]",
-									src: "https://img.usecurling.com/p/800/400?q=lawyer%20desk%20documents&color=white",
-									alt: "Documentos Legais",
-									className: "w-full h-full object-cover opacity-90"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:94:17",
-									"data-prohibitions": "[]",
-									className: "absolute inset-0 bg-gradient-to-t from-slate-50 via-slate-50/50 to-transparent"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:95:17",
-									"data-prohibitions": "[]",
-									className: "absolute bottom-6 left-8 flex items-center gap-4",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:96:19",
-										"data-prohibitions": "[]",
-										className: "bg-white p-3 rounded-xl border border-amber-200 shadow-sm",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
-											"data-uid": "src/components/bpc-guide/BpcProcess.tsx:97:21",
-											"data-prohibitions": "[editContent]",
-											className: "text-amber-600 w-8 h-8"
-										})
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:99:19",
-										"data-prohibitions": "[]",
-										className: "text-2xl md:text-3xl font-extrabold text-slate-900 shadow-sm",
-										children: "Documentação Necessária"
-									})]
-								})
-							]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/bpc-guide/BpcProcess.tsx:105:15",
-							"data-prohibitions": "[editContent]",
-							className: "p-8 md:p-10 space-y-10",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcProcess.tsx:106:17",
-								"data-prohibitions": "[editContent]",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:107:19",
-									"data-prohibitions": "[]",
-									className: "text-lg font-bold text-amber-700 mb-5 border-b border-slate-200 pb-3 flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:108:21",
-										"data-prohibitions": "[editContent]",
-										className: "w-5 h-5"
-									}), " Requerente e Família"]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:110:19",
-									"data-prohibitions": "[editContent]",
-									className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
-									children: docFamilia.map((doc, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:112:23",
-										"data-prohibitions": "[editContent]",
-										className: "flex items-start gap-3 text-slate-700 text-sm font-semibold",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-											"data-uid": "src/components/bpc-guide/BpcProcess.tsx:116:25",
-											"data-prohibitions": "[editContent]",
-											className: "w-5 h-5 text-emerald-500 shrink-0 mt-0.5"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											"data-uid": "src/components/bpc-guide/BpcProcess.tsx:117:25",
-											"data-prohibitions": "[editContent]",
-											children: doc
-										})]
-									}, idx))
-								})]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcProcess.tsx:123:17",
-								"data-prohibitions": "[editContent]",
-								className: "bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:124:19",
-									"data-prohibitions": "[]",
-									className: "text-lg font-bold text-amber-700 mb-5 flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:125:21",
-										"data-prohibitions": "[editContent]",
-										className: "w-5 h-5"
-									}), " Documentos Específicos para PcD"]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-									"data-uid": "src/components/bpc-guide/BpcProcess.tsx:127:19",
-									"data-prohibitions": "[editContent]",
-									className: "space-y-4",
-									children: docPcd.map((doc, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										"data-uid": "src/components/bpc-guide/BpcProcess.tsx:129:23",
-										"data-prohibitions": "[editContent]",
-										className: "flex items-start gap-3 text-slate-700 text-sm md:text-base font-semibold",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-											"data-uid": "src/components/bpc-guide/BpcProcess.tsx:133:25",
-											"data-prohibitions": "[editContent]",
-											className: "w-5 h-5 text-emerald-500 shrink-0 mt-0.5"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											"data-uid": "src/components/bpc-guide/BpcProcess.tsx:134:25",
-											"data-prohibitions": "[editContent]",
-											children: doc
-										})]
-									}, idx))
-								})]
-							})]
-						})]
-					})
-				})]
-			})]
 		})
 	});
 }
@@ -23888,7 +23929,7 @@ function BpcTable() {
 					children: ["Comparativo ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						"data-uid": "src/components/bpc-guide/BpcTable.tsx:17:25",
 						"data-prohibitions": "[]",
-						className: "text-amber-600",
+						className: "text-gold",
 						children: "Técnico"
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -23920,7 +23961,7 @@ function BpcTable() {
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
 										"data-uid": "src/components/bpc-guide/BpcTable.tsx:30:19",
 										"data-prohibitions": "[]",
-										className: "text-amber-700 font-black text-lg w-[20%] py-6 px-6",
+										className: "text-gold-dark font-black text-lg w-[20%] py-6 px-6",
 										children: "Requisito"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
@@ -23975,19 +24016,19 @@ function BpcTable() {
 											"data-uid": "src/components/bpc-guide/BpcTable.tsx:54:19",
 											"data-prohibitions": "[]",
 											className: "font-bold text-slate-900 px-6 py-6 text-base",
-											children: "Perícia"
+											children: "Avaliação"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
 											"data-uid": "src/components/bpc-guide/BpcTable.tsx:57:19",
 											"data-prohibitions": "[]",
 											className: "text-slate-700 px-6 py-6 border-l border-slate-200 font-medium",
-											children: "Não"
+											children: "Apenas Documental"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
 											"data-uid": "src/components/bpc-guide/BpcTable.tsx:60:19",
 											"data-prohibitions": "[]",
 											className: "text-slate-700 px-6 py-6 border-l border-slate-200 font-medium",
-											children: "Sim (Avaliação biopsicossocial)"
+											children: "Avaliação Biopsicossocial"
 										})
 									]
 								}),
@@ -24087,7 +24128,7 @@ function BpcTable() {
 											"data-uid": "src/components/bpc-guide/BpcTable.tsx:104:19",
 											"data-prohibitions": "[]",
 											className: "text-slate-700 px-6 py-6 border-l border-slate-200 font-medium",
-											children: "A cada 2 anos (CadÚnico e Nova Perícia)"
+											children: "A cada 2 anos (CadÚnico e Nova Avaliação)"
 										})
 									]
 								})
@@ -24101,7 +24142,7 @@ function BpcTable() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, {
 						"data-uid": "src/components/bpc-guide/BpcTable.tsx:112:13",
 						"data-prohibitions": "[editContent]",
-						className: "w-4 h-4 text-amber-600 shrink-0"
+						className: "w-4 h-4 text-gold shrink-0"
 					}), "Esta tabela técnica reflete rigorosamente a legislação previdenciária vigente em 2026."]
 				})]
 			})]
@@ -24133,7 +24174,7 @@ var faqs = [
 	},
 	{
 		q: "O benefício precisa ser renovado?",
-		a: "Sim, o BPC passa por revisão a cada 2 anos. É obrigatório manter o CadÚnico atualizado e, no caso da pessoa com deficiência, pode ser necessária uma nova perícia médica para comprovar a continuidade do impedimento."
+		a: "Sim, o BPC passa por revisão a cada 2 anos. É obrigatório manter o CadÚnico atualizado e, no caso da pessoa com deficiência, pode ser necessária uma nova avaliação para comprovar a continuidade do impedimento."
 	},
 	{
 		q: "O BPC permite consignado?",
@@ -24165,11 +24206,11 @@ function BpcFAQ() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:48:15",
 								"data-prohibitions": "[]",
-								className: "w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mb-6 border border-amber-200 shadow-sm",
+								className: "w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 border border-gold/30 shadow-sm",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, {
 									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:49:17",
 									"data-prohibitions": "[editContent]",
-									className: "h-8 w-8 text-amber-700"
+									className: "h-8 w-8 text-gold-dark"
 								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
@@ -24179,7 +24220,7 @@ function BpcFAQ() {
 								children: ["Perguntas ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:52:27",
 									"data-prohibitions": "[]",
-									className: "text-amber-600",
+									className: "text-gold",
 									children: "Frequentes"
 								})]
 							}),
@@ -24217,7 +24258,7 @@ function BpcFAQ() {
 										"data-prohibitions": "[]",
 										className: "text-sm text-slate-600 mb-8 leading-relaxed font-medium",
 										children: [
-											"A avaliação técnica do seu caso pode identificar direitos que muitas vezes são negados injustamente pelo INSS. Fale conosco pelo WhatsApp",
+											"A avaliação técnica do seu caso pode identificar direitos que muitas vezes são negados pelo INSS. Fale conosco pelo WhatsApp",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:71:19",
@@ -24231,7 +24272,7 @@ function BpcFAQ() {
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:73:17",
 										"data-prohibitions": "[]",
-										className: "w-full bg-amber-600 text-white hover:bg-amber-700 font-bold h-14 rounded-xl shadow-md hover:shadow-lg transition-all duration-300",
+										className: "w-full bg-gold text-black hover:bg-gold-dark font-bold h-14 rounded-xl shadow-md hover:shadow-lg transition-all duration-300",
 										asChild: true,
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:77:19",
@@ -24265,11 +24306,11 @@ function BpcFAQ() {
 							"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:97:17",
 							"data-prohibitions": "[editContent]",
 							value: `faq-${index}`,
-							className: "bg-white border border-slate-200 rounded-2xl px-6 md:px-8 data-[state=open]:border-amber-400 transition-colors break-inside-avoid shadow-sm overflow-hidden",
+							className: "bg-white border border-slate-200 rounded-2xl px-6 md:px-8 data-[state=open]:border-gold transition-colors break-inside-avoid shadow-sm overflow-hidden",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
 								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:102:19",
 								"data-prohibitions": "[editContent]",
-								className: "text-left text-lg md:text-xl font-bold text-slate-900 hover:text-amber-700 hover:no-underline py-6",
+								className: "text-left text-lg md:text-xl font-bold text-slate-900 hover:text-gold-dark hover:no-underline py-6",
 								children: faq.q
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
 								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:105:19",
@@ -24291,70 +24332,66 @@ function BpcGuide() {
 		window.scrollTo(0, 0);
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		"data-uid": "src/pages/BpcGuide.tsx:17:5",
+		"data-uid": "src/pages/BpcGuide.tsx:16:5",
 		"data-prohibitions": "[]",
-		className: "bg-slate-50 text-slate-900 font-sans selection:bg-amber-600/30",
+		className: "bg-slate-50 text-slate-900 font-sans selection:bg-gold/30",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
-			"data-uid": "src/pages/BpcGuide.tsx:18:7",
+			"data-uid": "src/pages/BpcGuide.tsx:17:7",
 			"data-prohibitions": "[]",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcHero, {
-					"data-uid": "src/pages/BpcGuide.tsx:19:9",
+					"data-uid": "src/pages/BpcGuide.tsx:18:9",
 					"data-prohibitions": "[editContent]"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcCharacteristics, {
-					"data-uid": "src/pages/BpcGuide.tsx:20:9",
+					"data-uid": "src/pages/BpcGuide.tsx:19:9",
 					"data-prohibitions": "[editContent]"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcEligibility, {
-					"data-uid": "src/pages/BpcGuide.tsx:21:9",
-					"data-prohibitions": "[editContent]"
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcProcess, {
-					"data-uid": "src/pages/BpcGuide.tsx:22:9",
+					"data-uid": "src/pages/BpcGuide.tsx:20:9",
 					"data-prohibitions": "[editContent]"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcTable, {
-					"data-uid": "src/pages/BpcGuide.tsx:23:9",
+					"data-uid": "src/pages/BpcGuide.tsx:21:9",
 					"data-prohibitions": "[editContent]"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcFAQ, {
-					"data-uid": "src/pages/BpcGuide.tsx:24:9",
+					"data-uid": "src/pages/BpcGuide.tsx:22:9",
 					"data-prohibitions": "[editContent]"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-					"data-uid": "src/pages/BpcGuide.tsx:26:9",
+					"data-uid": "src/pages/BpcGuide.tsx:24:9",
 					"data-prohibitions": "[]",
 					className: "py-20 bg-white border-t border-slate-200",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/pages/BpcGuide.tsx:27:11",
+						"data-uid": "src/pages/BpcGuide.tsx:25:11",
 						"data-prohibitions": "[]",
 						className: "container mx-auto px-4 md:px-6 max-w-4xl",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/pages/BpcGuide.tsx:28:13",
+							"data-uid": "src/pages/BpcGuide.tsx:26:13",
 							"data-prohibitions": "[]",
 							className: "text-center bg-slate-50 border border-slate-200 p-10 rounded-3xl shadow-sm",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									"data-uid": "src/pages/BpcGuide.tsx:29:15",
+									"data-uid": "src/pages/BpcGuide.tsx:27:15",
 									"data-prohibitions": "[]",
 									className: "text-2xl font-bold text-slate-900 mb-4",
 									children: "Seu pedido foi negado?"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/pages/BpcGuide.tsx:30:15",
+									"data-uid": "src/pages/BpcGuide.tsx:28:15",
 									"data-prohibitions": "[]",
 									className: "text-slate-600 mb-8 max-w-2xl mx-auto font-medium text-lg",
-									children: "Milhares de benefícios são negados injustamente pelo INSS todos os dias por detalhes documentais ou avaliações periciais equivocadas. Nós podemos reverter isso na justiça."
+									children: "Muitos benefícios são negados pelo INSS por detalhes documentais ou avaliações periciais. É possível buscar a reversão judicial com análise técnica especializada."
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-									"data-uid": "src/pages/BpcGuide.tsx:35:15",
+									"data-uid": "src/pages/BpcGuide.tsx:32:15",
 									"data-prohibitions": "[]",
 									size: "lg",
-									className: "bg-amber-600 hover:bg-amber-700 text-white rounded-none px-8 py-6 uppercase tracking-wider font-bold shadow-md transition-all hover:-translate-y-1 hover:shadow-lg",
+									className: "bg-gold hover:bg-gold-dark text-black rounded-none px-8 py-6 uppercase tracking-wider font-bold shadow-md transition-all hover:-translate-y-1 hover:shadow-lg",
 									onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20meu%20benefício%20foi%20negado,%20gostaria%20de%20ajuda.", "_blank"),
-									children: ["Avaliar Meu Caso Gratuitamente", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-										"data-uid": "src/pages/BpcGuide.tsx:46:17",
+									children: ["Avaliar Meu Caso", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+										"data-uid": "src/pages/BpcGuide.tsx:43:17",
 										"data-prohibitions": "[editContent]",
 										className: "ml-2",
 										size: 20
@@ -24585,7 +24622,7 @@ var DismissableLayer = import_react.forwardRef((props, forwardedRef) => {
 		document.addEventListener(CONTEXT_UPDATE, handleUpdate);
 		return () => document.removeEventListener(CONTEXT_UPDATE, handleUpdate);
 	}, []);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
 		...layerProps,
 		ref: composedRefs,
 		style: {
@@ -24612,7 +24649,7 @@ var DismissableLayerBranch = import_react.forwardRef((props, forwardedRef) => {
 			};
 		}
 	}, [context.branches]);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
 		...props,
 		ref: composedRefs
 	});
@@ -24688,7 +24725,7 @@ var Portal = import_react.forwardRef((props, forwardedRef) => {
 	const [mounted, setMounted] = import_react.useState(false);
 	useLayoutEffect2(() => setMounted(true), []);
 	const container = containerProp || mounted && globalThis?.document?.body;
-	return container ? import_react_dom.createPortal(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
+	return container ? import_react_dom.createPortal(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
 		...portalProps,
 		ref: forwardedRef
 	}), container) : null;
@@ -24710,7 +24747,7 @@ var VISUALLY_HIDDEN_STYLES = Object.freeze({
 });
 var NAME = "VisuallyHidden";
 var VisuallyHidden = import_react.forwardRef((props, forwardedRef) => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.span, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.span, {
 		...props,
 		ref: forwardedRef,
 		style: {
@@ -24860,7 +24897,7 @@ var ToastViewport$1 = import_react.forwardRef((props, forwardedRef) => {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection.Slot, {
 				scope: __scopeToast,
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.ol, {
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.ol, {
 					tabIndex: -1,
 					...viewportProps,
 					ref: composedRefs
@@ -25025,7 +25062,7 @@ var ToastImpl = import_react.forwardRef((props, forwardedRef) => {
 					if (!context.isFocusedToastEscapeKeyDownRef.current) handleClose();
 					context.isFocusedToastEscapeKeyDownRef.current = false;
 				}),
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.li, {
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.li, {
 					tabIndex: 0,
 					"data-state": open ? "open" : "closed",
 					"data-swipe-direction": context.swipeDirection,
@@ -25125,7 +25162,7 @@ var ToastAnnounce = (props) => {
 var TITLE_NAME = "ToastTitle";
 var ToastTitle$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeToast, ...titleProps } = props;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
 		...titleProps,
 		ref: forwardedRef
 	});
@@ -25134,7 +25171,7 @@ ToastTitle$1.displayName = TITLE_NAME;
 var DESCRIPTION_NAME = "ToastDescription";
 var ToastDescription$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeToast, ...descriptionProps } = props;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
 		...descriptionProps,
 		ref: forwardedRef
 	});
@@ -25163,7 +25200,7 @@ var ToastClose$1 = import_react.forwardRef((props, forwardedRef) => {
 	const interactiveContext = useToastInteractiveContext(CLOSE_NAME, __scopeToast);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastAnnounceExclude, {
 		asChild: true,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.button, {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.button, {
 			type: "button",
 			...closeProps,
 			ref: forwardedRef,
@@ -25174,7 +25211,7 @@ var ToastClose$1 = import_react.forwardRef((props, forwardedRef) => {
 ToastClose$1.displayName = CLOSE_NAME;
 var ToastAnnounceExclude = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeToast, altText, ...announceExcludeProps } = props;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
 		"data-radix-toast-announce-exclude": "",
 		"data-radix-toast-announce-alt": altText || void 0,
 		...announceExcludeProps,
@@ -26382,4 +26419,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-B2hmXC1q.js.map
+//# sourceMappingURL=index-CRi3CeUU.js.map

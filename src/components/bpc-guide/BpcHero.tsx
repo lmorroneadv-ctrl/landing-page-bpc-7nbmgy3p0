@@ -16,26 +16,24 @@ export function BpcHero() {
             className="h-24 md:h-32 mb-8 object-contain drop-shadow-sm"
           />
 
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-amber-100 border border-amber-300 text-amber-800 mb-8 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold-dark mb-8 shadow-sm">
             <FileText size={18} />
-            <span className="text-sm font-bold uppercase tracking-wider">
-              Guia Completo e Definitivo
-            </span>
+            <span className="text-sm font-bold uppercase tracking-wider">Guia Informativo</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900 tracking-tight">
-            Tudo o que você precisa saber sobre o <span className="text-amber-600">BPC/LOAS</span>
+            Informações sobre o <span className="text-gold">BPC/LOAS</span>
           </h1>
 
           <p className="text-xl text-slate-700 mb-10 max-w-2xl leading-relaxed font-medium">
-            Entenda os requisitos, documentos necessários e como solicitar o benefício no INSS de
-            forma correta para evitar negativas.
+            Entenda os requisitos e regras do Benefício de Prestação Continuada. Conteúdo
+            estritamente informativo para conhecimento dos seus direitos.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-amber-600 hover:bg-amber-700 text-white rounded-none px-8 py-6 uppercase tracking-wider font-bold shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
+              className="bg-gold hover:bg-gold-dark text-black rounded-none px-8 py-6 uppercase tracking-wider font-bold shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
               onClick={() => window.open('https://wa.me/5553981063023', '_blank')}
             >
               Falar com um Especialista

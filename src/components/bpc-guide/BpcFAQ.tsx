@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: 'O benefício precisa ser renovado?',
-    a: 'Sim, o BPC passa por revisão a cada 2 anos. É obrigatório manter o CadÚnico atualizado e, no caso da pessoa com deficiência, pode ser necessária uma nova perícia médica para comprovar a continuidade do impedimento.',
+    a: 'Sim, o BPC passa por revisão a cada 2 anos. É obrigatório manter o CadÚnico atualizado e, no caso da pessoa com deficiência, pode ser necessária uma nova avaliação para comprovar a continuidade do impedimento.',
   },
   {
     q: 'O BPC permite consignado?',
@@ -45,11 +45,11 @@ export default function BpcFAQ() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="w-full lg:w-5/12 break-inside-avoid">
             <div className="sticky top-28">
-              <div className="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mb-6 border border-amber-200 shadow-sm">
-                <HelpCircle className="h-8 w-8 text-amber-700" />
+              <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 border border-gold/30 shadow-sm">
+                <HelpCircle className="h-8 w-8 text-gold-dark" />
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-slate-900 leading-tight tracking-tight">
-                Perguntas <span className="text-amber-600">Frequentes</span>
+                Perguntas <span className="text-gold">Frequentes</span>
               </h2>
               <p className="text-slate-600 text-lg mb-10 leading-relaxed font-medium">
                 Esclareça rapidamente suas dúvidas sobre as regras aplicáveis em 2026.
@@ -67,11 +67,11 @@ export default function BpcFAQ() {
                 <h4 className="text-slate-900 font-bold mb-3 text-xl">Dúvidas Específicas?</h4>
                 <p className="text-sm text-slate-600 mb-8 leading-relaxed font-medium">
                   A avaliação técnica do seu caso pode identificar direitos que muitas vezes são
-                  negados injustamente pelo INSS. Fale conosco pelo WhatsApp{' '}
+                  negados pelo INSS. Fale conosco pelo WhatsApp{' '}
                   <strong className="text-slate-800">55 53 981063023</strong>.
                 </p>
                 <Button
-                  className="w-full bg-amber-600 text-white hover:bg-amber-700 font-bold h-14 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                  className="w-full bg-gold text-black hover:bg-gold-dark font-bold h-14 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
                   asChild
                 >
                   <a
@@ -97,9 +97,9 @@ export default function BpcFAQ() {
                 <AccordionItem
                   key={index}
                   value={`faq-${index}`}
-                  className="bg-white border border-slate-200 rounded-2xl px-6 md:px-8 data-[state=open]:border-amber-400 transition-colors break-inside-avoid shadow-sm overflow-hidden"
+                  className="bg-white border border-slate-200 rounded-2xl px-6 md:px-8 data-[state=open]:border-gold transition-colors break-inside-avoid shadow-sm overflow-hidden"
                 >
-                  <AccordionTrigger className="text-left text-lg md:text-xl font-bold text-slate-900 hover:text-amber-700 hover:no-underline py-6">
+                  <AccordionTrigger className="text-left text-lg md:text-xl font-bold text-slate-900 hover:text-gold-dark hover:no-underline py-6">
                     {faq.q}
                   </AccordionTrigger>
                   <AccordionContent className="text-slate-600 leading-relaxed text-base pb-8 pt-2 block border-t border-slate-100 mt-2 font-medium">

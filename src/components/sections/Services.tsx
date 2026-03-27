@@ -1,4 +1,10 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { CheckCircle2, Scale, Clock, Users, ShieldAlert, Tractor, Activity } from 'lucide-react'
 
@@ -79,7 +85,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -114,6 +120,48 @@ export function Services() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="md:hidden">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {services.map((service, index) => (
+              <AccordionItem
+                key={index}
+                value={`service-${index}`}
+                className="bg-card border border-border rounded-lg px-6 data-[state=open]:border-gold shadow-sm transition-colors"
+              >
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-gold-dark hover:no-underline py-4 text-foreground">
+                  <div className="flex items-center gap-3">
+                    <div className="shrink-0">{service.icon}</div>
+                    {service.title}
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pb-6 pt-2">
+                  <ul className="space-y-3 mb-6">
+                    {service.items.map((item, idx) => (
+                      <li key={idx} className="flex items-start text-muted-foreground font-medium">
+                        <CheckCircle2 className="h-5 w-5 text-gold mr-3 shrink-0 mt-0.5" />
+                        <span className="text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    variant="outline"
+                    className="w-full border-gold-dark text-gold-dark hover:bg-gold hover:text-black hover:border-gold transition-colors font-semibold"
+                    asChild
+                  >
+                    <a
+                      href={`https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(service.title)}.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Solicitar Análise
+                    </a>
+                  </Button>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

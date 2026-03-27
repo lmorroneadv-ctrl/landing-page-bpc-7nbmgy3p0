@@ -33,7 +33,7 @@ export function Ebook() {
               <div className="relative z-20 flex flex-col items-center h-full w-full">
                 <BookOpen className="w-12 h-12 sm:w-16 sm:h-16 text-gold mb-6 mt-4 group-hover:scale-110 transition-transform duration-500" />
                 <h3 className="text-sm sm:text-base font-bold text-white mb-2 uppercase tracking-widest text-gold/80">
-                  Guia Gratuito
+                  Guia Informativo
                 </h3>
                 <h4 className="text-2xl sm:text-3xl font-black text-white mb-4 leading-tight">
                   TUDO SOBRE
@@ -53,27 +53,29 @@ export function Ebook() {
           {/* Content and Form */}
           <div className="w-full lg:w-7/12 max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Acesse nosso Guia Gratuito: <br className="hidden md:block" />
-              <span className="text-gold-dark">Tudo sobre BPC/LOAS</span>
+              Acesse nosso Guia Informativo: <br className="hidden md:block" />
+              <span className="text-gold-dark">Informações sobre BPC/LOAS</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 font-medium">
-              Entenda seus direitos e aprenda como solicitar o benefício de forma correta com o
-              nosso conteúdo exclusivo e detalhado.
+              Entenda seus direitos com o nosso conteúdo exclusivo e detalhado de forma estritamente
+              informativa.
             </p>
 
             <div className="mb-8 space-y-3">
-              {['Requisitos atualizados', 'Documentação necessária', 'Erros comuns no pedido'].map(
-                (benefit, idx) => (
-                  <div key={idx} className="flex items-center">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3">
-                      <Check className="h-3.5 w-3.5 text-gold-dark" />
-                    </div>
-                    <span className="text-foreground font-medium text-base md:text-lg">
-                      {benefit}
-                    </span>
+              {[
+                'Requisitos atualizados',
+                'Regras do benefício',
+                'Informações de elegibilidade',
+              ].map((benefit, idx) => (
+                <div key={idx} className="flex items-center">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3">
+                    <Check className="h-3.5 w-3.5 text-gold-dark" />
                   </div>
-                ),
-              )}
+                  <span className="text-foreground font-medium text-base md:text-lg">
+                    {benefit}
+                  </span>
+                </div>
+              ))}
             </div>
 
             {!isSubmitted ? (
@@ -111,7 +113,7 @@ export function Ebook() {
                   type="submit"
                   className="w-full bg-gold hover:bg-gold/90 text-black font-bold h-14 mt-4 transition-all duration-300 shadow-md text-sm sm:text-base"
                 >
-                  QUERO ACESSAR O GUIA AGORA
+                  ACESSAR O GUIA AGORA
                 </Button>
               </form>
             ) : (
