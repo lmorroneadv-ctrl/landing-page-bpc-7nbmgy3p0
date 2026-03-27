@@ -9,6 +9,10 @@ import { Button } from '@/components/ui/button'
 
 const faqs = [
   {
+    q: 'Estrangeiros podem receber o BPC?',
+    a: 'Sim. Estrangeiros residentes no Brasil têm direito ao BPC/LOAS, desde que preencham os mesmos requisitos exigidos para os brasileiros (idade ou deficiência e baixa renda).',
+  },
+  {
     q: 'Posso trabalhar enquanto recebo BPC?',
     a: 'Regra geral não, o benefício é suspenso se o titular começar a trabalhar com carteira assinada. A exceção é o contrato de aprendizagem (jovem aprendiz). Para PcD, existe também a possibilidade do Auxílio-Inclusão caso consiga emprego.',
   },

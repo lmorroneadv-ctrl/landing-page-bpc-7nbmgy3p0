@@ -1,7 +1,7 @@
 import { Users, UserPlus, Calculator, Scale, HeartPulse } from 'lucide-react'
 
 const requirements = [
-  { id: 1, title: 'Nacionalidade', desc: 'Brasileiro nato, naturalizado ou português regular.' },
+  { id: 1, title: 'Nacionalidade', desc: 'Brasileiros ou estrangeiros residentes no Brasil.' },
   { id: 2, title: 'Condição', desc: 'Idade 65+ anos ou impedimento de longo prazo (PcD).' },
   { id: 3, title: 'Renda', desc: 'Critério de miserabilidade no CadÚnico atualizado.' },
   { id: 4, title: 'Não Acúmulo', desc: 'Não receber outro benefício da seguridade social.' },

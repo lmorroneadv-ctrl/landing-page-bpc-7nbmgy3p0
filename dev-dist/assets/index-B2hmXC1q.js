@@ -23068,7 +23068,7 @@ var requirements = [
 	{
 		id: 1,
 		title: "Nacionalidade",
-		desc: "Brasileiro nato, naturalizado ou português regular."
+		desc: "Brasileiros ou estrangeiros residentes no Brasil."
 	},
 	{
 		id: 2,
@@ -24112,6 +24112,10 @@ function BpcTable() {
 //#region src/components/bpc-guide/BpcFAQ.tsx
 var faqs = [
 	{
+		q: "Estrangeiros podem receber o BPC?",
+		a: "Sim. Estrangeiros residentes no Brasil têm direito ao BPC/LOAS, desde que preencham os mesmos requisitos exigidos para os brasileiros (idade ou deficiência e baixa renda)."
+	},
+	{
 		q: "Posso trabalhar enquanto recebo BPC?",
 		a: "Regra geral não, o benefício é suspenso se o titular começar a trabalhar com carteira assinada. A exceção é o contrato de aprendizagem (jovem aprendiz). Para PcD, existe também a possibilidade do Auxílio-Inclusão caso consiga emprego."
 	},
@@ -24138,64 +24142,64 @@ var faqs = [
 ];
 function BpcFAQ() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:39:5",
+		"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:43:5",
 		"data-prohibitions": "[editContent]",
 		className: "py-24 bg-white border-t border-slate-200",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:40:7",
+			"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:44:7",
 			"data-prohibitions": "[editContent]",
 			className: "container mx-auto px-4 md:px-6 max-w-6xl",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:41:9",
+				"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:45:9",
 				"data-prohibitions": "[editContent]",
 				className: "flex flex-col lg:flex-row gap-12 lg:gap-16",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:42:11",
+					"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:46:11",
 					"data-prohibitions": "[]",
 					className: "w-full lg:w-5/12 break-inside-avoid",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:43:13",
+						"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:47:13",
 						"data-prohibitions": "[]",
 						className: "sticky top-28",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:44:15",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:48:15",
 								"data-prohibitions": "[]",
 								className: "w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mb-6 border border-amber-200 shadow-sm",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, {
-									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:45:17",
+									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:49:17",
 									"data-prohibitions": "[editContent]",
 									className: "h-8 w-8 text-amber-700"
 								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:47:15",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:51:15",
 								"data-prohibitions": "[]",
 								className: "text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-slate-900 leading-tight tracking-tight",
 								children: ["Perguntas ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:48:27",
+									"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:52:27",
 									"data-prohibitions": "[]",
 									className: "text-amber-600",
 									children: "Frequentes"
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:50:15",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:54:15",
 								"data-prohibitions": "[]",
 								className: "text-slate-600 text-lg mb-10 leading-relaxed font-medium",
 								children: "Esclareça rapidamente suas dúvidas sobre as regras aplicáveis em 2026."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:54:15",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:58:15",
 								"data-prohibitions": "[]",
 								className: "bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-200 shadow-md",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:55:17",
+										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:59:17",
 										"data-prohibitions": "[]",
 										className: "h-32 w-full mb-6 rounded-xl overflow-hidden relative",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:56:19",
+											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:60:19",
 											"data-prohibitions": "[editContent]",
 											src: "https://img.usecurling.com/p/600/300?q=consultation%20lawyer&color=white",
 											alt: "Atendimento Especializado",
@@ -24203,20 +24207,20 @@ function BpcFAQ() {
 										})
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:63:17",
+										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:67:17",
 										"data-prohibitions": "[]",
 										className: "text-slate-900 font-bold mb-3 text-xl",
 										children: "Dúvidas Específicas?"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:64:17",
+										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:68:17",
 										"data-prohibitions": "[]",
 										className: "text-sm text-slate-600 mb-8 leading-relaxed font-medium",
 										children: [
 											"A avaliação técnica do seu caso pode identificar direitos que muitas vezes são negados injustamente pelo INSS. Fale conosco pelo WhatsApp",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:67:19",
+												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:71:19",
 												"data-prohibitions": "[]",
 												className: "text-slate-800",
 												children: "55 53 981063023"
@@ -24225,18 +24229,18 @@ function BpcFAQ() {
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:69:17",
+										"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:73:17",
 										"data-prohibitions": "[]",
 										className: "w-full bg-amber-600 text-white hover:bg-amber-700 font-bold h-14 rounded-xl shadow-md hover:shadow-lg transition-all duration-300",
 										asChild: true,
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:73:19",
+											"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:77:19",
 											"data-prohibitions": "[]",
 											href: "https://wa.me/5553981063023?text=Olá,%20li%20o%20guia%20do%20BPC%20e%20gostaria%20de%20uma%20análise%20do%20meu%20caso.",
 											target: "_blank",
 											rel: "noopener noreferrer",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PhoneCall, {
-												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:78:21",
+												"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:82:21",
 												"data-prohibitions": "[editContent]",
 												className: "mr-2 h-5 w-5"
 											}), " Falar no WhatsApp"]
@@ -24247,28 +24251,28 @@ function BpcFAQ() {
 						]
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:85:11",
+					"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:89:11",
 					"data-prohibitions": "[editContent]",
 					className: "w-full lg:w-7/12 pt-4",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-						"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:86:13",
+						"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:90:13",
 						"data-prohibitions": "[editContent]",
 						type: "single",
 						collapsible: true,
 						defaultValue: "faq-0",
 						className: "w-full space-y-4 md:space-y-6",
 						children: faqs.map((faq, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-							"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:93:17",
+							"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:97:17",
 							"data-prohibitions": "[editContent]",
 							value: `faq-${index}`,
 							className: "bg-white border border-slate-200 rounded-2xl px-6 md:px-8 data-[state=open]:border-amber-400 transition-colors break-inside-avoid shadow-sm overflow-hidden",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:98:19",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:102:19",
 								"data-prohibitions": "[editContent]",
 								className: "text-left text-lg md:text-xl font-bold text-slate-900 hover:text-amber-700 hover:no-underline py-6",
 								children: faq.q
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:101:19",
+								"data-uid": "src/components/bpc-guide/BpcFAQ.tsx:105:19",
 								"data-prohibitions": "[editContent]",
 								className: "text-slate-600 leading-relaxed text-base pb-8 pt-2 block border-t border-slate-100 mt-2 font-medium",
 								children: faq.a
@@ -26378,4 +26382,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-aoFerJl-.js.map
+//# sourceMappingURL=index-B2hmXC1q.js.map
