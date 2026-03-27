@@ -23,9 +23,9 @@ const faqs = [
       'A negativa administrativa (indeferimento) não é o fim da linha. É possível interpor um Recurso Administrativo no próprio INSS ou ingressar com uma Ação Judicial Federal. A escolha da melhor via depende da análise técnica dos motivos da negativa e da documentação disponível.',
   },
   {
-    question: 'Quais são os requisitos exatos para o BPC/LOAS?',
+    question: 'Quem tem direito ao BPC/LOAS?',
     answer:
-      'O BPC exige a comprovação de dois requisitos principais: 1) Ser idoso (65 anos ou mais) ou pessoa com deficiência (de qualquer idade) que apresente impedimentos de longo prazo; 2) Comprovar estado de miserabilidade, objetivamente definido como renda familiar per capita igual ou inferior a 1/4 do salário mínimo.',
+      'Para ter direito ao BPC/LOAS, é necessário comprovar dois requisitos principais: 1) Ser idoso (65 anos ou mais) ou pessoa com deficiência (de qualquer idade) que apresente impedimentos de longo prazo; 2) Comprovar estado de vulnerabilidade socioeconômica, com renda familiar per capita igual ou inferior a 1/4 do salário mínimo. Não é exigido ter contribuído para o INSS.',
   },
   {
     question: 'Qual é o papel do advogado no processo previdenciário?',

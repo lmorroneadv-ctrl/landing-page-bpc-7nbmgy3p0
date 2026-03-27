@@ -10,7 +10,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/80 via-[#111111]/90 to-[#111111] z-10" />
         <img
           src="https://img.usecurling.com/p/1920/1080?q=law%20office&color=black"
-          alt="Escritório de Advocacia"
+          alt="Advogado Previdenciário atendendo cliente no escritório"
           className="w-full h-full object-cover opacity-30"
         />
       </div>

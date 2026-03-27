@@ -12,7 +12,7 @@ export function BpcHero() {
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <img
             src={logoUrl}
-            alt="Lucas Morrone Logo"
+            alt="Logotipo Lucas Morrone Advocacia"
             className="h-28 md:h-36 mb-8 object-contain"
           />
 

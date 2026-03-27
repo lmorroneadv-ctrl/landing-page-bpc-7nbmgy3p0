@@ -14,7 +14,7 @@ export default function BpcGuide() {
         <section className="py-20 bg-zinc-900">
           <div className="container mx-auto px-4 md:px-6 max-w-4xl">
             <h2 className="text-3xl font-bold mb-10 text-white border-b border-gray-800 pb-4">
-              O que é o BPC/LOAS?
+              O que é o BPC/LOAS e quem tem direito?
             </h2>
             <div className="prose prose-invert prose-lg max-w-none">
               <p className="text-gray-300 leading-relaxed">
@@ -33,7 +33,7 @@ export default function BpcGuide() {
             </div>
 
             <h2 className="text-3xl font-bold mb-10 text-white mt-16 border-b border-gray-800 pb-4">
-              Requisitos Básicos
+              Quem tem direito ao LOAS em 2026?
             </h2>
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <div className="bg-black p-8 border border-gray-800">

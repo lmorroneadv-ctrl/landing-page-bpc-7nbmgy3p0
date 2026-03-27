@@ -71,15 +71,19 @@ export function Updates() {
                 <div className="bg-gold/10 p-3 rounded-lg">
                   <FileText className="h-6 w-6 text-gold" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">Guia Detalhado: AtestMed 2026</h3>
+                <h3 className="text-2xl font-bold text-white">
+                  Como pedir AtestMed pelo INSS em 2026?
+                </h3>
               </div>
               <div className="bg-[#1A1A1A] rounded-xl p-6 border border-border/50 shadow-soft">
                 <p className="text-foreground/80 mb-6">
-                  O sistema de análise documental remota passou por atualizações regidas pela{' '}
+                  Para pedir o <strong>AtestMed pelo INSS em 2026</strong>, você deve acessar o
+                  aplicativo ou site <strong>Meu INSS</strong>, ou ligar para a central 135. O
+                  sistema de análise documental remota foi atualizado pela{' '}
                   <strong>Lei 15.265/2025</strong> e{' '}
-                  <strong>Portaria Conjunta MPS/INSS nº 13/2026</strong>. O novo modelo viabiliza
-                  benefícios por incapacidade por <strong>até 90 dias</strong> sem perícia
-                  presencial inicial.
+                  <strong>Portaria Conjunta MPS/INSS nº 13/2026</strong>. O novo modelo viabiliza a
+                  concessão de benefícios por incapacidade (Auxílio Doença) por{' '}
+                  <strong>até 90 dias</strong> sem a necessidade de perícia presencial inicial.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-6 mb-8">
                   <div className="bg-[#111111] p-5 rounded-lg border border-border">
@@ -107,7 +111,7 @@ export function Updates() {
                     <ul className="space-y-4 text-sm text-foreground/80">
                       <li className="flex gap-2">
                         <ChevronRight className="h-4 w-4 text-gold shrink-0 mt-0.5" />{' '}
-                        <strong>Como solicitar:</strong> Meu INSS ou central 135.
+                        <strong>Como solicitar:</strong> Aplicativo Meu INSS ou central 135.
                       </li>
                       <li className="flex gap-2">
                         <ChevronRight className="h-4 w-4 text-gold shrink-0 mt-0.5" />{' '}
@@ -118,12 +122,12 @@ export function Updates() {
                   </div>
                 </div>
                 <h4 className="text-lg font-bold text-white mb-4 border-b border-border pb-2">
-                  Perguntas Frequentes (FAQ)
+                  Perguntas Frequentes sobre o AtestMed
                 </h4>
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="1" className="border-border/50">
                     <AccordionTrigger className="text-white hover:text-gold py-4">
-                      Duração máxima do benefício
+                      Qual a duração máxima do benefício AtestMed?
                     </AccordionTrigger>
                     <AccordionContent className="text-foreground/80">
                       Pelo sistema remoto de análise, o benefício pode ser concedido por até 90 dias
@@ -132,7 +136,7 @@ export function Updates() {
                   </AccordionItem>
                   <AccordionItem value="2" className="border-border/50">
                     <AccordionTrigger className="text-white hover:text-gold py-4">
-                      Prazo de análise pelo INSS
+                      Qual o prazo de análise pelo INSS?
                     </AccordionTrigger>
                     <AccordionContent className="text-foreground/80">
                       O INSS possui até 45 dias para concluir a avaliação do seu requerimento via
@@ -141,11 +145,11 @@ export function Updates() {
                   </AccordionItem>
                   <AccordionItem value="3" className="border-border/50">
                     <AccordionTrigger className="text-white hover:text-gold py-4">
-                      Regras para prorrogação
+                      Quais são as regras para prorrogação?
                     </AccordionTrigger>
                     <AccordionContent className="text-foreground/80">
-                      A prorrogação sempre exige obrigatoriamente a perícia médica (presencial ou
-                      por telemedicina).
+                      A prorrogação do benefício sempre exige obrigatoriamente a perícia médica
+                      (presencial ou por telemedicina).
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -157,13 +161,15 @@ export function Updates() {
                 <div className="bg-gold/10 p-3 rounded-lg">
                   <HeartPulse className="h-6 w-6 text-gold" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">Triagem: Auxílio-Acidente</h3>
+                <h3 className="text-2xl font-bold text-white">
+                  Quais as novas regras do Auxílio-Acidente?
+                </h3>
               </div>
               <div className="bg-[#1A1A1A] p-6 rounded-xl border border-border/50 shadow-soft">
                 <p className="text-foreground/80 mb-6">
                   Para os benefícios acidentários, implementou-se uma{' '}
                   <strong>triagem documental obrigatória</strong> que antecede e condiciona a
-                  perícia física.
+                  perícia física no INSS.
                 </p>
                 <div className="bg-red-950/20 border-l-4 border-red-600 p-5 mb-6">
                   <p className="text-sm text-foreground/90">

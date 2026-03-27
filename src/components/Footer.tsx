@@ -7,7 +7,11 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-1 flex flex-col items-center md:items-start">
-            <img src={logoUrl} alt="Lucas Morrone Advocacia" className="h-28 object-contain mb-6" />
+            <img
+              src={logoUrl}
+              alt="Logotipo Lucas Morrone Advocacia Especialista em INSS"
+              className="h-28 object-contain mb-6"
+            />
             <p className="text-sm text-center md:text-left text-gray-400">
               Especialistas em Direito Previdenciário e concessão do benefício BPC/LOAS. Garantindo
               seus direitos com excelência e agilidade.

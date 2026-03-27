@@ -42,7 +42,7 @@ export function Header() {
           <Link to="/" className="flex items-center gap-2">
             <img
               src={logoUrl}
-              alt="Lucas Morrone Advocacia"
+              alt="Logotipo Lucas Morrone Advocacia Previdenciária"
               className={cn(
                 'transition-all duration-300 object-contain',
                 isScrolled ? 'h-14' : 'h-20',

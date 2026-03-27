@@ -19573,7 +19573,7 @@ function Header$1() {
 							"data-uid": "src/components/Header.tsx:43:13",
 							"data-prohibitions": "[editContent]",
 							src: editedimage_1773665784218_56dfb_default,
-							alt: "Lucas Morrone Advocacia",
+							alt: "Logotipo Lucas Morrone Advocacia Previdenciária",
 							className: cn$1("transition-all duration-300 object-contain", isScrolled ? "h-14" : "h-20")
 						})
 					}),
@@ -19719,46 +19719,32 @@ function Footer() {
 							"data-uid": "src/components/Footer.tsx:10:13",
 							"data-prohibitions": "[editContent]",
 							src: editedimage_1773665784218_56dfb_default,
-							alt: "Lucas Morrone Advocacia",
+							alt: "Logotipo Lucas Morrone Advocacia Especialista em INSS",
 							className: "h-28 object-contain mb-6"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/Footer.tsx:11:13",
+							"data-uid": "src/components/Footer.tsx:15:13",
 							"data-prohibitions": "[]",
 							className: "text-sm text-center md:text-left text-gray-400",
 							children: "Especialistas em Direito Previdenciário e concessão do benefício BPC/LOAS. Garantindo seus direitos com excelência e agilidade."
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:17:11",
+						"data-uid": "src/components/Footer.tsx:21:11",
 						"data-prohibitions": "[]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							"data-uid": "src/components/Footer.tsx:18:13",
+							"data-uid": "src/components/Footer.tsx:22:13",
 							"data-prohibitions": "[]",
 							className: "text-white text-lg font-semibold mb-6 uppercase tracking-wider",
 							children: "Contato"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-							"data-uid": "src/components/Footer.tsx:21:13",
+							"data-uid": "src/components/Footer.tsx:25:13",
 							"data-prohibitions": "[]",
 							className: "space-y-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:22:15",
-								"data-prohibitions": "[]",
-								className: "flex items-center gap-3",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
-									"data-uid": "src/components/Footer.tsx:23:17",
-									"data-prohibitions": "[editContent]",
-									size: 18,
-									className: "text-yellow-600"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/Footer.tsx:24:17",
-									"data-prohibitions": "[]",
-									children: "(11) 99999-9999"
-								})]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 								"data-uid": "src/components/Footer.tsx:26:15",
 								"data-prohibitions": "[]",
 								className: "flex items-center gap-3",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, {
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
 									"data-uid": "src/components/Footer.tsx:27:17",
 									"data-prohibitions": "[editContent]",
 									size: 18,
@@ -19766,44 +19752,58 @@ function Footer() {
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 									"data-uid": "src/components/Footer.tsx:28:17",
 									"data-prohibitions": "[]",
+									children: "(11) 99999-9999"
+								})]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+								"data-uid": "src/components/Footer.tsx:30:15",
+								"data-prohibitions": "[]",
+								className: "flex items-center gap-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, {
+									"data-uid": "src/components/Footer.tsx:31:17",
+									"data-prohibitions": "[editContent]",
+									size: 18,
+									className: "text-yellow-600"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/components/Footer.tsx:32:17",
+									"data-prohibitions": "[]",
 									children: "contato@lucasmorrone.adv.br"
 								})]
 							})]
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:33:11",
+						"data-uid": "src/components/Footer.tsx:37:11",
 						"data-prohibitions": "[]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							"data-uid": "src/components/Footer.tsx:34:13",
+							"data-uid": "src/components/Footer.tsx:38:13",
 							"data-prohibitions": "[]",
 							className: "text-white text-lg font-semibold mb-6 uppercase tracking-wider",
 							children: "Endereço"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-							"data-uid": "src/components/Footer.tsx:37:13",
+							"data-uid": "src/components/Footer.tsx:41:13",
 							"data-prohibitions": "[]",
 							className: "space-y-4",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:38:15",
+								"data-uid": "src/components/Footer.tsx:42:15",
 								"data-prohibitions": "[]",
 								className: "flex items-start gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
-									"data-uid": "src/components/Footer.tsx:39:17",
+									"data-uid": "src/components/Footer.tsx:43:17",
 									"data-prohibitions": "[editContent]",
 									size: 18,
 									className: "text-yellow-600 shrink-0 mt-1"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-									"data-uid": "src/components/Footer.tsx:40:17",
+									"data-uid": "src/components/Footer.tsx:44:17",
 									"data-prohibitions": "[]",
 									children: [
 										"Av. Paulista, 1000 - Conj. 100",
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-											"data-uid": "src/components/Footer.tsx:42:19",
+											"data-uid": "src/components/Footer.tsx:46:19",
 											"data-prohibitions": "[editContent]"
 										}),
 										"Bela Vista, São Paulo - SP",
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-											"data-uid": "src/components/Footer.tsx:44:19",
+											"data-uid": "src/components/Footer.tsx:48:19",
 											"data-prohibitions": "[editContent]"
 										}),
 										"01310-100"
@@ -19813,35 +19813,35 @@ function Footer() {
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:51:11",
+						"data-uid": "src/components/Footer.tsx:55:11",
 						"data-prohibitions": "[]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							"data-uid": "src/components/Footer.tsx:52:13",
+							"data-uid": "src/components/Footer.tsx:56:13",
 							"data-prohibitions": "[]",
 							className: "text-white text-lg font-semibold mb-6 uppercase tracking-wider",
 							children: "Redes Sociais"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/Footer.tsx:55:13",
+							"data-uid": "src/components/Footer.tsx:59:13",
 							"data-prohibitions": "[]",
 							className: "flex gap-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/Footer.tsx:56:15",
+								"data-uid": "src/components/Footer.tsx:60:15",
 								"data-prohibitions": "[]",
 								href: "#",
 								className: "w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-yellow-600 transition-colors",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Instagram, {
-									"data-uid": "src/components/Footer.tsx:60:17",
+									"data-uid": "src/components/Footer.tsx:64:17",
 									"data-prohibitions": "[editContent]",
 									size: 20,
 									className: "text-white"
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/Footer.tsx:62:15",
+								"data-uid": "src/components/Footer.tsx:66:15",
 								"data-prohibitions": "[]",
 								href: "#",
 								className: "w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-yellow-600 transition-colors",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, {
-									"data-uid": "src/components/Footer.tsx:66:17",
+									"data-uid": "src/components/Footer.tsx:70:17",
 									"data-prohibitions": "[editContent]",
 									size: 20,
 									className: "text-white"
@@ -19851,11 +19851,11 @@ function Footer() {
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/Footer.tsx:72:9",
+				"data-uid": "src/components/Footer.tsx:76:9",
 				"data-prohibitions": "[editContent]",
 				className: "border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					"data-uid": "src/components/Footer.tsx:73:11",
+					"data-uid": "src/components/Footer.tsx:77:11",
 					"data-prohibitions": "[editContent]",
 					children: [
 						"© ",
@@ -19863,7 +19863,7 @@ function Footer() {
 						" Lucas Morrone Advocacia. Todos os direitos reservados."
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/Footer.tsx:76:11",
+					"data-uid": "src/components/Footer.tsx:80:11",
 					"data-prohibitions": "[]",
 					children: "OAB/SP 123.456"
 				})]
@@ -19938,7 +19938,7 @@ function Hero() {
 				"data-uid": "src/components/sections/Hero.tsx:11:9",
 				"data-prohibitions": "[editContent]",
 				src: "https://img.usecurling.com/p/1920/1080?q=law%20office&color=black",
-				alt: "Escritório de Advocacia",
+				alt: "Advogado Previdenciário atendendo cliente no escritório",
 				className: "w-full h-full object-cover opacity-30"
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -20623,7 +20623,7 @@ function Biography() {
 							"data-uid": "src/components/sections/Biography.tsx:12:15",
 							"data-prohibitions": "[editContent]",
 							src: perfil_20_6d6d4_default,
-							alt: "Lucas Morrone Costa",
+							alt: "Advogado Previdenciário Lucas Morrone Costa especialista em INSS",
 							className: "relative z-10 w-full h-auto rounded-xl border-2 border-gold object-cover shadow-2xl"
 						})]
 					})
@@ -20635,7 +20635,7 @@ function Biography() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							"data-uid": "src/components/sections/Biography.tsx:21:13",
 							"data-prohibitions": "[]",
-							className: "inline-block px-3 py-1 bg-gold/10 border border-gold/30 text-gold text-sm font-medium rounded-full mb-6",
+							className: "inline-block px-3 py-1 bg-gold/10 border-gold/30 text-gold text-sm font-medium rounded-full mb-6",
 							children: "OAB/RS 107485"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
@@ -21776,60 +21776,73 @@ function Updates() {
 									"data-uid": "src/components/sections/Updates.tsx:74:17",
 									"data-prohibitions": "[]",
 									className: "text-2xl font-bold text-white",
-									children: "Guia Detalhado: AtestMed 2026"
+									children: "Como pedir AtestMed pelo INSS em 2026?"
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Updates.tsx:76:15",
+								"data-uid": "src/components/sections/Updates.tsx:78:15",
 								"data-prohibitions": "[editContent]",
 								className: "bg-[#1A1A1A] rounded-xl p-6 border border-border/50 shadow-soft",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Updates.tsx:77:17",
+										"data-uid": "src/components/sections/Updates.tsx:79:17",
 										"data-prohibitions": "[]",
 										className: "text-foreground/80 mb-6",
 										children: [
-											"O sistema de análise documental remota passou por atualizações regidas pela",
+											"Para pedir o ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												"data-uid": "src/components/sections/Updates.tsx:80:32",
+												"data-prohibitions": "[]",
+												children: "AtestMed pelo INSS em 2026"
+											}),
+											", você deve acessar o aplicativo ou site ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												"data-uid": "src/components/sections/Updates.tsx:81:38",
+												"data-prohibitions": "[]",
+												children: "Meu INSS"
+											}),
+											", ou ligar para a central 135. O sistema de análise documental remota foi atualizado pela",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:79:19",
+												"data-uid": "src/components/sections/Updates.tsx:83:19",
 												"data-prohibitions": "[]",
 												children: "Lei 15.265/2025"
 											}),
 											" e",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:80:19",
+												"data-uid": "src/components/sections/Updates.tsx:84:19",
 												"data-prohibitions": "[]",
 												children: "Portaria Conjunta MPS/INSS nº 13/2026"
 											}),
-											". O novo modelo viabiliza benefícios por incapacidade por ",
+											". O novo modelo viabiliza a concessão de benefícios por incapacidade (Auxílio Doença) por",
+											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:81:51",
+												"data-uid": "src/components/sections/Updates.tsx:86:19",
 												"data-prohibitions": "[]",
 												children: "até 90 dias"
 											}),
-											" sem perícia presencial inicial."
+											" sem a necessidade de perícia presencial inicial."
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:84:17",
+										"data-uid": "src/components/sections/Updates.tsx:88:17",
 										"data-prohibitions": "[editContent]",
 										className: "grid sm:grid-cols-2 gap-6 mb-8",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:85:19",
+											"data-uid": "src/components/sections/Updates.tsx:89:19",
 											"data-prohibitions": "[editContent]",
 											className: "bg-[#111111] p-5 rounded-lg border border-border",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-												"data-uid": "src/components/sections/Updates.tsx:86:21",
+												"data-uid": "src/components/sections/Updates.tsx:90:21",
 												"data-prohibitions": "[]",
 												className: "text-white font-semibold flex items-center gap-2 mb-4",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
-													"data-uid": "src/components/sections/Updates.tsx:87:23",
+													"data-uid": "src/components/sections/Updates.tsx:91:23",
 													"data-prohibitions": "[editContent]",
 													className: "h-5 w-5 text-gold"
 												}), " Docs Obrigatórios"]
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-												"data-uid": "src/components/sections/Updates.tsx:89:21",
+												"data-uid": "src/components/sections/Updates.tsx:93:21",
 												"data-prohibitions": "[editContent]",
 												className: "space-y-3 text-sm text-foreground/80",
 												children: [
@@ -21839,12 +21852,12 @@ function Updates() {
 													"Data e código CID",
 													"Assinatura e CRM/CRO"
 												].map((i, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-													"data-uid": "src/components/sections/Updates.tsx:97:25",
+													"data-uid": "src/components/sections/Updates.tsx:101:25",
 													"data-prohibitions": "[editContent]",
 													className: "flex gap-2",
 													children: [
 														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-															"data-uid": "src/components/sections/Updates.tsx:98:27",
+															"data-uid": "src/components/sections/Updates.tsx:102:27",
 															"data-prohibitions": "[editContent]",
 															className: "h-4 w-4 text-gold shrink-0 mt-0.5"
 														}),
@@ -21854,41 +21867,23 @@ function Updates() {
 												}, idx))
 											})]
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:103:19",
+											"data-uid": "src/components/sections/Updates.tsx:107:19",
 											"data-prohibitions": "[]",
 											className: "bg-[#111111] p-5 rounded-lg border border-border",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-												"data-uid": "src/components/sections/Updates.tsx:104:21",
+												"data-uid": "src/components/sections/Updates.tsx:108:21",
 												"data-prohibitions": "[]",
 												className: "text-white font-semibold flex items-center gap-2 mb-4",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
-													"data-uid": "src/components/sections/Updates.tsx:105:23",
+													"data-uid": "src/components/sections/Updates.tsx:109:23",
 													"data-prohibitions": "[editContent]",
 													className: "h-5 w-5 text-gold"
 												}), " Alertas e Regras"]
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-												"data-uid": "src/components/sections/Updates.tsx:107:21",
+												"data-uid": "src/components/sections/Updates.tsx:111:21",
 												"data-prohibitions": "[]",
 												className: "space-y-4 text-sm text-foreground/80",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-													"data-uid": "src/components/sections/Updates.tsx:108:23",
-													"data-prohibitions": "[]",
-													className: "flex gap-2",
-													children: [
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
-															"data-uid": "src/components/sections/Updates.tsx:109:25",
-															"data-prohibitions": "[editContent]",
-															className: "h-4 w-4 text-gold shrink-0 mt-0.5"
-														}),
-														" ",
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-															"data-uid": "src/components/sections/Updates.tsx:110:25",
-															"data-prohibitions": "[]",
-															children: "Como solicitar:"
-														}),
-														" Meu INSS ou central 135."
-													]
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 													"data-uid": "src/components/sections/Updates.tsx:112:23",
 													"data-prohibitions": "[]",
 													className: "flex gap-2",
@@ -21902,6 +21897,24 @@ function Updates() {
 														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 															"data-uid": "src/components/sections/Updates.tsx:114:25",
 															"data-prohibitions": "[]",
+															children: "Como solicitar:"
+														}),
+														" Aplicativo Meu INSS ou central 135."
+													]
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+													"data-uid": "src/components/sections/Updates.tsx:116:23",
+													"data-prohibitions": "[]",
+													className: "flex gap-2",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
+															"data-uid": "src/components/sections/Updates.tsx:117:25",
+															"data-prohibitions": "[editContent]",
+															className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+														}),
+														" ",
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+															"data-uid": "src/components/sections/Updates.tsx:118:25",
+															"data-prohibitions": "[]",
 															children: "Limites:"
 														}),
 														" 3 negativas no sistema bloqueiam a via remota, tornando a perícia física obrigatória."
@@ -21911,67 +21924,67 @@ function Updates() {
 										})]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/sections/Updates.tsx:120:17",
+										"data-uid": "src/components/sections/Updates.tsx:124:17",
 										"data-prohibitions": "[]",
 										className: "text-lg font-bold text-white mb-4 border-b border-border pb-2",
-										children: "Perguntas Frequentes (FAQ)"
+										children: "Perguntas Frequentes sobre o AtestMed"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Accordion, {
-										"data-uid": "src/components/sections/Updates.tsx:123:17",
+										"data-uid": "src/components/sections/Updates.tsx:127:17",
 										"data-prohibitions": "[]",
 										type: "single",
 										collapsible: true,
 										className: "w-full",
 										children: [
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-												"data-uid": "src/components/sections/Updates.tsx:124:19",
+												"data-uid": "src/components/sections/Updates.tsx:128:19",
 												"data-prohibitions": "[]",
 												value: "1",
 												className: "border-border/50",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-													"data-uid": "src/components/sections/Updates.tsx:125:21",
+													"data-uid": "src/components/sections/Updates.tsx:129:21",
 													"data-prohibitions": "[]",
 													className: "text-white hover:text-gold py-4",
-													children: "Duração máxima do benefício"
+													children: "Qual a duração máxima do benefício AtestMed?"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-													"data-uid": "src/components/sections/Updates.tsx:128:21",
+													"data-uid": "src/components/sections/Updates.tsx:132:21",
 													"data-prohibitions": "[]",
 													className: "text-foreground/80",
 													children: "Pelo sistema remoto de análise, o benefício pode ser concedido por até 90 dias ininterruptos."
 												})]
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-												"data-uid": "src/components/sections/Updates.tsx:133:19",
+												"data-uid": "src/components/sections/Updates.tsx:137:19",
 												"data-prohibitions": "[]",
 												value: "2",
 												className: "border-border/50",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-													"data-uid": "src/components/sections/Updates.tsx:134:21",
+													"data-uid": "src/components/sections/Updates.tsx:138:21",
 													"data-prohibitions": "[]",
 													className: "text-white hover:text-gold py-4",
-													children: "Prazo de análise pelo INSS"
+													children: "Qual o prazo de análise pelo INSS?"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-													"data-uid": "src/components/sections/Updates.tsx:137:21",
+													"data-uid": "src/components/sections/Updates.tsx:141:21",
 													"data-prohibitions": "[]",
 													className: "text-foreground/80",
 													children: "O INSS possui até 45 dias para concluir a avaliação do seu requerimento via AtestMed."
 												})]
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-												"data-uid": "src/components/sections/Updates.tsx:142:19",
+												"data-uid": "src/components/sections/Updates.tsx:146:19",
 												"data-prohibitions": "[]",
 												value: "3",
 												className: "border-border/50",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-													"data-uid": "src/components/sections/Updates.tsx:143:21",
+													"data-uid": "src/components/sections/Updates.tsx:147:21",
 													"data-prohibitions": "[]",
 													className: "text-white hover:text-gold py-4",
-													children: "Regras para prorrogação"
+													children: "Quais são as regras para prorrogação?"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-													"data-uid": "src/components/sections/Updates.tsx:146:21",
+													"data-uid": "src/components/sections/Updates.tsx:150:21",
 													"data-prohibitions": "[]",
 													className: "text-foreground/80",
-													children: "A prorrogação sempre exige obrigatoriamente a perícia médica (presencial ou por telemedicina)."
+													children: "A prorrogação do benefício sempre exige obrigatoriamente a perícia médica (presencial ou por telemedicina)."
 												})]
 											})
 										]
@@ -21979,66 +21992,66 @@ function Updates() {
 								]
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Updates.tsx:155:13",
+							"data-uid": "src/components/sections/Updates.tsx:159:13",
 							"data-prohibitions": "[editContent]",
 							id: "auxilio",
 							className: "scroll-mt-32",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Updates.tsx:156:15",
+								"data-uid": "src/components/sections/Updates.tsx:160:15",
 								"data-prohibitions": "[]",
 								className: "flex items-center gap-3 mb-6",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Updates.tsx:157:17",
+									"data-uid": "src/components/sections/Updates.tsx:161:17",
 									"data-prohibitions": "[]",
 									className: "bg-gold/10 p-3 rounded-lg",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
-										"data-uid": "src/components/sections/Updates.tsx:158:19",
+										"data-uid": "src/components/sections/Updates.tsx:162:19",
 										"data-prohibitions": "[editContent]",
 										className: "h-6 w-6 text-gold"
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									"data-uid": "src/components/sections/Updates.tsx:160:17",
+									"data-uid": "src/components/sections/Updates.tsx:164:17",
 									"data-prohibitions": "[]",
 									className: "text-2xl font-bold text-white",
-									children: "Triagem: Auxílio-Acidente"
+									children: "Quais as novas regras do Auxílio-Acidente?"
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Updates.tsx:162:15",
+								"data-uid": "src/components/sections/Updates.tsx:168:15",
 								"data-prohibitions": "[editContent]",
 								className: "bg-[#1A1A1A] p-6 rounded-xl border border-border/50 shadow-soft",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Updates.tsx:163:17",
+										"data-uid": "src/components/sections/Updates.tsx:169:17",
 										"data-prohibitions": "[]",
 										className: "text-foreground/80 mb-6",
 										children: [
 											"Para os benefícios acidentários, implementou-se uma",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:165:19",
+												"data-uid": "src/components/sections/Updates.tsx:171:19",
 												"data-prohibitions": "[]",
 												children: "triagem documental obrigatória"
 											}),
-											" que antecede e condiciona a perícia física."
+											" que antecede e condiciona a perícia física no INSS."
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:168:17",
+										"data-uid": "src/components/sections/Updates.tsx:174:17",
 										"data-prohibitions": "[]",
 										className: "bg-red-950/20 border-l-4 border-red-600 p-5 mb-6",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-											"data-uid": "src/components/sections/Updates.tsx:169:19",
+											"data-uid": "src/components/sections/Updates.tsx:175:19",
 											"data-prohibitions": "[]",
 											className: "text-sm text-foreground/90",
 											children: [
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-													"data-uid": "src/components/sections/Updates.tsx:170:21",
+													"data-uid": "src/components/sections/Updates.tsx:176:21",
 													"data-prohibitions": "[]",
 													children: "Risco de Negativa:"
 												}),
 												" A ausência de elementos probatórios essenciais resulta no ",
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-													"data-uid": "src/components/sections/Updates.tsx:171:43",
+													"data-uid": "src/components/sections/Updates.tsx:177:43",
 													"data-prohibitions": "[]",
 													children: "indeferimento imediato"
 												}),
@@ -22047,13 +22060,13 @@ function Updates() {
 										})
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/sections/Updates.tsx:175:17",
+										"data-uid": "src/components/sections/Updates.tsx:181:17",
 										"data-prohibitions": "[]",
 										className: "font-semibold text-white mb-4",
 										children: "Requisitos Essenciais na Documentação:"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:178:17",
+										"data-uid": "src/components/sections/Updates.tsx:184:17",
 										"data-prohibitions": "[editContent]",
 										className: "grid sm:grid-cols-3 gap-4",
 										children: [
@@ -22070,15 +22083,15 @@ function Updates() {
 												t: "Comprovação de sequelas que afetem o trabalho"
 											}
 										].map((I, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:184:21",
+											"data-uid": "src/components/sections/Updates.tsx:190:21",
 											"data-prohibitions": "[editContent]",
 											className: "bg-[#111111] p-5 rounded-lg border border-border flex flex-col items-center text-center",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(I.icon, {
-												"data-uid": "src/components/sections/Updates.tsx:188:23",
+												"data-uid": "src/components/sections/Updates.tsx:194:23",
 												"data-prohibitions": "[editContent]",
 												className: "h-8 w-8 text-gold mb-3"
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												"data-uid": "src/components/sections/Updates.tsx:189:23",
+												"data-uid": "src/components/sections/Updates.tsx:195:23",
 												"data-prohibitions": "[editContent]",
 												className: "text-sm font-medium text-foreground/90",
 												children: I.t
@@ -22089,33 +22102,33 @@ function Updates() {
 							})]
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Updates.tsx:197:11",
+						"data-uid": "src/components/sections/Updates.tsx:203:11",
 						"data-prohibitions": "[editContent]",
 						className: "space-y-8",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Updates.tsx:198:13",
+							"data-uid": "src/components/sections/Updates.tsx:204:13",
 							"data-prohibitions": "[editContent]",
 							id: "dicas",
 							className: "scroll-mt-32",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-								"data-uid": "src/components/sections/Updates.tsx:199:15",
+								"data-uid": "src/components/sections/Updates.tsx:205:15",
 								"data-prohibitions": "[editContent]",
 								className: "bg-[#1A1A1A] border-border/50",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardHeader, {
-									"data-uid": "src/components/sections/Updates.tsx:200:17",
+									"data-uid": "src/components/sections/Updates.tsx:206:17",
 									"data-prohibitions": "[]",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardTitle, {
-										"data-uid": "src/components/sections/Updates.tsx:201:19",
+										"data-uid": "src/components/sections/Updates.tsx:207:19",
 										"data-prohibitions": "[]",
 										className: "text-xl text-white flex gap-2",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-											"data-uid": "src/components/sections/Updates.tsx:202:21",
+											"data-uid": "src/components/sections/Updates.tsx:208:21",
 											"data-prohibitions": "[editContent]",
 											className: "h-5 w-5 text-gold"
 										}), " Dicas de Aprovação"]
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardContent, {
-									"data-uid": "src/components/sections/Updates.tsx:205:17",
+									"data-uid": "src/components/sections/Updates.tsx:211:17",
 									"data-prohibitions": "[editContent]",
 									className: "space-y-5",
 									children: [
@@ -22123,21 +22136,21 @@ function Updates() {
 										"Capture imagens bem iluminadas e legíveis de atestados e documentos de identidade.",
 										"Jamais envie atestados com rasuras, emendas ou ausência de informações vitais."
 									].map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:211:21",
+										"data-uid": "src/components/sections/Updates.tsx:217:21",
 										"data-prohibitions": "[editContent]",
 										className: "flex items-start gap-3",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:212:23",
+											"data-uid": "src/components/sections/Updates.tsx:218:23",
 											"data-prohibitions": "[editContent]",
 											className: "bg-gold/10 p-2 rounded-md shrink-0 mt-0.5",
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-												"data-uid": "src/components/sections/Updates.tsx:213:25",
+												"data-uid": "src/components/sections/Updates.tsx:219:25",
 												"data-prohibitions": "[editContent]",
 												className: "text-gold font-bold text-sm",
 												children: ["0", i + 1]
 											})
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											"data-uid": "src/components/sections/Updates.tsx:215:23",
+											"data-uid": "src/components/sections/Updates.tsx:221:23",
 											"data-prohibitions": "[editContent]",
 											className: "text-sm text-foreground/80",
 											children: t
@@ -22146,41 +22159,41 @@ function Updates() {
 								})]
 							})
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-							"data-uid": "src/components/sections/Updates.tsx:222:13",
+							"data-uid": "src/components/sections/Updates.tsx:228:13",
 							"data-prohibitions": "[]",
 							className: "bg-gradient-to-br from-[#1a1500] to-[#111111] border-gold/50 shadow-gold",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardHeader, {
-								"data-uid": "src/components/sections/Updates.tsx:223:15",
+								"data-uid": "src/components/sections/Updates.tsx:229:15",
 								"data-prohibitions": "[]",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
-									"data-uid": "src/components/sections/Updates.tsx:224:17",
+									"data-uid": "src/components/sections/Updates.tsx:230:17",
 									"data-prohibitions": "[]",
 									className: "text-xl text-white",
 									children: "Por que um advogado?"
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-								"data-uid": "src/components/sections/Updates.tsx:226:15",
+								"data-uid": "src/components/sections/Updates.tsx:232:15",
 								"data-prohibitions": "[]",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-									"data-uid": "src/components/sections/Updates.tsx:227:17",
+									"data-uid": "src/components/sections/Updates.tsx:233:17",
 									"data-prohibitions": "[]",
 									className: "text-foreground/90 text-sm mb-6 leading-relaxed",
 									children: [
 										"Erros documentais custam o seu benefício. A assessoria especializada em parceria com a excelência da ",
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-											"data-uid": "src/components/sections/Updates.tsx:229:39",
+											"data-uid": "src/components/sections/Updates.tsx:235:39",
 											"data-prohibitions": "[]",
 											children: "Bocchi Advogados"
 										}),
 										" garante auditoria prévia detalhada, neutralizando riscos de negativas automáticas pelo INSS."
 									]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									"data-uid": "src/components/sections/Updates.tsx:232:17",
+									"data-uid": "src/components/sections/Updates.tsx:238:17",
 									"data-prohibitions": "[]",
 									className: "w-full bg-gold hover:bg-gold/90 text-black font-bold h-14 uppercase text-sm",
 									asChild: true,
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-										"data-uid": "src/components/sections/Updates.tsx:236:19",
+										"data-uid": "src/components/sections/Updates.tsx:242:19",
 										"data-prohibitions": "[]",
 										href: "https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20ajuda%20com%20as%20novas%20regras%20do%20INSS.",
 										target: "_blank",
@@ -22306,8 +22319,8 @@ var faqs = [
 		answer: "A negativa administrativa (indeferimento) não é o fim da linha. É possível interpor um Recurso Administrativo no próprio INSS ou ingressar com uma Ação Judicial Federal. A escolha da melhor via depende da análise técnica dos motivos da negativa e da documentação disponível."
 	},
 	{
-		question: "Quais são os requisitos exatos para o BPC/LOAS?",
-		answer: "O BPC exige a comprovação de dois requisitos principais: 1) Ser idoso (65 anos ou mais) ou pessoa com deficiência (de qualquer idade) que apresente impedimentos de longo prazo; 2) Comprovar estado de miserabilidade, objetivamente definido como renda familiar per capita igual ou inferior a 1/4 do salário mínimo."
+		question: "Quem tem direito ao BPC/LOAS?",
+		answer: "Para ter direito ao BPC/LOAS, é necessário comprovar dois requisitos principais: 1) Ser idoso (65 anos ou mais) ou pessoa com deficiência (de qualquer idade) que apresente impedimentos de longo prazo; 2) Comprovar estado de vulnerabilidade socioeconômica, com renda familiar per capita igual ou inferior a 1/4 do salário mínimo. Não é exigido ter contribuído para o INSS."
 	},
 	{
 		question: "Qual é o papel do advogado no processo previdenciário?",
@@ -24643,4 +24656,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-BfrOA2p4.js.map
+//# sourceMappingURL=index-D6kXjh4B.js.map

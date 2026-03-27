@@ -11,14 +11,14 @@ export function Biography() {
               <div className="absolute inset-0 bg-gold rounded-xl rotate-3 scale-105 opacity-20"></div>
               <img
                 src={perfilUrl}
-                alt="Lucas Morrone Costa"
+                alt="Advogado Previdenciário Lucas Morrone Costa especialista em INSS"
                 className="relative z-10 w-full h-auto rounded-xl border-2 border-gold object-cover shadow-2xl"
               />
             </div>
           </div>
 
           <div className="w-full lg:w-7/12">
-            <div className="inline-block px-3 py-1 bg-gold/10 border border-gold/30 text-gold text-sm font-medium rounded-full mb-6">
+            <div className="inline-block px-3 py-1 bg-gold/10 border-gold/30 text-gold text-sm font-medium rounded-full mb-6">
               OAB/RS 107485
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Lucas Morrone Costa</h2>
