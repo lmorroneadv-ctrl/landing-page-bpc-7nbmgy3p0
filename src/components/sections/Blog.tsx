@@ -15,7 +15,7 @@ const articles = [
   {
     title: 'Aposentadoria por Idade — O que mudou após a Reforma',
     content:
-      'Com a Reforma da Previdência (EC 103/2019), a idade mínima para mulheres passou a ser de 62 anos, e para homens, manteve-se em 65 anos. O tempo mínimo de contribuição é de 15 anos para mulheres e 20 anos para homens que começaram a contribuir após a reforma. Existem regras de transição que devem ser carefully analisadas caso a caso.',
+      'Com a Reforma da Previdência (EC 103/2019), a idade mínima para mulheres passou a ser de 62 anos, e para homens, manteve-se em 65 anos. O tempo mínimo de contribuição é de 15 anos para mulheres e 20 anos para homens que começaram a contribuir após a reforma. Existem regras de transição que devem ser cuidadosamente analisadas caso a caso.',
   },
   {
     title: 'BPC/LOAS — Quem tem direito e como solicitar',
@@ -43,7 +43,7 @@ export function Blog() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Artigos Úteis & <span className="text-[#D4AF37]">Blog</span>
           </h2>
-          <p className="text-foreground/70 text-lg">
+          <p className="text-foreground/90 text-lg font-medium">
             Informações técnicas e atualizadas para ajudar você a entender melhor seus direitos
             previdenciários.
           </p>
@@ -57,10 +57,10 @@ export function Blog() {
                 value={`item-${index}`}
                 className="bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-[#D4AF37]/50 transition-colors"
               >
-                <AccordionTrigger className="text-left text-lg font-medium hover:text-[#D4AF37] hover:no-underline py-4 text-white">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-[#D4AF37] hover:no-underline py-4 text-white">
                   {article.title}
                 </AccordionTrigger>
-                <AccordionContent className="text-foreground/80 leading-relaxed text-base pb-6 pt-2">
+                <AccordionContent className="text-foreground/90 font-medium leading-relaxed text-base pb-6 pt-2">
                   {article.content}
                 </AccordionContent>
               </AccordionItem>

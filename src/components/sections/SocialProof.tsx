@@ -27,7 +27,7 @@ export function SocialProof() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             O que dizem nossos <span className="text-gold">Clientes</span>
           </h2>
-          <p className="text-foreground/70 text-lg">
+          <p className="text-foreground/90 text-lg font-medium">
             O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de
             seus direitos.
           </p>
@@ -45,7 +45,7 @@ export function SocialProof() {
                     <Star key={i} className="h-4 w-4 text-gold fill-gold" />
                   ))}
                 </div>
-                <p className="text-foreground/80 italic mb-6 leading-relaxed">
+                <p className="text-foreground/90 font-medium italic mb-6 leading-relaxed">
                   "{testimonial.text}"
                 </p>
                 <div>

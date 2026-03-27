@@ -9,7 +9,7 @@ export function Location() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Localização & <span className="text-gold">Contato</span>
           </h2>
-          <p className="text-foreground/70 text-lg">
+          <p className="text-foreground/90 text-lg font-medium">
             Atendimento presencial em nossa sede em Rio Grande e em Pelotas mediante agendamento.
           </p>
         </div>
@@ -39,10 +39,10 @@ export function Location() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Endereço Principal</h3>
-                  <p className="text-foreground/80 leading-relaxed">
-                    Av. Silva Paes, 293
+                  <p className="text-foreground/90 font-medium leading-relaxed">
+                    Av. Silva Paes, 293, centro
                     <br />
-                    Centro, Rio Grande - RS
+                    Rio Grande - RS
                     <br />
                     CEP: 96200-340
                   </p>
@@ -60,8 +60,8 @@ export function Location() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Contato</h3>
-                  <p className="text-foreground/80 mb-1">
-                    WhatsApp:{' '}
+                  <p className="text-foreground/90 font-medium mb-1">
+                    WhatsApp/Telefone:{' '}
                     <a
                       href="https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS)."
                       target="_blank"
@@ -69,6 +69,12 @@ export function Location() {
                       className="hover:text-gold transition-colors"
                     >
                       (53) 98106-3023
+                    </a>
+                  </p>
+                  <p className="text-foreground/90 font-medium">
+                    Telefone Secundário:{' '}
+                    <a href="tel:+5553999998235" className="hover:text-gold transition-colors">
+                      (53) 99999-8235
                     </a>
                   </p>
                 </div>
@@ -82,7 +88,7 @@ export function Location() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Horário de Atendimento</h3>
-                  <p className="text-foreground/80">
+                  <p className="text-foreground/90 font-medium">
                     Segunda a Sexta-feira
                     <br />
                     09:00 às 12:00 e 13:30 às 18:00

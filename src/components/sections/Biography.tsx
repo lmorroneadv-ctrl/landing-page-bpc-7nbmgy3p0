@@ -23,7 +23,7 @@ export function Biography() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Lucas Morrone Costa</h2>
 
-            <div className="space-y-4 text-lg text-foreground/80 mb-8">
+            <div className="space-y-4 text-lg text-foreground/90 font-medium mb-8">
               <p>
                 Sou o advogado Lucas Morrone Costa, especialista em Direito Previdenciário. Atendo
                 presencialmente e online, oferecendo análise técnica precisa e orientação
@@ -56,7 +56,7 @@ export function Biography() {
               <h4 className="text-gold font-semibold mb-2 text-sm uppercase tracking-wider">
                 Nota Importante
               </h4>
-              <p className="text-sm text-foreground/70 italic leading-relaxed">
+              <p className="text-sm text-foreground/90 font-medium italic leading-relaxed">
                 Até 2023 utilizei o nome Lucas Moran Costa. A atualização para Lucas Morrone Costa
                 já está presente em todos os meus registros oficiais. Documentos ou referências
                 anteriores em nome de Lucas Moran Costa correspondem ao mesmo profissional, inscrito

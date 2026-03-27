@@ -54,37 +54,42 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('servicos')}
-              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-medium"
+              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Serviços
             </button>
             <button
               onClick={() => scrollToSection('sobre')}
-              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-medium"
+              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Sobre
             </button>
             <button
               onClick={() => scrollToSection('localizacao')}
-              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-medium"
+              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Localização
             </button>
             <button
               onClick={() => scrollToSection('faq')}
-              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-medium"
+              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Dúvidas
             </button>
             <Link
               to="/guia-bpc"
-              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-medium"
+              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Guia BPC
             </Link>
             <Button
-              className="bg-yellow-600 hover:bg-yellow-700 text-white rounded-none px-6 uppercase text-sm tracking-wider"
-              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+              className="bg-yellow-600 hover:bg-yellow-700 text-white rounded-none px-6 uppercase text-sm font-bold tracking-wider"
+              onClick={() =>
+                window.open(
+                  'https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).',
+                  '_blank',
+                )
+              }
             >
               Fale Conosco
             </Button>
@@ -126,8 +131,13 @@ export function Header() {
             Guia BPC
           </Link>
           <Button
-            className="bg-yellow-600 hover:bg-yellow-700 text-white w-[90%] mt-2 rounded-none uppercase tracking-wider"
-            onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+            className="bg-yellow-600 hover:bg-yellow-700 text-white w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider"
+            onClick={() =>
+              window.open(
+                'https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).',
+                '_blank',
+              )
+            }
           >
             Fale com um Advogado
           </Button>

@@ -40,7 +40,7 @@ export function Ebook() {
                 </h4>
 
                 <div className="mt-auto pt-6 border-t border-[#D4AF37]/20 w-full">
-                  <p className="text-[10px] sm:text-xs text-foreground/60 uppercase tracking-widest">
+                  <p className="text-[10px] sm:text-xs text-foreground/80 uppercase tracking-widest font-medium">
                     Lucas Morrone Advocacia
                   </p>
                 </div>
@@ -54,7 +54,7 @@ export function Ebook() {
               Acesse nosso Guia Gratuito: <br className="hidden md:block" />
               <span className="text-[#D4AF37]">Tudo sobre BPC/LOAS</span>
             </h2>
-            <p className="text-lg text-foreground/80 mb-8">
+            <p className="text-lg text-foreground/90 mb-8 font-medium">
               Entenda seus direitos e aprenda como solicitar o benefício de forma correta com o
               nosso conteúdo exclusivo e detalhado.
             </p>
@@ -80,7 +80,7 @@ export function Ebook() {
                 className="space-y-5 bg-[#111111] p-6 sm:p-8 rounded-xl border border-border/50 shadow-lg"
               >
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-foreground/80">
+                  <Label htmlFor="name" className="text-foreground/90 font-medium">
                     Nome Completo
                   </Label>
                   <Input
@@ -93,7 +93,7 @@ export function Ebook() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="contact" className="text-foreground/80">
+                  <Label htmlFor="contact" className="text-foreground/90 font-medium">
                     WhatsApp ou E-mail
                   </Label>
                   <Input
@@ -118,7 +118,7 @@ export function Ebook() {
                   <Check className="w-8 h-8 text-[#D4AF37]" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Tudo Certo!</h3>
-                <p className="text-foreground/80 mb-8 text-lg">
+                <p className="text-foreground/90 mb-8 text-lg font-medium">
                   Seu guia está pronto para acesso. Clique no botão abaixo para ler todo o material
                   agora mesmo em nosso site.
                 </p>

@@ -29,7 +29,7 @@ export function Hero() {
             Advocacia Previdenciária <span className="text-gold">Especializada</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl">
+          <p className="text-lg md:text-xl text-foreground/90 mb-10 max-w-2xl font-medium">
             Orientação técnica e análise aprofundada para garantir seus direitos junto ao INSS.
             Atuação ética e transparente em cada etapa do seu processo.
           </p>

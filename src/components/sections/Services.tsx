@@ -73,7 +73,7 @@ export function Services() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Áreas de <span className="text-gold">Atuação</span>
           </h2>
-          <p className="text-foreground/70 text-lg">
+          <p className="text-foreground/90 text-lg font-medium">
             Oferecemos assessoria jurídica especializada para garantir que seus direitos
             previdenciários sejam respeitados e concedidos de forma correta.
           </p>
@@ -92,7 +92,7 @@ export function Services() {
               <CardContent>
                 <ul className="space-y-3 mb-6">
                   {service.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start text-foreground/80">
+                    <li key={idx} className="flex items-start text-foreground/90 font-medium">
                       <CheckCircle2 className="h-5 w-5 text-gold mr-3 shrink-0 mt-0.5" />
                       <span className="text-sm">{item}</span>
                     </li>

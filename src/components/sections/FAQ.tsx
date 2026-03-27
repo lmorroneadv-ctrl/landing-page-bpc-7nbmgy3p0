@@ -43,7 +43,7 @@ export function FAQ() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Dúvidas <span className="text-gold">Frequentes</span>
           </h2>
-          <p className="text-foreground/70 text-lg">
+          <p className="text-foreground/90 text-lg font-medium">
             Respostas claras e diretas para as questões mais comuns sobre direito previdenciário.
           </p>
         </div>
@@ -56,10 +56,10 @@ export function FAQ() {
                 value={`faq-${index}`}
                 className="bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-gold/50 transition-colors"
               >
-                <AccordionTrigger className="text-left text-lg font-medium hover:text-gold hover:no-underline py-4">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-gold hover:no-underline py-4 text-white">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-foreground/80 leading-relaxed text-base pb-6 pt-2">
+                <AccordionContent className="text-foreground/90 font-medium leading-relaxed text-base pb-6 pt-2">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
