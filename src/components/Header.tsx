@@ -42,7 +42,7 @@ export function Header() {
           <Link to="/" className="flex items-center gap-2">
             <img
               src={logoUrl}
-              alt="Logotipo Lucas Morrone Advocacia Previdenciária"
+              alt="Logotipo Lucas Morrone Advocacia Previdenciária e Assistencial"
               className={cn(
                 'transition-all duration-300 object-contain',
                 isScrolled ? 'h-14' : 'h-20',
@@ -76,12 +76,12 @@ export function Header() {
             >
               Dúvidas
             </button>
-            <Link
-              to="/guia-bpc"
+            <button
+              onClick={() => scrollToSection('guia-bpc')}
               className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Guia BPC
-            </Link>
+            </button>
             <Button
               className="bg-gold hover:bg-gold/90 text-black rounded-none px-6 uppercase text-sm font-bold tracking-wider shadow-sm"
               onClick={() =>
@@ -132,13 +132,12 @@ export function Header() {
           >
             Dúvidas
           </button>
-          <Link
-            to="/guia-bpc"
-            onClick={() => setIsMobileMenuOpen(false)}
+          <button
+            onClick={() => scrollToSection('guia-bpc')}
             className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
           >
             Guia BPC
-          </Link>
+          </button>
           <Button
             className="bg-gold hover:bg-gold/90 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm"
             onClick={() =>

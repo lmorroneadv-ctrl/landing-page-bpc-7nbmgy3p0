@@ -3,7 +3,7 @@ import perfilUrl from '../../assets/perfil-20-6d6d4.png'
 
 export function Biography() {
   return (
-    <section id="quem-sou" className="py-20 bg-muted">
+    <section id="sobre" className="py-20 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="w-full lg:w-5/12">

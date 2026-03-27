@@ -19573,7 +19573,7 @@ function Header$1() {
 							"data-uid": "src/components/Header.tsx:43:13",
 							"data-prohibitions": "[editContent]",
 							src: editedimage_1773665784218_56dfb_default,
-							alt: "Logotipo Lucas Morrone Advocacia Previdenciária",
+							alt: "Logotipo Lucas Morrone Advocacia Previdenciária e Assistencial",
 							className: cn$1("transition-all duration-300 object-contain", isScrolled ? "h-14" : "h-20")
 						})
 					}),
@@ -19610,10 +19610,10 @@ function Header$1() {
 								className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold",
 								children: "Dúvidas"
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								"data-uid": "src/components/Header.tsx:79:13",
 								"data-prohibitions": "[]",
-								to: "/guia-bpc",
+								onClick: () => scrollToSection("guia-bpc"),
 								className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold",
 								children: "Guia BPC"
 							}),
@@ -19676,16 +19676,15 @@ function Header$1() {
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Dúvidas"
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 					"data-uid": "src/components/Header.tsx:135:11",
 					"data-prohibitions": "[]",
-					to: "/guia-bpc",
-					onClick: () => setIsMobileMenuOpen(false),
+					onClick: () => scrollToSection("guia-bpc"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Guia BPC"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-					"data-uid": "src/components/Header.tsx:142:11",
+					"data-uid": "src/components/Header.tsx:141:11",
 					"data-prohibitions": "[]",
 					className: "bg-gold hover:bg-gold/90 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm",
 					onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).", "_blank"),
@@ -20360,7 +20359,7 @@ function Ebook() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		"data-uid": "src/components/sections/Ebook.tsx:21:5",
 		"data-prohibitions": "[editContent]",
-		id: "ebook",
+		id: "guia-bpc",
 		className: "py-20 bg-background border-y border-border overflow-hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			"data-uid": "src/components/sections/Ebook.tsx:22:7",
@@ -20618,7 +20617,7 @@ function Biography() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		"data-uid": "src/components/sections/Biography.tsx:6:5",
 		"data-prohibitions": "[editContent]",
-		id: "quem-sou",
+		id: "sobre",
 		className: "py-20 bg-muted",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			"data-uid": "src/components/sections/Biography.tsx:7:7",
@@ -22416,7 +22415,7 @@ function Location() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		"data-uid": "src/components/sections/Location.tsx:6:5",
 		"data-prohibitions": "[]",
-		id: "contato",
+		id: "localizacao",
 		className: "py-20 bg-background",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/sections/Location.tsx:7:7",
@@ -24688,4 +24687,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-BnLxyZPY.js.map
+//# sourceMappingURL=index-C4wCWOfR.js.map
