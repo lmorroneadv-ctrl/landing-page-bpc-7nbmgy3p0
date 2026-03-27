@@ -3,7 +3,7 @@ import perfilUrl from '../../assets/perfil-20-6d6d4.png'
 
 export function Biography() {
   return (
-    <section id="quem-sou" className="py-20 bg-[#111111]">
+    <section id="quem-sou" className="py-20 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="w-full lg:w-5/12">
@@ -12,18 +12,20 @@ export function Biography() {
               <img
                 src={perfilUrl}
                 alt="Advogado Previdenciário Lucas Morrone Costa especialista em INSS"
-                className="relative z-10 w-full h-auto rounded-xl border-2 border-gold object-cover shadow-2xl"
+                className="relative z-10 w-full h-auto rounded-xl border-2 border-gold object-cover shadow-xl"
               />
             </div>
           </div>
 
           <div className="w-full lg:w-7/12">
-            <div className="inline-block px-3 py-1 bg-gold/10 border-gold/30 text-gold text-sm font-medium rounded-full mb-6">
+            <div className="inline-block px-3 py-1 bg-gold/10 border border-gold/30 text-gold-dark text-sm font-semibold rounded-full mb-6">
               OAB/RS 107485
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Lucas Morrone Costa</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+              Lucas Morrone Costa
+            </h2>
 
-            <div className="space-y-4 text-lg text-foreground/90 font-medium mb-8">
+            <div className="space-y-4 text-lg text-muted-foreground font-medium mb-8">
               <p>
                 Sou o advogado Lucas Morrone Costa, especialista em Direito Previdenciário. Atendo
                 presencialmente e online, oferecendo análise técnica precisa e orientação
@@ -45,18 +47,18 @@ export function Biography() {
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3">
-                    <Check className="h-3.5 w-3.5 text-gold" />
+                    <Check className="h-3.5 w-3.5 text-gold-dark" />
                   </div>
-                  <span className="text-foreground/90 font-medium">{item}</span>
+                  <span className="text-foreground font-medium">{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="bg-[#1A1A1A] border-l-4 border-gold p-6 rounded-r-lg shadow-md">
-              <h4 className="text-gold font-semibold mb-2 text-sm uppercase tracking-wider">
+            <div className="bg-card border-l-4 border-gold p-6 rounded-r-lg shadow-soft">
+              <h4 className="text-gold-dark font-semibold mb-2 text-sm uppercase tracking-wider">
                 Nota Importante
               </h4>
-              <p className="text-sm text-foreground/90 font-medium italic leading-relaxed">
+              <p className="text-sm text-muted-foreground font-medium italic leading-relaxed">
                 Até 2023 utilizei o nome Lucas Moran Costa. A atualização para Lucas Morrone Costa
                 já está presente em todos os meus registros oficiais. Documentos ou referências
                 anteriores em nome de Lucas Moran Costa correspondem ao mesmo profissional, inscrito

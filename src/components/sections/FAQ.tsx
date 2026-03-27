@@ -36,14 +36,14 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-20 bg-[#111111]">
+    <section id="faq" className="py-20 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <HelpCircle className="h-10 w-10 text-gold mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Dúvidas <span className="text-gold">Frequentes</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            Dúvidas <span className="text-gold-dark">Frequentes</span>
           </h2>
-          <p className="text-foreground/90 text-lg font-medium">
+          <p className="text-muted-foreground text-lg font-medium">
             Respostas claras e diretas para as questões mais comuns sobre direito previdenciário.
           </p>
         </div>
@@ -54,12 +54,12 @@ export function FAQ() {
               <AccordionItem
                 key={index}
                 value={`faq-${index}`}
-                className="bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-gold/50 transition-colors"
+                className="bg-card border border-border rounded-lg px-6 data-[state=open]:border-gold shadow-sm transition-colors"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold hover:text-gold hover:no-underline py-4 text-white">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-gold-dark hover:no-underline py-4 text-foreground">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-foreground/90 font-medium leading-relaxed text-base pb-6 pt-2">
+                <AccordionContent className="text-muted-foreground font-medium leading-relaxed text-base pb-6 pt-2">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

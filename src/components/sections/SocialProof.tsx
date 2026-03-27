@@ -21,13 +21,13 @@ const testimonials = [
 
 export function SocialProof() {
   return (
-    <section className="py-20 bg-[#151515]">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            O que dizem nossos <span className="text-gold">Clientes</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            O que dizem nossos <span className="text-gold-dark">Clientes</span>
           </h2>
-          <p className="text-foreground/90 text-lg font-medium">
+          <p className="text-muted-foreground text-lg font-medium">
             O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de
             seus direitos.
           </p>
@@ -35,9 +35,9 @@ export function SocialProof() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-[#1A1A1A] border-border relative mt-6">
-              <div className="absolute -top-6 left-6 bg-gold rounded-full p-3 shadow-lg">
-                <Quote className="h-6 w-6 text-[#111111]" />
+            <Card key={index} className="bg-card border-border shadow-soft relative mt-6">
+              <div className="absolute -top-6 left-6 bg-gold rounded-full p-3 shadow-md">
+                <Quote className="h-6 w-6 text-black" />
               </div>
               <CardContent className="pt-10 pb-8 px-6">
                 <div className="flex mb-4">
@@ -45,12 +45,12 @@ export function SocialProof() {
                     <Star key={i} className="h-4 w-4 text-gold fill-gold" />
                   ))}
                 </div>
-                <p className="text-foreground/90 font-medium italic mb-6 leading-relaxed">
+                <p className="text-foreground font-medium italic mb-6 leading-relaxed">
                   "{testimonial.text}"
                 </p>
                 <div>
-                  <h4 className="font-bold text-white text-lg">{testimonial.name}</h4>
-                  <p className="text-gold text-sm">{testimonial.role}</p>
+                  <h4 className="font-bold text-foreground text-lg">{testimonial.name}</h4>
+                  <p className="text-gold-dark font-medium text-sm">{testimonial.role}</p>
                 </div>
               </CardContent>
             </Card>

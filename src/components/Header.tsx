@@ -34,7 +34,7 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300',
-        isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-md py-2' : 'bg-black py-4',
+        isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-sm py-2' : 'bg-background py-4',
       )}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -54,36 +54,36 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('servicos')}
-              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-bold"
+              className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Serviços
             </button>
             <button
               onClick={() => scrollToSection('sobre')}
-              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-bold"
+              className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Sobre
             </button>
             <button
               onClick={() => scrollToSection('localizacao')}
-              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-bold"
+              className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Localização
             </button>
             <button
               onClick={() => scrollToSection('faq')}
-              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-bold"
+              className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Dúvidas
             </button>
             <Link
               to="/guia-bpc"
-              className="text-white hover:text-yellow-500 transition-colors text-sm uppercase tracking-wider font-bold"
+              className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Guia BPC
             </Link>
             <Button
-              className="bg-yellow-600 hover:bg-yellow-700 text-white rounded-none px-6 uppercase text-sm font-bold tracking-wider"
+              className="bg-gold hover:bg-gold/90 text-black rounded-none px-6 uppercase text-sm font-bold tracking-wider shadow-sm"
               onClick={() =>
                 window.open(
                   'https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).',
@@ -97,7 +97,7 @@ export function Header() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -107,31 +107,40 @@ export function Header() {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-black border-t border-gray-800 shadow-xl py-4 flex flex-col items-center gap-4">
-          <button onClick={() => scrollToSection('servicos')} className="text-white text-lg py-2">
+        <div className="md:hidden absolute top-full left-0 w-full bg-background border-t border-border shadow-xl py-4 flex flex-col items-center gap-4">
+          <button
+            onClick={() => scrollToSection('servicos')}
+            className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
+          >
             Serviços
           </button>
-          <button onClick={() => scrollToSection('sobre')} className="text-white text-lg py-2">
+          <button
+            onClick={() => scrollToSection('sobre')}
+            className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
+          >
             Sobre
           </button>
           <button
             onClick={() => scrollToSection('localizacao')}
-            className="text-white text-lg py-2"
+            className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
           >
             Localização
           </button>
-          <button onClick={() => scrollToSection('faq')} className="text-white text-lg py-2">
+          <button
+            onClick={() => scrollToSection('faq')}
+            className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
+          >
             Dúvidas
           </button>
           <Link
             to="/guia-bpc"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-white text-lg py-2"
+            className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
           >
             Guia BPC
           </Link>
           <Button
-            className="bg-yellow-600 hover:bg-yellow-700 text-white w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider"
+            className="bg-gold hover:bg-gold/90 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm"
             onClick={() =>
               window.open(
                 'https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).',

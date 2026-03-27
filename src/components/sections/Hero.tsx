@@ -5,13 +5,16 @@ import { Badge } from '@/components/ui/badge'
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <section
+      id="inicio"
+      className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-background"
+    >
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/80 via-[#111111]/90 to-[#111111] z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background z-10" />
         <img
-          src="https://img.usecurling.com/p/1920/1080?q=law%20office&color=black"
+          src="https://img.usecurling.com/p/1920/1080?q=law%20office&color=white"
           alt="Advogado Previdenciário atendendo cliente no escritório"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-40"
         />
       </div>
 
@@ -19,17 +22,17 @@ export function Hero() {
         <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
           <Badge
             variant="outline"
-            className="mb-6 border-gold text-gold px-4 py-1.5 rounded-full flex items-center gap-2 text-sm bg-black/50 backdrop-blur-sm"
+            className="mb-6 border-gold-dark text-gold-dark px-4 py-1.5 rounded-full flex items-center gap-2 text-sm bg-card/80 backdrop-blur-sm shadow-sm"
           >
             <MapPin size={16} />
             Atendimento presencial em Pelotas e Rio Grande
           </Badge>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
-            Advocacia Previdenciária <span className="text-gold">Especializada</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight">
+            Advocacia Previdenciária <span className="text-gold-dark">Especializada</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-foreground/90 mb-10 max-w-2xl font-medium">
+          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl font-medium">
             Orientação técnica e análise aprofundada para garantir seus direitos junto ao INSS.
             Atuação ética e transparente em cada etapa do seu processo.
           </p>
@@ -37,7 +40,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base h-14 px-8"
+              className="bg-gold text-black hover:bg-gold/90 text-base font-bold h-14 px-8 shadow-sm"
               asChild
             >
               <Link to="/#servicos">
@@ -47,7 +50,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-gold text-gold hover:bg-gold/10 text-base h-14 px-8"
+              className="border-foreground text-foreground hover:bg-foreground hover:text-background text-base font-bold h-14 px-8"
               asChild
             >
               <a

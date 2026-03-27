@@ -36,14 +36,14 @@ const articles = [
 
 export function Blog() {
   return (
-    <section id="blog" className="py-20 bg-[#151515]">
+    <section id="blog" className="py-20 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <BookOpen className="h-10 w-10 text-[#D4AF37] mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Artigos Úteis & <span className="text-[#D4AF37]">Blog</span>
+          <BookOpen className="h-10 w-10 text-gold mx-auto mb-4" />
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            Artigos Úteis & <span className="text-gold-dark">Blog</span>
           </h2>
-          <p className="text-foreground/90 text-lg font-medium">
+          <p className="text-muted-foreground text-lg font-medium">
             Informações técnicas e atualizadas para ajudar você a entender melhor seus direitos
             previdenciários.
           </p>
@@ -55,12 +55,12 @@ export function Blog() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-[#1A1A1A] border border-border rounded-lg px-6 data-[state=open]:border-[#D4AF37]/50 transition-colors"
+                className="bg-card border border-border rounded-lg px-6 data-[state=open]:border-gold shadow-sm transition-colors"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold hover:text-[#D4AF37] hover:no-underline py-4 text-white">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-gold-dark hover:no-underline py-4 text-foreground">
                   {article.title}
                 </AccordionTrigger>
-                <AccordionContent className="text-foreground/90 font-medium leading-relaxed text-base pb-6 pt-2">
+                <AccordionContent className="text-muted-foreground font-medium leading-relaxed text-base pb-6 pt-2">
                   {article.content}
                 </AccordionContent>
               </AccordionItem>
