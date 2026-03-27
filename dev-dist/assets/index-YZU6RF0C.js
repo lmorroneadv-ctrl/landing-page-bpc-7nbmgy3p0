@@ -15986,7 +15986,7 @@ function useLocation() {
 	return import_react.useContext(LocationContext).location;
 }
 var navigateEffectWarning = `You should call navigate() in a React.useEffect(), not when your component is first rendered.`;
-function useIsomorphicLayoutEffect(cb) {
+function useIsomorphicLayoutEffect$1(cb) {
 	if (!import_react.useContext(NavigationContext).static) import_react.useLayoutEffect(cb);
 }
 function useNavigate() {
@@ -16001,7 +16001,7 @@ function useNavigateUnstable() {
 	let { pathname: locationPathname } = useLocation();
 	let routePathnamesJson = JSON.stringify(getResolveToMatches(matches));
 	let activeRef = import_react.useRef(false);
-	useIsomorphicLayoutEffect(() => {
+	useIsomorphicLayoutEffect$1(() => {
 		activeRef.current = true;
 	});
 	return import_react.useCallback((to, options = {}) => {
@@ -16321,7 +16321,7 @@ function useNavigateStable() {
 	let { router } = useDataRouterContext("useNavigate");
 	let id = useCurrentRouteId("useNavigate");
 	let activeRef = import_react.useRef(false);
-	useIsomorphicLayoutEffect(() => {
+	useIsomorphicLayoutEffect$1(() => {
 		activeRef.current = true;
 	});
 	return import_react.useCallback(async (to, options = {}) => {
@@ -17473,6 +17473,10 @@ var ChevronRight = createLucideIcon("chevron-right", [["path", {
 	d: "m9 18 6-6-6-6",
 	key: "mthhwq"
 }]]);
+var ChevronUp = createLucideIcon("chevron-up", [["path", {
+	d: "m18 15-6-6-6 6",
+	key: "153udz"
+}]]);
 var CircleCheck = createLucideIcon("circle-check", [["circle", {
 	cx: "12",
 	cy: "12",
@@ -18079,7 +18083,7 @@ function createSlot$1(ownerName) {
 	Slot2.displayName = `${ownerName}.Slot`;
 	return Slot2;
 }
-var Slot = /* @__PURE__ */ createSlot$1("Slot");
+var Slot$1 = /* @__PURE__ */ createSlot$1("Slot");
 /* @__NO_SIDE_EFFECTS__ */
 function createSlotClone$1(ownerName) {
 	const SlotClone = import_react.forwardRef((props, forwardedRef) => {
@@ -19646,7 +19650,7 @@ var buttonVariants = cva("inline-flex items-center justify-center gap-2 whitespa
 	}
 });
 var Button = import_react.forwardRef(({ className, variant, size, asChild = false, ...props }, ref) => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(asChild ? Slot : "button", {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(asChild ? Slot$1 : "button", {
 		"data-uid": "src/components/ui/button.tsx:44:7",
 		"data-prohibitions": "[editContent]",
 		className: cn$1(buttonVariants({
@@ -20225,6 +20229,25 @@ var CardFooter = import_react.forwardRef(({ className, ...props }, ref) => /* @_
 CardFooter.displayName = "CardFooter";
 //#endregion
 //#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-context@1.1.2_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-context/dist/index.mjs
+function createContext2(rootComponentName, defaultContext) {
+	const Context = import_react.createContext(defaultContext);
+	const Provider = (props) => {
+		const { children, ...context } = props;
+		const value = import_react.useMemo(() => context, Object.values(context));
+		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Context.Provider, {
+			value,
+			children
+		});
+	};
+	Provider.displayName = rootComponentName + "Provider";
+	function useContext2(consumerName) {
+		const context = import_react.useContext(Context);
+		if (context) return context;
+		if (defaultContext !== void 0) return defaultContext;
+		throw new Error(`\`${consumerName}\` must be used within \`${rootComponentName}\``);
+	}
+	return [Provider, useContext2];
+}
 function createContextScope(scopeName, createContextScopeDeps = []) {
 	let defaultContexts = [];
 	function createContext3(rootComponentName, defaultContext) {
@@ -20651,11 +20674,11 @@ function getElementRef(element) {
 //#endregion
 //#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-id@1.1.1_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-id/dist/index.mjs
 var useReactId = import_react[" useId ".trim().toString()] || (() => void 0);
-var count$1 = 0;
+var count$2 = 0;
 function useId(deterministicId) {
 	const [id, setId] = import_react.useState(useReactId());
 	useLayoutEffect2(() => {
-		if (!deterministicId) setId((reactId) => reactId ?? String(count$1++));
+		if (!deterministicId) setId((reactId) => reactId ?? String(count$2++));
 	}, [deterministicId]);
 	return deterministicId || (id ? `radix-${id}` : "");
 }
@@ -20679,7 +20702,7 @@ var Collapsible = import_react.forwardRef((props, forwardedRef) => {
 		open,
 		onOpenToggle: import_react.useCallback(() => setOpen((prevOpen) => !prevOpen), [setOpen]),
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
-			"data-state": getState$1(open),
+			"data-state": getState$2(open),
 			"data-disabled": disabled ? "" : void 0,
 			...collapsibleProps,
 			ref: forwardedRef
@@ -20687,15 +20710,15 @@ var Collapsible = import_react.forwardRef((props, forwardedRef) => {
 	});
 });
 Collapsible.displayName = COLLAPSIBLE_NAME;
-var TRIGGER_NAME$1 = "CollapsibleTrigger";
+var TRIGGER_NAME$2 = "CollapsibleTrigger";
 var CollapsibleTrigger = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeCollapsible, ...triggerProps } = props;
-	const context = useCollapsibleContext(TRIGGER_NAME$1, __scopeCollapsible);
+	const context = useCollapsibleContext(TRIGGER_NAME$2, __scopeCollapsible);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.button, {
 		type: "button",
 		"aria-controls": context.contentId,
 		"aria-expanded": context.open || false,
-		"data-state": getState$1(context.open),
+		"data-state": getState$2(context.open),
 		"data-disabled": context.disabled ? "" : void 0,
 		disabled: context.disabled,
 		...triggerProps,
@@ -20703,11 +20726,11 @@ var CollapsibleTrigger = import_react.forwardRef((props, forwardedRef) => {
 		onClick: composeEventHandlers(props.onClick, context.onOpenToggle)
 	});
 });
-CollapsibleTrigger.displayName = TRIGGER_NAME$1;
-var CONTENT_NAME$1 = "CollapsibleContent";
+CollapsibleTrigger.displayName = TRIGGER_NAME$2;
+var CONTENT_NAME$2 = "CollapsibleContent";
 var CollapsibleContent = import_react.forwardRef((props, forwardedRef) => {
 	const { forceMount, ...contentProps } = props;
-	const context = useCollapsibleContext(CONTENT_NAME$1, props.__scopeCollapsible);
+	const context = useCollapsibleContext(CONTENT_NAME$2, props.__scopeCollapsible);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Presence, {
 		present: forceMount || context.open,
 		children: ({ present }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CollapsibleContentImpl, {
@@ -20717,10 +20740,10 @@ var CollapsibleContent = import_react.forwardRef((props, forwardedRef) => {
 		})
 	});
 });
-CollapsibleContent.displayName = CONTENT_NAME$1;
+CollapsibleContent.displayName = CONTENT_NAME$2;
 var CollapsibleContentImpl = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeCollapsible, present, children, ...contentProps } = props;
-	const context = useCollapsibleContext(CONTENT_NAME$1, __scopeCollapsible);
+	const context = useCollapsibleContext(CONTENT_NAME$2, __scopeCollapsible);
 	const [isPresent, setIsPresent] = import_react.useState(present);
 	const ref = import_react.useRef(null);
 	const composedRefs = useComposedRefs(forwardedRef, ref);
@@ -20755,7 +20778,7 @@ var CollapsibleContentImpl = import_react.forwardRef((props, forwardedRef) => {
 		}
 	}, [context.open, present]);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
-		"data-state": getState$1(context.open),
+		"data-state": getState$2(context.open),
 		"data-disabled": context.disabled ? "" : void 0,
 		id: context.contentId,
 		hidden: !isOpen,
@@ -20769,12 +20792,12 @@ var CollapsibleContentImpl = import_react.forwardRef((props, forwardedRef) => {
 		children: isOpen && children
 	});
 });
-function getState$1(open) {
+function getState$2(open) {
 	return open ? "open" : "closed";
 }
-var Root$2 = Collapsible;
-var Trigger = CollapsibleTrigger;
-var Content = CollapsibleContent;
+var Root$3 = Collapsible;
+var Trigger$1 = CollapsibleTrigger;
+var Content$1 = CollapsibleContent;
 //#endregion
 //#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-direction@1.1.1_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-direction/dist/index.mjs
 var DirectionContext = import_react.createContext(void 0);
@@ -20942,9 +20965,9 @@ var AccordionItem$1 = import_react.forwardRef((props, forwardedRef) => {
 		open,
 		disabled,
 		triggerId,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$2, {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$3, {
 			"data-orientation": accordionContext.orientation,
-			"data-state": getState(open),
+			"data-state": getState$1(open),
 			...collapsibleScope,
 			...accordionItemProps,
 			ref: forwardedRef,
@@ -20965,23 +20988,23 @@ var AccordionHeader = import_react.forwardRef((props, forwardedRef) => {
 	const itemContext = useAccordionItemContext(HEADER_NAME, __scopeAccordion);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.h3, {
 		"data-orientation": accordionContext.orientation,
-		"data-state": getState(itemContext.open),
+		"data-state": getState$1(itemContext.open),
 		"data-disabled": itemContext.disabled ? "" : void 0,
 		...headerProps,
 		ref: forwardedRef
 	});
 });
 AccordionHeader.displayName = HEADER_NAME;
-var TRIGGER_NAME = "AccordionTrigger";
+var TRIGGER_NAME$1 = "AccordionTrigger";
 var AccordionTrigger$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeAccordion, ...triggerProps } = props;
 	const accordionContext = useAccordionContext(ACCORDION_NAME, __scopeAccordion);
-	const itemContext = useAccordionItemContext(TRIGGER_NAME, __scopeAccordion);
-	const collapsibleContext = useAccordionCollapsibleContext(TRIGGER_NAME, __scopeAccordion);
+	const itemContext = useAccordionItemContext(TRIGGER_NAME$1, __scopeAccordion);
+	const collapsibleContext = useAccordionCollapsibleContext(TRIGGER_NAME$1, __scopeAccordion);
 	const collapsibleScope = useCollapsibleScope(__scopeAccordion);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection$1.ItemSlot, {
 		scope: __scopeAccordion,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Trigger, {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Trigger$1, {
 			"aria-disabled": itemContext.open && !collapsibleContext.collapsible || void 0,
 			"data-orientation": accordionContext.orientation,
 			id: itemContext.triggerId,
@@ -20991,14 +21014,14 @@ var AccordionTrigger$1 = import_react.forwardRef((props, forwardedRef) => {
 		})
 	});
 });
-AccordionTrigger$1.displayName = TRIGGER_NAME;
-var CONTENT_NAME = "AccordionContent";
+AccordionTrigger$1.displayName = TRIGGER_NAME$1;
+var CONTENT_NAME$1 = "AccordionContent";
 var AccordionContent$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeAccordion, ...contentProps } = props;
 	const accordionContext = useAccordionContext(ACCORDION_NAME, __scopeAccordion);
-	const itemContext = useAccordionItemContext(CONTENT_NAME, __scopeAccordion);
+	const itemContext = useAccordionItemContext(CONTENT_NAME$1, __scopeAccordion);
 	const collapsibleScope = useCollapsibleScope(__scopeAccordion);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Content, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Content$1, {
 		role: "region",
 		"aria-labelledby": itemContext.triggerId,
 		"data-orientation": accordionContext.orientation,
@@ -21012,8 +21035,8 @@ var AccordionContent$1 = import_react.forwardRef((props, forwardedRef) => {
 		}
 	});
 });
-AccordionContent$1.displayName = CONTENT_NAME;
-function getState(open) {
+AccordionContent$1.displayName = CONTENT_NAME$1;
+function getState$1(open) {
 	return open ? "open" : "closed";
 }
 var Root2$1 = Accordion$1;
@@ -21382,18 +21405,18 @@ var Label$1 = import_react.forwardRef((props, forwardedRef) => {
 	});
 });
 Label$1.displayName = NAME$1;
-var Root$1 = Label$1;
+var Root$2 = Label$1;
 //#endregion
 //#region src/components/ui/label.tsx
 var labelVariants = cva("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70");
-var Label = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$1, {
+var Label = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$2, {
 	"data-uid": "src/components/ui/label.tsx:16:3",
 	"data-prohibitions": "[editContent]",
 	ref,
 	className: cn$1(labelVariants(), className),
 	...props
 }));
-Label.displayName = Root$1.displayName;
+Label.displayName = Root$2.displayName;
 //#endregion
 //#region src/components/sections/Ebook.tsx
 function Ebook() {
@@ -21666,33 +21689,34 @@ var perfil_20_6d6d4_default = "/assets/perfil-20-6d6d4-CN0gCp5s.png";
 //#endregion
 //#region src/components/sections/Biography.tsx
 function Biography() {
+	const [isExpanded, setIsExpanded] = (0, import_react.useState)(false);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/Biography.tsx:6:5",
+		"data-uid": "src/components/sections/Biography.tsx:10:5",
 		"data-prohibitions": "[editContent]",
 		id: "sobre",
-		className: "py-20 bg-muted",
+		className: "py-20 bg-muted scroll-mt-20",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/Biography.tsx:7:7",
+			"data-uid": "src/components/sections/Biography.tsx:11:7",
 			"data-prohibitions": "[editContent]",
 			className: "container mx-auto px-4 md:px-6",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Biography.tsx:8:9",
+				"data-uid": "src/components/sections/Biography.tsx:12:9",
 				"data-prohibitions": "[editContent]",
-				className: "flex flex-col lg:flex-row items-center gap-12 lg:gap-20",
+				className: "flex flex-col lg:flex-row items-start gap-12 lg:gap-20",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/Biography.tsx:9:11",
+					"data-uid": "src/components/sections/Biography.tsx:13:11",
 					"data-prohibitions": "[]",
 					className: "w-full lg:w-5/12",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Biography.tsx:10:13",
+						"data-uid": "src/components/sections/Biography.tsx:14:13",
 						"data-prohibitions": "[]",
 						className: "relative mx-auto max-w-md",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:11:15",
+							"data-uid": "src/components/sections/Biography.tsx:15:15",
 							"data-prohibitions": "[]",
 							className: "absolute inset-0 bg-gold rounded-xl rotate-3 scale-105 opacity-20"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							"data-uid": "src/components/sections/Biography.tsx:12:15",
+							"data-uid": "src/components/sections/Biography.tsx:16:15",
 							"data-prohibitions": "[editContent]",
 							src: perfil_20_6d6d4_default,
 							alt: "Advogado Previdenciário Lucas Morrone Costa especialista em INSS",
@@ -21700,81 +21724,104 @@ function Biography() {
 						})]
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/Biography.tsx:20:11",
+					"data-uid": "src/components/sections/Biography.tsx:24:11",
 					"data-prohibitions": "[editContent]",
 					className: "w-full lg:w-7/12",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:21:13",
+							"data-uid": "src/components/sections/Biography.tsx:25:13",
 							"data-prohibitions": "[]",
 							className: "inline-block px-3 py-1 bg-gold/10 border border-gold/30 text-gold-dark text-sm font-semibold rounded-full mb-6",
 							children: "OAB/RS 107485"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							"data-uid": "src/components/sections/Biography.tsx:24:13",
+							"data-uid": "src/components/sections/Biography.tsx:28:13",
 							"data-prohibitions": "[]",
 							className: "text-3xl md:text-4xl font-bold mb-6 text-foreground",
 							children: "Lucas Morrone Costa"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:28:13",
-							"data-prohibitions": "[]",
-							className: "space-y-4 text-lg text-muted-foreground font-medium mb-8",
+							"data-uid": "src/components/sections/Biography.tsx:32:13",
+							"data-prohibitions": "[editContent]",
+							className: "space-y-4 text-lg text-muted-foreground font-medium mb-6",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:29:15",
+								"data-uid": "src/components/sections/Biography.tsx:33:15",
 								"data-prohibitions": "[]",
 								children: "Sou o advogado Lucas Morrone Costa, especialista em Direito Previdenciário. Atendo presencialmente e online, oferecendo análise técnica precisa e orientação personalizada para cada cliente."
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:34:15",
-								"data-prohibitions": "[]",
-								children: "Meu objetivo é proporcionar segurança jurídica, garantindo que todos os direitos dos segurados sejam rigorosamente respeitados pelo INSS, com total transparência em cada etapa do processo."
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:41:13",
-							"data-prohibitions": "[editContent]",
-							className: "grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8",
-							children: [
-								"Atendimento Especializado",
-								"Análise Técnica Aprofundada",
-								"Atuação Ética e Transparente",
-								"Foco no Direito do Segurado"
-							].map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Biography.tsx:48:17",
+							}), isExpanded && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/Biography.tsx:40:17",
 								"data-prohibitions": "[editContent]",
-								className: "flex items-center",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Biography.tsx:49:19",
-									"data-prohibitions": "[]",
-									className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-										"data-uid": "src/components/sections/Biography.tsx:50:21",
+								className: "animate-in fade-in slide-in-from-top-2 duration-300 space-y-8 pt-2",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/components/sections/Biography.tsx:41:19",
+										"data-prohibitions": "[]",
+										children: "Meu objetivo é proporcionar segurança jurídica, garantindo que todos os direitos dos segurados sejam rigorosamente respeitados pelo INSS, com total transparência em cada etapa do processo."
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/components/sections/Biography.tsx:47:19",
 										"data-prohibitions": "[editContent]",
-										className: "h-3.5 w-3.5 text-gold-dark"
+										className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
+										children: [
+											"Atendimento Especializado",
+											"Análise Técnica Aprofundada",
+											"Atuação Ética e Transparente",
+											"Foco no Direito do Segurado"
+										].map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/components/sections/Biography.tsx:54:23",
+											"data-prohibitions": "[editContent]",
+											className: "flex items-center",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												"data-uid": "src/components/sections/Biography.tsx:55:25",
+												"data-prohibitions": "[]",
+												className: "flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mr-3",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+													"data-uid": "src/components/sections/Biography.tsx:56:27",
+													"data-prohibitions": "[editContent]",
+													className: "h-3.5 w-3.5 text-gold-dark"
+												})
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/components/sections/Biography.tsx:58:25",
+												"data-prohibitions": "[editContent]",
+												className: "text-foreground text-base font-medium",
+												children: item
+											})]
+										}, idx))
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/Biography.tsx:63:19",
+										"data-prohibitions": "[]",
+										className: "bg-card border-l-4 border-gold p-6 rounded-r-lg shadow-soft",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+											"data-uid": "src/components/sections/Biography.tsx:64:21",
+											"data-prohibitions": "[]",
+											className: "text-gold-dark font-semibold mb-2 text-sm uppercase tracking-wider",
+											children: "Nota Importante"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											"data-uid": "src/components/sections/Biography.tsx:67:21",
+											"data-prohibitions": "[]",
+											className: "text-sm text-muted-foreground font-medium italic leading-relaxed",
+											children: "Até 2023 utilizei o nome Lucas Moran Costa. A atualização para Lucas Morrone Costa já está presente em todos os meus registros oficiais. Documentos ou referências anteriores em nome de Lucas Moran Costa correspondem ao mesmo profissional, inscrito na OAB/RS 107485."
+										})]
 									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/sections/Biography.tsx:52:19",
-									"data-prohibitions": "[editContent]",
-									className: "text-foreground font-medium",
-									children: item
-								})]
-							}, idx))
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Biography.tsx:57:13",
-							"data-prohibitions": "[]",
-							className: "bg-card border-l-4 border-gold p-6 rounded-r-lg shadow-soft",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-								"data-uid": "src/components/sections/Biography.tsx:58:15",
-								"data-prohibitions": "[]",
-								className: "text-gold-dark font-semibold mb-2 text-sm uppercase tracking-wider",
-								children: "Nota Importante"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								"data-uid": "src/components/sections/Biography.tsx:61:15",
-								"data-prohibitions": "[]",
-								className: "text-sm text-muted-foreground font-medium italic leading-relaxed",
-								children: "Até 2023 utilizei o nome Lucas Moran Costa. A atualização para Lucas Morrone Costa já está presente em todos os meus registros oficiais. Documentos ou referências anteriores em nome de Lucas Moran Costa correspondem ao mesmo profissional, inscrito na OAB/RS 107485."
+								]
 							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+							"data-uid": "src/components/sections/Biography.tsx:78:13",
+							"data-prohibitions": "[editContent]",
+							variant: "outline",
+							onClick: () => setIsExpanded(!isExpanded),
+							className: "mt-2 text-gold-dark border-gold-dark/30 hover:bg-gold hover:text-black font-semibold rounded-full px-6 transition-all duration-300",
+							children: isExpanded ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Ver menos ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronUp, {
+								"data-uid": "src/components/sections/Biography.tsx:85:29",
+								"data-prohibitions": "[editContent]",
+								className: "ml-2 h-4 w-4"
+							})] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Ver mais sobre Lucas ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, {
+								"data-uid": "src/components/sections/Biography.tsx:89:40",
+								"data-prohibitions": "[editContent]",
+								className: "ml-2 h-4 w-4"
+							})] })
 						})
 					]
 				})]
@@ -21972,7 +22019,7 @@ function Updates() {
 		"data-uid": "src/components/sections/Updates.tsx:31:5",
 		"data-prohibitions": "[editContent]",
 		id: "atualizacoes",
-		className: "py-20 bg-muted border-t border-border/50",
+		className: "py-20 bg-muted border-t border-border/50 scroll-mt-20",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/sections/Updates.tsx:32:7",
 			"data-prohibitions": "[editContent]",
@@ -22003,117 +22050,102 @@ function Updates() {
 					"data-uid": "src/components/sections/Updates.tsx:43:9",
 					"data-prohibitions": "[]",
 					className: "hidden sm:flex flex-row justify-center gap-4 mb-16",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-							"data-uid": "src/components/sections/Updates.tsx:44:11",
-							"data-prohibitions": "[]",
-							variant: "outline",
-							className: "border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold",
-							onClick: () => scrollTo("atestmed"),
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
-								"data-uid": "src/components/sections/Updates.tsx:49:13",
-								"data-prohibitions": "[editContent]",
-								className: "mr-2 h-4 w-4"
-							}), " AtestMed (Regras 2026)"]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-							"data-uid": "src/components/sections/Updates.tsx:51:11",
-							"data-prohibitions": "[]",
-							variant: "outline",
-							className: "border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold",
-							onClick: () => scrollTo("auxilio"),
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
-								"data-uid": "src/components/sections/Updates.tsx:56:13",
-								"data-prohibitions": "[editContent]",
-								className: "mr-2 h-4 w-4"
-							}), " Auxílio-Acidente"]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-							"data-uid": "src/components/sections/Updates.tsx:58:11",
-							"data-prohibitions": "[]",
-							variant: "outline",
-							className: "border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold",
-							onClick: () => scrollTo("dicas"),
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-								"data-uid": "src/components/sections/Updates.tsx:63:13",
-								"data-prohibitions": "[editContent]",
-								className: "mr-2 h-4 w-4"
-							}), " Dicas de Aprovação"]
-						})
-					]
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+						"data-uid": "src/components/sections/Updates.tsx:44:11",
+						"data-prohibitions": "[]",
+						variant: "outline",
+						className: "border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold px-6 transition-colors",
+						onClick: () => scrollTo("atestmed"),
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
+							"data-uid": "src/components/sections/Updates.tsx:49:13",
+							"data-prohibitions": "[editContent]",
+							className: "mr-2 h-4 w-4"
+						}), " AtestMed (Regras 2026)"]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+						"data-uid": "src/components/sections/Updates.tsx:51:11",
+						"data-prohibitions": "[]",
+						variant: "outline",
+						className: "border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold px-6 transition-colors",
+						onClick: () => scrollTo("auxilio"),
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
+							"data-uid": "src/components/sections/Updates.tsx:56:13",
+							"data-prohibitions": "[editContent]",
+							className: "mr-2 h-4 w-4"
+						}), " Auxílio-Acidente"]
+					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/Updates.tsx:67:9",
+					"data-uid": "src/components/sections/Updates.tsx:60:9",
 					"data-prohibitions": "[editContent]",
 					className: "hidden lg:grid grid-cols-3 gap-8",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Updates.tsx:68:11",
+						"data-uid": "src/components/sections/Updates.tsx:61:11",
 						"data-prohibitions": "[editContent]",
 						className: "col-span-2 space-y-16",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Updates.tsx:69:13",
+							"data-uid": "src/components/sections/Updates.tsx:62:13",
 							"data-prohibitions": "[editContent]",
 							id: "atestmed",
 							className: "scroll-mt-32",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Updates.tsx:70:15",
+								"data-uid": "src/components/sections/Updates.tsx:63:15",
 								"data-prohibitions": "[]",
 								className: "flex items-center gap-3 mb-6",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Updates.tsx:71:17",
+									"data-uid": "src/components/sections/Updates.tsx:64:17",
 									"data-prohibitions": "[]",
 									className: "bg-gold/10 p-3 rounded-lg",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
-										"data-uid": "src/components/sections/Updates.tsx:72:19",
+										"data-uid": "src/components/sections/Updates.tsx:65:19",
 										"data-prohibitions": "[editContent]",
 										className: "h-6 w-6 text-gold-dark"
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									"data-uid": "src/components/sections/Updates.tsx:74:17",
+									"data-uid": "src/components/sections/Updates.tsx:67:17",
 									"data-prohibitions": "[]",
 									className: "text-2xl font-bold text-foreground",
 									children: "Como pedir AtestMed pelo INSS em 2026?"
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Updates.tsx:78:15",
+								"data-uid": "src/components/sections/Updates.tsx:71:15",
 								"data-prohibitions": "[editContent]",
 								className: "bg-card rounded-xl p-6 border border-border shadow-soft",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Updates.tsx:79:17",
+										"data-uid": "src/components/sections/Updates.tsx:72:17",
 										"data-prohibitions": "[]",
 										className: "text-foreground font-medium mb-6",
 										children: [
 											"Para pedir o ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:80:32",
+												"data-uid": "src/components/sections/Updates.tsx:73:32",
 												"data-prohibitions": "[]",
 												children: "AtestMed pelo INSS em 2026"
 											}),
 											", você deve acessar o aplicativo ou site ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:81:38",
+												"data-uid": "src/components/sections/Updates.tsx:74:38",
 												"data-prohibitions": "[]",
 												children: "Meu INSS"
 											}),
 											", ou ligar para a central 135. O sistema de análise documental remota foi atualizado pela",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:83:19",
+												"data-uid": "src/components/sections/Updates.tsx:76:19",
 												"data-prohibitions": "[]",
 												children: "Lei 15.265/2025"
 											}),
 											" e",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:84:19",
+												"data-uid": "src/components/sections/Updates.tsx:77:19",
 												"data-prohibitions": "[]",
 												children: "Portaria Conjunta MPS/INSS nº 13/2026"
 											}),
 											". O novo modelo viabiliza a concessão de benefícios por incapacidade (Auxílio Doença) por",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:86:19",
+												"data-uid": "src/components/sections/Updates.tsx:79:19",
 												"data-prohibitions": "[]",
 												children: "até 90 dias"
 											}),
@@ -22121,24 +22153,24 @@ function Updates() {
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:88:17",
+										"data-uid": "src/components/sections/Updates.tsx:81:17",
 										"data-prohibitions": "[editContent]",
 										className: "grid sm:grid-cols-2 gap-6 mb-8",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:89:19",
+											"data-uid": "src/components/sections/Updates.tsx:82:19",
 											"data-prohibitions": "[editContent]",
 											className: "bg-background p-5 rounded-lg border border-border",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-												"data-uid": "src/components/sections/Updates.tsx:90:21",
+												"data-uid": "src/components/sections/Updates.tsx:83:21",
 												"data-prohibitions": "[]",
 												className: "text-foreground font-semibold flex items-center gap-2 mb-4",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
-													"data-uid": "src/components/sections/Updates.tsx:91:23",
+													"data-uid": "src/components/sections/Updates.tsx:84:23",
 													"data-prohibitions": "[editContent]",
 													className: "h-5 w-5 text-gold"
 												}), " Docs Obrigatórios"]
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-												"data-uid": "src/components/sections/Updates.tsx:93:21",
+												"data-uid": "src/components/sections/Updates.tsx:86:21",
 												"data-prohibitions": "[editContent]",
 												className: "space-y-3 text-sm text-muted-foreground font-medium",
 												children: [
@@ -22148,12 +22180,12 @@ function Updates() {
 													"Data e código CID",
 													"Assinatura e CRM/CRO"
 												].map((i, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-													"data-uid": "src/components/sections/Updates.tsx:101:25",
+													"data-uid": "src/components/sections/Updates.tsx:94:25",
 													"data-prohibitions": "[editContent]",
 													className: "flex gap-2",
 													children: [
 														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-															"data-uid": "src/components/sections/Updates.tsx:102:27",
+															"data-uid": "src/components/sections/Updates.tsx:95:27",
 															"data-prohibitions": "[editContent]",
 															className: "h-4 w-4 text-gold shrink-0 mt-0.5"
 														}),
@@ -22163,53 +22195,53 @@ function Updates() {
 												}, idx))
 											})]
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:107:19",
+											"data-uid": "src/components/sections/Updates.tsx:100:19",
 											"data-prohibitions": "[]",
 											className: "bg-background p-5 rounded-lg border border-border",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-												"data-uid": "src/components/sections/Updates.tsx:108:21",
+												"data-uid": "src/components/sections/Updates.tsx:101:21",
 												"data-prohibitions": "[]",
 												className: "text-foreground font-semibold flex items-center gap-2 mb-4",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
-													"data-uid": "src/components/sections/Updates.tsx:109:23",
+													"data-uid": "src/components/sections/Updates.tsx:102:23",
 													"data-prohibitions": "[editContent]",
 													className: "h-5 w-5 text-gold"
 												}), " Alertas e Regras"]
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-												"data-uid": "src/components/sections/Updates.tsx:111:21",
+												"data-uid": "src/components/sections/Updates.tsx:104:21",
 												"data-prohibitions": "[]",
 												className: "space-y-4 text-sm text-muted-foreground font-medium",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-													"data-uid": "src/components/sections/Updates.tsx:112:23",
+													"data-uid": "src/components/sections/Updates.tsx:105:23",
 													"data-prohibitions": "[]",
 													className: "flex gap-2",
 													children: [
 														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
-															"data-uid": "src/components/sections/Updates.tsx:113:25",
+															"data-uid": "src/components/sections/Updates.tsx:106:25",
 															"data-prohibitions": "[editContent]",
 															className: "h-4 w-4 text-gold shrink-0 mt-0.5"
 														}),
 														" ",
 														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-															"data-uid": "src/components/sections/Updates.tsx:114:25",
+															"data-uid": "src/components/sections/Updates.tsx:107:25",
 															"data-prohibitions": "[]",
 															children: "Como solicitar:"
 														}),
 														" Aplicativo Meu INSS ou central 135."
 													]
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-													"data-uid": "src/components/sections/Updates.tsx:116:23",
+													"data-uid": "src/components/sections/Updates.tsx:109:23",
 													"data-prohibitions": "[]",
 													className: "flex gap-2",
 													children: [
 														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
-															"data-uid": "src/components/sections/Updates.tsx:117:25",
+															"data-uid": "src/components/sections/Updates.tsx:110:25",
 															"data-prohibitions": "[editContent]",
 															className: "h-4 w-4 text-gold shrink-0 mt-0.5"
 														}),
 														" ",
 														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-															"data-uid": "src/components/sections/Updates.tsx:118:25",
+															"data-uid": "src/components/sections/Updates.tsx:111:25",
 															"data-prohibitions": "[]",
 															children: "Limites:"
 														}),
@@ -22220,64 +22252,64 @@ function Updates() {
 										})]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/sections/Updates.tsx:124:17",
+										"data-uid": "src/components/sections/Updates.tsx:117:17",
 										"data-prohibitions": "[]",
 										className: "text-lg font-bold text-foreground mb-4 border-b border-border pb-2",
 										children: "Perguntas Frequentes sobre o AtestMed"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Accordion, {
-										"data-uid": "src/components/sections/Updates.tsx:127:17",
+										"data-uid": "src/components/sections/Updates.tsx:120:17",
 										"data-prohibitions": "[]",
 										type: "single",
 										collapsible: true,
 										className: "w-full",
 										children: [
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-												"data-uid": "src/components/sections/Updates.tsx:128:19",
+												"data-uid": "src/components/sections/Updates.tsx:121:19",
 												"data-prohibitions": "[]",
 												value: "1",
 												className: "border-border",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-													"data-uid": "src/components/sections/Updates.tsx:129:21",
+													"data-uid": "src/components/sections/Updates.tsx:122:21",
 													"data-prohibitions": "[]",
 													className: "text-foreground hover:text-gold-dark py-4 font-semibold",
 													children: "Qual a duração máxima do benefício AtestMed?"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-													"data-uid": "src/components/sections/Updates.tsx:132:21",
+													"data-uid": "src/components/sections/Updates.tsx:125:21",
 													"data-prohibitions": "[]",
 													className: "text-muted-foreground font-medium",
 													children: "Pelo sistema remoto de análise, o benefício pode ser concedido por até 90 dias ininterruptos."
 												})]
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-												"data-uid": "src/components/sections/Updates.tsx:137:19",
+												"data-uid": "src/components/sections/Updates.tsx:130:19",
 												"data-prohibitions": "[]",
 												value: "2",
 												className: "border-border",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-													"data-uid": "src/components/sections/Updates.tsx:138:21",
+													"data-uid": "src/components/sections/Updates.tsx:131:21",
 													"data-prohibitions": "[]",
 													className: "text-foreground hover:text-gold-dark py-4 font-semibold",
 													children: "Qual o prazo de análise pelo INSS?"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-													"data-uid": "src/components/sections/Updates.tsx:141:21",
+													"data-uid": "src/components/sections/Updates.tsx:134:21",
 													"data-prohibitions": "[]",
 													className: "text-muted-foreground font-medium",
 													children: "O INSS possui até 45 dias para concluir a avaliação do seu requerimento via AtestMed."
 												})]
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-												"data-uid": "src/components/sections/Updates.tsx:146:19",
+												"data-uid": "src/components/sections/Updates.tsx:139:19",
 												"data-prohibitions": "[]",
 												value: "3",
 												className: "border-border",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-													"data-uid": "src/components/sections/Updates.tsx:147:21",
+													"data-uid": "src/components/sections/Updates.tsx:140:21",
 													"data-prohibitions": "[]",
 													className: "text-foreground hover:text-gold-dark py-4 font-semibold",
 													children: "Quais são as regras para prorrogação?"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-													"data-uid": "src/components/sections/Updates.tsx:150:21",
+													"data-uid": "src/components/sections/Updates.tsx:143:21",
 													"data-prohibitions": "[]",
 													className: "text-muted-foreground font-medium",
 													children: "A prorrogação do benefício sempre exige obrigatoriamente a perícia médica (presencial ou por telemedicina)."
@@ -22288,43 +22320,43 @@ function Updates() {
 								]
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/Updates.tsx:159:13",
+							"data-uid": "src/components/sections/Updates.tsx:152:13",
 							"data-prohibitions": "[editContent]",
 							id: "auxilio",
 							className: "scroll-mt-32",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Updates.tsx:160:15",
+								"data-uid": "src/components/sections/Updates.tsx:153:15",
 								"data-prohibitions": "[]",
 								className: "flex items-center gap-3 mb-6",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/Updates.tsx:161:17",
+									"data-uid": "src/components/sections/Updates.tsx:154:17",
 									"data-prohibitions": "[]",
 									className: "bg-gold/10 p-3 rounded-lg",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
-										"data-uid": "src/components/sections/Updates.tsx:162:19",
+										"data-uid": "src/components/sections/Updates.tsx:155:19",
 										"data-prohibitions": "[editContent]",
 										className: "h-6 w-6 text-gold-dark"
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									"data-uid": "src/components/sections/Updates.tsx:164:17",
+									"data-uid": "src/components/sections/Updates.tsx:157:17",
 									"data-prohibitions": "[]",
 									className: "text-2xl font-bold text-foreground",
 									children: "Quais as novas regras do Auxílio-Acidente?"
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/Updates.tsx:168:15",
+								"data-uid": "src/components/sections/Updates.tsx:161:15",
 								"data-prohibitions": "[editContent]",
 								className: "bg-card p-6 rounded-xl border border-border shadow-soft",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										"data-uid": "src/components/sections/Updates.tsx:169:17",
+										"data-uid": "src/components/sections/Updates.tsx:162:17",
 										"data-prohibitions": "[]",
 										className: "text-foreground font-medium mb-6",
 										children: [
 											"Para os benefícios acidentários, implementou-se uma",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												"data-uid": "src/components/sections/Updates.tsx:171:19",
+												"data-uid": "src/components/sections/Updates.tsx:164:19",
 												"data-prohibitions": "[]",
 												children: "triagem documental obrigatória"
 											}),
@@ -22332,22 +22364,22 @@ function Updates() {
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:174:17",
+										"data-uid": "src/components/sections/Updates.tsx:167:17",
 										"data-prohibitions": "[]",
-										className: "bg-red-50 border-l-4 border-red-600 p-5 mb-6",
+										className: "bg-red-50 border-l-4 border-red-600 p-5 mb-6 rounded-lg",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-											"data-uid": "src/components/sections/Updates.tsx:175:19",
+											"data-uid": "src/components/sections/Updates.tsx:168:19",
 											"data-prohibitions": "[]",
 											className: "text-sm text-red-900 font-medium",
 											children: [
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-													"data-uid": "src/components/sections/Updates.tsx:176:21",
+													"data-uid": "src/components/sections/Updates.tsx:169:21",
 													"data-prohibitions": "[]",
 													children: "Risco de Negativa:"
 												}),
 												" A ausência de elementos probatórios essenciais resulta no ",
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-													"data-uid": "src/components/sections/Updates.tsx:177:43",
+													"data-uid": "src/components/sections/Updates.tsx:170:43",
 													"data-prohibitions": "[]",
 													children: "indeferimento imediato"
 												}),
@@ -22356,13 +22388,13 @@ function Updates() {
 										})
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/sections/Updates.tsx:181:17",
+										"data-uid": "src/components/sections/Updates.tsx:174:17",
 										"data-prohibitions": "[]",
 										className: "font-semibold text-foreground mb-4",
 										children: "Requisitos Essenciais na Documentação:"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:184:17",
+										"data-uid": "src/components/sections/Updates.tsx:177:17",
 										"data-prohibitions": "[editContent]",
 										className: "grid sm:grid-cols-3 gap-4",
 										children: [
@@ -22379,15 +22411,15 @@ function Updates() {
 												t: "Comprovação de sequelas que afetem o trabalho"
 											}
 										].map((I, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:190:21",
+											"data-uid": "src/components/sections/Updates.tsx:183:21",
 											"data-prohibitions": "[editContent]",
-											className: "bg-background p-5 rounded-lg border border-border flex flex-col items-center text-center",
+											className: "bg-background p-5 rounded-lg border border-border flex flex-col items-center text-center transition-colors hover:border-gold/30",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(I.icon, {
-												"data-uid": "src/components/sections/Updates.tsx:194:23",
+												"data-uid": "src/components/sections/Updates.tsx:187:23",
 												"data-prohibitions": "[editContent]",
 												className: "h-8 w-8 text-gold mb-3"
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												"data-uid": "src/components/sections/Updates.tsx:195:23",
+												"data-uid": "src/components/sections/Updates.tsx:188:23",
 												"data-prohibitions": "[editContent]",
 												className: "text-sm font-semibold text-foreground",
 												children: I.t
@@ -22397,296 +22429,1772 @@ function Updates() {
 								]
 							})]
 						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/Updates.tsx:203:11",
-						"data-prohibitions": "[editContent]",
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/components/sections/Updates.tsx:196:11",
+						"data-prohibitions": "[]",
 						className: "space-y-8",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/Updates.tsx:204:13",
-							"data-prohibitions": "[editContent]",
-							id: "dicas",
-							className: "scroll-mt-32",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-								"data-uid": "src/components/sections/Updates.tsx:205:15",
-								"data-prohibitions": "[editContent]",
-								className: "bg-card border-border shadow-soft",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardHeader, {
-									"data-uid": "src/components/sections/Updates.tsx:206:17",
-									"data-prohibitions": "[]",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardTitle, {
-										"data-uid": "src/components/sections/Updates.tsx:207:19",
-										"data-prohibitions": "[]",
-										className: "text-xl text-foreground flex gap-2",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-											"data-uid": "src/components/sections/Updates.tsx:208:21",
-											"data-prohibitions": "[editContent]",
-											className: "h-5 w-5 text-gold-dark"
-										}), " Dicas de Aprovação"]
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardContent, {
-									"data-uid": "src/components/sections/Updates.tsx:211:17",
-									"data-prohibitions": "[editContent]",
-									className: "space-y-5",
-									children: [
-										"Revise rigorosamente todos os dados do laudo médico antes do envio.",
-										"Capture imagens bem iluminadas e legíveis de atestados e documentos de identidade.",
-										"Jamais envie atestados com rasuras, emendas ou ausência de informações vitais."
-									].map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:217:21",
-										"data-prohibitions": "[editContent]",
-										className: "flex items-start gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											"data-uid": "src/components/sections/Updates.tsx:218:23",
-											"data-prohibitions": "[editContent]",
-											className: "bg-gold/10 p-2 rounded-md shrink-0 mt-0.5",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-												"data-uid": "src/components/sections/Updates.tsx:219:25",
-												"data-prohibitions": "[editContent]",
-												className: "text-gold-dark font-bold text-sm",
-												children: ["0", i + 1]
-											})
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											"data-uid": "src/components/sections/Updates.tsx:221:23",
-											"data-prohibitions": "[editContent]",
-											className: "text-sm text-muted-foreground font-medium",
-											children: t
-										})]
-									}, i))
-								})]
-							})
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-							"data-uid": "src/components/sections/Updates.tsx:228:13",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/Updates.tsx:197:13",
 							"data-prohibitions": "[]",
-							className: "bg-gradient-to-br from-background to-muted border-gold/30 shadow-md",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardHeader, {
-								"data-uid": "src/components/sections/Updates.tsx:229:15",
+							className: "sticky top-28",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+								"data-uid": "src/components/sections/Updates.tsx:198:15",
 								"data-prohibitions": "[]",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
-									"data-uid": "src/components/sections/Updates.tsx:230:17",
+								className: "bg-gradient-to-br from-background to-muted border-gold/30 shadow-md",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardHeader, {
+									"data-uid": "src/components/sections/Updates.tsx:199:17",
 									"data-prohibitions": "[]",
-									className: "text-xl text-foreground",
-									children: "Por que um advogado?"
-								})
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-								"data-uid": "src/components/sections/Updates.tsx:232:15",
-								"data-prohibitions": "[]",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/Updates.tsx:233:17",
-									"data-prohibitions": "[]",
-									className: "text-muted-foreground text-sm mb-6 leading-relaxed font-medium",
-									children: "Erros documentais custam o seu benefício. A assessoria especializada garante auditoria prévia detalhada, neutralizando riscos de negativas automáticas pelo INSS."
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									"data-uid": "src/components/sections/Updates.tsx:238:17",
-									"data-prohibitions": "[]",
-									className: "w-full bg-gold hover:bg-gold/90 text-black font-bold h-14 uppercase text-sm shadow-sm",
-									asChild: true,
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-										"data-uid": "src/components/sections/Updates.tsx:242:19",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
+										"data-uid": "src/components/sections/Updates.tsx:200:19",
 										"data-prohibitions": "[]",
-										href: "https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20ajuda%20com%20as%20novas%20regras%20do%20INSS.",
-										target: "_blank",
-										rel: "noopener noreferrer",
-										children: "Falar com a Equipe Legal"
+										className: "text-xl text-foreground",
+										children: "Por que um advogado?"
 									})
-								})]
-							})]
-						})]
-					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/Updates.tsx:255:9",
-					"data-prohibitions": "[editContent]",
-					className: "lg:hidden",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Accordion, {
-						"data-uid": "src/components/sections/Updates.tsx:256:11",
-						"data-prohibitions": "[editContent]",
-						type: "single",
-						collapsible: true,
-						className: "w-full space-y-4",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-								"data-uid": "src/components/sections/Updates.tsx:257:13",
-								"data-prohibitions": "[]",
-								value: "atestmed",
-								className: "bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-									"data-uid": "src/components/sections/Updates.tsx:261:15",
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
+									"data-uid": "src/components/sections/Updates.tsx:202:17",
 									"data-prohibitions": "[]",
-									className: "text-left font-bold text-lg hover:no-underline py-4",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:262:17",
-										"data-prohibitions": "[]",
-										className: "flex items-center gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
-											"data-uid": "src/components/sections/Updates.tsx:263:19",
-											"data-prohibitions": "[editContent]",
-											className: "h-5 w-5 text-gold-dark shrink-0"
-										}), "Regras AtestMed 2026"]
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
-									"data-uid": "src/components/sections/Updates.tsx:267:15",
-									"data-prohibitions": "[]",
-									className: "pt-2 pb-6",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/sections/Updates.tsx:268:17",
+										"data-uid": "src/components/sections/Updates.tsx:203:19",
 										"data-prohibitions": "[]",
-										className: "text-muted-foreground font-medium mb-4 text-sm",
-										children: "O sistema de análise remota permite benefícios por incapacidade por até 90 dias sem perícia presencial inicial."
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-										"data-uid": "src/components/sections/Updates.tsx:272:17",
-										"data-prohibitions": "[]",
-										className: "space-y-2 text-sm text-muted-foreground font-medium mb-4",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											"data-uid": "src/components/sections/Updates.tsx:273:19",
-											"data-prohibitions": "[]",
-											className: "flex gap-2",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-												"data-uid": "src/components/sections/Updates.tsx:274:21",
-												"data-prohibitions": "[editContent]",
-												className: "h-4 w-4 text-gold shrink-0 mt-0.5"
-											}), "Documentos: RG, Laudo legível (com CID), CRM/CRO."]
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											"data-uid": "src/components/sections/Updates.tsx:277:19",
-											"data-prohibitions": "[]",
-											className: "flex gap-2",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
-												"data-uid": "src/components/sections/Updates.tsx:278:21",
-												"data-prohibitions": "[editContent]",
-												className: "h-4 w-4 text-gold shrink-0 mt-0.5"
-											}), "Limite: 3 negativas bloqueiam a via remota."]
-										})]
-									})]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-								"data-uid": "src/components/sections/Updates.tsx:285:13",
-								"data-prohibitions": "[]",
-								value: "auxilio",
-								className: "bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-									"data-uid": "src/components/sections/Updates.tsx:289:15",
-									"data-prohibitions": "[]",
-									className: "text-left font-bold text-lg hover:no-underline py-4",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:290:17",
-										"data-prohibitions": "[]",
-										className: "flex items-center gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
-											"data-uid": "src/components/sections/Updates.tsx:291:19",
-											"data-prohibitions": "[editContent]",
-											className: "h-5 w-5 text-gold-dark shrink-0"
-										}), "Auxílio-Acidente"]
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
-									"data-uid": "src/components/sections/Updates.tsx:295:15",
-									"data-prohibitions": "[]",
-									className: "pt-2 pb-6",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/sections/Updates.tsx:296:17",
-										"data-prohibitions": "[]",
-										className: "text-muted-foreground font-medium mb-4 text-sm",
-										children: "Triagem documental obrigatória antecede a perícia física. A ausência de elementos probatórios resulta no indeferimento imediato."
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-										"data-uid": "src/components/sections/Updates.tsx:300:17",
-										"data-prohibitions": "[]",
-										className: "space-y-2 text-sm text-muted-foreground font-medium",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											"data-uid": "src/components/sections/Updates.tsx:301:19",
-											"data-prohibitions": "[]",
-											className: "flex gap-2",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-												"data-uid": "src/components/sections/Updates.tsx:302:21",
-												"data-prohibitions": "[editContent]",
-												className: "h-4 w-4 text-gold shrink-0 mt-0.5"
-											}), "Data exata do acidente."]
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											"data-uid": "src/components/sections/Updates.tsx:305:19",
-											"data-prohibitions": "[]",
-											className: "flex gap-2",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-												"data-uid": "src/components/sections/Updates.tsx:306:21",
-												"data-prohibitions": "[editContent]",
-												className: "h-4 w-4 text-gold shrink-0 mt-0.5"
-											}), "Descrição detalhada da lesão e sequelas."]
-										})]
-									})]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-								"data-uid": "src/components/sections/Updates.tsx:313:13",
-								"data-prohibitions": "[editContent]",
-								value: "dicas",
-								className: "bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-									"data-uid": "src/components/sections/Updates.tsx:317:15",
-									"data-prohibitions": "[]",
-									className: "text-left font-bold text-lg hover:no-underline py-4",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/Updates.tsx:318:17",
-										"data-prohibitions": "[]",
-										className: "flex items-center gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-											"data-uid": "src/components/sections/Updates.tsx:319:19",
-											"data-prohibitions": "[editContent]",
-											className: "h-5 w-5 text-gold-dark shrink-0"
-										}), "Dicas de Aprovação"]
-									})
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
-									"data-uid": "src/components/sections/Updates.tsx:323:15",
-									"data-prohibitions": "[editContent]",
-									className: "pt-2 pb-6 space-y-4",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-										"data-uid": "src/components/sections/Updates.tsx:324:17",
-										"data-prohibitions": "[editContent]",
-										className: "space-y-3",
-										children: [
-											"Revise rigorosamente todos os dados do laudo médico antes do envio.",
-											"Capture imagens bem iluminadas e legíveis de atestados.",
-											"Jamais envie atestados com rasuras ou emendas."
-										].map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											"data-uid": "src/components/sections/Updates.tsx:330:21",
-											"data-prohibitions": "[editContent]",
-											className: "flex items-start gap-3",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												"data-uid": "src/components/sections/Updates.tsx:331:23",
-												"data-prohibitions": "[editContent]",
-												className: "bg-gold/10 p-1.5 rounded-md shrink-0 mt-0.5",
-												children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-													"data-uid": "src/components/sections/Updates.tsx:332:25",
-													"data-prohibitions": "[editContent]",
-													className: "text-gold-dark font-bold text-xs",
-													children: ["0", i + 1]
-												})
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-												"data-uid": "src/components/sections/Updates.tsx:334:23",
-												"data-prohibitions": "[editContent]",
-												className: "text-sm text-muted-foreground font-medium",
-												children: t
-											})]
-										}, i))
+										className: "text-muted-foreground text-sm mb-6 leading-relaxed font-medium",
+										children: "Erros documentais custam o seu benefício. A assessoria especializada garante auditoria prévia detalhada, neutralizando riscos de negativas automáticas pelo INSS."
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-										"data-uid": "src/components/sections/Updates.tsx:338:17",
+										"data-uid": "src/components/sections/Updates.tsx:208:19",
 										"data-prohibitions": "[]",
-										className: "w-full bg-gold hover:bg-gold/90 text-black font-bold h-12 uppercase text-xs shadow-sm mt-4",
+										className: "w-full bg-gold hover:bg-gold/90 text-black font-bold h-14 uppercase text-sm shadow-sm transition-transform hover:scale-[1.02]",
 										asChild: true,
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-											"data-uid": "src/components/sections/Updates.tsx:342:19",
+											"data-uid": "src/components/sections/Updates.tsx:212:21",
 											"data-prohibitions": "[]",
-											href: "https://wa.me/5553981063023",
+											href: "https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20ajuda%20com%20as%20novas%20regras%20do%20INSS.",
 											target: "_blank",
 											rel: "noopener noreferrer",
-											children: "Falar com a Equipe"
+											children: "Falar com a Equipe Legal"
 										})
 									})]
 								})]
 							})
-						]
+						})
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/Updates.tsx:226:9",
+					"data-prohibitions": "[]",
+					className: "lg:hidden",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Accordion, {
+						"data-uid": "src/components/sections/Updates.tsx:227:11",
+						"data-prohibitions": "[]",
+						type: "single",
+						collapsible: true,
+						className: "w-full space-y-4",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+							"data-uid": "src/components/sections/Updates.tsx:228:13",
+							"data-prohibitions": "[]",
+							value: "atestmed",
+							className: "bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+								"data-uid": "src/components/sections/Updates.tsx:232:15",
+								"data-prohibitions": "[]",
+								className: "text-left font-bold text-lg hover:no-underline py-4",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Updates.tsx:233:17",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
+										"data-uid": "src/components/sections/Updates.tsx:234:19",
+										"data-prohibitions": "[editContent]",
+										className: "h-5 w-5 text-gold-dark shrink-0"
+									}), "Regras AtestMed 2026"]
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+								"data-uid": "src/components/sections/Updates.tsx:238:15",
+								"data-prohibitions": "[]",
+								className: "pt-2 pb-6",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Updates.tsx:239:17",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground font-medium mb-4 text-sm",
+									children: "O sistema de análise remota permite benefícios por incapacidade por até 90 dias sem perícia presencial inicial."
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+									"data-uid": "src/components/sections/Updates.tsx:243:17",
+									"data-prohibitions": "[]",
+									className: "space-y-2 text-sm text-muted-foreground font-medium mb-4",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										"data-uid": "src/components/sections/Updates.tsx:244:19",
+										"data-prohibitions": "[]",
+										className: "flex gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+											"data-uid": "src/components/sections/Updates.tsx:245:21",
+											"data-prohibitions": "[editContent]",
+											className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+										}), "Documentos: RG, Laudo legível (com CID), CRM/CRO."]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										"data-uid": "src/components/sections/Updates.tsx:248:19",
+										"data-prohibitions": "[]",
+										className: "flex gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, {
+											"data-uid": "src/components/sections/Updates.tsx:249:21",
+											"data-prohibitions": "[editContent]",
+											className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+										}), "Limite: 3 negativas bloqueiam a via remota."]
+									})]
+								})]
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+							"data-uid": "src/components/sections/Updates.tsx:256:13",
+							"data-prohibitions": "[]",
+							value: "auxilio",
+							className: "bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+								"data-uid": "src/components/sections/Updates.tsx:260:15",
+								"data-prohibitions": "[]",
+								className: "text-left font-bold text-lg hover:no-underline py-4",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/Updates.tsx:261:17",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
+										"data-uid": "src/components/sections/Updates.tsx:262:19",
+										"data-prohibitions": "[editContent]",
+										className: "h-5 w-5 text-gold-dark shrink-0"
+									}), "Auxílio-Acidente"]
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+								"data-uid": "src/components/sections/Updates.tsx:266:15",
+								"data-prohibitions": "[]",
+								className: "pt-2 pb-6",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/components/sections/Updates.tsx:267:17",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground font-medium mb-4 text-sm",
+									children: "Triagem documental obrigatória antecede a perícia física. A ausência de elementos probatórios resulta no indeferimento imediato."
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+									"data-uid": "src/components/sections/Updates.tsx:271:17",
+									"data-prohibitions": "[]",
+									className: "space-y-2 text-sm text-muted-foreground font-medium",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										"data-uid": "src/components/sections/Updates.tsx:272:19",
+										"data-prohibitions": "[]",
+										className: "flex gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+											"data-uid": "src/components/sections/Updates.tsx:273:21",
+											"data-prohibitions": "[editContent]",
+											className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+										}), "Data exata do acidente."]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										"data-uid": "src/components/sections/Updates.tsx:276:19",
+										"data-prohibitions": "[]",
+										className: "flex gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
+											"data-uid": "src/components/sections/Updates.tsx:277:21",
+											"data-prohibitions": "[editContent]",
+											className: "h-4 w-4 text-gold shrink-0 mt-0.5"
+										}), "Descrição detalhada da lesão e sequelas."]
+									})]
+								})]
+							})]
+						})]
 					})
 				})
 			]
 		})
 	});
 }
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-use-callback-ref@1.1.1_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-use-callback-ref/dist/index.mjs
+function useCallbackRef$1(callback) {
+	const callbackRef = import_react.useRef(callback);
+	import_react.useEffect(() => {
+		callbackRef.current = callback;
+	});
+	return import_react.useMemo(() => (...args) => callbackRef.current?.(...args), []);
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-use-escape-keydown@1.1.1_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-use-escape-keydown/dist/index.mjs
+function useEscapeKeydown(onEscapeKeyDownProp, ownerDocument = globalThis?.document) {
+	const onEscapeKeyDown = useCallbackRef$1(onEscapeKeyDownProp);
+	import_react.useEffect(() => {
+		const handleKeyDown = (event) => {
+			if (event.key === "Escape") onEscapeKeyDown(event);
+		};
+		ownerDocument.addEventListener("keydown", handleKeyDown, { capture: true });
+		return () => ownerDocument.removeEventListener("keydown", handleKeyDown, { capture: true });
+	}, [onEscapeKeyDown, ownerDocument]);
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-dismissable-layer@1.1.11_@types+react-dom@19.2.3_@types+react@19.2.14___3d3960154a4c07d09bb90cb341135fc5/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs
+var DISMISSABLE_LAYER_NAME = "DismissableLayer";
+var CONTEXT_UPDATE = "dismissableLayer.update";
+var POINTER_DOWN_OUTSIDE = "dismissableLayer.pointerDownOutside";
+var FOCUS_OUTSIDE = "dismissableLayer.focusOutside";
+var originalBodyPointerEvents;
+var DismissableLayerContext = import_react.createContext({
+	layers: /* @__PURE__ */ new Set(),
+	layersWithOutsidePointerEventsDisabled: /* @__PURE__ */ new Set(),
+	branches: /* @__PURE__ */ new Set()
+});
+var DismissableLayer = import_react.forwardRef((props, forwardedRef) => {
+	const { disableOutsidePointerEvents = false, onEscapeKeyDown, onPointerDownOutside, onFocusOutside, onInteractOutside, onDismiss, ...layerProps } = props;
+	const context = import_react.useContext(DismissableLayerContext);
+	const [node, setNode] = import_react.useState(null);
+	const ownerDocument = node?.ownerDocument ?? globalThis?.document;
+	const [, force] = import_react.useState({});
+	const composedRefs = useComposedRefs(forwardedRef, (node2) => setNode(node2));
+	const layers = Array.from(context.layers);
+	const [highestLayerWithOutsidePointerEventsDisabled] = [...context.layersWithOutsidePointerEventsDisabled].slice(-1);
+	const highestLayerWithOutsidePointerEventsDisabledIndex = layers.indexOf(highestLayerWithOutsidePointerEventsDisabled);
+	const index = node ? layers.indexOf(node) : -1;
+	const isBodyPointerEventsDisabled = context.layersWithOutsidePointerEventsDisabled.size > 0;
+	const isPointerEventsEnabled = index >= highestLayerWithOutsidePointerEventsDisabledIndex;
+	const pointerDownOutside = usePointerDownOutside((event) => {
+		const target = event.target;
+		const isPointerDownOnBranch = [...context.branches].some((branch) => branch.contains(target));
+		if (!isPointerEventsEnabled || isPointerDownOnBranch) return;
+		onPointerDownOutside?.(event);
+		onInteractOutside?.(event);
+		if (!event.defaultPrevented) onDismiss?.();
+	}, ownerDocument);
+	const focusOutside = useFocusOutside((event) => {
+		const target = event.target;
+		if ([...context.branches].some((branch) => branch.contains(target))) return;
+		onFocusOutside?.(event);
+		onInteractOutside?.(event);
+		if (!event.defaultPrevented) onDismiss?.();
+	}, ownerDocument);
+	useEscapeKeydown((event) => {
+		if (!(index === context.layers.size - 1)) return;
+		onEscapeKeyDown?.(event);
+		if (!event.defaultPrevented && onDismiss) {
+			event.preventDefault();
+			onDismiss();
+		}
+	}, ownerDocument);
+	import_react.useEffect(() => {
+		if (!node) return;
+		if (disableOutsidePointerEvents) {
+			if (context.layersWithOutsidePointerEventsDisabled.size === 0) {
+				originalBodyPointerEvents = ownerDocument.body.style.pointerEvents;
+				ownerDocument.body.style.pointerEvents = "none";
+			}
+			context.layersWithOutsidePointerEventsDisabled.add(node);
+		}
+		context.layers.add(node);
+		dispatchUpdate();
+		return () => {
+			if (disableOutsidePointerEvents && context.layersWithOutsidePointerEventsDisabled.size === 1) ownerDocument.body.style.pointerEvents = originalBodyPointerEvents;
+		};
+	}, [
+		node,
+		ownerDocument,
+		disableOutsidePointerEvents,
+		context
+	]);
+	import_react.useEffect(() => {
+		return () => {
+			if (!node) return;
+			context.layers.delete(node);
+			context.layersWithOutsidePointerEventsDisabled.delete(node);
+			dispatchUpdate();
+		};
+	}, [node, context]);
+	import_react.useEffect(() => {
+		const handleUpdate = () => force({});
+		document.addEventListener(CONTEXT_UPDATE, handleUpdate);
+		return () => document.removeEventListener(CONTEXT_UPDATE, handleUpdate);
+	}, []);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
+		...layerProps,
+		ref: composedRefs,
+		style: {
+			pointerEvents: isBodyPointerEventsDisabled ? isPointerEventsEnabled ? "auto" : "none" : void 0,
+			...props.style
+		},
+		onFocusCapture: composeEventHandlers(props.onFocusCapture, focusOutside.onFocusCapture),
+		onBlurCapture: composeEventHandlers(props.onBlurCapture, focusOutside.onBlurCapture),
+		onPointerDownCapture: composeEventHandlers(props.onPointerDownCapture, pointerDownOutside.onPointerDownCapture)
+	});
+});
+DismissableLayer.displayName = DISMISSABLE_LAYER_NAME;
+var BRANCH_NAME = "DismissableLayerBranch";
+var DismissableLayerBranch = import_react.forwardRef((props, forwardedRef) => {
+	const context = import_react.useContext(DismissableLayerContext);
+	const ref = import_react.useRef(null);
+	const composedRefs = useComposedRefs(forwardedRef, ref);
+	import_react.useEffect(() => {
+		const node = ref.current;
+		if (node) {
+			context.branches.add(node);
+			return () => {
+				context.branches.delete(node);
+			};
+		}
+	}, [context.branches]);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
+		...props,
+		ref: composedRefs
+	});
+});
+DismissableLayerBranch.displayName = BRANCH_NAME;
+function usePointerDownOutside(onPointerDownOutside, ownerDocument = globalThis?.document) {
+	const handlePointerDownOutside = useCallbackRef$1(onPointerDownOutside);
+	const isPointerInsideReactTreeRef = import_react.useRef(false);
+	const handleClickRef = import_react.useRef(() => {});
+	import_react.useEffect(() => {
+		const handlePointerDown = (event) => {
+			if (event.target && !isPointerInsideReactTreeRef.current) {
+				let handleAndDispatchPointerDownOutsideEvent2 = function() {
+					handleAndDispatchCustomEvent$1(POINTER_DOWN_OUTSIDE, handlePointerDownOutside, eventDetail, { discrete: true });
+				};
+				const eventDetail = { originalEvent: event };
+				if (event.pointerType === "touch") {
+					ownerDocument.removeEventListener("click", handleClickRef.current);
+					handleClickRef.current = handleAndDispatchPointerDownOutsideEvent2;
+					ownerDocument.addEventListener("click", handleClickRef.current, { once: true });
+				} else handleAndDispatchPointerDownOutsideEvent2();
+			} else ownerDocument.removeEventListener("click", handleClickRef.current);
+			isPointerInsideReactTreeRef.current = false;
+		};
+		const timerId = window.setTimeout(() => {
+			ownerDocument.addEventListener("pointerdown", handlePointerDown);
+		}, 0);
+		return () => {
+			window.clearTimeout(timerId);
+			ownerDocument.removeEventListener("pointerdown", handlePointerDown);
+			ownerDocument.removeEventListener("click", handleClickRef.current);
+		};
+	}, [ownerDocument, handlePointerDownOutside]);
+	return { onPointerDownCapture: () => isPointerInsideReactTreeRef.current = true };
+}
+function useFocusOutside(onFocusOutside, ownerDocument = globalThis?.document) {
+	const handleFocusOutside = useCallbackRef$1(onFocusOutside);
+	const isFocusInsideReactTreeRef = import_react.useRef(false);
+	import_react.useEffect(() => {
+		const handleFocus = (event) => {
+			if (event.target && !isFocusInsideReactTreeRef.current) handleAndDispatchCustomEvent$1(FOCUS_OUTSIDE, handleFocusOutside, { originalEvent: event }, { discrete: false });
+		};
+		ownerDocument.addEventListener("focusin", handleFocus);
+		return () => ownerDocument.removeEventListener("focusin", handleFocus);
+	}, [ownerDocument, handleFocusOutside]);
+	return {
+		onFocusCapture: () => isFocusInsideReactTreeRef.current = true,
+		onBlurCapture: () => isFocusInsideReactTreeRef.current = false
+	};
+}
+function dispatchUpdate() {
+	const event = new CustomEvent(CONTEXT_UPDATE);
+	document.dispatchEvent(event);
+}
+function handleAndDispatchCustomEvent$1(name, handler, detail, { discrete }) {
+	const target = detail.originalEvent.target;
+	const event = new CustomEvent(name, {
+		bubbles: false,
+		cancelable: true,
+		detail
+	});
+	if (handler) target.addEventListener(name, handler, { once: true });
+	if (discrete) dispatchDiscreteCustomEvent(target, event);
+	else target.dispatchEvent(event);
+}
+var Root$1 = DismissableLayer;
+var Branch = DismissableLayerBranch;
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-focus-scope@1.1.7_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_f62f3af4ca2ba305a7aecf04c8534604/node_modules/@radix-ui/react-focus-scope/dist/index.mjs
+var AUTOFOCUS_ON_MOUNT = "focusScope.autoFocusOnMount";
+var AUTOFOCUS_ON_UNMOUNT = "focusScope.autoFocusOnUnmount";
+var EVENT_OPTIONS = {
+	bubbles: false,
+	cancelable: true
+};
+var FOCUS_SCOPE_NAME = "FocusScope";
+var FocusScope = import_react.forwardRef((props, forwardedRef) => {
+	const { loop = false, trapped = false, onMountAutoFocus: onMountAutoFocusProp, onUnmountAutoFocus: onUnmountAutoFocusProp, ...scopeProps } = props;
+	const [container, setContainer] = import_react.useState(null);
+	const onMountAutoFocus = useCallbackRef$1(onMountAutoFocusProp);
+	const onUnmountAutoFocus = useCallbackRef$1(onUnmountAutoFocusProp);
+	const lastFocusedElementRef = import_react.useRef(null);
+	const composedRefs = useComposedRefs(forwardedRef, (node) => setContainer(node));
+	const focusScope = import_react.useRef({
+		paused: false,
+		pause() {
+			this.paused = true;
+		},
+		resume() {
+			this.paused = false;
+		}
+	}).current;
+	import_react.useEffect(() => {
+		if (trapped) {
+			let handleFocusIn2 = function(event) {
+				if (focusScope.paused || !container) return;
+				const target = event.target;
+				if (container.contains(target)) lastFocusedElementRef.current = target;
+				else focus(lastFocusedElementRef.current, { select: true });
+			}, handleFocusOut2 = function(event) {
+				if (focusScope.paused || !container) return;
+				const relatedTarget = event.relatedTarget;
+				if (relatedTarget === null) return;
+				if (!container.contains(relatedTarget)) focus(lastFocusedElementRef.current, { select: true });
+			}, handleMutations2 = function(mutations) {
+				if (document.activeElement !== document.body) return;
+				for (const mutation of mutations) if (mutation.removedNodes.length > 0) focus(container);
+			};
+			document.addEventListener("focusin", handleFocusIn2);
+			document.addEventListener("focusout", handleFocusOut2);
+			const mutationObserver = new MutationObserver(handleMutations2);
+			if (container) mutationObserver.observe(container, {
+				childList: true,
+				subtree: true
+			});
+			return () => {
+				document.removeEventListener("focusin", handleFocusIn2);
+				document.removeEventListener("focusout", handleFocusOut2);
+				mutationObserver.disconnect();
+			};
+		}
+	}, [
+		trapped,
+		container,
+		focusScope.paused
+	]);
+	import_react.useEffect(() => {
+		if (container) {
+			focusScopesStack.add(focusScope);
+			const previouslyFocusedElement = document.activeElement;
+			if (!container.contains(previouslyFocusedElement)) {
+				const mountEvent = new CustomEvent(AUTOFOCUS_ON_MOUNT, EVENT_OPTIONS);
+				container.addEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus);
+				container.dispatchEvent(mountEvent);
+				if (!mountEvent.defaultPrevented) {
+					focusFirst$1(removeLinks(getTabbableCandidates$1(container)), { select: true });
+					if (document.activeElement === previouslyFocusedElement) focus(container);
+				}
+			}
+			return () => {
+				container.removeEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus);
+				setTimeout(() => {
+					const unmountEvent = new CustomEvent(AUTOFOCUS_ON_UNMOUNT, EVENT_OPTIONS);
+					container.addEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus);
+					container.dispatchEvent(unmountEvent);
+					if (!unmountEvent.defaultPrevented) focus(previouslyFocusedElement ?? document.body, { select: true });
+					container.removeEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus);
+					focusScopesStack.remove(focusScope);
+				}, 0);
+			};
+		}
+	}, [
+		container,
+		onMountAutoFocus,
+		onUnmountAutoFocus,
+		focusScope
+	]);
+	const handleKeyDown = import_react.useCallback((event) => {
+		if (!loop && !trapped) return;
+		if (focusScope.paused) return;
+		const isTabKey = event.key === "Tab" && !event.altKey && !event.ctrlKey && !event.metaKey;
+		const focusedElement = document.activeElement;
+		if (isTabKey && focusedElement) {
+			const container2 = event.currentTarget;
+			const [first, last] = getTabbableEdges(container2);
+			if (!(first && last)) {
+				if (focusedElement === container2) event.preventDefault();
+			} else if (!event.shiftKey && focusedElement === last) {
+				event.preventDefault();
+				if (loop) focus(first, { select: true });
+			} else if (event.shiftKey && focusedElement === first) {
+				event.preventDefault();
+				if (loop) focus(last, { select: true });
+			}
+		}
+	}, [
+		loop,
+		trapped,
+		focusScope.paused
+	]);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
+		tabIndex: -1,
+		...scopeProps,
+		ref: composedRefs,
+		onKeyDown: handleKeyDown
+	});
+});
+FocusScope.displayName = FOCUS_SCOPE_NAME;
+function focusFirst$1(candidates, { select = false } = {}) {
+	const previouslyFocusedElement = document.activeElement;
+	for (const candidate of candidates) {
+		focus(candidate, { select });
+		if (document.activeElement !== previouslyFocusedElement) return;
+	}
+}
+function getTabbableEdges(container) {
+	const candidates = getTabbableCandidates$1(container);
+	return [findVisible(candidates, container), findVisible(candidates.reverse(), container)];
+}
+function getTabbableCandidates$1(container) {
+	const nodes = [];
+	const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, { acceptNode: (node) => {
+		const isHiddenInput = node.tagName === "INPUT" && node.type === "hidden";
+		if (node.disabled || node.hidden || isHiddenInput) return NodeFilter.FILTER_SKIP;
+		return node.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+	} });
+	while (walker.nextNode()) nodes.push(walker.currentNode);
+	return nodes;
+}
+function findVisible(elements, container) {
+	for (const element of elements) if (!isHidden(element, { upTo: container })) return element;
+}
+function isHidden(node, { upTo }) {
+	if (getComputedStyle(node).visibility === "hidden") return true;
+	while (node) {
+		if (upTo !== void 0 && node === upTo) return false;
+		if (getComputedStyle(node).display === "none") return true;
+		node = node.parentElement;
+	}
+	return false;
+}
+function isSelectableInput(element) {
+	return element instanceof HTMLInputElement && "select" in element;
+}
+function focus(element, { select = false } = {}) {
+	if (element && element.focus) {
+		const previouslyFocusedElement = document.activeElement;
+		element.focus({ preventScroll: true });
+		if (element !== previouslyFocusedElement && isSelectableInput(element) && select) element.select();
+	}
+}
+var focusScopesStack = createFocusScopesStack();
+function createFocusScopesStack() {
+	let stack = [];
+	return {
+		add(focusScope) {
+			const activeFocusScope = stack[0];
+			if (focusScope !== activeFocusScope) activeFocusScope?.pause();
+			stack = arrayRemove(stack, focusScope);
+			stack.unshift(focusScope);
+		},
+		remove(focusScope) {
+			stack = arrayRemove(stack, focusScope);
+			stack[0]?.resume();
+		}
+	};
+}
+function arrayRemove(array, item) {
+	const updatedArray = [...array];
+	const index = updatedArray.indexOf(item);
+	if (index !== -1) updatedArray.splice(index, 1);
+	return updatedArray;
+}
+function removeLinks(items) {
+	return items.filter((item) => item.tagName !== "A");
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-portal@1.1.9_@types+react-dom@19.2.3_@types+react@19.2.14__@types+react_7668895bec2444446faa4e0f4eb5244b/node_modules/@radix-ui/react-portal/dist/index.mjs
+var PORTAL_NAME$1 = "Portal";
+var Portal$1 = import_react.forwardRef((props, forwardedRef) => {
+	const { container: containerProp, ...portalProps } = props;
+	const [mounted, setMounted] = import_react.useState(false);
+	useLayoutEffect2(() => setMounted(true), []);
+	const container = containerProp || mounted && globalThis?.document?.body;
+	return container ? import_react_dom.createPortal(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
+		...portalProps,
+		ref: forwardedRef
+	}), container) : null;
+});
+Portal$1.displayName = PORTAL_NAME$1;
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-focus-guards@1.1.3_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-focus-guards/dist/index.mjs
+var count$1 = 0;
+function useFocusGuards() {
+	import_react.useEffect(() => {
+		const edgeGuards = document.querySelectorAll("[data-radix-focus-guard]");
+		document.body.insertAdjacentElement("afterbegin", edgeGuards[0] ?? createFocusGuard());
+		document.body.insertAdjacentElement("beforeend", edgeGuards[1] ?? createFocusGuard());
+		count$1++;
+		return () => {
+			if (count$1 === 1) document.querySelectorAll("[data-radix-focus-guard]").forEach((node) => node.remove());
+			count$1--;
+		};
+	}, []);
+}
+function createFocusGuard() {
+	const element = document.createElement("span");
+	element.setAttribute("data-radix-focus-guard", "");
+	element.tabIndex = 0;
+	element.style.outline = "none";
+	element.style.opacity = "0";
+	element.style.position = "fixed";
+	element.style.pointerEvents = "none";
+	return element;
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs
+var __assign = function() {
+	__assign = Object.assign || function __assign(t) {
+		for (var s, i = 1, n = arguments.length; i < n; i++) {
+			s = arguments[i];
+			for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+		}
+		return t;
+	};
+	return __assign.apply(this, arguments);
+};
+function __rest(s, e) {
+	var t = {};
+	for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+	if (s != null && typeof Object.getOwnPropertySymbols === "function") {
+		for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+	}
+	return t;
+}
+function __spreadArray(to, from, pack) {
+	if (pack || arguments.length === 2) {
+		for (var i = 0, l = from.length, ar; i < l; i++) if (ar || !(i in from)) {
+			if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+			ar[i] = from[i];
+		}
+	}
+	return to.concat(ar || Array.prototype.slice.call(from));
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-remove-scroll-bar@2.3.8_@types+react@19.2.14_react@19.2.4/node_modules/react-remove-scroll-bar/dist/es2015/constants.js
+var zeroRightClassName = "right-scroll-bar-position";
+var fullWidthClassName = "width-before-scroll-bar";
+var noScrollbarsClassName = "with-scroll-bars-hidden";
+/**
+* Name of a CSS variable containing the amount of "hidden" scrollbar
+* ! might be undefined ! use will fallback!
+*/
+var removedBarSizeVariable = "--removed-body-scroll-bar-size";
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/use-callback-ref@1.3.3_@types+react@19.2.14_react@19.2.4/node_modules/use-callback-ref/dist/es2015/assignRef.js
+/**
+* Assigns a value for a given ref, no matter of the ref format
+* @param {RefObject} ref - a callback function or ref object
+* @param value - a new value
+*
+* @see https://github.com/theKashey/use-callback-ref#assignref
+* @example
+* const refObject = useRef();
+* const refFn = (ref) => {....}
+*
+* assignRef(refObject, "refValue");
+* assignRef(refFn, "refValue");
+*/
+function assignRef(ref, value) {
+	if (typeof ref === "function") ref(value);
+	else if (ref) ref.current = value;
+	return ref;
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/use-callback-ref@1.3.3_@types+react@19.2.14_react@19.2.4/node_modules/use-callback-ref/dist/es2015/useRef.js
+/**
+* creates a MutableRef with ref change callback
+* @param initialValue - initial ref value
+* @param {Function} callback - a callback to run when value changes
+*
+* @example
+* const ref = useCallbackRef(0, (newValue, oldValue) => console.log(oldValue, '->', newValue);
+* ref.current = 1;
+* // prints 0 -> 1
+*
+* @see https://reactjs.org/docs/hooks-reference.html#useref
+* @see https://github.com/theKashey/use-callback-ref#usecallbackref---to-replace-reactuseref
+* @returns {MutableRefObject}
+*/
+function useCallbackRef(initialValue, callback) {
+	var ref = (0, import_react.useState)(function() {
+		return {
+			value: initialValue,
+			callback,
+			facade: {
+				get current() {
+					return ref.value;
+				},
+				set current(value) {
+					var last = ref.value;
+					if (last !== value) {
+						ref.value = value;
+						ref.callback(value, last);
+					}
+				}
+			}
+		};
+	})[0];
+	ref.callback = callback;
+	return ref.facade;
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/use-callback-ref@1.3.3_@types+react@19.2.14_react@19.2.4/node_modules/use-callback-ref/dist/es2015/useMergeRef.js
+var useIsomorphicLayoutEffect = typeof window !== "undefined" ? import_react.useLayoutEffect : import_react.useEffect;
+var currentValues = /* @__PURE__ */ new WeakMap();
+/**
+* Merges two or more refs together providing a single interface to set their value
+* @param {RefObject|Ref} refs
+* @returns {MutableRefObject} - a new ref, which translates all changes to {refs}
+*
+* @see {@link mergeRefs} a version without buit-in memoization
+* @see https://github.com/theKashey/use-callback-ref#usemergerefs
+* @example
+* const Component = React.forwardRef((props, ref) => {
+*   const ownRef = useRef();
+*   const domRef = useMergeRefs([ref, ownRef]); // 👈 merge together
+*   return <div ref={domRef}>...</div>
+* }
+*/
+function useMergeRefs(refs, defaultValue) {
+	var callbackRef = useCallbackRef(defaultValue || null, function(newValue) {
+		return refs.forEach(function(ref) {
+			return assignRef(ref, newValue);
+		});
+	});
+	useIsomorphicLayoutEffect(function() {
+		var oldValue = currentValues.get(callbackRef);
+		if (oldValue) {
+			var prevRefs_1 = new Set(oldValue);
+			var nextRefs_1 = new Set(refs);
+			var current_1 = callbackRef.current;
+			prevRefs_1.forEach(function(ref) {
+				if (!nextRefs_1.has(ref)) assignRef(ref, null);
+			});
+			nextRefs_1.forEach(function(ref) {
+				if (!prevRefs_1.has(ref)) assignRef(ref, current_1);
+			});
+		}
+		currentValues.set(callbackRef, refs);
+	}, [refs]);
+	return callbackRef;
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/use-sidecar@1.1.3_@types+react@19.2.14_react@19.2.4/node_modules/use-sidecar/dist/es2015/medium.js
+function ItoI(a) {
+	return a;
+}
+function innerCreateMedium(defaults, middleware) {
+	if (middleware === void 0) middleware = ItoI;
+	var buffer = [];
+	var assigned = false;
+	return {
+		read: function() {
+			if (assigned) throw new Error("Sidecar: could not `read` from an `assigned` medium. `read` could be used only with `useMedium`.");
+			if (buffer.length) return buffer[buffer.length - 1];
+			return defaults;
+		},
+		useMedium: function(data) {
+			var item = middleware(data, assigned);
+			buffer.push(item);
+			return function() {
+				buffer = buffer.filter(function(x) {
+					return x !== item;
+				});
+			};
+		},
+		assignSyncMedium: function(cb) {
+			assigned = true;
+			while (buffer.length) {
+				var cbs = buffer;
+				buffer = [];
+				cbs.forEach(cb);
+			}
+			buffer = {
+				push: function(x) {
+					return cb(x);
+				},
+				filter: function() {
+					return buffer;
+				}
+			};
+		},
+		assignMedium: function(cb) {
+			assigned = true;
+			var pendingQueue = [];
+			if (buffer.length) {
+				var cbs = buffer;
+				buffer = [];
+				cbs.forEach(cb);
+				pendingQueue = buffer;
+			}
+			var executeQueue = function() {
+				var cbs = pendingQueue;
+				pendingQueue = [];
+				cbs.forEach(cb);
+			};
+			var cycle = function() {
+				return Promise.resolve().then(executeQueue);
+			};
+			cycle();
+			buffer = {
+				push: function(x) {
+					pendingQueue.push(x);
+					cycle();
+				},
+				filter: function(filter) {
+					pendingQueue = pendingQueue.filter(filter);
+					return buffer;
+				}
+			};
+		}
+	};
+}
+function createSidecarMedium(options) {
+	if (options === void 0) options = {};
+	var medium = innerCreateMedium(null);
+	medium.options = __assign({
+		async: true,
+		ssr: false
+	}, options);
+	return medium;
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/use-sidecar@1.1.3_@types+react@19.2.14_react@19.2.4/node_modules/use-sidecar/dist/es2015/exports.js
+var SideCar = function(_a) {
+	var sideCar = _a.sideCar, rest = __rest(_a, ["sideCar"]);
+	if (!sideCar) throw new Error("Sidecar: please provide `sideCar` property to import the right car");
+	var Target = sideCar.read();
+	if (!Target) throw new Error("Sidecar medium not found");
+	return import_react.createElement(Target, __assign({}, rest));
+};
+SideCar.isSideCarExport = true;
+function exportSidecar(medium, exported) {
+	medium.useMedium(exported);
+	return SideCar;
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-remove-scroll@2.7.2_@types+react@19.2.14_react@19.2.4/node_modules/react-remove-scroll/dist/es2015/medium.js
+var effectCar = createSidecarMedium();
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-remove-scroll@2.7.2_@types+react@19.2.14_react@19.2.4/node_modules/react-remove-scroll/dist/es2015/UI.js
+var nothing = function() {};
+/**
+* Removes scrollbar from the page and contain the scroll within the Lock
+*/
+var RemoveScroll = import_react.forwardRef(function(props, parentRef) {
+	var ref = import_react.useRef(null);
+	var _a = import_react.useState({
+		onScrollCapture: nothing,
+		onWheelCapture: nothing,
+		onTouchMoveCapture: nothing
+	}), callbacks = _a[0], setCallbacks = _a[1];
+	var forwardProps = props.forwardProps, children = props.children, className = props.className, removeScrollBar = props.removeScrollBar, enabled = props.enabled, shards = props.shards, sideCar = props.sideCar, noRelative = props.noRelative, noIsolation = props.noIsolation, inert = props.inert, allowPinchZoom = props.allowPinchZoom, _b = props.as, Container = _b === void 0 ? "div" : _b, gapMode = props.gapMode, rest = __rest(props, [
+		"forwardProps",
+		"children",
+		"className",
+		"removeScrollBar",
+		"enabled",
+		"shards",
+		"sideCar",
+		"noRelative",
+		"noIsolation",
+		"inert",
+		"allowPinchZoom",
+		"as",
+		"gapMode"
+	]);
+	var SideCar = sideCar;
+	var containerRef = useMergeRefs([ref, parentRef]);
+	var containerProps = __assign(__assign({}, rest), callbacks);
+	return import_react.createElement(import_react.Fragment, null, enabled && import_react.createElement(SideCar, {
+		sideCar: effectCar,
+		removeScrollBar,
+		shards,
+		noRelative,
+		noIsolation,
+		inert,
+		setCallbacks,
+		allowPinchZoom: !!allowPinchZoom,
+		lockRef: ref,
+		gapMode
+	}), forwardProps ? import_react.cloneElement(import_react.Children.only(children), __assign(__assign({}, containerProps), { ref: containerRef })) : import_react.createElement(Container, __assign({}, containerProps, {
+		className,
+		ref: containerRef
+	}), children));
+});
+RemoveScroll.defaultProps = {
+	enabled: true,
+	removeScrollBar: true,
+	inert: false
+};
+RemoveScroll.classNames = {
+	fullWidth: fullWidthClassName,
+	zeroRight: zeroRightClassName
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/get-nonce@1.0.1/node_modules/get-nonce/dist/es2015/index.js
+var currentNonce;
+var getNonce = function() {
+	if (currentNonce) return currentNonce;
+	if (typeof __webpack_nonce__ !== "undefined") return __webpack_nonce__;
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-style-singleton@2.2.3_@types+react@19.2.14_react@19.2.4/node_modules/react-style-singleton/dist/es2015/singleton.js
+function makeStyleTag() {
+	if (!document) return null;
+	var tag = document.createElement("style");
+	tag.type = "text/css";
+	var nonce = getNonce();
+	if (nonce) tag.setAttribute("nonce", nonce);
+	return tag;
+}
+function injectStyles(tag, css) {
+	if (tag.styleSheet) tag.styleSheet.cssText = css;
+	else tag.appendChild(document.createTextNode(css));
+}
+function insertStyleTag(tag) {
+	(document.head || document.getElementsByTagName("head")[0]).appendChild(tag);
+}
+var stylesheetSingleton = function() {
+	var counter = 0;
+	var stylesheet = null;
+	return {
+		add: function(style) {
+			if (counter == 0) {
+				if (stylesheet = makeStyleTag()) {
+					injectStyles(stylesheet, style);
+					insertStyleTag(stylesheet);
+				}
+			}
+			counter++;
+		},
+		remove: function() {
+			counter--;
+			if (!counter && stylesheet) {
+				stylesheet.parentNode && stylesheet.parentNode.removeChild(stylesheet);
+				stylesheet = null;
+			}
+		}
+	};
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-style-singleton@2.2.3_@types+react@19.2.14_react@19.2.4/node_modules/react-style-singleton/dist/es2015/hook.js
+/**
+* creates a hook to control style singleton
+* @see {@link styleSingleton} for a safer component version
+* @example
+* ```tsx
+* const useStyle = styleHookSingleton();
+* ///
+* useStyle('body { overflow: hidden}');
+*/
+var styleHookSingleton = function() {
+	var sheet = stylesheetSingleton();
+	return function(styles, isDynamic) {
+		import_react.useEffect(function() {
+			sheet.add(styles);
+			return function() {
+				sheet.remove();
+			};
+		}, [styles && isDynamic]);
+	};
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-style-singleton@2.2.3_@types+react@19.2.14_react@19.2.4/node_modules/react-style-singleton/dist/es2015/component.js
+/**
+* create a Component to add styles on demand
+* - styles are added when first instance is mounted
+* - styles are removed when the last instance is unmounted
+* - changing styles in runtime does nothing unless dynamic is set. But with multiple components that can lead to the undefined behavior
+*/
+var styleSingleton = function() {
+	var useStyle = styleHookSingleton();
+	var Sheet = function(_a) {
+		var styles = _a.styles, dynamic = _a.dynamic;
+		useStyle(styles, dynamic);
+		return null;
+	};
+	return Sheet;
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-remove-scroll-bar@2.3.8_@types+react@19.2.14_react@19.2.4/node_modules/react-remove-scroll-bar/dist/es2015/utils.js
+var zeroGap = {
+	left: 0,
+	top: 0,
+	right: 0,
+	gap: 0
+};
+var parse = function(x) {
+	return parseInt(x || "", 10) || 0;
+};
+var getOffset = function(gapMode) {
+	var cs = window.getComputedStyle(document.body);
+	var left = cs[gapMode === "padding" ? "paddingLeft" : "marginLeft"];
+	var top = cs[gapMode === "padding" ? "paddingTop" : "marginTop"];
+	var right = cs[gapMode === "padding" ? "paddingRight" : "marginRight"];
+	return [
+		parse(left),
+		parse(top),
+		parse(right)
+	];
+};
+var getGapWidth = function(gapMode) {
+	if (gapMode === void 0) gapMode = "margin";
+	if (typeof window === "undefined") return zeroGap;
+	var offsets = getOffset(gapMode);
+	var documentWidth = document.documentElement.clientWidth;
+	var windowWidth = window.innerWidth;
+	return {
+		left: offsets[0],
+		top: offsets[1],
+		right: offsets[2],
+		gap: Math.max(0, windowWidth - documentWidth + offsets[2] - offsets[0])
+	};
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-remove-scroll-bar@2.3.8_@types+react@19.2.14_react@19.2.4/node_modules/react-remove-scroll-bar/dist/es2015/component.js
+var Style = styleSingleton();
+var lockAttribute = "data-scroll-locked";
+var getStyles = function(_a, allowRelative, gapMode, important) {
+	var left = _a.left, top = _a.top, right = _a.right, gap = _a.gap;
+	if (gapMode === void 0) gapMode = "margin";
+	return "\n  .".concat(noScrollbarsClassName, " {\n   overflow: hidden ").concat(important, ";\n   padding-right: ").concat(gap, "px ").concat(important, ";\n  }\n  body[").concat(lockAttribute, "] {\n    overflow: hidden ").concat(important, ";\n    overscroll-behavior: contain;\n    ").concat([
+		allowRelative && "position: relative ".concat(important, ";"),
+		gapMode === "margin" && "\n    padding-left: ".concat(left, "px;\n    padding-top: ").concat(top, "px;\n    padding-right: ").concat(right, "px;\n    margin-left:0;\n    margin-top:0;\n    margin-right: ").concat(gap, "px ").concat(important, ";\n    "),
+		gapMode === "padding" && "padding-right: ".concat(gap, "px ").concat(important, ";")
+	].filter(Boolean).join(""), "\n  }\n  \n  .").concat(zeroRightClassName, " {\n    right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(fullWidthClassName, " {\n    margin-right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(zeroRightClassName, " .").concat(zeroRightClassName, " {\n    right: 0 ").concat(important, ";\n  }\n  \n  .").concat(fullWidthClassName, " .").concat(fullWidthClassName, " {\n    margin-right: 0 ").concat(important, ";\n  }\n  \n  body[").concat(lockAttribute, "] {\n    ").concat(removedBarSizeVariable, ": ").concat(gap, "px;\n  }\n");
+};
+var getCurrentUseCounter = function() {
+	var counter = parseInt(document.body.getAttribute("data-scroll-locked") || "0", 10);
+	return isFinite(counter) ? counter : 0;
+};
+var useLockAttribute = function() {
+	import_react.useEffect(function() {
+		document.body.setAttribute(lockAttribute, (getCurrentUseCounter() + 1).toString());
+		return function() {
+			var newCounter = getCurrentUseCounter() - 1;
+			if (newCounter <= 0) document.body.removeAttribute(lockAttribute);
+			else document.body.setAttribute(lockAttribute, newCounter.toString());
+		};
+	}, []);
+};
+/**
+* Removes page scrollbar and blocks page scroll when mounted
+*/
+var RemoveScrollBar = function(_a) {
+	var noRelative = _a.noRelative, noImportant = _a.noImportant, _b = _a.gapMode, gapMode = _b === void 0 ? "margin" : _b;
+	useLockAttribute();
+	var gap = import_react.useMemo(function() {
+		return getGapWidth(gapMode);
+	}, [gapMode]);
+	return import_react.createElement(Style, { styles: getStyles(gap, !noRelative, gapMode, !noImportant ? "!important" : "") });
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-remove-scroll@2.7.2_@types+react@19.2.14_react@19.2.4/node_modules/react-remove-scroll/dist/es2015/aggresiveCapture.js
+var passiveSupported = false;
+if (typeof window !== "undefined") try {
+	var options = Object.defineProperty({}, "passive", { get: function() {
+		passiveSupported = true;
+		return true;
+	} });
+	window.addEventListener("test", options, options);
+	window.removeEventListener("test", options, options);
+} catch (err) {
+	passiveSupported = false;
+}
+var nonPassive = passiveSupported ? { passive: false } : false;
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-remove-scroll@2.7.2_@types+react@19.2.14_react@19.2.4/node_modules/react-remove-scroll/dist/es2015/handleScroll.js
+var alwaysContainsScroll = function(node) {
+	return node.tagName === "TEXTAREA";
+};
+var elementCanBeScrolled = function(node, overflow) {
+	if (!(node instanceof Element)) return false;
+	var styles = window.getComputedStyle(node);
+	return styles[overflow] !== "hidden" && !(styles.overflowY === styles.overflowX && !alwaysContainsScroll(node) && styles[overflow] === "visible");
+};
+var elementCouldBeVScrolled = function(node) {
+	return elementCanBeScrolled(node, "overflowY");
+};
+var elementCouldBeHScrolled = function(node) {
+	return elementCanBeScrolled(node, "overflowX");
+};
+var locationCouldBeScrolled = function(axis, node) {
+	var ownerDocument = node.ownerDocument;
+	var current = node;
+	do {
+		if (typeof ShadowRoot !== "undefined" && current instanceof ShadowRoot) current = current.host;
+		if (elementCouldBeScrolled(axis, current)) {
+			var _a = getScrollVariables(axis, current);
+			if (_a[1] > _a[2]) return true;
+		}
+		current = current.parentNode;
+	} while (current && current !== ownerDocument.body);
+	return false;
+};
+var getVScrollVariables = function(_a) {
+	return [
+		_a.scrollTop,
+		_a.scrollHeight,
+		_a.clientHeight
+	];
+};
+var getHScrollVariables = function(_a) {
+	return [
+		_a.scrollLeft,
+		_a.scrollWidth,
+		_a.clientWidth
+	];
+};
+var elementCouldBeScrolled = function(axis, node) {
+	return axis === "v" ? elementCouldBeVScrolled(node) : elementCouldBeHScrolled(node);
+};
+var getScrollVariables = function(axis, node) {
+	return axis === "v" ? getVScrollVariables(node) : getHScrollVariables(node);
+};
+var getDirectionFactor = function(axis, direction) {
+	/**
+	* If the element's direction is rtl (right-to-left), then scrollLeft is 0 when the scrollbar is at its rightmost position,
+	* and then increasingly negative as you scroll towards the end of the content.
+	* @see https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
+	*/
+	return axis === "h" && direction === "rtl" ? -1 : 1;
+};
+var handleScroll = function(axis, endTarget, event, sourceDelta, noOverscroll) {
+	var directionFactor = getDirectionFactor(axis, window.getComputedStyle(endTarget).direction);
+	var delta = directionFactor * sourceDelta;
+	var target = event.target;
+	var targetInLock = endTarget.contains(target);
+	var shouldCancelScroll = false;
+	var isDeltaPositive = delta > 0;
+	var availableScroll = 0;
+	var availableScrollTop = 0;
+	do {
+		if (!target) break;
+		var _a = getScrollVariables(axis, target), position = _a[0];
+		var elementScroll = _a[1] - _a[2] - directionFactor * position;
+		if (position || elementScroll) {
+			if (elementCouldBeScrolled(axis, target)) {
+				availableScroll += elementScroll;
+				availableScrollTop += position;
+			}
+		}
+		var parent_1 = target.parentNode;
+		target = parent_1 && parent_1.nodeType === Node.DOCUMENT_FRAGMENT_NODE ? parent_1.host : parent_1;
+	} while (!targetInLock && target !== document.body || targetInLock && (endTarget.contains(target) || endTarget === target));
+	if (isDeltaPositive && (noOverscroll && Math.abs(availableScroll) < 1 || !noOverscroll && delta > availableScroll)) shouldCancelScroll = true;
+	else if (!isDeltaPositive && (noOverscroll && Math.abs(availableScrollTop) < 1 || !noOverscroll && -delta > availableScrollTop)) shouldCancelScroll = true;
+	return shouldCancelScroll;
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-remove-scroll@2.7.2_@types+react@19.2.14_react@19.2.4/node_modules/react-remove-scroll/dist/es2015/SideEffect.js
+var getTouchXY = function(event) {
+	return "changedTouches" in event ? [event.changedTouches[0].clientX, event.changedTouches[0].clientY] : [0, 0];
+};
+var getDeltaXY = function(event) {
+	return [event.deltaX, event.deltaY];
+};
+var extractRef = function(ref) {
+	return ref && "current" in ref ? ref.current : ref;
+};
+var deltaCompare = function(x, y) {
+	return x[0] === y[0] && x[1] === y[1];
+};
+var generateStyle = function(id) {
+	return "\n  .block-interactivity-".concat(id, " {pointer-events: none;}\n  .allow-interactivity-").concat(id, " {pointer-events: all;}\n");
+};
+var idCounter = 0;
+var lockStack = [];
+function RemoveScrollSideCar(props) {
+	var shouldPreventQueue = import_react.useRef([]);
+	var touchStartRef = import_react.useRef([0, 0]);
+	var activeAxis = import_react.useRef();
+	var id = import_react.useState(idCounter++)[0];
+	var Style = import_react.useState(styleSingleton)[0];
+	var lastProps = import_react.useRef(props);
+	import_react.useEffect(function() {
+		lastProps.current = props;
+	}, [props]);
+	import_react.useEffect(function() {
+		if (props.inert) {
+			document.body.classList.add("block-interactivity-".concat(id));
+			var allow_1 = __spreadArray([props.lockRef.current], (props.shards || []).map(extractRef), true).filter(Boolean);
+			allow_1.forEach(function(el) {
+				return el.classList.add("allow-interactivity-".concat(id));
+			});
+			return function() {
+				document.body.classList.remove("block-interactivity-".concat(id));
+				allow_1.forEach(function(el) {
+					return el.classList.remove("allow-interactivity-".concat(id));
+				});
+			};
+		}
+	}, [
+		props.inert,
+		props.lockRef.current,
+		props.shards
+	]);
+	var shouldCancelEvent = import_react.useCallback(function(event, parent) {
+		if ("touches" in event && event.touches.length === 2 || event.type === "wheel" && event.ctrlKey) return !lastProps.current.allowPinchZoom;
+		var touch = getTouchXY(event);
+		var touchStart = touchStartRef.current;
+		var deltaX = "deltaX" in event ? event.deltaX : touchStart[0] - touch[0];
+		var deltaY = "deltaY" in event ? event.deltaY : touchStart[1] - touch[1];
+		var currentAxis;
+		var target = event.target;
+		var moveDirection = Math.abs(deltaX) > Math.abs(deltaY) ? "h" : "v";
+		if ("touches" in event && moveDirection === "h" && target.type === "range") return false;
+		var selection = window.getSelection();
+		var anchorNode = selection && selection.anchorNode;
+		if (anchorNode ? anchorNode === target || anchorNode.contains(target) : false) return false;
+		var canBeScrolledInMainDirection = locationCouldBeScrolled(moveDirection, target);
+		if (!canBeScrolledInMainDirection) return true;
+		if (canBeScrolledInMainDirection) currentAxis = moveDirection;
+		else {
+			currentAxis = moveDirection === "v" ? "h" : "v";
+			canBeScrolledInMainDirection = locationCouldBeScrolled(moveDirection, target);
+		}
+		if (!canBeScrolledInMainDirection) return false;
+		if (!activeAxis.current && "changedTouches" in event && (deltaX || deltaY)) activeAxis.current = currentAxis;
+		if (!currentAxis) return true;
+		var cancelingAxis = activeAxis.current || currentAxis;
+		return handleScroll(cancelingAxis, parent, event, cancelingAxis === "h" ? deltaX : deltaY, true);
+	}, []);
+	var shouldPrevent = import_react.useCallback(function(_event) {
+		var event = _event;
+		if (!lockStack.length || lockStack[lockStack.length - 1] !== Style) return;
+		var delta = "deltaY" in event ? getDeltaXY(event) : getTouchXY(event);
+		var sourceEvent = shouldPreventQueue.current.filter(function(e) {
+			return e.name === event.type && (e.target === event.target || event.target === e.shadowParent) && deltaCompare(e.delta, delta);
+		})[0];
+		if (sourceEvent && sourceEvent.should) {
+			if (event.cancelable) event.preventDefault();
+			return;
+		}
+		if (!sourceEvent) {
+			var shardNodes = (lastProps.current.shards || []).map(extractRef).filter(Boolean).filter(function(node) {
+				return node.contains(event.target);
+			});
+			if (shardNodes.length > 0 ? shouldCancelEvent(event, shardNodes[0]) : !lastProps.current.noIsolation) {
+				if (event.cancelable) event.preventDefault();
+			}
+		}
+	}, []);
+	var shouldCancel = import_react.useCallback(function(name, delta, target, should) {
+		var event = {
+			name,
+			delta,
+			target,
+			should,
+			shadowParent: getOutermostShadowParent(target)
+		};
+		shouldPreventQueue.current.push(event);
+		setTimeout(function() {
+			shouldPreventQueue.current = shouldPreventQueue.current.filter(function(e) {
+				return e !== event;
+			});
+		}, 1);
+	}, []);
+	var scrollTouchStart = import_react.useCallback(function(event) {
+		touchStartRef.current = getTouchXY(event);
+		activeAxis.current = void 0;
+	}, []);
+	var scrollWheel = import_react.useCallback(function(event) {
+		shouldCancel(event.type, getDeltaXY(event), event.target, shouldCancelEvent(event, props.lockRef.current));
+	}, []);
+	var scrollTouchMove = import_react.useCallback(function(event) {
+		shouldCancel(event.type, getTouchXY(event), event.target, shouldCancelEvent(event, props.lockRef.current));
+	}, []);
+	import_react.useEffect(function() {
+		lockStack.push(Style);
+		props.setCallbacks({
+			onScrollCapture: scrollWheel,
+			onWheelCapture: scrollWheel,
+			onTouchMoveCapture: scrollTouchMove
+		});
+		document.addEventListener("wheel", shouldPrevent, nonPassive);
+		document.addEventListener("touchmove", shouldPrevent, nonPassive);
+		document.addEventListener("touchstart", scrollTouchStart, nonPassive);
+		return function() {
+			lockStack = lockStack.filter(function(inst) {
+				return inst !== Style;
+			});
+			document.removeEventListener("wheel", shouldPrevent, nonPassive);
+			document.removeEventListener("touchmove", shouldPrevent, nonPassive);
+			document.removeEventListener("touchstart", scrollTouchStart, nonPassive);
+		};
+	}, []);
+	var removeScrollBar = props.removeScrollBar, inert = props.inert;
+	return import_react.createElement(import_react.Fragment, null, inert ? import_react.createElement(Style, { styles: generateStyle(id) }) : null, removeScrollBar ? import_react.createElement(RemoveScrollBar, {
+		noRelative: props.noRelative,
+		gapMode: props.gapMode
+	}) : null);
+}
+function getOutermostShadowParent(node) {
+	var shadowParent = null;
+	while (node !== null) {
+		if (node instanceof ShadowRoot) {
+			shadowParent = node.host;
+			node = node.host;
+		}
+		node = node.parentNode;
+	}
+	return shadowParent;
+}
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-remove-scroll@2.7.2_@types+react@19.2.14_react@19.2.4/node_modules/react-remove-scroll/dist/es2015/sidecar.js
+var sidecar_default = exportSidecar(effectCar, RemoveScrollSideCar);
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/react-remove-scroll@2.7.2_@types+react@19.2.14_react@19.2.4/node_modules/react-remove-scroll/dist/es2015/Combination.js
+var ReactRemoveScroll = import_react.forwardRef(function(props, ref) {
+	return import_react.createElement(RemoveScroll, __assign({}, props, {
+		ref,
+		sideCar: sidecar_default
+	}));
+});
+ReactRemoveScroll.classNames = RemoveScroll.classNames;
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/aria-hidden@1.2.6/node_modules/aria-hidden/dist/es2015/index.js
+var getDefaultParent = function(originalTarget) {
+	if (typeof document === "undefined") return null;
+	return (Array.isArray(originalTarget) ? originalTarget[0] : originalTarget).ownerDocument.body;
+};
+var counterMap = /* @__PURE__ */ new WeakMap();
+var uncontrolledNodes = /* @__PURE__ */ new WeakMap();
+var markerMap = {};
+var lockCount = 0;
+var unwrapHost = function(node) {
+	return node && (node.host || unwrapHost(node.parentNode));
+};
+var correctTargets = function(parent, targets) {
+	return targets.map(function(target) {
+		if (parent.contains(target)) return target;
+		var correctedTarget = unwrapHost(target);
+		if (correctedTarget && parent.contains(correctedTarget)) return correctedTarget;
+		console.error("aria-hidden", target, "in not contained inside", parent, ". Doing nothing");
+		return null;
+	}).filter(function(x) {
+		return Boolean(x);
+	});
+};
+/**
+* Marks everything except given node(or nodes) as aria-hidden
+* @param {Element | Element[]} originalTarget - elements to keep on the page
+* @param [parentNode] - top element, defaults to document.body
+* @param {String} [markerName] - a special attribute to mark every node
+* @param {String} [controlAttribute] - html Attribute to control
+* @return {Undo} undo command
+*/
+var applyAttributeToOthers = function(originalTarget, parentNode, markerName, controlAttribute) {
+	var targets = correctTargets(parentNode, Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
+	if (!markerMap[markerName]) markerMap[markerName] = /* @__PURE__ */ new WeakMap();
+	var markerCounter = markerMap[markerName];
+	var hiddenNodes = [];
+	var elementsToKeep = /* @__PURE__ */ new Set();
+	var elementsToStop = new Set(targets);
+	var keep = function(el) {
+		if (!el || elementsToKeep.has(el)) return;
+		elementsToKeep.add(el);
+		keep(el.parentNode);
+	};
+	targets.forEach(keep);
+	var deep = function(parent) {
+		if (!parent || elementsToStop.has(parent)) return;
+		Array.prototype.forEach.call(parent.children, function(node) {
+			if (elementsToKeep.has(node)) deep(node);
+			else try {
+				var attr = node.getAttribute(controlAttribute);
+				var alreadyHidden = attr !== null && attr !== "false";
+				var counterValue = (counterMap.get(node) || 0) + 1;
+				var markerValue = (markerCounter.get(node) || 0) + 1;
+				counterMap.set(node, counterValue);
+				markerCounter.set(node, markerValue);
+				hiddenNodes.push(node);
+				if (counterValue === 1 && alreadyHidden) uncontrolledNodes.set(node, true);
+				if (markerValue === 1) node.setAttribute(markerName, "true");
+				if (!alreadyHidden) node.setAttribute(controlAttribute, "true");
+			} catch (e) {
+				console.error("aria-hidden: cannot operate on ", node, e);
+			}
+		});
+	};
+	deep(parentNode);
+	elementsToKeep.clear();
+	lockCount++;
+	return function() {
+		hiddenNodes.forEach(function(node) {
+			var counterValue = counterMap.get(node) - 1;
+			var markerValue = markerCounter.get(node) - 1;
+			counterMap.set(node, counterValue);
+			markerCounter.set(node, markerValue);
+			if (!counterValue) {
+				if (!uncontrolledNodes.has(node)) node.removeAttribute(controlAttribute);
+				uncontrolledNodes.delete(node);
+			}
+			if (!markerValue) node.removeAttribute(markerName);
+		});
+		lockCount--;
+		if (!lockCount) {
+			counterMap = /* @__PURE__ */ new WeakMap();
+			counterMap = /* @__PURE__ */ new WeakMap();
+			uncontrolledNodes = /* @__PURE__ */ new WeakMap();
+			markerMap = {};
+		}
+	};
+};
+/**
+* Marks everything except given node(or nodes) as aria-hidden
+* @param {Element | Element[]} originalTarget - elements to keep on the page
+* @param [parentNode] - top element, defaults to document.body
+* @param {String} [markerName] - a special attribute to mark every node
+* @return {Undo} undo command
+*/
+var hideOthers = function(originalTarget, parentNode, markerName) {
+	if (markerName === void 0) markerName = "data-aria-hidden";
+	var targets = Array.from(Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
+	var activeParentNode = parentNode || getDefaultParent(originalTarget);
+	if (!activeParentNode) return function() {
+		return null;
+	};
+	targets.push.apply(targets, Array.from(activeParentNode.querySelectorAll("[aria-live], script")));
+	return applyAttributeToOthers(targets, activeParentNode, markerName, "aria-hidden");
+};
+//#endregion
+//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-dialog@1.1.15_@types+react-dom@19.2.3_@types+react@19.2.14__@types+reac_779045218dc2799d336e7197abef9d38/node_modules/@radix-ui/react-dialog/dist/index.mjs
+var DIALOG_NAME = "Dialog";
+var [createDialogContext, createDialogScope] = createContextScope(DIALOG_NAME);
+var [DialogProvider, useDialogContext] = createDialogContext(DIALOG_NAME);
+var Dialog$1 = (props) => {
+	const { __scopeDialog, children, open: openProp, defaultOpen, onOpenChange, modal = true } = props;
+	const triggerRef = import_react.useRef(null);
+	const contentRef = import_react.useRef(null);
+	const [open, setOpen] = useControllableState({
+		prop: openProp,
+		defaultProp: defaultOpen ?? false,
+		onChange: onOpenChange,
+		caller: DIALOG_NAME
+	});
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogProvider, {
+		scope: __scopeDialog,
+		triggerRef,
+		contentRef,
+		contentId: useId(),
+		titleId: useId(),
+		descriptionId: useId(),
+		open,
+		onOpenChange: setOpen,
+		onOpenToggle: import_react.useCallback(() => setOpen((prevOpen) => !prevOpen), [setOpen]),
+		modal,
+		children
+	});
+};
+Dialog$1.displayName = DIALOG_NAME;
+var TRIGGER_NAME = "DialogTrigger";
+var DialogTrigger$1 = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, ...triggerProps } = props;
+	const context = useDialogContext(TRIGGER_NAME, __scopeDialog);
+	const composedTriggerRef = useComposedRefs(forwardedRef, context.triggerRef);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.button, {
+		type: "button",
+		"aria-haspopup": "dialog",
+		"aria-expanded": context.open,
+		"aria-controls": context.contentId,
+		"data-state": getState(context.open),
+		...triggerProps,
+		ref: composedTriggerRef,
+		onClick: composeEventHandlers(props.onClick, context.onOpenToggle)
+	});
+});
+DialogTrigger$1.displayName = TRIGGER_NAME;
+var PORTAL_NAME = "DialogPortal";
+var [PortalProvider, usePortalContext] = createDialogContext(PORTAL_NAME, { forceMount: void 0 });
+var DialogPortal$1 = (props) => {
+	const { __scopeDialog, forceMount, children, container } = props;
+	const context = useDialogContext(PORTAL_NAME, __scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PortalProvider, {
+		scope: __scopeDialog,
+		forceMount,
+		children: import_react.Children.map(children, (child) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Presence, {
+			present: forceMount || context.open,
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Portal$1, {
+				asChild: true,
+				container,
+				children: child
+			})
+		}))
+	});
+};
+DialogPortal$1.displayName = PORTAL_NAME;
+var OVERLAY_NAME = "DialogOverlay";
+var DialogOverlay$1 = import_react.forwardRef((props, forwardedRef) => {
+	const portalContext = usePortalContext(OVERLAY_NAME, props.__scopeDialog);
+	const { forceMount = portalContext.forceMount, ...overlayProps } = props;
+	const context = useDialogContext(OVERLAY_NAME, props.__scopeDialog);
+	return context.modal ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Presence, {
+		present: forceMount || context.open,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogOverlayImpl, {
+			...overlayProps,
+			ref: forwardedRef
+		})
+	}) : null;
+});
+DialogOverlay$1.displayName = OVERLAY_NAME;
+var Slot = /* @__PURE__ */ createSlot("DialogOverlay.RemoveScroll");
+var DialogOverlayImpl = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, ...overlayProps } = props;
+	const context = useDialogContext(OVERLAY_NAME, __scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ReactRemoveScroll, {
+		as: Slot,
+		allowPinchZoom: true,
+		shards: [context.contentRef],
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
+			"data-state": getState(context.open),
+			...overlayProps,
+			ref: forwardedRef,
+			style: {
+				pointerEvents: "auto",
+				...overlayProps.style
+			}
+		})
+	});
+});
+var CONTENT_NAME = "DialogContent";
+var DialogContent$1 = import_react.forwardRef((props, forwardedRef) => {
+	const portalContext = usePortalContext(CONTENT_NAME, props.__scopeDialog);
+	const { forceMount = portalContext.forceMount, ...contentProps } = props;
+	const context = useDialogContext(CONTENT_NAME, props.__scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Presence, {
+		present: forceMount || context.open,
+		children: context.modal ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContentModal, {
+			...contentProps,
+			ref: forwardedRef
+		}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContentNonModal, {
+			...contentProps,
+			ref: forwardedRef
+		})
+	});
+});
+DialogContent$1.displayName = CONTENT_NAME;
+var DialogContentModal = import_react.forwardRef((props, forwardedRef) => {
+	const context = useDialogContext(CONTENT_NAME, props.__scopeDialog);
+	const contentRef = import_react.useRef(null);
+	const composedRefs = useComposedRefs(forwardedRef, context.contentRef, contentRef);
+	import_react.useEffect(() => {
+		const content = contentRef.current;
+		if (content) return hideOthers(content);
+	}, []);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContentImpl, {
+		...props,
+		ref: composedRefs,
+		trapFocus: context.open,
+		disableOutsidePointerEvents: true,
+		onCloseAutoFocus: composeEventHandlers(props.onCloseAutoFocus, (event) => {
+			event.preventDefault();
+			context.triggerRef.current?.focus();
+		}),
+		onPointerDownOutside: composeEventHandlers(props.onPointerDownOutside, (event) => {
+			const originalEvent = event.detail.originalEvent;
+			const ctrlLeftClick = originalEvent.button === 0 && originalEvent.ctrlKey === true;
+			if (originalEvent.button === 2 || ctrlLeftClick) event.preventDefault();
+		}),
+		onFocusOutside: composeEventHandlers(props.onFocusOutside, (event) => event.preventDefault())
+	});
+});
+var DialogContentNonModal = import_react.forwardRef((props, forwardedRef) => {
+	const context = useDialogContext(CONTENT_NAME, props.__scopeDialog);
+	const hasInteractedOutsideRef = import_react.useRef(false);
+	const hasPointerDownOutsideRef = import_react.useRef(false);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContentImpl, {
+		...props,
+		ref: forwardedRef,
+		trapFocus: false,
+		disableOutsidePointerEvents: false,
+		onCloseAutoFocus: (event) => {
+			props.onCloseAutoFocus?.(event);
+			if (!event.defaultPrevented) {
+				if (!hasInteractedOutsideRef.current) context.triggerRef.current?.focus();
+				event.preventDefault();
+			}
+			hasInteractedOutsideRef.current = false;
+			hasPointerDownOutsideRef.current = false;
+		},
+		onInteractOutside: (event) => {
+			props.onInteractOutside?.(event);
+			if (!event.defaultPrevented) {
+				hasInteractedOutsideRef.current = true;
+				if (event.detail.originalEvent.type === "pointerdown") hasPointerDownOutsideRef.current = true;
+			}
+			const target = event.target;
+			if (context.triggerRef.current?.contains(target)) event.preventDefault();
+			if (event.detail.originalEvent.type === "focusin" && hasPointerDownOutsideRef.current) event.preventDefault();
+		}
+	});
+});
+var DialogContentImpl = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, trapFocus, onOpenAutoFocus, onCloseAutoFocus, ...contentProps } = props;
+	const context = useDialogContext(CONTENT_NAME, __scopeDialog);
+	const contentRef = import_react.useRef(null);
+	const composedRefs = useComposedRefs(forwardedRef, contentRef);
+	useFocusGuards();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FocusScope, {
+		asChild: true,
+		loop: true,
+		trapped: trapFocus,
+		onMountAutoFocus: onOpenAutoFocus,
+		onUnmountAutoFocus: onCloseAutoFocus,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DismissableLayer, {
+			role: "dialog",
+			id: context.contentId,
+			"aria-describedby": context.descriptionId,
+			"aria-labelledby": context.titleId,
+			"data-state": getState(context.open),
+			...contentProps,
+			ref: composedRefs,
+			onDismiss: () => context.onOpenChange(false)
+		})
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TitleWarning, { titleId: context.titleId }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DescriptionWarning, {
+		contentRef,
+		descriptionId: context.descriptionId
+	})] })] });
+});
+var TITLE_NAME$1 = "DialogTitle";
+var DialogTitle$1 = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, ...titleProps } = props;
+	const context = useDialogContext(TITLE_NAME$1, __scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.h2, {
+		id: context.titleId,
+		...titleProps,
+		ref: forwardedRef
+	});
+});
+DialogTitle$1.displayName = TITLE_NAME$1;
+var DESCRIPTION_NAME$1 = "DialogDescription";
+var DialogDescription$1 = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, ...descriptionProps } = props;
+	const context = useDialogContext(DESCRIPTION_NAME$1, __scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.p, {
+		id: context.descriptionId,
+		...descriptionProps,
+		ref: forwardedRef
+	});
+});
+DialogDescription$1.displayName = DESCRIPTION_NAME$1;
+var CLOSE_NAME$1 = "DialogClose";
+var DialogClose$1 = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, ...closeProps } = props;
+	const context = useDialogContext(CLOSE_NAME$1, __scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.button, {
+		type: "button",
+		...closeProps,
+		ref: forwardedRef,
+		onClick: composeEventHandlers(props.onClick, () => context.onOpenChange(false))
+	});
+});
+DialogClose$1.displayName = CLOSE_NAME$1;
+function getState(open) {
+	return open ? "open" : "closed";
+}
+var TITLE_WARNING_NAME = "DialogTitleWarning";
+var [WarningProvider, useWarningContext] = createContext2(TITLE_WARNING_NAME, {
+	contentName: CONTENT_NAME,
+	titleName: TITLE_NAME$1,
+	docsSlug: "dialog"
+});
+var TitleWarning = ({ titleId }) => {
+	const titleWarningContext = useWarningContext(TITLE_WARNING_NAME);
+	const MESSAGE = `\`${titleWarningContext.contentName}\` requires a \`${titleWarningContext.titleName}\` for the component to be accessible for screen reader users.
+
+If you want to hide the \`${titleWarningContext.titleName}\`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/${titleWarningContext.docsSlug}`;
+	import_react.useEffect(() => {
+		if (titleId) {
+			if (!document.getElementById(titleId)) console.error(MESSAGE);
+		}
+	}, [MESSAGE, titleId]);
+	return null;
+};
+var DESCRIPTION_WARNING_NAME = "DialogDescriptionWarning";
+var DescriptionWarning = ({ contentRef, descriptionId }) => {
+	const MESSAGE = `Warning: Missing \`Description\` or \`aria-describedby={undefined}\` for {${useWarningContext(DESCRIPTION_WARNING_NAME).contentName}}.`;
+	import_react.useEffect(() => {
+		const describedById = contentRef.current?.getAttribute("aria-describedby");
+		if (descriptionId && describedById) {
+			if (!document.getElementById(descriptionId)) console.warn(MESSAGE);
+		}
+	}, [
+		MESSAGE,
+		contentRef,
+		descriptionId
+	]);
+	return null;
+};
+var Root = Dialog$1;
+var Trigger = DialogTrigger$1;
+var Portal = DialogPortal$1;
+var Overlay = DialogOverlay$1;
+var Content = DialogContent$1;
+var Title$1 = DialogTitle$1;
+var Description$1 = DialogDescription$1;
+var Close$1 = DialogClose$1;
+//#endregion
+//#region src/components/ui/dialog.tsx
+var Dialog = Root;
+var DialogTrigger = Trigger;
+var DialogPortal = Portal;
+var DialogOverlay = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Overlay, {
+	"data-uid": "src/components/ui/dialog.tsx:20:3",
+	"data-prohibitions": "[editContent]",
+	ref,
+	className: cn$1("fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0", className),
+	...props
+}));
+DialogOverlay.displayName = Overlay.displayName;
+var DialogContent = import_react.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogPortal, {
+	"data-uid": "src/components/ui/dialog.tsx:35:3",
+	"data-prohibitions": "[editContent]",
+	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogOverlay, {
+		"data-uid": "src/components/ui/dialog.tsx:36:5",
+		"data-prohibitions": "[editContent]"
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Content, {
+		"data-uid": "src/components/ui/dialog.tsx:37:5",
+		"data-prohibitions": "[editContent]",
+		ref,
+		className: cn$1("fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg overflow-y-auto max-h-screen", className),
+		...props,
+		children: [children, /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Close$1, {
+			"data-uid": "src/components/ui/dialog.tsx:46:7",
+			"data-prohibitions": "[]",
+			className: "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, {
+				"data-uid": "src/components/ui/dialog.tsx:47:9",
+				"data-prohibitions": "[editContent]",
+				className: "h-4 w-4"
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				"data-uid": "src/components/ui/dialog.tsx:48:9",
+				"data-prohibitions": "[]",
+				className: "sr-only",
+				children: "Close"
+			})]
+		})]
+	})]
+}));
+DialogContent.displayName = Content.displayName;
+var DialogHeader = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	"data-uid": "src/components/ui/dialog.tsx:56:3",
+	"data-prohibitions": "[editContent]",
+	className: cn$1("flex flex-col space-y-1.5 text-center sm:text-left", className),
+	...props
+});
+DialogHeader.displayName = "DialogHeader";
+var DialogFooter = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	"data-uid": "src/components/ui/dialog.tsx:61:3",
+	"data-prohibitions": "[editContent]",
+	className: cn$1("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className),
+	...props
+});
+DialogFooter.displayName = "DialogFooter";
+var DialogTitle = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Title$1, {
+	"data-uid": "src/components/ui/dialog.tsx:72:3",
+	"data-prohibitions": "[editContent]",
+	ref,
+	className: cn$1("text-lg font-semibold leading-none tracking-tight", className),
+	...props
+}));
+DialogTitle.displayName = Title$1.displayName;
+var DialogDescription = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Description$1, {
+	"data-uid": "src/components/ui/dialog.tsx:84:3",
+	"data-prohibitions": "[editContent]",
+	ref,
+	className: cn$1("text-sm text-muted-foreground", className),
+	...props
+}));
+DialogDescription.displayName = Description$1.displayName;
 //#endregion
 //#region src/components/sections/Blog.tsx
 var articles = [
@@ -22713,70 +24221,114 @@ var articles = [
 ];
 function Blog() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/Blog.tsx:39:5",
+		"data-uid": "src/components/sections/Blog.tsx:43:5",
 		"data-prohibitions": "[editContent]",
 		id: "blog",
-		className: "py-20 bg-background",
+		className: "py-20 bg-background scroll-mt-20",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/Blog.tsx:40:7",
+			"data-uid": "src/components/sections/Blog.tsx:44:7",
 			"data-prohibitions": "[editContent]",
 			className: "container mx-auto px-4 md:px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/Blog.tsx:41:9",
+				"data-uid": "src/components/sections/Blog.tsx:45:9",
 				"data-prohibitions": "[]",
 				className: "text-center max-w-3xl mx-auto mb-16",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
-						"data-uid": "src/components/sections/Blog.tsx:42:11",
+						"data-uid": "src/components/sections/Blog.tsx:46:11",
 						"data-prohibitions": "[editContent]",
 						className: "h-10 w-10 text-gold mx-auto mb-4"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						"data-uid": "src/components/sections/Blog.tsx:43:11",
+						"data-uid": "src/components/sections/Blog.tsx:47:11",
 						"data-prohibitions": "[]",
 						className: "text-3xl md:text-4xl font-bold mb-4 text-foreground",
 						children: ["Artigos Úteis & ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/Blog.tsx:44:29",
+							"data-uid": "src/components/sections/Blog.tsx:48:29",
 							"data-prohibitions": "[]",
 							className: "text-gold-dark",
 							children: "Blog"
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/Blog.tsx:46:11",
+						"data-uid": "src/components/sections/Blog.tsx:50:11",
 						"data-prohibitions": "[]",
 						className: "text-muted-foreground text-lg font-medium",
 						children: "Informações técnicas e atualizadas para ajudar você a entender melhor seus direitos previdenciários."
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/Blog.tsx:52:9",
+				"data-uid": "src/components/sections/Blog.tsx:56:9",
 				"data-prohibitions": "[editContent]",
-				className: "max-w-3xl mx-auto",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-					"data-uid": "src/components/sections/Blog.tsx:53:11",
+				className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto",
+				children: articles.map((article, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+					"data-uid": "src/components/sections/Blog.tsx:58:13",
 					"data-prohibitions": "[editContent]",
-					type: "single",
-					collapsible: true,
-					className: "w-full space-y-4",
-					children: articles.map((article, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-						"data-uid": "src/components/sections/Blog.tsx:55:15",
+					className: "flex flex-col h-full border-border hover:border-gold/50 shadow-sm transition-colors bg-card",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardHeader, {
+						"data-uid": "src/components/sections/Blog.tsx:62:15",
 						"data-prohibitions": "[editContent]",
-						value: `item-${index}`,
-						className: "bg-card border border-border rounded-lg px-6 data-[state=open]:border-gold shadow-sm transition-colors",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-							"data-uid": "src/components/sections/Blog.tsx:60:17",
-							"data-prohibitions": "[editContent]",
-							className: "text-left text-lg font-semibold hover:text-gold-dark hover:no-underline py-4 text-foreground",
-							children: article.title
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
 							"data-uid": "src/components/sections/Blog.tsx:63:17",
 							"data-prohibitions": "[editContent]",
-							className: "text-muted-foreground font-medium leading-relaxed text-base pb-6 pt-2",
+							className: "text-xl text-foreground line-clamp-2 leading-tight",
+							children: article.title
+						})
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
+						"data-uid": "src/components/sections/Blog.tsx:67:15",
+						"data-prohibitions": "[editContent]",
+						className: "flex-1 flex flex-col justify-between pt-0",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							"data-uid": "src/components/sections/Blog.tsx:68:17",
+							"data-prohibitions": "[editContent]",
+							className: "text-muted-foreground text-sm font-medium line-clamp-4 mb-6 leading-relaxed",
 							children: article.content
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Dialog, {
+							"data-uid": "src/components/sections/Blog.tsx:72:17",
+							"data-prohibitions": "[editContent]",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogTrigger, {
+								"data-uid": "src/components/sections/Blog.tsx:73:19",
+								"data-prohibitions": "[]",
+								asChild: true,
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+									"data-uid": "src/components/sections/Blog.tsx:74:21",
+									"data-prohibitions": "[]",
+									variant: "outline",
+									className: "w-full text-gold-dark border-gold-dark/30 hover:bg-gold hover:text-black font-semibold group mt-auto",
+									children: ["Ler mais", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+										"data-uid": "src/components/sections/Blog.tsx:79:23",
+										"data-prohibitions": "[editContent]",
+										className: "ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+									})]
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogContent, {
+								"data-uid": "src/components/sections/Blog.tsx:82:19",
+								"data-prohibitions": "[editContent]",
+								className: "sm:max-w-2xl bg-card border-gold/20",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogHeader, {
+									"data-uid": "src/components/sections/Blog.tsx:83:21",
+									"data-prohibitions": "[editContent]",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogTitle, {
+										"data-uid": "src/components/sections/Blog.tsx:84:23",
+										"data-prohibitions": "[editContent]",
+										className: "text-2xl text-foreground leading-snug pr-6",
+										children: article.title
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogDescription, {
+										"data-uid": "src/components/sections/Blog.tsx:87:23",
+										"data-prohibitions": "[editContent]",
+										className: "sr-only",
+										children: ["Leia o artigo completo sobre ", article.title]
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/Blog.tsx:91:21",
+									"data-prohibitions": "[editContent]",
+									className: "mt-4 text-muted-foreground font-medium leading-relaxed text-base bg-muted/30 p-4 rounded-lg",
+									children: article.content
+								})]
+							})]
 						})]
-					}, index))
-				})
+					})]
+				}, index))
 			})]
 		})
 	});
@@ -24521,217 +26073,6 @@ function useToast() {
 	};
 }
 //#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-use-callback-ref@1.1.1_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-use-callback-ref/dist/index.mjs
-function useCallbackRef(callback) {
-	const callbackRef = import_react.useRef(callback);
-	import_react.useEffect(() => {
-		callbackRef.current = callback;
-	});
-	return import_react.useMemo(() => (...args) => callbackRef.current?.(...args), []);
-}
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-use-escape-keydown@1.1.1_@types+react@19.2.14_react@19.2.4/node_modules/@radix-ui/react-use-escape-keydown/dist/index.mjs
-function useEscapeKeydown(onEscapeKeyDownProp, ownerDocument = globalThis?.document) {
-	const onEscapeKeyDown = useCallbackRef(onEscapeKeyDownProp);
-	import_react.useEffect(() => {
-		const handleKeyDown = (event) => {
-			if (event.key === "Escape") onEscapeKeyDown(event);
-		};
-		ownerDocument.addEventListener("keydown", handleKeyDown, { capture: true });
-		return () => ownerDocument.removeEventListener("keydown", handleKeyDown, { capture: true });
-	}, [onEscapeKeyDown, ownerDocument]);
-}
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-dismissable-layer@1.1.11_@types+react-dom@19.2.3_@types+react@19.2.14___3d3960154a4c07d09bb90cb341135fc5/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs
-var DISMISSABLE_LAYER_NAME = "DismissableLayer";
-var CONTEXT_UPDATE = "dismissableLayer.update";
-var POINTER_DOWN_OUTSIDE = "dismissableLayer.pointerDownOutside";
-var FOCUS_OUTSIDE = "dismissableLayer.focusOutside";
-var originalBodyPointerEvents;
-var DismissableLayerContext = import_react.createContext({
-	layers: /* @__PURE__ */ new Set(),
-	layersWithOutsidePointerEventsDisabled: /* @__PURE__ */ new Set(),
-	branches: /* @__PURE__ */ new Set()
-});
-var DismissableLayer = import_react.forwardRef((props, forwardedRef) => {
-	const { disableOutsidePointerEvents = false, onEscapeKeyDown, onPointerDownOutside, onFocusOutside, onInteractOutside, onDismiss, ...layerProps } = props;
-	const context = import_react.useContext(DismissableLayerContext);
-	const [node, setNode] = import_react.useState(null);
-	const ownerDocument = node?.ownerDocument ?? globalThis?.document;
-	const [, force] = import_react.useState({});
-	const composedRefs = useComposedRefs(forwardedRef, (node2) => setNode(node2));
-	const layers = Array.from(context.layers);
-	const [highestLayerWithOutsidePointerEventsDisabled] = [...context.layersWithOutsidePointerEventsDisabled].slice(-1);
-	const highestLayerWithOutsidePointerEventsDisabledIndex = layers.indexOf(highestLayerWithOutsidePointerEventsDisabled);
-	const index = node ? layers.indexOf(node) : -1;
-	const isBodyPointerEventsDisabled = context.layersWithOutsidePointerEventsDisabled.size > 0;
-	const isPointerEventsEnabled = index >= highestLayerWithOutsidePointerEventsDisabledIndex;
-	const pointerDownOutside = usePointerDownOutside((event) => {
-		const target = event.target;
-		const isPointerDownOnBranch = [...context.branches].some((branch) => branch.contains(target));
-		if (!isPointerEventsEnabled || isPointerDownOnBranch) return;
-		onPointerDownOutside?.(event);
-		onInteractOutside?.(event);
-		if (!event.defaultPrevented) onDismiss?.();
-	}, ownerDocument);
-	const focusOutside = useFocusOutside((event) => {
-		const target = event.target;
-		if ([...context.branches].some((branch) => branch.contains(target))) return;
-		onFocusOutside?.(event);
-		onInteractOutside?.(event);
-		if (!event.defaultPrevented) onDismiss?.();
-	}, ownerDocument);
-	useEscapeKeydown((event) => {
-		if (!(index === context.layers.size - 1)) return;
-		onEscapeKeyDown?.(event);
-		if (!event.defaultPrevented && onDismiss) {
-			event.preventDefault();
-			onDismiss();
-		}
-	}, ownerDocument);
-	import_react.useEffect(() => {
-		if (!node) return;
-		if (disableOutsidePointerEvents) {
-			if (context.layersWithOutsidePointerEventsDisabled.size === 0) {
-				originalBodyPointerEvents = ownerDocument.body.style.pointerEvents;
-				ownerDocument.body.style.pointerEvents = "none";
-			}
-			context.layersWithOutsidePointerEventsDisabled.add(node);
-		}
-		context.layers.add(node);
-		dispatchUpdate();
-		return () => {
-			if (disableOutsidePointerEvents && context.layersWithOutsidePointerEventsDisabled.size === 1) ownerDocument.body.style.pointerEvents = originalBodyPointerEvents;
-		};
-	}, [
-		node,
-		ownerDocument,
-		disableOutsidePointerEvents,
-		context
-	]);
-	import_react.useEffect(() => {
-		return () => {
-			if (!node) return;
-			context.layers.delete(node);
-			context.layersWithOutsidePointerEventsDisabled.delete(node);
-			dispatchUpdate();
-		};
-	}, [node, context]);
-	import_react.useEffect(() => {
-		const handleUpdate = () => force({});
-		document.addEventListener(CONTEXT_UPDATE, handleUpdate);
-		return () => document.removeEventListener(CONTEXT_UPDATE, handleUpdate);
-	}, []);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
-		...layerProps,
-		ref: composedRefs,
-		style: {
-			pointerEvents: isBodyPointerEventsDisabled ? isPointerEventsEnabled ? "auto" : "none" : void 0,
-			...props.style
-		},
-		onFocusCapture: composeEventHandlers(props.onFocusCapture, focusOutside.onFocusCapture),
-		onBlurCapture: composeEventHandlers(props.onBlurCapture, focusOutside.onBlurCapture),
-		onPointerDownCapture: composeEventHandlers(props.onPointerDownCapture, pointerDownOutside.onPointerDownCapture)
-	});
-});
-DismissableLayer.displayName = DISMISSABLE_LAYER_NAME;
-var BRANCH_NAME = "DismissableLayerBranch";
-var DismissableLayerBranch = import_react.forwardRef((props, forwardedRef) => {
-	const context = import_react.useContext(DismissableLayerContext);
-	const ref = import_react.useRef(null);
-	const composedRefs = useComposedRefs(forwardedRef, ref);
-	import_react.useEffect(() => {
-		const node = ref.current;
-		if (node) {
-			context.branches.add(node);
-			return () => {
-				context.branches.delete(node);
-			};
-		}
-	}, [context.branches]);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
-		...props,
-		ref: composedRefs
-	});
-});
-DismissableLayerBranch.displayName = BRANCH_NAME;
-function usePointerDownOutside(onPointerDownOutside, ownerDocument = globalThis?.document) {
-	const handlePointerDownOutside = useCallbackRef(onPointerDownOutside);
-	const isPointerInsideReactTreeRef = import_react.useRef(false);
-	const handleClickRef = import_react.useRef(() => {});
-	import_react.useEffect(() => {
-		const handlePointerDown = (event) => {
-			if (event.target && !isPointerInsideReactTreeRef.current) {
-				let handleAndDispatchPointerDownOutsideEvent2 = function() {
-					handleAndDispatchCustomEvent$1(POINTER_DOWN_OUTSIDE, handlePointerDownOutside, eventDetail, { discrete: true });
-				};
-				const eventDetail = { originalEvent: event };
-				if (event.pointerType === "touch") {
-					ownerDocument.removeEventListener("click", handleClickRef.current);
-					handleClickRef.current = handleAndDispatchPointerDownOutsideEvent2;
-					ownerDocument.addEventListener("click", handleClickRef.current, { once: true });
-				} else handleAndDispatchPointerDownOutsideEvent2();
-			} else ownerDocument.removeEventListener("click", handleClickRef.current);
-			isPointerInsideReactTreeRef.current = false;
-		};
-		const timerId = window.setTimeout(() => {
-			ownerDocument.addEventListener("pointerdown", handlePointerDown);
-		}, 0);
-		return () => {
-			window.clearTimeout(timerId);
-			ownerDocument.removeEventListener("pointerdown", handlePointerDown);
-			ownerDocument.removeEventListener("click", handleClickRef.current);
-		};
-	}, [ownerDocument, handlePointerDownOutside]);
-	return { onPointerDownCapture: () => isPointerInsideReactTreeRef.current = true };
-}
-function useFocusOutside(onFocusOutside, ownerDocument = globalThis?.document) {
-	const handleFocusOutside = useCallbackRef(onFocusOutside);
-	const isFocusInsideReactTreeRef = import_react.useRef(false);
-	import_react.useEffect(() => {
-		const handleFocus = (event) => {
-			if (event.target && !isFocusInsideReactTreeRef.current) handleAndDispatchCustomEvent$1(FOCUS_OUTSIDE, handleFocusOutside, { originalEvent: event }, { discrete: false });
-		};
-		ownerDocument.addEventListener("focusin", handleFocus);
-		return () => ownerDocument.removeEventListener("focusin", handleFocus);
-	}, [ownerDocument, handleFocusOutside]);
-	return {
-		onFocusCapture: () => isFocusInsideReactTreeRef.current = true,
-		onBlurCapture: () => isFocusInsideReactTreeRef.current = false
-	};
-}
-function dispatchUpdate() {
-	const event = new CustomEvent(CONTEXT_UPDATE);
-	document.dispatchEvent(event);
-}
-function handleAndDispatchCustomEvent$1(name, handler, detail, { discrete }) {
-	const target = detail.originalEvent.target;
-	const event = new CustomEvent(name, {
-		bubbles: false,
-		cancelable: true,
-		detail
-	});
-	if (handler) target.addEventListener(name, handler, { once: true });
-	if (discrete) dispatchDiscreteCustomEvent(target, event);
-	else target.dispatchEvent(event);
-}
-var Root = DismissableLayer;
-var Branch = DismissableLayerBranch;
-//#endregion
-//#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-portal@1.1.9_@types+react-dom@19.2.3_@types+react@19.2.14__@types+react_7668895bec2444446faa4e0f4eb5244b/node_modules/@radix-ui/react-portal/dist/index.mjs
-var PORTAL_NAME = "Portal";
-var Portal = import_react.forwardRef((props, forwardedRef) => {
-	const { container: containerProp, ...portalProps } = props;
-	const [mounted, setMounted] = import_react.useState(false);
-	useLayoutEffect2(() => setMounted(true), []);
-	const container = containerProp || mounted && globalThis?.document?.body;
-	return container ? import_react_dom.createPortal(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
-		...portalProps,
-		ref: forwardedRef
-	}), container) : null;
-});
-Portal.displayName = PORTAL_NAME;
-//#endregion
 //#region ../../cache/modules/landing-page-bpc-abb2b/node_modules/.pnpm/@radix-ui+react-visually-hidden@1.2.3_@types+react-dom@19.2.3_@types+react@19.2.14__@ty_fa89646d7248b32d1762bf88948f6339/node_modules/@radix-ui/react-visually-hidden/dist/index.mjs
 var VISUALLY_HIDDEN_STYLES = Object.freeze({
 	position: "absolute",
@@ -24949,8 +26290,8 @@ var Toast$2 = import_react.forwardRef((props, forwardedRef) => {
 			...toastProps,
 			ref: forwardedRef,
 			onClose: () => setOpen(false),
-			onPause: useCallbackRef(props.onPause),
-			onResume: useCallbackRef(props.onResume),
+			onPause: useCallbackRef$1(props.onPause),
+			onResume: useCallbackRef$1(props.onResume),
 			onSwipeStart: composeEventHandlers(props.onSwipeStart, (event) => {
 				event.currentTarget.setAttribute("data-swipe", "start");
 			}),
@@ -24993,7 +26334,7 @@ var ToastImpl = import_react.forwardRef((props, forwardedRef) => {
 	const closeTimerRemainingTimeRef = import_react.useRef(duration);
 	const closeTimerRef = import_react.useRef(0);
 	const { onToastAdd, onToastRemove } = context;
-	const handleClose = useCallbackRef(() => {
+	const handleClose = useCallbackRef$1(() => {
 		if (node?.contains(document.activeElement)) context.viewport?.focus();
 		onClose();
 	});
@@ -25056,7 +26397,7 @@ var ToastImpl = import_react.forwardRef((props, forwardedRef) => {
 		onClose: handleClose,
 		children: import_react_dom.createPortal(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection.ItemSlot, {
 			scope: __scopeToast,
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root, {
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$1, {
 				asChild: true,
 				onEscapeKeyDown: composeEventHandlers(onEscapeKeyDown, () => {
 					if (!context.isFocusedToastEscapeKeyDownRef.current) handleClose();
@@ -25147,7 +26488,7 @@ var ToastAnnounce = (props) => {
 		const timer = window.setTimeout(() => setIsAnnounced(true), 1e3);
 		return () => window.clearTimeout(timer);
 	}, []);
-	return isAnnounced ? null : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Portal, {
+	return isAnnounced ? null : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Portal$1, {
 		asChild: true,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(VisuallyHidden, {
 			...announceProps,
@@ -25252,7 +26593,7 @@ var isDeltaInDirection = (delta, direction, threshold = 0) => {
 	else return !isDeltaX && deltaY > threshold;
 };
 function useNextFrame(callback = () => {}) {
-	const fn = useCallbackRef(callback);
+	const fn = useCallbackRef$1(callback);
 	useLayoutEffect2(() => {
 		let raf1 = 0;
 		let raf2 = 0;
@@ -26419,4 +27760,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-CRi3CeUU.js.map
+//# sourceMappingURL=index-YZU6RF0C.js.map

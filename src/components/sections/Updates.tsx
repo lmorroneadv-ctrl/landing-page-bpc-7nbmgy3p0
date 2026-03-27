@@ -28,7 +28,7 @@ export function Updates() {
   }
 
   return (
-    <section id="atualizacoes" className="py-20 bg-muted border-t border-border/50">
+    <section id="atualizacoes" className="py-20 bg-muted border-t border-border/50 scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -43,24 +43,17 @@ export function Updates() {
         <div className="hidden sm:flex flex-row justify-center gap-4 mb-16">
           <Button
             variant="outline"
-            className="border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold"
+            className="border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold px-6 transition-colors"
             onClick={() => scrollTo('atestmed')}
           >
             <FileText className="mr-2 h-4 w-4" /> AtestMed (Regras 2026)
           </Button>
           <Button
             variant="outline"
-            className="border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold"
+            className="border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold px-6 transition-colors"
             onClick={() => scrollTo('auxilio')}
           >
             <HeartPulse className="mr-2 h-4 w-4" /> Auxílio-Acidente
-          </Button>
-          <Button
-            variant="outline"
-            className="border-gold-dark/30 text-gold-dark hover:bg-gold hover:text-black bg-card shadow-sm h-12 rounded-full font-semibold"
-            onClick={() => scrollTo('dicas')}
-          >
-            <CheckCircle2 className="mr-2 h-4 w-4" /> Dicas de Aprovação
           </Button>
         </div>
 
@@ -171,7 +164,7 @@ export function Updates() {
                   <strong>triagem documental obrigatória</strong> que antecede e condiciona a
                   perícia física no INSS.
                 </p>
-                <div className="bg-red-50 border-l-4 border-red-600 p-5 mb-6">
+                <div className="bg-red-50 border-l-4 border-red-600 p-5 mb-6 rounded-lg">
                   <p className="text-sm text-red-900 font-medium">
                     <strong>Risco de Negativa:</strong> A ausência de elementos probatórios
                     essenciais resulta no <strong>indeferimento imediato</strong> do pedido,
@@ -189,7 +182,7 @@ export function Updates() {
                   ].map((I, idx) => (
                     <div
                       key={idx}
-                      className="bg-background p-5 rounded-lg border border-border flex flex-col items-center text-center"
+                      className="bg-background p-5 rounded-lg border border-border flex flex-col items-center text-center transition-colors hover:border-gold/30"
                     >
                       <I.icon className="h-8 w-8 text-gold mb-3" />
                       <span className="text-sm font-semibold text-foreground">{I.t}</span>
@@ -201,54 +194,32 @@ export function Updates() {
           </div>
 
           <div className="space-y-8">
-            <div id="dicas" className="scroll-mt-32">
-              <Card className="bg-card border-border shadow-soft">
+            <div className="sticky top-28">
+              <Card className="bg-gradient-to-br from-background to-muted border-gold/30 shadow-md">
                 <CardHeader>
-                  <CardTitle className="text-xl text-foreground flex gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-gold-dark" /> Dicas de Aprovação
-                  </CardTitle>
+                  <CardTitle className="text-xl text-foreground">Por que um advogado?</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-5">
-                  {[
-                    'Revise rigorosamente todos os dados do laudo médico antes do envio.',
-                    'Capture imagens bem iluminadas e legíveis de atestados e documentos de identidade.',
-                    'Jamais envie atestados com rasuras, emendas ou ausência de informações vitais.',
-                  ].map((t, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <div className="bg-gold/10 p-2 rounded-md shrink-0 mt-0.5">
-                        <span className="text-gold-dark font-bold text-sm">0{i + 1}</span>
-                      </div>
-                      <p className="text-sm text-muted-foreground font-medium">{t}</p>
-                    </div>
-                  ))}
+                <CardContent>
+                  <p className="text-muted-foreground text-sm mb-6 leading-relaxed font-medium">
+                    Erros documentais custam o seu benefício. A assessoria especializada garante
+                    auditoria prévia detalhada, neutralizando riscos de negativas automáticas pelo
+                    INSS.
+                  </p>
+                  <Button
+                    className="w-full bg-gold hover:bg-gold/90 text-black font-bold h-14 uppercase text-sm shadow-sm transition-transform hover:scale-[1.02]"
+                    asChild
+                  >
+                    <a
+                      href="https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20ajuda%20com%20as%20novas%20regras%20do%20INSS."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Falar com a Equipe Legal
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
-
-            <Card className="bg-gradient-to-br from-background to-muted border-gold/30 shadow-md">
-              <CardHeader>
-                <CardTitle className="text-xl text-foreground">Por que um advogado?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm mb-6 leading-relaxed font-medium">
-                  Erros documentais custam o seu benefício. A assessoria especializada garante
-                  auditoria prévia detalhada, neutralizando riscos de negativas automáticas pelo
-                  INSS.
-                </p>
-                <Button
-                  className="w-full bg-gold hover:bg-gold/90 text-black font-bold h-14 uppercase text-sm shadow-sm"
-                  asChild
-                >
-                  <a
-                    href="https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20ajuda%20com%20as%20novas%20regras%20do%20INSS."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Falar com a Equipe Legal
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
 
@@ -307,42 +278,6 @@ export function Updates() {
                     Descrição detalhada da lesão e sequelas.
                   </li>
                 </ul>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem
-              value="dicas"
-              className="bg-card border border-border rounded-lg px-4 data-[state=open]:border-gold shadow-sm"
-            >
-              <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-4">
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gold-dark shrink-0" />
-                  Dicas de Aprovação
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="pt-2 pb-6 space-y-4">
-                <ul className="space-y-3">
-                  {[
-                    'Revise rigorosamente todos os dados do laudo médico antes do envio.',
-                    'Capture imagens bem iluminadas e legíveis de atestados.',
-                    'Jamais envie atestados com rasuras ou emendas.',
-                  ].map((t, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <div className="bg-gold/10 p-1.5 rounded-md shrink-0 mt-0.5">
-                        <span className="text-gold-dark font-bold text-xs">0{i + 1}</span>
-                      </div>
-                      <p className="text-sm text-muted-foreground font-medium">{t}</p>
-                    </li>
-                  ))}
-                </ul>
-                <Button
-                  className="w-full bg-gold hover:bg-gold/90 text-black font-bold h-12 uppercase text-xs shadow-sm mt-4"
-                  asChild
-                >
-                  <a href="https://wa.me/5553981063023" target="_blank" rel="noopener noreferrer">
-                    Falar com a Equipe
-                  </a>
-                </Button>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
