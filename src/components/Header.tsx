@@ -76,12 +76,46 @@ export function Header() {
             >
               Dúvidas
             </button>
-            <button
-              onClick={() => scrollToSection('guia-bpc')}
-              className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
-            >
-              Guia BPC
-            </button>
+            <div className="relative group">
+              <button className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold flex items-center gap-1">
+                Guias
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="opacity-70"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-52 z-50">
+                <div className="bg-background border border-border shadow-lg rounded-md py-2 flex flex-col">
+                  <Link
+                    to="/guia-bpc"
+                    className="px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide"
+                  >
+                    Guia BPC/LOAS
+                  </Link>
+                  <Link
+                    to="/guia-auxilio-acidente"
+                    className="px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide"
+                  >
+                    Auxílio-Acidente
+                  </Link>
+                  <Link
+                    to="/guia-pensao-morte"
+                    className="px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide"
+                  >
+                    Pensão por Morte
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Button
               className="bg-gold hover:bg-gold/90 text-black rounded-none px-6 uppercase text-sm font-bold tracking-wider shadow-sm"
               onClick={() =>
@@ -132,12 +166,32 @@ export function Header() {
           >
             Dúvidas
           </button>
-          <button
-            onClick={() => scrollToSection('guia-bpc')}
-            className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
-          >
-            Guia BPC
-          </button>
+          <div className="flex flex-col items-center w-full border-y border-border py-4 my-2 bg-slate-50/50">
+            <span className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-2">
+              Guias Práticos
+            </span>
+            <Link
+              to="/guia-bpc"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-foreground hover:text-gold-dark text-base py-2 font-medium"
+            >
+              Guia BPC/LOAS
+            </Link>
+            <Link
+              to="/guia-auxilio-acidente"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-foreground hover:text-gold-dark text-base py-2 font-medium"
+            >
+              Guia Auxílio-Acidente
+            </Link>
+            <Link
+              to="/guia-pensao-morte"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-foreground hover:text-gold-dark text-base py-2 font-medium"
+            >
+              Guia Pensão por Morte
+            </Link>
+          </div>
           <Button
             className="bg-gold hover:bg-gold/90 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm"
             onClick={() =>

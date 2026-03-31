@@ -17477,6 +17477,28 @@ var ChevronUp = createLucideIcon("chevron-up", [["path", {
 	d: "m18 15-6-6-6 6",
 	key: "153udz"
 }]]);
+var CircleAlert = createLucideIcon("circle-alert", [
+	["circle", {
+		cx: "12",
+		cy: "12",
+		r: "10",
+		key: "1mglay"
+	}],
+	["line", {
+		x1: "12",
+		x2: "12",
+		y1: "8",
+		y2: "12",
+		key: "1pkeuh"
+	}],
+	["line", {
+		x1: "12",
+		x2: "12.01",
+		y1: "16",
+		y2: "16",
+		key: "4dfq90"
+	}]
+]);
 var CircleCheck = createLucideIcon("circle-check", [["circle", {
 	cx: "12",
 	cy: "12",
@@ -17704,6 +17726,30 @@ var Star = createLucideIcon("star", [["path", {
 	d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
 	key: "r04s7s"
 }]]);
+var Stethoscope = createLucideIcon("stethoscope", [
+	["path", {
+		d: "M11 2v2",
+		key: "1539x4"
+	}],
+	["path", {
+		d: "M5 2v2",
+		key: "1yf1q8"
+	}],
+	["path", {
+		d: "M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1",
+		key: "rb5t3r"
+	}],
+	["path", {
+		d: "M8 15a6 6 0 0 0 12 0v-3",
+		key: "x18d4x"
+	}],
+	["circle", {
+		cx: "20",
+		cy: "10",
+		r: "2",
+		key: "ts1r5v"
+	}]
+]);
 var Tractor = createLucideIcon("tractor", [
 	["path", {
 		d: "m10 11 11 .9a1 1 0 0 1 .8 1.1l-.665 4.158a1 1 0 0 1-.988.842H20",
@@ -19747,15 +19793,68 @@ function Header$1() {
 								className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold",
 								children: "Dúvidas"
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								"data-uid": "src/components/Header.tsx:79:13",
 								"data-prohibitions": "[]",
-								onClick: () => scrollToSection("guia-bpc"),
-								className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold",
-								children: "Guia BPC"
+								className: "relative group",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									"data-uid": "src/components/Header.tsx:80:15",
+									"data-prohibitions": "[]",
+									className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold flex items-center gap-1",
+									children: ["Guias", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
+										"data-uid": "src/components/Header.tsx:82:17",
+										"data-prohibitions": "[]",
+										width: "12",
+										height: "12",
+										viewBox: "0 0 24 24",
+										fill: "none",
+										stroke: "currentColor",
+										strokeWidth: "2",
+										strokeLinecap: "round",
+										strokeLinejoin: "round",
+										className: "opacity-70",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+											"data-uid": "src/components/Header.tsx:93:19",
+											"data-prohibitions": "[editContent]",
+											d: "m6 9 6 6 6-6"
+										})
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/Header.tsx:96:15",
+									"data-prohibitions": "[]",
+									className: "absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-52 z-50",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/Header.tsx:97:17",
+										"data-prohibitions": "[]",
+										className: "bg-background border border-border shadow-lg rounded-md py-2 flex flex-col",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+												"data-uid": "src/components/Header.tsx:98:19",
+												"data-prohibitions": "[]",
+												to: "/guia-bpc",
+												className: "px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide",
+												children: "Guia BPC/LOAS"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+												"data-uid": "src/components/Header.tsx:104:19",
+												"data-prohibitions": "[]",
+												to: "/guia-auxilio-acidente",
+												className: "px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide",
+												children: "Auxílio-Acidente"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+												"data-uid": "src/components/Header.tsx:110:19",
+												"data-prohibitions": "[]",
+												to: "/guia-pensao-morte",
+												className: "px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide",
+												children: "Pensão por Morte"
+											})
+										]
+									})
+								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-								"data-uid": "src/components/Header.tsx:85:13",
+								"data-uid": "src/components/Header.tsx:119:13",
 								"data-prohibitions": "[]",
 								className: "bg-gold hover:bg-gold/90 text-black rounded-none px-6 uppercase text-sm font-bold tracking-wider shadow-sm",
 								onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).", "_blank"),
@@ -19764,16 +19863,16 @@ function Header$1() {
 						]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						"data-uid": "src/components/Header.tsx:99:11",
+						"data-uid": "src/components/Header.tsx:133:11",
 						"data-prohibitions": "[editContent]",
 						className: "md:hidden text-foreground",
 						onClick: () => setIsMobileMenuOpen(!isMobileMenuOpen),
 						children: isMobileMenuOpen ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, {
-							"data-uid": "src/components/Header.tsx:103:33",
+							"data-uid": "src/components/Header.tsx:137:33",
 							"data-prohibitions": "[editContent]",
 							size: 28
 						}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, {
-							"data-uid": "src/components/Header.tsx:103:51",
+							"data-uid": "src/components/Header.tsx:137:51",
 							"data-prohibitions": "[editContent]",
 							size: 28
 						})
@@ -19781,47 +19880,77 @@ function Header$1() {
 				]
 			})
 		}), isMobileMenuOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Header.tsx:110:9",
+			"data-uid": "src/components/Header.tsx:144:9",
 			"data-prohibitions": "[]",
 			className: "md:hidden absolute top-full left-0 w-full bg-background border-t border-border shadow-xl py-4 flex flex-col items-center gap-4",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:111:11",
+					"data-uid": "src/components/Header.tsx:145:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("servicos"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Serviços"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:117:11",
+					"data-uid": "src/components/Header.tsx:151:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("sobre"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Sobre"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:123:11",
+					"data-uid": "src/components/Header.tsx:157:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("localizacao"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Localização"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:129:11",
+					"data-uid": "src/components/Header.tsx:163:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("faq"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Dúvidas"
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:135:11",
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/Header.tsx:169:11",
 					"data-prohibitions": "[]",
-					onClick: () => scrollToSection("guia-bpc"),
-					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
-					children: "Guia BPC"
+					className: "flex flex-col items-center w-full border-y border-border py-4 my-2 bg-slate-50/50",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"data-uid": "src/components/Header.tsx:170:13",
+							"data-prohibitions": "[]",
+							className: "text-sm font-bold text-muted-foreground uppercase tracking-wider mb-2",
+							children: "Guias Práticos"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							"data-uid": "src/components/Header.tsx:173:13",
+							"data-prohibitions": "[]",
+							to: "/guia-bpc",
+							onClick: () => setIsMobileMenuOpen(false),
+							className: "text-foreground hover:text-gold-dark text-base py-2 font-medium",
+							children: "Guia BPC/LOAS"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							"data-uid": "src/components/Header.tsx:180:13",
+							"data-prohibitions": "[]",
+							to: "/guia-auxilio-acidente",
+							onClick: () => setIsMobileMenuOpen(false),
+							className: "text-foreground hover:text-gold-dark text-base py-2 font-medium",
+							children: "Guia Auxílio-Acidente"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							"data-uid": "src/components/Header.tsx:187:13",
+							"data-prohibitions": "[]",
+							to: "/guia-pensao-morte",
+							onClick: () => setIsMobileMenuOpen(false),
+							className: "text-foreground hover:text-gold-dark text-base py-2 font-medium",
+							children: "Guia Pensão por Morte"
+						})
+					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-					"data-uid": "src/components/Header.tsx:141:11",
+					"data-uid": "src/components/Header.tsx:195:11",
 					"data-prohibitions": "[]",
 					className: "bg-gold hover:bg-gold/90 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm",
 					onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).", "_blank"),
@@ -19835,68 +19964,68 @@ function Header$1() {
 //#region src/components/Footer.tsx
 function Footer() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
-		"data-uid": "src/components/Footer.tsx:6:5",
+		"data-uid": "src/components/Footer.tsx:7:5",
 		"data-prohibitions": "[editContent]",
 		className: "bg-card text-muted-foreground py-16 border-t border-border",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Footer.tsx:7:7",
+			"data-uid": "src/components/Footer.tsx:8:7",
 			"data-prohibitions": "[editContent]",
 			className: "container mx-auto px-4 md:px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/Footer.tsx:8:9",
+				"data-uid": "src/components/Footer.tsx:9:9",
 				"data-prohibitions": "[]",
-				className: "grid grid-cols-1 md:grid-cols-4 gap-12",
+				className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:9:11",
+						"data-uid": "src/components/Footer.tsx:10:11",
 						"data-prohibitions": "[]",
-						className: "col-span-1 md:col-span-1 flex flex-col items-center md:items-start",
+						className: "col-span-1 md:col-span-2 lg:col-span-1 flex flex-col items-center md:items-start",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							"data-uid": "src/components/Footer.tsx:10:13",
+							"data-uid": "src/components/Footer.tsx:11:13",
 							"data-prohibitions": "[editContent]",
 							src: editedimage_1773665784218_56dfb_default,
 							alt: "Logotipo Lucas Morrone Advocacia Especialista em INSS",
 							className: "h-28 object-contain mb-6"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/Footer.tsx:15:13",
+							"data-uid": "src/components/Footer.tsx:16:13",
 							"data-prohibitions": "[]",
 							className: "text-sm text-center md:text-left text-muted-foreground font-medium",
 							children: "Especialistas em Direito Previdenciário e concessão do benefício BPC/LOAS. Garantindo seus direitos com excelência e agilidade."
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:21:11",
+						"data-uid": "src/components/Footer.tsx:22:11",
 						"data-prohibitions": "[]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							"data-uid": "src/components/Footer.tsx:22:13",
+							"data-uid": "src/components/Footer.tsx:23:13",
 							"data-prohibitions": "[]",
 							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
 							children: "Contato"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-							"data-uid": "src/components/Footer.tsx:25:13",
+							"data-uid": "src/components/Footer.tsx:26:13",
 							"data-prohibitions": "[]",
 							className: "space-y-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:26:15",
+								"data-uid": "src/components/Footer.tsx:27:15",
 								"data-prohibitions": "[]",
 								className: "flex items-start gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
-									"data-uid": "src/components/Footer.tsx:27:17",
+									"data-uid": "src/components/Footer.tsx:28:17",
 									"data-prohibitions": "[editContent]",
 									size: 18,
 									className: "text-gold-dark shrink-0 mt-1"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/Footer.tsx:28:17",
+									"data-uid": "src/components/Footer.tsx:29:17",
 									"data-prohibitions": "[]",
 									className: "flex flex-col gap-1 text-muted-foreground font-medium",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-										"data-uid": "src/components/Footer.tsx:29:19",
+										"data-uid": "src/components/Footer.tsx:30:19",
 										"data-prohibitions": "[]",
 										href: "https://wa.me/5553981063023",
 										className: "hover:text-gold-dark transition-colors",
 										children: "(53) 98106-3023"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-										"data-uid": "src/components/Footer.tsx:35:19",
+										"data-uid": "src/components/Footer.tsx:36:19",
 										"data-prohibitions": "[]",
 										href: "tel:+5553999998235",
 										className: "hover:text-gold-dark transition-colors",
@@ -19904,16 +20033,16 @@ function Footer() {
 									})]
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:40:15",
+								"data-uid": "src/components/Footer.tsx:41:15",
 								"data-prohibitions": "[]",
 								className: "flex items-center gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, {
-									"data-uid": "src/components/Footer.tsx:41:17",
+									"data-uid": "src/components/Footer.tsx:42:17",
 									"data-prohibitions": "[editContent]",
 									size: 18,
 									className: "text-gold-dark shrink-0"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									"data-uid": "src/components/Footer.tsx:42:17",
+									"data-uid": "src/components/Footer.tsx:43:17",
 									"data-prohibitions": "[]",
 									href: "mailto:contato@lucasmorrone.adv.br",
 									className: "text-muted-foreground font-medium hover:text-gold-dark transition-colors",
@@ -19923,38 +20052,38 @@ function Footer() {
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:52:11",
+						"data-uid": "src/components/Footer.tsx:53:11",
 						"data-prohibitions": "[]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							"data-uid": "src/components/Footer.tsx:53:13",
+							"data-uid": "src/components/Footer.tsx:54:13",
 							"data-prohibitions": "[]",
 							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
 							children: "Endereço"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-							"data-uid": "src/components/Footer.tsx:56:13",
+							"data-uid": "src/components/Footer.tsx:57:13",
 							"data-prohibitions": "[]",
 							className: "space-y-4",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-								"data-uid": "src/components/Footer.tsx:57:15",
+								"data-uid": "src/components/Footer.tsx:58:15",
 								"data-prohibitions": "[]",
 								className: "flex items-start gap-3 text-muted-foreground font-medium",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
-									"data-uid": "src/components/Footer.tsx:58:17",
+									"data-uid": "src/components/Footer.tsx:59:17",
 									"data-prohibitions": "[editContent]",
 									size: 18,
 									className: "text-gold-dark shrink-0 mt-1"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-									"data-uid": "src/components/Footer.tsx:59:17",
+									"data-uid": "src/components/Footer.tsx:60:17",
 									"data-prohibitions": "[]",
 									children: [
 										"Av. Silva Paes, 293, centro",
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-											"data-uid": "src/components/Footer.tsx:61:19",
+											"data-uid": "src/components/Footer.tsx:62:19",
 											"data-prohibitions": "[editContent]"
 										}),
 										"Rio Grande - RS",
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {
-											"data-uid": "src/components/Footer.tsx:63:19",
+											"data-uid": "src/components/Footer.tsx:64:19",
 											"data-prohibitions": "[editContent]"
 										}),
 										"CEP: 96200-340"
@@ -19964,19 +20093,68 @@ function Footer() {
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:70:11",
+						"data-uid": "src/components/Footer.tsx:71:11",
 						"data-prohibitions": "[]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							"data-uid": "src/components/Footer.tsx:71:13",
+							"data-uid": "src/components/Footer.tsx:72:13",
+							"data-prohibitions": "[]",
+							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
+							children: "Guias Práticos"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+							"data-uid": "src/components/Footer.tsx:75:13",
+							"data-prohibitions": "[]",
+							className: "space-y-4 text-muted-foreground font-medium flex flex-col items-start",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+									"data-uid": "src/components/Footer.tsx:76:15",
+									"data-prohibitions": "[]",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+										"data-uid": "src/components/Footer.tsx:77:17",
+										"data-prohibitions": "[]",
+										to: "/guia-bpc",
+										className: "hover:text-gold-dark transition-colors",
+										children: "Guia BPC/LOAS"
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+									"data-uid": "src/components/Footer.tsx:81:15",
+									"data-prohibitions": "[]",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+										"data-uid": "src/components/Footer.tsx:82:17",
+										"data-prohibitions": "[]",
+										to: "/guia-auxilio-acidente",
+										className: "hover:text-gold-dark transition-colors",
+										children: "Guia Auxílio-Acidente"
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+									"data-uid": "src/components/Footer.tsx:89:15",
+									"data-prohibitions": "[]",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+										"data-uid": "src/components/Footer.tsx:90:17",
+										"data-prohibitions": "[]",
+										to: "/guia-pensao-morte",
+										className: "hover:text-gold-dark transition-colors",
+										children: "Guia Pensão por Morte"
+									})
+								})
+							]
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/Footer.tsx:97:11",
+						"data-prohibitions": "[]",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							"data-uid": "src/components/Footer.tsx:98:13",
 							"data-prohibitions": "[]",
 							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
 							children: "Redes Sociais"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/Footer.tsx:74:13",
+							"data-uid": "src/components/Footer.tsx:101:13",
 							"data-prohibitions": "[]",
 							className: "flex gap-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/Footer.tsx:75:15",
+								"data-uid": "src/components/Footer.tsx:102:15",
 								"data-prohibitions": "[]",
 								href: "https://www.instagram.com/adv.lucasmorrone",
 								target: "_blank",
@@ -19984,13 +20162,13 @@ function Footer() {
 								className: "w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-gold transition-colors group border border-border",
 								"aria-label": "Instagram de Lucas Morrone",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Instagram, {
-									"data-uid": "src/components/Footer.tsx:82:17",
+									"data-uid": "src/components/Footer.tsx:109:17",
 									"data-prohibitions": "[editContent]",
 									size: 20,
 									className: "text-foreground group-hover:text-black"
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/Footer.tsx:84:15",
+								"data-uid": "src/components/Footer.tsx:111:15",
 								"data-prohibitions": "[]",
 								href: "https://www.facebook.com/p/Lucas-Morrone-Advocacia-100042065540026/",
 								target: "_blank",
@@ -19998,7 +20176,7 @@ function Footer() {
 								className: "w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-gold transition-colors group border border-border",
 								"aria-label": "Facebook de Lucas Morrone",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, {
-									"data-uid": "src/components/Footer.tsx:91:17",
+									"data-uid": "src/components/Footer.tsx:118:17",
 									"data-prohibitions": "[editContent]",
 									size: 20,
 									className: "text-foreground group-hover:text-black"
@@ -20008,11 +20186,11 @@ function Footer() {
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/Footer.tsx:97:9",
+				"data-uid": "src/components/Footer.tsx:124:9",
 				"data-prohibitions": "[editContent]",
 				className: "border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground font-medium flex flex-col md:flex-row justify-between items-center gap-4",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					"data-uid": "src/components/Footer.tsx:98:11",
+					"data-uid": "src/components/Footer.tsx:125:11",
 					"data-prohibitions": "[editContent]",
 					children: [
 						"© ",
@@ -20020,7 +20198,7 @@ function Footer() {
 						" Lucas Morrone Advocacia. Todos os direitos reservados."
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/Footer.tsx:101:11",
+					"data-uid": "src/components/Footer.tsx:128:11",
 					"data-prohibitions": "[]",
 					children: "OAB/RS 107485"
 				})]
@@ -25899,6 +26077,588 @@ function BpcGuide() {
 	});
 }
 //#endregion
+//#region src/pages/AuxilioAcidenteGuide.tsx
+function AuxilioAcidenteGuide() {
+	(0, import_react.useEffect)(() => {
+		window.scrollTo(0, 0);
+	}, []);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:17:5",
+		"data-prohibitions": "[editContent]",
+		className: "bg-slate-50 text-slate-900 font-sans selection:bg-gold/30 pt-24",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
+			"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:18:7",
+			"data-prohibitions": "[editContent]",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:20:9",
+					"data-prohibitions": "[]",
+					className: "bg-slate-900 text-white py-16 md:py-24 relative overflow-hidden",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:21:11",
+						"data-prohibitions": "[]",
+						className: "absolute inset-0 bg-[url('https://img.usecurling.com/p/1200/800?q=law%20office&color=black&dpr=2')] bg-cover bg-center opacity-20"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:22:11",
+						"data-prohibitions": "[]",
+						className: "container mx-auto px-4 md:px-6 relative z-10 max-w-4xl text-center",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:23:13",
+								"data-prohibitions": "[]",
+								className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/20 text-gold border border-gold/30 mb-6 text-sm font-bold uppercase tracking-widest",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
+									"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:24:15",
+									"data-prohibitions": "[editContent]",
+									size: 16
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:25:15",
+									"data-prohibitions": "[]",
+									children: "Guia Informativo"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+								"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:27:13",
+								"data-prohibitions": "[]",
+								className: "text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight",
+								children: "Auxílio-Acidente"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:30:13",
+								"data-prohibitions": "[]",
+								className: "text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-medium",
+								children: "Informações técnicas e detalhadas sobre a natureza indenizatória do Auxílio-Acidente e seus requisitos legais."
+							})
+						]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+					"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:38:9",
+					"data-prohibitions": "[]",
+					className: "py-16 bg-white",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:39:11",
+						"data-prohibitions": "[]",
+						className: "container mx-auto px-4 md:px-6 max-w-3xl",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:40:13",
+							"data-prohibitions": "[]",
+							className: "mb-12 text-center",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:41:15",
+								"data-prohibitions": "[]",
+								className: "text-3xl font-bold text-slate-900 mb-4",
+								children: "Entenda o Benefício"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:42:15",
+								"data-prohibitions": "[]",
+								className: "text-slate-600 font-medium",
+								children: "O Auxílio-Acidente possui caráter indenizatório e é devido ao segurado quando, após a consolidação das lesões decorrentes de acidente de qualquer natureza, resultarem sequelas que impliquem redução da capacidade para o trabalho que habitualmente exercia."
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Accordion, {
+							"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:50:13",
+							"data-prohibitions": "[]",
+							type: "single",
+							collapsible: true,
+							className: "w-full space-y-4",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+									"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:51:15",
+									"data-prohibitions": "[]",
+									value: "item-1",
+									className: "bg-slate-50 border border-slate-200 rounded-lg px-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+										"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:55:17",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-slate-900 hover:text-gold-dark hover:no-underline py-6",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:56:19",
+											"data-prohibitions": "[]",
+											className: "flex items-center gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, {
+												"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:57:21",
+												"data-prohibitions": "[editContent]",
+												className: "text-gold",
+												size: 24
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:58:21",
+												"data-prohibitions": "[]",
+												children: "Requisitos e Elegibilidade"
+											})]
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+										"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:61:17",
+										"data-prohibitions": "[]",
+										className: "text-slate-600 text-base leading-relaxed pb-6",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:62:19",
+											"data-prohibitions": "[]",
+											className: "mb-4",
+											children: "Para ter direito ao benefício, é necessário preencher os seguintes requisitos:"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+											"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:65:19",
+											"data-prohibitions": "[]",
+											className: "list-disc pl-5 space-y-2",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+													"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:66:21",
+													"data-prohibitions": "[]",
+													children: "Ter qualidade de segurado no momento do acidente."
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+													"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:67:21",
+													"data-prohibitions": "[]",
+													children: "Ter sofrido um acidente de qualquer natureza (não apenas acidentes de trabalho)."
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+													"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:71:21",
+													"data-prohibitions": "[]",
+													children: "Redução parcial e definitiva da capacidade para o trabalho habitual."
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+													"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:72:21",
+													"data-prohibitions": "[]",
+													children: "Nexo causal entre o acidente e a redução da capacidade."
+												})
+											]
+										})]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+									"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:77:15",
+									"data-prohibitions": "[]",
+									value: "item-2",
+									className: "bg-slate-50 border border-slate-200 rounded-lg px-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+										"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:81:17",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-slate-900 hover:text-gold-dark hover:no-underline py-6",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:82:19",
+											"data-prohibitions": "[]",
+											className: "flex items-center gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Stethoscope, {
+												"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:83:21",
+												"data-prohibitions": "[editContent]",
+												className: "text-gold",
+												size: 24
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:84:21",
+												"data-prohibitions": "[]",
+												children: "A Importância do Atestado Médico"
+											})]
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
+										"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:87:17",
+										"data-prohibitions": "[]",
+										className: "text-slate-600 text-base leading-relaxed pb-6",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+											"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:88:19",
+											"data-prohibitions": "[]",
+											children: [
+												"A comprovação da sequela e da redução da capacidade laborativa é estritamente técnica. A apresentação de um",
+												" ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:91:21",
+													"data-prohibitions": "[]",
+													children: "atestado médico detalhado e atualizado"
+												}),
+												" é essencial para a instrução processual e administrativa. O documento deve descrever com precisão as limitações físicas ou mentais consolidadas após o acidente."
+											]
+										})
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+									"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:98:15",
+									"data-prohibitions": "[]",
+									value: "item-3",
+									className: "bg-slate-50 border border-slate-200 rounded-lg px-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+										"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:102:17",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-slate-900 hover:text-gold-dark hover:no-underline py-6",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:103:19",
+											"data-prohibitions": "[]",
+											className: "flex items-center gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleAlert, {
+												"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:104:21",
+												"data-prohibitions": "[editContent]",
+												className: "text-gold",
+												size: 24
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:105:21",
+												"data-prohibitions": "[]",
+												children: "Nova Portaria e Atualizações"
+											})]
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
+										"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:108:17",
+										"data-prohibitions": "[]",
+										className: "text-slate-600 text-base leading-relaxed pb-6",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+											"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:109:19",
+											"data-prohibitions": "[]",
+											children: [
+												"A recente ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:110:31",
+													"data-prohibitions": "[]",
+													children: "nova portaria"
+												}),
+												" estabelece diretrizes atualizadas para a realização das perícias médicas no INSS. As inovações normativas podem impactar os critérios de avaliação e os prazos de agendamento. É fundamental contar com orientação jurídica especializada para compreender como as novas regras se aplicam ao seu caso concreto."
+											]
+										})
+									})]
+								})
+							]
+						})]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+					"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:123:9",
+					"data-prohibitions": "[]",
+					className: "py-20 bg-slate-50 border-t border-slate-200",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:124:11",
+						"data-prohibitions": "[]",
+						className: "container mx-auto px-4 md:px-6 max-w-4xl",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:125:13",
+							"data-prohibitions": "[]",
+							className: "text-center bg-white border border-slate-200 p-10 rounded-3xl shadow-sm",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:126:15",
+									"data-prohibitions": "[]",
+									className: "text-2xl font-bold text-slate-900 mb-4",
+									children: "Necessita de Orientação Técnica?"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:129:15",
+									"data-prohibitions": "[]",
+									className: "text-slate-600 mb-8 max-w-2xl mx-auto font-medium text-lg",
+									children: "A análise do seu caso demanda conhecimento especializado. Uma avaliação jurídica pode esclarecer seus direitos e a viabilidade do benefício."
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+									"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:133:15",
+									"data-prohibitions": "[]",
+									size: "lg",
+									className: "bg-gold hover:bg-gold-dark text-black rounded-none px-8 py-6 uppercase tracking-wider font-bold shadow-md transition-all hover:-translate-y-1 hover:shadow-lg",
+									onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20orientação%20sobre%20Auxílio-Acidente.", "_blank"),
+									children: ["Falar com o Escritório", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+										"data-uid": "src/pages/AuxilioAcidenteGuide.tsx:144:17",
+										"data-prohibitions": "[editContent]",
+										className: "ml-2",
+										size: 20
+									})]
+								})
+							]
+						})
+					})
+				})
+			]
+		})
+	});
+}
+//#endregion
+//#region src/pages/PensaoMorteGuide.tsx
+function PensaoMorteGuide() {
+	(0, import_react.useEffect)(() => {
+		window.scrollTo(0, 0);
+	}, []);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		"data-uid": "src/pages/PensaoMorteGuide.tsx:17:5",
+		"data-prohibitions": "[editContent]",
+		className: "bg-slate-50 text-slate-900 font-sans selection:bg-gold/30 pt-24",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
+			"data-uid": "src/pages/PensaoMorteGuide.tsx:18:7",
+			"data-prohibitions": "[editContent]",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					"data-uid": "src/pages/PensaoMorteGuide.tsx:20:9",
+					"data-prohibitions": "[]",
+					className: "bg-slate-900 text-white py-16 md:py-24 relative overflow-hidden",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/pages/PensaoMorteGuide.tsx:21:11",
+						"data-prohibitions": "[]",
+						className: "absolute inset-0 bg-[url('https://img.usecurling.com/p/1200/800?q=courthouse&color=black&dpr=2')] bg-cover bg-center opacity-20"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/PensaoMorteGuide.tsx:22:11",
+						"data-prohibitions": "[]",
+						className: "container mx-auto px-4 md:px-6 relative z-10 max-w-4xl text-center",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/PensaoMorteGuide.tsx:23:13",
+								"data-prohibitions": "[]",
+								className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/20 text-gold border border-gold/30 mb-6 text-sm font-bold uppercase tracking-widest",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
+									"data-uid": "src/pages/PensaoMorteGuide.tsx:24:15",
+									"data-prohibitions": "[editContent]",
+									size: 16
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/pages/PensaoMorteGuide.tsx:25:15",
+									"data-prohibitions": "[]",
+									children: "Guia Informativo"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+								"data-uid": "src/pages/PensaoMorteGuide.tsx:27:13",
+								"data-prohibitions": "[]",
+								className: "text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight",
+								children: "Pensão por Morte"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/pages/PensaoMorteGuide.tsx:30:13",
+								"data-prohibitions": "[]",
+								className: "text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-medium",
+								children: "Entenda as diretrizes e os requisitos legais para a concessão do benefício aos dependentes do segurado."
+							})
+						]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+					"data-uid": "src/pages/PensaoMorteGuide.tsx:38:9",
+					"data-prohibitions": "[]",
+					className: "py-16 bg-white",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/PensaoMorteGuide.tsx:39:11",
+						"data-prohibitions": "[]",
+						className: "container mx-auto px-4 md:px-6 max-w-3xl",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/pages/PensaoMorteGuide.tsx:40:13",
+							"data-prohibitions": "[]",
+							className: "mb-12 text-center",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								"data-uid": "src/pages/PensaoMorteGuide.tsx:41:15",
+								"data-prohibitions": "[]",
+								className: "text-3xl font-bold text-slate-900 mb-4",
+								children: "Sobre o Benefício"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/pages/PensaoMorteGuide.tsx:42:15",
+								"data-prohibitions": "[]",
+								className: "text-slate-600 font-medium",
+								children: "A Pensão por Morte é um benefício previdenciário pago pelo INSS aos dependentes do segurado que falecer, seja ele aposentado ou não. Tem como objetivo garantir a segurança financeira da família após o óbito do provedor."
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Accordion, {
+							"data-uid": "src/pages/PensaoMorteGuide.tsx:49:13",
+							"data-prohibitions": "[]",
+							type: "single",
+							collapsible: true,
+							className: "w-full space-y-4",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+									"data-uid": "src/pages/PensaoMorteGuide.tsx:50:15",
+									"data-prohibitions": "[]",
+									value: "item-1",
+									className: "bg-slate-50 border border-slate-200 rounded-lg px-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+										"data-uid": "src/pages/PensaoMorteGuide.tsx:54:17",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-slate-900 hover:text-gold-dark hover:no-underline py-6",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/pages/PensaoMorteGuide.tsx:55:19",
+											"data-prohibitions": "[]",
+											className: "flex items-center gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
+												"data-uid": "src/pages/PensaoMorteGuide.tsx:56:21",
+												"data-prohibitions": "[editContent]",
+												className: "text-gold",
+												size: 24
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/pages/PensaoMorteGuide.tsx:57:21",
+												"data-prohibitions": "[]",
+												children: "Requisitos Fundamentais"
+											})]
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+										"data-uid": "src/pages/PensaoMorteGuide.tsx:60:17",
+										"data-prohibitions": "[]",
+										className: "text-slate-600 text-base leading-relaxed pb-6",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											"data-uid": "src/pages/PensaoMorteGuide.tsx:61:19",
+											"data-prohibitions": "[]",
+											className: "mb-4",
+											children: "A concessão da pensão por morte exige o preenchimento de três requisitos básicos:"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+											"data-uid": "src/pages/PensaoMorteGuide.tsx:65:19",
+											"data-prohibitions": "[]",
+											className: "list-disc pl-5 space-y-2",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+													"data-uid": "src/pages/PensaoMorteGuide.tsx:66:21",
+													"data-prohibitions": "[]",
+													children: "Ocorrência do óbito ou morte presumida do segurado."
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+													"data-uid": "src/pages/PensaoMorteGuide.tsx:67:21",
+													"data-prohibitions": "[]",
+													children: "A qualidade de segurado do falecido no momento do óbito (estar contribuindo ou em período de graça, ou já ser aposentado)."
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+													"data-uid": "src/pages/PensaoMorteGuide.tsx:71:21",
+													"data-prohibitions": "[]",
+													children: "A condição de dependente daquele que pleiteia o benefício."
+												})
+											]
+										})]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+									"data-uid": "src/pages/PensaoMorteGuide.tsx:76:15",
+									"data-prohibitions": "[]",
+									value: "item-2",
+									className: "bg-slate-50 border border-slate-200 rounded-lg px-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+										"data-uid": "src/pages/PensaoMorteGuide.tsx:80:17",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-slate-900 hover:text-gold-dark hover:no-underline py-6",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/pages/PensaoMorteGuide.tsx:81:19",
+											"data-prohibitions": "[]",
+											className: "flex items-center gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, {
+												"data-uid": "src/pages/PensaoMorteGuide.tsx:82:21",
+												"data-prohibitions": "[editContent]",
+												className: "text-gold",
+												size: 24
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/pages/PensaoMorteGuide.tsx:83:21",
+												"data-prohibitions": "[]",
+												children: "Dependentes Legais"
+											})]
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+										"data-uid": "src/pages/PensaoMorteGuide.tsx:86:17",
+										"data-prohibitions": "[]",
+										className: "text-slate-600 text-base leading-relaxed pb-6",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											"data-uid": "src/pages/PensaoMorteGuide.tsx:87:19",
+											"data-prohibitions": "[]",
+											className: "mb-4",
+											children: "A lei previdenciária divide os dependentes em classes (a existência de dependentes de uma classe exclui o direito dos das classes seguintes):"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+											"data-uid": "src/pages/PensaoMorteGuide.tsx:91:19",
+											"data-prohibitions": "[]",
+											className: "list-disc pl-5 space-y-2",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+													"data-uid": "src/pages/PensaoMorteGuide.tsx:92:21",
+													"data-prohibitions": "[]",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+														"data-uid": "src/pages/PensaoMorteGuide.tsx:93:23",
+														"data-prohibitions": "[]",
+														children: "Classe 1:"
+													}), " Cônjuge, companheiro(a) e filhos não emancipados, de qualquer condição, menores de 21 anos ou inválidos. (A dependência econômica é presumida)."]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+													"data-uid": "src/pages/PensaoMorteGuide.tsx:97:21",
+													"data-prohibitions": "[]",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+														"data-uid": "src/pages/PensaoMorteGuide.tsx:98:23",
+														"data-prohibitions": "[]",
+														children: "Classe 2:"
+													}), " Pais do segurado falecido. (A dependência econômica deve ser comprovada)."]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+													"data-uid": "src/pages/PensaoMorteGuide.tsx:101:21",
+													"data-prohibitions": "[]",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+														"data-uid": "src/pages/PensaoMorteGuide.tsx:102:23",
+														"data-prohibitions": "[]",
+														children: "Classe 3:"
+													}), " Irmãos não emancipados, menores de 21 anos ou inválidos. (A dependência econômica deve ser comprovada)."]
+												})
+											]
+										})]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+									"data-uid": "src/pages/PensaoMorteGuide.tsx:109:15",
+									"data-prohibitions": "[]",
+									value: "item-3",
+									className: "bg-slate-50 border border-slate-200 rounded-lg px-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+										"data-uid": "src/pages/PensaoMorteGuide.tsx:113:17",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-slate-900 hover:text-gold-dark hover:no-underline py-6",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/pages/PensaoMorteGuide.tsx:114:19",
+											"data-prohibitions": "[]",
+											className: "flex items-center gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, {
+												"data-uid": "src/pages/PensaoMorteGuide.tsx:115:21",
+												"data-prohibitions": "[editContent]",
+												className: "text-gold",
+												size: 24
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/pages/PensaoMorteGuide.tsx:116:21",
+												"data-prohibitions": "[]",
+												children: "Duração do Benefício"
+											})]
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
+										"data-uid": "src/pages/PensaoMorteGuide.tsx:119:17",
+										"data-prohibitions": "[]",
+										className: "text-slate-600 text-base leading-relaxed pb-6",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											"data-uid": "src/pages/PensaoMorteGuide.tsx:120:19",
+											"data-prohibitions": "[]",
+											children: "A duração do benefício para o cônjuge ou companheiro(a) varia de acordo com a idade do dependente na data do óbito e o tempo de casamento ou união estável (exige-se mais de 2 anos de união e 18 contribuições para não ser de apenas 4 meses). Para filhos, o benefício cessa aos 21 anos, salvo em casos de invalidez."
+										})
+									})]
+								})
+							]
+						})]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+					"data-uid": "src/pages/PensaoMorteGuide.tsx:133:9",
+					"data-prohibitions": "[]",
+					className: "py-20 bg-slate-50 border-t border-slate-200",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/pages/PensaoMorteGuide.tsx:134:11",
+						"data-prohibitions": "[]",
+						className: "container mx-auto px-4 md:px-6 max-w-4xl",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/pages/PensaoMorteGuide.tsx:135:13",
+							"data-prohibitions": "[]",
+							className: "text-center bg-white border border-slate-200 p-10 rounded-3xl shadow-sm",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									"data-uid": "src/pages/PensaoMorteGuide.tsx:136:15",
+									"data-prohibitions": "[]",
+									className: "text-2xl font-bold text-slate-900 mb-4",
+									children: "Dúvidas sobre o Processo?"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/pages/PensaoMorteGuide.tsx:137:15",
+									"data-prohibitions": "[]",
+									className: "text-slate-600 mb-8 max-w-2xl mx-auto font-medium text-lg",
+									children: "As regras de concessão e duração da Pensão por Morte passaram por diversas alterações legislativas. Consultar um especialista pode garantir o correto enquadramento legal."
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+									"data-uid": "src/pages/PensaoMorteGuide.tsx:142:15",
+									"data-prohibitions": "[]",
+									size: "lg",
+									className: "bg-gold hover:bg-gold-dark text-black rounded-none px-8 py-6 uppercase tracking-wider font-bold shadow-md transition-all hover:-translate-y-1 hover:shadow-lg",
+									onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20gostaria%20de%20orientação%20sobre%20Pensão%20por%20Morte.", "_blank"),
+									children: ["Falar com o Escritório", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+										"data-uid": "src/pages/PensaoMorteGuide.tsx:153:17",
+										"data-prohibitions": "[editContent]",
+										className: "ml-2",
+										size: 20
+									})]
+								})
+							]
+						})
+					})
+				})
+			]
+		})
+	});
+}
+//#endregion
 //#region src/hooks/use-toast.ts
 var TOAST_LIMIT = 1;
 var TOAST_REMOVE_DELAY = 1e6;
@@ -27650,44 +28410,65 @@ var Toaster = ({ ...props }) => {
 //#region src/App.tsx
 function App() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(BrowserRouter, {
-		"data-uid": "src/App.tsx:10:5",
+		"data-uid": "src/App.tsx:12:5",
 		"data-prohibitions": "[]",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Routes, {
-				"data-uid": "src/App.tsx:11:7",
+				"data-uid": "src/App.tsx:13:7",
 				"data-prohibitions": "[]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Route, {
-					"data-uid": "src/App.tsx:12:9",
+					"data-uid": "src/App.tsx:14:9",
 					"data-prohibitions": "[]",
 					element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layout, {
-						"data-uid": "src/App.tsx:12:25",
+						"data-uid": "src/App.tsx:14:25",
 						"data-prohibitions": "[editContent]"
 					}),
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
-						"data-uid": "src/App.tsx:13:11",
-						"data-prohibitions": "[editContent]",
-						path: "/",
-						element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Index, {
-							"data-uid": "src/App.tsx:13:36",
-							"data-prohibitions": "[editContent]"
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+							"data-uid": "src/App.tsx:15:11",
+							"data-prohibitions": "[editContent]",
+							path: "/",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Index, {
+								"data-uid": "src/App.tsx:15:36",
+								"data-prohibitions": "[editContent]"
+							})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+							"data-uid": "src/App.tsx:16:11",
+							"data-prohibitions": "[editContent]",
+							path: "/guia-bpc",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcGuide, {
+								"data-uid": "src/App.tsx:16:44",
+								"data-prohibitions": "[editContent]"
+							})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+							"data-uid": "src/App.tsx:17:11",
+							"data-prohibitions": "[editContent]",
+							path: "/guia-auxilio-acidente",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuxilioAcidenteGuide, {
+								"data-uid": "src/App.tsx:17:57",
+								"data-prohibitions": "[editContent]"
+							})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+							"data-uid": "src/App.tsx:18:11",
+							"data-prohibitions": "[editContent]",
+							path: "/guia-pensao-morte",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PensaoMorteGuide, {
+								"data-uid": "src/App.tsx:18:53",
+								"data-prohibitions": "[editContent]"
+							})
 						})
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
-						"data-uid": "src/App.tsx:14:11",
-						"data-prohibitions": "[editContent]",
-						path: "/guia-bpc",
-						element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcGuide, {
-							"data-uid": "src/App.tsx:14:44",
-							"data-prohibitions": "[editContent]"
-						})
-					})]
+					]
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster$2, {
-				"data-uid": "src/App.tsx:17:7",
+				"data-uid": "src/App.tsx:21:7",
 				"data-prohibitions": "[editContent]"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster, {
-				"data-uid": "src/App.tsx:18:7",
+				"data-uid": "src/App.tsx:22:7",
 				"data-prohibitions": "[editContent]"
 			})
 		]
@@ -27701,4 +28482,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-BnRNIoZ2.js.map
+//# sourceMappingURL=index-D9LJRY6G.js.map

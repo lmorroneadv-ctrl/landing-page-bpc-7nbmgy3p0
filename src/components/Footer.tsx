@@ -1,12 +1,13 @@
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import logoUrl from '@/assets/editedimage_1773665784218-56dfb.png'
 
 export function Footer() {
   return (
     <footer className="bg-card text-muted-foreground py-16 border-t border-border">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="col-span-1 md:col-span-1 flex flex-col items-center md:items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+          <div className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col items-center md:items-start">
             <img
               src={logoUrl}
               alt="Logotipo Lucas Morrone Advocacia Especialista em INSS"
@@ -63,6 +64,32 @@ export function Footer() {
                   <br />
                   CEP: 96200-340
                 </span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-foreground text-lg font-bold mb-6 uppercase tracking-wider">
+              Guias Práticos
+            </h3>
+            <ul className="space-y-4 text-muted-foreground font-medium flex flex-col items-start">
+              <li>
+                <Link to="/guia-bpc" className="hover:text-gold-dark transition-colors">
+                  Guia BPC/LOAS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/guia-auxilio-acidente"
+                  className="hover:text-gold-dark transition-colors"
+                >
+                  Guia Auxílio-Acidente
+                </Link>
+              </li>
+              <li>
+                <Link to="/guia-pensao-morte" className="hover:text-gold-dark transition-colors">
+                  Guia Pensão por Morte
+                </Link>
               </li>
             </ul>
           </div>
