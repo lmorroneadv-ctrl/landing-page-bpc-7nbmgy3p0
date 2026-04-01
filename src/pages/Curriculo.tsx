@@ -16,7 +16,7 @@ export default function Curriculo() {
           <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
             <div className="w-32 h-32 md:w-48 md:h-48 shrink-0 rounded-full border-4 border-gold/20 overflow-hidden bg-muted">
               <img
-                src="https://img.usecurling.com/ppl/large?gender=male&seed=4"
+                src="https://img.usecurling.com/ppl/large?gender=male&seed=1"
                 alt="Lucas Morrone Costa"
                 className="w-full h-full object-cover"
               />
@@ -145,20 +145,40 @@ export default function Curriculo() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-              <span className="text-sm font-bold text-gold-dark mb-2 block">2013 - 2014</span>
+              <span className="text-sm font-bold text-gold-dark mb-2 block">2012 - 2016</span>
               <h3 className="text-lg font-bold text-foreground mb-1">
                 Universidade Federal do Rio Grande
               </h3>
               <p className="text-muted-foreground">FURG</p>
             </div>
             <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+              <span className="text-sm font-bold text-gold-dark mb-2 block">2015 - 2016</span>
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <h3 className="text-lg font-bold text-foreground">AGU</h3>
+                <span className="text-xs font-semibold bg-gold/10 text-gold-dark px-2 py-0.5 rounded-full border border-gold/20">
+                  Estágio
+                </span>
+              </div>
+              <p className="text-muted-foreground">Advocacia-Geral da União</p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <span className="text-sm font-bold text-gold-dark mb-2 block">2012 - 2015</span>
-              <h3 className="text-lg font-bold text-foreground mb-1">Justiça Federal de 1º Grau</h3>
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <h3 className="text-lg font-bold text-foreground">Justiça Federal de 1º Grau</h3>
+                <span className="text-xs font-semibold bg-gold/10 text-gold-dark px-2 py-0.5 rounded-full border border-gold/20">
+                  Estágio
+                </span>
+              </div>
               <p className="text-muted-foreground">Rio Grande do Sul (RS)</p>
             </div>
             <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <span className="text-sm font-bold text-gold-dark mb-2 block">2012 - 2013</span>
-              <h3 className="text-lg font-bold text-foreground mb-1">Tribunal de Justiça</h3>
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <h3 className="text-lg font-bold text-foreground">Tribunal de Justiça</h3>
+                <span className="text-xs font-semibold bg-gold/10 text-gold-dark px-2 py-0.5 rounded-full border border-gold/20">
+                  Estágio
+                </span>
+              </div>
               <p className="text-muted-foreground">Rio Grande do Sul (TJRS)</p>
             </div>
           </div>
@@ -193,16 +213,6 @@ export default function Curriculo() {
               <p className="text-muted-foreground">
                 Direito e Justiça Social: instrumentos jurídicos de proteção...
               </p>
-            </div>
-
-            <div className="bg-muted/30 p-6 rounded-lg border border-border/50">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
-                <h3 className="text-lg font-bold text-foreground">Projeto de Extensão</h3>
-                <span className="text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border">
-                  2016
-                </span>
-              </div>
-              <p className="text-muted-foreground">Bicharada Universitária</p>
             </div>
           </div>
         </section>

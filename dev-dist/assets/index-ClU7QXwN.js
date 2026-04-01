@@ -27225,7 +27225,7 @@ function Curriculo() {
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 							"data-uid": "src/pages/Curriculo.tsx:18:15",
 							"data-prohibitions": "[editContent]",
-							src: "https://img.usecurling.com/ppl/large?gender=male&seed=4",
+							src: "https://img.usecurling.com/ppl/large?gender=male&seed=1",
 							alt: "Lucas Morrone Costa",
 							className: "w-full h-full object-cover"
 						})
@@ -27494,7 +27494,7 @@ function Curriculo() {
 										"data-uid": "src/pages/Curriculo.tsx:148:15",
 										"data-prohibitions": "[]",
 										className: "text-sm font-bold text-gold-dark mb-2 block",
-										children: "2013 - 2014"
+										children: "2012 - 2016"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 										"data-uid": "src/pages/Curriculo.tsx:149:15",
@@ -27519,16 +27519,61 @@ function Curriculo() {
 										"data-uid": "src/pages/Curriculo.tsx:155:15",
 										"data-prohibitions": "[]",
 										className: "text-sm font-bold text-gold-dark mb-2 block",
-										children: "2012 - 2015"
+										children: "2015 - 2016"
 									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										"data-uid": "src/pages/Curriculo.tsx:156:15",
 										"data-prohibitions": "[]",
-										className: "text-lg font-bold text-foreground mb-1",
-										children: "Justiça Federal de 1º Grau"
+										className: "flex flex-wrap items-center gap-2 mb-1",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+											"data-uid": "src/pages/Curriculo.tsx:157:17",
+											"data-prohibitions": "[]",
+											className: "text-lg font-bold text-foreground",
+											children: "AGU"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											"data-uid": "src/pages/Curriculo.tsx:158:17",
+											"data-prohibitions": "[]",
+											className: "text-xs font-semibold bg-gold/10 text-gold-dark px-2 py-0.5 rounded-full border border-gold/20",
+											children: "Estágio"
+										})]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/pages/Curriculo.tsx:157:15",
+										"data-uid": "src/pages/Curriculo.tsx:162:15",
+										"data-prohibitions": "[]",
+										className: "text-muted-foreground",
+										children: "Advocacia-Geral da União"
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:164:13",
+								"data-prohibitions": "[]",
+								className: "bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:165:15",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-gold-dark mb-2 block",
+										children: "2012 - 2015"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/pages/Curriculo.tsx:166:15",
+										"data-prohibitions": "[]",
+										className: "flex flex-wrap items-center gap-2 mb-1",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+											"data-uid": "src/pages/Curriculo.tsx:167:17",
+											"data-prohibitions": "[]",
+											className: "text-lg font-bold text-foreground",
+											children: "Justiça Federal de 1º Grau"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											"data-uid": "src/pages/Curriculo.tsx:168:17",
+											"data-prohibitions": "[]",
+											className: "text-xs font-semibold bg-gold/10 text-gold-dark px-2 py-0.5 rounded-full border border-gold/20",
+											children: "Estágio"
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/Curriculo.tsx:172:15",
 										"data-prohibitions": "[]",
 										className: "text-muted-foreground",
 										children: "Rio Grande do Sul (RS)"
@@ -27536,24 +27581,34 @@ function Curriculo() {
 								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/pages/Curriculo.tsx:159:13",
+								"data-uid": "src/pages/Curriculo.tsx:174:13",
 								"data-prohibitions": "[]",
 								className: "bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/pages/Curriculo.tsx:160:15",
+										"data-uid": "src/pages/Curriculo.tsx:175:15",
 										"data-prohibitions": "[]",
 										className: "text-sm font-bold text-gold-dark mb-2 block",
 										children: "2012 - 2013"
 									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/pages/Curriculo.tsx:161:15",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/pages/Curriculo.tsx:176:15",
 										"data-prohibitions": "[]",
-										className: "text-lg font-bold text-foreground mb-1",
-										children: "Tribunal de Justiça"
+										className: "flex flex-wrap items-center gap-2 mb-1",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+											"data-uid": "src/pages/Curriculo.tsx:177:17",
+											"data-prohibitions": "[]",
+											className: "text-lg font-bold text-foreground",
+											children: "Tribunal de Justiça"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											"data-uid": "src/pages/Curriculo.tsx:178:17",
+											"data-prohibitions": "[]",
+											className: "text-xs font-semibold bg-gold/10 text-gold-dark px-2 py-0.5 rounded-full border border-gold/20",
+											children: "Estágio"
+										})]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/pages/Curriculo.tsx:162:15",
+										"data-uid": "src/pages/Curriculo.tsx:182:15",
 										"data-prohibitions": "[]",
 										className: "text-muted-foreground",
 										children: "Rio Grande do Sul (TJRS)"
@@ -27564,166 +27619,137 @@ function Curriculo() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-					"data-uid": "src/pages/Curriculo.tsx:168:9",
+					"data-uid": "src/pages/Curriculo.tsx:188:9",
 					"data-prohibitions": "[]",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/pages/Curriculo.tsx:169:11",
+						"data-uid": "src/pages/Curriculo.tsx:189:11",
 						"data-prohibitions": "[]",
 						className: "flex items-center gap-3 mb-8 pb-2 border-b border-border",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Microscope, {
-							"data-uid": "src/pages/Curriculo.tsx:170:13",
+							"data-uid": "src/pages/Curriculo.tsx:190:13",
 							"data-prohibitions": "[editContent]",
 							className: "w-8 h-8 text-gold"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							"data-uid": "src/pages/Curriculo.tsx:171:13",
+							"data-uid": "src/pages/Curriculo.tsx:191:13",
 							"data-prohibitions": "[]",
 							className: "text-2xl md:text-3xl font-bold uppercase tracking-wider",
 							children: "Pesquisa e Projetos"
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/pages/Curriculo.tsx:175:11",
+						"data-uid": "src/pages/Curriculo.tsx:195:11",
 						"data-prohibitions": "[]",
 						className: "space-y-6",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/pages/Curriculo.tsx:176:13",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/pages/Curriculo.tsx:196:13",
+							"data-prohibitions": "[]",
+							className: "bg-muted/30 p-6 rounded-lg border border-border/50",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:197:15",
 								"data-prohibitions": "[]",
-								className: "bg-muted/30 p-6 rounded-lg border border-border/50",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/pages/Curriculo.tsx:177:15",
+								className: "flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									"data-uid": "src/pages/Curriculo.tsx:198:17",
 									"data-prohibitions": "[]",
-									className: "flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/pages/Curriculo.tsx:178:17",
-										"data-prohibitions": "[]",
-										className: "text-lg font-bold text-foreground",
-										children: "Grupo de Pesquisa: CIDIJUS"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/pages/Curriculo.tsx:179:17",
-										"data-prohibitions": "[]",
-										className: "text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border",
-										children: "2017 - Atual"
-									})]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/pages/Curriculo.tsx:183:15",
+									className: "text-lg font-bold text-foreground",
+									children: "Grupo de Pesquisa: CIDIJUS"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/pages/Curriculo.tsx:199:17",
 									"data-prohibitions": "[]",
-									className: "text-muted-foreground",
-									children: "CIDADANIA, DIREITOS E JUSTIÇA"
+									className: "text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border",
+									children: "2017 - Atual"
 								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/pages/Curriculo.tsx:186:13",
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/pages/Curriculo.tsx:203:15",
 								"data-prohibitions": "[]",
-								className: "bg-muted/30 p-6 rounded-lg border border-border/50",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/pages/Curriculo.tsx:187:15",
-									"data-prohibitions": "[]",
-									className: "flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/pages/Curriculo.tsx:188:17",
-										"data-prohibitions": "[]",
-										className: "text-lg font-bold text-foreground",
-										children: "Projeto de Pesquisa"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/pages/Curriculo.tsx:189:17",
-										"data-prohibitions": "[]",
-										className: "text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border",
-										children: "2013 - 2014"
-									})]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/pages/Curriculo.tsx:193:15",
-									"data-prohibitions": "[]",
-									className: "text-muted-foreground",
-									children: "Direito e Justiça Social: instrumentos jurídicos de proteção..."
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/pages/Curriculo.tsx:198:13",
+								className: "text-muted-foreground",
+								children: "CIDADANIA, DIREITOS E JUSTIÇA"
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/pages/Curriculo.tsx:206:13",
+							"data-prohibitions": "[]",
+							className: "bg-muted/30 p-6 rounded-lg border border-border/50",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:207:15",
 								"data-prohibitions": "[]",
-								className: "bg-muted/30 p-6 rounded-lg border border-border/50",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/pages/Curriculo.tsx:199:15",
+								className: "flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									"data-uid": "src/pages/Curriculo.tsx:208:17",
 									"data-prohibitions": "[]",
-									className: "flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										"data-uid": "src/pages/Curriculo.tsx:200:17",
-										"data-prohibitions": "[]",
-										className: "text-lg font-bold text-foreground",
-										children: "Projeto de Extensão"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/pages/Curriculo.tsx:201:17",
-										"data-prohibitions": "[]",
-										className: "text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border",
-										children: "2016"
-									})]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/pages/Curriculo.tsx:205:15",
+									className: "text-lg font-bold text-foreground",
+									children: "Projeto de Pesquisa"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/pages/Curriculo.tsx:209:17",
 									"data-prohibitions": "[]",
-									className: "text-muted-foreground",
-									children: "Bicharada Universitária"
+									className: "text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border",
+									children: "2013 - 2014"
 								})]
-							})
-						]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/pages/Curriculo.tsx:213:15",
+								"data-prohibitions": "[]",
+								className: "text-muted-foreground",
+								children: "Direito e Justiça Social: instrumentos jurídicos de proteção..."
+							})]
+						})]
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-					"data-uid": "src/pages/Curriculo.tsx:211:9",
+					"data-uid": "src/pages/Curriculo.tsx:221:9",
 					"data-prohibitions": "[]",
 					className: "space-y-6",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-						"data-uid": "src/pages/Curriculo.tsx:212:11",
+						"data-uid": "src/pages/Curriculo.tsx:222:11",
 						"data-prohibitions": "[]",
 						type: "single",
 						collapsible: true,
 						className: "w-full bg-card border border-border rounded-lg shadow-sm",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-							"data-uid": "src/pages/Curriculo.tsx:217:13",
+							"data-uid": "src/pages/Curriculo.tsx:227:13",
 							"data-prohibitions": "[]",
 							value: "producao",
 							className: "border-none",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-								"data-uid": "src/pages/Curriculo.tsx:218:15",
+								"data-uid": "src/pages/Curriculo.tsx:228:15",
 								"data-prohibitions": "[]",
 								className: "px-6 py-4 hover:no-underline hover:bg-muted/50 transition-colors rounded-lg",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/pages/Curriculo.tsx:219:17",
+									"data-uid": "src/pages/Curriculo.tsx:229:17",
 									"data-prohibitions": "[]",
 									className: "flex items-center gap-3",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
-										"data-uid": "src/pages/Curriculo.tsx:220:19",
+										"data-uid": "src/pages/Curriculo.tsx:230:19",
 										"data-prohibitions": "[editContent]",
 										className: "w-6 h-6 text-gold"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/pages/Curriculo.tsx:221:19",
+										"data-uid": "src/pages/Curriculo.tsx:231:19",
 										"data-prohibitions": "[]",
 										className: "text-xl font-bold uppercase tracking-wider text-left",
 										children: "Produção Bibliográfica"
 									})]
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-								"data-uid": "src/pages/Curriculo.tsx:226:15",
+								"data-uid": "src/pages/Curriculo.tsx:236:15",
 								"data-prohibitions": "[]",
 								className: "px-6 pb-6 pt-2",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-									"data-uid": "src/pages/Curriculo.tsx:227:17",
+									"data-uid": "src/pages/Curriculo.tsx:237:17",
 									"data-prohibitions": "[]",
 									className: "space-y-4",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											"data-uid": "src/pages/Curriculo.tsx:228:19",
+											"data-uid": "src/pages/Curriculo.tsx:238:19",
 											"data-prohibitions": "[]",
 											className: "flex items-start gap-3",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												"data-uid": "src/pages/Curriculo.tsx:229:21",
+												"data-uid": "src/pages/Curriculo.tsx:239:21",
 												"data-prohibitions": "[editContent]",
 												className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-												"data-uid": "src/pages/Curriculo.tsx:230:21",
+												"data-uid": "src/pages/Curriculo.tsx:240:21",
 												"data-prohibitions": "[]",
 												className: "text-muted-foreground",
 												children: [
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-														"data-uid": "src/pages/Curriculo.tsx:231:23",
+														"data-uid": "src/pages/Curriculo.tsx:241:23",
 														"data-prohibitions": "[]",
 														className: "font-semibold text-foreground",
 														children: "Artigo (2022):"
@@ -27734,19 +27760,19 @@ function Curriculo() {
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											"data-uid": "src/pages/Curriculo.tsx:235:19",
+											"data-uid": "src/pages/Curriculo.tsx:245:19",
 											"data-prohibitions": "[]",
 											className: "flex items-start gap-3",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												"data-uid": "src/pages/Curriculo.tsx:236:21",
+												"data-uid": "src/pages/Curriculo.tsx:246:21",
 												"data-prohibitions": "[editContent]",
 												className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-												"data-uid": "src/pages/Curriculo.tsx:237:21",
+												"data-uid": "src/pages/Curriculo.tsx:247:21",
 												"data-prohibitions": "[]",
 												className: "text-muted-foreground",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													"data-uid": "src/pages/Curriculo.tsx:238:23",
+													"data-uid": "src/pages/Curriculo.tsx:248:23",
 													"data-prohibitions": "[]",
 													className: "font-semibold text-foreground",
 													children: "Artigo (2022):"
@@ -27754,19 +27780,19 @@ function Curriculo() {
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											"data-uid": "src/pages/Curriculo.tsx:242:19",
+											"data-uid": "src/pages/Curriculo.tsx:252:19",
 											"data-prohibitions": "[]",
 											className: "flex items-start gap-3",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												"data-uid": "src/pages/Curriculo.tsx:243:21",
+												"data-uid": "src/pages/Curriculo.tsx:253:21",
 												"data-prohibitions": "[editContent]",
 												className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-												"data-uid": "src/pages/Curriculo.tsx:244:21",
+												"data-uid": "src/pages/Curriculo.tsx:254:21",
 												"data-prohibitions": "[]",
 												className: "text-muted-foreground",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													"data-uid": "src/pages/Curriculo.tsx:245:23",
+													"data-uid": "src/pages/Curriculo.tsx:255:23",
 													"data-prohibitions": "[]",
 													className: "font-semibold text-foreground",
 													children: "Artigo (2020):"
@@ -27774,19 +27800,19 @@ function Curriculo() {
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											"data-uid": "src/pages/Curriculo.tsx:249:19",
+											"data-uid": "src/pages/Curriculo.tsx:259:19",
 											"data-prohibitions": "[]",
 											className: "flex items-start gap-3",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												"data-uid": "src/pages/Curriculo.tsx:250:21",
+												"data-uid": "src/pages/Curriculo.tsx:260:21",
 												"data-prohibitions": "[editContent]",
 												className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-												"data-uid": "src/pages/Curriculo.tsx:251:21",
+												"data-uid": "src/pages/Curriculo.tsx:261:21",
 												"data-prohibitions": "[]",
 												className: "text-muted-foreground",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													"data-uid": "src/pages/Curriculo.tsx:252:23",
+													"data-uid": "src/pages/Curriculo.tsx:262:23",
 													"data-prohibitions": "[]",
 													className: "font-semibold text-foreground",
 													children: "Artigo (2019):"
@@ -27794,20 +27820,20 @@ function Curriculo() {
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											"data-uid": "src/pages/Curriculo.tsx:256:19",
+											"data-uid": "src/pages/Curriculo.tsx:266:19",
 											"data-prohibitions": "[]",
 											className: "flex items-start gap-3",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												"data-uid": "src/pages/Curriculo.tsx:257:21",
+												"data-uid": "src/pages/Curriculo.tsx:267:21",
 												"data-prohibitions": "[editContent]",
 												className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-												"data-uid": "src/pages/Curriculo.tsx:258:21",
+												"data-uid": "src/pages/Curriculo.tsx:268:21",
 												"data-prohibitions": "[]",
 												className: "text-muted-foreground",
 												children: [
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-														"data-uid": "src/pages/Curriculo.tsx:259:23",
+														"data-uid": "src/pages/Curriculo.tsx:269:23",
 														"data-prohibitions": "[]",
 														className: "font-semibold text-foreground",
 														children: "Livro/Capítulo (2021):"
@@ -27822,93 +27848,93 @@ function Curriculo() {
 							})]
 						})
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-						"data-uid": "src/pages/Curriculo.tsx:268:11",
+						"data-uid": "src/pages/Curriculo.tsx:278:11",
 						"data-prohibitions": "[]",
 						type: "single",
 						collapsible: true,
 						className: "w-full bg-card border border-border rounded-lg shadow-sm",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-							"data-uid": "src/pages/Curriculo.tsx:273:13",
+							"data-uid": "src/pages/Curriculo.tsx:283:13",
 							"data-prohibitions": "[]",
 							value: "eventos",
 							className: "border-none",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-								"data-uid": "src/pages/Curriculo.tsx:274:15",
+								"data-uid": "src/pages/Curriculo.tsx:284:15",
 								"data-prohibitions": "[]",
 								className: "px-6 py-4 hover:no-underline hover:bg-muted/50 transition-colors rounded-lg",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/pages/Curriculo.tsx:275:17",
+									"data-uid": "src/pages/Curriculo.tsx:285:17",
 									"data-prohibitions": "[]",
 									className: "flex items-center gap-3",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, {
-										"data-uid": "src/pages/Curriculo.tsx:276:19",
+										"data-uid": "src/pages/Curriculo.tsx:286:19",
 										"data-prohibitions": "[editContent]",
 										className: "w-6 h-6 text-gold"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/pages/Curriculo.tsx:277:19",
+										"data-uid": "src/pages/Curriculo.tsx:287:19",
 										"data-prohibitions": "[]",
 										className: "text-xl font-bold uppercase tracking-wider text-left",
 										children: "Eventos e Apresentações"
 									})]
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
-								"data-uid": "src/pages/Curriculo.tsx:282:15",
+								"data-uid": "src/pages/Curriculo.tsx:292:15",
 								"data-prohibitions": "[]",
 								className: "px-6 pb-6 pt-2",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/pages/Curriculo.tsx:283:17",
+									"data-uid": "src/pages/Curriculo.tsx:293:17",
 									"data-prohibitions": "[]",
 									className: "space-y-6",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/pages/Curriculo.tsx:284:19",
+										"data-uid": "src/pages/Curriculo.tsx:294:19",
 										"data-prohibitions": "[]",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											"data-uid": "src/pages/Curriculo.tsx:285:21",
+											"data-uid": "src/pages/Curriculo.tsx:295:21",
 											"data-prohibitions": "[]",
 											className: "font-bold text-foreground mb-3 text-lg",
 											children: "Apresentações de Trabalho"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-											"data-uid": "src/pages/Curriculo.tsx:288:21",
+											"data-uid": "src/pages/Curriculo.tsx:298:21",
 											"data-prohibitions": "[]",
 											className: "space-y-2",
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												"data-uid": "src/pages/Curriculo.tsx:289:23",
+												"data-uid": "src/pages/Curriculo.tsx:299:23",
 												"data-prohibitions": "[]",
 												className: "flex items-center gap-2 text-muted-foreground",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-													"data-uid": "src/pages/Curriculo.tsx:290:25",
+													"data-uid": "src/pages/Curriculo.tsx:300:25",
 													"data-prohibitions": "[editContent]",
 													className: "w-1.5 h-1.5 rounded-full bg-gold/50"
 												}), "Diversas apresentações realizadas entre 2021 e 2023."]
 											})
 										})]
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/pages/Curriculo.tsx:295:19",
+										"data-uid": "src/pages/Curriculo.tsx:305:19",
 										"data-prohibitions": "[]",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											"data-uid": "src/pages/Curriculo.tsx:296:21",
+											"data-uid": "src/pages/Curriculo.tsx:306:21",
 											"data-prohibitions": "[]",
 											className: "font-bold text-foreground mb-3 text-lg",
 											children: "Participação em Eventos"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											"data-uid": "src/pages/Curriculo.tsx:299:21",
+											"data-uid": "src/pages/Curriculo.tsx:309:21",
 											"data-prohibitions": "[]",
 											className: "flex flex-wrap gap-2",
 											children: [
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													"data-uid": "src/pages/Curriculo.tsx:300:23",
+													"data-uid": "src/pages/Curriculo.tsx:310:23",
 													"data-prohibitions": "[]",
 													className: "px-3 py-1 bg-muted rounded-full text-sm font-medium border border-border",
 													children: "IBDP"
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													"data-uid": "src/pages/Curriculo.tsx:303:23",
+													"data-uid": "src/pages/Curriculo.tsx:313:23",
 													"data-prohibitions": "[]",
 													className: "px-3 py-1 bg-muted rounded-full text-sm font-medium border border-border",
 													children: "ESMAFE"
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													"data-uid": "src/pages/Curriculo.tsx:306:23",
+													"data-uid": "src/pages/Curriculo.tsx:316:23",
 													"data-prohibitions": "[]",
 													className: "px-3 py-1 bg-muted rounded-full text-sm font-medium border border-border",
 													children: "OAB/RS"
@@ -29767,4 +29793,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-FBO1J_yp.js.map
+//# sourceMappingURL=index-ClU7QXwN.js.map
