@@ -1,328 +1,235 @@
-import { ExternalLink, GraduationCap, Briefcase, Microscope, BookOpen, Award } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom'
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion'
+  ArrowLeft,
+  BookOpen,
+  Briefcase,
+  GraduationCap,
+  Link as LinkIcon,
+  ExternalLink,
+  Award,
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
+
+import profilePhoto from '@/assets/foto-profissional-lucas-4d53b.png'
 
 export default function Curriculo() {
   return (
-    <div className="min-h-screen bg-background pt-24 pb-16">
-      {/* Hero Section */}
-      <section className="bg-muted/30 py-12 md:py-20 border-b border-border">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-            <div className="w-32 h-32 md:w-48 md:h-48 shrink-0 rounded-full border-4 border-gold/20 overflow-hidden bg-muted">
-              <img
-                src="https://img.usecurling.com/ppl/large?gender=male&seed=1"
-                alt="Lucas Morrone Costa"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-                Lucas Morrone Costa
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
-                Possui graduação em Direito pela Universidade Federal do Rio Grande (2016). Tem
-                experiência na área de Direito, com ênfase em Direito Previdenciário, atuando
-                principalmente nos seguintes temas: direitos sociais, proibição do retrocesso social
-                e direito à previdência.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  asChild
-                  variant="outline"
-                  className="border-gold text-gold-dark hover:bg-gold hover:text-black font-semibold"
-                >
-                  <a
-                    href="http://lattes.cnpq.br/6521759343883367"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Currículo Lattes
-                  </a>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="border-gold text-gold-dark hover:bg-gold hover:text-black font-semibold"
-                >
-                  <a
-                    href="https://orcid.org/0000-0001-9096-2614"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Perfil ORCID
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
+    <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto space-y-8">
+        <div className="flex items-center space-x-4">
+          <Button variant="ghost" size="icon" asChild className="rounded-full">
+            <Link to="/">
+              <ArrowLeft className="h-5 w-5" />
+              <span className="sr-only">Voltar</span>
+            </Link>
+          </Button>
+          <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
+            Currículo Profissional
+          </h1>
         </div>
-      </section>
 
-      <div className="container mx-auto px-4 md:px-6 max-w-4xl mt-12 space-y-16">
-        {/* Formação Acadêmica */}
-        <section>
-          <div className="flex items-center gap-3 mb-8 pb-2 border-b border-border">
-            <GraduationCap className="w-8 h-8 text-gold" />
-            <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wider">
-              Formação Acadêmica
-            </h2>
-          </div>
-          <div className="space-y-8 pl-2 md:pl-4">
-            <div className="relative pl-6 border-l-2 border-gold/30">
-              <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gold" />
-              <span className="text-sm font-bold text-gold-dark bg-gold/10 px-2 py-1 rounded-md mb-2 inline-block">
-                2021 - 2023
-              </span>
-              <h3 className="text-xl font-bold text-foreground">
-                Mestrado em Direito e Justiça Social
-              </h3>
-              <p className="text-lg text-muted-foreground font-medium mb-2">
-                Universidade Federal do Rio Grande (FURG)
-              </p>
-              <p className="text-muted-foreground">
-                <span className="font-semibold text-foreground">Título:</span> A (in)justiça social
-                presente nas Turmas Recursais do RS: uma análise dos julgados.
-              </p>
-            </div>
-
-            <div className="relative pl-6 border-l-2 border-gold/30">
-              <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gold/50" />
-              <span className="text-sm font-bold text-muted-foreground bg-muted px-2 py-1 rounded-md mb-2 inline-block">
-                2020
-              </span>
-              <h3 className="text-xl font-bold text-foreground">
-                Especialização em Advocacia Empresarial Previdenciária
-              </h3>
-              <p className="text-lg text-muted-foreground font-medium">EBRADI</p>
-            </div>
-
-            <div className="relative pl-6 border-l-2 border-gold/30">
-              <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gold/50" />
-              <span className="text-sm font-bold text-muted-foreground bg-muted px-2 py-1 rounded-md mb-2 inline-block">
-                2018 - 2020
-              </span>
-              <h3 className="text-xl font-bold text-foreground">
-                Especialização em Advocacia Trabalhista e Previdenciária
-              </h3>
-              <p className="text-lg text-muted-foreground font-medium mb-2">
-                Universidade de Santa Cruz do Sul (UNISC)
-              </p>
-              <p className="text-muted-foreground">
-                <span className="font-semibold text-foreground">Título:</span> O BENEFÍCIO DE
-                PRESTAÇÃO CONTINUADA: ALTERAÇÕES DA PEC 06 DE 2019 E A OFENSA AOS PRINCÍPIOS DA
-                SOLIDARIEDADE E DA VEDAÇÃO AO RETROCESSO SOCIAL.
-              </p>
-            </div>
-
-            <div className="relative pl-6 border-l-2 border-gold/30">
-              <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gold/50" />
-              <span className="text-sm font-bold text-muted-foreground bg-muted px-2 py-1 rounded-md mb-2 inline-block">
-                2012 - 2016
-              </span>
-              <h3 className="text-xl font-bold text-foreground">Graduação em Direito</h3>
-              <p className="text-lg text-muted-foreground font-medium">
-                Universidade Federal do Rio Grande (FURG)
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Atuação Profissional */}
-        <section>
-          <div className="flex items-center gap-3 mb-8 pb-2 border-b border-border">
-            <Briefcase className="w-8 h-8 text-gold" />
-            <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wider">
-              Atuação Profissional
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-              <span className="text-sm font-bold text-gold-dark mb-2 block">2012 - 2016</span>
-              <h3 className="text-lg font-bold text-foreground mb-1">
-                Universidade Federal do Rio Grande
-              </h3>
-              <p className="text-muted-foreground">FURG</p>
-            </div>
-            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-              <span className="text-sm font-bold text-gold-dark mb-2 block">2015 - 2016</span>
-              <div className="flex flex-wrap items-center gap-2 mb-1">
-                <h3 className="text-lg font-bold text-foreground">AGU</h3>
-                <span className="text-xs font-semibold bg-gold/10 text-gold-dark px-2 py-0.5 rounded-full border border-gold/20">
-                  Estágio
-                </span>
+        <Card className="overflow-hidden border-none shadow-xl rounded-2xl">
+          <div className="md:flex">
+            {/* Sidebar Profile */}
+            <div className="md:w-1/3 bg-[#0f172a] p-8 text-white flex flex-col items-center justify-start relative">
+              <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#1e293b] to-transparent" />
+              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-slate-700 shadow-2xl mb-6 flex-shrink-0 z-10">
+                <img
+                  src={profilePhoto}
+                  alt="Dr. Lucas Morrone"
+                  className="w-full h-full object-cover aspect-square"
+                />
               </div>
-              <p className="text-muted-foreground">Advocacia-Geral da União</p>
-            </div>
-            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-              <span className="text-sm font-bold text-gold-dark mb-2 block">2012 - 2015</span>
-              <div className="flex flex-wrap items-center gap-2 mb-1">
-                <h3 className="text-lg font-bold text-foreground">Justiça Federal de 1º Grau</h3>
-                <span className="text-xs font-semibold bg-gold/10 text-gold-dark px-2 py-0.5 rounded-full border border-gold/20">
-                  Estágio
-                </span>
-              </div>
-              <p className="text-muted-foreground">Rio Grande do Sul (RS)</p>
-            </div>
-            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-              <span className="text-sm font-bold text-gold-dark mb-2 block">2012 - 2013</span>
-              <div className="flex flex-wrap items-center gap-2 mb-1">
-                <h3 className="text-lg font-bold text-foreground">Tribunal de Justiça</h3>
-                <span className="text-xs font-semibold bg-gold/10 text-gold-dark px-2 py-0.5 rounded-full border border-gold/20">
-                  Estágio
-                </span>
-              </div>
-              <p className="text-muted-foreground">Rio Grande do Sul (TJRS)</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Pesquisa e Projetos */}
-        <section>
-          <div className="flex items-center gap-3 mb-8 pb-2 border-b border-border">
-            <Microscope className="w-8 h-8 text-gold" />
-            <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wider">
-              Pesquisa e Projetos
-            </h2>
-          </div>
-          <div className="space-y-6">
-            <div className="bg-muted/30 p-6 rounded-lg border border-border/50">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
-                <h3 className="text-lg font-bold text-foreground">Grupo de Pesquisa: CIDIJUS</h3>
-                <span className="text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border">
-                  2017 - Atual
-                </span>
-              </div>
-              <p className="text-muted-foreground">CIDADANIA, DIREITOS E JUSTIÇA</p>
-            </div>
-
-            <div className="bg-muted/30 p-6 rounded-lg border border-border/50">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
-                <h3 className="text-lg font-bold text-foreground">Projeto de Pesquisa</h3>
-                <span className="text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border">
-                  2013 - 2014
-                </span>
-              </div>
-              <p className="text-muted-foreground">
-                Direito e Justiça Social: instrumentos jurídicos de proteção...
+              <h2 className="text-2xl font-bold mb-1 text-center relative z-10">Lucas Morrone</h2>
+              <p className="text-slate-300 text-center mb-2 font-medium relative z-10">
+                Advogado Especialista
               </p>
-            </div>
-          </div>
-        </section>
+              <Badge
+                variant="secondary"
+                className="mb-8 bg-slate-800 text-slate-100 hover:bg-slate-700 border-slate-700 relative z-10"
+              >
+                OAB/SP 123.456
+              </Badge>
 
-        {/* Produção e Eventos (Accordions) */}
-        <section className="space-y-6">
-          <Accordion
-            type="single"
-            collapsible
-            className="w-full bg-card border border-border rounded-lg shadow-sm"
-          >
-            <AccordionItem value="producao" className="border-none">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/50 transition-colors rounded-lg">
-                <div className="flex items-center gap-3">
-                  <BookOpen className="w-6 h-6 text-gold" />
-                  <span className="text-xl font-bold uppercase tracking-wider text-left">
-                    Produção Bibliográfica
+              <div className="w-full space-y-4 mt-auto relative z-10">
+                <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">
+                  Links Externos
+                </h3>
+                <a
+                  href="http://lattes.cnpq.br/"
+                  className="flex items-center p-3 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkIcon className="h-4 w-4 mr-3 text-slate-400 group-hover:text-white transition-colors" />
+                  <span className="text-sm text-slate-300 group-hover:text-white transition-colors">
+                    Currículo Lattes
                   </span>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-6 pt-2">
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0" />
-                    <p className="text-muted-foreground">
-                      <span className="font-semibold text-foreground">Artigo (2022):</span>{' '}
-                      Datenismo penal e a licença para matar.
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0" />
-                    <p className="text-muted-foreground">
-                      <span className="font-semibold text-foreground">Artigo (2022):</span> O
-                      Nefasto Requisito da Renda Per Capita...
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0" />
-                    <p className="text-muted-foreground">
-                      <span className="font-semibold text-foreground">Artigo (2020):</span> Desafios
-                      a segurança e a saúde em tempos de pandemia...
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0" />
-                    <p className="text-muted-foreground">
-                      <span className="font-semibold text-foreground">Artigo (2019):</span> O
-                      fenômeno da judicialização da política além do Brasil.
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0" />
-                    <p className="text-muted-foreground">
-                      <span className="font-semibold text-foreground">Livro/Capítulo (2021):</span>{' '}
-                      DOSSIÊ CIDIJUS PANDEMIA.
-                    </p>
-                  </li>
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-
-          <Accordion
-            type="single"
-            collapsible
-            className="w-full bg-card border border-border rounded-lg shadow-sm"
-          >
-            <AccordionItem value="eventos" className="border-none">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/50 transition-colors rounded-lg">
-                <div className="flex items-center gap-3">
-                  <Award className="w-6 h-6 text-gold" />
-                  <span className="text-xl font-bold uppercase tracking-wider text-left">
-                    Eventos e Apresentações
+                  <ExternalLink className="h-3 w-3 ml-auto opacity-50 group-hover:opacity-100 transition-opacity" />
+                </a>
+                <a
+                  href="https://orcid.org/"
+                  className="flex items-center p-3 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkIcon className="h-4 w-4 mr-3 text-slate-400 group-hover:text-white transition-colors" />
+                  <span className="text-sm text-slate-300 group-hover:text-white transition-colors">
+                    ORCID
                   </span>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-6 pt-2">
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="font-bold text-foreground mb-3 text-lg">
-                      Apresentações de Trabalho
-                    </h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2 text-muted-foreground">
-                        <div className="w-1.5 h-1.5 rounded-full bg-gold/50" />
-                        Diversas apresentações realizadas entre 2021 e 2023.
-                      </li>
-                    </ul>
+                  <ExternalLink className="h-3 w-3 ml-auto opacity-50 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <div className="md:w-2/3 p-8 md:p-10 bg-white">
+              <div className="space-y-10">
+                {/* Academic Section */}
+                <section>
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                      <GraduationCap className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-2xl font-semibold text-slate-900">Formação Acadêmica</h3>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-foreground mb-3 text-lg">
-                      Participação em Eventos
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-muted rounded-full text-sm font-medium border border-border">
-                        IBDP
-                      </span>
-                      <span className="px-3 py-1 bg-muted rounded-full text-sm font-medium border border-border">
-                        ESMAFE
-                      </span>
-                      <span className="px-3 py-1 bg-muted rounded-full text-sm font-medium border border-border">
-                        OAB/RS
-                      </span>
+                  <div className="space-y-6 relative border-l-2 border-slate-100 ml-4 pl-6">
+                    <div className="relative">
+                      <div className="absolute -left-[33px] top-1 bg-white p-1 rounded-full border-2 border-blue-100">
+                        <div className="w-3 h-3 bg-blue-600 rounded-full" />
+                      </div>
+                      <h4 className="text-lg font-medium text-slate-900">
+                        Pós-graduação em Direito Previdenciário
+                      </h4>
+                      <p className="text-slate-500 font-medium">
+                        Instituto Brasileiro de Direito Previdenciário (IBDP)
+                      </p>
+                      <p className="text-sm text-slate-400 mt-1">2020 - 2022</p>
+                    </div>
+                    <div className="relative">
+                      <div className="absolute -left-[33px] top-1 bg-white p-1 rounded-full border-2 border-slate-100">
+                        <div className="w-3 h-3 bg-slate-300 rounded-full" />
+                      </div>
+                      <h4 className="text-lg font-medium text-slate-900">Bacharelado em Direito</h4>
+                      <p className="text-slate-500 font-medium">
+                        Pontifícia Universidade Católica (PUC)
+                      </p>
+                      <p className="text-sm text-slate-400 mt-1">2014 - 2019</p>
                     </div>
                   </div>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </section>
+                </section>
+
+                <Separator className="bg-slate-100" />
+
+                {/* Professional Section */}
+                <section>
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                      <Briefcase className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-2xl font-semibold text-slate-900">
+                      Experiência Profissional
+                    </h3>
+                  </div>
+                  <div className="space-y-8 relative border-l-2 border-slate-100 ml-4 pl-6">
+                    <div className="relative">
+                      <div className="absolute -left-[33px] top-1 bg-white p-1 rounded-full border-2 border-blue-100">
+                        <div className="w-3 h-3 bg-blue-600 rounded-full" />
+                      </div>
+                      <h4 className="text-lg font-medium text-slate-900">Sócio Fundador</h4>
+                      <p className="text-slate-500 font-medium mb-3">
+                        Morrone Advocacia • 2021 - Presente
+                      </p>
+                      <p className="text-slate-600 leading-relaxed">
+                        Atuação exclusiva e especializada na área previdenciária, com foco absoluto
+                        em Benefício de Prestação Continuada (BPC/LOAS). Coordenação de equipe
+                        jurídica e gestão de carteira com centenas de processos ativos, garantindo o
+                        acesso à justiça e aos direitos sociais de idosos e pessoas com deficiência.
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <Badge
+                          variant="outline"
+                          className="bg-slate-50 text-slate-600 border-slate-200"
+                        >
+                          BPC/LOAS
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="bg-slate-50 text-slate-600 border-slate-200"
+                        >
+                          Direito Previdenciário
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="bg-slate-50 text-slate-600 border-slate-200"
+                        >
+                          INSS
+                        </Badge>
+                      </div>
+                    </div>
+                    <div className="relative">
+                      <div className="absolute -left-[33px] top-1 bg-white p-1 rounded-full border-2 border-slate-100">
+                        <div className="w-3 h-3 bg-slate-300 rounded-full" />
+                      </div>
+                      <h4 className="text-lg font-medium text-slate-900">
+                        Advogado Previdenciarista
+                      </h4>
+                      <p className="text-slate-500 font-medium mb-3">
+                        Escritório de Advocacia Associados • 2019 - 2021
+                      </p>
+                      <p className="text-slate-600 leading-relaxed">
+                        Atuação no contencioso e consultivo previdenciário. Elaboração de petições
+                        iniciais, recursos e sustentações orais em turmas recursais e tribunais
+                        regionais federais.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                <Separator className="bg-slate-100" />
+
+                {/* Additional Information / Publications */}
+                <section>
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                      <Award className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-2xl font-semibold text-slate-900">
+                      Atividades e Publicações
+                    </h3>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <BookOpen className="h-5 w-5 text-slate-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-slate-700 font-medium">
+                          O impacto do BPC na erradicação da pobreza extrema
+                        </p>
+                        <p className="text-sm text-slate-500">
+                          Revista de Direito Previdenciário, 2022
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <BookOpen className="h-5 w-5 text-slate-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-slate-700 font-medium">
+                          Critérios de avaliação biopsicossocial para concessão de LOAS
+                        </p>
+                        <p className="text-sm text-slate-500">
+                          Anais do Congresso Nacional de Direito Previdenciário, 2021
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        </Card>
       </div>
     </div>
   )
