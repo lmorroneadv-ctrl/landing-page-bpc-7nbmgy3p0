@@ -81,7 +81,6 @@ const pubData = [
     year: '',
   },
   { type: 'Capítulo', title: 'A sociedade de consumo: obsolescência programada...', year: '' },
-  { type: 'Capítulo', title: 'DEIXAR MORRER: A NECROPOLÍTICA BOLSONARISTA...', year: '' },
 ]
 
 function TimelineItem({ title, subtitle, period, desc, isLast = false }: any) {
@@ -122,28 +121,28 @@ export default function Curriculo() {
 
         <Card className="overflow-hidden border-none shadow-xl rounded-2xl flex flex-col md:flex-row">
           {/* Sidebar Profile */}
-          <div className="md:w-[35%] bg-slate-900 p-8 text-white flex flex-col items-center justify-start relative">
-            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-800 to-transparent" />
-            <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-amber-500 shadow-2xl mb-6 flex-shrink-0 z-10">
+          <div className="md:w-[35%] bg-slate-50 border-r border-slate-100 p-8 flex flex-col items-center justify-start relative">
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-200/50 to-transparent" />
+            <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-amber-500 shadow-xl mb-6 flex-shrink-0 z-10 bg-white">
               <img
                 src={profilePhoto}
                 alt="Dr. Lucas Morrone Costa"
                 className="w-full h-full object-cover aspect-square"
               />
             </div>
-            <h2 className="text-2xl font-bold mb-1 text-center relative z-10">
+            <h2 className="text-2xl font-bold text-slate-900 mb-1 text-center relative z-10">
               Lucas Morrone Costa
             </h2>
-            <p className="text-slate-300 text-center mb-4 font-medium relative z-10">
+            <p className="text-slate-600 text-center mb-4 font-medium relative z-10">
               Advogado Especialista
             </p>
             <div className="flex flex-col gap-3 items-center mb-8 relative z-10 w-full">
-              <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border-amber-500/50 text-sm py-1 px-4">
+              <Badge className="bg-amber-100 text-amber-700 hover:bg-amber-200 border border-amber-200 text-sm py-1 px-4">
                 OAB/RS 107.485
               </Badge>
               <Badge
                 variant="outline"
-                className="text-slate-300 border-slate-700 text-xs text-center py-1.5 leading-relaxed"
+                className="text-slate-600 border-slate-300 bg-white text-xs text-center py-1.5 leading-relaxed"
               >
                 Lucas Morrone Sociedade
                 <br />
@@ -159,29 +158,29 @@ export default function Curriculo() {
               </h3>
               <a
                 href="http://lattes.cnpq.br/6521759343883367"
-                className="flex items-center p-3 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors group border border-slate-800 hover:border-amber-500/50"
+                className="flex items-center p-3 rounded-lg bg-white hover:bg-slate-100 transition-colors group border border-slate-200 hover:border-amber-300 shadow-sm"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <LinkIcon className="h-4 w-4 mr-3 text-slate-400 group-hover:text-amber-500 transition-colors" />
-                <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">
+                <span className="text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors">
                   Currículo Lattes
                 </span>
-                <ExternalLink className="h-3 w-3 ml-auto opacity-50 group-hover:opacity-100 transition-opacity" />
+                <ExternalLink className="h-3 w-3 ml-auto text-slate-400 group-hover:text-amber-500 transition-colors" />
               </a>
               <a
                 href="https://orcid.org/0000-0001-9096-2614"
-                className="flex items-center p-3 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors group border border-slate-800 hover:border-amber-500/50"
+                className="flex items-center p-3 rounded-lg bg-white hover:bg-slate-100 transition-colors group border border-slate-200 hover:border-amber-300 shadow-sm"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <LinkIcon className="h-4 w-4 mr-3 text-slate-400 group-hover:text-amber-500 transition-colors" />
-                <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">
+                <span className="text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors">
                   ORCID iD
                 </span>
-                <ExternalLink className="h-3 w-3 ml-auto opacity-50 group-hover:opacity-100 transition-opacity" />
+                <ExternalLink className="h-3 w-3 ml-auto text-slate-400 group-hover:text-amber-500 transition-colors" />
               </a>
-              <p className="text-[10px] text-slate-500 text-center mt-6 uppercase tracking-wider">
+              <p className="text-[10px] text-slate-400 text-center mt-6 uppercase tracking-wider font-semibold">
                 Atualizado em 12/02/2024
               </p>
             </div>
