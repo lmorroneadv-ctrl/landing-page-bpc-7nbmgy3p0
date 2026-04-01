@@ -91,6 +91,11 @@ export function Footer() {
                   Guia Pensão por Morte
                 </Link>
               </li>
+              <li>
+                <Link to="/guia-aposentadorias" className="hover:text-gold-dark transition-colors">
+                  Guia de Aposentadorias
+                </Link>
+              </li>
             </ul>
           </div>
 

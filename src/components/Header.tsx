@@ -113,6 +113,12 @@ export function Header() {
                   >
                     Pensão por Morte
                   </Link>
+                  <Link
+                    to="/guia-aposentadorias"
+                    className="px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide"
+                  >
+                    Aposentadorias
+                  </Link>
                 </div>
               </div>
             </div>
@@ -190,6 +196,13 @@ export function Header() {
               className="text-foreground hover:text-gold-dark text-base py-2 font-medium"
             >
               Guia Pensão por Morte
+            </Link>
+            <Link
+              to="/guia-aposentadorias"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-foreground hover:text-gold-dark text-base py-2 font-medium"
+            >
+              Guia de Aposentadorias
             </Link>
           </div>
           <Button

@@ -17386,6 +17386,13 @@ var Activity = createLucideIcon("activity", [["path", {
 	d: "M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2",
 	key: "169zse"
 }]]);
+var ArrowLeft = createLucideIcon("arrow-left", [["path", {
+	d: "m12 19-7-7 7-7",
+	key: "1l729n"
+}], ["path", {
+	d: "M19 12H5",
+	key: "x3x0zl"
+}]]);
 var ArrowRight = createLucideIcon("arrow-right", [["path", {
 	d: "M5 12h14",
 	key: "1ays0h"
@@ -19848,13 +19855,20 @@ function Header$1() {
 												to: "/guia-pensao-morte",
 												className: "px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide",
 												children: "Pensão por Morte"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+												"data-uid": "src/components/Header.tsx:116:19",
+												"data-prohibitions": "[]",
+												to: "/guia-aposentadorias",
+												className: "px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide",
+												children: "Aposentadorias"
 											})
 										]
 									})
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-								"data-uid": "src/components/Header.tsx:119:13",
+								"data-uid": "src/components/Header.tsx:125:13",
 								"data-prohibitions": "[]",
 								className: "bg-gold hover:bg-gold/90 text-black rounded-none px-6 uppercase text-sm font-bold tracking-wider shadow-sm",
 								onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).", "_blank"),
@@ -19863,16 +19877,16 @@ function Header$1() {
 						]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						"data-uid": "src/components/Header.tsx:133:11",
+						"data-uid": "src/components/Header.tsx:139:11",
 						"data-prohibitions": "[editContent]",
 						className: "md:hidden text-foreground",
 						onClick: () => setIsMobileMenuOpen(!isMobileMenuOpen),
 						children: isMobileMenuOpen ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, {
-							"data-uid": "src/components/Header.tsx:137:33",
+							"data-uid": "src/components/Header.tsx:143:33",
 							"data-prohibitions": "[editContent]",
 							size: 28
 						}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, {
-							"data-uid": "src/components/Header.tsx:137:51",
+							"data-uid": "src/components/Header.tsx:143:51",
 							"data-prohibitions": "[editContent]",
 							size: 28
 						})
@@ -19880,51 +19894,51 @@ function Header$1() {
 				]
 			})
 		}), isMobileMenuOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Header.tsx:144:9",
+			"data-uid": "src/components/Header.tsx:150:9",
 			"data-prohibitions": "[]",
 			className: "md:hidden absolute top-full left-0 w-full bg-background border-t border-border shadow-xl py-4 flex flex-col items-center gap-4",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:145:11",
+					"data-uid": "src/components/Header.tsx:151:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("servicos"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Serviços"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:151:11",
+					"data-uid": "src/components/Header.tsx:157:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("sobre"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Sobre"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:157:11",
+					"data-uid": "src/components/Header.tsx:163:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("localizacao"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Localização"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:163:11",
+					"data-uid": "src/components/Header.tsx:169:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("faq"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Dúvidas"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/Header.tsx:169:11",
+					"data-uid": "src/components/Header.tsx:175:11",
 					"data-prohibitions": "[]",
 					className: "flex flex-col items-center w-full border-y border-border py-4 my-2 bg-slate-50/50",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/Header.tsx:170:13",
+							"data-uid": "src/components/Header.tsx:176:13",
 							"data-prohibitions": "[]",
 							className: "text-sm font-bold text-muted-foreground uppercase tracking-wider mb-2",
 							children: "Guias Práticos"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							"data-uid": "src/components/Header.tsx:173:13",
+							"data-uid": "src/components/Header.tsx:179:13",
 							"data-prohibitions": "[]",
 							to: "/guia-bpc",
 							onClick: () => setIsMobileMenuOpen(false),
@@ -19932,7 +19946,7 @@ function Header$1() {
 							children: "Guia BPC/LOAS"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							"data-uid": "src/components/Header.tsx:180:13",
+							"data-uid": "src/components/Header.tsx:186:13",
 							"data-prohibitions": "[]",
 							to: "/guia-auxilio-acidente",
 							onClick: () => setIsMobileMenuOpen(false),
@@ -19940,17 +19954,25 @@ function Header$1() {
 							children: "Guia Auxílio-Acidente"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							"data-uid": "src/components/Header.tsx:187:13",
+							"data-uid": "src/components/Header.tsx:193:13",
 							"data-prohibitions": "[]",
 							to: "/guia-pensao-morte",
 							onClick: () => setIsMobileMenuOpen(false),
 							className: "text-foreground hover:text-gold-dark text-base py-2 font-medium",
 							children: "Guia Pensão por Morte"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							"data-uid": "src/components/Header.tsx:200:13",
+							"data-prohibitions": "[]",
+							to: "/guia-aposentadorias",
+							onClick: () => setIsMobileMenuOpen(false),
+							className: "text-foreground hover:text-gold-dark text-base py-2 font-medium",
+							children: "Guia de Aposentadorias"
 						})
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-					"data-uid": "src/components/Header.tsx:195:11",
+					"data-uid": "src/components/Header.tsx:208:11",
 					"data-prohibitions": "[]",
 					className: "bg-gold hover:bg-gold/90 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm",
 					onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).", "_blank"),
@@ -20137,24 +20159,35 @@ function Footer() {
 										className: "hover:text-gold-dark transition-colors",
 										children: "Guia Pensão por Morte"
 									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+									"data-uid": "src/components/Footer.tsx:94:15",
+									"data-prohibitions": "[]",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+										"data-uid": "src/components/Footer.tsx:95:17",
+										"data-prohibitions": "[]",
+										to: "/guia-aposentadorias",
+										className: "hover:text-gold-dark transition-colors",
+										children: "Guia de Aposentadorias"
+									})
 								})
 							]
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:97:11",
+						"data-uid": "src/components/Footer.tsx:102:11",
 						"data-prohibitions": "[]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							"data-uid": "src/components/Footer.tsx:98:13",
+							"data-uid": "src/components/Footer.tsx:103:13",
 							"data-prohibitions": "[]",
 							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
 							children: "Redes Sociais"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/Footer.tsx:101:13",
+							"data-uid": "src/components/Footer.tsx:106:13",
 							"data-prohibitions": "[]",
 							className: "flex gap-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/Footer.tsx:102:15",
+								"data-uid": "src/components/Footer.tsx:107:15",
 								"data-prohibitions": "[]",
 								href: "https://www.instagram.com/adv.lucasmorrone",
 								target: "_blank",
@@ -20162,13 +20195,13 @@ function Footer() {
 								className: "w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-gold transition-colors group border border-border",
 								"aria-label": "Instagram de Lucas Morrone",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Instagram, {
-									"data-uid": "src/components/Footer.tsx:109:17",
+									"data-uid": "src/components/Footer.tsx:114:17",
 									"data-prohibitions": "[editContent]",
 									size: 20,
 									className: "text-foreground group-hover:text-black"
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/Footer.tsx:111:15",
+								"data-uid": "src/components/Footer.tsx:116:15",
 								"data-prohibitions": "[]",
 								href: "https://www.facebook.com/p/Lucas-Morrone-Advocacia-100042065540026/",
 								target: "_blank",
@@ -20176,7 +20209,7 @@ function Footer() {
 								className: "w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-gold transition-colors group border border-border",
 								"aria-label": "Facebook de Lucas Morrone",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, {
-									"data-uid": "src/components/Footer.tsx:118:17",
+									"data-uid": "src/components/Footer.tsx:123:17",
 									"data-prohibitions": "[editContent]",
 									size: 20,
 									className: "text-foreground group-hover:text-black"
@@ -20186,11 +20219,11 @@ function Footer() {
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/Footer.tsx:124:9",
+				"data-uid": "src/components/Footer.tsx:129:9",
 				"data-prohibitions": "[editContent]",
 				className: "border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground font-medium flex flex-col md:flex-row justify-between items-center gap-4",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					"data-uid": "src/components/Footer.tsx:125:11",
+					"data-uid": "src/components/Footer.tsx:130:11",
 					"data-prohibitions": "[editContent]",
 					children: [
 						"© ",
@@ -20198,7 +20231,7 @@ function Footer() {
 						" Lucas Morrone Advocacia. Todos os direitos reservados."
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/Footer.tsx:128:11",
+					"data-uid": "src/components/Footer.tsx:133:11",
 					"data-prohibitions": "[]",
 					children: "OAB/RS 107485"
 				})]
@@ -26659,6 +26692,418 @@ function PensaoMorteGuide() {
 	});
 }
 //#endregion
+//#region src/pages/AposentadoriasGuide.tsx
+function AposentadoriasGuide() {
+	(0, import_react.useEffect)(() => {
+		window.scrollTo(0, 0);
+	}, []);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+		"data-uid": "src/pages/AposentadoriasGuide.tsx:18:5",
+		"data-prohibitions": "[]",
+		className: "pt-24 pb-16 min-h-screen bg-background",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			"data-uid": "src/pages/AposentadoriasGuide.tsx:19:7",
+			"data-prohibitions": "[]",
+			className: "container mx-auto px-4 md:px-6 max-w-4xl",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+					"data-uid": "src/pages/AposentadoriasGuide.tsx:20:9",
+					"data-prohibitions": "[]",
+					to: "/",
+					className: "inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 font-medium",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, {
+						"data-uid": "src/pages/AposentadoriasGuide.tsx:24:11",
+						"data-prohibitions": "[editContent]",
+						size: 20
+					}), "Voltar para a página inicial"]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/pages/AposentadoriasGuide.tsx:28:9",
+					"data-prohibitions": "[]",
+					className: "bg-card border border-border rounded-xl p-8 md:p-12 shadow-sm mb-12",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/pages/AposentadoriasGuide.tsx:29:11",
+							"data-prohibitions": "[]",
+							className: "inline-block bg-gold/10 text-gold-dark px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider mb-6",
+							children: "Direito Previdenciário"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+							"data-uid": "src/pages/AposentadoriasGuide.tsx:32:11",
+							"data-prohibitions": "[]",
+							className: "text-3xl md:text-5xl font-bold mb-6 text-foreground tracking-tight",
+							children: "Guia Completo de Aposentadorias"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							"data-uid": "src/pages/AposentadoriasGuide.tsx:35:11",
+							"data-prohibitions": "[]",
+							className: "text-lg text-muted-foreground leading-relaxed",
+							children: "Este material possui caráter estritamente informativo e técnico, elaborado para esclarecer as diferentes modalidades de aposentadoria no sistema previdenciário brasileiro, seus requisitos de elegibilidade e as regras de transição vigentes após a Emenda Constitucional nº 103/2019 (Reforma da Previdência)."
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/pages/AposentadoriasGuide.tsx:43:9",
+					"data-prohibitions": "[]",
+					className: "mb-12",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						"data-uid": "src/pages/AposentadoriasGuide.tsx:44:11",
+						"data-prohibitions": "[]",
+						className: "text-2xl font-bold mb-6 text-foreground border-b border-border pb-2",
+						children: "Modalidades e Requisitos Legais"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Accordion, {
+						"data-uid": "src/pages/AposentadoriasGuide.tsx:48:11",
+						"data-prohibitions": "[]",
+						type: "single",
+						collapsible: true,
+						className: "w-full space-y-4",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+								"data-uid": "src/pages/AposentadoriasGuide.tsx:49:13",
+								"data-prohibitions": "[]",
+								value: "item-1",
+								className: "bg-card border border-border rounded-lg px-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+									"data-uid": "src/pages/AposentadoriasGuide.tsx:50:15",
+									"data-prohibitions": "[]",
+									className: "hover:no-underline py-6",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:51:17",
+										"data-prohibitions": "[]",
+										className: "flex items-center gap-4 text-left",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/pages/AposentadoriasGuide.tsx:52:19",
+											"data-prohibitions": "[]",
+											className: "bg-muted p-3 rounded-full shrink-0",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:53:21",
+												"data-prohibitions": "[editContent]",
+												className: "text-foreground w-6 h-6"
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/pages/AposentadoriasGuide.tsx:55:19",
+											"data-prohibitions": "[]",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:56:21",
+												"data-prohibitions": "[]",
+												className: "text-lg md:text-xl font-bold text-foreground",
+												children: "Aposentadoria por Idade (Urbana e Rural)"
+											})
+										})]
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+									"data-uid": "src/pages/AposentadoriasGuide.tsx:62:15",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground text-base leading-relaxed pb-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:63:17",
+										"data-prohibitions": "[]",
+										className: "mb-4",
+										children: "A Aposentadoria por Idade é devida ao segurado que atinge a idade mínima exigida por lei, cumprindo cumulativamente o período de carência."
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:67:17",
+										"data-prohibitions": "[]",
+										className: "space-y-3 list-disc pl-5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/pages/AposentadoriasGuide.tsx:68:19",
+											"data-prohibitions": "[]",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:69:21",
+												"data-prohibitions": "[]",
+												className: "text-foreground",
+												children: "Trabalhadores Urbanos:"
+											}), " A regra geral pós-reforma estabelece a idade mínima de 65 anos para homens e 62 anos para mulheres. É exigido o tempo mínimo de contribuição de 15 anos (para mulheres e homens filiados até 12/11/2019) ou 20 anos (para homens filiados após a reforma)."]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/pages/AposentadoriasGuide.tsx:75:19",
+											"data-prohibitions": "[]",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:76:21",
+												"data-prohibitions": "[]",
+												className: "text-foreground",
+												children: "Trabalhadores Rurais:"
+											}), " Mantém-se o requisito etário reduzido: 60 anos para homens e 55 anos para mulheres, comprovando o efetivo exercício de atividade rural por 15 anos (180 meses) de carência."]
+										})]
+									})]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+								"data-uid": "src/pages/AposentadoriasGuide.tsx:85:13",
+								"data-prohibitions": "[]",
+								value: "item-2",
+								className: "bg-card border border-border rounded-lg px-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+									"data-uid": "src/pages/AposentadoriasGuide.tsx:86:15",
+									"data-prohibitions": "[]",
+									className: "hover:no-underline py-6",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:87:17",
+										"data-prohibitions": "[]",
+										className: "flex items-center gap-4 text-left",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/pages/AposentadoriasGuide.tsx:88:19",
+											"data-prohibitions": "[]",
+											className: "bg-muted p-3 rounded-full shrink-0",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:89:21",
+												"data-prohibitions": "[editContent]",
+												className: "text-foreground w-6 h-6"
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/pages/AposentadoriasGuide.tsx:91:19",
+											"data-prohibitions": "[]",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:92:21",
+												"data-prohibitions": "[]",
+												className: "text-lg md:text-xl font-bold text-foreground",
+												children: "Aposentadoria por Tempo de Contribuição (Regras de Transição)"
+											})
+										})]
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+									"data-uid": "src/pages/AposentadoriasGuide.tsx:98:15",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground text-base leading-relaxed pb-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:99:17",
+										"data-prohibitions": "[]",
+										className: "mb-4",
+										children: "A reforma extinguiu a modalidade pura de aposentadoria por tempo de contribuição, instituindo Regras de Transição para os segurados filiados antes de 13/11/2019."
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:103:17",
+										"data-prohibitions": "[]",
+										className: "space-y-3 list-disc pl-5",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:104:19",
+												"data-prohibitions": "[]",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													"data-uid": "src/pages/AposentadoriasGuide.tsx:105:21",
+													"data-prohibitions": "[]",
+													className: "text-foreground",
+													children: "Pedágio de 50%:"
+												}), " Aplicável a quem estava a menos de 2 anos de se aposentar na data da reforma. Exige o cumprimento de 50% do tempo que faltava."]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:109:19",
+												"data-prohibitions": "[]",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													"data-uid": "src/pages/AposentadoriasGuide.tsx:110:21",
+													"data-prohibitions": "[]",
+													className: "text-foreground",
+													children: "Pedágio de 100%:"
+												}), " Exige o cumprimento do dobro (100%) do tempo que faltava para a aposentadoria em 13/11/2019, cumulado com idade mínima (60 anos homem, 57 mulher)."]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:114:19",
+												"data-prohibitions": "[]",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													"data-uid": "src/pages/AposentadoriasGuide.tsx:115:21",
+													"data-prohibitions": "[]",
+													className: "text-foreground",
+													children: "Idade Mínima Progressiva:"
+												}), " Requer 35 anos de contribuição (homem) ou 30 anos (mulher), somados a uma idade mínima que aumenta gradativamente a cada ano."]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:119:19",
+												"data-prohibitions": "[]",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													"data-uid": "src/pages/AposentadoriasGuide.tsx:120:21",
+													"data-prohibitions": "[]",
+													className: "text-foreground",
+													children: "Sistema de Pontos:"
+												}), " Soma da idade com o tempo de contribuição. A pontuação mínima exigida sobe um ponto a cada ano."]
+											})
+										]
+									})]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+								"data-uid": "src/pages/AposentadoriasGuide.tsx:128:13",
+								"data-prohibitions": "[]",
+								value: "item-3",
+								className: "bg-card border border-border rounded-lg px-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+									"data-uid": "src/pages/AposentadoriasGuide.tsx:129:15",
+									"data-prohibitions": "[]",
+									className: "hover:no-underline py-6",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:130:17",
+										"data-prohibitions": "[]",
+										className: "flex items-center gap-4 text-left",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/pages/AposentadoriasGuide.tsx:131:19",
+											"data-prohibitions": "[]",
+											className: "bg-muted p-3 rounded-full shrink-0",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldAlert, {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:132:21",
+												"data-prohibitions": "[editContent]",
+												className: "text-foreground w-6 h-6"
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/pages/AposentadoriasGuide.tsx:134:19",
+											"data-prohibitions": "[]",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:135:21",
+												"data-prohibitions": "[]",
+												className: "text-lg md:text-xl font-bold text-foreground",
+												children: "Aposentadoria Especial"
+											})
+										})]
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+									"data-uid": "src/pages/AposentadoriasGuide.tsx:141:15",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground text-base leading-relaxed pb-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:142:17",
+										"data-prohibitions": "[]",
+										className: "mb-4",
+										children: "Destinada a segurados que trabalharam expostos a agentes nocivos à saúde (físicos, químicos ou biológicos) de forma contínua e ininterrupta, em níveis acima dos limites legais de tolerância."
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:147:17",
+										"data-prohibitions": "[]",
+										className: "space-y-3 list-disc pl-5",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:148:19",
+												"data-prohibitions": "[]",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													"data-uid": "src/pages/AposentadoriasGuide.tsx:149:21",
+													"data-prohibitions": "[]",
+													className: "text-foreground",
+													children: "Requisitos Pós-Reforma:"
+												}), " Exige-se idade mínima atrelada ao tempo de exposição. Geralmente: 60 anos de idade para 25 anos de exposição; 58 anos para 20 anos de exposição; ou 55 anos para 15 anos de exposição (ex: atividades em minas subterrâneas)."]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:154:19",
+												"data-prohibitions": "[]",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													"data-uid": "src/pages/AposentadoriasGuide.tsx:155:21",
+													"data-prohibitions": "[]",
+													className: "text-foreground",
+													children: "Regra de Transição (Pontos):"
+												}), " Para filiados antes da reforma, utiliza-se a soma da idade com o tempo de contribuição (ex: 86 pontos para atividades de 25 anos)."]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:159:19",
+												"data-prohibitions": "[]",
+												children: "A comprovação se dá mediante documentação técnica específica, como o Perfil Profissiográfico Previdenciário (PPP) e Laudo Técnico de Condições Ambientais do Trabalho (LTCAT)."
+											})
+										]
+									})]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+								"data-uid": "src/pages/AposentadoriasGuide.tsx:168:13",
+								"data-prohibitions": "[]",
+								value: "item-4",
+								className: "bg-card border border-border rounded-lg px-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+									"data-uid": "src/pages/AposentadoriasGuide.tsx:169:15",
+									"data-prohibitions": "[]",
+									className: "hover:no-underline py-6",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:170:17",
+										"data-prohibitions": "[]",
+										className: "flex items-center gap-4 text-left",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/pages/AposentadoriasGuide.tsx:171:19",
+											"data-prohibitions": "[]",
+											className: "bg-muted p-3 rounded-full shrink-0",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:172:21",
+												"data-prohibitions": "[editContent]",
+												className: "text-foreground w-6 h-6"
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/pages/AposentadoriasGuide.tsx:174:19",
+											"data-prohibitions": "[]",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:175:21",
+												"data-prohibitions": "[]",
+												className: "text-lg md:text-xl font-bold text-foreground",
+												children: "Aposentadoria por Incapacidade Permanente (Invalidez)"
+											})
+										})]
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
+									"data-uid": "src/pages/AposentadoriasGuide.tsx:181:15",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground text-base leading-relaxed pb-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:182:17",
+										"data-prohibitions": "[]",
+										className: "mb-4",
+										children: "Benefício concedido ao segurado que for considerado permanentemente e totalmente incapaz para o trabalho, sem possibilidade de reabilitação para outra atividade que lhe garanta a subsistência."
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+										"data-uid": "src/pages/AposentadoriasGuide.tsx:187:17",
+										"data-prohibitions": "[]",
+										className: "space-y-3 list-disc pl-5",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:188:19",
+												"data-prohibitions": "[]",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													"data-uid": "src/pages/AposentadoriasGuide.tsx:189:21",
+													"data-prohibitions": "[]",
+													className: "text-foreground",
+													children: "Requisitos:"
+												}), " Qualidade de segurado, cumprimento da carência de 12 contribuições mensais (exceto em casos de acidente de qualquer natureza ou doença profissional/trabalho, ou doenças graves especificadas em lei) e comprovação da incapacidade."]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:194:19",
+												"data-prohibitions": "[]",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													"data-uid": "src/pages/AposentadoriasGuide.tsx:195:21",
+													"data-prohibitions": "[]",
+													className: "text-foreground",
+													children: "Perícia Médica:"
+												}), " A constatação da incapacidade permanente deve ser atestada obrigatoriamente por perícia médica a cargo do INSS."]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+												"data-uid": "src/pages/AposentadoriasGuide.tsx:199:19",
+												"data-prohibitions": "[]",
+												children: "O benefício está sujeito a revisões periódicas (o \"pente-fino\"), salvo exceções previstas em lei (como segurados maiores de 60 anos)."
+											})
+										]
+									})]
+								})]
+							})
+						]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/pages/AposentadoriasGuide.tsx:209:9",
+					"data-prohibitions": "[]",
+					className: "bg-slate-900 text-white rounded-xl p-8 md:p-12 text-center shadow-lg border border-slate-800",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							"data-uid": "src/pages/AposentadoriasGuide.tsx:210:11",
+							"data-prohibitions": "[]",
+							className: "text-2xl md:text-3xl font-bold mb-4",
+							children: "Análise Técnica de Elegibilidade"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							"data-uid": "src/pages/AposentadoriasGuide.tsx:211:11",
+							"data-prohibitions": "[]",
+							className: "text-slate-300 text-lg mb-8 max-w-2xl mx-auto",
+							children: "A verificação dos requisitos legais e das regras de transição aplicáveis demanda análise detalhada do histórico contributivo. Em caso de dúvidas sobre a legislação ou sobre seu extrato previdenciário (CNIS), consulte assessoria jurídica especializada."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+							"data-uid": "src/pages/AposentadoriasGuide.tsx:216:11",
+							"data-prohibitions": "[]",
+							size: "lg",
+							className: "bg-gold hover:bg-gold/90 text-black font-bold uppercase tracking-wider h-14 px-8 w-full sm:w-auto",
+							onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20li%20o%20Guia%20de%20Aposentadorias%20e%20gostaria%20de%20uma%20análise%20técnica%20do%20meu%20caso.", "_blank"),
+							children: "Falar com Advogado"
+						})
+					]
+				})
+			]
+		})
+	});
+}
+//#endregion
 //#region src/hooks/use-toast.ts
 var TOAST_LIMIT = 1;
 var TOAST_REMOVE_DELAY = 1e6;
@@ -28410,53 +28855,62 @@ var Toaster = ({ ...props }) => {
 //#region src/App.tsx
 function App() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(BrowserRouter, {
-		"data-uid": "src/App.tsx:12:5",
+		"data-uid": "src/App.tsx:13:5",
 		"data-prohibitions": "[]",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Routes, {
-				"data-uid": "src/App.tsx:13:7",
+				"data-uid": "src/App.tsx:14:7",
 				"data-prohibitions": "[]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Route, {
-					"data-uid": "src/App.tsx:14:9",
+					"data-uid": "src/App.tsx:15:9",
 					"data-prohibitions": "[]",
 					element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layout, {
-						"data-uid": "src/App.tsx:14:25",
+						"data-uid": "src/App.tsx:15:25",
 						"data-prohibitions": "[editContent]"
 					}),
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
-							"data-uid": "src/App.tsx:15:11",
+							"data-uid": "src/App.tsx:16:11",
 							"data-prohibitions": "[editContent]",
 							path: "/",
 							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Index, {
-								"data-uid": "src/App.tsx:15:36",
-								"data-prohibitions": "[editContent]"
-							})
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
-							"data-uid": "src/App.tsx:16:11",
-							"data-prohibitions": "[editContent]",
-							path: "/guia-bpc",
-							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcGuide, {
-								"data-uid": "src/App.tsx:16:44",
+								"data-uid": "src/App.tsx:16:36",
 								"data-prohibitions": "[editContent]"
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
 							"data-uid": "src/App.tsx:17:11",
 							"data-prohibitions": "[editContent]",
-							path: "/guia-auxilio-acidente",
-							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuxilioAcidenteGuide, {
-								"data-uid": "src/App.tsx:17:57",
+							path: "/guia-bpc",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcGuide, {
+								"data-uid": "src/App.tsx:17:44",
 								"data-prohibitions": "[editContent]"
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
 							"data-uid": "src/App.tsx:18:11",
 							"data-prohibitions": "[editContent]",
+							path: "/guia-auxilio-acidente",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuxilioAcidenteGuide, {
+								"data-uid": "src/App.tsx:18:57",
+								"data-prohibitions": "[editContent]"
+							})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+							"data-uid": "src/App.tsx:19:11",
+							"data-prohibitions": "[editContent]",
 							path: "/guia-pensao-morte",
 							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PensaoMorteGuide, {
-								"data-uid": "src/App.tsx:18:53",
+								"data-uid": "src/App.tsx:19:53",
+								"data-prohibitions": "[editContent]"
+							})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+							"data-uid": "src/App.tsx:20:11",
+							"data-prohibitions": "[editContent]",
+							path: "/guia-aposentadorias",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AposentadoriasGuide, {
+								"data-uid": "src/App.tsx:20:55",
 								"data-prohibitions": "[editContent]"
 							})
 						})
@@ -28464,11 +28918,11 @@ function App() {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster$2, {
-				"data-uid": "src/App.tsx:21:7",
+				"data-uid": "src/App.tsx:23:7",
 				"data-prohibitions": "[editContent]"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster, {
-				"data-uid": "src/App.tsx:22:7",
+				"data-uid": "src/App.tsx:24:7",
 				"data-prohibitions": "[editContent]"
 			})
 		]
@@ -28482,4 +28936,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-D9LJRY6G.js.map
+//# sourceMappingURL=index-CU2IOGsx.js.map
