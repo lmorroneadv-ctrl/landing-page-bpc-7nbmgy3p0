@@ -17400,6 +17400,15 @@ var ArrowRight = createLucideIcon("arrow-right", [["path", {
 	d: "m12 5 7 7-7 7",
 	key: "xquz4c"
 }]]);
+var Award = createLucideIcon("award", [["path", {
+	d: "m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526",
+	key: "1yiouv"
+}], ["circle", {
+	cx: "12",
+	cy: "8",
+	r: "6",
+	key: "1vp47v"
+}]]);
 var Ban = createLucideIcon("ban", [["circle", {
 	cx: "12",
 	cy: "12",
@@ -17415,6 +17424,17 @@ var BookOpen = createLucideIcon("book-open", [["path", {
 }], ["path", {
 	d: "M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z",
 	key: "ruj8y"
+}]]);
+var Briefcase = createLucideIcon("briefcase", [["path", {
+	d: "M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16",
+	key: "jecpp"
+}], ["rect", {
+	width: "20",
+	height: "14",
+	x: "2",
+	y: "6",
+	rx: "2",
+	key: "i6l2r4"
 }]]);
 var Calculator = createLucideIcon("calculator", [
 	["rect", {
@@ -17556,6 +17576,20 @@ var Clock = createLucideIcon("clock", [["circle", {
 	d: "M12 6v6l4 2",
 	key: "mmk7yg"
 }]]);
+var ExternalLink = createLucideIcon("external-link", [
+	["path", {
+		d: "M15 3h6v6",
+		key: "1q9fwt"
+	}],
+	["path", {
+		d: "M10 14 21 3",
+		key: "gplh6r"
+	}],
+	["path", {
+		d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6",
+		key: "a6xqqp"
+	}]
+]);
 var Facebook = createLucideIcon("facebook", [["path", {
 	d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
 	key: "1jg4f8"
@@ -17580,6 +17614,20 @@ var FileText = createLucideIcon("file-text", [
 	["path", {
 		d: "M16 17H8",
 		key: "z1uh3a"
+	}]
+]);
+var GraduationCap = createLucideIcon("graduation-cap", [
+	["path", {
+		d: "M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z",
+		key: "j76jl0"
+	}],
+	["path", {
+		d: "M22 10v6",
+		key: "1lu8f3"
+	}],
+	["path", {
+		d: "M6 12.5V16a6 3 0 0 0 12 0v-3.5",
+		key: "1r8lef"
 	}]
 ]);
 var HeartPulse = createLucideIcon("heart-pulse", [["path", {
@@ -17659,6 +17707,32 @@ var Menu = createLucideIcon("menu", [
 	["path", {
 		d: "M4 19h16",
 		key: "1djgab"
+	}]
+]);
+var Microscope = createLucideIcon("microscope", [
+	["path", {
+		d: "M6 18h8",
+		key: "1borvv"
+	}],
+	["path", {
+		d: "M3 22h18",
+		key: "8prr45"
+	}],
+	["path", {
+		d: "M14 22a7 7 0 1 0 0-14h-1",
+		key: "1jwaiy"
+	}],
+	["path", {
+		d: "M9 14h2",
+		key: "197e7h"
+	}],
+	["path", {
+		d: "M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z",
+		key: "1bmzmy"
+	}],
+	["path", {
+		d: "M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3",
+		key: "1drr47"
 	}]
 ]);
 var PhoneCall = createLucideIcon("phone-call", [
@@ -19779,12 +19853,12 @@ function Header$1() {
 								className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold",
 								children: "Serviços"
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 								"data-uid": "src/components/Header.tsx:61:13",
 								"data-prohibitions": "[]",
-								onClick: () => scrollToSection("sobre"),
+								to: "/curriculo",
 								className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold",
-								children: "Sobre"
+								children: "Currículo"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								"data-uid": "src/components/Header.tsx:67:13",
@@ -19905,40 +19979,41 @@ function Header$1() {
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Serviços"
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 					"data-uid": "src/components/Header.tsx:157:11",
 					"data-prohibitions": "[]",
-					onClick: () => scrollToSection("sobre"),
+					to: "/curriculo",
+					onClick: () => setIsMobileMenuOpen(false),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
-					children: "Sobre"
+					children: "Currículo"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:163:11",
+					"data-uid": "src/components/Header.tsx:164:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("localizacao"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Localização"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					"data-uid": "src/components/Header.tsx:169:11",
+					"data-uid": "src/components/Header.tsx:170:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("faq"),
 					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
 					children: "Dúvidas"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/Header.tsx:175:11",
+					"data-uid": "src/components/Header.tsx:176:11",
 					"data-prohibitions": "[]",
 					className: "flex flex-col items-center w-full border-y border-border py-4 my-2 bg-slate-50/50",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/Header.tsx:176:13",
+							"data-uid": "src/components/Header.tsx:177:13",
 							"data-prohibitions": "[]",
 							className: "text-sm font-bold text-muted-foreground uppercase tracking-wider mb-2",
 							children: "Guias Práticos"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							"data-uid": "src/components/Header.tsx:179:13",
+							"data-uid": "src/components/Header.tsx:180:13",
 							"data-prohibitions": "[]",
 							to: "/guia-bpc",
 							onClick: () => setIsMobileMenuOpen(false),
@@ -19946,7 +20021,7 @@ function Header$1() {
 							children: "Guia BPC/LOAS"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							"data-uid": "src/components/Header.tsx:186:13",
+							"data-uid": "src/components/Header.tsx:187:13",
 							"data-prohibitions": "[]",
 							to: "/guia-auxilio-acidente",
 							onClick: () => setIsMobileMenuOpen(false),
@@ -19954,7 +20029,7 @@ function Header$1() {
 							children: "Guia Auxílio-Acidente"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							"data-uid": "src/components/Header.tsx:193:13",
+							"data-uid": "src/components/Header.tsx:194:13",
 							"data-prohibitions": "[]",
 							to: "/guia-pensao-morte",
 							onClick: () => setIsMobileMenuOpen(false),
@@ -19962,7 +20037,7 @@ function Header$1() {
 							children: "Guia Pensão por Morte"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							"data-uid": "src/components/Header.tsx:200:13",
+							"data-uid": "src/components/Header.tsx:201:13",
 							"data-prohibitions": "[]",
 							to: "/guia-aposentadorias",
 							onClick: () => setIsMobileMenuOpen(false),
@@ -19972,7 +20047,7 @@ function Header$1() {
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-					"data-uid": "src/components/Header.tsx:208:11",
+					"data-uid": "src/components/Header.tsx:209:11",
 					"data-prohibitions": "[]",
 					className: "bg-gold hover:bg-gold/90 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm",
 					onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).", "_blank"),
@@ -20121,7 +20196,7 @@ function Footer() {
 							"data-uid": "src/components/Footer.tsx:72:13",
 							"data-prohibitions": "[]",
 							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
-							children: "Guias Práticos"
+							children: "Links & Guias"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 							"data-uid": "src/components/Footer.tsx:75:13",
 							"data-prohibitions": "[]",
@@ -20133,20 +20208,20 @@ function Footer() {
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 										"data-uid": "src/components/Footer.tsx:77:17",
 										"data-prohibitions": "[]",
-										to: "/guia-bpc",
-										className: "hover:text-gold-dark transition-colors",
-										children: "Guia BPC/LOAS"
+										to: "/curriculo",
+										className: "hover:text-gold-dark transition-colors font-bold text-foreground",
+										children: "Currículo do Advogado"
 									})
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-									"data-uid": "src/components/Footer.tsx:81:15",
+									"data-uid": "src/components/Footer.tsx:84:15",
 									"data-prohibitions": "[]",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-										"data-uid": "src/components/Footer.tsx:82:17",
+										"data-uid": "src/components/Footer.tsx:85:17",
 										"data-prohibitions": "[]",
-										to: "/guia-auxilio-acidente",
+										to: "/guia-bpc",
 										className: "hover:text-gold-dark transition-colors",
-										children: "Guia Auxílio-Acidente"
+										children: "Guia BPC/LOAS"
 									})
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
@@ -20155,16 +20230,27 @@ function Footer() {
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 										"data-uid": "src/components/Footer.tsx:90:17",
 										"data-prohibitions": "[]",
+										to: "/guia-auxilio-acidente",
+										className: "hover:text-gold-dark transition-colors",
+										children: "Guia Auxílio-Acidente"
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+									"data-uid": "src/components/Footer.tsx:97:15",
+									"data-prohibitions": "[]",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+										"data-uid": "src/components/Footer.tsx:98:17",
+										"data-prohibitions": "[]",
 										to: "/guia-pensao-morte",
 										className: "hover:text-gold-dark transition-colors",
 										children: "Guia Pensão por Morte"
 									})
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-									"data-uid": "src/components/Footer.tsx:94:15",
+									"data-uid": "src/components/Footer.tsx:102:15",
 									"data-prohibitions": "[]",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-										"data-uid": "src/components/Footer.tsx:95:17",
+										"data-uid": "src/components/Footer.tsx:103:17",
 										"data-prohibitions": "[]",
 										to: "/guia-aposentadorias",
 										className: "hover:text-gold-dark transition-colors",
@@ -20175,19 +20261,19 @@ function Footer() {
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/Footer.tsx:102:11",
+						"data-uid": "src/components/Footer.tsx:110:11",
 						"data-prohibitions": "[]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							"data-uid": "src/components/Footer.tsx:103:13",
+							"data-uid": "src/components/Footer.tsx:111:13",
 							"data-prohibitions": "[]",
 							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
 							children: "Redes Sociais"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/Footer.tsx:106:13",
+							"data-uid": "src/components/Footer.tsx:114:13",
 							"data-prohibitions": "[]",
 							className: "flex gap-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/Footer.tsx:107:15",
+								"data-uid": "src/components/Footer.tsx:115:15",
 								"data-prohibitions": "[]",
 								href: "https://www.instagram.com/adv.lucasmorrone",
 								target: "_blank",
@@ -20195,13 +20281,13 @@ function Footer() {
 								className: "w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-gold transition-colors group border border-border",
 								"aria-label": "Instagram de Lucas Morrone",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Instagram, {
-									"data-uid": "src/components/Footer.tsx:114:17",
+									"data-uid": "src/components/Footer.tsx:122:17",
 									"data-prohibitions": "[editContent]",
 									size: 20,
 									className: "text-foreground group-hover:text-black"
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								"data-uid": "src/components/Footer.tsx:116:15",
+								"data-uid": "src/components/Footer.tsx:124:15",
 								"data-prohibitions": "[]",
 								href: "https://www.facebook.com/p/Lucas-Morrone-Advocacia-100042065540026/",
 								target: "_blank",
@@ -20209,7 +20295,7 @@ function Footer() {
 								className: "w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-gold transition-colors group border border-border",
 								"aria-label": "Facebook de Lucas Morrone",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, {
-									"data-uid": "src/components/Footer.tsx:123:17",
+									"data-uid": "src/components/Footer.tsx:131:17",
 									"data-prohibitions": "[editContent]",
 									size: 20,
 									className: "text-foreground group-hover:text-black"
@@ -20219,19 +20305,29 @@ function Footer() {
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/Footer.tsx:129:9",
+				"data-uid": "src/components/Footer.tsx:137:9",
 				"data-prohibitions": "[editContent]",
 				className: "border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground font-medium flex flex-col md:flex-row justify-between items-center gap-4",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					"data-uid": "src/components/Footer.tsx:130:11",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/Footer.tsx:138:11",
 					"data-prohibitions": "[editContent]",
-					children: [
-						"© ",
-						(/* @__PURE__ */ new Date()).getFullYear(),
-						" Lucas Morrone Advocacia. Todos os direitos reservados."
-					]
+					className: "flex flex-col md:items-start items-center gap-1",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+						"data-uid": "src/components/Footer.tsx:139:13",
+						"data-prohibitions": "[editContent]",
+						children: [
+							"© ",
+							(/* @__PURE__ */ new Date()).getFullYear(),
+							" Lucas Morrone Advocacia. Todos os direitos reservados."
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						"data-uid": "src/components/Footer.tsx:143:13",
+						"data-prohibitions": "[]",
+						className: "text-xs opacity-70",
+						children: "Última atualização do currículo em 12/02/2024"
+					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/Footer.tsx:133:11",
+					"data-uid": "src/components/Footer.tsx:145:11",
 					"data-prohibitions": "[]",
 					children: "OAB/RS 107485"
 				})]
@@ -27104,6 +27200,732 @@ function AposentadoriasGuide() {
 	});
 }
 //#endregion
+//#region src/pages/Curriculo.tsx
+function Curriculo() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		"data-uid": "src/pages/Curriculo.tsx:12:5",
+		"data-prohibitions": "[editContent]",
+		className: "min-h-screen bg-background pt-24 pb-16",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+			"data-uid": "src/pages/Curriculo.tsx:14:7",
+			"data-prohibitions": "[]",
+			className: "bg-muted/30 py-12 md:py-20 border-b border-border",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				"data-uid": "src/pages/Curriculo.tsx:15:9",
+				"data-prohibitions": "[]",
+				className: "container mx-auto px-4 md:px-6 max-w-4xl",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/pages/Curriculo.tsx:16:11",
+					"data-prohibitions": "[]",
+					className: "flex flex-col md:flex-row gap-8 items-start md:items-center",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/pages/Curriculo.tsx:17:13",
+						"data-prohibitions": "[]",
+						className: "w-32 h-32 md:w-48 md:h-48 shrink-0 rounded-full border-4 border-gold/20 overflow-hidden bg-muted",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							"data-uid": "src/pages/Curriculo.tsx:18:15",
+							"data-prohibitions": "[editContent]",
+							src: "https://img.usecurling.com/ppl/large?gender=male&seed=4",
+							alt: "Lucas Morrone Costa",
+							className: "w-full h-full object-cover"
+						})
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/Curriculo.tsx:24:13",
+						"data-prohibitions": "[]",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+								"data-uid": "src/pages/Curriculo.tsx:25:15",
+								"data-prohibitions": "[]",
+								className: "text-4xl md:text-5xl font-bold mb-4 text-foreground",
+								children: "Lucas Morrone Costa"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/pages/Curriculo.tsx:28:15",
+								"data-prohibitions": "[]",
+								className: "text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed",
+								children: "Possui graduação em Direito pela Universidade Federal do Rio Grande (2016). Tem experiência na área de Direito, com ênfase em Direito Previdenciário, atuando principalmente nos seguintes temas: direitos sociais, proibição do retrocesso social e direito à previdência."
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:34:15",
+								"data-prohibitions": "[]",
+								className: "flex flex-wrap gap-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									"data-uid": "src/pages/Curriculo.tsx:35:17",
+									"data-prohibitions": "[]",
+									asChild: true,
+									variant: "outline",
+									className: "border-gold text-gold-dark hover:bg-gold hover:text-black font-semibold",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+										"data-uid": "src/pages/Curriculo.tsx:40:19",
+										"data-prohibitions": "[]",
+										href: "http://lattes.cnpq.br/6521759343883367",
+										target: "_blank",
+										rel: "noopener noreferrer",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
+											"data-uid": "src/pages/Curriculo.tsx:45:21",
+											"data-prohibitions": "[editContent]",
+											className: "mr-2 h-4 w-4"
+										}), "Currículo Lattes"]
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									"data-uid": "src/pages/Curriculo.tsx:49:17",
+									"data-prohibitions": "[]",
+									asChild: true,
+									variant: "outline",
+									className: "border-gold text-gold-dark hover:bg-gold hover:text-black font-semibold",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+										"data-uid": "src/pages/Curriculo.tsx:54:19",
+										"data-prohibitions": "[]",
+										href: "https://orcid.org/0000-0001-9096-2614",
+										target: "_blank",
+										rel: "noopener noreferrer",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
+											"data-uid": "src/pages/Curriculo.tsx:59:21",
+											"data-prohibitions": "[editContent]",
+											className: "mr-2 h-4 w-4"
+										}), "Perfil ORCID"]
+									})
+								})]
+							})
+						]
+					})]
+				})
+			})
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			"data-uid": "src/pages/Curriculo.tsx:69:7",
+			"data-prohibitions": "[editContent]",
+			className: "container mx-auto px-4 md:px-6 max-w-4xl mt-12 space-y-16",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					"data-uid": "src/pages/Curriculo.tsx:71:9",
+					"data-prohibitions": "[]",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/Curriculo.tsx:72:11",
+						"data-prohibitions": "[]",
+						className: "flex items-center gap-3 mb-8 pb-2 border-b border-border",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GraduationCap, {
+							"data-uid": "src/pages/Curriculo.tsx:73:13",
+							"data-prohibitions": "[editContent]",
+							className: "w-8 h-8 text-gold"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							"data-uid": "src/pages/Curriculo.tsx:74:13",
+							"data-prohibitions": "[]",
+							className: "text-2xl md:text-3xl font-bold uppercase tracking-wider",
+							children: "Formação Acadêmica"
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/Curriculo.tsx:78:11",
+						"data-prohibitions": "[]",
+						className: "space-y-8 pl-2 md:pl-4",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:79:13",
+								"data-prohibitions": "[]",
+								className: "relative pl-6 border-l-2 border-gold/30",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/pages/Curriculo.tsx:80:15",
+										"data-prohibitions": "[editContent]",
+										className: "absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gold"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:81:15",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-gold-dark bg-gold/10 px-2 py-1 rounded-md mb-2 inline-block",
+										children: "2021 - 2023"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/pages/Curriculo.tsx:84:15",
+										"data-prohibitions": "[]",
+										className: "text-xl font-bold text-foreground",
+										children: "Mestrado em Direito e Justiça Social"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/Curriculo.tsx:87:15",
+										"data-prohibitions": "[]",
+										className: "text-lg text-muted-foreground font-medium mb-2",
+										children: "Universidade Federal do Rio Grande (FURG)"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										"data-uid": "src/pages/Curriculo.tsx:90:15",
+										"data-prohibitions": "[]",
+										className: "text-muted-foreground",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											"data-uid": "src/pages/Curriculo.tsx:91:17",
+											"data-prohibitions": "[]",
+											className: "font-semibold text-foreground",
+											children: "Título:"
+										}), " A (in)justiça social presente nas Turmas Recursais do RS: uma análise dos julgados."]
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:96:13",
+								"data-prohibitions": "[]",
+								className: "relative pl-6 border-l-2 border-gold/30",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/pages/Curriculo.tsx:97:15",
+										"data-prohibitions": "[editContent]",
+										className: "absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gold/50"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:98:15",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-muted-foreground bg-muted px-2 py-1 rounded-md mb-2 inline-block",
+										children: "2020"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/pages/Curriculo.tsx:101:15",
+										"data-prohibitions": "[]",
+										className: "text-xl font-bold text-foreground",
+										children: "Especialização em Advocacia Empresarial Previdenciária"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/Curriculo.tsx:104:15",
+										"data-prohibitions": "[]",
+										className: "text-lg text-muted-foreground font-medium",
+										children: "EBRADI"
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:107:13",
+								"data-prohibitions": "[]",
+								className: "relative pl-6 border-l-2 border-gold/30",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/pages/Curriculo.tsx:108:15",
+										"data-prohibitions": "[editContent]",
+										className: "absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gold/50"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:109:15",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-muted-foreground bg-muted px-2 py-1 rounded-md mb-2 inline-block",
+										children: "2018 - 2020"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/pages/Curriculo.tsx:112:15",
+										"data-prohibitions": "[]",
+										className: "text-xl font-bold text-foreground",
+										children: "Especialização em Advocacia Trabalhista e Previdenciária"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/Curriculo.tsx:115:15",
+										"data-prohibitions": "[]",
+										className: "text-lg text-muted-foreground font-medium mb-2",
+										children: "Universidade de Santa Cruz do Sul (UNISC)"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										"data-uid": "src/pages/Curriculo.tsx:118:15",
+										"data-prohibitions": "[]",
+										className: "text-muted-foreground",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											"data-uid": "src/pages/Curriculo.tsx:119:17",
+											"data-prohibitions": "[]",
+											className: "font-semibold text-foreground",
+											children: "Título:"
+										}), " O BENEFÍCIO DE PRESTAÇÃO CONTINUADA: ALTERAÇÕES DA PEC 06 DE 2019 E A OFENSA AOS PRINCÍPIOS DA SOLIDARIEDADE E DA VEDAÇÃO AO RETROCESSO SOCIAL."]
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:125:13",
+								"data-prohibitions": "[]",
+								className: "relative pl-6 border-l-2 border-gold/30",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/pages/Curriculo.tsx:126:15",
+										"data-prohibitions": "[editContent]",
+										className: "absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gold/50"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:127:15",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-muted-foreground bg-muted px-2 py-1 rounded-md mb-2 inline-block",
+										children: "2012 - 2016"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/pages/Curriculo.tsx:130:15",
+										"data-prohibitions": "[]",
+										className: "text-xl font-bold text-foreground",
+										children: "Graduação em Direito"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/Curriculo.tsx:131:15",
+										"data-prohibitions": "[]",
+										className: "text-lg text-muted-foreground font-medium",
+										children: "Universidade Federal do Rio Grande (FURG)"
+									})
+								]
+							})
+						]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					"data-uid": "src/pages/Curriculo.tsx:139:9",
+					"data-prohibitions": "[]",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/Curriculo.tsx:140:11",
+						"data-prohibitions": "[]",
+						className: "flex items-center gap-3 mb-8 pb-2 border-b border-border",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Briefcase, {
+							"data-uid": "src/pages/Curriculo.tsx:141:13",
+							"data-prohibitions": "[editContent]",
+							className: "w-8 h-8 text-gold"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							"data-uid": "src/pages/Curriculo.tsx:142:13",
+							"data-prohibitions": "[]",
+							className: "text-2xl md:text-3xl font-bold uppercase tracking-wider",
+							children: "Atuação Profissional"
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/Curriculo.tsx:146:11",
+						"data-prohibitions": "[]",
+						className: "grid grid-cols-1 md:grid-cols-2 gap-6",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:147:13",
+								"data-prohibitions": "[]",
+								className: "bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:148:15",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-gold-dark mb-2 block",
+										children: "2013 - 2014"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/pages/Curriculo.tsx:149:15",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-foreground mb-1",
+										children: "Universidade Federal do Rio Grande"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/Curriculo.tsx:152:15",
+										"data-prohibitions": "[]",
+										className: "text-muted-foreground",
+										children: "FURG"
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:154:13",
+								"data-prohibitions": "[]",
+								className: "bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:155:15",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-gold-dark mb-2 block",
+										children: "2012 - 2015"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/pages/Curriculo.tsx:156:15",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-foreground mb-1",
+										children: "Justiça Federal de 1º Grau"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/Curriculo.tsx:157:15",
+										"data-prohibitions": "[]",
+										className: "text-muted-foreground",
+										children: "Rio Grande do Sul (RS)"
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:159:13",
+								"data-prohibitions": "[]",
+								className: "bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:160:15",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-gold-dark mb-2 block",
+										children: "2012 - 2013"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/pages/Curriculo.tsx:161:15",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-foreground mb-1",
+										children: "Tribunal de Justiça"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/pages/Curriculo.tsx:162:15",
+										"data-prohibitions": "[]",
+										className: "text-muted-foreground",
+										children: "Rio Grande do Sul (TJRS)"
+									})
+								]
+							})
+						]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					"data-uid": "src/pages/Curriculo.tsx:168:9",
+					"data-prohibitions": "[]",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/Curriculo.tsx:169:11",
+						"data-prohibitions": "[]",
+						className: "flex items-center gap-3 mb-8 pb-2 border-b border-border",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Microscope, {
+							"data-uid": "src/pages/Curriculo.tsx:170:13",
+							"data-prohibitions": "[editContent]",
+							className: "w-8 h-8 text-gold"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							"data-uid": "src/pages/Curriculo.tsx:171:13",
+							"data-prohibitions": "[]",
+							className: "text-2xl md:text-3xl font-bold uppercase tracking-wider",
+							children: "Pesquisa e Projetos"
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/pages/Curriculo.tsx:175:11",
+						"data-prohibitions": "[]",
+						className: "space-y-6",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:176:13",
+								"data-prohibitions": "[]",
+								className: "bg-muted/30 p-6 rounded-lg border border-border/50",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/pages/Curriculo.tsx:177:15",
+									"data-prohibitions": "[]",
+									className: "flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/pages/Curriculo.tsx:178:17",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-foreground",
+										children: "Grupo de Pesquisa: CIDIJUS"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:179:17",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border",
+										children: "2017 - Atual"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/pages/Curriculo.tsx:183:15",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground",
+									children: "CIDADANIA, DIREITOS E JUSTIÇA"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:186:13",
+								"data-prohibitions": "[]",
+								className: "bg-muted/30 p-6 rounded-lg border border-border/50",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/pages/Curriculo.tsx:187:15",
+									"data-prohibitions": "[]",
+									className: "flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/pages/Curriculo.tsx:188:17",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-foreground",
+										children: "Projeto de Pesquisa"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:189:17",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border",
+										children: "2013 - 2014"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/pages/Curriculo.tsx:193:15",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground",
+									children: "Direito e Justiça Social: instrumentos jurídicos de proteção..."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/pages/Curriculo.tsx:198:13",
+								"data-prohibitions": "[]",
+								className: "bg-muted/30 p-6 rounded-lg border border-border/50",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/pages/Curriculo.tsx:199:15",
+									"data-prohibitions": "[]",
+									className: "flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/pages/Curriculo.tsx:200:17",
+										"data-prohibitions": "[]",
+										className: "text-lg font-bold text-foreground",
+										children: "Projeto de Extensão"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:201:17",
+										"data-prohibitions": "[]",
+										className: "text-sm font-bold text-muted-foreground bg-background px-3 py-1 rounded-full border border-border",
+										children: "2016"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									"data-uid": "src/pages/Curriculo.tsx:205:15",
+									"data-prohibitions": "[]",
+									className: "text-muted-foreground",
+									children: "Bicharada Universitária"
+								})]
+							})
+						]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					"data-uid": "src/pages/Curriculo.tsx:211:9",
+					"data-prohibitions": "[]",
+					className: "space-y-6",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
+						"data-uid": "src/pages/Curriculo.tsx:212:11",
+						"data-prohibitions": "[]",
+						type: "single",
+						collapsible: true,
+						className: "w-full bg-card border border-border rounded-lg shadow-sm",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+							"data-uid": "src/pages/Curriculo.tsx:217:13",
+							"data-prohibitions": "[]",
+							value: "producao",
+							className: "border-none",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+								"data-uid": "src/pages/Curriculo.tsx:218:15",
+								"data-prohibitions": "[]",
+								className: "px-6 py-4 hover:no-underline hover:bg-muted/50 transition-colors rounded-lg",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/pages/Curriculo.tsx:219:17",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, {
+										"data-uid": "src/pages/Curriculo.tsx:220:19",
+										"data-prohibitions": "[editContent]",
+										className: "w-6 h-6 text-gold"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:221:19",
+										"data-prohibitions": "[]",
+										className: "text-xl font-bold uppercase tracking-wider text-left",
+										children: "Produção Bibliográfica"
+									})]
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
+								"data-uid": "src/pages/Curriculo.tsx:226:15",
+								"data-prohibitions": "[]",
+								className: "px-6 pb-6 pt-2",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+									"data-uid": "src/pages/Curriculo.tsx:227:17",
+									"data-prohibitions": "[]",
+									className: "space-y-4",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/pages/Curriculo.tsx:228:19",
+											"data-prohibitions": "[]",
+											className: "flex items-start gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												"data-uid": "src/pages/Curriculo.tsx:229:21",
+												"data-prohibitions": "[editContent]",
+												className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+												"data-uid": "src/pages/Curriculo.tsx:230:21",
+												"data-prohibitions": "[]",
+												className: "text-muted-foreground",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														"data-uid": "src/pages/Curriculo.tsx:231:23",
+														"data-prohibitions": "[]",
+														className: "font-semibold text-foreground",
+														children: "Artigo (2022):"
+													}),
+													" ",
+													"Datenismo penal e a licença para matar."
+												]
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/pages/Curriculo.tsx:235:19",
+											"data-prohibitions": "[]",
+											className: "flex items-start gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												"data-uid": "src/pages/Curriculo.tsx:236:21",
+												"data-prohibitions": "[editContent]",
+												className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+												"data-uid": "src/pages/Curriculo.tsx:237:21",
+												"data-prohibitions": "[]",
+												className: "text-muted-foreground",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													"data-uid": "src/pages/Curriculo.tsx:238:23",
+													"data-prohibitions": "[]",
+													className: "font-semibold text-foreground",
+													children: "Artigo (2022):"
+												}), " O Nefasto Requisito da Renda Per Capita..."]
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/pages/Curriculo.tsx:242:19",
+											"data-prohibitions": "[]",
+											className: "flex items-start gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												"data-uid": "src/pages/Curriculo.tsx:243:21",
+												"data-prohibitions": "[editContent]",
+												className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+												"data-uid": "src/pages/Curriculo.tsx:244:21",
+												"data-prohibitions": "[]",
+												className: "text-muted-foreground",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													"data-uid": "src/pages/Curriculo.tsx:245:23",
+													"data-prohibitions": "[]",
+													className: "font-semibold text-foreground",
+													children: "Artigo (2020):"
+												}), " Desafios a segurança e a saúde em tempos de pandemia..."]
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/pages/Curriculo.tsx:249:19",
+											"data-prohibitions": "[]",
+											className: "flex items-start gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												"data-uid": "src/pages/Curriculo.tsx:250:21",
+												"data-prohibitions": "[editContent]",
+												className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+												"data-uid": "src/pages/Curriculo.tsx:251:21",
+												"data-prohibitions": "[]",
+												className: "text-muted-foreground",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													"data-uid": "src/pages/Curriculo.tsx:252:23",
+													"data-prohibitions": "[]",
+													className: "font-semibold text-foreground",
+													children: "Artigo (2019):"
+												}), " O fenômeno da judicialização da política além do Brasil."]
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+											"data-uid": "src/pages/Curriculo.tsx:256:19",
+											"data-prohibitions": "[]",
+											className: "flex items-start gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												"data-uid": "src/pages/Curriculo.tsx:257:21",
+												"data-prohibitions": "[editContent]",
+												className: "w-2 h-2 rounded-full bg-gold mt-2 shrink-0"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+												"data-uid": "src/pages/Curriculo.tsx:258:21",
+												"data-prohibitions": "[]",
+												className: "text-muted-foreground",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														"data-uid": "src/pages/Curriculo.tsx:259:23",
+														"data-prohibitions": "[]",
+														className: "font-semibold text-foreground",
+														children: "Livro/Capítulo (2021):"
+													}),
+													" ",
+													"DOSSIÊ CIDIJUS PANDEMIA."
+												]
+											})]
+										})
+									]
+								})
+							})]
+						})
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
+						"data-uid": "src/pages/Curriculo.tsx:268:11",
+						"data-prohibitions": "[]",
+						type: "single",
+						collapsible: true,
+						className: "w-full bg-card border border-border rounded-lg shadow-sm",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
+							"data-uid": "src/pages/Curriculo.tsx:273:13",
+							"data-prohibitions": "[]",
+							value: "eventos",
+							className: "border-none",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
+								"data-uid": "src/pages/Curriculo.tsx:274:15",
+								"data-prohibitions": "[]",
+								className: "px-6 py-4 hover:no-underline hover:bg-muted/50 transition-colors rounded-lg",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/pages/Curriculo.tsx:275:17",
+									"data-prohibitions": "[]",
+									className: "flex items-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, {
+										"data-uid": "src/pages/Curriculo.tsx:276:19",
+										"data-prohibitions": "[editContent]",
+										className: "w-6 h-6 text-gold"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"data-uid": "src/pages/Curriculo.tsx:277:19",
+										"data-prohibitions": "[]",
+										className: "text-xl font-bold uppercase tracking-wider text-left",
+										children: "Eventos e Apresentações"
+									})]
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionContent, {
+								"data-uid": "src/pages/Curriculo.tsx:282:15",
+								"data-prohibitions": "[]",
+								className: "px-6 pb-6 pt-2",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/pages/Curriculo.tsx:283:17",
+									"data-prohibitions": "[]",
+									className: "space-y-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/pages/Curriculo.tsx:284:19",
+										"data-prohibitions": "[]",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+											"data-uid": "src/pages/Curriculo.tsx:285:21",
+											"data-prohibitions": "[]",
+											className: "font-bold text-foreground mb-3 text-lg",
+											children: "Apresentações de Trabalho"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+											"data-uid": "src/pages/Curriculo.tsx:288:21",
+											"data-prohibitions": "[]",
+											className: "space-y-2",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+												"data-uid": "src/pages/Curriculo.tsx:289:23",
+												"data-prohibitions": "[]",
+												className: "flex items-center gap-2 text-muted-foreground",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													"data-uid": "src/pages/Curriculo.tsx:290:25",
+													"data-prohibitions": "[editContent]",
+													className: "w-1.5 h-1.5 rounded-full bg-gold/50"
+												}), "Diversas apresentações realizadas entre 2021 e 2023."]
+											})
+										})]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/pages/Curriculo.tsx:295:19",
+										"data-prohibitions": "[]",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+											"data-uid": "src/pages/Curriculo.tsx:296:21",
+											"data-prohibitions": "[]",
+											className: "font-bold text-foreground mb-3 text-lg",
+											children: "Participação em Eventos"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/pages/Curriculo.tsx:299:21",
+											"data-prohibitions": "[]",
+											className: "flex flex-wrap gap-2",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													"data-uid": "src/pages/Curriculo.tsx:300:23",
+													"data-prohibitions": "[]",
+													className: "px-3 py-1 bg-muted rounded-full text-sm font-medium border border-border",
+													children: "IBDP"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													"data-uid": "src/pages/Curriculo.tsx:303:23",
+													"data-prohibitions": "[]",
+													className: "px-3 py-1 bg-muted rounded-full text-sm font-medium border border-border",
+													children: "ESMAFE"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													"data-uid": "src/pages/Curriculo.tsx:306:23",
+													"data-prohibitions": "[]",
+													className: "px-3 py-1 bg-muted rounded-full text-sm font-medium border border-border",
+													children: "OAB/RS"
+												})
+											]
+										})]
+									})]
+								})
+							})]
+						})
+					})]
+				})
+			]
+		})]
+	});
+}
+//#endregion
 //#region src/hooks/use-toast.ts
 var TOAST_LIMIT = 1;
 var TOAST_REMOVE_DELAY = 1e6;
@@ -28855,62 +29677,71 @@ var Toaster = ({ ...props }) => {
 //#region src/App.tsx
 function App() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(BrowserRouter, {
-		"data-uid": "src/App.tsx:13:5",
+		"data-uid": "src/App.tsx:14:5",
 		"data-prohibitions": "[]",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Routes, {
-				"data-uid": "src/App.tsx:14:7",
+				"data-uid": "src/App.tsx:15:7",
 				"data-prohibitions": "[]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Route, {
-					"data-uid": "src/App.tsx:15:9",
+					"data-uid": "src/App.tsx:16:9",
 					"data-prohibitions": "[]",
 					element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layout, {
-						"data-uid": "src/App.tsx:15:25",
+						"data-uid": "src/App.tsx:16:25",
 						"data-prohibitions": "[editContent]"
 					}),
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
-							"data-uid": "src/App.tsx:16:11",
+							"data-uid": "src/App.tsx:17:11",
 							"data-prohibitions": "[editContent]",
 							path: "/",
 							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Index, {
-								"data-uid": "src/App.tsx:16:36",
-								"data-prohibitions": "[editContent]"
-							})
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
-							"data-uid": "src/App.tsx:17:11",
-							"data-prohibitions": "[editContent]",
-							path: "/guia-bpc",
-							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcGuide, {
-								"data-uid": "src/App.tsx:17:44",
+								"data-uid": "src/App.tsx:17:36",
 								"data-prohibitions": "[editContent]"
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
 							"data-uid": "src/App.tsx:18:11",
 							"data-prohibitions": "[editContent]",
-							path: "/guia-auxilio-acidente",
-							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuxilioAcidenteGuide, {
-								"data-uid": "src/App.tsx:18:57",
+							path: "/guia-bpc",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BpcGuide, {
+								"data-uid": "src/App.tsx:18:44",
 								"data-prohibitions": "[editContent]"
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
 							"data-uid": "src/App.tsx:19:11",
 							"data-prohibitions": "[editContent]",
-							path: "/guia-pensao-morte",
-							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PensaoMorteGuide, {
-								"data-uid": "src/App.tsx:19:53",
+							path: "/guia-auxilio-acidente",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuxilioAcidenteGuide, {
+								"data-uid": "src/App.tsx:19:57",
 								"data-prohibitions": "[editContent]"
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
 							"data-uid": "src/App.tsx:20:11",
 							"data-prohibitions": "[editContent]",
+							path: "/guia-pensao-morte",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PensaoMorteGuide, {
+								"data-uid": "src/App.tsx:20:53",
+								"data-prohibitions": "[editContent]"
+							})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+							"data-uid": "src/App.tsx:21:11",
+							"data-prohibitions": "[editContent]",
 							path: "/guia-aposentadorias",
 							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AposentadoriasGuide, {
-								"data-uid": "src/App.tsx:20:55",
+								"data-uid": "src/App.tsx:21:55",
+								"data-prohibitions": "[editContent]"
+							})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+							"data-uid": "src/App.tsx:22:11",
+							"data-prohibitions": "[editContent]",
+							path: "/curriculo",
+							element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Curriculo, {
+								"data-uid": "src/App.tsx:22:45",
 								"data-prohibitions": "[editContent]"
 							})
 						})
@@ -28918,11 +29749,11 @@ function App() {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster$2, {
-				"data-uid": "src/App.tsx:23:7",
+				"data-uid": "src/App.tsx:25:7",
 				"data-prohibitions": "[editContent]"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster, {
-				"data-uid": "src/App.tsx:24:7",
+				"data-uid": "src/App.tsx:26:7",
 				"data-prohibitions": "[editContent]"
 			})
 		]
@@ -28936,4 +29767,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-CU2IOGsx.js.map
+//# sourceMappingURL=index-FBO1J_yp.js.map

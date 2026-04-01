@@ -70,9 +70,17 @@ export function Footer() {
 
           <div>
             <h3 className="text-foreground text-lg font-bold mb-6 uppercase tracking-wider">
-              Guias Práticos
+              Links & Guias
             </h3>
             <ul className="space-y-4 text-muted-foreground font-medium flex flex-col items-start">
+              <li>
+                <Link
+                  to="/curriculo"
+                  className="hover:text-gold-dark transition-colors font-bold text-foreground"
+                >
+                  Currículo do Advogado
+                </Link>
+              </li>
               <li>
                 <Link to="/guia-bpc" className="hover:text-gold-dark transition-colors">
                   Guia BPC/LOAS
@@ -127,9 +135,13 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground font-medium flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>
-            &copy; {new Date().getFullYear()} Lucas Morrone Advocacia. Todos os direitos reservados.
-          </p>
+          <div className="flex flex-col md:items-start items-center gap-1">
+            <p>
+              &copy; {new Date().getFullYear()} Lucas Morrone Advocacia. Todos os direitos
+              reservados.
+            </p>
+            <p className="text-xs opacity-70">Última atualização do currículo em 12/02/2024</p>
+          </div>
           <p>OAB/RS 107485</p>
         </div>
       </div>

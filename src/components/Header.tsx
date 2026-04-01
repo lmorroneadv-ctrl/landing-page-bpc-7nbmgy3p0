@@ -58,12 +58,12 @@ export function Header() {
             >
               Serviços
             </button>
-            <button
-              onClick={() => scrollToSection('sobre')}
+            <Link
+              to="/curriculo"
               className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
             >
-              Sobre
-            </button>
+              Currículo
+            </Link>
             <button
               onClick={() => scrollToSection('localizacao')}
               className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
@@ -154,12 +154,13 @@ export function Header() {
           >
             Serviços
           </button>
-          <button
-            onClick={() => scrollToSection('sobre')}
+          <Link
+            to="/curriculo"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
           >
-            Sobre
-          </button>
+            Currículo
+          </Link>
           <button
             onClick={() => scrollToSection('localizacao')}
             className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
