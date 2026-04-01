@@ -7,6 +7,8 @@ import {
   Link as LinkIcon,
   ExternalLink,
   Award,
+  FileText,
+  Microscope,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -15,12 +17,99 @@ import { Separator } from '@/components/ui/separator'
 
 import profilePhoto from '@/assets/foto-profissional-lucas-4d53b.png'
 
+const academicData = [
+  {
+    title: 'Mestrado em Direito e Justiça Social',
+    inst: 'Universidade Federal do Rio Grande (FURG)',
+    period: '2021 - 2023',
+    desc: 'Título: "A (in)justiça social presente nas Turmas Recursais do RS: uma análise dos julgados."',
+  },
+  {
+    title: 'Especialização em Advocacia Empresarial Previdenciária e Previdência Privada',
+    inst: 'Escola Brasileira de Direito (EBRADI)',
+    period: '2020 - Em andamento',
+  },
+  {
+    title: 'Especialização em Advocacia Trabalhista e Previdenciária',
+    inst: 'Universidade de Santa Cruz do Sul (UNISC)',
+    period: '2018 - 2020',
+  },
+  {
+    title: 'Graduação em Direito',
+    inst: 'Universidade Federal do Rio Grande (FURG)',
+    period: '2012 - 2016',
+  },
+]
+
+const expData = [
+  {
+    title: 'Advogado Titular',
+    org: 'Lucas Morrone Sociedade Individual de Advocacia (RS 14900)',
+    period: 'Abril 2017 - Presente',
+    desc: 'Atuação especializada na área de Direito Previdenciário e Assistencial (BPC/LOAS).',
+  },
+  {
+    title: 'Estagiário',
+    org: 'Justiça Federal, Tribunal de Justiça (TJ RS) e Advocacia-Geral da União (AGU)',
+    period: '2015 - 2016',
+  },
+]
+
+const projData = [
+  {
+    title: 'Grupo de pesquisa CIDADANIA, DIREITOS E JUSTIÇA - CIDIJUS',
+    period: '2017 - Atual',
+  },
+  {
+    title: 'Direito e Justiça Social: instrumentos jurídicos de proteção...',
+    period: '2013 - 2014',
+  },
+]
+
+const pubData = [
+  { type: 'Livro', title: 'DOSSIÊ CIDIJUS PANDEMIA', year: '2021' },
+  { type: 'Artigo', title: 'Datenismo penal e a licença para matar', year: '2022' },
+  { type: 'Artigo', title: 'O Nefasto Requisito da Renda Per Capita...', year: '2022' },
+  {
+    type: 'Artigo',
+    title: 'DESAFIOS A SEGURANÇA E A SAÚDE EM TEMPOS DE PANDEMIA...',
+    year: '2020',
+  },
+  {
+    type: 'Capítulo',
+    title: 'MOBILIDADES TRANSNACIONAIS EM TEMPOS DE CRISES SOCIO-SANITÁRIAS...',
+    year: '',
+  },
+  { type: 'Capítulo', title: 'A sociedade de consumo: obsolescência programada...', year: '' },
+  { type: 'Capítulo', title: 'DEIXAR MORRER: A NECROPOLÍTICA BOLSONARISTA...', year: '' },
+]
+
+function TimelineItem({ title, subtitle, period, desc, isLast = false }: any) {
+  return (
+    <div className="relative">
+      <div className="absolute -left-[33px] top-1.5 bg-white p-1 rounded-full border-2 border-amber-200">
+        <div className="w-2.5 h-2.5 bg-amber-600 rounded-full" />
+      </div>
+      <h4 className="text-lg font-bold text-slate-900">{title}</h4>
+      <p className="text-slate-600 font-medium">{subtitle}</p>
+      <p className="text-sm text-slate-500 mt-1 font-semibold">{period}</p>
+      {desc && <p className="text-slate-600 mt-2 text-sm leading-relaxed">{desc}</p>}
+      {!isLast && <div className="h-8" />}
+    </div>
+  )
+}
+
 export default function Curriculo() {
   return (
-    <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto space-y-8">
+    <div className="min-h-screen bg-slate-50 pt-28 pb-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto space-y-8">
         <div className="flex items-center space-x-4">
-          <Button variant="ghost" size="icon" asChild className="rounded-full">
+          <Button
+            variant="outline"
+            size="icon"
+            asChild
+            className="rounded-full hover:text-amber-700 hover:border-amber-700"
+          >
             <Link to="/">
               <ArrowLeft className="h-5 w-5" />
               <span className="sr-only">Voltar</span>
@@ -31,202 +120,198 @@ export default function Curriculo() {
           </h1>
         </div>
 
-        <Card className="overflow-hidden border-none shadow-xl rounded-2xl">
-          <div className="md:flex">
-            {/* Sidebar Profile */}
-            <div className="md:w-1/3 bg-[#0f172a] p-8 text-white flex flex-col items-center justify-start relative">
-              <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#1e293b] to-transparent" />
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-slate-700 shadow-2xl mb-6 flex-shrink-0 z-10">
-                <img
-                  src={profilePhoto}
-                  alt="Dr. Lucas Morrone"
-                  className="w-full h-full object-cover aspect-square"
-                />
-              </div>
-              <h2 className="text-2xl font-bold mb-1 text-center relative z-10">Lucas Morrone</h2>
-              <p className="text-slate-300 text-center mb-2 font-medium relative z-10">
-                Advogado Especialista
-              </p>
-              <Badge
-                variant="secondary"
-                className="mb-8 bg-slate-800 text-slate-100 hover:bg-slate-700 border-slate-700 relative z-10"
-              >
-                OAB/SP 123.456
+        <Card className="overflow-hidden border-none shadow-xl rounded-2xl flex flex-col md:flex-row">
+          {/* Sidebar Profile */}
+          <div className="md:w-[35%] bg-slate-900 p-8 text-white flex flex-col items-center justify-start relative">
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-800 to-transparent" />
+            <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-amber-500 shadow-2xl mb-6 flex-shrink-0 z-10">
+              <img
+                src={profilePhoto}
+                alt="Dr. Lucas Morrone Costa"
+                className="w-full h-full object-cover aspect-square"
+              />
+            </div>
+            <h2 className="text-2xl font-bold mb-1 text-center relative z-10">
+              Lucas Morrone Costa
+            </h2>
+            <p className="text-slate-300 text-center mb-4 font-medium relative z-10">
+              Advogado Especialista
+            </p>
+            <div className="flex flex-col gap-3 items-center mb-8 relative z-10 w-full">
+              <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border-amber-500/50 text-sm py-1 px-4">
+                OAB/RS 107.485
               </Badge>
-
-              <div className="w-full space-y-4 mt-auto relative z-10">
-                <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">
-                  Links Externos
-                </h3>
-                <a
-                  href="http://lattes.cnpq.br/"
-                  className="flex items-center p-3 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors group"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkIcon className="h-4 w-4 mr-3 text-slate-400 group-hover:text-white transition-colors" />
-                  <span className="text-sm text-slate-300 group-hover:text-white transition-colors">
-                    Currículo Lattes
-                  </span>
-                  <ExternalLink className="h-3 w-3 ml-auto opacity-50 group-hover:opacity-100 transition-opacity" />
-                </a>
-                <a
-                  href="https://orcid.org/"
-                  className="flex items-center p-3 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors group"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkIcon className="h-4 w-4 mr-3 text-slate-400 group-hover:text-white transition-colors" />
-                  <span className="text-sm text-slate-300 group-hover:text-white transition-colors">
-                    ORCID
-                  </span>
-                  <ExternalLink className="h-3 w-3 ml-auto opacity-50 group-hover:opacity-100 transition-opacity" />
-                </a>
-              </div>
+              <Badge
+                variant="outline"
+                className="text-slate-300 border-slate-700 text-xs text-center py-1.5 leading-relaxed"
+              >
+                Lucas Morrone Sociedade
+                <br />
+                Individual de Advocacia
+                <br />
+                (RS 14900)
+              </Badge>
             </div>
 
-            {/* Main Content */}
-            <div className="md:w-2/3 p-8 md:p-10 bg-white">
-              <div className="space-y-10">
-                {/* Academic Section */}
-                <section>
-                  <div className="flex items-center space-x-3 mb-6">
-                    <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
-                      <GraduationCap className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-slate-900">Formação Acadêmica</h3>
-                  </div>
-                  <div className="space-y-6 relative border-l-2 border-slate-100 ml-4 pl-6">
-                    <div className="relative">
-                      <div className="absolute -left-[33px] top-1 bg-white p-1 rounded-full border-2 border-blue-100">
-                        <div className="w-3 h-3 bg-blue-600 rounded-full" />
-                      </div>
-                      <h4 className="text-lg font-medium text-slate-900">
-                        Pós-graduação em Direito Previdenciário
-                      </h4>
-                      <p className="text-slate-500 font-medium">
-                        Instituto Brasileiro de Direito Previdenciário (IBDP)
-                      </p>
-                      <p className="text-sm text-slate-400 mt-1">2020 - 2022</p>
-                    </div>
-                    <div className="relative">
-                      <div className="absolute -left-[33px] top-1 bg-white p-1 rounded-full border-2 border-slate-100">
-                        <div className="w-3 h-3 bg-slate-300 rounded-full" />
-                      </div>
-                      <h4 className="text-lg font-medium text-slate-900">Bacharelado em Direito</h4>
-                      <p className="text-slate-500 font-medium">
-                        Pontifícia Universidade Católica (PUC)
-                      </p>
-                      <p className="text-sm text-slate-400 mt-1">2014 - 2019</p>
-                    </div>
-                  </div>
-                </section>
+            <div className="w-full space-y-4 mt-auto relative z-10">
+              <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                Links e Registros
+              </h3>
+              <a
+                href="http://lattes.cnpq.br/6521759343883367"
+                className="flex items-center p-3 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors group border border-slate-800 hover:border-amber-500/50"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkIcon className="h-4 w-4 mr-3 text-slate-400 group-hover:text-amber-500 transition-colors" />
+                <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">
+                  Currículo Lattes
+                </span>
+                <ExternalLink className="h-3 w-3 ml-auto opacity-50 group-hover:opacity-100 transition-opacity" />
+              </a>
+              <a
+                href="https://orcid.org/0000-0001-9096-2614"
+                className="flex items-center p-3 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors group border border-slate-800 hover:border-amber-500/50"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkIcon className="h-4 w-4 mr-3 text-slate-400 group-hover:text-amber-500 transition-colors" />
+                <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">
+                  ORCID iD
+                </span>
+                <ExternalLink className="h-3 w-3 ml-auto opacity-50 group-hover:opacity-100 transition-opacity" />
+              </a>
+              <p className="text-[10px] text-slate-500 text-center mt-6 uppercase tracking-wider">
+                Atualizado em 12/02/2024
+              </p>
+            </div>
+          </div>
 
-                <Separator className="bg-slate-100" />
-
-                {/* Professional Section */}
-                <section>
-                  <div className="flex items-center space-x-3 mb-6">
-                    <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
-                      <Briefcase className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-slate-900">
-                      Experiência Profissional
-                    </h3>
+          {/* Main Content */}
+          <div className="md:w-[65%] p-8 md:p-10 bg-white">
+            <div className="space-y-10">
+              {/* Resumo */}
+              <section>
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="p-2 bg-amber-50 text-amber-600 rounded-lg">
+                    <FileText className="h-6 w-6" />
                   </div>
-                  <div className="space-y-8 relative border-l-2 border-slate-100 ml-4 pl-6">
-                    <div className="relative">
-                      <div className="absolute -left-[33px] top-1 bg-white p-1 rounded-full border-2 border-blue-100">
-                        <div className="w-3 h-3 bg-blue-600 rounded-full" />
-                      </div>
-                      <h4 className="text-lg font-medium text-slate-900">Sócio Fundador</h4>
-                      <p className="text-slate-500 font-medium mb-3">
-                        Morrone Advocacia • 2021 - Presente
-                      </p>
-                      <p className="text-slate-600 leading-relaxed">
-                        Atuação exclusiva e especializada na área previdenciária, com foco absoluto
-                        em Benefício de Prestação Continuada (BPC/LOAS). Coordenação de equipe
-                        jurídica e gestão de carteira com centenas de processos ativos, garantindo o
-                        acesso à justiça e aos direitos sociais de idosos e pessoas com deficiência.
-                      </p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        <Badge
-                          variant="outline"
-                          className="bg-slate-50 text-slate-600 border-slate-200"
-                        >
-                          BPC/LOAS
-                        </Badge>
-                        <Badge
-                          variant="outline"
-                          className="bg-slate-50 text-slate-600 border-slate-200"
-                        >
-                          Direito Previdenciário
-                        </Badge>
-                        <Badge
-                          variant="outline"
-                          className="bg-slate-50 text-slate-600 border-slate-200"
-                        >
-                          INSS
-                        </Badge>
-                      </div>
-                    </div>
-                    <div className="relative">
-                      <div className="absolute -left-[33px] top-1 bg-white p-1 rounded-full border-2 border-slate-100">
-                        <div className="w-3 h-3 bg-slate-300 rounded-full" />
-                      </div>
-                      <h4 className="text-lg font-medium text-slate-900">
-                        Advogado Previdenciarista
-                      </h4>
-                      <p className="text-slate-500 font-medium mb-3">
-                        Escritório de Advocacia Associados • 2019 - 2021
-                      </p>
-                      <p className="text-slate-600 leading-relaxed">
-                        Atuação no contencioso e consultivo previdenciário. Elaboração de petições
-                        iniciais, recursos e sustentações orais em turmas recursais e tribunais
-                        regionais federais.
-                      </p>
-                    </div>
-                  </div>
-                </section>
+                  <h3 className="text-2xl font-bold text-slate-900">Resumo Profissional</h3>
+                </div>
+                <p className="text-slate-600 leading-relaxed text-justify">
+                  Possui graduação em Direito pela Universidade Federal do Rio Grande (2016). Tem
+                  experiência na área de Direito, com ênfase em Direito Previdenciário, atuando
+                  principalmente nos seguintes temas: direitos sociais, proibição do retrocesso
+                  social e direito à previdência.
+                </p>
+              </section>
 
-                <Separator className="bg-slate-100" />
+              <Separator className="bg-slate-100" />
 
-                {/* Additional Information / Publications */}
-                <section>
-                  <div className="flex items-center space-x-3 mb-6">
-                    <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
-                      <Award className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-slate-900">
-                      Atividades e Publicações
-                    </h3>
+              {/* Formação Acadêmica */}
+              <section>
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="p-2 bg-amber-50 text-amber-600 rounded-lg">
+                    <GraduationCap className="h-6 w-6" />
                   </div>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <BookOpen className="h-5 w-5 text-slate-400 mr-3 mt-0.5 flex-shrink-0" />
+                  <h3 className="text-2xl font-bold text-slate-900">Formação Acadêmica</h3>
+                </div>
+                <div className="border-l-2 border-slate-100 ml-4 pl-6 pt-2">
+                  {academicData.map((item, idx) => (
+                    <TimelineItem
+                      key={idx}
+                      title={item.title}
+                      subtitle={item.inst}
+                      period={item.period}
+                      desc={item.desc}
+                      isLast={idx === academicData.length - 1}
+                    />
+                  ))}
+                </div>
+              </section>
+
+              <Separator className="bg-slate-100" />
+
+              {/* Experiência Profissional */}
+              <section>
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="p-2 bg-amber-50 text-amber-600 rounded-lg">
+                    <Briefcase className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Experiência Profissional</h3>
+                </div>
+                <div className="border-l-2 border-slate-100 ml-4 pl-6 pt-2">
+                  {expData.map((item, idx) => (
+                    <TimelineItem
+                      key={idx}
+                      title={item.title}
+                      subtitle={item.org}
+                      period={item.period}
+                      desc={item.desc}
+                      isLast={idx === expData.length - 1}
+                    />
+                  ))}
+                </div>
+              </section>
+
+              <Separator className="bg-slate-100" />
+
+              {/* Projetos de Pesquisa */}
+              <section>
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="p-2 bg-amber-50 text-amber-600 rounded-lg">
+                    <Microscope className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Projetos de Pesquisa</h3>
+                </div>
+                <ul className="space-y-4">
+                  {projData.map((proj, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <div className="w-2 h-2 mt-2 mr-3 rounded-full bg-amber-500 flex-shrink-0" />
                       <div>
-                        <p className="text-slate-700 font-medium">
-                          O impacto do BPC na erradicação da pobreza extrema
-                        </p>
-                        <p className="text-sm text-slate-500">
-                          Revista de Direito Previdenciário, 2022
-                        </p>
+                        <p className="text-slate-800 font-bold">{proj.title}</p>
+                        <p className="text-sm text-slate-500 font-semibold">{proj.period}</p>
                       </div>
                     </li>
-                    <li className="flex items-start">
-                      <BookOpen className="h-5 w-5 text-slate-400 mr-3 mt-0.5 flex-shrink-0" />
+                  ))}
+                </ul>
+              </section>
+
+              <Separator className="bg-slate-100" />
+
+              {/* Publicações */}
+              <section>
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="p-2 bg-amber-50 text-amber-600 rounded-lg">
+                    <BookOpen className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Publicações e Produções</h3>
+                </div>
+                <ul className="space-y-4">
+                  {pubData.map((pub, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start bg-slate-50/50 p-4 rounded-xl border border-slate-100 hover:border-amber-200 transition-colors"
+                    >
+                      <Award className="h-5 w-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="text-slate-700 font-medium">
-                          Critérios de avaliação biopsicossocial para concessão de LOAS
-                        </p>
-                        <p className="text-sm text-slate-500">
-                          Anais do Congresso Nacional de Direito Previdenciário, 2021
-                        </p>
+                        <p className="text-slate-800 font-semibold leading-snug">{pub.title}</p>
+                        <div className="flex items-center gap-2 mt-2">
+                          <Badge
+                            variant="secondary"
+                            className="bg-white border-slate-200 text-xs font-bold text-slate-600"
+                          >
+                            {pub.type}
+                          </Badge>
+                          {pub.year && (
+                            <span className="text-xs font-bold text-slate-400">{pub.year}</span>
+                          )}
+                        </div>
                       </div>
                     </li>
-                  </ul>
-                </section>
-              </div>
+                  ))}
+                </ul>
+              </section>
             </div>
           </div>
         </Card>
