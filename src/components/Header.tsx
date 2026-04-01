@@ -34,7 +34,7 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300',
-        isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-sm py-2' : 'bg-background py-4',
+        isScrolled ? 'bg-slate-950/95 backdrop-blur-md shadow-md py-2' : 'bg-slate-950 py-4',
       )}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -44,8 +44,8 @@ export function Header() {
               src={logoUrl}
               alt="Logotipo Lucas Morrone Advocacia Previdenciária e Assistencial"
               className={cn(
-                'transition-all duration-300 object-contain',
-                isScrolled ? 'h-14' : 'h-20',
+                'transition-all duration-300 object-contain mix-blend-screen',
+                isScrolled ? 'h-16' : 'h-24',
               )}
             />
           </Link>
@@ -54,30 +54,30 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('servicos')}
-              className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
+              className="text-slate-100 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Serviços
             </button>
             <Link
               to="/curriculo"
-              className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
+              className="text-slate-100 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Currículo
             </Link>
             <button
               onClick={() => scrollToSection('localizacao')}
-              className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
+              className="text-slate-100 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Localização
             </button>
             <button
               onClick={() => scrollToSection('faq')}
-              className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold"
+              className="text-slate-100 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider font-bold"
             >
               Dúvidas
             </button>
             <div className="relative group">
-              <button className="text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold flex items-center gap-1">
+              <button className="text-slate-100 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider font-bold flex items-center gap-1">
                 Guias
                 <svg
                   width="12"
@@ -94,28 +94,28 @@ export function Header() {
                 </svg>
               </button>
               <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-52 z-50">
-                <div className="bg-background border border-border shadow-lg rounded-md py-2 flex flex-col">
+                <div className="bg-slate-900 border border-slate-800 shadow-xl rounded-md py-2 flex flex-col">
                   <Link
                     to="/guia-bpc"
-                    className="px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide"
+                    className="px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-bold tracking-wide"
                   >
                     Guia BPC/LOAS
                   </Link>
                   <Link
                     to="/guia-auxilio-acidente"
-                    className="px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide"
+                    className="px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-bold tracking-wide"
                   >
                     Auxílio-Acidente
                   </Link>
                   <Link
                     to="/guia-pensao-morte"
-                    className="px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide"
+                    className="px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-bold tracking-wide"
                   >
                     Pensão por Morte
                   </Link>
                   <Link
                     to="/guia-aposentadorias"
-                    className="px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide"
+                    className="px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-bold tracking-wide"
                   >
                     Aposentadorias
                   </Link>
@@ -123,7 +123,7 @@ export function Header() {
               </div>
             </div>
             <Button
-              className="bg-gold hover:bg-gold/90 text-black rounded-none px-6 uppercase text-sm font-bold tracking-wider shadow-sm"
+              className="bg-amber-500 hover:bg-amber-600 text-black rounded-none px-6 uppercase text-sm font-bold tracking-wider shadow-sm"
               onClick={() =>
                 window.open(
                   'https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).',
@@ -137,7 +137,7 @@ export function Header() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -147,67 +147,67 @@ export function Header() {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-background border-t border-border shadow-xl py-4 flex flex-col items-center gap-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-slate-950 border-t border-slate-800 shadow-xl py-4 flex flex-col items-center gap-4 z-50">
           <button
             onClick={() => scrollToSection('servicos')}
-            className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
+            className="text-slate-100 hover:text-amber-400 text-lg py-2 font-medium"
           >
             Serviços
           </button>
           <Link
             to="/curriculo"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
+            className="text-slate-100 hover:text-amber-400 text-lg py-2 font-medium"
           >
             Currículo
           </Link>
           <button
             onClick={() => scrollToSection('localizacao')}
-            className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
+            className="text-slate-100 hover:text-amber-400 text-lg py-2 font-medium"
           >
             Localização
           </button>
           <button
             onClick={() => scrollToSection('faq')}
-            className="text-foreground hover:text-gold-dark text-lg py-2 font-medium"
+            className="text-slate-100 hover:text-amber-400 text-lg py-2 font-medium"
           >
             Dúvidas
           </button>
-          <div className="flex flex-col items-center w-full border-y border-border py-4 my-2 bg-slate-50/50">
-            <span className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-2">
+          <div className="flex flex-col items-center w-full border-y border-slate-800 py-4 my-2 bg-slate-900/50">
+            <span className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">
               Guias Práticos
             </span>
             <Link
               to="/guia-bpc"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-foreground hover:text-gold-dark text-base py-2 font-medium"
+              className="text-slate-100 hover:text-amber-400 text-base py-2 font-medium"
             >
               Guia BPC/LOAS
             </Link>
             <Link
               to="/guia-auxilio-acidente"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-foreground hover:text-gold-dark text-base py-2 font-medium"
+              className="text-slate-100 hover:text-amber-400 text-base py-2 font-medium"
             >
               Guia Auxílio-Acidente
             </Link>
             <Link
               to="/guia-pensao-morte"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-foreground hover:text-gold-dark text-base py-2 font-medium"
+              className="text-slate-100 hover:text-amber-400 text-base py-2 font-medium"
             >
               Guia Pensão por Morte
             </Link>
             <Link
               to="/guia-aposentadorias"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-foreground hover:text-gold-dark text-base py-2 font-medium"
+              className="text-slate-100 hover:text-amber-400 text-base py-2 font-medium"
             >
               Guia de Aposentadorias
             </Link>
           </div>
           <Button
-            className="bg-gold hover:bg-gold/90 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm"
+            className="bg-amber-500 hover:bg-amber-600 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm"
             onClick={() =>
               window.open(
                 'https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).',

@@ -121,8 +121,8 @@ export default function Curriculo() {
 
         <Card className="overflow-hidden border-none shadow-xl rounded-2xl flex flex-col md:flex-row">
           {/* Sidebar Profile */}
-          <div className="md:w-[35%] bg-slate-50 border-r border-slate-100 p-8 flex flex-col items-center justify-start relative">
-            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-200/50 to-transparent" />
+          <div className="md:w-[35%] bg-sky-50 border-r border-sky-100 p-8 flex flex-col items-center justify-start relative">
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-sky-200/50 to-transparent" />
             <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-amber-500 shadow-xl mb-6 flex-shrink-0 z-10 bg-white">
               <img
                 src={profilePhoto}

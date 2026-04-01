@@ -19825,7 +19825,7 @@ function Header$1() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
 		"data-uid": "src/components/Header.tsx:34:5",
 		"data-prohibitions": "[editContent]",
-		className: cn$1("fixed top-0 w-full z-50 transition-all duration-300", isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm py-2" : "bg-background py-4"),
+		className: cn$1("fixed top-0 w-full z-50 transition-all duration-300", isScrolled ? "bg-slate-950/95 backdrop-blur-md shadow-md py-2" : "bg-slate-950 py-4"),
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			"data-uid": "src/components/Header.tsx:40:7",
 			"data-prohibitions": "[editContent]",
@@ -19845,7 +19845,7 @@ function Header$1() {
 							"data-prohibitions": "[editContent]",
 							src: editedimage_1773665784218_56dfb_default,
 							alt: "Logotipo Lucas Morrone Advocacia Previdenciária e Assistencial",
-							className: cn$1("transition-all duration-300 object-contain", isScrolled ? "h-14" : "h-20")
+							className: cn$1("transition-all duration-300 object-contain mix-blend-screen", isScrolled ? "h-16" : "h-24")
 						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
@@ -19857,28 +19857,28 @@ function Header$1() {
 								"data-uid": "src/components/Header.tsx:55:13",
 								"data-prohibitions": "[]",
 								onClick: () => scrollToSection("servicos"),
-								className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold",
+								className: "text-slate-100 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider font-bold",
 								children: "Serviços"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, {
 								"data-uid": "src/components/Header.tsx:61:13",
 								"data-prohibitions": "[]",
 								to: "/curriculo",
-								className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold",
+								className: "text-slate-100 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider font-bold",
 								children: "Currículo"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								"data-uid": "src/components/Header.tsx:67:13",
 								"data-prohibitions": "[]",
 								onClick: () => scrollToSection("localizacao"),
-								className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold",
+								className: "text-slate-100 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider font-bold",
 								children: "Localização"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								"data-uid": "src/components/Header.tsx:73:13",
 								"data-prohibitions": "[]",
 								onClick: () => scrollToSection("faq"),
-								className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold",
+								className: "text-slate-100 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider font-bold",
 								children: "Dúvidas"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -19888,7 +19888,7 @@ function Header$1() {
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									"data-uid": "src/components/Header.tsx:80:15",
 									"data-prohibitions": "[]",
-									className: "text-foreground hover:text-gold-dark transition-colors text-sm uppercase tracking-wider font-bold flex items-center gap-1",
+									className: "text-slate-100 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider font-bold flex items-center gap-1",
 									children: ["Guias", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
 										"data-uid": "src/components/Header.tsx:82:17",
 										"data-prohibitions": "[]",
@@ -19914,34 +19914,34 @@ function Header$1() {
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										"data-uid": "src/components/Header.tsx:97:17",
 										"data-prohibitions": "[]",
-										className: "bg-background border border-border shadow-lg rounded-md py-2 flex flex-col",
+										className: "bg-slate-900 border border-slate-800 shadow-xl rounded-md py-2 flex flex-col",
 										children: [
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, {
 												"data-uid": "src/components/Header.tsx:98:19",
 												"data-prohibitions": "[]",
 												to: "/guia-bpc",
-												className: "px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide",
+												className: "px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-bold tracking-wide",
 												children: "Guia BPC/LOAS"
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, {
 												"data-uid": "src/components/Header.tsx:104:19",
 												"data-prohibitions": "[]",
 												to: "/guia-auxilio-acidente",
-												className: "px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide",
+												className: "px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-bold tracking-wide",
 												children: "Auxílio-Acidente"
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, {
 												"data-uid": "src/components/Header.tsx:110:19",
 												"data-prohibitions": "[]",
 												to: "/guia-pensao-morte",
-												className: "px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide",
+												className: "px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-bold tracking-wide",
 												children: "Pensão por Morte"
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, {
 												"data-uid": "src/components/Header.tsx:116:19",
 												"data-prohibitions": "[]",
 												to: "/guia-aposentadorias",
-												className: "px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-gold-dark font-bold tracking-wide",
+												className: "px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-bold tracking-wide",
 												children: "Aposentadorias"
 											})
 										]
@@ -19951,7 +19951,7 @@ function Header$1() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 								"data-uid": "src/components/Header.tsx:125:13",
 								"data-prohibitions": "[]",
-								className: "bg-gold hover:bg-gold/90 text-black rounded-none px-6 uppercase text-sm font-bold tracking-wider shadow-sm",
+								className: "bg-amber-500 hover:bg-amber-600 text-black rounded-none px-6 uppercase text-sm font-bold tracking-wider shadow-sm",
 								onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).", "_blank"),
 								children: "Fale Conosco"
 							})
@@ -19960,7 +19960,7 @@ function Header$1() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 						"data-uid": "src/components/Header.tsx:139:11",
 						"data-prohibitions": "[editContent]",
-						className: "md:hidden text-foreground",
+						className: "md:hidden text-white",
 						onClick: () => setIsMobileMenuOpen(!isMobileMenuOpen),
 						children: isMobileMenuOpen ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, {
 							"data-uid": "src/components/Header.tsx:143:33",
@@ -19977,13 +19977,13 @@ function Header$1() {
 		}), isMobileMenuOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/Header.tsx:150:9",
 			"data-prohibitions": "[]",
-			className: "md:hidden absolute top-full left-0 w-full bg-background border-t border-border shadow-xl py-4 flex flex-col items-center gap-4",
+			className: "md:hidden absolute top-full left-0 w-full bg-slate-950 border-t border-slate-800 shadow-xl py-4 flex flex-col items-center gap-4 z-50",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 					"data-uid": "src/components/Header.tsx:151:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("servicos"),
-					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
+					className: "text-slate-100 hover:text-amber-400 text-lg py-2 font-medium",
 					children: "Serviços"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, {
@@ -19991,32 +19991,32 @@ function Header$1() {
 					"data-prohibitions": "[]",
 					to: "/curriculo",
 					onClick: () => setIsMobileMenuOpen(false),
-					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
+					className: "text-slate-100 hover:text-amber-400 text-lg py-2 font-medium",
 					children: "Currículo"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 					"data-uid": "src/components/Header.tsx:164:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("localizacao"),
-					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
+					className: "text-slate-100 hover:text-amber-400 text-lg py-2 font-medium",
 					children: "Localização"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 					"data-uid": "src/components/Header.tsx:170:11",
 					"data-prohibitions": "[]",
 					onClick: () => scrollToSection("faq"),
-					className: "text-foreground hover:text-gold-dark text-lg py-2 font-medium",
+					className: "text-slate-100 hover:text-amber-400 text-lg py-2 font-medium",
 					children: "Dúvidas"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					"data-uid": "src/components/Header.tsx:176:11",
 					"data-prohibitions": "[]",
-					className: "flex flex-col items-center w-full border-y border-border py-4 my-2 bg-slate-50/50",
+					className: "flex flex-col items-center w-full border-y border-slate-800 py-4 my-2 bg-slate-900/50",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							"data-uid": "src/components/Header.tsx:177:13",
 							"data-prohibitions": "[]",
-							className: "text-sm font-bold text-muted-foreground uppercase tracking-wider mb-2",
+							className: "text-sm font-bold text-slate-400 uppercase tracking-wider mb-2",
 							children: "Guias Práticos"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, {
@@ -20024,7 +20024,7 @@ function Header$1() {
 							"data-prohibitions": "[]",
 							to: "/guia-bpc",
 							onClick: () => setIsMobileMenuOpen(false),
-							className: "text-foreground hover:text-gold-dark text-base py-2 font-medium",
+							className: "text-slate-100 hover:text-amber-400 text-base py-2 font-medium",
 							children: "Guia BPC/LOAS"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, {
@@ -20032,7 +20032,7 @@ function Header$1() {
 							"data-prohibitions": "[]",
 							to: "/guia-auxilio-acidente",
 							onClick: () => setIsMobileMenuOpen(false),
-							className: "text-foreground hover:text-gold-dark text-base py-2 font-medium",
+							className: "text-slate-100 hover:text-amber-400 text-base py-2 font-medium",
 							children: "Guia Auxílio-Acidente"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, {
@@ -20040,7 +20040,7 @@ function Header$1() {
 							"data-prohibitions": "[]",
 							to: "/guia-pensao-morte",
 							onClick: () => setIsMobileMenuOpen(false),
-							className: "text-foreground hover:text-gold-dark text-base py-2 font-medium",
+							className: "text-slate-100 hover:text-amber-400 text-base py-2 font-medium",
 							children: "Guia Pensão por Morte"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, {
@@ -20048,7 +20048,7 @@ function Header$1() {
 							"data-prohibitions": "[]",
 							to: "/guia-aposentadorias",
 							onClick: () => setIsMobileMenuOpen(false),
-							className: "text-foreground hover:text-gold-dark text-base py-2 font-medium",
+							className: "text-slate-100 hover:text-amber-400 text-base py-2 font-medium",
 							children: "Guia de Aposentadorias"
 						})
 					]
@@ -20056,7 +20056,7 @@ function Header$1() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 					"data-uid": "src/components/Header.tsx:209:11",
 					"data-prohibitions": "[]",
-					className: "bg-gold hover:bg-gold/90 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm",
+					className: "bg-amber-500 hover:bg-amber-600 text-black w-[90%] mt-2 rounded-none font-bold uppercase tracking-wider shadow-sm",
 					onClick: () => window.open("https://wa.me/5553981063023?text=Olá,%20Entro%20em%20contato%20para%20um%20auxílio%20jurídico%20(INSS).", "_blank"),
 					children: "Fale com um Advogado"
 				})
@@ -20070,7 +20070,7 @@ function Footer() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
 		"data-uid": "src/components/Footer.tsx:7:5",
 		"data-prohibitions": "[editContent]",
-		className: "bg-card text-muted-foreground py-16 border-t border-border",
+		className: "bg-slate-950 text-slate-400 py-16 border-t border-slate-900",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/Footer.tsx:8:7",
 			"data-prohibitions": "[editContent]",
@@ -20089,11 +20089,11 @@ function Footer() {
 							"data-prohibitions": "[editContent]",
 							src: editedimage_1773665784218_56dfb_default,
 							alt: "Logotipo Lucas Morrone Advocacia Especialista em INSS",
-							className: "h-28 object-contain mb-6"
+							className: "h-32 object-contain mb-6 mix-blend-screen"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							"data-uid": "src/components/Footer.tsx:16:13",
 							"data-prohibitions": "[]",
-							className: "text-sm text-center md:text-left text-muted-foreground font-medium",
+							className: "text-sm text-center md:text-left text-slate-400 font-medium",
 							children: "Especialistas em Direito Previdenciário e concessão do benefício BPC/LOAS. Garantindo seus direitos com excelência e agilidade."
 						})]
 					}),
@@ -20103,7 +20103,7 @@ function Footer() {
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 							"data-uid": "src/components/Footer.tsx:23:13",
 							"data-prohibitions": "[]",
-							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
+							className: "text-slate-100 text-lg font-bold mb-6 uppercase tracking-wider",
 							children: "Contato"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 							"data-uid": "src/components/Footer.tsx:26:13",
@@ -20117,22 +20117,22 @@ function Footer() {
 									"data-uid": "src/components/Footer.tsx:28:17",
 									"data-prohibitions": "[editContent]",
 									size: 18,
-									className: "text-gold-dark shrink-0 mt-1"
+									className: "text-amber-500 shrink-0 mt-1"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									"data-uid": "src/components/Footer.tsx:29:17",
 									"data-prohibitions": "[]",
-									className: "flex flex-col gap-1 text-muted-foreground font-medium",
+									className: "flex flex-col gap-1 text-slate-400 font-medium",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 										"data-uid": "src/components/Footer.tsx:30:19",
 										"data-prohibitions": "[]",
 										href: "https://wa.me/5553981063023",
-										className: "hover:text-gold-dark transition-colors",
+										className: "hover:text-amber-400 transition-colors",
 										children: "(53) 98106-3023"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 										"data-uid": "src/components/Footer.tsx:36:19",
 										"data-prohibitions": "[]",
 										href: "tel:+5553999998235",
-										className: "hover:text-gold-dark transition-colors",
+										className: "hover:text-amber-400 transition-colors",
 										children: "(53) 99999-8235"
 									})]
 								})]
@@ -20144,12 +20144,12 @@ function Footer() {
 									"data-uid": "src/components/Footer.tsx:42:17",
 									"data-prohibitions": "[editContent]",
 									size: 18,
-									className: "text-gold-dark shrink-0"
+									className: "text-amber-500 shrink-0"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									"data-uid": "src/components/Footer.tsx:43:17",
 									"data-prohibitions": "[]",
 									href: "mailto:contato@lucasmorrone.adv.br",
-									className: "text-muted-foreground font-medium hover:text-gold-dark transition-colors",
+									className: "text-slate-400 font-medium hover:text-amber-400 transition-colors",
 									children: "contato@lucasmorrone.adv.br"
 								})]
 							})]
@@ -20161,7 +20161,7 @@ function Footer() {
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 							"data-uid": "src/components/Footer.tsx:54:13",
 							"data-prohibitions": "[]",
-							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
+							className: "text-slate-100 text-lg font-bold mb-6 uppercase tracking-wider",
 							children: "Endereço"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 							"data-uid": "src/components/Footer.tsx:57:13",
@@ -20170,12 +20170,12 @@ function Footer() {
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 								"data-uid": "src/components/Footer.tsx:58:15",
 								"data-prohibitions": "[]",
-								className: "flex items-start gap-3 text-muted-foreground font-medium",
+								className: "flex items-start gap-3 text-slate-400 font-medium",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
 									"data-uid": "src/components/Footer.tsx:59:17",
 									"data-prohibitions": "[editContent]",
 									size: 18,
-									className: "text-gold-dark shrink-0 mt-1"
+									className: "text-amber-500 shrink-0 mt-1"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 									"data-uid": "src/components/Footer.tsx:60:17",
 									"data-prohibitions": "[]",
@@ -20202,12 +20202,12 @@ function Footer() {
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 							"data-uid": "src/components/Footer.tsx:72:13",
 							"data-prohibitions": "[]",
-							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
+							className: "text-slate-100 text-lg font-bold mb-6 uppercase tracking-wider",
 							children: "Links & Guias"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 							"data-uid": "src/components/Footer.tsx:75:13",
 							"data-prohibitions": "[]",
-							className: "space-y-4 text-muted-foreground font-medium flex flex-col items-start",
+							className: "space-y-4 text-slate-400 font-medium flex flex-col items-start",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
 									"data-uid": "src/components/Footer.tsx:76:15",
@@ -20216,7 +20216,7 @@ function Footer() {
 										"data-uid": "src/components/Footer.tsx:77:17",
 										"data-prohibitions": "[]",
 										to: "/curriculo",
-										className: "hover:text-gold-dark transition-colors font-bold text-foreground",
+										className: "hover:text-amber-400 transition-colors font-bold text-slate-100",
 										children: "Currículo do Advogado"
 									})
 								}),
@@ -20227,7 +20227,7 @@ function Footer() {
 										"data-uid": "src/components/Footer.tsx:85:17",
 										"data-prohibitions": "[]",
 										to: "/guia-bpc",
-										className: "hover:text-gold-dark transition-colors",
+										className: "hover:text-amber-400 transition-colors",
 										children: "Guia BPC/LOAS"
 									})
 								}),
@@ -20238,7 +20238,7 @@ function Footer() {
 										"data-uid": "src/components/Footer.tsx:90:17",
 										"data-prohibitions": "[]",
 										to: "/guia-auxilio-acidente",
-										className: "hover:text-gold-dark transition-colors",
+										className: "hover:text-amber-400 transition-colors",
 										children: "Guia Auxílio-Acidente"
 									})
 								}),
@@ -20249,7 +20249,7 @@ function Footer() {
 										"data-uid": "src/components/Footer.tsx:98:17",
 										"data-prohibitions": "[]",
 										to: "/guia-pensao-morte",
-										className: "hover:text-gold-dark transition-colors",
+										className: "hover:text-amber-400 transition-colors",
 										children: "Guia Pensão por Morte"
 									})
 								}),
@@ -20260,7 +20260,7 @@ function Footer() {
 										"data-uid": "src/components/Footer.tsx:103:17",
 										"data-prohibitions": "[]",
 										to: "/guia-aposentadorias",
-										className: "hover:text-gold-dark transition-colors",
+										className: "hover:text-amber-400 transition-colors",
 										children: "Guia de Aposentadorias"
 									})
 								})
@@ -20273,7 +20273,7 @@ function Footer() {
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 							"data-uid": "src/components/Footer.tsx:111:13",
 							"data-prohibitions": "[]",
-							className: "text-foreground text-lg font-bold mb-6 uppercase tracking-wider",
+							className: "text-slate-100 text-lg font-bold mb-6 uppercase tracking-wider",
 							children: "Redes Sociais"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							"data-uid": "src/components/Footer.tsx:114:13",
@@ -20285,13 +20285,13 @@ function Footer() {
 								href: "https://www.instagram.com/adv.lucasmorrone",
 								target: "_blank",
 								rel: "noopener noreferrer",
-								className: "w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-gold transition-colors group border border-border",
+								className: "w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-amber-500 transition-colors group border border-slate-800 hover:border-amber-500",
 								"aria-label": "Instagram de Lucas Morrone",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Instagram, {
 									"data-uid": "src/components/Footer.tsx:122:17",
 									"data-prohibitions": "[editContent]",
 									size: 20,
-									className: "text-foreground group-hover:text-black"
+									className: "text-slate-300 group-hover:text-black"
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 								"data-uid": "src/components/Footer.tsx:124:15",
@@ -20299,13 +20299,13 @@ function Footer() {
 								href: "https://www.facebook.com/p/Lucas-Morrone-Advocacia-100042065540026/",
 								target: "_blank",
 								rel: "noopener noreferrer",
-								className: "w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-gold transition-colors group border border-border",
+								className: "w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-amber-500 transition-colors group border border-slate-800 hover:border-amber-500",
 								"aria-label": "Facebook de Lucas Morrone",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, {
 									"data-uid": "src/components/Footer.tsx:131:17",
 									"data-prohibitions": "[editContent]",
 									size: 20,
-									className: "text-foreground group-hover:text-black"
+									className: "text-slate-300 group-hover:text-black"
 								})
 							})]
 						})]
@@ -20314,7 +20314,7 @@ function Footer() {
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				"data-uid": "src/components/Footer.tsx:137:9",
 				"data-prohibitions": "[editContent]",
-				className: "border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground font-medium flex flex-col md:flex-row justify-between items-center gap-4",
+				className: "border-t border-slate-900 mt-12 pt-8 text-center text-sm text-slate-500 font-medium flex flex-col md:flex-row justify-between items-center gap-4",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					"data-uid": "src/components/Footer.tsx:138:11",
 					"data-prohibitions": "[editContent]",
@@ -27416,12 +27416,12 @@ function Curriculo() {
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					"data-uid": "src/pages/Curriculo.tsx:124:11",
 					"data-prohibitions": "[]",
-					className: "md:w-[35%] bg-slate-50 border-r border-slate-100 p-8 flex flex-col items-center justify-start relative",
+					className: "md:w-[35%] bg-sky-50 border-r border-sky-100 p-8 flex flex-col items-center justify-start relative",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							"data-uid": "src/pages/Curriculo.tsx:125:13",
 							"data-prohibitions": "[editContent]",
-							className: "absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-200/50 to-transparent"
+							className: "absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-sky-200/50 to-transparent"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							"data-uid": "src/pages/Curriculo.tsx:126:13",
@@ -29644,4 +29644,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-D4dKauxb.js.map
+//# sourceMappingURL=index-DQZrh4K9.js.map

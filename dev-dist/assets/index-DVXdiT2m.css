@@ -934,14 +934,8 @@ video {
 .h-2\.5 {
   height: 0.625rem;
 }
-.h-20 {
-  height: 5rem;
-}
 .h-24 {
   height: 6rem;
-}
-.h-28 {
-  height: 7rem;
 }
 .h-3 {
   height: 0.75rem;
@@ -1655,6 +1649,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(220 38 38 / var(--tw-border-opacity, 1));
 }
+.border-sky-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(224 242 254 / var(--tw-border-opacity, 1));
+}
 .border-slate-100 {
   --tw-border-opacity: 1;
   border-color: rgb(241 245 249 / var(--tw-border-opacity, 1));
@@ -1670,6 +1668,10 @@ video {
 .border-slate-800 {
   --tw-border-opacity: 1;
   border-color: rgb(30 41 59 / var(--tw-border-opacity, 1));
+}
+.border-slate-900 {
+  --tw-border-opacity: 1;
+  border-color: rgb(15 23 42 / var(--tw-border-opacity, 1));
 }
 .border-transparent {
   border-color: transparent;
@@ -1771,6 +1773,10 @@ video {
 .bg-secondary {
   background-color: hsl(var(--secondary));
 }
+.bg-sky-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 249 255 / var(--tw-bg-opacity, 1));
+}
 .bg-slate-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
@@ -1792,6 +1798,16 @@ video {
 .bg-slate-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
+}
+.bg-slate-900\/50 {
+  background-color: rgb(15 23 42 / 0.5);
+}
+.bg-slate-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 6 23 / var(--tw-bg-opacity, 1));
+}
+.bg-slate-950\/95 {
+  background-color: rgb(2 6 23 / 0.95);
 }
 .bg-transparent {
   background-color: transparent;
@@ -1842,14 +1858,14 @@ video {
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+.from-sky-200\/50 {
+  --tw-gradient-from: rgb(186 230 253 / 0.5) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(186 230 253 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 .from-slate-100 {
   --tw-gradient-from: #f1f5f9 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(241 245 249 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.from-slate-200\/50 {
-  --tw-gradient-from: rgb(226 232 240 / 0.5) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(226 232 240 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .from-slate-800 {
@@ -2333,6 +2349,14 @@ video {
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
 }
+.text-slate-100 {
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity, 1));
+}
+.text-slate-200 {
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity, 1));
+}
 .text-slate-300 {
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity, 1));
@@ -2403,6 +2427,9 @@ video {
 }
 .mix-blend-multiply {
   mix-blend-mode: multiply;
+}
+.mix-blend-screen {
+  mix-blend-mode: screen;
 }
 .shadow-2xl {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
@@ -2770,6 +2797,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(252 211 77 / var(--tw-border-opacity, 1));
 }
+.hover\:border-amber-500:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(245 158 11 / var(--tw-border-opacity, 1));
+}
 .hover\:border-amber-700:hover {
   --tw-border-opacity: 1;
   border-color: rgb(180 83 9 / var(--tw-border-opacity, 1));
@@ -2794,6 +2825,14 @@ video {
 .hover\:bg-amber-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(253 230 138 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-amber-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 158 11 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-amber-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 119 6 / var(--tw-bg-opacity, 1));
 }
 .hover\:bg-destructive\/80:hover {
   background-color: hsl(var(--destructive) / 0.8);
@@ -2840,11 +2879,19 @@ video {
 .hover\:bg-slate-50\/50:hover {
   background-color: rgb(248 250 252 / 0.5);
 }
+.hover\:bg-slate-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+}
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
 .hover\:text-accent-foreground:hover {
   color: hsl(var(--accent-foreground));
+}
+.hover\:text-amber-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity, 1));
 }
 .hover\:text-amber-700:hover {
   --tw-text-opacity: 1;
