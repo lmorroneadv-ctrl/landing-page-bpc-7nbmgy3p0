@@ -1,30 +1,3 @@
-import { Card, CardContent } from '@/components/ui/card'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion'
-import { Star, Quote } from 'lucide-react'
-
-const testimonials = [
-  {
-    name: 'Maria C. Santos',
-    role: 'Aposentadoria Concedida',
-    text: 'A clareza técnica e a dedicação do Dr. Lucas foram fundamentais para a concessão da minha aposentadoria. O processo foi conduzido de forma ética e muito transparente.',
-  },
-  {
-    name: 'João R. Oliveira',
-    role: 'BPC/LOAS',
-    text: 'Depois de ter o benefício negado duas vezes pelo INSS, procurei o escritório. A organização da documentação e a orientação precisa fizeram toda a diferença para o meu filho.',
-  },
-  {
-    name: 'Antônio M. Silva',
-    role: 'Aposentadoria por Tempo',
-    text: 'Profissionalismo exemplar. Fizeram um planejamento previdenciário completo que me mostrou exatamente qual seria o melhor momento para dar entrada no meu pedido.',
-  },
-]
-
 export function SocialProof() {
   return (
     <section className="py-20 bg-background">
@@ -39,57 +12,11 @@ export function SocialProof() {
           </p>
         </div>
 
-        <div className="hidden md:grid grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card border-border shadow-soft relative mt-6">
-              <div className="absolute -top-6 left-6 bg-gold rounded-full p-3 shadow-md">
-                <Quote className="h-6 w-6 text-black" />
-              </div>
-              <CardContent className="pt-10 pb-8 px-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-gold fill-gold" />
-                  ))}
-                </div>
-                <p className="text-foreground font-medium italic mb-6 leading-relaxed">
-                  "{testimonial.text}"
-                </p>
-                <div>
-                  <h4 className="font-bold text-foreground text-lg">{testimonial.name}</h4>
-                  <p className="text-gold-dark font-medium text-sm">{testimonial.role}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="md:hidden">
-          <Accordion type="single" collapsible className="w-full space-y-4">
-            {testimonials.map((testimonial, index) => (
-              <AccordionItem
-                key={index}
-                value={`testimonial-${index}`}
-                className="bg-card border border-border rounded-lg px-6 data-[state=open]:border-gold shadow-sm transition-colors"
-              >
-                <AccordionTrigger className="text-left text-lg font-semibold hover:text-gold-dark hover:no-underline py-4 text-foreground">
-                  <div className="flex flex-col items-start gap-1">
-                    <span>{testimonial.name}</span>
-                    <span className="text-sm font-medium text-gold-dark">{testimonial.role}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="pb-6 pt-2">
-                  <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-gold fill-gold" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground font-medium italic leading-relaxed text-base">
-                    "{testimonial.text}"
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        <div className="w-full flex justify-center min-h-[400px]">
+          <div
+            className="elfsight-app-ef3eb5e5-6b17-435e-a4fd-50805347a54f w-full"
+            data-elfsight-app-lazy
+          />
         </div>
       </div>
     </section>

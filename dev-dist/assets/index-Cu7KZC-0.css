@@ -646,9 +646,6 @@ video {
 .-top-12 {
   top: -3rem;
 }
-.-top-6 {
-  top: -1.5rem;
-}
 .bottom-0 {
   bottom: 0px;
 }
@@ -1947,9 +1944,6 @@ video {
 .fill-current {
   fill: currentColor;
 }
-.fill-gold {
-  fill: #D4AF37;
-}
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2126,9 +2120,6 @@ video {
 }
 .pt-0 {
   padding-top: 0px;
-}
-.pt-10 {
-  padding-top: 2.5rem;
 }
 .pt-2 {
   padding-top: 0.5rem;

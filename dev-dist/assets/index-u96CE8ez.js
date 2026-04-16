@@ -17760,13 +17760,6 @@ var Phone = createLucideIcon("phone", [["path", {
 	d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
 	key: "9njp5v"
 }]]);
-var Quote = createLucideIcon("quote", [["path", {
-	d: "M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z",
-	key: "rib7q0"
-}], ["path", {
-	d: "M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z",
-	key: "1ymkrd"
-}]]);
 var Scale = createLucideIcon("scale", [
 	["path", {
 		d: "M12 3v18",
@@ -17809,10 +17802,6 @@ var ShieldCheck = createLucideIcon("shield-check", [["path", {
 }], ["path", {
 	d: "m9 12 2 2 4-4",
 	key: "dzmm74"
-}]]);
-var Star = createLucideIcon("star", [["path", {
-	d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
-	key: "r04s7s"
 }]]);
 var Stethoscope = createLucideIcon("stethoscope", [
 	["path", {
@@ -22145,177 +22134,46 @@ function Biography() {
 }
 //#endregion
 //#region src/components/sections/SocialProof.tsx
-var testimonials = [
-	{
-		name: "Maria C. Santos",
-		role: "Aposentadoria Concedida",
-		text: "A clareza técnica e a dedicação do Dr. Lucas foram fundamentais para a concessão da minha aposentadoria. O processo foi conduzido de forma ética e muito transparente."
-	},
-	{
-		name: "João R. Oliveira",
-		role: "BPC/LOAS",
-		text: "Depois de ter o benefício negado duas vezes pelo INSS, procurei o escritório. A organização da documentação e a orientação precisa fizeram toda a diferença para o meu filho."
-	},
-	{
-		name: "Antônio M. Silva",
-		role: "Aposentadoria por Tempo",
-		text: "Profissionalismo exemplar. Fizeram um planejamento previdenciário completo que me mostrou exatamente qual seria o melhor momento para dar entrada no meu pedido."
-	}
-];
 function SocialProof() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/SocialProof.tsx:30:5",
-		"data-prohibitions": "[editContent]",
+		"data-uid": "src/components/sections/SocialProof.tsx:3:5",
+		"data-prohibitions": "[]",
 		className: "py-20 bg-background",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/SocialProof.tsx:31:7",
-			"data-prohibitions": "[editContent]",
+			"data-uid": "src/components/sections/SocialProof.tsx:4:7",
+			"data-prohibitions": "[]",
 			className: "container mx-auto px-4 md:px-6",
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/SocialProof.tsx:32:9",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				"data-uid": "src/components/sections/SocialProof.tsx:5:9",
+				"data-prohibitions": "[]",
+				className: "text-center max-w-3xl mx-auto mb-16",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+					"data-uid": "src/components/sections/SocialProof.tsx:6:11",
 					"data-prohibitions": "[]",
-					className: "text-center max-w-3xl mx-auto mb-16",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						"data-uid": "src/components/sections/SocialProof.tsx:33:11",
+					className: "text-3xl md:text-4xl font-bold mb-4 text-foreground",
+					children: ["O que dizem nossos ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						"data-uid": "src/components/sections/SocialProof.tsx:7:32",
 						"data-prohibitions": "[]",
-						className: "text-3xl md:text-4xl font-bold mb-4 text-foreground",
-						children: ["O que dizem nossos ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/SocialProof.tsx:34:32",
-							"data-prohibitions": "[]",
-							className: "text-gold-dark",
-							children: "Clientes"
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/SocialProof.tsx:36:11",
-						"data-prohibitions": "[]",
-						className: "text-muted-foreground text-lg font-medium",
-						children: "O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de seus direitos."
+						className: "text-gold-dark",
+						children: "Clientes"
 					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/SocialProof.tsx:42:9",
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					"data-uid": "src/components/sections/SocialProof.tsx:9:11",
+					"data-prohibitions": "[]",
+					className: "text-muted-foreground text-lg font-medium",
+					children: "O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de seus direitos."
+				})]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				"data-uid": "src/components/sections/SocialProof.tsx:15:9",
+				"data-prohibitions": "[]",
+				className: "w-full flex justify-center min-h-[400px]",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/SocialProof.tsx:16:11",
 					"data-prohibitions": "[editContent]",
-					className: "hidden md:grid grid-cols-3 gap-8",
-					children: testimonials.map((testimonial, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-						"data-uid": "src/components/sections/SocialProof.tsx:44:13",
-						"data-prohibitions": "[editContent]",
-						className: "bg-card border-border shadow-soft relative mt-6",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							"data-uid": "src/components/sections/SocialProof.tsx:45:15",
-							"data-prohibitions": "[]",
-							className: "absolute -top-6 left-6 bg-gold rounded-full p-3 shadow-md",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Quote, {
-								"data-uid": "src/components/sections/SocialProof.tsx:46:17",
-								"data-prohibitions": "[editContent]",
-								className: "h-6 w-6 text-black"
-							})
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-							"data-uid": "src/components/sections/SocialProof.tsx:48:15",
-							"data-prohibitions": "[editContent]",
-							className: "pt-10 pb-8 px-6",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/SocialProof.tsx:49:17",
-									"data-prohibitions": "[editContent]",
-									className: "flex mb-4",
-									children: [...Array(5)].map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, {
-										"data-uid": "src/components/sections/SocialProof.tsx:51:21",
-										"data-prohibitions": "[editContent]",
-										className: "h-4 w-4 text-gold fill-gold"
-									}, i))
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-									"data-uid": "src/components/sections/SocialProof.tsx:54:17",
-									"data-prohibitions": "[editContent]",
-									className: "text-foreground font-medium italic mb-6 leading-relaxed",
-									children: [
-										"\"",
-										testimonial.text,
-										"\""
-									]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/SocialProof.tsx:57:17",
-									"data-prohibitions": "[editContent]",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-										"data-uid": "src/components/sections/SocialProof.tsx:58:19",
-										"data-prohibitions": "[editContent]",
-										className: "font-bold text-foreground text-lg",
-										children: testimonial.name
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/sections/SocialProof.tsx:59:19",
-										"data-prohibitions": "[editContent]",
-										className: "text-gold-dark font-medium text-sm",
-										children: testimonial.role
-									})]
-								})
-							]
-						})]
-					}, index))
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/SocialProof.tsx:66:9",
-					"data-prohibitions": "[editContent]",
-					className: "md:hidden",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Accordion, {
-						"data-uid": "src/components/sections/SocialProof.tsx:67:11",
-						"data-prohibitions": "[editContent]",
-						type: "single",
-						collapsible: true,
-						className: "w-full space-y-4",
-						children: testimonials.map((testimonial, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionItem, {
-							"data-uid": "src/components/sections/SocialProof.tsx:69:15",
-							"data-prohibitions": "[editContent]",
-							value: `testimonial-${index}`,
-							className: "bg-card border border-border rounded-lg px-6 data-[state=open]:border-gold shadow-sm transition-colors",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AccordionTrigger, {
-								"data-uid": "src/components/sections/SocialProof.tsx:74:17",
-								"data-prohibitions": "[editContent]",
-								className: "text-left text-lg font-semibold hover:text-gold-dark hover:no-underline py-4 text-foreground",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/SocialProof.tsx:75:19",
-									"data-prohibitions": "[editContent]",
-									className: "flex flex-col items-start gap-1",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/sections/SocialProof.tsx:76:21",
-										"data-prohibitions": "[editContent]",
-										children: testimonial.name
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/sections/SocialProof.tsx:77:21",
-										"data-prohibitions": "[editContent]",
-										className: "text-sm font-medium text-gold-dark",
-										children: testimonial.role
-									})]
-								})
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AccordionContent, {
-								"data-uid": "src/components/sections/SocialProof.tsx:80:17",
-								"data-prohibitions": "[editContent]",
-								className: "pb-6 pt-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/SocialProof.tsx:81:19",
-									"data-prohibitions": "[editContent]",
-									className: "flex mb-4",
-									children: [...Array(5)].map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, {
-										"data-uid": "src/components/sections/SocialProof.tsx:83:23",
-										"data-prohibitions": "[editContent]",
-										className: "h-4 w-4 text-gold fill-gold"
-									}, i))
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-									"data-uid": "src/components/sections/SocialProof.tsx:86:19",
-									"data-prohibitions": "[editContent]",
-									className: "text-muted-foreground font-medium italic leading-relaxed text-base",
-									children: [
-										"\"",
-										testimonial.text,
-										"\""
-									]
-								})]
-							})]
-						}, index))
-					})
+					className: "elfsight-app-ef3eb5e5-6b17-435e-a4fd-50805347a54f w-full",
+					"data-elfsight-app-lazy": true
 				})
-			]
+			})]
 		})
 	});
 }
@@ -29644,4 +29502,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-DQZrh4K9.js.map
+//# sourceMappingURL=index-u96CE8ez.js.map
