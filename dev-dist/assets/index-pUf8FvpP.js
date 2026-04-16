@@ -22166,10 +22166,10 @@ function SocialProof() {
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				"data-uid": "src/components/sections/SocialProof.tsx:15:9",
 				"data-prohibitions": "[]",
-				className: "w-full flex justify-center min-h-[400px]",
+				className: "w-full flex justify-center",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					"data-uid": "src/components/sections/SocialProof.tsx:16:11",
-					"data-prohibitions": "[editContent]",
+					"data-prohibitions": "[]",
 					className: "elfsight-app-ef3eb5e5-6b17-435e-a4fd-50805347a54f w-full",
 					"data-elfsight-app-lazy": true
 				})
@@ -29502,4 +29502,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-u96CE8ez.js.map
+//# sourceMappingURL=index-pUf8FvpP.js.map
