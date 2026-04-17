@@ -22166,7 +22166,7 @@ function SocialProof() {
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				"data-uid": "src/components/sections/SocialProof.tsx:15:9",
 				"data-prohibitions": "[]",
-				className: "w-full flex justify-center",
+				className: "w-full flex justify-center min-h-[400px]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					"data-uid": "src/components/sections/SocialProof.tsx:16:11",
 					"data-prohibitions": "[]",
@@ -29502,4 +29502,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-pUf8FvpP.js.map
+//# sourceMappingURL=index-HJ8NgbM1.js.map

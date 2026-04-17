@@ -12,7 +12,7 @@ export function SocialProof() {
           </p>
         </div>
 
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center min-h-[400px]">
           <div
             className="elfsight-app-ef3eb5e5-6b17-435e-a4fd-50805347a54f w-full"
             data-elfsight-app-lazy
