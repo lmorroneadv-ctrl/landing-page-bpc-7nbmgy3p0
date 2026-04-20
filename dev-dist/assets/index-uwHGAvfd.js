@@ -22172,7 +22172,7 @@ function SocialProof() {
 					"data-prohibitions": "[editContent]",
 					src: "/google-reviews.png",
 					alt: "Avaliações de clientes no Google",
-					className: "w-full max-w-4xl mx-auto rounded-xl shadow-2xl",
+					className: "w-full max-w-4xl mx-auto rounded-2xl shadow-xl border border-border/50",
 					onError: (e) => {
 						e.currentTarget.src = "https://img.usecurling.com/p/1200/600?q=customer%20reviews";
 					}
@@ -29506,4 +29506,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-DfCjjTMq.js.map
+//# sourceMappingURL=index-uwHGAvfd.js.map
