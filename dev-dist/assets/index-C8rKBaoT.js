@@ -22133,49 +22133,49 @@ function Biography() {
 	});
 }
 //#endregion
+//#region src/assets/image-f3b61.png
+var image_f3b61_default = "/assets/image-f3b61-0JrmI05d.png";
+//#endregion
 //#region src/components/sections/SocialProof.tsx
 function SocialProof() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/SocialProof.tsx:3:5",
+		"data-uid": "src/components/sections/SocialProof.tsx:5:5",
 		"data-prohibitions": "[]",
 		className: "py-20 bg-background",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/SocialProof.tsx:4:7",
+			"data-uid": "src/components/sections/SocialProof.tsx:6:7",
 			"data-prohibitions": "[]",
 			className: "container mx-auto px-4 md:px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/SocialProof.tsx:5:9",
+				"data-uid": "src/components/sections/SocialProof.tsx:7:9",
 				"data-prohibitions": "[]",
-				className: "text-center max-w-3xl mx-auto mb-16",
+				className: "text-center max-w-3xl mx-auto mb-12",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-					"data-uid": "src/components/sections/SocialProof.tsx:6:11",
+					"data-uid": "src/components/sections/SocialProof.tsx:8:11",
 					"data-prohibitions": "[]",
 					className: "text-3xl md:text-4xl font-bold mb-4 text-foreground",
 					children: ["O que dizem nossos ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/sections/SocialProof.tsx:7:32",
+						"data-uid": "src/components/sections/SocialProof.tsx:9:32",
 						"data-prohibitions": "[]",
 						className: "text-gold-dark",
 						children: "Clientes"
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/sections/SocialProof.tsx:9:11",
+					"data-uid": "src/components/sections/SocialProof.tsx:11:11",
 					"data-prohibitions": "[]",
 					className: "text-muted-foreground text-lg font-medium",
 					children: "O compromisso com a excelência técnica reflete na confiança de quem busca a garantia de seus direitos."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/SocialProof.tsx:15:9",
+				"data-uid": "src/components/sections/SocialProof.tsx:17:9",
 				"data-prohibitions": "[]",
-				className: "w-full flex justify-center",
+				className: "w-full flex justify-center px-2 sm:px-4",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-					"data-uid": "src/components/sections/SocialProof.tsx:16:11",
+					"data-uid": "src/components/sections/SocialProof.tsx:18:11",
 					"data-prohibitions": "[editContent]",
-					src: "/google-reviews.png",
+					src: image_f3b61_default,
 					alt: "Avaliações de clientes no Google",
-					className: "w-full max-w-4xl mx-auto rounded-2xl shadow-xl border border-border/50",
-					onError: (e) => {
-						e.currentTarget.src = "https://img.usecurling.com/p/1200/600?q=customer%20reviews";
-					}
+					className: "w-full max-w-5xl mx-auto rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg border border-border/20 object-contain"
 				})
 			})]
 		})
@@ -29506,4 +29506,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-uwHGAvfd.js.map
+//# sourceMappingURL=index-C8rKBaoT.js.map
