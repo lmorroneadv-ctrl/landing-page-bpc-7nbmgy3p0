@@ -12,11 +12,15 @@ export function SocialProof() {
           </p>
         </div>
 
-        <div className="w-full flex justify-center min-h-[400px]">
-          <div
-            className="elfsight-app-ef3eb5e5-6b17-435e-a4fd-50805347a54f w-full"
-            data-elfsight-app-lazy
-          ></div>
+        <div className="w-full flex justify-center">
+          <img
+            src="/google-reviews.png"
+            alt="Avaliações de clientes no Google"
+            className="w-full max-w-4xl mx-auto rounded-xl shadow-2xl"
+            onError={(e) => {
+              e.currentTarget.src = 'https://img.usecurling.com/p/1200/600?q=customer%20reviews'
+            }}
+          />
         </div>
       </div>
     </section>

@@ -22166,12 +22166,16 @@ function SocialProof() {
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				"data-uid": "src/components/sections/SocialProof.tsx:15:9",
 				"data-prohibitions": "[]",
-				className: "w-full flex justify-center min-h-[400px]",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "w-full flex justify-center",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					"data-uid": "src/components/sections/SocialProof.tsx:16:11",
-					"data-prohibitions": "[]",
-					className: "elfsight-app-ef3eb5e5-6b17-435e-a4fd-50805347a54f w-full",
-					"data-elfsight-app-lazy": true
+					"data-prohibitions": "[editContent]",
+					src: "/google-reviews.png",
+					alt: "Avaliações de clientes no Google",
+					className: "w-full max-w-4xl mx-auto rounded-xl shadow-2xl",
+					onError: (e) => {
+						e.currentTarget.src = "https://img.usecurling.com/p/1200/600?q=customer%20reviews";
+					}
 				})
 			})]
 		})
@@ -29502,4 +29506,4 @@ function App() {
 }));
 //#endregion
 
-//# sourceMappingURL=index-HJ8NgbM1.js.map
+//# sourceMappingURL=index-DfCjjTMq.js.map
